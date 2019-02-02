@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Remote post  Component Matches snapshot 1`] = `
+<div
+  className={null}
+>
+  <article
+    className="post-42 type-undefined status-undefined hentry entry"
+    id="post-42"
+  >
+    <header
+      className="entry-header"
+    >
+      <h1
+        className="entry-title"
+      >
+        Hello To Roy
+      </h1>
+    </header>
+    <div
+      className="entry-excerpt"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Hi From Excerpt</p>",
+        }
+      }
+    />
+  </article>
+</div>
+`;
+
+exports[`Remote post  Component Matches snapshot with class names 1`] = `
+<div
+  className={null}
+>
+  <article
+    className="remote-post-for-help post-42 type-undefined status-undefined hentry entry"
+    id="post-42"
+  >
+    <header
+      className="entry-header"
+    >
+      <h1
+        className="entry-title"
+      >
+        Hello To Roy
+      </h1>
+    </header>
+    <div
+      className="entry-excerpt"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Hi From Excerpt</p>",
+        }
+      }
+    />
+  </article>
+</div>
+`;
+
+exports[`Remote post  Component Matches snapshot with full content 1`] = `
+<div
+  className={null}
+>
+  <article
+    className="remote-post-for-help post-42 type-undefined status-undefined hentry entry"
+    id="post-42"
+  >
+    <header
+      className="entry-header"
+    >
+      <h1
+        className="entry-title"
+      >
+        Hello To Roy
+      </h1>
+    </header>
+    <div
+      className="entry-content"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Hi Roy</p>",
+        }
+      }
+    />
+  </article>
+</div>
+`;

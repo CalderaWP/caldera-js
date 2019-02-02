@@ -2,7 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/config/jest/nullMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/EntryActions/EntryAction.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/EntryActions/EntryActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/EntryViewer.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/FormEntryViewer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/FormEntryViewer.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/EntryViewer/forms.fixtures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/Messages/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/Messages/Messages.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/Messages/__snapshots__/Messages.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/Messages/messageObjectFactory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/Messages/messagePropTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/CalderaNotice/CalderaNotice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/CalderaNotice/CalderaNotice.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/CalderaNotice/CalderaNotice.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/CalderaNotice/__snapshots__/CalderaNotice.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/__snapshots__/FormListItem.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/FormsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/FormsList.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/FormsList.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/Icon-CalderaForms.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/__snapshots__/FormsList.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/RemotePost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/RemotePost.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/__snapshots__/RemotePost.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/propTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/AutoCompleteField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/AutoCompleteField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/AutoCompleteField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/__snapshots__/AutoCompleteField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldSet/FieldSet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldSet/FieldSet.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldSet/FieldSet.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldSet/__snapshots__/FieldSet.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldWrapper/FieldWrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldWrapper/FieldWrapper.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldWrapper/FieldWrapper.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FieldWrapper/__snapshots__/FieldWrapper.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/FormFieldsAutoComplete/__snapshots__/FormFieldsAutoComplete.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputFieldAsCheckbox.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputFieldAsEmail.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/InputFieldAsNumber.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/InputField/__snapshots__/InputField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RadioField/RadioField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RadioField/RadioField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RadioField/RadioField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RadioField/__snapshots__/RadioField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RichText/MagicRichText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RichText/RichText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RichText/RichText.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/RichText/richtext.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/SelectField/SelectField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/SelectField/SelectField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/SelectField/SelectField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/SelectField/__snapshots__/SelectField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/__snapshots__/TextAreaField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/ToggleField/ToggleField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/ToggleField/ToggleField.story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/ToggleField/ToggleField.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/ToggleField/__snapshots__/ToggleField.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/controls/Select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/fieldClassNames.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/fieldSetClassNames.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/fieldWrapperClassNames.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/labelClassNames.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/parseAttributes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/util.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/export.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/columns.fixtures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Field.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/FieldArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/FieldArea.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Fields.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Fields.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/Column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/Row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/Row.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/Rows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/Rows.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/__snapshots__/Row.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/__snapshots__/Rows.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/__snapshots__/Field.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/__snapshots__/FieldArea.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/__snapshots__/Fields.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/collectFieldValues.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/collectFieldValues.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/exports.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/__snapshots__/fieldAreaFactory.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/__snapshots__/fieldFactory.test.js.snap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldFactory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldFactory.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/fields.fixtures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/factory/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/.storybook/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/.storybook/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/.storybook/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/.storybook/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/config/jest/test-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/config/jest/test-setup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/__snapshots__/x.test.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/x.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,65 +161,127 @@
     <session id="463619130">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="babelrc" value="18" />
           <entry key="gitignore" value="19" />
-          <entry key="js" value="413" />
-          <entry key="json" value="205" />
+          <entry key="js" value="447" />
+          <entry key="json" value="460" />
           <entry key="md" value="772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="205" />
-          <entry key="JavaScript" value="413" />
+          <entry key="JSON" value="478" />
+          <entry key="JavaScript" value="447" />
           <entry key="Markdown" value="772" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="babelrc" value="2" />
+          <entry key="babelrc" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="9" />
-          <entry key="json" value="8" />
+          <entry key="js" value="40" />
+          <entry key="json" value="10" />
           <entry key="md" value="2" />
+          <entry key="nullMock" value="1" />
+          <entry key="pattern" value="1" />
+          <entry key="svg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="9" />
+          <entry key="JSON" value="14" />
+          <entry key="JavaScript" value="40" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+            <state relative-caret-position="165">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/components/src/factory/components/FieldArea.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="10" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js">
+        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/.storybook/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/components/.storybook/stories.pattern">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/components/src/export.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,76 +290,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/components/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/components/src/x.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/components/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="236">
-                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/components/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/bar/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="532">
+              <caret line="82" column="3" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -187,7 +309,15 @@
     <findStrings>
       <find>dist</find>
       <find>node_m</find>
+      <find>transform</find>
+      <find>FormListItem</find>
+      <find>ContactForm</find>
+      <find>clicking on prev</find>
+      <find>next</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/packages/components</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,15 +329,23 @@
         <option value="$PROJECT_DIR$/packages/web-app/package.json" />
         <option value="$PROJECT_DIR$/packages/web-app/next.config.js" />
         <option value="$PROJECT_DIR$/packages/web-app/pages/index.js" />
-        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" />
         <option value="$PROJECT_DIR$/packages/components/src/x.test.js" />
         <option value="$PROJECT_DIR$/packages/components/index.js" />
-        <option value="$PROJECT_DIR$/packages/components/package.json" />
-        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js" />
         <option value="$PROJECT_DIR$/packages/components/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/packages/components/src/components/app/AppBody.test.js" />
+        <option value="$PROJECT_DIR$/packages/components/src/components/app/AppBody.js" />
+        <option value="$PROJECT_DIR$/packages/components/.babelrc" />
+        <option value="$PROJECT_DIR$/packages/components/config/jest/test-setup.js" />
+        <option value="$PROJECT_DIR$/packages/components/package.json" />
+        <option value="$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/AutoCompleteField.js" />
+        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" />
+        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/.storybook/config.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/packages/components/.storybook/config.js" />
+        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js" />
+        <option value="$PROJECT_DIR$/packages/components/src/factory/components/FieldArea.js" />
       </list>
     </option>
   </component>
@@ -238,7 +376,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="85" />
     <option name="y" value="24" />
-    <option name="width" value="1340" />
+    <option name="width" value="1184" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -266,6 +404,43 @@
               <item name="packages" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name=".storybook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="foo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -286,6 +461,7 @@
       <recent name="$PROJECT_DIR$/packages/caldera-forms-pro/pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/components/src" />
       <recent name="$PROJECT_DIR$/packages/components" />
     </key>
   </component>
@@ -333,18 +509,19 @@
       <workItem from="1549116787860" duration="60000" />
       <workItem from="1549117062805" duration="664000" />
       <workItem from="1549117771644" duration="283000" />
-      <workItem from="1549124413961" duration="1846000" />
+      <workItem from="1549124413961" duration="1999000" />
+      <workItem from="1549128213014" duration="3209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2853000" />
+    <option name="totallyTimeSpent" value="6215000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="24" width="1340" height="1032" extended-state="0" />
+    <frame x="85" y="24" width="1184" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25731894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29684764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -359,7 +536,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36276597" />
+      <window_info anchor="bottom" x="478" y="350" width="1142" height="457" id="Terminal" order="11" type="WINDOWED" visible="true" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -383,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -403,44 +577,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+    <entry file="file://$PROJECT_DIR$/packages/components/src/x.test.js" />
+    <entry file="file://$PROJECT_DIR$/packages/components/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <folding>
+              <element signature="e#0#175#1" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/.storybook/config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/src/x.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/forms/EditUser.js" />
     <entry file="file://$PROJECT_DIR$/packages/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -448,10 +599,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" selection-start-line="21" selection-end-line="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="585">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -471,50 +632,245 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/AppBody.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/PageBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/config/jest/test-shim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.story.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/EntryViewer/forms.fixtures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/Topbar.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/config/jest/test-setup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#213#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/AppBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="e#93#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/logos/Logo-CalderaForms.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/config/jest/nullMock.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/TopBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/StandardPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@wordpress/components/build-module/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/AutoCompleteField/AutoCompleteField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/dist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="167" column="31" selection-start-line="167" selection-start-column="31" selection-end-line="167" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/export.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/TextAreaField/TextAreaField.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="82" column="3" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/.storybook/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/.storybook/stories.pattern">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/stories/index.stories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            <folding>
-              <element signature="e#0#175#1" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="236">
-            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/packages/components/.storybook/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/factory/components/FieldArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

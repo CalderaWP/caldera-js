@@ -1,0 +1,39 @@
+import * as React from 'react';
+import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
+
+import { FieldWrapper } from './FieldWrapper';
+
+describe('Field label', () => {
+	it('Matches snapshot', () => {
+		const component = renderer.create(
+			<FieldWrapper fieldType={'checkbox'} legend={'Check All options'}>
+				<label htmlFor="one">One</label>
+				<input id="one" type={'checkbox'} />
+				<label htmlFor="two">Two</label>
+				<input id="two" type={'checkbox'} />
+			</FieldWrapper>
+		);
+		expect(component.toJSON()).toMatchSnapshot();
+	});
+	it('Allows attributes', () => {
+		const attributes = {
+			form: 'contactForm',
+			disable: true,
+			name: 'roys'
+		};
+		const component = mount(
+			<FieldWrapper
+				fieldType={'checkbox'}
+				legend={'Check All options'}
+				attributes={attributes}
+			>
+				<label htmlFor="one">One</label>
+				<input id="one" type={'checkbox'} />
+				<label htmlFor="two">Two</label>
+				<input id="two" type={'checkbox'} />
+			</FieldWrapper>
+		);
+		expect(component.find('div').prop('form')).toEqual(attributes.form);
+	});
+});

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field label Matches snapshot 1`] = `
+<fieldset
+  className="caldera-fieldset caldera-fieldset-checkbox"
+>
+  <legend>
+    Check All options
+  </legend>
+  <label
+    htmlFor="one"
+  >
+    One
+  </label>
+  <input
+    id="one"
+    type="checkbox"
+  />
+  <label
+    htmlFor="two"
+  >
+    Two
+  </label>
+  <input
+    id="two"
+    type="checkbox"
+  />
+</fieldset>
+`;

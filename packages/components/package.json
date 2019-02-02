@@ -18,17 +18,38 @@
     "react": "16.8.0-alpha.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/addon-links": "^4.1.11",
     "@storybook/react": "^4.1.11",
-    "babel-core": "^7.0.0-bridge",
-    "babel-jest": "^23.6.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.5",
-    "enzyme": "3.4.3",
-    "enzyme-adapter-react-16": "1.2.0",
-    "jest": "^23.6.0",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.8.0",
+    "glob-loader": "^0.3.0",
+    "jest": "^24.0",
     "jest-fetch-mock": "^2.1.0",
+    "jest-svg-transformer": "^1.0.0",
     "nodemon": "^1.18.9",
     "react": "^16.8.0-alpha.0",
     "react-addons-test-utils": "15.6.2",
@@ -36,12 +57,12 @@
     "react-test-renderer": "16.4.2"
   },
   "dependencies": {
-    "@babel/cli": "^7.2.3",
     "@rebass/grid": "^6.0.0-7",
     "@wordpress/components": "^7.0.4",
     "@wordpress/compose": "^3.0.0",
     "@wordpress/editor": "^9.0.6",
     "@wordpress/element": "^2.1.8",
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "deepmerge": "^3.0.0",
     "del-cli": "^1.1.0",
@@ -55,6 +76,7 @@
     "prop-types": "^15.6.2",
     "react-data-grid": "^5.0.5",
     "react-oembed-container": "^0.3.0",
+    "react-quill": "^1.3.3",
     "react-transition-group": "^2.5.2",
     "shortid": "^2.2.14",
     "styled-components": "^4.1.3",
@@ -67,7 +89,8 @@
       "./config/jest/test-setup.js"
     ],
     "coveragePathIgnorePatterns": [
-      "<rootDir>/config/"
+      "<rootDir>/config/",
+      "\\.(svg|css|scss|json)$"
     ],
     "coverageThreshold": {
       "global": {
@@ -77,9 +100,18 @@
         "statements": 80
       }
     },
-    "collectCoverage": true,
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "<rootDir>/src"
+    ],
     "moduleDirectories": [
       "node_modules"
-    ]
+    ],
+    "transformIgnorePatterns": [
+      "\\.(svg|css|scss|json)$"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|svg)$": "<rootDir>/config/jest/nullMock.js"
+    }
   }
 }

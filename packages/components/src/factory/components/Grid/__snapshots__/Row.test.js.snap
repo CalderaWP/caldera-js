@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row component Applies padding to x and y  1`] = `
+<div
+  className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
+  id="twoColumns"
+>
+  <div
+    className="caldera-column sc-bdVaJa gfmZBt"
+    width="1/2"
+  />
+</div>
+`;
+
+exports[`Row component Creates columns 1`] = `
+<div
+  className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
+  id="twoColumns"
+>
+  <div
+    className="caldera-column sc-bdVaJa gfmZBt"
+    width="1/2"
+  />
+  <div
+    className="caldera-column sc-bdVaJa jlBFAP"
+    width="1/4"
+  />
+  <div
+    className="caldera-column sc-bdVaJa jlBFAP"
+    width="1/4"
+  />
+</div>
+`;

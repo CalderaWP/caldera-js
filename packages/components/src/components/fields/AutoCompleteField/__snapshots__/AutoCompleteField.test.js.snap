@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutoCompleteField should match snapshot 1`] = `
+<div
+  className="components-base-control"
+>
+  <div
+    className="components-base-control__field"
+  >
+    <label
+      className="components-base-control__label"
+      htmlFor="auto-complete-hats"
+    >
+      Select A Hat
+    </label>
+    <div
+      className="components-form-token-field"
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      tabIndex="-1"
+    >
+      <label
+        className="components-form-token-field__label"
+        htmlFor="components-form-token-input-0"
+      >
+        Add item
+      </label>
+      <div
+        className="caldera-field caldera-field-autocomplete components-form-token-field__input-container"
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="-1"
+      >
+        <input
+          aria-activedescendant={undefined}
+          aria-autocomplete="list"
+          aria-describedby="components-form-token-suggestions-howto-0"
+          aria-expanded={false}
+          aria-owns={undefined}
+          autoCapitalize={undefined}
+          autoComplete={undefined}
+          className="components-form-token-field__input"
+          disabled={false}
+          id="components-form-token-input-0"
+          onBlur={[Function]}
+          onChange={[Function]}
+          role="combobox"
+          size={1}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="screen-reader-text"
+        id="components-form-token-suggestions-howto-0"
+      >
+        Separate with commas
+      </div>
+    </div>
+  </div>
+  <p
+    className="components-base-control__help"
+    id="auto-complete-hats__help"
+  >
+    selection of hats
+  </p>
+</div>
+`;

@@ -22,7 +22,5 @@ storiesOf('Button', module)
 		</Button>
 	))
 
-storiesOf('Example component', module)
-	.add('with text', () => (
-		<A1 />
-	))
+
+

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldArea component Creates a text field 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <div
+    className="components-base-control caldera-field caldera-field-text"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <label
+        className="components-base-control__label"
+        htmlFor="inspector-text-control-0"
+      >
+        First Name
+      </label>
+      <input
+        aria-describedby="inspector-text-control-0__help"
+        className="components-text-control__input"
+        id="firstName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder={undefined}
+        type="text"
+        value="roy"
+      />
+    </div>
+    <p
+      className="components-base-control__help"
+      id="inspector-text-control-0__help"
+    >
+      your first name
+    </p>
+  </div>
+</div>
+`;
+
+exports[`FieldArea component Creates an select field 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <div
+    className="components-base-control caldera-field caldera-field-select"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <label
+        className="components-base-control__label"
+        htmlFor="inspector-select-control-0"
+      >
+        Select Field Label
+      </label>
+      <select
+        aria-describedby="inspector-select-control-0__help"
+        className="components-select-control__input"
+        id="selectFieldId"
+        multiple={false}
+        onChange={[Function]}
+        value={1}
+      >
+        <option
+          value={0}
+        >
+          Zero
+        </option>
+        <option
+          value={1}
+        >
+          One
+        </option>
+        <option
+          value={2}
+        >
+          Two
+        </option>
+      </select>
+    </div>
+    <p
+      className="components-base-control__help"
+      id="inspector-select-control-0__help"
+    >
+      Select field description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`FieldArea component Shows errors 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <div
+    className="components-base-control caldera-field caldera-field-text"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <label
+        className="components-base-control__label"
+        htmlFor="inspector-text-control-1"
+      >
+        First Name
+      </label>
+      <input
+        aria-describedby="inspector-text-control-1__help"
+        className="components-text-control__input"
+        id="firstName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder={undefined}
+        type="text"
+        value="roy"
+      />
+    </div>
+    <p
+      className="components-base-control__help"
+      id="inspector-text-control-1__help"
+    >
+      your first name
+    </p>
+  </div>
+  <div
+    className="caldera-components-message has-error caldera-components-error"
+  >
+    Fail Cake!
+  </div>
+</div>
+`;

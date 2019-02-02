@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField  matches snapshot with all props 1`] = `
+<div
+  className="components-base-control caldera-field caldera-field-text"
+>
+  <div
+    className="components-base-control__field"
+  >
+    <label
+      className="components-base-control__label"
+      htmlFor="inspector-text-control-0"
+    >
+      Hi Roy
+    </label>
+    <input
+      aria-describedby="inspector-text-control-0__help"
+      className="components-text-control__input"
+      onBlur={[MockFunction]}
+      onChange={[Function]}
+      placeholder="Hello"
+      type="text"
+      value="Roy"
+    />
+  </div>
+  <p
+    className="components-base-control__help"
+    id="inspector-text-control-0__help"
+  >
+    Say Hi
+  </p>
+</div>
+`;

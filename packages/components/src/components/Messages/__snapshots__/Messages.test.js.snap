@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message component Renders error message 1`] = `
+<div
+  className="caldera-components-message has-error caldera-components-error"
+>
+  An error happened
+</div>
+`;
+
+exports[`Message component Renders message 1`] = `
+<div
+  className="caldera-components-message caldera-components-not-error"
+>
+  Hi Roy
+</div>
+`;
+
+exports[`Message component Renders no error message 1`] = `null`;

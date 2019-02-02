@@ -5,6 +5,9 @@
  * @copyright 2017 Airbnb, Inc.
  */
 const Adapter = require('enzyme-adapter-react-16');
+import 'babel-polyfill';
+
 import { configure } from 'enzyme';
 
 configure({ adapter: new Adapter() });
+

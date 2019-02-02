@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field label Matches snapshot 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-checkbox"
+>
+  <label
+    htmlFor="one"
+  >
+    One
+  </label>
+  <input
+    id="one"
+    type="checkbox"
+  />
+  <label
+    htmlFor="two"
+  >
+    Two
+  </label>
+  <input
+    id="two"
+    type="checkbox"
+  />
+</div>
+`;
