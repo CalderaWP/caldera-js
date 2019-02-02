@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/server/routers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/web-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/web-app/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web-app/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/proxies.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/proxies.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +45,7 @@
         <counts>
           <entry key="babelrc" value="77" />
           <entry key="gitignore" value="19" />
-          <entry key="js" value="629" />
+          <entry key="js" value="785" />
           <entry key="json" value="734" />
           <entry key="md" value="772" />
         </counts>
@@ -64,7 +53,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="811" />
-          <entry key="JavaScript" value="629" />
+          <entry key="JavaScript" value="785" />
           <entry key="Markdown" value="772" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
@@ -73,7 +62,7 @@
         <counts>
           <entry key="babelrc" value="8" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="64" />
+          <entry key="js" value="72" />
           <entry key="json" value="20" />
           <entry key="md" value="3" />
           <entry key="nullMock" value="1" />
@@ -85,7 +74,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="28" />
-          <entry key="JavaScript" value="64" />
+          <entry key="JavaScript" value="72" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SVG" value="1" />
@@ -102,75 +91,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/components/.babelrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/web-app/pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/next.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/web-app/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -180,10 +100,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/.babelrc">
+        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="465">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/pages/message.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -250,6 +182,8 @@
         <option value="$PROJECT_DIR$/packages/web-app/package.json" />
         <option value="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" />
         <option value="$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc" />
+        <option value="$PROJECT_DIR$/packages/server/proxies.js" />
+        <option value="$PROJECT_DIR$/packages/caldera-forms-pro/server.js" />
       </list>
     </option>
   </component>
@@ -273,10 +207,8 @@
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/boilerplate/package/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
-      <path value="$PROJECT_DIR$/packages/bar/package.json" />
       <path value="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" />
       <path value="$PROJECT_DIR$/packages/components/package.json" />
-      <path value="$PROJECT_DIR$/packages/foo/package.json" />
       <path value="$PROJECT_DIR$/packages/forms/package.json" />
       <path value="$PROJECT_DIR$/packages/server/package.json" />
       <path value="$PROJECT_DIR$/packages/web-app/package.json" />
@@ -328,6 +260,19 @@
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="caldera-forms-pro" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
               <item name="web-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,6 +305,7 @@
       <recent name="$PROJECT_DIR$/boilerplate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/server" />
       <recent name="$PROJECT_DIR$/boilerplate/package" />
       <recent name="$PROJECT_DIR$/packages/components/src" />
       <recent name="$PROJECT_DIR$/packages/caldera-forms-pro" />
@@ -411,12 +357,12 @@
       <workItem from="1549117062805" duration="664000" />
       <workItem from="1549117771644" duration="283000" />
       <workItem from="1549124413961" duration="1999000" />
-      <workItem from="1549128213014" duration="7750000" />
+      <workItem from="1549128213014" duration="8682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10756000" />
+    <option name="totallyTimeSpent" value="11688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="23" width="1184" height="877" extended-state="0" />
@@ -435,15 +381,38 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.19872612" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" x="21" y="438" width="1419" height="624" id="Terminal" order="11" type="WINDOWED" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" x="0" y="718" width="1419" height="217" id="Terminal" order="11" type="WINDOWED" visible="true" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29684764" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.19872612" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" x="0" y="438" width="1419" height="497" id="Terminal" order="12" type="WINDOWED" visible="true" weight="0.32978722" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -452,32 +421,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/components/config/jest/test-setup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#213#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/AppBody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <element signature="e#93#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/logos/Logo-CalderaForms.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/config/jest/nullMock.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/app/TopBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -754,17 +697,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/next.config.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/next/node_modules/terser-webpack-plugin/dist/minify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="191">
+          <caret line="136" column="19" lean-forward="true" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
+    <entry file="file://$PROJECT_DIR$/packages/server/proxies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="135">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/operations/getItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -778,10 +735,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/next/node_modules/terser-webpack-plugin/dist/minify.js">
+    <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="136" column="19" lean-forward="true" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/next.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -792,17 +763,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/package.json">
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="465">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/.babelrc">
+    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/pages/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        <state relative-caret-position="247">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

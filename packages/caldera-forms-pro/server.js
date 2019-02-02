@@ -4,8 +4,10 @@ const api = require('./operations/getItem')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = app.getRequestHandler()
+const handle = app.getRequestHandler();
 
+const proxies = require( '../server/proxies' );
+const {wpApp,wpCss} = proxies;
 app.prepare().then(() => {
   const server = express()
 
@@ -26,13 +28,18 @@ app.prepare().then(() => {
     res.json(itemData)
   })
 
+	server.use(wpApp.path,wpApp.proxy);
+	server.use(wpCss.path,wpCss.proxy);
+
   // Fall-back on other next.js assets.
   server.get('*', (req, res) => {
     return handle(req, res)
   })
-
+	//server.use(proxies.wpCss);
   server.listen(3000, err => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
+
+
 })

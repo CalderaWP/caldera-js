@@ -8,7 +8,6 @@ const wpApp = {
 		secure: false
 	})
 };
-
 const wpCss = {
 	path:
 		'/wp-admin/load-styles.php',
@@ -19,7 +18,7 @@ const wpCss = {
 	})
 };
 
-const serverPass = {
+const pageCacheServer = {
 	path: '/caldera-api/v2',
 	proxy: proxy({
 		target: 'http://localhost:5000',
@@ -31,7 +30,7 @@ const serverPass = {
 module.exports = {
 	wpApp,
 	wpCss,
-	serverPass
-}
+	pageCacheServer
+};
 
 
