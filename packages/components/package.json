@@ -1,0 +1,85 @@
+{
+  "name": "@calderawp/components",
+  "version": "1.0.0",
+  "license": "GPL",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "yarn test:watch",
+    "test:watch": "jest --watch",
+    "test:once": "jest -ci",
+    "lint": "eslint 'src/**/*.js'",
+    "del-dist": "del-cli dist",
+    "prebuild": "yarn del-dist",
+    "build": "babel src -d dist --ignore test.js,story.js,fixture.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": "16.8.0-alpha.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "3.4.3",
+    "enzyme-adapter-react-16": "1.2.0",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.1.0",
+    "nodemon": "^1.18.9",
+    "react": "^16.8.0-alpha.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-dom": "^16.8.0-alpha.0",
+    "react-test-renderer": "16.4.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@rebass/grid": "^6.0.0-7",
+    "@wordpress/components": "^7.0.4",
+    "@wordpress/compose": "^3.0.0",
+    "@wordpress/editor": "^9.0.6",
+    "@wordpress/element": "^2.1.8",
+    "classnames": "^2.2.6",
+    "deepmerge": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "dot-prop": "^4.2.0",
+    "email-validator": "^2.0.4",
+    "formik": "^1.4.1",
+    "lodash": "^4.17.11",
+    "lodash.flatmap": "^4.5.0",
+    "lodash.pick": "^4.4.0",
+    "moment": "^2.23.0",
+    "prop-types": "^15.6.2",
+    "react-data-grid": "^5.0.5",
+    "react-oembed-container": "^0.3.0",
+    "react-transition-group": "^2.5.2",
+    "shortid": "^2.2.14",
+    "styled-components": "^4.1.3",
+    "uuid": "^3.3.2",
+    "yup": "^0.26.10"
+  },
+  "jest": {
+    "setupFiles": [
+      "./config/jest/test-shim.js",
+      "./config/jest/test-setup.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/config/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "collectCoverage": true,
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  }
+}
