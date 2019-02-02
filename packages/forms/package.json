@@ -1,0 +1,40 @@
+{
+  "name": "@calderawp/forms",
+  "version": "0.0.1",
+  "license": "GPL-2.0",
+  "scripts": {
+    "start": "yarn test",
+    "del-dist": "del-cli dist",
+    "prebuild": "yarn del-dist",
+    "build": "babel src -d dist --ignore test.js,story.js,fixture.js",
+    "start:production": "NODE_ENV=production node server.js",
+    "test": "jest -o",
+    "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "reset": "rm -rf node_modules && rm yarn.lock && yarn"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "prop-types": "^15.6.2",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1",
+    "react-helmet": "^5.2.0",
+    "react-oembed-container": "^0.3.0",
+    "webpack-bundle-size-analyzer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.8.0",
+    "jest": "^24.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.4.2"
+  }
+}

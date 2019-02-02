@@ -4,13 +4,16 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "start": "yarn --cwd packages/web-app dev",
-    "build": "yarn --cwd packages/components build",
+    "build": "yarn build:components && yarn build:forms",
     "build:components": "yarn --cwd packages/components build",
+    "build:forms": "yarn --cwd packages/forms build",
     "yarn test" : "yarn test:app & yarn test:components wait",
     "test:app": "yarn --cwd packages/caldera-forms-pro test",
     "test:components": "yarn --cwd packages/components test",
+    "test:forms": "yarn --cwd packages/forms test",
     "storybook": "yarn storybook:components",
     "storybook:app": "yarn --cwd packages/caldera-forms-pro storybook",
+    "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook"
   }
 }
