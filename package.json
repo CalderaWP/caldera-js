@@ -3,7 +3,7 @@
   "private": "true",
   "workspaces": ["packages/*"],
   "scripts": {
-    "start": "yarn --cwd packages/web-app dev",
+    "start": "yarn --cwd packages/caldera-forms-pro start",
     "build": "yarn build:components && yarn build:forms",
     "build:components": "yarn --cwd packages/components build",
     "build:forms": "yarn --cwd packages/forms build",

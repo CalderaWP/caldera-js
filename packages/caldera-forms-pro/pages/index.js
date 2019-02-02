@@ -5,9 +5,7 @@ import Head from 'next/head'
 export default () => (
   <ul>
     <li>
-      <Link href='/item'>
-        <a>View Item</a>
-      </Link>
+     11
     </li>
   </ul>
 )
