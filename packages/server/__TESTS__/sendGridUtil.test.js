@@ -34,18 +34,68 @@ describe('email address formatter', () => {
 			expect(typeof e).toBe('string');
 		}
 	});
+
+	it( 'handles 2 strings in an array', () => {
+		const email = new EmailAddress([ 'cc1@email.com', 'cc2@email.com' ]);
+		expect(email.length).toBe(2);
+		expect(email[0].email).toBe( 'cc1@email.com' );
+		expect(email[1].email).toBe( 'cc2@email.com' );
+	});
+
+	it( 'handles mixed types', () => {
+		const email = new EmailAddress([
+			{email:'cc1@email.com'},
+			{email: 'cc2@email.com', name: 'Name 2'},
+			'cc3@email.com'
+		]);
+		expect(email.length).toBe(3);
+		expect(email[0].email).toBe( 'cc1@email.com' );
+		expect(email[1].email).toBe( 'cc2@email.com' );
+		expect(email[2].email).toBe( 'cc3@email.com' );
+		expect(email[0].name).toBe( '' );
+		expect(email[1].name).toBe( 'Name 2' );
+		expect(email[2].name).toBe( '' );
+	})
 });
 describe('Personalization', () => {
-	test('emails from string with array of ccs and bccs', () => {
+	test('Prepares to', () => {
 		const data = {
 			to: 'to@one.com',
 			subject: 'Welcome To Step 7',
 			cc: ['cc1@e.com', 'cc2@e.com'],
 			bcc: ['bcc1@e.com', 'bcc2@e.com'],
 		}
-		const p = new Personalizations(data)
-		expect(typeof p.to).toBe('object');
-		expect(typeof p.subject).toBe('string');
+		const p = new Personalizations(data);
+		const to = p[0].to;
+		expect(Array.isArray(to)).toBe(true);
+
+	});
+
+	test('Prepares subject', () => {
+		const subject =  'Welcome To Step 7';
+		const data = {
+			to: 'to@one.com',
+			subject,
+			cc: ['cc1@e.com', 'cc2@e.com'],
+			bcc: ['bcc1@e.com', 'bcc2@e.com'],
+		}
+		const p = new Personalizations(data);
+		const preparedSubject = p[1];
+		expect(typeof preparedSubject).toBe('object');
+		expect( preparedSubject.subject ).toEqual(subject);
+
+	});
+
+	test.only('emails from string with array of ccs and bccs', () => {
+		const data = {
+			to: 'to@one.com',
+			subject: 'Welcome To Step 7',
+			cc: ['cc1@e.com', 'cc2@e.com'],
+			bcc: ['bcc1@e.com', 'bcc2@e.com'],
+		}
+		const p = new Personalizations(data);
+		console.log(p);
+		expect(typeof subject).toBe('string');
 		expect(p.cc[0].email).toBe('cc1@e.com');
 		expect(p.cc[1].email).toBe('cc2@e.com');
 		expect(p.bcc[0].email).toBe('bcc1@e.com');
@@ -195,3 +245,5 @@ describe('Message object', () => {
 		expect( content[0].type ).toBe('text/html');
 	});
 });
+
+

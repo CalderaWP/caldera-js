@@ -1,5 +1,6 @@
 const EmailAddress = require( './EmailAddress');
 const Personalizations = require( './Personalizations');
+//https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html
 module.exports = function Message({
 	to,
 	subject,
@@ -22,7 +23,7 @@ module.exports = function Message({
 		path: '/v3/mail/send',
 		body: {
 			reply_to: replyTo,
-			personalizations,
+			personalizations: Object.values(personalizations),
 			from: {email: 'no-reply@calderaformspro.net', name: fromName},
 			content: [
 				{

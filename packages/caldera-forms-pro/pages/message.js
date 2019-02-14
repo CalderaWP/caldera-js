@@ -5,16 +5,14 @@ import Head from 'next/head'
 
 export default class extends Component {
 	static async getInitialProps({req, query}) {
-		const isServer = !!req;
-		if (isServer) {
-			return {message: query.itemData}
-		} else {
-			const res = await fetch('/_data/message', {
+			const {layoutId,formId,entryId} = req.query;
+			console.log(layoutId);
+			const res = await fetch(`http://localhost:3000/wp-json/caldera-api/v1/messages?layoutId=${layoutId}&entryId=${entryId}&formId=${formId}`, {
 				headers: {Accept: 'application/json'}
 			});
 			const json = await res.json();
 			return {message: json}
-		}
+
 	}
 
 	createMarkup = () => {
@@ -32,7 +30,7 @@ export default class extends Component {
 		return (
 			<Fragment>
 				<Head>
-					<title>My page title</title>
+					<title>Message Preview</title>
 					<link rel="stylesheet" id="wp-styles" href={this.cssUrl()} type="text/css" media="all" />
 					<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 				</Head>

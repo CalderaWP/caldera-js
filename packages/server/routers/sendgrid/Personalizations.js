@@ -37,21 +37,37 @@ module.exports = function Personalizations(
 
 	to = new EmailAddress(to);
 
-	let message = {
-		to,
-		subject
-	};
+	let data = [
+		{to:[to]},
+		{subject: subject}
+	];
 
-	try {
-		message.cc = checkEmail(cc);
-	} catch (e) {
+	return data;
 
+	if( cc ){
+		try{
+			cc = new EmailAddress(cc);
+			data = {
+				...data,
+				cc
+			}
+		}catch (e) {
+			console.log(e)
+		}
 	}
 
-	try {
-		message.bcc = checkEmail(bcc);
-	} catch (e) {
+	if( bcc ){
+		try{
+			bcc = new EmailAddress(bcc);
+			data = {
+				...data,
+				bcc
+			}
+		}catch (e) {
+			console.log(e)
+		}
 	}
 
-	return message;
+
+	return data;
 }

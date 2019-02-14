@@ -1,6 +1,12 @@
-const roy = require( './routers/roy' );
-const pages = require( './routers/wp-pages' );
-const {routers} = {roy,pages};
+const hiRoy = require( './routers/roy' );
+const wpPages = require( './routers/wp-pages' );
+const sendgrid = require( './routers/sendgrid');
+const routers = {
+	hiRoy,wpPages,
+	sendgrid
+};
+const appServer = require('./app');
 module.exports = {
-	routers
+	routers,
+	appServer
 };

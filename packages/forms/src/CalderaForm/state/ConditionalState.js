@@ -1,3 +1,22 @@
+
+import React, { useState} from 'react';
+
+function Example() {
+	const [count, setCount] = useState(0);
+	const [loading, setLoading] = useState(false);
+	const [values,setValues] = useConditionalState(individualValues);
+
+
+	return (
+		<div>
+			<p>You clicked {count} times</p>
+			<button onClick={() => setCount(count + 1)}>
+				Click me
+			</button>
+		</div>
+	);
+}
+
 /**
  * Describes the state of a form or other collection of fields where some fields may be hidden or disabled.
  *
