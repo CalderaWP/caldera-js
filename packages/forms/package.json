@@ -8,7 +8,7 @@
     "prebuild": "yarn del-dist",
     "build": "babel src -d dist --ignore test.js,story.js,fixture.js",
     "start:production": "NODE_ENV=production node server.js",
-    "test": "jest -o",
+    "test": "jest --watch",
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
