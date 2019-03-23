@@ -1,4 +1,5 @@
-export FormClient from './FormClient';
+import FormClient from './FormClient';
+export {FormClient};
 export { formClientFactory } from './clientFactory';
 export {
 	decorateObjectLiteralWithMethods

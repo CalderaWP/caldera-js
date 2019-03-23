@@ -11,11 +11,16 @@ import { CalderaGrid } from './CalderaGrid';
 
 
 export class CalderaForm extends Component {
-	state = {
-		formRows: [],
-		initialValues: {},
-		conditionalState: null
-	};
+
+	constructor(props){
+		super(props);
+		this.state = {
+			formRows: [],
+			initialValues: {},
+			conditionalState: null
+		};
+
+	}
 
 	/**
 	 * Run conditional logic and update state
