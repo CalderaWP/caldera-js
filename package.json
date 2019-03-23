@@ -1,13 +1,16 @@
 {
   "name": "@calderawp/caldera-js",
   "private": "true",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start": "yarn --cwd packages/caldera-forms-pro start",
-    "build": "yarn build:components && yarn build:forms",
+    "build": "yarn build:pre && yarn build:components && yarn build:forms",
+    "build:pre": "lerna bootstrap",
     "build:components": "yarn --cwd packages/components build",
     "build:forms": "yarn --cwd packages/forms build",
-    "yarn test" : "yarn test:components & yarn test:forms & yarn test:app wait",
+    "yarn test": "yarn test:components & yarn test:forms & yarn test:app wait",
     "test:app": "yarn --cwd packages/caldera-forms-pro test",
     "test:components": "yarn --cwd packages/components test",
     "test:forms": "yarn --cwd packages/forms test",
@@ -16,5 +19,8 @@
     "storybook:app": "yarn --cwd packages/caldera-forms-pro storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.1"
   }
 }

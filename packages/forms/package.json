@@ -2,6 +2,7 @@
   "name": "@calderawp/forms",
   "version": "0.0.1",
   "license": "GPL-2.0",
+  "main" : "dist/index.js",
   "scripts": {
     "start": "yarn test",
     "del-dist": "del-cli dist",
