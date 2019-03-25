@@ -2,80 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/echo-server-url.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/includes.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/install-wp-tests.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/server/wp/wpRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/server/wp/wpServer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/cache-generator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/CachePostJob.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/CachePostsJob.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/CalderaCacheGenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/Contracts/CalderaCacheGeneratorContact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/Traits/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/php/Traits/CachesPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/phpcs.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/react-wp-scripts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/components/Header/Header.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/components/Header/__snapshots__/Header.test.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/Acceptance/AcceptanceTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/Acceptance/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/Integration/IntegrationTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/tests/Unit/UnitTestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cache-generator/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/hi-roy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/page/.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/page/about.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/page/contact.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/10-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/10000-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/48-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/aaaaa.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/asddfsdfds.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/faceboosdffkfldsda.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/food-bas.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/food-tacos.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/fsdf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/hello-world.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/post-3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-json-cache/page/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-json-cache/post/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caldera-js.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caldera-js.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +52,7 @@
         <counts>
           <entry key="babelrc" value="88" />
           <entry key="env" value="33" />
-          <entry key="gitignore" value="95" />
+          <entry key="gitignore" value="148" />
           <entry key="js" value="5357" />
           <entry key="json" value="1033" />
           <entry key="md" value="772" />
@@ -139,7 +68,7 @@
           <entry key="JavaScript" value="5357" />
           <entry key="Markdown" value="772" />
           <entry key="PHP" value="1223" />
-          <entry key="PLAIN_TEXT" value="103" />
+          <entry key="PLAIN_TEXT" value="156" />
           <entry key="YAML" value="119" />
         </counts>
       </usages-collector>
@@ -148,7 +77,7 @@
           <entry key="babelrc" value="17" />
           <entry key="env" value="3" />
           <entry key="gitignore" value="4" />
-          <entry key="gitkeep" value="1" />
+          <entry key="gitkeep" value="3" />
           <entry key="js" value="197" />
           <entry key="json" value="46" />
           <entry key="lock" value="2" />
@@ -172,7 +101,7 @@
           <entry key="JavaScript" value="197" />
           <entry key="Markdown" value="7" />
           <entry key="PHP" value="20" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="1" />
           <entry key="YAML" value="6" />
@@ -194,15 +123,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -216,15 +136,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/server/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -269,8 +180,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -466,6 +377,23 @@
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-json-cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-json-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-json-cache" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -568,18 +496,17 @@
       <workItem from="1553021941956" duration="3158000" />
       <workItem from="1553119731540" duration="94000" />
       <workItem from="1553375760143" duration="11073000" />
-      <workItem from="1553473416495" duration="274000" />
+      <workItem from="1553473416495" duration="525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37042000" />
+    <option name="totallyTimeSpent" value="37293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1656" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2354399" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2354399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -594,7 +521,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.32953367" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.32953367" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -632,14 +559,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/caldera-forms-pro/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lando.yml" />
     <entry file="file://$PROJECT_DIR$/bin/echo-server-url.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -875,10 +794,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-json-cache/post/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-json-cache/page/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

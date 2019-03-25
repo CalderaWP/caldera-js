@@ -2,6 +2,13 @@
 wp-json-content/
 wp-json-content
 wp-json-content/*
+wp-json-content/*
+!wp-json-content/posts/.gitkeep
+!wp-json-content/posts/hello-world.json
+!wp-json-content/page/.gitkeep
+!wp-json-content/page/contact.json
+!wp-json-content/page/about.json
+
 wp-content/
 uploads/
 
