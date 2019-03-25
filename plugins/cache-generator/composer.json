@@ -1,0 +1,43 @@
+{
+    "name": "calderawp/cache-generator",
+    "type": "wordpress-plugin",
+    "description": "Generate static cache of WordPress data",
+    "license": "GPL-2.0",
+    "require": {
+        "php": "^7.2",
+        "a5hleyrich/wp-queue": "dev-master"
+    },
+    "minimum-stability" : "dev",
+    "require-dev": {
+        "php": "^7.2",
+        "mockery/mockery": "^1.2",
+        "phpunit/phpunit": "^7.3",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "calderawp\\CalderaCacheGenerator\\": "php"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "calderawp\\CalderaCacheGenerator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "composer test:unit",
+        "tests": "composer fixes && composer test:unit && composer test:integration && composer test:acceptance",
+        "test:unit": "phpunit --testsuite=Unit",
+        "test:integration": "phpunit --testsuite=Integration",
+        "test:acceptance": "phpunit --testsuite=Acceptance",
+        "tests-now": "phpunit tests --group=now",
+        "sniffs": "phpcs php/ && phpcs tests/",
+        "fixes": "phpcbf php/ && phpcbf tests/"
+    }
+}
