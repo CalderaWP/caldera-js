@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/wp/post-build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/wp/post-start.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/forms/jest.setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caldera-js.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caldera-js.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/__snapshots__/FormListItem.test.js.snap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/includes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wp/includes.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/install-wp-tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wp/install-wp-tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/caldera-forms-pro/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/config/jest/test-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/config/jest/test-setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/__snapshots__/CalderaForms.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/__snapshots__/CalderaForms.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/AddProcessor.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/AddProcessor.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/Processor.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/Processor.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/Processors.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/__snapshots__/Processors.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/__snapshots__/FormEditor.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/__snapshots__/FormEditor.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/__snapshots__/HorizontalForm.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/__snapshots__/HorizontalForm.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/FormClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/FormClient.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +53,7 @@
           <entry key="babelrc" value="108" />
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
-          <entry key="js" value="5513" />
+          <entry key="js" value="5523" />
           <entry key="json" value="1112" />
           <entry key="md" value="772" />
           <entry key="php" value="1223" />
@@ -92,7 +65,7 @@
         <counts>
           <entry key=".env file" value="33" />
           <entry key="JSON" value="1220" />
-          <entry key="JavaScript" value="5513" />
+          <entry key="JavaScript" value="5523" />
           <entry key="Markdown" value="772" />
           <entry key="PHP" value="1223" />
           <entry key="PLAIN_TEXT" value="164" />
@@ -106,7 +79,7 @@
           <entry key="env" value="3" />
           <entry key="gitignore" value="5" />
           <entry key="gitkeep" value="3" />
-          <entry key="js" value="210" />
+          <entry key="js" value="212" />
           <entry key="json" value="54" />
           <entry key="lock" value="2" />
           <entry key="md" value="7" />
@@ -127,7 +100,7 @@
           <entry key="Dockerfile" value="1" />
           <entry key="Image" value="6" />
           <entry key="JSON" value="74" />
-          <entry key="JavaScript" value="210" />
+          <entry key="JavaScript" value="212" />
           <entry key="Markdown" value="7" />
           <entry key="PHP" value="21" />
           <entry key="PLAIN_TEXT" value="11" />
@@ -156,8 +129,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/components/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="90" selection-end-column="6" />
+                <state relative-caret-position="77">
+                  <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -196,11 +169,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+                <state relative-caret-position="390">
+                  <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-134">
+                  <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -242,12 +224,14 @@
       <find>transform</find>
       <find>setup</find>
       <find>jest</find>
+      <find>mount</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
       <replace>CalderaCacheGenerator</replace>
       <replace>caldera-forms-pro</replace>
       <replace>cfp2</replace>
+      <replace>shallow</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/packages/components</dir>
@@ -579,12 +563,12 @@
       <workItem from="1553119731540" duration="94000" />
       <workItem from="1553375760143" duration="11073000" />
       <workItem from="1553473416495" duration="1207000" />
-      <workItem from="1553475707066" duration="4081000" />
+      <workItem from="1553475707066" duration="5559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42056000" />
+    <option name="totallyTimeSpent" value="43534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1656" height="1057" extended-state="0" />
@@ -605,7 +589,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.4341969" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.4031088" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -643,9 +627,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uploads/2019/03/Screen-Shot-2019-03-04-at-8.21.10-AM-150x150.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/uploads/2019/03/Screen-Shot-2019-03-04-at-8.21.10-AM-300x102.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -884,13 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="90" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -898,10 +872,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/FormListItem.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="390">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
