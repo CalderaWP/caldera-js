@@ -21,7 +21,6 @@ exports[`Field component Creates a number field 1`] = `
       min={1}
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="number"
       value={3}
     />
@@ -54,7 +53,6 @@ exports[`Field component Creates a text field 1`] = `
       id="firstName"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="text"
       value="roy"
     />
@@ -82,7 +80,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
@@ -136,7 +133,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
@@ -176,7 +172,6 @@ exports[`Field component Creates an email field 1`] = `
       multiple={true}
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="email"
       value="emai@email.com"
     />

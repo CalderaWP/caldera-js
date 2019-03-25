@@ -8,12 +8,9 @@ exports[`HorizontalForm Matches snapshot 1`] = `
   >
     <div
       className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <div
         className="caldera-column sc-bdVaJa iHZvIS"
-        id={undefined}
-        width={undefined}
       >
         <div
           className="caldera-field-wrapper caldera-field-wrapper-text"
@@ -31,7 +28,6 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 className="components-base-control__field"
               >
                 <input
-                  aria-describedby={undefined}
                   checked={true}
                   className="components-checkbox-control__input"
                   id="opt-1"
@@ -85,7 +81,6 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 className="components-base-control__field"
               >
                 <input
-                  aria-describedby={undefined}
                   checked={true}
                   className="components-checkbox-control__input"
                   id="opt-3"
@@ -108,12 +103,9 @@ exports[`HorizontalForm Matches snapshot 1`] = `
     </div>
     <div
       className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <div
         className="caldera-column sc-bdVaJa iHZvIS"
-        id={undefined}
-        width={undefined}
       >
         <div
           className="caldera-field-wrapper caldera-field-wrapper-text"
@@ -136,7 +128,6 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 id="selectFieldId"
                 multiple={false}
                 onChange={[Function]}
-                value={undefined}
               >
                 <option
                   value={0}
@@ -167,12 +158,9 @@ exports[`HorizontalForm Matches snapshot 1`] = `
     </div>
     <div
       className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <div
         className="caldera-column sc-bdVaJa iHZvIS"
-        id={undefined}
-        width={undefined}
       >
         <div
           className="caldera-field-wrapper caldera-field-wrapper-text"

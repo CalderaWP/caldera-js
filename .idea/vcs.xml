@@ -40,12 +40,16 @@
     <mapping directory="$PROJECT_DIR$/plugins/cache-generator/vendor/symfony/polyfill-mbstring" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins/cache-generator/vendor/symfony/translation" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/inpsyde/wonolog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/johnpbloch/wordpress" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/monolog/monolog" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/pimple/pimple" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/psr/container" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/psr/log" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/symfony/translation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/vlucas/phpdotenv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wordpress" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/wp-content/plugins/caldera-forms" vcs="Git" />
   </component>
 </project>

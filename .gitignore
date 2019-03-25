@@ -1,7 +1,6 @@
 # wp-json content
-wp-json-content/
-wp-json-content
-wp-json-content/*
+wordpress
+wordpress/*
 wp-json-content/*
 !wp-json-content/posts/.gitkeep
 !wp-json-content/posts/hello-world.json

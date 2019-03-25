@@ -4,12 +4,9 @@ exports[`FormEditor should match snapshot 1`] = `
 <div>
   <div
     className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-    id={undefined}
   >
     <div
       className="caldera-column sc-bdVaJa iHZvIS"
-      id={undefined}
-      width={undefined}
     >
       <p>
         Form Name
@@ -22,7 +19,6 @@ exports[`FormEditor should match snapshot 1`] = `
     <div
       aria-orientation="horizontal"
       className="components-tab-panel__tabs"
-      onFocus={undefined}
       onKeyDown={[Function]}
       role="tablist"
     >
@@ -88,7 +84,6 @@ exports[`FormEditor should match snapshot 1`] = `
           <div>
             <div
               className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-              id={undefined}
             >
               <button
                 className="caldera-forms-choose-processor caldera-forms-choose-processor-season7Episode2"
@@ -99,7 +94,6 @@ exports[`FormEditor should match snapshot 1`] = `
             </div>
             <div
               className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-              id={undefined}
             >
               <button
                 className="caldera-forms-choose-processor caldera-forms-choose-processor-p2"
@@ -126,7 +120,6 @@ exports[`FormEditor should match snapshot 1`] = `
                     Processor Type
                   </label>
                   <select
-                    aria-describedby={undefined}
                     className="components-select-control__input"
                     id="newProcessorType"
                     multiple={false}

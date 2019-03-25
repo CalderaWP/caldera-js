@@ -8,12 +8,9 @@ exports[`Caldera Forms Forms 1`] = `
   >
     <div
       className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <div
         className="caldera-column sc-bdVaJa iHZvIS"
-        id={undefined}
-        width={undefined}
       >
         <div
           className="caldera-field-wrapper caldera-field-wrapper-text"
@@ -37,9 +34,7 @@ exports[`Caldera Forms Forms 1`] = `
                 multiple={true}
                 onBlur={[Function]}
                 onChange={[Function]}
-                placeholder={undefined}
                 type="email"
-                value={undefined}
               />
             </div>
             <p
@@ -53,8 +48,6 @@ exports[`Caldera Forms Forms 1`] = `
       </div>
       <div
         className="caldera-column sc-bdVaJa iHZvIS"
-        id={undefined}
-        width={undefined}
       >
         <div
           className="caldera-field-wrapper caldera-field-wrapper-text"
@@ -77,9 +70,7 @@ exports[`Caldera Forms Forms 1`] = `
                 id="firstName"
                 onBlur={[Function]}
                 onChange={[Function]}
-                placeholder={undefined}
                 type="text"
-                value={undefined}
               />
             </div>
             <p

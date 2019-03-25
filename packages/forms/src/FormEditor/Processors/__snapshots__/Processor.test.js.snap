@@ -4,296 +4,278 @@ exports[`Processor Matches snapshot 1`] = `
 Array [
   <div
     className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-    id={undefined}
->
+  >
     <div
-        className="caldera-processor"
+      className="caldera-processor"
     >
-        <div
-            aria-orientation="horizontal"
-            className="components-tab-panel__tabs"
-            onFocus={undefined}
-            onKeyDown={[Function]}
-            role="tablist"
+      <div
+        aria-orientation="horizontal"
+        className="components-tab-panel__tabs"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-controls="0-settings-view"
+          aria-selected={true}
+          className="caldera-processor-settings-tab-btn active-tab"
+          id="0-settings"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={null}
         >
-            <button
-                aria-controls="0-settings-view"
-                aria-selected={true}
-                className="caldera-processor-settings-tab-btn active-tab"
-                id="0-settings"
-                onClick={[Function]}
-                role="tab"
-                tabIndex={null}
-            >
-                Settings
-            </button>
-            <button
-                aria-controls="0-conditionals-view"
-                aria-selected={false}
-                className="caldera-processor-conditionals-tab-btn "
-                id="0-conditionals"
-                onClick={[Function]}
-                role="tab"
-                tabIndex={-1}
-            >
-                Conditionals
-            </button>
-        </div>
-        <div
-            aria-labelledby="0-settings"
-            className="components-tab-panel__tab-content"
-            id="0-settings-view"
-            role="tabpanel"
-            tabIndex="0"
+          Settings
+        </button>
+        <button
+          aria-controls="0-conditionals-view"
+          aria-selected={false}
+          className="caldera-processor-conditionals-tab-btn "
+          id="0-conditionals"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={-1}
         >
-            <div>
-                <form
-                    onReset={[Function]}
-                    onSubmit={[Function]}
+          Conditionals
+        </button>
+      </div>
+      <div
+        aria-labelledby="0-settings"
+        className="components-tab-panel__tab-content"
+        id="0-settings-view"
+        role="tabpanel"
+        tabIndex="0"
+      >
+        <div>
+          <form
+            onReset={[Function]}
+            onSubmit={[Function]}
+          >
+            <div
+              className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                className="caldera-column sc-bdVaJa iHZvIS"
+              >
+                <div
+                  className="caldera-field-wrapper caldera-field-wrapper-text"
                 >
+                  <fieldset
+                    className="caldera-fieldset caldera-fieldset-checkboxes"
+                  >
+                    <legend>
+                      Checkbox Field Set Label
+                    </legend>
                     <div
-                        className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-                        id={undefined}
+                      className="components-base-control"
                     >
-                        <div
-                            className="caldera-column sc-bdVaJa iHZvIS"
-                            id={undefined}
-                            width={undefined}
+                      <div
+                        className="components-base-control__field"
+                      >
+                        <input
+                          checked={true}
+                          className="components-checkbox-control__input"
+                          id="opt-1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                          value="1"
+                        />
+                        <label
+                          className="components-checkbox-control__label"
+                          htmlFor="inspector-checkbox-control-0"
                         >
-                            <div
-                                className="caldera-field-wrapper caldera-field-wrapper-text"
-                            >
-                                <fieldset
-                                    className="caldera-fieldset caldera-fieldset-checkboxes"
-                                >
-                                    <legend>
-                                        Checkbox Field Set Label
-                                    </legend>
-                                    <div
-                                        className="components-base-control"
-                                    >
-                                        <div
-                                            className="components-base-control__field"
-                                        >
-                                            <input
-                                                aria-describedby={undefined}
-                                                checked={true}
-                                                className="components-checkbox-control__input"
-                                                id="opt-1"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                                value="1"
-                                            />
-                                            <label
-                                                className="components-checkbox-control__label"
-                                                htmlFor="inspector-checkbox-control-0"
-                                            >
-                                                One
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="components-base-control"
-                                    >
-                                        <div
-                                            className="components-base-control__field"
-                                        >
-                                            <input
-                                                aria-describedby="inspector-checkbox-control-1__help"
-                                                checked={true}
-                                                className="components-checkbox-control__input"
-                                                id="opt-2"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                                value="1"
-                                            />
-                                            <label
-                                                className="components-checkbox-control__label"
-                                                htmlFor="inspector-checkbox-control-1"
-                                            >
-                                                Two
-                                            </label>
-                                        </div>
-                                        <p
-                                            className="components-base-control__help"
-                                            id="inspector-checkbox-control-1__help"
-                                        >
-                                            The Second Option
-                                        </p>
-                                    </div>
-                                    <div
-                                        className="components-base-control"
-                                    >
-                                        <div
-                                            className="components-base-control__field"
-                                        >
-                                            <input
-                                                aria-describedby={undefined}
-                                                checked={true}
-                                                className="components-checkbox-control__input"
-                                                id="opt-3"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                                value="1"
-                                            />
-                                            <label
-                                                className="components-checkbox-control__label"
-                                                htmlFor="inspector-checkbox-control-2"
-                                            >
-                                                Three
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
+                          One
+                        </label>
+                      </div>
                     </div>
                     <div
-                        className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-                        id={undefined}
+                      className="components-base-control"
                     >
-                        <div
-                            className="caldera-column sc-bdVaJa iHZvIS"
-                            id={undefined}
-                            width={undefined}
+                      <div
+                        className="components-base-control__field"
+                      >
+                        <input
+                          aria-describedby="inspector-checkbox-control-1__help"
+                          checked={true}
+                          className="components-checkbox-control__input"
+                          id="opt-2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                          value="1"
+                        />
+                        <label
+                          className="components-checkbox-control__label"
+                          htmlFor="inspector-checkbox-control-1"
                         >
-                            <div
-                                className="caldera-field-wrapper caldera-field-wrapper-text"
-                            >
-                                <div
-                                    className="components-base-control caldera-field caldera-field-select"
-                                >
-                                    <div
-                                        className="components-base-control__field"
-                                    >
-                                        <label
-                                            className="components-base-control__label"
-                                            htmlFor="inspector-select-control-0"
-                                        >
-                                            Select Field Label
-                                        </label>
-                                        <select
-                                            aria-describedby="inspector-select-control-0__help"
-                                            className="components-select-control__input"
-                                            id="selectFieldId"
-                                            multiple={false}
-                                            onChange={[Function]}
-                                            value={undefined}
-                                        >
-                                            <option
-                                                value={0}
-                                            >
-                                                Zero
-                                            </option>
-                                            <option
-                                                value={1}
-                                            >
-                                                One
-                                            </option>
-                                            <option
-                                                value={2}
-                                            >
-                                                Two
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <p
-                                        className="components-base-control__help"
-                                        id="inspector-select-control-0__help"
-                                    >
-                                        Select field description
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                          Two
+                        </label>
+                      </div>
+                      <p
+                        className="components-base-control__help"
+                        id="inspector-checkbox-control-1__help"
+                      >
+                        The Second Option
+                      </p>
                     </div>
                     <div
-                        className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
-                        id={undefined}
+                      className="components-base-control"
                     >
-                        <div
-                            className="caldera-column sc-bdVaJa iHZvIS"
-                            id={undefined}
-                            width={undefined}
+                      <div
+                        className="components-base-control__field"
+                      >
+                        <input
+                          checked={true}
+                          className="components-checkbox-control__input"
+                          id="opt-3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                          value="1"
+                        />
+                        <label
+                          className="components-checkbox-control__label"
+                          htmlFor="inspector-checkbox-control-2"
                         >
-                            <div
-                                className="caldera-field-wrapper caldera-field-wrapper-text"
-                            >
-                                <div
-                                    className="components-base-control"
-                                >
-                                    <div
-                                        className="components-base-control__field"
-                                    >
-                                        <input
-                                            aria-describedby="inspector-checkbox-control-3__help"
-                                            checked={true}
-                                            className="components-checkbox-control__input"
-                                            id="checkboxFieldLabel"
-                                            onBlur={[Function]}
-                                            onChange={[Function]}
-                                            type="checkbox"
-                                            value="1"
-                                        />
-                                        <label
-                                            className="components-checkbox-control__label"
-                                            htmlFor="inspector-checkbox-control-3"
-                                        >
-                                            Checkbox Labe
-                                        </label>
-                                    </div>
-                                    <p
-                                        className="components-base-control__help"
-                                        id="inspector-checkbox-control-3__help"
-                                    >
-                                        Checkbox field description
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                          Three
+                        </label>
+                      </div>
                     </div>
-                    <input
-                        className="caldera-forms-submit"
-                        disabled={false}
-                        type="submit"
-                        value="Click Button"
-                    />
-                </form>
+                  </fieldset>
+                </div>
+              </div>
             </div>
+            <div
+              className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                className="caldera-column sc-bdVaJa iHZvIS"
+              >
+                <div
+                  className="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <div
+                    className="components-base-control caldera-field caldera-field-select"
+                  >
+                    <div
+                      className="components-base-control__field"
+                    >
+                      <label
+                        className="components-base-control__label"
+                        htmlFor="inspector-select-control-0"
+                      >
+                        Select Field Label
+                      </label>
+                      <select
+                        aria-describedby="inspector-select-control-0__help"
+                        className="components-select-control__input"
+                        id="selectFieldId"
+                        multiple={false}
+                        onChange={[Function]}
+                      >
+                        <option
+                          value={0}
+                        >
+                          Zero
+                        </option>
+                        <option
+                          value={1}
+                        >
+                          One
+                        </option>
+                        <option
+                          value={2}
+                        >
+                          Two
+                        </option>
+                      </select>
+                    </div>
+                    <p
+                      className="components-base-control__help"
+                      id="inspector-select-control-0__help"
+                    >
+                      Select field description
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-bdVaJa caldera-row caldera-form-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                className="caldera-column sc-bdVaJa iHZvIS"
+              >
+                <div
+                  className="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <div
+                    className="components-base-control"
+                  >
+                    <div
+                      className="components-base-control__field"
+                    >
+                      <input
+                        aria-describedby="inspector-checkbox-control-3__help"
+                        checked={true}
+                        className="components-checkbox-control__input"
+                        id="checkboxFieldLabel"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        type="checkbox"
+                        value="1"
+                      />
+                      <label
+                        className="components-checkbox-control__label"
+                        htmlFor="inspector-checkbox-control-3"
+                      >
+                        Checkbox Labe
+                      </label>
+                    </div>
+                    <p
+                      className="components-base-control__help"
+                      id="inspector-checkbox-control-3__help"
+                    >
+                      Checkbox field description
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input
+              className="caldera-forms-submit"
+              disabled={false}
+              type="submit"
+              value="Click Button"
+            />
+          </form>
         </div>
+      </div>
     </div>
-</div>,
+  </div>,
   <div
     className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-    id={undefined}
->
+  >
     <div
-        className="caldera-column sc-bdVaJa gfmZBt"
-        id={undefined}
-        width="1/2"
+      className="caldera-column sc-bdVaJa gfmZBt"
+      width="1/2"
     >
-        <button
-            className="caldera-processor-close"
-            onClick={[Function]}
-        >
-            Close
-        </button>
+      <button
+        className="caldera-processor-close"
+        onClick={[MockFunction]}
+      >
+        Close
+      </button>
     </div>
     <div
-        className="caldera-column sc-bdVaJa gfmZBt"
-        id={undefined}
-        width="1/2"
+      className="caldera-column sc-bdVaJa gfmZBt"
+      width="1/2"
     >
-        <button
-            className="caldera-processor-remove"
-            onClick={undefined}
-        >
-            Remove
-        </button>
+      <button
+        className="caldera-processor-remove"
+      >
+        Remove
+      </button>
     </div>
-</div>,
+  </div>,
 ]
 `;

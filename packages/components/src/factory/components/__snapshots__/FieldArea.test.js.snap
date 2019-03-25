@@ -22,7 +22,6 @@ exports[`FieldArea component Creates a text field 1`] = `
         id="firstName"
         onBlur={[Function]}
         onChange={[Function]}
-        placeholder={undefined}
         type="text"
         value="roy"
       />
@@ -110,7 +109,6 @@ exports[`FieldArea component Shows errors 1`] = `
         id="firstName"
         onBlur={[Function]}
         onChange={[Function]}
-        placeholder={undefined}
         type="text"
         value="roy"
       />

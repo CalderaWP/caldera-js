@@ -34,9 +34,6 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
       >
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -57,7 +54,6 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
             aria-describedby="components-form-token-field__token-text-2"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -83,9 +79,6 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
         </span>
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -106,7 +99,6 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
             aria-describedby="components-form-token-field__token-text-3"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -131,13 +123,9 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
           </button>
         </span>
         <input
-          aria-activedescendant={undefined}
           aria-autocomplete="list"
           aria-describedby="components-form-token-suggestions-howto-1"
           aria-expanded={false}
-          aria-owns={undefined}
-          autoCapitalize={undefined}
-          autoComplete={undefined}
           className="components-form-token-field__input"
           disabled={false}
           id="components-form-token-input-1"
@@ -200,9 +188,6 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
       >
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -223,7 +208,6 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
             aria-describedby="components-form-token-field__token-text-0"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -249,9 +233,6 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
         </span>
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -272,7 +253,6 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
             aria-describedby="components-form-token-field__token-text-1"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -297,13 +277,9 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
           </button>
         </span>
         <input
-          aria-activedescendant={undefined}
           aria-autocomplete="list"
           aria-describedby="components-form-token-suggestions-howto-0"
           aria-expanded={false}
-          aria-owns={undefined}
-          autoCapitalize={undefined}
-          autoComplete={undefined}
           className="components-form-token-field__input"
           disabled={false}
           id="components-form-token-input-0"

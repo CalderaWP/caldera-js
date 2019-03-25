@@ -14,7 +14,6 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
@@ -68,7 +67,6 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
@@ -109,7 +107,6 @@ exports[`fieldFactory Creates a number field 1`] = `
       min={1}
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="number"
       value={3}
     />
@@ -222,7 +219,6 @@ exports[`fieldFactory Creates a text field 1`] = `
       id="firstName"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="text"
       value="roy"
     />
@@ -270,9 +266,6 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
       >
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -293,7 +286,6 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
             aria-describedby="components-form-token-field__token-text-0"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -319,9 +311,6 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
         </span>
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -342,7 +331,6 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
             aria-describedby="components-form-token-field__token-text-1"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -367,13 +355,9 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
           </button>
         </span>
         <input
-          aria-activedescendant={undefined}
           aria-autocomplete="list"
           aria-describedby="components-form-token-suggestions-howto-0"
           aria-expanded={false}
-          aria-owns={undefined}
-          autoCapitalize={undefined}
-          autoComplete={undefined}
           className="components-form-token-field__input"
           disabled={false}
           id="components-form-token-input-0"
@@ -449,7 +433,6 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
@@ -503,7 +486,6 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby={undefined}
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
@@ -543,7 +525,6 @@ exports[`fieldFactory Creates an email field 1`] = `
       multiple={true}
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
       type="email"
       value="emai@email.com"
     />
@@ -591,9 +572,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
       >
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -614,7 +592,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
             aria-describedby="components-form-token-field__token-text-2"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -640,9 +617,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
         </span>
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -663,7 +637,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
             aria-describedby="components-form-token-field__token-text-3"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -689,9 +662,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
         </span>
         <span
           className="components-form-token-field__token"
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title={undefined}
         >
           <span
             className="components-form-token-field__token-text"
@@ -712,7 +682,6 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
             aria-describedby="components-form-token-field__token-text-4"
             aria-label="Remove item"
             className="components-button components-icon-button components-form-token-field__remove-token"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -737,13 +706,9 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
           </button>
         </span>
         <input
-          aria-activedescendant={undefined}
           aria-autocomplete="list"
           aria-describedby="components-form-token-suggestions-howto-1"
           aria-expanded={false}
-          aria-owns={undefined}
-          autoCapitalize={undefined}
-          autoComplete={undefined}
           className="components-form-token-field__input"
           disabled={false}
           id="components-form-token-input-1"
@@ -925,7 +890,6 @@ exports[`fieldFactory should create toggle 1`] = `
           className="components-form-toggle is-checked"
         >
           <input
-            aria-describedby={undefined}
             checked={true}
             className="components-form-toggle__input"
             id="inspector-toggle-control-0"

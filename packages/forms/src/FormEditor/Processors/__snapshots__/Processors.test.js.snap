@@ -5,7 +5,6 @@ exports[`Processors collection in processors UI Renders with a list of processor
   <div>
     <div
       className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <button
         className="caldera-forms-choose-processor caldera-forms-choose-processor-season7Episode2"
@@ -16,7 +15,6 @@ exports[`Processors collection in processors UI Renders with a list of processor
     </div>
     <div
       className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
-      id={undefined}
     >
       <button
         className="caldera-forms-choose-processor caldera-forms-choose-processor-p2"
@@ -43,7 +41,6 @@ exports[`Processors collection in processors UI Renders with a list of processor
             Processor Type
           </label>
           <select
-            aria-describedby={undefined}
             className="components-select-control__input"
             id="newProcessorType"
             multiple={false}

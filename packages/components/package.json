@@ -10,7 +10,7 @@
     "lint": "eslint 'src/**/*.js'",
     "del-dist": "del-cli dist",
     "prebuild": "yarn del-dist",
-    "build": "babel src -d dist --ignore test.js,story.js,fixture.js",
+    "build": "rm -rf dist && babel src -d dist --ignore \"src/**/*.fixture.js\",\"src/**/*.story.js\",\"src/**/*.test.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -42,7 +42,7 @@
     "@storybook/addon-links": "^4.1.11",
     "@storybook/react": "^4.1.11",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.8.0",
@@ -91,6 +91,8 @@
     ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/config/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/",
       "\\.(svg|css|scss|json)$"
     ],
     "coverageThreshold": {

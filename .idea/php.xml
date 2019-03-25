@@ -16,6 +16,10 @@
       <path value="$PROJECT_DIR$/vendor/calderawp/caldera-containers" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/calderawp/caldera-forms-query" />
+      <path value="$PROJECT_DIR$/vendor/johnpbloch/wordpress-core-installer" />
+      <path value="$PROJECT_DIR$/vendor/johnpbloch/wordpress" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
     </include_path>
   </component>
 </project>

@@ -22,7 +22,6 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
         id="firstName"
         onBlur={[Function]}
         onChange={[Function]}
-        placeholder={undefined}
         type="text"
         value="roy"
       />
@@ -125,9 +124,6 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
         >
           <span
             className="components-form-token-field__token"
-            onMouseEnter={undefined}
-            onMouseLeave={undefined}
-            title={undefined}
           >
             <span
               className="components-form-token-field__token-text"
@@ -148,7 +144,6 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
               aria-describedby="components-form-token-field__token-text-0"
               aria-label="Remove item"
               className="components-button components-icon-button components-form-token-field__remove-token"
-              disabled={undefined}
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -174,9 +169,6 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
           </span>
           <span
             className="components-form-token-field__token"
-            onMouseEnter={undefined}
-            onMouseLeave={undefined}
-            title={undefined}
           >
             <span
               className="components-form-token-field__token-text"
@@ -197,7 +189,6 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
               aria-describedby="components-form-token-field__token-text-1"
               aria-label="Remove item"
               className="components-button components-icon-button components-form-token-field__remove-token"
-              disabled={undefined}
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
@@ -222,13 +213,9 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
             </button>
           </span>
           <input
-            aria-activedescendant={undefined}
             aria-autocomplete="list"
             aria-describedby="components-form-token-suggestions-howto-0"
             aria-expanded={false}
-            aria-owns={undefined}
-            autoCapitalize={undefined}
-            autoComplete={undefined}
             className="components-form-token-field__input"
             disabled={false}
             id="components-form-token-input-0"
@@ -324,7 +311,6 @@ exports[`fieldAreaFactory should create toggle 1`] = `
             className="components-form-toggle is-checked"
           >
             <input
-              aria-describedby={undefined}
               checked={true}
               className="components-form-toggle__input"
               id="inspector-toggle-control-0"

@@ -6,7 +6,7 @@
     "start": "nodemon server.js",
     "build": "next build",
     "start:production": "NODE_ENV=production node server.js",
-    "test": "jest ---all",
+    "test": "jest --all",
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

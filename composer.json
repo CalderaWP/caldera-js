@@ -14,6 +14,8 @@
         }
     ],
     "require": {
-        "Desertsnowman/caldera-forms": "dev-develop"
+        "Desertsnowman/caldera-forms": "dev-develop",
+        "johnpbloch/wordpress": ">=5.0",
+        "vlucas/phpdotenv": "^2.2"
     }
 }
