@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "start": "yarn --cwd packages/caldera-forms-pro start",
+    "start:server": "yarn --cwd packages/server start",
     "build": "yarn build:pre && yarn build:components && yarn build:forms",
     "build:pre": "lerna bootstrap",
     "build:components": "yarn --cwd packages/components build",

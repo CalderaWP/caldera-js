@@ -1,0 +1,19 @@
+{
+    "name": "calderawp/caldera-forms-pro",
+    "authors": [
+        {
+            "name": "Josh Pollock",
+            "email": "josh@calderawp.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url": "git@github.com:CalderaWP/Caldera-Forms.git"
+        }
+    ],
+    "require": {
+        "Desertsnowman/caldera-forms": "dev-develop"
+    }
+}

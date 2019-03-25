@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress
+    ports:
+    - 8118:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+      ABSPATH: /usr/src/wordpress/
+    volumes:
+    - ./plugins:/var/www/html/wp-content/plugins
+    - ./wp-json-cache:/var/www/html/wp-json-cache
+    - ./uploads:/var/www/html/wp-content/uploads
+    - ./wp-content/plugins/caldera-forms:/var/www/html/wp-content/plugins/caldera-forms
+  cli:
+    image: wordpress:cli
+    volumes:
+    - ./plugins:/var/www/html/wp-content/plugins
+    - ./wp-content:/var/www/html/wp-content
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+      ABSPATH: /usr/src/wordpress/
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: wordpress_test
+
+  wordpress_phpunit:
+    image: chriszarate/wordpress-phpunit
+    environment:
+      PHPUNIT_DB_HOST: mysql
+    volumes:
+    - .:/app
+    - testsuite:/tmp
+
+  composer:
+    image: composer
+    volumes:
+    - .:/app
+
+volumes:
+  testsuite:
+  wordpress:
+  plugins:
+

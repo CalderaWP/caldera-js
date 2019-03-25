@@ -1,3 +1,10 @@
+# wp-json content
+wp-json-content/
+wp-json-content
+wp-json-content/*
+wp-content/
+uploads/
+
 # Logs
 logs
 *.log
@@ -81,3 +88,5 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+/vendor/
