@@ -1,4 +1,4 @@
-import submitForm from './submitForm';
+import submitFormCaldera from './submitFormCaldera';
 
 /**
  * How mocking fetch works
@@ -28,7 +28,7 @@ describe('testing api', () => {
 	});
 });
 
-describe('submitForm', () => {
+describe('submitFormCaldera', () => {
 	const fieldValues = {
 		fld1: 1,
 		firstName: 'Thor'
@@ -46,14 +46,14 @@ describe('submitForm', () => {
 	};
 
 	it('calls fetch with the right url', () => {
-		submitForm(fieldValues, eventOptions, fetch);
+		submitFormCaldera(fieldValues, eventOptions, fetch);
 		expect(fetch.mock.calls[0][0]).toEqual(
 			'https://something.com/wp-json/caldera-api/v1/entries'
 		);
 	});
 
 	it('calls fetch with the field values in body', () => {
-		submitForm(fieldValues, eventOptions, fetch);
+		submitFormCaldera(fieldValues, eventOptions, fetch);
 		expect(JSON.parse(fetch.mock.calls[0][1].body).entryValues).toEqual({
 			firstName: 'Thor',
 			fld1: 1
@@ -61,18 +61,18 @@ describe('submitForm', () => {
 	});
 
 	it('calls fetch with PUT HTTP method', () => {
-		submitForm(fieldValues, eventOptions, fetch);
+		submitFormCaldera(fieldValues, eventOptions, fetch);
 		expect(fetch.mock.calls[0][1].method).toEqual('PUT');
 	});
 
 	it('calls fetch with headers', () => {
-		submitForm(fieldValues, eventOptions, fetch);
+		submitFormCaldera(fieldValues, eventOptions, fetch);
 		expect(typeof fetch.mock.calls[0][1].headers).toEqual('object');
 	});
 
 	it('Adds token to fetch headers', () => {
 		const token = 'dsjdfs-2dsa';
-		submitForm(
+		submitFormCaldera(
 			fieldValues,
 			{
 				apiRootUri,

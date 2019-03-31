@@ -6,7 +6,7 @@
  * @param fetch
  * @return {*}
  */
-export default function submitForm(fieldValues, eventOptions, fetch) {
+export default function submitFormCaldera(fieldValues, eventOptions, fetch) {
 	const { apiRootUri, formId, token } = eventOptions;
 	const entryValues = [];
 	Object.keys(fieldValues).forEach(fieldId => {

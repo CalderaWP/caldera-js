@@ -3,7 +3,7 @@ import { decorateObjectLiteralWithMethods } from './decoratorFactory/decoratorFa
 /**
  *
  * @param form
- * @param {{submitForm:function({object},{string},{fetch})}} options
+ * @param {{submitFormCaldera:function({object},{string},{fetch})}} options
  * @return {Proxy}
  * @constructor
  */
@@ -47,7 +47,7 @@ export default function FormClient(form, options) {
 
 	/**
 	 * @return {{
-	 *     submitForm:function({object})}}
+	 *     submitFormCaldera:function({object})}}
 	 * }}
 	 */
 	return decorateObjectLiteralWithMethods(this.fieldValues, {

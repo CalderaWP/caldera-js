@@ -1,5 +1,5 @@
 import FormClient from './FormClient';
-import submitForm from './handlers/submitForm';
+import submitFormCaldera from './handlers/submitFormCaldera';
 
 /**
  *
@@ -24,7 +24,7 @@ export const formClientFactory = (
 		case 'caldera':
 		default:
 			if (!handlers.hasOwnProperty('submitForm')) {
-				handlers.submitForm = submitForm;
+				handlers.submitForm = submitFormCaldera;
 			}
 			return new FormClient(form, {
 				apiRootUri,
