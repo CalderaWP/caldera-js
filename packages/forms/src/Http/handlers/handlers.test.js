@@ -1,4 +1,5 @@
 import submitFormCaldera from './submitFormCaldera';
+import submitFormCf2 from './submitFormCf2';
 
 /**
  * How mocking fetch works
@@ -84,3 +85,60 @@ describe('submitFormCaldera', () => {
 		expect(fetch.mock.calls[0][1].headers['X-CWP-TOKEN']).toEqual(token);
 	});
 });
+
+describe('submitFormCf2', () => {
+	const fieldValues = {
+		fld1: 1,
+		firstName: 'Thor'
+	};
+
+	beforeEach(() => {
+		fetch.resetMocks();
+	});
+
+	const apiRootUri = 'http://localhost:8228/wp-json/cf-api';
+	const formId = 'cf1';
+	const eventOptions = {
+		apiRootUri,
+		formId
+	};
+
+	it('calls fetch with the right url', () => {
+		submitFormCf2(fieldValues, eventOptions, fetch);
+		expect(fetch.mock.calls[0][0]).toEqual(
+			`http://localhost:8228/wp-json/cf-api/v3/process/submission/${formId}`
+		);
+	});
+
+	it('calls fetch with the field values in body', () => {
+		submitFormCf2(fieldValues, eventOptions, fetch);
+		expect(JSON.parse(fetch.mock.calls[0][1].body).entryValues).toEqual({
+			firstName: 'Thor',
+			fld1: 1
+		});
+	});
+
+	it('calls fetch with POST HTTP method', () => {
+		submitFormCf2(fieldValues, eventOptions, fetch);
+		expect(fetch.mock.calls[0][1].method).toEqual('POST');
+	});
+
+	it('calls fetch with headers', () => {
+		submitFormCf2(fieldValues, eventOptions, fetch);
+		expect(typeof fetch.mock.calls[0][1].headers).toEqual('object');
+	});
+
+	it('Adds json content type to fetch headers', () => {
+		submitFormCf2(
+			fieldValues,
+			{
+				apiRootUri,
+				formId,
+			},
+			fetch
+		);
+		expect(fetch.mock.calls[0][1].headers['Content-Type']).toEqual('application/json');
+	});
+});
+
+

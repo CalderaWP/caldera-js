@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/FormClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/FormClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +54,7 @@
           <entry key="babelrc" value="108" />
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
-          <entry key="js" value="5525" />
+          <entry key="js" value="5684" />
           <entry key="json" value="1112" />
           <entry key="md" value="772" />
           <entry key="php" value="1230" />
@@ -69,7 +66,7 @@
         <counts>
           <entry key=".env file" value="33" />
           <entry key="JSON" value="1220" />
-          <entry key="JavaScript" value="5525" />
+          <entry key="JavaScript" value="5684" />
           <entry key="Markdown" value="772" />
           <entry key="PHP" value="1230" />
           <entry key="PLAIN_TEXT" value="164" />
@@ -84,7 +81,7 @@
           <entry key="env" value="3" />
           <entry key="gitignore" value="5" />
           <entry key="gitkeep" value="3" />
-          <entry key="js" value="228" />
+          <entry key="js" value="232" />
           <entry key="json" value="54" />
           <entry key="lock" value="2" />
           <entry key="md" value="7" />
@@ -105,7 +102,7 @@
           <entry key="Dockerfile" value="1" />
           <entry key="Image" value="6" />
           <entry key="JSON" value="74" />
-          <entry key="JavaScript" value="228" />
+          <entry key="JavaScript" value="232" />
           <entry key="Markdown" value="8" />
           <entry key="PHP" value="22" />
           <entry key="PLAIN_TEXT" value="11" />
@@ -128,89 +125,101 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="56" column="32" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="50" selection-start-column="50" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/DELETE-THIS.MD">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/decoratorFactory.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/ConditionalState.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/createFieldRule.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/createFieldRule.test.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/applyRule.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4394693">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="250">
+                  <caret line="56" column="32" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="414">
+                  <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#52#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="37" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="37" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/FormClient.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="155">
+                  <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/createFieldRule.test.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/applyRule.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="414">
+                  <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#0#52#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -248,6 +257,7 @@
       <find>mount</find>
       <find>FieldArea</find>
       <find>onChange</find>
+      <find>export default function submitFormCf2(fieldValues, eventOptions, fetch) {</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -268,7 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/packages/server/routers/sendgrid/Personalizations.js" />
         <option value="$PROJECT_DIR$/packages/server/routers/sendgrid.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/createFieldRule.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/ConditionalState.js" />
@@ -318,6 +327,7 @@
         <option value="$PROJECT_DIR$/.lando.yml" />
         <option value="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js" />
+        <option value="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" />
       </list>
     </option>
@@ -376,7 +386,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="264" />
+    <option name="x" value="107" />
     <option name="y" value="23" />
     <option name="width" value="1656" />
     <option name="height" value="1057" />
@@ -470,19 +480,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/bin/wp" />
-      <recent name="$PROJECT_DIR$/packages/server/wp" />
-      <recent name="$PROJECT_DIR$/plugins/cache-generator/php" />
-      <recent name="$PROJECT_DIR$/bin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bin/wp" />
       <recent name="$PROJECT_DIR$/packages/server" />
       <recent name="$PROJECT_DIR$/boilerplate/package" />
       <recent name="$PROJECT_DIR$/packages/components/src" />
       <recent name="$PROJECT_DIR$/packages/caldera-forms-pro" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/forms/src/Http/handlers" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bin/wp" />
+      <recent name="$PROJECT_DIR$/packages/server/wp" />
+      <recent name="$PROJECT_DIR$/plugins/cache-generator/php" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -497,7 +507,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Factory import.imports factory">
+  <component name="RunManager" selected="Jest.submitFormCf2">
     <configuration name="Factory import.imports factory" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -523,12 +533,26 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="submitFormCf2" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/packages/forms" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" />
+      <test-names>
+        <test-name value="submitFormCf2" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Jest.a" />
       <item itemvalue="Jest.Factory import.imports factory" />
+      <item itemvalue="Jest.submitFormCf2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.submitFormCf2" />
         <item itemvalue="Jest.Factory import.imports factory" />
         <item itemvalue="Jest.a" />
       </list>
@@ -560,15 +584,15 @@
       <workItem from="1553475707066" duration="6278000" />
       <workItem from="1553555984836" duration="931000" />
       <workItem from="1553615683744" duration="1003000" />
-      <workItem from="1553993622724" duration="243000" />
+      <workItem from="1553993622724" duration="1415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46435000" />
+    <option name="totallyTimeSpent" value="47607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="264" y="23" width="1656" height="1057" extended-state="0" />
+    <frame x="107" y="23" width="1656" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2527881" />
@@ -586,7 +610,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.30569947" />
+      <window_info anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.2911917" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -624,12 +648,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-json-cache/post/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-json-cache/page/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/server/routers/wp-pages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -875,6 +893,23 @@
     <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/state/applyRule.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/decoratorFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/DELETE-THIS.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -885,38 +920,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/DELETE-THIS.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/decoratorFactory/decoratorFactory.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="300">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/FormClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCaldera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" selection-start-column="50" selection-end-column="50" />
+        <state relative-caret-position="414">
+          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
