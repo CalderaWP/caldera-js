@@ -1,5 +1,6 @@
 import submitFormCaldera from './submitFormCaldera';
 import submitFormCf2 from './submitFormCf2';
+import {getCf2Token} from './getCf2Token';
 
 /**
  * How mocking fetch works
@@ -28,6 +29,22 @@ describe('testing api', () => {
 		expect(fetch.mock.calls[0][0]).toEqual('https://google.com');
 	});
 });
+
+
+describe( 'get form token', () => {
+	beforeEach(() => {
+		fetch.resetMocks();
+	});
+	const formId = 'cf1';
+	it( 'gets tokens', () => {
+		getCf2Token( 'https://ap.com', formId , fetch)
+			.then( r => {
+				expect( typeof r._cf_verify ).toBe('string');
+				expect( typeof r._sessionPublicKey ).toBe('string')
+			})
+
+	});
+})
 
 describe('submitFormCaldera', () => {
 	const fieldValues = {

@@ -1,6 +1,6 @@
 import FormClient from './FormClient';
 import { formClientFactory } from './clientFactory';
-describe('', () => {
+describe('Form client factory', () => {
 	beforeEach(() => {
 		fetch.resetMocks();
 	});
@@ -32,4 +32,6 @@ describe('', () => {
 		client.submitForm();
 		expect(submitForm.mock.calls.length).toBe(1);
 	});
+
+
 });
