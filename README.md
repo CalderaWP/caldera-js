@@ -19,7 +19,19 @@
 
 * Add A Package To A Component
     - `yarn workspace @calderawp/components add react`
-    
+* Make publishable with lerna
+    - Add to package.json of the package:
+        ```json
+        { 
+          "publishConfig": {
+              "access": "public"
+          }
+        }
+            
+      ```
+    - [Lerna Publish Command](https://lernajs.io/#command-publish)
+    - [Lerna Publish Command README](https://github.com/lerna/lerna/blob/master/commands/publish/README.md)
+```    
 
 ### Development
 

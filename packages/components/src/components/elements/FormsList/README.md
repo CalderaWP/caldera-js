@@ -2,7 +2,7 @@
 Displays a list of forms
 
 ## Usage
-`import {FormsList}` from '@calderawp/components';`
+`import {FormsList}` from '@calderajs/components';`
 
 ### Listing FOrms
 ```jsx

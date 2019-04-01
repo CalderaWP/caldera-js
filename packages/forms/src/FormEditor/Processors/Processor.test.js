@@ -13,7 +13,7 @@ import {
 	emailField,
 	radioField,
 	FormFieldsAutoComplete
-} from "@calderawp/components";
+} from "@calderajs/components";
 
 describe('Processor', () => {
 	let onClose;

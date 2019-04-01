@@ -1,4 +1,4 @@
-import {collectFieldValues} from '@calderawp/components';
+import {collectFieldValues} from '@calderajs/components';
 
 /**
  * Given a Caldera Layout for a form, grab all field values

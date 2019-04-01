@@ -1,5 +1,5 @@
 {
-  "name": "@calderawp/caldera-js",
+  "name": "@calderajs/caldera-js",
   "private": "true",
   "workspaces": [
     "packages/*"

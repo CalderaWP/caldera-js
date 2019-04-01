@@ -19,7 +19,7 @@ import {
 	fieldAreaFactory,
 	collectFieldValues
 
-} from '@calderawp/components';
+} from '@calderajs/components';
 
 describe('exports', () => {
 	test('RemotePost', () => {

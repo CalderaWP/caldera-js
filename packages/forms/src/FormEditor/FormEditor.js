@@ -2,7 +2,7 @@ import React, {Component, Fragment, createElement} from 'react';
 import PropTypes from 'prop-types';
 import {Processors, processorsCollectionPropType} from './Processors/Processors';
 import {TabPanel} from '@wordpress/components';
-import {Row, Column,fieldAreaFactory} from "@calderawp/components";
+import {Row, Column,fieldAreaFactory} from "@calderajs/components";
 import {processorTypesPropType} from './propTypes';
 import {MainSection} from './MainSection';
 import {defaultProcessorTypes} from './Processors/processorTypes/defaultProcessorTypes';

@@ -12,7 +12,7 @@ import {
 	isValidHtml5type,
 	AutoCompleteField,
 	FormFieldsAutoComplete
-} from '@calderawp/components';
+} from '@calderajs/components';
 import React from 'react';
 
 /**

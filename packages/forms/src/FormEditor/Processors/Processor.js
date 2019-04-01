@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { HorizontalForm } from '../../HorizontalForm/HorizontalForm';
 import { TabPanel } from '@wordpress/components';
-import { Row, Column,FormFieldsAutoComplete } from"@calderawp/components";
+import { Row, Column,FormFieldsAutoComplete } from"@calderajs/components";
 import PropTypes from 'prop-types';
 
 export class Processor extends Component {

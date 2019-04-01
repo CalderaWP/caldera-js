@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
-import {Message} from "@calderawp/components";
+import {Message} from "@calderajs/components";
 import './App.css';
-import {CalderaForm} from "@calderawp/forms";
+import {CalderaForm} from "@calderajs/forms";
 const textField = {
 	fieldType: 'text',
 	value: '',

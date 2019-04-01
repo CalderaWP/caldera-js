@@ -9,9 +9,9 @@ This package creates forms, form elements and layout elements via objects descri
 
 ### Import With webpack
 ```js
-import{fieldFactory, fieldAreaFactory} from "@calderawp/components";
+import{fieldFactory, fieldAreaFactory} from "@calderajs/components";
 
-import { collectFieldValues } from "@calderawp/components";
+import { collectFieldValues } from "@calderajs/components";
 
 ```
 
@@ -94,7 +94,7 @@ These are components that the factories use, that may be useful on their own.
 
 ### Import With webpack
 ```js
-import{factory} from "@calderawp/components";
+import{factory} from "@calderajs/components";
 const { 
 	Rows,
 	Row, 

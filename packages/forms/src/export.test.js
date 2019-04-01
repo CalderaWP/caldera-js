@@ -6,7 +6,7 @@ import {
 	HorizontalForm,
 	FormEditor
 
-} from '@calderawp/forms';
+} from '@calderajs/forms';
 
 
 describe('Exports', () => {

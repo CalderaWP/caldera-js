@@ -15,7 +15,7 @@ See the inline documentation for each method.
 ### Example
 ```js
 //import with webpack
-import {ConditionalState} from '@calderawp/factory';
+import {ConditionalState} from '@calderajs/factory';
 //New instance 
 const processorState = new ConditionalState(
 	{

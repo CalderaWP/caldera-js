@@ -8,13 +8,13 @@ Notes:
 ## Usage
 
 ### Import With webpack
-`import {RemotePost} from '@calderawp/components';`
+`import {RemotePost} from '@calderajs/components';`
 
 ### Show Full Content Of Post
 
 The prop `showFullContent`, if set to true, causes the component to display the full post content `post.content.rendered`
 ```jsx
-import {RemotePost} from '@calderawp/components';
+import {RemotePost} from '@calderajs/components';
 <RemotePost 
     post={{}}
     showFullContent={true}

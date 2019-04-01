@@ -1,5 +1,5 @@
 {
-  "name": "@calderawp/forms",
+  "name": "@calderajs/forms",
   "version": "0.1.4",
   "license": "GPL-2.0",
   "main": "dist/index.js",
@@ -43,7 +43,7 @@
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.4.2"
   },
-  "gitHead": "fb96647a63467a7dcc73b19d02962e0a143be1dd",
+  "gitHead": "073af9bc1fdd0b750d14ceffe7d5d5ead319adb0",
   "publishConfig": {
     "access": "public"
   }

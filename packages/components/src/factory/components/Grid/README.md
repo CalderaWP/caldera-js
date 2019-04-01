@@ -13,7 +13,7 @@ import {
 	Rows,
 	FieldArea,
 	Fields,
-} from '@calderawp/components';
+} from '@calderajs/components';
 
 ```
 

@@ -20,7 +20,7 @@ import {
 	InputField,
 	RichText,
 	MagicRichText
-} from '@calderawp/components';
+} from '@calderajs/components';
 
 ```
 
@@ -36,7 +36,7 @@ This package also exports fixtures for testing columns and fields.
 
 ##### Field Fixtures
 ```js
-import {factory} from "@calderawp/components";
+import {factory} from "@calderajs/components";
 const {
 	checkboxFieldset,
 	selectField,
@@ -53,7 +53,7 @@ const {
 
 #### Rows and Columns
 ```js
-import {factory} from "@calderawp/components";
+import {factory} from "@calderajs/components";
 const {
 	formRowOne,
     	formRowTwo,

@@ -9,7 +9,7 @@ import {
 	textField,
 	emailField,
 	radioField
-} from '@calderawp/components';
+} from '@calderajs/components';
 
 
 storiesOf('HorizontalForm', module).add('Works with a bunch of fields', () => (

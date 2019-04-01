@@ -44,7 +44,7 @@ Specific benefits:
  
 
 #### Import With webpack
-`import {CalderaForm} from '@calderawp/forms';`
+`import {CalderaForm} from '@calderajs/forms';`
    
 #### How A Caldera Forms
 ```jsx
@@ -84,7 +84,7 @@ Specific benefits:
 * `rows` - array
 
 ```js
-import{createFieldRule} from '@calderawp/forms';
+import{createFieldRule} from '@calderajs/forms';
 const form = {
 	id: 'contact-form',
 	name: 'Contact Form',
@@ -178,7 +178,7 @@ Notes:
 
 ```js
 import React, {Component} from 'react';
-import {CalderaGrid} from '@calderawp/forms';
+import {CalderaGrid} from '@calderajs/forms';
 
 class Something extends Component {
 	row = {

@@ -7,7 +7,7 @@ import {formRows, formRowOne, checkboxField} from './columns.fixtures';
 import {getValuesFromFormLayout} from './util/getValuesFromFormLayout';
 import {emailField, textField} from './fields.fixtures';
 
-import {Column,fieldAreaFactory,collectFieldValues} from '@calderawp/components';
+import {Column,fieldAreaFactory,collectFieldValues} from '@calderajs/components';
 
 describe( 'Factory import', () => {
 	it( 'imports factory', () => {

@@ -1,4 +1,4 @@
-import { FieldWrapper, Message } from '@calderawp/components';
+import { FieldWrapper, Message } from '@calderajs/components';
 import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import { fieldFactory } from './fieldFactory';

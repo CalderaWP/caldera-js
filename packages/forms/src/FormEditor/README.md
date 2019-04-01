@@ -12,7 +12,7 @@ This is a small wrapper around the `<CalderaForm>` component that is supplied an
 ### Props
 ### Generic Example
 ```jsx
-import {HorizontalForm} from '@calderawp/components';
+import {HorizontalForm} from '@calderajs/components';
 <HorizontalForm
     fields={[]}
     initialValues={{}}
@@ -29,7 +29,7 @@ There are components that wrap `<HorizontalForm />`. They generally add controls
 This is the settings -- to be used in the Caldera Forms editor or similar situation for describe one process of a form.
 
 ```js
-import {Processor} from '@calderawp/components';
+import {Processor} from '@calderajs/components';
 
 const processor = {
     id: 'p1',

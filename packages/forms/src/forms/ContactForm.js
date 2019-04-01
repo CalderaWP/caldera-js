@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CalderaForm, formClientFactory } from '@calderawp/forms';
-import { collectFieldValues } from '@calderawp/factory';
+import { CalderaForm, formClientFactory } from '@calderajs/forms';
+import { collectFieldValues } from '@calderajs/factory';
 const apiRootUri = '/wp-json/caldera-api';
 //const formId = 'contact-form';
 

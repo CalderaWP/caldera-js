@@ -12,7 +12,7 @@ import {
 	radioField, textAreaField, toggleField, autoCompleteField
 } from '../fields.fixtures';
 
-import { fieldWrapperClassNames } from '@calderawp/components';
+import { fieldWrapperClassNames } from '@calderajs/components';
 import { fieldFactory } from './fieldFactory';
 
 describe('fieldAreaFactory', () => {
