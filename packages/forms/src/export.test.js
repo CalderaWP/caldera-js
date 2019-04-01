@@ -4,7 +4,8 @@ import {
 	FormClient,
 	formClientFactory,
 	HorizontalForm,
-	FormEditor
+	FormEditor,
+	getCf2Token
 
 } from '@calderajs/forms';
 
@@ -30,5 +31,8 @@ describe('Exports', () => {
 	});
 	it('exports FormEditor', () => {
 		expect(typeof FormEditor).toBe('function');
+	});
+	it('exports getCf2Token', () => {
+		expect(typeof getCf2Token).toBe('function');
 	});
 });

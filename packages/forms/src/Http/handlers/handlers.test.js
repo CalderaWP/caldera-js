@@ -1,6 +1,6 @@
 import submitFormCaldera from './submitFormCaldera';
 import submitFormCf2 from './submitFormCf2';
-import {getCf2Token} from './getCf2Token';
+import getCf2Token from './getCf2Token';
 
 /**
  * How mocking fetch works

@@ -23,36 +23,38 @@ const emailField = {
 	}
 };
 
-const form = {
-	rows: [
-		{
-			rowId: 'r1',
-			columns: [
-				{
-					fields: [emailField.fieldId],
-					width: '1/2',
-					columnId: '1aaaaa'
-				},
-				{
-					fields: [textField.fieldId],
-					width: '1/4',
-					columnId: '1b'
-				}
-			]
-		}
-	],
-	fields: [
-		emailField,
-		textField
-	],
-	conditionals :[
 
-	]
-};
 
 
 const App = () =>  {
+    const [formLoaded,setFormLoaded] = useState(false);
     const [message,updateMessage] = useState('Effect has not run yet');
+    const [form,setForm] = useState({
+		rows: [
+			{
+				rowId: 'r1',
+				columns: [
+					{
+						fields: [emailField.fieldId],
+						width: '1/2',
+						columnId: '1aaaaa'
+					},
+					{
+						fields: [textField.fieldId],
+						width: '1/4',
+						columnId: '1b'
+					}
+				]
+			}
+		],
+		fields: [
+			emailField,
+			textField
+		],
+		conditionals :[
+
+		]
+	});
 
     //For demo, not controlling field values
     const [fieldValues,setFieldValues] = useState({

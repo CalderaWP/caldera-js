@@ -6,7 +6,7 @@
  * @param  fetch
  * @return {Promise<any>}
  */
-export const getCf2Token = (apiRootUri, formId, fetch) => {
+export default function getCf2Token(apiRootUri, formId, fetch){
 
 	const url = `${apiRootUri}/v3/process/submission/${formId}/token`;
 
