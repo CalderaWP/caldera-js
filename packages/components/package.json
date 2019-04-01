@@ -116,5 +116,6 @@
     "moduleNameMapper": {
       "\\.(css|scss|svg)$": "<rootDir>/config/jest/nullMock.js"
     }
-  }
+  },
+  "gitHead": "7c875bd6a4f0910ffe65d843332b58909579343f"
 }
