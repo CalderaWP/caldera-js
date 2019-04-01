@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormListItem/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/elements/FormsList/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/elements/RemotePost/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/export.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/export.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/factory/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/factory/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/factory/components/Grid/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldAreaFactory.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/factory/factories/fieldFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/demo/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/demo/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.story.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForms.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForms.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaGrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/CalderaForm/util/getValuesFromFormLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/CalderaForm/util/getValuesFromFormLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/FormEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/FormEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/FormEditor.story.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/FormEditor.story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/AddProcessor.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/AddProcessor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processor.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processor.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processors.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/Processors.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/processorTypes/autoResponder.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/Processors/processorTypes/autoResponder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/FormEditor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/FormEditor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/HorizontalForm.story.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/HorizontalForm.story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/HorizontalForm.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/HorizontalForm/HorizontalForm.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/export.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/export.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/forms/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/forms/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/demo/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +53,7 @@
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
           <entry key="js" value="6568" />
-          <entry key="json" value="1263" />
+          <entry key="json" value="1280" />
           <entry key="md" value="1097" />
           <entry key="php" value="1230" />
           <entry key="txt" value="8" />
@@ -99,7 +63,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="33" />
-          <entry key="JSON" value="1371" />
+          <entry key="JSON" value="1388" />
           <entry key="JavaScript" value="6568" />
           <entry key="Markdown" value="1097" />
           <entry key="PHP" value="1230" />
@@ -117,7 +81,7 @@
           <entry key="gitignore" value="5" />
           <entry key="gitkeep" value="3" />
           <entry key="js" value="248" />
-          <entry key="json" value="65" />
+          <entry key="json" value="66" />
           <entry key="lock" value="2" />
           <entry key="md" value="14" />
           <entry key="nullMock" value="1" />
@@ -137,7 +101,7 @@
           <entry key="CSS" value="2" />
           <entry key="Dockerfile" value="1" />
           <entry key="Image" value="6" />
-          <entry key="JSON" value="85" />
+          <entry key="JSON" value="86" />
           <entry key="JavaScript" value="248" />
           <entry key="Markdown" value="15" />
           <entry key="PHP" value="22" />
@@ -163,23 +127,11 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="151">
-                <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+              <first_editor relative-caret-position="15">
+                <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               </first_editor>
               <second_editor />
             </state>
@@ -230,17 +182,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lerna.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/forms/package.json">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/demo/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -300,10 +252,10 @@
       <find>&quot;jest&quot;: &quot;^24.0&quot;</find>
       <find>@calderawp/comn</find>
       <find>preivate</find>
-      <find>publics</find>
       <find>publioc</find>
       <find>cal</find>
       <find>@calderawp/</find>
+      <find>publics</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -368,7 +320,6 @@
         <option value="$PROJECT_DIR$/packages/web-app/pages/index.js" />
         <option value="$PROJECT_DIR$/packages/demo/README.md" />
         <option value="$PROJECT_DIR$/packages/demo/pages/index.js" />
-        <option value="$PROJECT_DIR$/packages/demo/package.json" />
         <option value="$PROJECT_DIR$/packages/demo/src/App.js" />
         <option value="$PROJECT_DIR$/lerna.json" />
         <option value="$PROJECT_DIR$/packages/forms/LICENSE.md" />
@@ -377,6 +328,7 @@
         <option value="$PROJECT_DIR$/packages/server/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/packages/demo/package.json" />
       </list>
     </option>
   </component>
@@ -460,7 +412,13 @@
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
@@ -593,7 +551,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51332000" />
+    <option name="totallyTimeSpent" value="51462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="107" y="23" width="1656" height="1057" extended-state="0" />
@@ -867,21 +825,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/demo/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/demo/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/demo/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -897,9 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lerna.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -953,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/forms/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -984,10 +919,24 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="151">
-            <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+          <first_editor relative-caret-position="15">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/forms/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="48" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/demo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
