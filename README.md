@@ -2,12 +2,15 @@
 
 ### Packages
 * [@calderawp/components](./packages/components/README.md)
+    - Status: Functional beta.
     - UI Components
 * [@calderawp/forms](./packages/forms/README.md)
-    - Forms.
-* [@calderawp/caldera-forms-pro](./packages/caldera-forms-pro/README.md)
-    - The Caldera Forms Pro 2.0 web app
+    - Status: Functional(ish) beta.
+    - Forms
+* [demo](./packages/demo/README.md)
+    - Demo for components/ forms
 * [@calderawp/server](./server/README.md)
+    - Status: Not usefully functional yet.
     - Routers
     - Proxies
     - Services
@@ -39,8 +42,6 @@ Testing tools:
 * Test Components
     - `yarn test:components`
 * Test Forms
-    - `yarn test:forms`
-* Test Caldera Forms Pro
     - `yarn test:forms`
 * Test Server
     - `yarn test:server`
