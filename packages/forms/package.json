@@ -1,6 +1,6 @@
 {
   "name": "@calderawp/forms",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
@@ -35,11 +35,11 @@
     "@storybook/react": "^4.1.11",
     "babel-core": "^7.0.0-bridge",
     "babel-jest": "^23.6.0",
-    "jest-fetch-mock": "^2.1.1",
     "babel-loader": "^8.0.5",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.8.0",
     "jest": "^23.0",
+    "jest-fetch-mock": "^2.1.1",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.4.2"
   }

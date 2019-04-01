@@ -1,6 +1,6 @@
 {
   "name": "@calderawp/components",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "license": "GPL",
   "main": "dist/index.js",
   "scripts": {
