@@ -21,7 +21,8 @@
     "storybook": "yarn storybook:components",
     "storybook:app": "yarn --cwd packages/demo storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",
-    "storybook:components": "yarn --cwd packages/components storybook"
+    "storybook:components": "yarn --cwd packages/components storybook",
+    "publish": "yarn lerna publish"
   },
   "devDependencies": {
     "lerna": "^3.13.1"

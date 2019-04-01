@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/demo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +54,8 @@
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
           <entry key="js" value="6568" />
-          <entry key="json" value="1283" />
-          <entry key="md" value="1117" />
+          <entry key="json" value="1319" />
+          <entry key="md" value="1427" />
           <entry key="php" value="1230" />
           <entry key="txt" value="8" />
           <entry key="yml" value="358" />
@@ -67,9 +64,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="33" />
-          <entry key="JSON" value="1391" />
+          <entry key="JSON" value="1427" />
           <entry key="JavaScript" value="6568" />
-          <entry key="Markdown" value="1117" />
+          <entry key="Markdown" value="1427" />
           <entry key="PHP" value="1230" />
           <entry key="PLAIN_TEXT" value="164" />
           <entry key="YAML" value="358" />
@@ -134,8 +131,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="204">
-                <caret line="22" column="41" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="41" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -321,8 +318,8 @@
         <option value="$PROJECT_DIR$/packages/forms/package.json" />
         <option value="$PROJECT_DIR$/packages/components/package.json" />
         <option value="$PROJECT_DIR$/packages/server/package.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/packages/demo/package.json" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -526,10 +523,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51996000" />
+    <option name="totallyTimeSpent" value="52179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="107" y="23" width="1656" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.255886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -546,7 +544,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.48911917" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.17202072" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -883,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -904,11 +895,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="204">
-            <caret line="22" column="41" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="41" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           </first_editor>
           <second_editor />
         </state>
