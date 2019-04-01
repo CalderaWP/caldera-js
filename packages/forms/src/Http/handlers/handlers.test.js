@@ -118,6 +118,28 @@ describe('submitFormCf2', () => {
 		});
 	});
 
+	it('calls fetch with the _cf_verify token in body', () => {
+		let _cf_verify = 'jwt.jwt.jwt;';
+		let _sessionPublicKey = 'a42';
+		submitFormCf2(fieldValues, {
+			...eventOptions,
+			_cf_verify,
+			_sessionPublicKey
+		}, fetch);
+		expect(JSON.parse(fetch.mock.calls[0][1].body)._cf_verify).toEqual(_cf_verify);
+	});
+
+	it('calls fetch with the _sessionPublicKey token in body', () => {
+		let _cf_verify = 'jwt.jwt.jwt;';
+		let _sessionPublicKey = 'a42';
+		submitFormCf2(fieldValues, {
+			...eventOptions,
+			_cf_verify,
+			_sessionPublicKey
+		}, fetch);
+		expect(JSON.parse(fetch.mock.calls[0][1].body)._sessionPublicKey).toEqual(_sessionPublicKey);
+	});
+
 	it('calls fetch with POST HTTP method', () => {
 		submitFormCf2(fieldValues, eventOptions, fetch);
 		expect(fetch.mock.calls[0][1].method).toEqual('POST');
