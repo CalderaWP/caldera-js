@@ -15,13 +15,7 @@ export default function getCf2Token(apiRootUri, formId, fetch){
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				formId,
-				_sessionPublicKey,
-				_cf_verify,
-				entryValues: fieldValues
-			})
+			}
 		}).then(r => r.json())
 			.then(r => {
 				resolve(

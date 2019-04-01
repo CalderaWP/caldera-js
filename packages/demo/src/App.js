@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import {Message} from "@calderajs/components";
 import './App.css';
-import {CalderaForm} from "@calderajs/forms";
+import {CalderaForm,getCf2Token} from "@calderajs/forms";
 const textField = {
 	fieldType: 'text',
 	value: '',
@@ -65,13 +65,15 @@ const App = () =>  {
 
 	useEffect(() => {
 		updateMessage( 'Effect has run' );
+		getCf2Token('http://dev-futurecapable.pantheonsite.io/wp-json','CF5c9f869f3faf1').then( r=>{
+			console.log(r)
+		})
 	});
 
     return (
       <div className="App">
         <header className="App-header">
 			<Message
-
                 message={{message}}
                 error={false}
             />
