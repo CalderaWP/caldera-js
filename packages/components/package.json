@@ -1,7 +1,7 @@
 {
   "name": "@calderawp/components",
   "version": "0.1.2",
-  "license": "GPL",
+  "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
     "test": "yarn test:watch",
@@ -117,5 +117,5 @@
       "\\.(css|scss|svg)$": "<rootDir>/config/jest/nullMock.js"
     }
   },
-  "gitHead": "7c875bd6a4f0910ffe65d843332b58909579343f"
+  "gitHead": "0c672c96128e74808edd11e1930e2d7524c5857e"
 }
