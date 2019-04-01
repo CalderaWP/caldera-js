@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/web-app/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web-app/pages/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
           <entry key="babelrc" value="108" />
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
-          <entry key="js" value="5887" />
+          <entry key="js" value="5977" />
           <entry key="json" value="1112" />
           <entry key="md" value="772" />
           <entry key="php" value="1230" />
@@ -65,7 +64,7 @@
         <counts>
           <entry key=".env file" value="33" />
           <entry key="JSON" value="1220" />
-          <entry key="JavaScript" value="5887" />
+          <entry key="JavaScript" value="5977" />
           <entry key="Markdown" value="772" />
           <entry key="PHP" value="1230" />
           <entry key="PLAIN_TEXT" value="164" />
@@ -80,8 +79,8 @@
           <entry key="env" value="3" />
           <entry key="gitignore" value="5" />
           <entry key="gitkeep" value="3" />
-          <entry key="js" value="232" />
-          <entry key="json" value="54" />
+          <entry key="js" value="235" />
+          <entry key="json" value="56" />
           <entry key="lock" value="2" />
           <entry key="md" value="7" />
           <entry key="nullMock" value="1" />
@@ -100,8 +99,8 @@
           <entry key="Bash" value="5" />
           <entry key="Dockerfile" value="1" />
           <entry key="Image" value="6" />
-          <entry key="JSON" value="74" />
-          <entry key="JavaScript" value="232" />
+          <entry key="JSON" value="76" />
+          <entry key="JavaScript" value="235" />
           <entry key="Markdown" value="8" />
           <entry key="PHP" value="22" />
           <entry key="PLAIN_TEXT" value="11" />
@@ -124,13 +123,13 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48839137">
+    <splitter split-orientation="horizontal" split-proportion="0.37468776">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
+                <state relative-caret-position="840">
                   <caret line="56" column="32" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#58#0" expanded="true" />
@@ -143,7 +142,7 @@
             <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+                  <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -154,8 +153,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+                <state relative-caret-position="435">
+                  <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#52#0" expanded="true" />
                   </folding>
@@ -166,7 +165,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
+                <state relative-caret-position="210">
                   <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
                 </state>
               </provider>
@@ -175,8 +174,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/FormClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
-                  <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -194,15 +193,78 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+                <state relative-caret-position="345">
+                  <caret line="143" column="76" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="76" />
                   <folding>
                     <element signature="e#0#52#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/server/__TESTS__/sendgridRoute.test.jest.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="42" selection-start-column="42" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/server/__TESTS__/sendGridUtil.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1465">
+                  <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/web-app/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="18" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/components/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1095">
+                  <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/packages/web-app/pages/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/packages/server/routers/sendgrid/Personalizations.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="501">
+                  <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -257,6 +319,7 @@
       <find>FieldArea</find>
       <find>onChange</find>
       <find>export default function submitFormCf2(fieldValues, eventOptions, fetch) {</find>
+      <find>emails from string with array of ccs and bccs</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -277,7 +340,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/packages/server/routers/sendgrid.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/createFieldRule.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/CalderaForm/state/ConditionalState.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js" />
@@ -328,6 +390,7 @@
         <option value="$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js" />
         <option value="$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js" />
+        <option value="$PROJECT_DIR$/packages/web-app/pages/index.js" />
       </list>
     </option>
   </component>
@@ -396,6 +459,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -417,45 +481,73 @@
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="caldera-forms-pro" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CalderaForm" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="fields" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="fields" type="462c0819:PsiDirectoryNode" />
+              <item name="FieldSet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="fields" type="462c0819:PsiDirectoryNode" />
+              <item name="InputField" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-js" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caldera-js" type="b2602c69:ProjectViewProjectNode" />
@@ -466,7 +558,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,13 +679,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47990000" />
+    <option name="totallyTimeSpent" value="48157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="107" y="23" width="1656" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2527881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.255886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -609,7 +700,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.2911917" />
+      <window_info anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" visible="true" weight="0.2911917" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -647,33 +738,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/server/routers/wp-pages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/server/wp/wpServer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/server/proxies.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/server/wp/wpRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/app/setup.sh" />
     <entry file="file://$PROJECT_DIR$/wp-config.php">
@@ -681,13 +745,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/Messages/messageObjectFactory.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/src/components/Messages/Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/wp/post-build.sh">
       <provider selected="true" editor-type-id="text-editor" />
@@ -807,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/config/jest/test-setup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -846,9 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,9 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,7 +955,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/CalderaForm/CalderaForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="840">
           <caret line="56" column="32" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="32" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
@@ -922,7 +966,7 @@
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/clientFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -931,8 +975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/FormClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -945,8 +989,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handlers.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="345">
+          <caret line="143" column="76" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="76" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -955,8 +999,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="210">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/server/__TESTS__/sendGridUtil.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1465">
+          <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/web-app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/web-app/next.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/server/routers/sendgrid.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/components/src/components/Messages/Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/web-app/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
