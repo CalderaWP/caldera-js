@@ -18,7 +18,9 @@
 ### Using Mono Repo
 
 * Add A Package To A Component
-    - `yarn workspace @calderawp/components add react`
+    - `yarn workspace @calderajs/components add react`
+    - `yarn workspace @calderajs/forms add react`
+    - `yarn workspace @calderajs/demo add react`
 * Make publishable with lerna
     - Add to package.json of the package:
         ```json

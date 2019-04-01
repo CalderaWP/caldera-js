@@ -20,6 +20,7 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/polyfill": "^7.4.0",
     "@babel/preset-react": "^7.0.0",
+    "@calderajs/components": "^0.1.5",
     "cross-env": "^5.2.0",
     "prop-types": "^15.6.2",
     "react": "16.8.0-alpha.1",
