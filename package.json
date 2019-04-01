@@ -5,19 +5,20 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn --cwd packages/caldera-forms-pro start",
+    "start": "yarn demo start",
     "start:server": "yarn --cwd packages/server start",
+    "start:demo": "yarn workspace demo start",
     "build": "yarn build:pre && yarn build:components && yarn build:forms",
     "build:pre": "lerna bootstrap",
     "build:components": "yarn --cwd packages/components build",
     "build:forms": "yarn --cwd packages/forms build",
     "test": "yarn test:components & yarn test:forms & yarn test:app wait",
-    "test:app": "yarn --cwd packages/caldera-forms-pro test",
+    "test:demo": "yarn --cwd packages/demo test",
     "test:components": "yarn --cwd packages/components test",
     "test:forms": "yarn --cwd packages/forms test",
     "test:server": "yarn --cwd packages/server test",
     "storybook": "yarn storybook:components",
-    "storybook:app": "yarn --cwd packages/caldera-forms-pro storybook",
+    "storybook:app": "yarn --cwd packages/demo storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook"
   },
