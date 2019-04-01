@@ -140,6 +140,21 @@ describe('submitFormCf2', () => {
 		expect(JSON.parse(fetch.mock.calls[0][1].body)._sessionPublicKey).toEqual(_sessionPublicKey);
 	});
 
+
+	it('Extracts _cf_verify and _sessionPublicKey from fieldValues if needed', () => {
+		let _cf_verify = 'jwt.jwt.jwt;';
+		let _sessionPublicKey = 'a42';
+		submitFormCf2(
+			{...fieldValues,
+				_cf_verify,
+				_sessionPublicKey
+			}, eventOptions,
+			fetch
+
+		);
+		expect(JSON.parse(fetch.mock.calls[0][1].body)._sessionPublicKey).toEqual(_sessionPublicKey);
+	});
+
 	it('calls fetch with POST HTTP method', () => {
 		submitFormCf2(fieldValues, eventOptions, fetch);
 		expect(fetch.mock.calls[0][1].method).toEqual('POST');

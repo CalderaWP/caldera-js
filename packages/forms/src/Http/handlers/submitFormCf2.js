@@ -7,15 +7,14 @@
  * @return {*}
  */
 export default function submitFormCf2(fieldValues, eventOptions, fetch) {
-	const { apiRootUri, formId, token } = eventOptions;
-	let _cf_verify;
-	let _sessionPublicKey;
+	const { apiRootUri, formId } = eventOptions;
+	let {  _cf_verify, _sessionPublicKey } = eventOptions;
 	const entryValues = [];
 	Object.keys(fieldValues).forEach(fieldId => {
 		if( '_sessionPublicKey' === fieldId ) {
 			_sessionPublicKey = fieldValues[fieldId];
 		}else if( '_cf_verify' === fieldId ){
-			verify = fieldValues[fieldId];
+			_cf_verify = fieldValues[fieldId];
 		}else {
 			entryValues.push({
 				fieldId: fieldValues[fieldId]
