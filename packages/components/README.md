@@ -4,6 +4,9 @@
 * 🌋🤷 [Need Help?]()
 * 🌋🙏 [Express Gratitude](https://paypal.me/calderawp)
 
+## Install
+`yarn add @calderajs/forms`
+
 ## Fields
 These are thing wrappers around Gutenberg components.
 

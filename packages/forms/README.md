@@ -1,6 +1,8 @@
 # Forms For Caldera
 This is a React component library for forms. It is designed to be used in Caldera UIs, including Caldera Forms.
 
+## Install
+`yarn add @calderajs/forms`
 
 ## Testing
 
