@@ -34,15 +34,24 @@ describe('testing api', () => {
 
 
 describe('get form token', () => {
+	let axios = {
+		post: jest.fn((config) => Promise.resolve({data: {}}))
+	};
+
 	beforeEach(() => {
-		fetch.resetMocks();
+		axios = {
+			post: jest.fn((config) => Promise.resolve({data: {}}))
+		};
 	});
+
+	const apiRootUri = 'https://something.com/wp-json/caldera-api';
 	const formId = 'cf1';
-	it('gets tokens', () => {
-		getCf2Token('https://ap.com', formId, fetch)
-			.then(r => {
-				expect(typeof r._cf_verify).toBe('string');
-				expect(typeof r._sessionPublicKey).toBe('string')
+	it('gets tokens with  request to the right url', async (done) => {
+		getCf2Token('https://ap.com', formId, axios)
+			.then(r =>
+			{
+				expect(axios.post.mock.calls[0][0]).toEqual('https://ap.com/v3/process/submission/cf1/token');
+				done();
 			})
 
 	});
@@ -121,7 +130,9 @@ describe('handleFormSubmitCf2', () => {
 	};
 
 	beforeEach(() => {
-		fetch.resetMocks();
+		axios = {
+			request: jest.fn((config) => Promise.resolve({data: {}}))
+		};
 	});
 
 	const apiRootUri = 'http://localhost:8228/wp-json/cf-api';

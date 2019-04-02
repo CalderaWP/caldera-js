@@ -3,7 +3,8 @@ import {Message} from "@calderajs/components";
 import './App.css';
 import {
 	CalderaForm,
-	handleFormSubmitCf2
+	handleFormSubmitCf2,
+	getCf2Token
 } from "@calderajs/forms";
 import axios from 'axios';
 
@@ -25,17 +26,14 @@ const App = ({apiRootUri, formId,formConfig}) => {
 
 	useEffect(() => {
 		async function getToken() {
-			try {
-				const response = await axios.post(`${apiRootUri}/v3/process/submission/${formId}/token?axios=yas`);
-				setTokens(response.data);
-			} catch (error) {
-				console.error(error);
-			}
+			getCf2Token(apiRootUri,formId,axios)
+				.then(r => {
+					setTokens(r);
+					setTokensFetched(true)
+				})
 		}
 
-		getToken().then(() => {
-			setTokensFetched(true);
-		})
+		getToken();
 
 	}, [tokensFetched]);
 
