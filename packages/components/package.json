@@ -52,9 +52,7 @@
     "jest-fetch-mock": "^2.1.0",
     "jest-svg-transformer": "^1.0.0",
     "nodemon": "^1.18.9",
-    "react": "^16.8.0-alpha.0",
     "react-addons-test-utils": "15.6.2",
-    "react-dom": "^16.8.0-alpha.0",
     "react-test-renderer": "16.4.2"
   },
   "dependencies": {
