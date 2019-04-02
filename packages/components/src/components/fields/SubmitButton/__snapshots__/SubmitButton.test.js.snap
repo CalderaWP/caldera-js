@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Field component matches snapshot 1`] = `
+<div
+  className="components-base-control"
+>
+  <div
+    className="components-base-control__field"
+  >
+    <input
+      id="button"
+      type="submit"
+      value="Send Message"
+    />
+  </div>
+  <p
+    className="components-base-control__help"
+    id="button__help"
+  >
+    Click to sendu
+  </p>
+</div>
+`;

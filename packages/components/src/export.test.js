@@ -17,8 +17,8 @@ import {
 	textField,
 	Row,
 	fieldAreaFactory,
-	collectFieldValues
-
+	collectFieldValues,
+	SubmitButton
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -68,8 +68,12 @@ describe('exports', () => {
 	});
 	test('AutoCompleteField', () => {
 		expect(typeof AutoCompleteField).toBe('function');
-	});test('FormFieldsAutoComplete', () => {
+	});
+	test('FormFieldsAutoComplete', () => {
 		expect(typeof FormFieldsAutoComplete).toBe('function');
+	});
+	test('SubmitButton', () => {
+		expect(typeof SubmitButton).toBe('function');
 	});
 });
 

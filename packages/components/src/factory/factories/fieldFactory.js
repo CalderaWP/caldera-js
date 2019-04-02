@@ -14,6 +14,7 @@ import {
 	FormFieldsAutoComplete
 } from '@calderajs/components';
 import React from 'react';
+import {SubmitButton} from "../..";
 
 /**
  * Create a field from an object describing it.
@@ -91,6 +92,11 @@ export const fieldFactory = (field, onChange, onBlur) => {
 		case 'select':
 		case 'dropdown':
 			return <SelectField {...field} onChange={onChange}/>;
+		case 'submit':
+			delete field.value;
+			delete field.onBlur;
+			delete field.onChange;
+			return <SubmitButton {...field} />;
 		case 'text':
 		case 'email':
 		case 'number':

@@ -36,6 +36,12 @@ const emailField = {
 	}
 };
 
+const submitButton = {
+	fieldId: 'fld_7908577',
+	label: 'Click Me',
+	fieldType: 'submit',
+};
+
 
 const useCfFormTokens = (initialFormId) => {
 	const [tokensFetched, setTokensFetched] = useState(false);
@@ -96,12 +102,23 @@ const App = ({apiRootUri, formId}) => {
 						columnId: `r2-${emailField.fieldId}`
 					},
 				]
+			},
+			{
+				rowId: 'r3',
+				columns: [
+					{
+						fields: [submitButton.fieldId],
+						width: '1',
+						columnId: `r2-${emailField.fieldId}`
+					},
+				]
 			}
 		],
 		fields: [
 			emailField,
 			firstNameField,
-			lastNameField
+			lastNameField,
+			submitButton
 		],
 		conditionals: []
 	});

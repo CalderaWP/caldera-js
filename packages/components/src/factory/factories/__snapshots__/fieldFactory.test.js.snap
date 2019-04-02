@@ -200,6 +200,28 @@ exports[`fieldFactory Creates a radio field 1`] = `
 </div>
 `;
 
+exports[`fieldFactory Creates a submit button 1`] = `
+<div
+  className="components-base-control"
+>
+  <div
+    className="components-base-control__field"
+  >
+    <input
+      id="clickButton"
+      type="submit"
+      value="Click Me"
+    />
+  </div>
+  <p
+    className="components-base-control__help"
+    id="clickButton__help"
+  >
+    your first name
+  </p>
+</div>
+`;
+
 exports[`fieldFactory Creates a text field 1`] = `
 <div
   className="components-base-control caldera-field caldera-field-text"

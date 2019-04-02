@@ -76,7 +76,7 @@ export const CalderaGrid = ({
 									return (
 										<FieldArea
 											render={render}
-											key={_key}
+											key={_key ? _key : `${columnId}-${fieldId}`}
 											field={field}
 											onChange={newValue => {
 												conditionalState.setValue(fieldId, newValue);

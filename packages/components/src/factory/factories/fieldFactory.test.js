@@ -116,6 +116,23 @@ describe('fieldFactory', () => {
 		expect(component.toJSON()).toMatchSnapshot();
 	});
 
+	it('Creates a submit button', () => {
+		const field = {
+			...textField,
+			fieldId: 'clickButton',
+			label: 'Click Me',
+			fieldType: 'submit',
+			form: {
+				fields:[textField,textAreaField]
+			}
+		};
+
+		const component = renderer.create(
+			fieldFactory(field, onChange, onBlur)
+		);
+		expect(component.toJSON()).toMatchSnapshot();
+	});
+
 	it('Adds option id', () => {
 		const component = mount(
 			fieldFactory(

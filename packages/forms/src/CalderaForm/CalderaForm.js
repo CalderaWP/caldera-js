@@ -57,7 +57,6 @@ export class CalderaForm extends Component {
 		const {onSubmit,onChange} = this.props;
 		const {formRows,initialValues,conditionalState} = this.state;
 
-
 		return (
 			<div>
 				<Formik
@@ -84,12 +83,6 @@ export class CalderaForm extends Component {
 								setFieldValue={setFieldValue}
 								fieldErrors={errors}
 								fieldTouched={touched}
-							/>
-							<input
-								type="submit"
-								className={'caldera-forms-submit'}
-								disabled={isSubmitting}
-								value={'Click Button'}
 							/>
 						</Form>
 					)}
