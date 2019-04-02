@@ -3,6 +3,7 @@ import {Message} from "@calderajs/components";
 import './App.css';
 import {
 	CalderaForm,
+	handleFormSubmitCf2
 } from "@calderajs/forms";
 import axios from 'axios';
 
@@ -56,14 +57,14 @@ const App = ({apiRootUri, formId,formConfig}) => {
 						}}
 						onSubmit={(values, actions) => {
 							actions.setSubmitting(false);
-							submitForm({
+							handleFormSubmitCf2({
 								entryValues: values,
 								tokens,
 								apiRootUri,
 								formId,
+								axios
 							}).then(r => {
 								actions.resetForm();
-
 							}).catch( e => {
 								console.log(e);
 							})
