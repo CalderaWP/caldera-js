@@ -1,8 +1,10 @@
 import {CalderaForm} from "../CalderaForm";
 import getCf2Token from "../Http/handlers/getCf2Token";
 import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
-import React,{useState,useEffect,Fragment} from 'react';
-export const CF2Form =(
+import React, {useState, useEffect, Fragment} from 'react';
+import { Notice } from '@wordpress/components';
+
+export const CF2Form = (
 	{
 		apiRootUri,
 		formConfig,
@@ -13,25 +15,28 @@ export const CF2Form =(
 
 	const [formLoaded, setFormLoaded] = useState(false);
 	const [tokensFetched, setTokensFetched] = useState(false);
-	const [tokens, setTokens] = useState(_tokens||{
+	const [message, setMessage] = useState('');
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [hideForm, setHideForm] = useState(false);
+	const [tokens, setTokens] = useState(_tokens || {
 		_cf_verify: '',
 		_sessionPublicKey: ''
 	});
 	const [form, setForm] = useState(formConfig);
 	const formId = form.ID;
-		/**
+	/**
 	 * Get tokens if not passed.
 	 */
 	useEffect(() => {
 		async function getToken() {
-			getCf2Token(apiRootUri,formId,axios)
+			getCf2Token(apiRootUri, formId, axios)
 				.then(r => {
 					setTokens(r);
 					setTokensFetched(true)
 				})
 		}
 
-		if( tokens._cf_verify && tokens._sessionPublicKey ){
+		if (tokens._cf_verify && tokens._sessionPublicKey) {
 			setTokensFetched(true);
 			return;
 		}
@@ -40,38 +45,51 @@ export const CF2Form =(
 		getToken();
 
 
-
 	}, [tokensFetched]);
 
+	if (hideForm) {
+		return (
+			<Notice
+				isError={false}
+			>
+				{message}
+			</Notice>
+		)
+	}
 	return (
 		<Fragment>
-				{tokensFetched ?
-					<CalderaForm
-						form={form}
-						fields={form.fields}
-						onChange={newValues => {
-							console.log(newValues);
-						}}
-						onSubmit={(values, actions) => {
-							actions.setSubmitting(false);
-							handleFormSubmitCf2({
-								entryValues: values,
-								tokens,
-								apiRootUri,
-								formId,
-								axios
-							}).then(r => {
-								actions.resetForm();
-							}).catch( e => {
-								console.log(e);
-							})
+			{tokensFetched ?
+				<CalderaForm
+					form={form}
+					fields={form.fields}
+					onChange={newValues => {
 
-						}}
-					/>
-					:
-					<div>Loading Spinner</div>
+					}}
+					onSubmit={(values, actions) => {
+						setIsSubmitting(true);
+						actions.setSubmitting(false);
+						handleFormSubmitCf2({
+							entryValues: values,
+							tokens,
+							apiRootUri,
+							formId,
+							axios
+						}).then(r => {
+							setIsSubmitting(false);
+							setHideForm(true);
+							setMessage(r.data.message);
+							actions.resetForm();
+						}).catch(e => {
+							setIsSubmitting(false);
+							console.log(e);
+						})
 
-				}
+					}}
+				/>
+				:
+				<div>Loading Spinner</div>
+
+			}
 		</Fragment>
 	);
 
