@@ -41,7 +41,6 @@ export const CF2Form = (
 			return;
 		}
 
-
 		getToken();
 
 
@@ -51,6 +50,10 @@ export const CF2Form = (
 		return (
 			<Notice
 				isError={false}
+				onRemove={() => {
+					setHideForm(false);
+					setTokensFetched(false);
+				}}
 			>
 				{message}
 			</Notice>
