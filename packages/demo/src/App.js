@@ -4,7 +4,6 @@ import './App.css';
 import {
 	CalderaForm,
 	getCf2Token,
-	submitFormCf2
 } from "@calderajs/forms";
 
 const firstNameField = {
@@ -42,8 +41,13 @@ const submitButton = {
 	fieldType: 'submit',
 };
 
-
-const useCfFormTokens = (initialFormId) => {
+/**
+ * Hook for managing state of the form tokens
+ *
+ * @param initialFormId
+ * @return {*[]}
+ */
+const useCf2FormTokens = (initialFormId) => {
 	const [tokensFetched, setTokensFetched] = useState(false);
 	const [formId, setFormId] = useState(initialFormId);
 	const [tokens, setTokens] = useState({
@@ -63,8 +67,8 @@ const useCfFormTokens = (initialFormId) => {
 		tokensFetched,
 		setTokensFetched
 	]
-
 };
+
 
 
 const App = ({apiRootUri, formId}) => {
@@ -73,7 +77,7 @@ const App = ({apiRootUri, formId}) => {
 		updateTokens,
 		tokensFetched,
 		setTokensFetched
-	] = useCfFormTokens(formId);
+	] = useCf2FormTokens(formId);
 	const [formLoaded, setFormLoaded] = useState(false);
 	const [message, updateMessage] = useState('Effect has not run yet');
 	const [form, setForm] = useState({
