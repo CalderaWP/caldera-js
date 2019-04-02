@@ -1,7 +1,7 @@
 /**
  * Form submit handler for Caldera Forms in "cf2" mode.
  *
- * DO NOT USE THIS!!!
+ * DO NOT USE THIS!!! Use handleFormSubmitCf2
  *
  * @param fieldValues
  * @param eventOptions

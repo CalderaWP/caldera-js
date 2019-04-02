@@ -7,7 +7,8 @@ import {
 	FormEditor,
 	getCf2Token,
 	submitFormCf2,
-	useCf2FormTokens
+	useCf2FormTokens,
+	handleFormSubmitCf2
 } from '@calderajs/forms';
 
 
@@ -38,7 +39,10 @@ describe('Exports', () => {
 	});
 	it('exports submitFormCf2', () => {
 		expect(typeof submitFormCf2).toBe('function');
-	});it('exports useCf2FormTokens', () => {
+	});
+	it('exports useCf2FormTokens', () => {
 		expect(typeof useCf2FormTokens).toBe('function');
+	});it('exports handleFormSubmitCf2', () => {
+		expect(typeof handleFormSubmitCf2).toBe('function');
 	});
 });
