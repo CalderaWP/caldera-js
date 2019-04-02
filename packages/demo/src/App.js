@@ -8,16 +8,13 @@ import axios from 'axios';
 
 
 const App = ({apiRootUri, formId, formConfig}) => {
-
-	const [formLoaded, setFormLoaded] = useState(false);
-	const [message, updateMessage] = useState('Effect has not run yet');
 	const [form, setForm] = useState(formConfig);
 
 	return (
 		<div className="App">
 			<header className="App-header">
 				<Message
-					message={{message}}
+					message={{message:'This Is A Message In The Header'}}
 					error={false}
 				/>
 			</header>
