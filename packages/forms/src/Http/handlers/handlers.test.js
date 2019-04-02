@@ -1,6 +1,7 @@
 import submitFormCaldera from './submitFormCaldera';
 import submitFormCf2 from './submitFormCf2';
 import getCf2Token from './getCf2Token';
+import handleFormSubmitCf2 from './handleFormSubmitCf2';
 
 /**
  * How mocking fetch works
@@ -14,12 +15,13 @@ describe('testing api', () => {
 			return fetch('https://google.com');
 		}
 	}
+
 	beforeEach(() => {
 		fetch.resetMocks();
 	});
 
 	it('calls google and returns data to me', () => {
-		fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
+		fetch.mockResponseOnce(JSON.stringify({data: '12345'}));
 		APIRequest('google').then(res => {
 			expect(JSON.parse(res.body).data).toEqual('12345');
 		});
@@ -31,16 +33,16 @@ describe('testing api', () => {
 });
 
 
-describe( 'get form token', () => {
+describe('get form token', () => {
 	beforeEach(() => {
 		fetch.resetMocks();
 	});
 	const formId = 'cf1';
-	it( 'gets tokens', () => {
-		getCf2Token( 'https://ap.com', formId , fetch)
-			.then( r => {
-				expect( typeof r._cf_verify ).toBe('string');
-				expect( typeof r._sessionPublicKey ).toBe('string')
+	it('gets tokens', () => {
+		getCf2Token('https://ap.com', formId, fetch)
+			.then(r => {
+				expect(typeof r._cf_verify).toBe('string');
+				expect(typeof r._sessionPublicKey).toBe('string')
 			})
 
 	});
@@ -64,7 +66,7 @@ describe('submitFormCaldera', () => {
 	};
 
 	it('calls fetch with the right url', () => {
-		submitFormCaldera(fieldValues, eventOptions, fetch);
+		const r = submitFormCaldera(fieldValues, eventOptions, fetch);
 		expect(fetch.mock.calls[0][0]).toEqual(
 			'https://something.com/wp-json/caldera-api/v1/entries'
 		);
@@ -103,10 +105,19 @@ describe('submitFormCaldera', () => {
 	});
 });
 
-describe('submitFormCf2', () => {
-	const fieldValues = {
+
+describe('handleFormSubmitCf2', () => {
+	const entryValues = {
 		fld1: 1,
 		firstName: 'Thor'
+	};
+	const tokens = {
+		_sessionPublicKey: '1',
+		_cf_verify: '111'
+	};
+
+	let axios = {
+		request: jest.fn((config) => Promise.resolve({data: {}}))
 	};
 
 	beforeEach(() => {
@@ -119,6 +130,76 @@ describe('submitFormCf2', () => {
 		apiRootUri,
 		formId
 	};
+
+	it('calls axios with the right url', async (done) => {
+		handleFormSubmitCf2({
+			apiRootUri,
+			formId,
+			entryValues,
+			tokens,
+			axios
+		}).then(r => {
+			expect(axios.request.mock.calls[0][0].url).toEqual(
+				`http://localhost:8228/wp-json/cf-api/v3/process/submission/${formId}`
+			);
+			done();
+		});
+
+	});
+
+	it('calls axios with the field values in body', async (done) => {
+		handleFormSubmitCf2({
+			apiRootUri,
+			formId,
+			entryValues,
+			tokens,
+			axios
+		}).then(r => {
+			expect(axios.request.mock.calls[0][0].data).toEqual(
+				{
+					"_cf_verify": "111",
+					"_sessionPublicKey": "1",
+					"entryValues": {"firstName": "Thor", "fld1": 1},
+					"formId": "cf1"
+				}
+			);
+			done();
+		});
+	});
+
+	it('Uses POST method', async (done) => {
+		handleFormSubmitCf2({
+			apiRootUri,
+			formId,
+			entryValues,
+			tokens,
+			axios
+		}).then(r => {
+			expect(axios.request.mock.calls[0][0].method).toEqual('POST');
+			done();
+		});
+	});
+
+
+});
+describe('submitFormCf2', () => {
+	const fieldValues = {
+		fld1: 1,
+		firstName: 'Thor'
+	};
+
+
+	beforeEach(() => {
+		fetch.resetMocks();
+	});
+
+	const apiRootUri = 'http://localhost:8228/wp-json/cf-api';
+	const formId = 'cf1';
+	const eventOptions = {
+		apiRootUri,
+		formId
+	};
+
 
 	it('calls fetch with the right url', () => {
 		submitFormCf2(fieldValues, eventOptions, fetch);
@@ -162,12 +243,12 @@ describe('submitFormCf2', () => {
 		let _cf_verify = 'jwt.jwt.jwt;';
 		let _sessionPublicKey = 'a42';
 		submitFormCf2(
-			{...fieldValues,
+			{
+				...fieldValues,
 				_cf_verify,
 				_sessionPublicKey
 			}, eventOptions,
 			fetch
-
 		);
 		expect(JSON.parse(fetch.mock.calls[0][1].body)._sessionPublicKey).toEqual(_sessionPublicKey);
 	});

@@ -7,33 +7,7 @@ import {
 import axios from 'axios';
 
 
-async function submitForm(
-	{
-		apiRootUri,
-		formId,
-		entryValues,
-		tokens
-	}) {
-	try {
-		const response = await axios.request({
-			url: `${apiRootUri}/v3/process/submission/${formId}`,
-			method: 'POST',
-			data: {
-				formId,
-				_sessionPublicKey:
-				tokens._sessionPublicKey,
-				_cf_verify:
-				tokens._cf_verify,
-				entryValues
-			}
-		}).then(response => {
-			console.log(response)
-		})
 
-	} catch (error) {
-		console.error(error);
-	}
-}
 
 
 const App = ({apiRootUri, formId,formConfig}) => {
@@ -87,6 +61,11 @@ const App = ({apiRootUri, formId,formConfig}) => {
 								tokens,
 								apiRootUri,
 								formId,
+							}).then(r => {
+								actions.resetForm();
+
+							}).catch( e => {
+								console.log(e);
 							})
 
 						}}

@@ -1,5 +1,7 @@
 /**
- * Default form submission handler
+ * Form submit handler for Caldera Forms in "cf2" mode.
+ *
+ * DO NOT USE THIS!!!
  *
  * @param fieldValues
  * @param eventOptions
