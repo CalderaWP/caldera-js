@@ -7,7 +7,7 @@
  * @return {Promise<any>}
  */
 export default function getCf2Token(apiRootUri, formId, fetch){
-
+	// http://dev-futurecapable.pantheonsite.io/wp-json/cf-api/v3/process/submission/CF5c9f869f3faf1/token';
 	const url = `${apiRootUri}/v3/process/submission/${formId}/token`;
 
 	return new Promise(function (resolve, reject) {

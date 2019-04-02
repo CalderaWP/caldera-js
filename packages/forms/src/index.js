@@ -8,4 +8,5 @@ export {createFieldRule} from './CalderaForm/state/createFieldRule';
 export {FormEditor} from './FormEditor/FormEditor';
 export {HorizontalForm} from './HorizontalForm/HorizontalForm';
 export getCf2Token from './Http/handlers/getCf2Token';
+export submitFormCf2 from './Http/handlers/submitFormCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
