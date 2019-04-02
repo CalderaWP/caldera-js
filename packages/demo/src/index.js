@@ -40,6 +40,7 @@ const submitButton = {
 };
 
 const formConfig = {
+	ID: 'cf21',
 	rows: [
 		{
 			rowId: 'r1',

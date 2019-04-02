@@ -6,9 +6,9 @@
   ],
   "license": "GPL-2.0",
   "scripts": {
-    "start": "yarn demo start",
+    "start": "yarn start:demo",
     "start:server": "yarn --cwd packages/server start",
-    "start:demo": "yarn workspace demo start",
+    "start:demo": "yarn workspace @calderajs/demo start",
     "build": "yarn build:pre && yarn build:components && yarn build:forms",
     "build:pre": "lerna bootstrap",
     "build:components": "yarn --cwd packages/components build",
@@ -22,7 +22,8 @@
     "storybook:app": "yarn --cwd packages/demo storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook",
-    "release": "yarn lerna publish"
+    "release": "yarn lerna publish",
+    "nuke": "rm -rf node_modules && rm yarn.lock"
   },
   "devDependencies": {
     "lerna": "^3.13.1"

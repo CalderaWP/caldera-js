@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Message} from "@calderajs/components";
 import './App.css';
 import {
@@ -13,7 +13,6 @@ const App = ({apiRootUri, formId, formConfig}) => {
 	const [message, updateMessage] = useState('Effect has not run yet');
 	const [form, setForm] = useState(formConfig);
 
-
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -24,8 +23,8 @@ const App = ({apiRootUri, formId, formConfig}) => {
 			</header>
 			<div>
 				<CF2Form
+					apiRootUri={apiRootUri}
 					formConfig={form}
-					formId={formId}
 					axios={axios}
 				/>
 			</div>

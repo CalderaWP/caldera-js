@@ -4,12 +4,14 @@ import renderer from 'react-test-renderer';
 
 describe( 'CF2Form', () => {
 	let axios = {
-		post: jest.fn((config) => Promise.resolve({data: {}}))
+		post: jest.fn((config) => Promise.resolve({data: {}})),
+		request: jest.fn((config) => Promise.resolve({data: {}}))
 	};
 
 	beforeEach(() => {
 		axios = {
-			post: jest.fn((config) => Promise.resolve({data: {}}))
+			post: jest.fn((config) => Promise.resolve({data: {}})),
+			request: jest.fn((config) => Promise.resolve({data: {}}))
 		};
 	});
 
@@ -20,6 +22,7 @@ describe( 'CF2Form', () => {
 	};
 
 	const formConfig = {
+		ID: 'cf222',
 		rows: [
 			{
 				rowId: 'r3',
@@ -40,5 +43,19 @@ describe( 'CF2Form', () => {
 
 	it( 'Matches snapshot',async (done) => {
 		expect(renderer.create(<CF2Form formConfig={formConfig} formId={ 'cf1'} axios={axios}/>)).toMatchSnapshot();
+	});
+
+	it( 'Uses injected _tokens when possible',async (done) => {
+		expect(renderer.create(
+			<CF2Form
+				apiRootUri={'https://localhost/'}
+				formConfig={formConfig}
+				axios={axios}
+				_tokens={{
+					_cf_verify: 'a',
+					_sessionPublicKey: 'b'
+				}}
+			/>).props
+		).toBe({sivan:true})
 	});
 });
