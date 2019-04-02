@@ -68,7 +68,7 @@ Testing tools:
     - [Lerna Publish Command](https://lernajs.io/#command-publish)
     - [Lerna Publish Command README](https://github.com/lerna/lerna/blob/master/commands/publish/README.md)
    
-* Publish updates 
-    - `yarn publish`
+* Publish updates to all packages
+    - `yarn release`
 
 
