@@ -1,5 +1,6 @@
 export { CalderaGrid } from './CalderaForm/CalderaGrid';
 export { CalderaForm } from './CalderaForm/CalderaForm';
+export { CF2Form } from './CF2Form/CF2Form';
 import FormClient from './Http/FormClient';
 export {FormClient};
 export { formClientFactory } from './Http/clientFactory';
