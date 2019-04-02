@@ -3,8 +3,8 @@ import {Message} from "@calderajs/components";
 import './App.css';
 import {
 	CalderaForm,
-	getCf2Token,
 } from "@calderajs/forms";
+import axios from 'axios';
 
 const firstNameField = {
 	fieldType: 'text',
@@ -41,45 +41,44 @@ const submitButton = {
 	fieldType: 'submit',
 };
 
-/**
- * Hook for managing state of the form tokens
- *
- * @param initialFormId
- * @return {*[]}
- */
-const useCf2FormTokens = (initialFormId) => {
+
+async function submitForm(
+	{
+		apiRootUri,
+		formId,
+		entryValues,
+		tokens
+	}) {
+	try {
+		const response = await axios.request({
+			url: `${apiRootUri}/v3/process/submission/${formId}`,
+			method: 'POST',
+			data: {
+				formId,
+				_sessionPublicKey:
+				tokens._sessionPublicKey,
+				_cf_verify:
+				tokens._cf_verify,
+				entryValues
+			}
+		}).then(response => {
+			console.log(response)
+		})
+
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+const App = ({apiRootUri, formId}) => {
+
+	const [formLoaded, setFormLoaded] = useState(false);
+	const [message, updateMessage] = useState('Effect has not run yet');
 	const [tokensFetched, setTokensFetched] = useState(false);
-	const [formId, setFormId] = useState(initialFormId);
 	const [tokens, setTokens] = useState({
 		_cf_verify: '',
 		_sessionPublicKey: ''
 	});
-
-	const updateTokens = ({_cf_verify, _sessionPublicKey}) => {
-		setTokens({
-			_cf_verify,
-			_sessionPublicKey
-		})
-	};
-	return [
-		tokens,
-		updateTokens,
-		tokensFetched,
-		setTokensFetched
-	]
-};
-
-
-
-const App = ({apiRootUri, formId}) => {
-	const [
-		tokens,
-		updateTokens,
-		tokensFetched,
-		setTokensFetched
-	] = useCf2FormTokens(formId);
-	const [formLoaded, setFormLoaded] = useState(false);
-	const [message, updateMessage] = useState('Effect has not run yet');
 	const [form, setForm] = useState({
 		rows: [
 			{
@@ -129,15 +128,19 @@ const App = ({apiRootUri, formId}) => {
 
 
 	useEffect(() => {
-		updateMessage('Effect has run');
-		getCf2Token(
-			'http://dev-futurecapable.pantheonsite.io/wp-json/cf-api',
-			'CF5c9f869f3faf1',
-			window.fetch
-		).then(r => {
-			updateTokens(r);
+		async function getToken() {
+			try {
+				const response = await axios.post(`${apiRootUri}/v3/process/submission/${formId}/token?axios=yas`);
+				setTokens(response.data);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		getToken().then(() => {
 			setTokensFetched(true);
 		})
+
 	}, [tokensFetched]);
 
 	return (
@@ -157,10 +160,13 @@ const App = ({apiRootUri, formId}) => {
 							console.log(newValues);
 						}}
 						onSubmit={(values, actions) => {
-							setTimeout(() => {
-								alert(JSON.stringify(values, null, 2));
-								actions.setSubmitting(false);
-							}, 1000);
+							actions.setSubmitting(false);
+							submitForm({
+								entryValues: values,
+								tokens,
+								apiRootUri,
+								formId,
+							})
 
 						}}
 					/>

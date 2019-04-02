@@ -21,6 +21,7 @@
     "@babel/polyfill": "^7.4.0",
     "@babel/preset-react": "^7.0.0",
     "@calderajs/components": "^0.1.5",
+    "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",

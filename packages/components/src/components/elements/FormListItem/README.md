@@ -4,7 +4,7 @@ Shows one item in the form list
 ## Usage
  
 ### Import With webpack
-`import {FormsList}` from '@calderajs/components';`
+`import {FormsList} from '@calderajs/components';`
 
 
 ### Render One Item

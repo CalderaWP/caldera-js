@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App
-	apiRootUri={'http://localhost:8228/wp-json/cf-api'}
+	apiRootUri={'http://dev-futurecapable.pantheonsite.io/wp-json/cf-api'}
 	formId={'CF5c9f86904e447'}
 />, document.getElementById('root'));
 

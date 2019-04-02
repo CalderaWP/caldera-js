@@ -2,7 +2,7 @@
 Displays a list of forms
 
 ## Usage
-`import {FormsList}` from '@calderajs/components';`
+`import {FormsList} from '@calderajs/components';`
 
 ### Listing FOrms
 ```jsx
@@ -25,4 +25,4 @@ const forms = [
 ```
 
 ### `onFormAction()`
-See `FormList` component.
+See [`FormListItem`](../FormListItem/README.md) component.
