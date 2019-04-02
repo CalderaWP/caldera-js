@@ -52,7 +52,6 @@ storiesOf('CF2 Form').add('Forms', () => (
 		<p>Not setup to submit properly here though :)</p>
 		<CF2Form
 			formConfig={form}
-			formId={form.ID}
 			axios={axios}
 			_tokens={{
 				_cf_verify: 'a',

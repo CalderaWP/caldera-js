@@ -42,7 +42,7 @@ describe( 'CF2Form', () => {
 	};
 
 	it( 'Matches snapshot',async (done) => {
-		expect(renderer.create(<CF2Form formConfig={formConfig} formId={ 'cf1'} axios={axios}/>)).toMatchSnapshot();
+		expect(renderer.create(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();
 	});
 
 	it( 'Uses injected _tokens when possible',async (done) => {
