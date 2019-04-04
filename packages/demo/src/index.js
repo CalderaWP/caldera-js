@@ -40,7 +40,8 @@ const submitButton = {
 };
 
 const formConfig = {
-	ID: 'CF5c9f86904e447',
+	//ID: 'CF5c9f86904e447',
+	ID: 'CF5c9f8b765badd',
 	rows: [
 		{
 			rowId: 'r1',
@@ -88,7 +89,7 @@ const formConfig = {
 };
 
 ReactDOM.render(<App
-	apiRootUri={'http://dev-futurecapable.pantheonsite.io/wp-json/cf-api'}
+	apiRootUri={'http://localhost:8228/wp-json/cf-api'}
 	formConfig={formConfig}
 />, document.getElementById('root'));
 
