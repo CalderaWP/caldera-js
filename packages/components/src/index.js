@@ -60,6 +60,10 @@ export { collectFieldValues } from './factory/components/collectFieldValues';
 export { fieldFactory } from './factory/factories/fieldFactory';
 export { fieldAreaFactory } from './factory/factories/fieldAreaFactory';
 
+/**
+ * Caldera Forms UI
+ */
+export {FormAdmin} from "./components/FormAdmin/FormAdmin";
 
 /**
  * Test fixtures
