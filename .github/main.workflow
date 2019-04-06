@@ -1,6 +1,6 @@
-workflow "Build, Test" {
+workflow "Build, TestComponent" {
   on = "push"
-  resolves = ["Test"]
+  resolves = ["TestForms"]
 }
 
 action "Build" {
@@ -8,9 +8,15 @@ action "Build" {
   args = "install"
 }
 
-action "Test" {
+action "TestComponent" {
   needs = "Build"
   uses = "nuxt/actions-yarn@master"
   args = "test:components --ci"
+}
+
+action "TestForms" {
+  needs = "TestComponent"
+  uses = "nuxt/actions-yarn@master"
+  args = "test:forms --ci"
 }
 
