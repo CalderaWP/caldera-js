@@ -82,7 +82,7 @@ describe( 'exports factory', () => {
 
 	it( 'exports util function', () => {
 		expect( typeof  collectFieldValues ).toBe('function')
-	})
+	});
 	it( 'exports component', () => {
 		expect( typeof fieldAreaFactory ).toBe('function');
 	});
