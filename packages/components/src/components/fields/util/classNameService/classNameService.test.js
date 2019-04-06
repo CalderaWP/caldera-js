@@ -3,9 +3,10 @@ import classNameService, {
 	FILTER_FIELD_CLASS_NAME,
 	FILTER_FIELD_LABEL_CLASS_NAME,
 	FILTER_FIELD_SET_CLASS_NAME,
-	FILTER_FIELD_WRAPPER_CLASS_NAME
+	FILTER_FIELD_WRAPPER_CLASS_NAME,
+	cf1ClassNames
 } from './classNameService'
-import {fieldClassNames} from "./fieldClassNames";
+import {fieldClassNames} from "../fieldClassNames";
 
 const TEST_CONSUMER = 'namespace';
 describe('classNameHooks', () => {
@@ -23,12 +24,6 @@ describe('classNameHooks', () => {
 		expect(headerPath).toEqual('ALT!')
 	});
 
-	const cf1ClassNames = {
-		FILTER_FIELD_CLASS_NAME: 'field-set',
-		FILTER_FIELD_SET_CLASS_NAME: 'form-control',
-		FILTER_FIELD_WRAPPER_CLASS_NAME: 'form-group',
-		FILTER_FIELD_LABEL_CLASS_NAME: 'control-label'
-	};
 
 
 
