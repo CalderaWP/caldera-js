@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Flex, Box } from '@rebass/grid';
+import { Flex } from '@rebass/grid';
 import { Column } from './Column';
+import classNames from 'classnames';
+
+import {classNameService} from "../../..";
+
 /**
  *
  * @param columns
@@ -23,7 +26,9 @@ export const Row = ({
 	children
 }) => {
 	return (
-		<Flex className={classNames('caldera-row', className)} id={rowId}>
+		<Flex className={
+			classNames(className, classNameService.getFormRowClassNames(rowId))
+		} id={rowId}>
 			{columns ? (
 				<Fragment>
 					{columns.map(column => {
