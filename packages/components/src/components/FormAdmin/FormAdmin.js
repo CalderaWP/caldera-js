@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {messagePropShape} from "../Messages/messagePropTypes";
+import classNameService from "../..";
 
 export const formHasId = ( form, formId ) => {
 	if( 'object' !== typeof  form ){
@@ -9,6 +10,9 @@ export const formHasId = ( form, formId ) => {
 	}
 	if( form.hasOwnProperty('ID') ){
 		return formId === form.ID;
+	}
+	if( form.hasOwnProperty('id') ){
+		return formId === form.id;
 	}
 	if( form.hasOwnProperty('formId') ){
 		return formId === form.formId;
@@ -32,24 +36,27 @@ export const FormAdmin = (
 		className
 	}
 ) => {
+
+	/**
+	 * Form state
+	 */
 	const [forms, setForms] = useState(initialForms);
+
+	/**
+	 * Find form by ID
+	 */
 	const getFormById = useCallback(formId => {
 		forms.find(form => {
 			return formHasId(form,formId);
 		});
 	});
+
 	return (
 		<div
-			className={classNames(className,'caldera-forms-admin')}
+			className={'aa'}
 		>
-			{render(forms,setForms,getFormById)}
+			{render({forms,getFormById,setForms})}
 		</div>
 	);
 };
 
-
-FormAdmin.propTypes = {
-	initalForms: PropTypes.array,
-	notice: messagePropShape,
-	className
-};

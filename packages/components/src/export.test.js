@@ -19,7 +19,8 @@ import {
 	fieldAreaFactory,
 	collectFieldValues,
 	SubmitButton,
-	classNameService
+	classNameService,
+	FormAdmin
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -75,6 +76,8 @@ describe('exports', () => {
 	});
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
+	});test('FormAdmin', () => {
+		expect(typeof FormAdmin).toBe('function');
 	});
 });
 

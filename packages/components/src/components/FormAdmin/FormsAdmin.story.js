@@ -1,23 +1,27 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {FormAdmin} from "./FormAdmin";
-import {FormsList} from "../elements/FormsList/FormsList";
-
+console.log(FormAdmin);
 const forms = [
 	{
-		id: 'contact-form',
+		ID: 'contact-form',
 		name: 'Contact Form'
 	},
 	{
-		id: 'other-form',
+		ID: 'other-form',
 		name: 'Other Form'
 	}
 ];
 storiesOf('FormAdmin', module).add('No forms', () => (
 	<FormAdmin
-		initalForms={forms}
-		render={ (forms) => {
-			<FormsList onFormAction={() => {} } forms={forms}/>
+		initialForms={forms}
+		render={(forms,getFormById,setForms) => {
+
+			return (
+				<ul>
+					{forms.map(form => <li key={form.id}>{form.name}</li>)}
+				</ul>
+			)
 		}}
 	/>
 ));
