@@ -54,9 +54,10 @@
         <counts>
           <entry key="babelrc" value="108" />
           <entry key="css" value="4" />
+          <entry key="dummy" value="26" />
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
-          <entry key="js" value="13471" />
+          <entry key="js" value="13640" />
           <entry key="json" value="1401" />
           <entry key="md" value="1605" />
           <entry key="php" value="1230" />
@@ -69,10 +70,10 @@
           <entry key=".env file" value="33" />
           <entry key="CSS" value="4" />
           <entry key="JSON" value="1509" />
-          <entry key="JavaScript" value="13471" />
+          <entry key="JavaScript" value="13640" />
           <entry key="Markdown" value="1605" />
           <entry key="PHP" value="1230" />
-          <entry key="PLAIN_TEXT" value="164" />
+          <entry key="PLAIN_TEXT" value="190" />
           <entry key="YAML" value="358" />
         </counts>
       </usages-collector>
@@ -132,7 +133,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60288537">
+    <splitter split-orientation="horizontal" split-proportion="0.5482156">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -180,8 +181,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService/classNameService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+                <state relative-caret-position="428">
+                  <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
                 </state>
               </provider>
             </entry>
@@ -211,8 +212,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService/classNameService.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="383">
-                  <caret line="45" selection-start-line="45" selection-end-line="45" />
+                <state relative-caret-position="299">
+                  <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
                   <folding>
                     <element signature="e#0#210#0" expanded="true" />
                   </folding>
@@ -677,13 +678,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87520000" />
+    <option name="totallyTimeSpent" value="88022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="107" y="23" width="1813" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25635234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25635234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -698,7 +699,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006196" side_tool="true" visible="true" weight="0.53367877" />
-      <window_info anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" sideWeight="0.4993804" visible="true" weight="0.39896372" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" sideWeight="0.4993804" visible="true" weight="0.37823835" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1114,8 +1115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService/classNameService.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="299">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
           <folding>
             <element signature="e#0#210#0" expanded="true" />
           </folding>
@@ -1124,8 +1125,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService/classNameService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="428">
+          <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
         </state>
       </provider>
     </entry>

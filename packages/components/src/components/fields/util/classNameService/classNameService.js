@@ -15,7 +15,7 @@ export const FILTER_FIELD_CLASS_NAME = 'classNameHooks_fieldClassName';
 export const FILTER_FIELD_LABEL_CLASS_NAME = 'classNameHooks_fieldLabelClassName';
 export const FILTER_FIELD_SET_CLASS_NAME = 'classNameHooks_fieldSetClassName';
 export const FILTER_FORM_ELEMENT_CLASS = 'classNameHooksFormClass';
-export const FILTER_FORM_GRID_CLASS = 'classNameHooksgridClass';
+export const FILTER_FORM_WRAPPER_CLASS = 'classNameHooksgridClass';
 export const FILTER_FORM_ROW_CLASS = 'classNameHooksRowClass';
 export const FILTER_FORM_COLUMN_CLASS = 'classNameHooksColumnsClass';
 
@@ -24,9 +24,34 @@ export const cf1ClassNames = {
 	[FILTER_FIELD_SET_CLASS_NAME]: 'form-control',
 	[FILTER_FIELD_WRAPPER_CLASS_NAME]: 'form-group',
 	[FILTER_FIELD_LABEL_CLASS_NAME]: 'control-label',
+	[FILTER_FORM_WRAPPER_CLASS]: 'caldera-grid',
+	[FILTER_FORM_ELEMENT_CLASS]: 'caldera-form',
+};
+
+/**
+ * Get the class name for the element surrounding the form element
+ *
+ * @param formId
+ * @return {*}
+ */
+classNameService.getFormWrapperClassNames = formId => {
+	return classNameService.applyFilters(FILTER_FORM_WRAPPER_CLASS, `caldera`);
+};
+
+classNameService.getFormElementClassNames = formId => {
+	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `${formId} caldera_forms_form`);
 };
 
 
+classNameService.getFormWrapperClassNames = formId => {
+	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-grid`);
+};
+classNameService.getFormRowClassNames = (formId,fieldId) => {
+	return classNameService.applyFilters(FILTER_FORM_ROW_CLASS, `caldera-row`);
+};
+classNameService.getFormColumndClassNames = (formId,fieldId,size) => {
+	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-column`);
+};
 
 
 export default classNameService;

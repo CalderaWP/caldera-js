@@ -4,7 +4,7 @@ import classNameService, {
 	FILTER_FIELD_LABEL_CLASS_NAME,
 	FILTER_FIELD_SET_CLASS_NAME,
 	FILTER_FIELD_WRAPPER_CLASS_NAME,
-	cf1ClassNames
+	cf1ClassNames, FILTER_FORM_ELEMENT_CLASS, FILTER_FORM_WRAPPER_CLASS
 } from './classNameService'
 import {fieldClassNames} from "../fieldClassNames";
 import {fieldSetClassNames} from "../fieldSetClassNames";
@@ -42,6 +42,17 @@ describe('classNameHooks', () => {
 		classNameService.addFilter(FILTER_FIELD_LABEL_CLASS_NAME, TEST_CONSUMER, () => cf1ClassNames[FILTER_FIELD_LABEL_CLASS_NAME]);
 		expect(labelClassNames('text')).toBe('control-label');
 	});
+
+	it('Adds className grid element ', () => {
+		classNameService.addFilter(FILTER_FORM_WRAPPER_CLASS, TEST_CONSUMER, () => 'caldera-grid');
+		expect(classNameService.getFormWrapperClassNames('')).toBe('caldera-grid');
+	});
+
+	it('Adds className form element ', () => {
+		classNameService.addFilter(FILTER_FORM_ELEMENT_CLASS, TEST_CONSUMER, () => cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
+		expect(classNameService.getFormElementClassNames('')).toBe('caldera-form');
+	});
+
 
 
 });
