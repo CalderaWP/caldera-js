@@ -21,8 +21,6 @@ describe('classNameHooks', () => {
 	});
 
 
-
-
 	it('Adds className for field', () => {
 		classNameService.addFilter(FILTER_FIELD_CLASS_NAME, TEST_CONSUMER, () => cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]);
 		expect(fieldClassNames('text')).toBe(cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]);
@@ -44,4 +42,6 @@ describe('classNameHooks', () => {
 		classNameService.addFilter(FILTER_FIELD_LABEL_CLASS_NAME, TEST_CONSUMER, () => cf1ClassNames[FILTER_FIELD_LABEL_CLASS_NAME]);
 		expect(labelClassNames('text')).toBe('control-label');
 	});
+
+
 });
