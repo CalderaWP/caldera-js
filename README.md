@@ -24,7 +24,8 @@ Install for development
     - `git clone `
 * Install - no not use npm, use Yarn!
     - `yarn install`
-    
+    - Demo app assumes [Caldera Forms Local Development Server](https://github.com/CalderaWP/Caldera-Forms/blob/master/contributing/local-dev.md) is running.    
+
     
 ### Testing
 Testing tools:

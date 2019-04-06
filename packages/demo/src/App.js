@@ -8,7 +8,7 @@ import axios from 'axios';
 
 
 const App = ({apiRootUri, formId, formConfig}) => {
-	const [form, setForm] = useState(formConfig);
+	const [form] = useState(formConfig);
 
 	return (
 		<div className="App">
