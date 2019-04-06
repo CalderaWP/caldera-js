@@ -18,7 +18,8 @@ import {
 	Row,
 	fieldAreaFactory,
 	collectFieldValues,
-	SubmitButton
+	SubmitButton,
+	classNameService
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -91,4 +92,12 @@ describe( 'exports factory', () => {
 	it( 'exports component', () => {
 		expect( typeof textField ).toBe('object');
 	});
-})
+});
+
+describe( 'services', () => {
+	test('classNameService', () => {
+		expect(typeof classNameService).toBe('object');
+		expect(typeof classNameService.applyFilters).toBe('function');
+		expect(typeof classNameService.getFormWrapperClassNames).toBe('function');
+	});
+});

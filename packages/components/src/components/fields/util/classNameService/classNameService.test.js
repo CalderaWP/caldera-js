@@ -27,7 +27,7 @@ describe('classNameHooks', () => {
 	});
 
 	it('Adds className for fieldset', () => {
-		classNameService.addFilter(FILTER_FIELD_SET_CLASS_NAME, TEST_CONSUMER, () =>  {
+		classNameService.addFilter(FILTER_FIELD_SET_CLASS_NAME, TEST_CONSUMER, () => {
 			return cf1ClassNames[FILTER_FIELD_SET_CLASS_NAME]
 		});
 		expect(fieldSetClassNames('text')).toBe(cf1ClassNames[FILTER_FIELD_SET_CLASS_NAME]);
@@ -52,7 +52,6 @@ describe('classNameHooks', () => {
 		classNameService.addFilter(FILTER_FORM_ELEMENT_CLASS, TEST_CONSUMER, () => cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
 		expect(classNameService.getFormElementClassNames('')).toBe('caldera-form');
 	});
-
 
 
 });
