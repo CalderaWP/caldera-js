@@ -11,6 +11,6 @@ action "Build" {
 action "Test" {
   needs = "Build"
   uses = "nuxt/actions-yarn@master"
-  args = "test"
+  args = "test:components --ci"
 }
 
