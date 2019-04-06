@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fabfa1-53af-4d8a-a207-d12586905f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
           <entry key="css" value="4" />
           <entry key="env" value="33" />
           <entry key="gitignore" value="156" />
-          <entry key="js" value="12217" />
+          <entry key="js" value="12763" />
           <entry key="json" value="1401" />
           <entry key="md" value="1574" />
           <entry key="php" value="1230" />
@@ -70,7 +69,7 @@
           <entry key=".env file" value="33" />
           <entry key="CSS" value="4" />
           <entry key="JSON" value="1509" />
-          <entry key="JavaScript" value="12217" />
+          <entry key="JavaScript" value="12763" />
           <entry key="Markdown" value="1574" />
           <entry key="PHP" value="1230" />
           <entry key="PLAIN_TEXT" value="164" />
@@ -86,7 +85,7 @@
           <entry key="env" value="3" />
           <entry key="gitignore" value="5" />
           <entry key="gitkeep" value="3" />
-          <entry key="js" value="380" />
+          <entry key="js" value="382" />
           <entry key="json" value="75" />
           <entry key="lock" value="2" />
           <entry key="md" value="24" />
@@ -109,7 +108,7 @@
           <entry key="Dockerfile" value="1" />
           <entry key="Image" value="6" />
           <entry key="JSON" value="95" />
-          <entry key="JavaScript" value="380" />
+          <entry key="JavaScript" value="382" />
           <entry key="Jest Snapshot" value="3" />
           <entry key="Markdown" value="25" />
           <entry key="PHP" value="22" />
@@ -133,7 +132,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.30689654">
+    <splitter split-orientation="horizontal" split-proportion="0.11094225">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -215,8 +214,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="29" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="29" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -224,8 +223,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+                <state relative-caret-position="382">
+                  <caret line="50" column="130" selection-start-line="50" selection-start-column="130" selection-end-line="50" selection-end-column="130" />
                   <folding>
                     <element signature="e#0#68#0" expanded="true" />
                   </folding>
@@ -255,7 +254,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>transform</find>
       <find>setup</find>
       <find>mount</find>
       <find>FieldArea</find>
@@ -285,6 +283,7 @@
       <find>window</find>
       <find>FieldWrapp</find>
       <find>isValidHtml5type</find>
+      <find>classNameHooks/</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -295,6 +294,7 @@
       <replace>@calderajs/</replace>
       <replace>/</replace>
       <replace>it</replace>
+      <replace>classNameHooks.</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/packages/components</dir>
@@ -416,7 +416,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="107" />
     <option name="y" value="23" />
-    <option name="width" value="1656" />
+    <option name="width" value="1813" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -665,13 +665,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83131000" />
+    <option name="totallyTimeSpent" value="84168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="23" width="1656" height="1057" extended-state="0" />
+    <frame x="107" y="23" width="1813" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2812887" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25635234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -686,7 +686,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19872612" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006196" side_tool="true" visible="true" weight="0.53367877" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" sideWeight="0.4993804" visible="true" weight="0.5119171" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1419" height="866" id="Terminal" order="11" sideWeight="0.4993804" visible="true" weight="0.39896372" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -735,13 +735,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/handleFormSubmitCf2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/forms/src/Http/handlers/submitFormCf2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -1084,17 +1077,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@wordpress/hooks/build-module/createHooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="105">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/components/src/components/fields/util/classNameService.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="382">
+          <caret line="50" column="130" selection-start-line="50" selection-start-column="130" selection-end-line="50" selection-end-column="130" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
