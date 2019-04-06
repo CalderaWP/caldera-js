@@ -25,7 +25,8 @@ export const cf1ClassNames = {
 	[FILTER_FIELD_WRAPPER_CLASS_NAME]: 'form-group',
 	[FILTER_FIELD_LABEL_CLASS_NAME]: 'control-label',
 	[FILTER_FORM_WRAPPER_CLASS]: 'caldera-grid',
-	[FILTER_FORM_ELEMENT_CLASS]: 'caldera-form',
+	[FILTER_FORM_ELEMENT_CLASS]: 'caldera_forms_form',
+	[FILTER_FORM_ROW_CLASS]: 'row',
 };
 
 /**
@@ -38,18 +39,33 @@ classNameService.getFormWrapperClassNames = formId => {
 	return classNameService.applyFilters(FILTER_FORM_WRAPPER_CLASS, `caldera`);
 };
 
+/**
+ * Get class name for the form element
+ *
+ * @param formId
+ * @return {*|void}
+ */
 classNameService.getFormElementClassNames = formId => {
-	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `${formId} caldera_forms_form`);
+	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `${formId} caldera-form`);
 };
 
-
-classNameService.getFormWrapperClassNames = formId => {
-	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-grid`);
-};
-classNameService.getFormRowClassNames = (formId,fieldId) => {
+/**
+ * Get class name for row
+ *
+ * @param rowId
+ * @return {*|void}
+ */
+classNameService.getFormRowClassNames = (rowId) => {
 	return classNameService.applyFilters(FILTER_FORM_ROW_CLASS, `caldera-row`);
 };
-classNameService.getFormColumndClassNames = (formId,fieldId,size) => {
+
+/**
+ * Get class name for column
+ * @param columnId
+ * @param width
+ * @return {*|void}
+ */
+classNameService.getFormColumnClassNames = (columnId, width) => {
 	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-column`);
 };
 
