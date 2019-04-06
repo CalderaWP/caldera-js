@@ -11,10 +11,11 @@ import {
 	MagicRichText,
 	isValidHtml5type,
 	AutoCompleteField,
-	FormFieldsAutoComplete
-} from '@calderajs/components';
+	FormFieldsAutoComplete,
+	SubmitButton
+} from "../..";
+
 import React from 'react';
-import {SubmitButton} from "../..";
 
 /**
  * Create a field from an object describing it.

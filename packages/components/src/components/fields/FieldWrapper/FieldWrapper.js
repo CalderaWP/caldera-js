@@ -1,6 +1,6 @@
 import { fieldWrapperClassNames, parseAttributes } from '../util';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {Fragment} from 'react';
 
 /**
  *
@@ -13,7 +13,7 @@ import React from 'react';
 export const FieldWrapper = ({ fieldType, attributes, children }) => {
 	return (
 		<div className={fieldWrapperClassNames(fieldType)} {...attributes}>
-			{children}
+			{typeof children !== 'undefined' ? children :<Fragment/>}
 		</div>
 	);
 };
