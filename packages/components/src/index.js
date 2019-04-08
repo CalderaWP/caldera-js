@@ -1,6 +1,8 @@
 /**
  * Fields
  */
+import {LazyIFrame} from "./components/elements/IFrame/LazyIFrame";
+
 export { InputField } from './components/fields/InputField/InputField';
 export { SelectField } from './components/fields/SelectField/SelectField';
 export { RadioField } from './components/fields/RadioField/RadioField';
@@ -33,6 +35,9 @@ export {
 export { FieldSet } from './components/fields/FieldSet/FieldSet';
 export { FieldWrapper } from './components/fields/FieldWrapper/FieldWrapper';
 export { RemotePost } from './components/elements/RemotePost/RemotePost';
+export { LazyIFrame } from './components/elements/LazyIFrame/LazyIFrame';
+
+
 /**
  * Field class util functions
  */

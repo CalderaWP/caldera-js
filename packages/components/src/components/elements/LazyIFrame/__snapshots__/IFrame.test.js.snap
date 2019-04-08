@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyIFrame Matches snapshot  1`] = `
+<iframe
+  className="face-bats"
+  height={50}
+  lazy="true"
+  src="https://hiroy.club"
+  width={50}
+/>
+`;

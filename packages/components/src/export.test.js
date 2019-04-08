@@ -18,7 +18,8 @@ import {
 	Row,
 	fieldAreaFactory,
 	collectFieldValues,
-	SubmitButton
+	SubmitButton,
+	LazyIFrame
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -74,6 +75,8 @@ describe('exports', () => {
 	});
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
+	});test('LazyIFrame', () => {
+		expect(typeof LazyIFrame).toBe('function');
 	});
 });
 
