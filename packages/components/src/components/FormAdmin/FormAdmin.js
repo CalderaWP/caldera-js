@@ -54,7 +54,7 @@ export const FormAdmin = (
 
 	return (
 		<div
-			className={'aa'}
+			className={className}
 		>
 			{render({forms,getFormById,setForms})}
 		</div>
