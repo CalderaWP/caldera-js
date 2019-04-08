@@ -12,7 +12,28 @@ import {fieldWrapperClassNames} from "../fieldWrapperClassNames";
 import {labelClassNames} from "../labelClassNames";
 
 const TEST_CONSUMER = 'namespace';
+
+describe( 'className service API', () => {
+	it('filters work as expected', () => {
+		classNameService.addFilter('headerPath', TEST_CONSUMER, () => 'ALT!');
+		const headerPath = classNameService.applyFilters('headerPath', './Header');
+		expect(headerPath).toEqual('ALT!')
+	});
+
+	it( 'can remove', () => {
+		classNameService.addFilter(FILTER_FIELD_CLASS_NAME, TEST_CONSUMER, () => 'ALT');
+		let value1 = classNameService.applyFilters(FILTER_FIELD_CLASS_NAME, 'ORIGINAL');
+		expect(value1).toEqual('ALT');
+		classNameService.removeAllFilters(FILTER_FIELD_CLASS_NAME );
+		let value2 = classNameService.applyFilters(FILTER_FIELD_CLASS_NAME, 'ORIGINAL');
+		expect(value2).toEqual('ORIGINAL')
+	})
+});
 describe('classNameHooks', () => {
+
+	beforeEach( () => {
+		Object.keys(cf1ClassNames).forEach(filter => classNameService.removeAllFilters(filter) );
+	});
 
 	it('filters work as expected', () => {
 		classNameService.addFilter('headerPath', TEST_CONSUMER, () => 'ALT!');
@@ -50,7 +71,7 @@ describe('classNameHooks', () => {
 
 	it('Adds className form element ', () => {
 		classNameService.addFilter(FILTER_FORM_ELEMENT_CLASS, TEST_CONSUMER, () => cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
-		expect(classNameService.getFormElementClassNames('')).toBe('caldera-form');
+		expect(classNameService.getFormElementClassNames('')).toBe(cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
 	});
 
 
