@@ -2,7 +2,7 @@ import {CF2Form} from "./CF2Form";
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent, getByTestId} from "react-testing-library";
-describe( 'CF2Form', () => {
+describe.skip( 'CF2Form', () => {
 	let axios = {
 		post: jest.fn((config) => Promise.resolve({data: {}})),
 		request: jest.fn((config) => Promise.resolve({data: {}}))

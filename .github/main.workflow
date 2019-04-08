@@ -1,21 +1,28 @@
-workflow "Tests" {
+workflow "Build, TestComponent" {
   on = "push"
-  resolves = ["Test Forms"]
+  resolves = ["TestForms"]
 }
 
 action "Install" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  uses = "nuxt/actions-yarn@master"
   args = "install"
 }
 
-action "Test components" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["Install"]
-  args = "test:components --ci"
+action "Build" {
+  needs = "Install"
+  uses = "nuxt/actions-yarn@master"
+  args = "build"
 }
 
-action "Test Forms" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["Test components"]
-  args = "test:forms --ci"
+action "TestComponent" {
+  needs = "Build"
+  uses = "nuxt/actions-yarn@master"
+  args = "test:components-ci"
 }
+
+action "TestForms" {
+  needs = "TestComponent"
+  uses = "nuxt/actions-yarn@master"
+  args = "test:forms-ci"
+}
+

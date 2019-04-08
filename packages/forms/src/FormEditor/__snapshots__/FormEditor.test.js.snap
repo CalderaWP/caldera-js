@@ -25,44 +25,48 @@ exports[`FormEditor should match snapshot 1`] = `
       <button
         aria-controls="0-editor-view"
         aria-selected={false}
-        className="caldera-forms-editor-layout-tab-btn "
+        className="components-button caldera-forms-editor-layout-tab-btn "
         id="0-editor"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
+        type="button"
       >
         Layout
       </button>
       <button
         aria-controls="0-processors-view"
         aria-selected={true}
-        className="caldera-forms-editor-processors-tab-btn active-tab"
+        className="components-button caldera-forms-editor-processors-tab-btn active-tab"
         id="0-processors"
         onClick={[Function]}
         role="tab"
         tabIndex={null}
+        type="button"
       >
         Processors
       </button>
       <button
         aria-controls="0-Mailer-view"
         aria-selected={false}
-        className="caldera-forms-editor-mailer-tab-btn "
+        className="components-button caldera-forms-editor-mailer-tab-btn "
         id="0-Mailer"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
+        type="button"
       >
         mailer
       </button>
       <button
         aria-controls="0-settings-view"
         aria-selected={false}
-        className="caldera-forms-editor-settings-tab-btn "
+        className="components-button caldera-forms-editor-settings-tab-btn "
         id="0-settings"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
+        type="button"
       >
         Settings
       </button>

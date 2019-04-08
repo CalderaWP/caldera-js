@@ -18,7 +18,8 @@ This is a React component library for forms. It is designed to be used in Calder
 * Build Package
     - `yarn package`
     - The output is stored in the `dist` folder.
-    
+* Run tests once for CI
+   - `yarn test:ci` 
     
 ## Usage
 
