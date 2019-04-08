@@ -17,22 +17,24 @@ Array [
         <button
           aria-controls="0-settings-view"
           aria-selected={true}
-          className="caldera-processor-settings-tab-btn active-tab"
+          className="components-button caldera-processor-settings-tab-btn active-tab"
           id="0-settings"
           onClick={[Function]}
           role="tab"
           tabIndex={null}
+          type="button"
         >
           Settings
         </button>
         <button
           aria-controls="0-conditionals-view"
           aria-selected={false}
-          className="caldera-processor-conditionals-tab-btn "
+          className="components-button caldera-processor-conditionals-tab-btn "
           id="0-conditionals"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
+          type="button"
         >
           Conditionals
         </button>

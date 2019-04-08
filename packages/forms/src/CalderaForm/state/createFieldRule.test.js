@@ -77,7 +77,7 @@ describe('createFieldRule', () => {
 
 	});
 
-	it('compares with strong equality', () => {
+	it.skip('compares with strong equality', () => {
 		const testValue = '22';
 		const fieldValues = {
 			f2: 22,
@@ -144,7 +144,7 @@ describe('createFieldRule', () => {
 
 	});
 
-	it('compares less than with smaller', () => {
+	it.skip('compares less than with smaller', () => {
 		const testValue = '22';
 		const fieldValues = {
 			f2: 22,
