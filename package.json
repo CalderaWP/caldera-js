@@ -18,6 +18,8 @@
     "test:components": "yarn --cwd packages/components test",
     "test:forms": "yarn --cwd packages/forms test",
     "test:server": "yarn --cwd packages/server test",
+    "test:components-ci": "yarn --cwd packages/components test:ci",
+    "test:forms-ci": "yarn --cwd packages/forms test:ci",
     "storybook": "yarn storybook:components",
     "storybook:app": "yarn --cwd packages/demo storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn test:watch",
     "test:watch": "jest --watch",
-    "test:once": "jest -ci",
+    "test:ci": "jest --ci",
     "lint": "eslint 'src/**/*.js'",
     "del-dist": "del-cli dist",
     "prebuild": "yarn del-dist",

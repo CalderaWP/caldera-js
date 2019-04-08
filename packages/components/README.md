@@ -75,6 +75,10 @@ const {
 
 * Run Storybooks
     - `yarn storybook`
+    
+* Run tests once for CI
+    - `yarn test:ci`
+
 
 ## Other Commands
 * Lint code

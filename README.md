@@ -40,7 +40,11 @@ Testing tools:
 * Test Forms
     - `yarn test:forms`
 * Test Server
-    - `yarn test:server`    
+    - `yarn test:server`  
+* Test forms  once for CI
+    - `yarn test:forms-ci`  
+* Test components  once for CI
+    - `yarn test:components-ci`  
 ### Storybook
 * Start Both Storybooks
     - `yarn test`
