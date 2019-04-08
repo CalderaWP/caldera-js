@@ -3,7 +3,6 @@ import { fieldClassNames } from './fieldClassNames';
 import { labelClassNames } from './labelClassNames';
 import { fieldSetClassNames } from './fieldSetClassNames';
 import { fieldWrapperClassNames } from './fieldWrapperClassNames';
-
 /**
  * Checks if a given input type is an acceptable HTML5 input type
  *

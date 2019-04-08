@@ -102,4 +102,4 @@ export classNameService, {
 	FILTER_FIELD_WRAPPER_CLASS_NAME,
 	FILTER_FORM_ELEMENT_CLASS,
 	FILTER_FORM_WRAPPER_CLASS
-} from '../src/components/fields/util/classNameService/classNameService'
+} from './components/fields/util/classNameService/classNameService'
