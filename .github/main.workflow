@@ -11,12 +11,12 @@ action "Build" {
 action "TestComponent" {
   needs = "Build"
   uses = "nuxt/actions-yarn@master"
-  args = "test:components --ci"
+  args = "test:components-ci"
 }
 
 action "TestForms" {
   needs = "TestComponent"
   uses = "nuxt/actions-yarn@master"
-  args = "test:forms --ci"
+  args = "test:forms-ci"
 }
 
