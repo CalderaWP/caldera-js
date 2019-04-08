@@ -20,7 +20,8 @@ import {
 	collectFieldValues,
 	SubmitButton,
 	classNameService,
-	FormAdmin
+	FormAdmin,
+	LazyIFrame
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -76,28 +77,32 @@ describe('exports', () => {
 	});
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
-	});test('FormAdmin', () => {
+	});
+	test('FormAdmin', () => {
 		expect(typeof FormAdmin).toBe('function');
 	});
-});
-
-describe( 'exports factory', () => {
-
-	it( 'exports util function', () => {
-		expect( typeof  collectFieldValues ).toBe('function')
-	});
-	it( 'exports component', () => {
-		expect( typeof fieldAreaFactory ).toBe('function');
-	});
-	it( 'exports component', () => {
-		expect( typeof Row ).toBe('function');
-	});
-	it( 'exports component', () => {
-		expect( typeof textField ).toBe('object');
+	test('LazyIFrame', () => {
+		expect(typeof LazyIFrame).toBe('function');
 	});
 });
 
-describe( 'services', () => {
+describe('exports factory', () => {
+
+	it('exports util function', () => {
+		expect(typeof  collectFieldValues).toBe('function')
+	});
+	it('exports component', () => {
+		expect(typeof fieldAreaFactory).toBe('function');
+	});
+	it('exports component', () => {
+		expect(typeof Row).toBe('function');
+	});
+	it('exports component', () => {
+		expect(typeof textField).toBe('object');
+	});
+});
+
+describe('services', () => {
 	test('classNameService', () => {
 		expect(typeof classNameService).toBe('object');
 		expect(typeof classNameService.applyFilters).toBe('function');
