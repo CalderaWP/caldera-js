@@ -185,6 +185,5 @@ describe('updateRows', () => {
 		];
 		expect(  typeof  updateRows(state,rows,[field])[0].columns[0].fields[0].render).toEqual('function');
 
-
 	})
 });

@@ -106,7 +106,15 @@ const emailField = {
 	}
 };
 
+const submitButton = {
+	...textField,
+	fieldId: 'Clicker',
+	fieldType: 'submit',
+	label: 'Submit Button'
+}
+
 export {
+	submitButton,
 	checkboxFieldset,
 	selectField,
 	checkboxField,

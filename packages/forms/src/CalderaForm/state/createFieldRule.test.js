@@ -1,4 +1,5 @@
 import {createFieldRule} from './createFieldRule';
+import {emailField} from "../fields.fixtures";
 
 describe('createFieldRule', () => {
 	it('Creates function for is conditional', () => {
@@ -159,6 +160,71 @@ describe('createFieldRule', () => {
 		rule = createFieldRule('smaller', 'f2', '19');
 		expect(rule(fieldValues)).toBe(false);
 
+	});
+
+	test('Empty conditional returns true for null', () => {
+		const fieldValues = {
+			f2: null,
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(true);
+	});
+
+	test('Empty conditional returns true for empty string', () => {
+		const fieldValues = {
+			f2: '',
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(true);
+	});
+
+	test('Empty conditional returns true for empty array', () => {
+		const fieldValues = {
+			f2: [],
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(true);
+	});
+
+
+
+
+
+	test('Empty conditional returns FALSE for zero', () => {
+		const fieldValues = {
+			f2: 9,
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(false);
+	});
+
+
+	test('Empty conditional returns FALSE for array with items', () => {
+		const fieldValues = {
+			f2: [9],
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(false);
+	});
+
+	test('Empty conditional returns FALSE for non empty string', () => {
+		const fieldValues = {
+			f2: 'house-atlantic',
+			f44: '22'
+		};
+
+		const rule = createFieldRule('empty', 'f2', null);
+		expect(rule(fieldValues)).toBe(false);
 	});
 
 

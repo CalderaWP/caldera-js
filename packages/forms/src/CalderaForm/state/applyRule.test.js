@@ -3,6 +3,8 @@ import{
 	applyRuleToState
 } from "./applyRule";
 import {ConditionalState} from "./ConditionalState";
+import {createFieldRule} from "./createFieldRule";
+import {emailField, submitButton, textField} from "../fields.fixtures";
 
 describe( 'applyRule', () => {
 	let rule = {
@@ -190,5 +192,56 @@ describe( 'Applying rules to conditional state', ()=> {
 		expect( nextState.isFieldDisabled('y')).toBe(true);
 		expect( nextState.isFieldDisabled('r')).toBe(false);
 	});
+
+	let conditionals = [
+		{
+			type: 'hide',
+			rule: createFieldRule('is', emailField.fieldId, 'hide' ),
+			fields: [
+				textField.fieldId
+			]
+		},
+		{
+			type: 'disable',
+			rule: createFieldRule('empty', emailField.fieldId, null ),
+			fields: [
+				submitButton.fieldId
+			]
+		},
+
+	];
+
+	const initialState=  {
+		[emailField.fieldId] : null,
+		[textField.fieldId]: null,
+		[submitButton.fieldId]: null
+	};
+
+	it.skip( "Disables an empty field", () => {
+		let conditionalState = new ConditionalState(initialState);
+		conditionals.forEach(rule => {
+			applyRuleToState(rule, conditionalState)
+		});
+		expect( conditionalState.isFieldDisabled(submitButton.fieldId)).toBe(true);
+		expect( conditionalState.isFieldDisabled(emailField.fieldId)).toBe(false);
+		expect( conditionalState.isFieldDisabled(textField.fieldId)).toBe(false);
+	});
+
+	it.skip( 'Disables both fields', () => {
+		conditionals = [...conditionals, {
+			type: 'disable',
+			rule: createFieldRule('is', textField.fieldId, '' ),
+			fields: [
+				submitButton.fieldId
+			]
+		},];
+		let conditionalState = new ConditionalState(initialState);
+		conditionals.forEach(rule => {
+			applyRuleToState(rule, conditionalState)
+		});
+		expect( conditionalState.isFieldDisabled(submitButton.fieldId)).toBe(true);
+		expect( conditionalState.isFieldDisabled(emailField.fieldId)).toBe(false);
+		expect( conditionalState.isFieldDisabled(textField.fieldId)).toBe(false);
+	})
 });
 
