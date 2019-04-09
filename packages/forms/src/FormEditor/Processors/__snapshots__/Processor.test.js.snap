@@ -50,7 +50,7 @@ Array [
           className="caldera"
         >
           <form
-            className="undefined caldera-form"
+            className="horizontal-form-test-1 caldera-form"
             onSubmit={[Function]}
           >
             <div

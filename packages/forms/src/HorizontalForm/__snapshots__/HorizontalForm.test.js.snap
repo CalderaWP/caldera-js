@@ -5,7 +5,7 @@ exports[`HorizontalForm Matches snapshot 1`] = `
   className="caldera"
 >
   <form
-    className="undefined caldera-form"
+    className="horizontal-form-test-1 caldera-form"
     onSubmit={[Function]}
   >
     <div

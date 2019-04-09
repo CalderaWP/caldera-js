@@ -41,6 +41,7 @@ const submitButton = {
 
 const formConfig = {
 	//ID: 'CF5c9f86904e447',
+	//ID: 'CF5c9f8b765badd',
 	ID: 'CF5c9f8b765badd',
 	rows: [
 		{
@@ -85,11 +86,15 @@ const formConfig = {
 		lastNameField,
 		submitButton
 	],
-	conditionals: []
+	conditionals: [
+
+	]
 };
 
+const url =  'http://localhost:8228';
+//const url =   'http://futurecapable.dev';
 ReactDOM.render(<App
-	apiRootUri={'http://localhost:8228/wp-json/cf-api'}
+	apiRootUri={`${url}/wp-json/cf-api`}
 	formConfig={formConfig}
 />, document.getElementById('root'));
 

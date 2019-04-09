@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import React, {isValidElement, createElement, Fragment, Component} from 'react';
 import {Formik, Field, ErrorMessage} from 'formik';
 import {updateRows} from './util/updateRows';
-import {collectFieldValues,classNameService} from '@calderajs/components';
+import {collectFieldValues, classNameService, Row, Column, FieldArea} from '@calderajs/components';
 import {applyRuleToState} from './state/applyRule';
 
 import {CalderaGrid} from './CalderaGrid';
+import classNames from "classnames";
 
 
 export class CalderaForm extends Component {
@@ -52,14 +53,120 @@ export class CalderaForm extends Component {
 		this.applyConditionalRules();//initial hide/show logic
 	};
 
+	renderForm = ({
+					  errors,
+					  status,
+					  touched,
+					  isSubmitting,
+					  handleChange,
+					  handleBlur,
+					  setFieldValue,
+					  handleSubmit,
+					  values
+				  }) => {
+		const {onSubmit, onChange, form} = this.props;
+		const {state,applyConditionalRules} = this;
+		const {conditionalState,formRows }= state;
+
+		return (
+			<form
+				onSubmit={handleSubmit}
+				className={classNameService.getFormElementClassNames(form.ID)}
+			>
+
+
+				<Fragment>
+					{formRows.map(row => {
+						const {rowId, columns, render} = row;
+
+						if (render) {
+							return createElement(render, {
+								...row,
+								key: rowId
+							});
+						}
+
+						return (
+							<Row
+								className={classNames('caldera-form-row')}
+								key={rowId}
+								id={rowId}
+							>
+								{columns.map(column => {
+									const {
+										padding,
+										width,
+										columnId,
+										fields,
+										render,
+										key
+									} = column;
+									if (render) {
+										return createElement(render, {
+											...column,
+											key: columnId
+										});
+									}
+									return (
+										<Column
+											key={columnId}
+											columnId={columnId}
+											width={width}
+											padding={padding}
+										>
+											{fields.map(field => {
+												if (!field) {
+													return;
+												}
+												const {fieldId, render, key} = field;
+												field.value = values[fieldId];
+
+												const _key = render ? key : fieldId;
+												return (
+													<FieldArea
+														render={render}
+														key={_key ? _key : `${columnId}-${fieldId}`}
+														field={field}
+														onChange={newValue => {
+															conditionalState.setValue(fieldId, newValue);
+															applyConditionalRules();
+															setFieldValue(
+																fieldId,
+																conditionalState.getValue(fieldId),
+																true
+															);
+															onChange(values);
+														}}
+														onBlur={handleBlur}
+														fieldErrors={errors}
+														fieldsTouch={touched}
+													/>
+												);
+											})}
+										</Column>
+									);
+								})}
+							</Row>
+						);
+					})}
+				</Fragment>
+			</form>
+		)
+	};
+
+	 xRender = () => {
+		return <div>Hi</div>
+	}
+
 	render() {
-		const {onSubmit, onChange,form} = this.props;
-		const {formRows, initialValues, conditionalState} = this.state;
+		const {onSubmit,form} = this.props;
+		const {initialValues} = this.state;
 
 		return (
 			<div
 				className={classNameService.getFormWrapperClassNames(form.ID)}
 			>
+				<div>Above</div>
 				<Formik
 					className={'caldera-form'}
 					initialValues={initialValues}
@@ -74,24 +181,9 @@ export class CalderaForm extends Component {
 								 setFieldValue,
 								 handleSubmit,
 								 values
-							 }) => (
-						<form
-							onSubmit={handleSubmit}
-							className={classNameService.getFormElementClassNames(form.ID)}
-						>
-							<CalderaGrid
-								applyConditionalRules={this.applyConditionalRules}
-								conditionalState={conditionalState}
-								rows={formRows}
-								onAnyChange={onChange}
-								onAnyBlur={handleBlur}
-								fieldValues={values}
-								setFieldValue={setFieldValue}
-								fieldErrors={errors}
-								fieldTouched={touched}
-							/>
-						</form>
-					)}
+							 }) => {
+						return this.xRender();
+					} }
 				/>
 			</div>
 		);
@@ -100,7 +192,9 @@ export class CalderaForm extends Component {
 }
 
 CalderaForm.propTypes = {
-	form: PropTypes.object,
+	form:  PropTypes.shape({
+		ID: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+	}),
 	onSubmit: PropTypes.func,
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func
