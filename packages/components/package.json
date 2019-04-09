@@ -53,7 +53,8 @@
     "jest-svg-transformer": "^1.0.0",
     "nodemon": "^1.18.9",
     "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.4.2"
+    "react-test-renderer": "16.4.2",
+    "react-testing-library": "^6.1.2"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",

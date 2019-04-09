@@ -9,7 +9,8 @@ import {
 	submitFormCf2,
 	useCf2FormTokens,
 	handleFormSubmitCf2,
-	CF2Form
+	CF2Form,
+	FormAdmin
 } from '@calderajs/forms';
 
 
@@ -49,5 +50,9 @@ describe('Exports', () => {
 	});
 	it('exports CF2Form', () => {
 		expect(typeof CF2Form).toBe('function');
+	});
+
+	test('FormAdmin', () => {
+		expect(typeof FormAdmin).toBe('function');
 	});
 });

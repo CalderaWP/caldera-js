@@ -1,18 +1,17 @@
 import {ConditionalState} from './state/ConditionalState';
 import PropTypes from 'prop-types';
-import React, { isValidElement, createElement, Fragment, Component} from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import React, {isValidElement, createElement, Fragment, Component} from 'react';
+import {Formik, Field, ErrorMessage} from 'formik';
 import {updateRows} from './util/updateRows';
-import { collectFieldValues } from '@calderajs/components';
+import {collectFieldValues,classNameService} from '@calderajs/components';
 import {applyRuleToState} from './state/applyRule';
 
-import { CalderaGrid } from './CalderaGrid';
-
+import {CalderaGrid} from './CalderaGrid';
 
 
 export class CalderaForm extends Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
 			formRows: [],
@@ -26,14 +25,14 @@ export class CalderaForm extends Component {
 	 * Run conditional logic and update state
 	 */
 	applyConditionalRules = () => {
-		const {fields,rows,conditionals} = this.props.form;
-		if( conditionals && conditionals.length ){
-			const conditionalState = this.state.conditionalState ? this.state.conditionalState : new ConditionalState(collectFieldValues(fields ));
-			conditionals.forEach( rule => {
-				applyRuleToState(rule,conditionalState)
+		const {fields, rows, conditionals} = this.props.form;
+		if (conditionals && conditionals.length) {
+			const conditionalState = this.state.conditionalState ? this.state.conditionalState : new ConditionalState(collectFieldValues(fields));
+			conditionals.forEach(rule => {
+				applyRuleToState(rule, conditionalState)
 			});
 			this.setState({
-				formRows: updateRows(conditionalState,rows,fields),
+				formRows: updateRows(conditionalState, rows, fields),
 				conditionalState
 			});
 
@@ -44,22 +43,26 @@ export class CalderaForm extends Component {
 	/**
 	 * On mount, calculate initial state and rows
 	 */
-	componentDidMount =() =>{
-		const {fields,rows} = this.props.form;
-		const intialValues = collectFieldValues(fields );
+	componentDidMount = () => {
+		const {fields, rows} = this.props.form;
+		const intialValues = collectFieldValues(fields);
 		const conditionalState = this.state.conditionalState ? this.state.conditionalState : new ConditionalState(intialValues);
-		const formRows = updateRows( conditionalState,rows,fields );
-		this.setState({intialValues,formRows,conditionalState});
+		const formRows = updateRows(conditionalState, rows, fields);
+		this.setState({intialValues, formRows, conditionalState});
 		this.applyConditionalRules();//initial hide/show logic
 	};
 
-	render(){
-		const {onSubmit,onChange} = this.props;
-		const {formRows,initialValues,conditionalState} = this.state;
+	render() {
+		const {onSubmit, onChange,form} = this.props;
+		const {formRows, initialValues, conditionalState} = this.state;
 
 		return (
-			<div>
+			<div
+				className={classNameService.getFormWrapperClassNames(form.ID)}
+
+			>
 				<Formik
+					className={'caldera-form'}
 					initialValues={initialValues}
 					onSubmit={onSubmit}
 					render={({
@@ -70,9 +73,13 @@ export class CalderaForm extends Component {
 								 handleChange,
 								 handleBlur,
 								 setFieldValue,
+								 handleSubmit,
 								 values
 							 }) => (
-						<Form>
+						<form
+							onSubmit={handleSubmit}
+							className={classNameService.getFormElementClassNames(form.ID)}
+						>
 							<CalderaGrid
 								applyConditionalRules={this.applyConditionalRules}
 								conditionalState={conditionalState}
@@ -84,7 +91,7 @@ export class CalderaForm extends Component {
 								fieldErrors={errors}
 								fieldTouched={touched}
 							/>
-						</Form>
+						</form>
 					)}
 				/>
 			</div>
@@ -100,7 +107,8 @@ CalderaForm.propTypes = {
 	onBlur: PropTypes.func
 };
 
-const noop = () => {};
+const noop = () => {
+};
 CalderaForm.defaultProps = {
 	onChange: noop,
 	onBlur: noop

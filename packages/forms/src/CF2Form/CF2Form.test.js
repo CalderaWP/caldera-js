@@ -1,7 +1,7 @@
 import {CF2Form} from "./CF2Form";
 import React from 'react';
 import renderer from 'react-test-renderer';
-
+import { render, fireEvent, getByTestId} from "react-testing-library";
 describe.skip( 'CF2Form', () => {
 	let axios = {
 		post: jest.fn((config) => Promise.resolve({data: {}})),
@@ -41,12 +41,12 @@ describe.skip( 'CF2Form', () => {
 		conditionals: []
 	};
 
-	it.skip( 'Matches snapshot',async (done) => {
-		expect(renderer.create(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();
+	it( 'Matches snapshot',async (done) => {
+		expect(render(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();
 	});
 
-	it.skip( 'Uses injected _tokens when possible',async (done) => {
-		expect(renderer.create(
+	it( 'Snapshot with tokens',async () => {
+		expect(render(
 			<CF2Form
 				apiRootUri={'https://localhost/'}
 				formConfig={formConfig}
@@ -55,7 +55,9 @@ describe.skip( 'CF2Form', () => {
 					_cf_verify: 'a',
 					_sessionPublicKey: 'b'
 				}}
-			/>).props
-		).toBe({sivan:true})
+			/>)
+
+		).toMatchSnapshot()
+
 	});
 });

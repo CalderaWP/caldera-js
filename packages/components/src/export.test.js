@@ -19,6 +19,7 @@ import {
 	fieldAreaFactory,
 	collectFieldValues,
 	SubmitButton,
+	classNameService,
 	LazyIFrame
 } from '@calderajs/components';
 
@@ -75,23 +76,33 @@ describe('exports', () => {
 	});
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
-	});test('LazyIFrame', () => {
+	});
+
+	test('LazyIFrame', () => {
 		expect(typeof LazyIFrame).toBe('function');
 	});
 });
 
-describe( 'exports factory', () => {
+describe('exports factory', () => {
 
-	it( 'exports util function', () => {
-		expect( typeof  collectFieldValues ).toBe('function')
-	})
-	it( 'exports component', () => {
-		expect( typeof fieldAreaFactory ).toBe('function');
+	it('exports util function', () => {
+		expect(typeof  collectFieldValues).toBe('function')
 	});
-	it( 'exports component', () => {
-		expect( typeof Row ).toBe('function');
+	it('exports component', () => {
+		expect(typeof fieldAreaFactory).toBe('function');
 	});
-	it( 'exports component', () => {
-		expect( typeof textField ).toBe('object');
+	it('exports component', () => {
+		expect(typeof Row).toBe('function');
 	});
-})
+	it('exports component', () => {
+		expect(typeof textField).toBe('object');
+	});
+});
+
+describe('services', () => {
+	test('classNameService', () => {
+		expect(typeof classNameService).toBe('object');
+		expect(typeof classNameService.applyFilters).toBe('function');
+		expect(typeof classNameService.getFormWrapperClassNames).toBe('function');
+	});
+});
