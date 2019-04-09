@@ -6,6 +6,9 @@ import {processorsCollection} from './Processors/processors.fixtures';
 
 import { FormEditor } from './FormEditor';
 
+const form = {
+	fields: []
+}
 
 import {
 	checkboxFieldset,
@@ -27,6 +30,7 @@ storiesOf('FormEditor', module).add('The processor', () => (
 			emailField,
 			radioField
 		]}
+		form={form}
 		type={'mailchimp'}
 		label={'Main Segment'}
 		onChange={values => console.log(values)}
@@ -44,7 +48,44 @@ const processorTypes = [
 	}
 ];
 
-storiesOf('FormEditor', module).add('The processors list', () => (
+
+class MockProcessorsUI extends Component {
+	state = {
+		processors: [...processorsCollection],
+		form: {
+			ID: 'a-form',
+			name: 'Form Name',
+			fields: [
+				checkboxField,
+				radioField,
+				textField
+			]
+		}
+	};
+
+	updateProcessors = (processors) => this.setState({
+		processors
+	});
+
+	render(){
+		const {form,processors} = this.state;
+		return(
+			<Processors
+				processorTypes={processorTypes}
+				processors={processors}
+				onChange={values => console.log(values)}
+				onClose={values => console.log(values)}
+				onRemove={values => console.log(values)}
+				formFields={[]}
+				form={form}
+				updateProcessors={this.updateProcessors}
+			/>
+		)
+	}
+}
+
+
+storiesOf('FormEditor', module).add('The processors list - non-functional', () => (
 	<Processors
 		processorTypes={processorTypes}
 		processors={processorsCollection}
@@ -52,19 +93,20 @@ storiesOf('FormEditor', module).add('The processors list', () => (
 		onClose={values => console.log(values)}
 		onRemove={values => console.log(values)}
 		formFields={[]}
-		form={ {id: 'Name'}}
+		form={form}
+		updateProcessors={values => console.log(values)}
 	/>
 ));
 
-const form = {
-	id: 'a form',
-	processors: processorsCollection,
-};
+storiesOf('FormEditor', module).add('The processors list - functional', () => (
+	<MockProcessorsUI />
+));
+
 
 class MockFormApp extends Component {
 	state = {
 		form: {
-			id: 'a-form',
+			ID: 'a-form',
 			name: 'Form Name',
 			processors: processorsCollection,
 			fields: [
@@ -90,7 +132,7 @@ class MockFormApp extends Component {
 }
 
 storiesOf('FormEditor', module).add('The form editor', () => (
-	<MockFormApp/>
+	<MockFormApp />
 ));
 
 

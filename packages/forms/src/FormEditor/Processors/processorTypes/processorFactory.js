@@ -1,9 +1,6 @@
-import  {defaultProcessorTypes} from './defaultProcessorTypes'
 const shortid = require('shortid');
 
-export default function processorFactory (type, options = {}) {
-	//put hook here
-	const processorTypes = defaultProcessorTypes;
+export default function processorFactory (type, processorTypes = {}) {
 	return {
 		...processorTypes.find( p => type === p.type ),
 		id: shortid.generate()
