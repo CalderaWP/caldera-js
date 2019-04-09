@@ -33,6 +33,32 @@ describe( 'ConditionalState set value', () => {
 		expect(state.getValue('x')).toEqual('five');
 	});
 
+	it( 'Does not change other values', () => {
+		let r = 1;
+		let z = 'fff';
+
+		const state = new ConditionalState({
+			x:7,
+			r,
+			z
+		});
+		state.setValue('x', 'five' );
+		expect(state.getValue('x')).toEqual('five');
+		expect(state.getValue('r')).toEqual(r);
+		expect(state.getValue('z')).toEqual(z);
+		state.setValue('x', 5 );
+		expect(state.getValue('x')).toEqual(5);
+		expect(state.getValue('r')).toEqual(r);
+		expect(state.getValue('z')).toEqual(z);
+
+
+		state.setValue('z', 'z2' );
+		expect(state.getValue('x')).toEqual(5);
+		expect(state.getValue('r')).toEqual(r);
+		expect(state.getValue('z')).toEqual('z2');
+
+	});
+
 });
 
 describe( 'ConditionalState Hiding fields', () => {
