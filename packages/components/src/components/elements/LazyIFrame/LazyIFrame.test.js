@@ -1,7 +1,7 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import { LazyIFrame } from './IFrame';
+import { LazyIFrame } from './LazyIFrame';
 
 describe('LazyIFrame', () => {
 
