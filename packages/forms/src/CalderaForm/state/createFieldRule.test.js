@@ -150,13 +150,13 @@ describe('createFieldRule', () => {
 			f2: 22,
 			f44: '22'
 		};
-		let rule = createFieldRule('smaller', 'f2', 20);
+		let rule = createFieldRule('smaller', 'f2', 30);
 		expect(rule(fieldValues)).toBe(true);
-		rule = createFieldRule('smaller', 'f2', 11000);
+		rule = createFieldRule('smaller', 'f2', 19);
 		expect(rule(fieldValues)).toBe(false);
-		rule = createFieldRule('smaller', 'f2', '20');
+		rule = createFieldRule('smaller', 'f2', '30');
 		expect(rule(fieldValues)).toBe(true);
-		rule = createFieldRule('smaller', 'f2', '11000');
+		rule = createFieldRule('smaller', 'f2', '19');
 		expect(rule(fieldValues)).toBe(false);
 
 	});
