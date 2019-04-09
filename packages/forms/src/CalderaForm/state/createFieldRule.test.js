@@ -54,7 +54,7 @@ describe('createFieldRule', () => {
 		expect(rule(fieldValues)).toBe(false);
 	});
 
-	it.skip('Not conditional is false when no value for that field', () => {
+	it('Not conditional is false when no value for that field', () => {
 		const fieldValues = {
 			f2: 'sfdsdfsdf'
 		};
@@ -77,7 +77,7 @@ describe('createFieldRule', () => {
 
 	});
 
-	it.skip('compares with strong equality', () => {
+	it('compares with strong equality', () => {
 		const testValue = '22';
 		const fieldValues = {
 			f2: 22,
@@ -144,7 +144,7 @@ describe('createFieldRule', () => {
 
 	});
 
-	it.skip('compares less than with smaller', () => {
+	it('compares less than with smaller', () => {
 		const testValue = '22';
 		const fieldValues = {
 			f2: 22,
