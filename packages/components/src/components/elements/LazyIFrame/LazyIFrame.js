@@ -25,6 +25,10 @@ export const LazyIFrame = ({
 	);
 };
 
+/**
+ * u
+ * @type {{src: *, width: shim, height: shim, className: shim}}
+ */
 LazyIFrame.propTypes = {
 	src: PropTypes.string.isRequired,
 	width: PropTypes.oneOfType(
