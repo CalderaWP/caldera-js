@@ -59,7 +59,6 @@ export class CalderaForm extends Component {
 		return (
 			<div
 				className={classNameService.getFormWrapperClassNames(form.ID)}
-
 			>
 				<Formik
 					className={'caldera-form'}

@@ -1,8 +1,23 @@
 import {CF2Form} from "./CF2Form";
-import React from 'react';
+import React, { useEffect } from "react";
 import renderer from 'react-test-renderer';
 import { render, fireEvent, getByTestId} from "react-testing-library";
-describe.skip( 'CF2Form', () => {
+describe( 'CF2Form', () => {
+
+
+	it("calls effect", () => {
+		return new Promise(resolve => {
+			render(<EffectfulComponent effect={resolve} />);
+		});
+	});
+
+	function EffectfulComponent({ effect }) {
+		useEffect(effect);
+
+		return null;
+	}
+
+
 	let axios = {
 		post: jest.fn((config) => Promise.resolve({data: {}})),
 		request: jest.fn((config) => Promise.resolve({data: {}}))
@@ -41,11 +56,12 @@ describe.skip( 'CF2Form', () => {
 		conditionals: []
 	};
 
-	it( 'Matches snapshot',async (done) => {
+
+	it.skip( 'Matches snapshot', () => {
 		expect(render(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();
 	});
 
-	it( 'Snapshot with tokens',async () => {
+	it.skip( 'Snapshot with tokens',async () => {
 		expect(render(
 			<CF2Form
 				apiRootUri={'https://localhost/'}
