@@ -57,14 +57,14 @@ const form = {
 		},
 		{
 			type: 'disable',
-			rule: createFieldRule('is', emailField.fieldId, '' ),
+			rule: createFieldRule('empty', emailField.fieldId, null ),
 			fields: [
 				submitButton.fieldId
 			]
 		},
 		{
 			type: 'disable',
-			rule: createFieldRule('is', textField.fieldId, '' ),
+			rule: createFieldRule('empty', textField.fieldId,null ),
 			fields: [
 				submitButton.fieldId
 			]

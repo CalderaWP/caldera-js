@@ -68,6 +68,9 @@ export const parseAttributes = (attributes, allowed = null) => {
 		case 'textarea':
 			allowed = textAreaAttrs;
 			break;
+		case 'submit':
+			allowed = [ ...['disabled'], allowed ];
+			break;
 		case 'text':
 		case 'default':
 		case null:

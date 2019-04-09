@@ -8,6 +8,7 @@ exports[`Select Field component matches snapshot 1`] = `
     className="components-base-control__field"
   >
     <input
+      disabled={false}
       id="button"
       type="submit"
       value="Send Message"
