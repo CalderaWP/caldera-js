@@ -11,17 +11,6 @@ export {MagicRichText} from './components/fields/RichText/MagicRichText';
 export {AutoCompleteField} from './components/fields/AutoCompleteField/AutoCompleteField';
 export {FormFieldsAutoComplete} from './components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete';
 export {SubmitButton} from './components/fields/SubmitButton/SubmitButton';
-export {LazyIFrame} from "./components/elements/LazyIFrame/LazyIFrame";
-export { InputField } from './components/fields/InputField/InputField';
-export { SelectField } from './components/fields/SelectField/SelectField';
-export { RadioField } from './components/fields/RadioField/RadioField';
-export { ToggleField } from './components/fields/ToggleField/ToggleField';
-export { TextAreaField } from './components/fields/TextAreaField/TextAreaField';
-export { RichText } from './components/fields/RichText/RichText';
-export { MagicRichText } from './components/fields/RichText/MagicRichText';
-export { AutoCompleteField } from './components/fields/AutoCompleteField/AutoCompleteField';
-export { FormFieldsAutoComplete } from './components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete';
-export { SubmitButton } from './components/fields/SubmitButton/SubmitButton';
 
 /**
  * Grid Components
@@ -44,9 +33,6 @@ export {
 export {FieldSet} from './components/fields/FieldSet/FieldSet';
 export {FieldWrapper} from './components/fields/FieldWrapper/FieldWrapper';
 export {RemotePost} from './components/elements/RemotePost/RemotePost';
-export { FieldSet } from './components/fields/FieldSet/FieldSet';
-export { FieldWrapper } from './components/fields/FieldWrapper/FieldWrapper';
-export { RemotePost } from './components/elements/RemotePost/RemotePost';
 export { LazyIFrame } from './components/elements/LazyIFrame/LazyIFrame';
 
 /**
@@ -76,11 +62,6 @@ export {collectFieldValues} from './factory/components/collectFieldValues';
  */
 export {fieldFactory} from './factory/factories/fieldFactory';
 export {fieldAreaFactory} from './factory/factories/fieldAreaFactory';
-
-/**
- * Caldera Forms UI
- */
-export {FormAdmin} from "./components/FormAdmin/FormAdmin";
 
 /**
  * Test fixtures

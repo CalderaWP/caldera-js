@@ -20,7 +20,6 @@ import {
 	collectFieldValues,
 	SubmitButton,
 	classNameService,
-	FormAdmin,
 	LazyIFrame
 } from '@calderajs/components';
 
@@ -78,9 +77,7 @@ describe('exports', () => {
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
 	});
-	test('FormAdmin', () => {
-		expect(typeof FormAdmin).toBe('function');
-	});
+
 	test('LazyIFrame', () => {
 		expect(typeof LazyIFrame).toBe('function');
 	});

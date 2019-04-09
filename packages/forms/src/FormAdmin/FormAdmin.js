@@ -1,7 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {messagePropShape} from "../Messages/messagePropTypes";
 import classNameService from "../..";
 
 export const formHasId = ( form, formId ) => {
@@ -61,3 +60,8 @@ export const FormAdmin = (
 	);
 };
 
+FormAdmin.propTypes = {
+	render: PropTypes.func.isRequired,
+	initialForms: PropTypes.array,
+	className: PropTypes.string
+};

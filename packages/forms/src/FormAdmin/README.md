@@ -1,8 +1,10 @@
+# Forms Admin
+The main admin page for Caldera Forms.
 
 ## Usage
 ### Basic Usage
 ```js
-import {FormAdmin} from '@calderajs/components';
+import {FormAdmin} from '@calderajs/forms';
 <FormAdmin
   initialForms={[]}
   render={(forms,getFormById,setForms) => {
@@ -20,7 +22,7 @@ import {FormAdmin} from '@calderajs/components';
 Using with [caldera-api-client](https://calderalabs.org/caldera-api-client) inside of WordPress.
 
 ```js
-import {FormAdmin} from '@calderajs/components';
+import {FormAdmin} from '@calderajs/forms';
 import {wpClientFactory} from '@caldera-labs/api-client';
 import {useEffect} from 'react';
 

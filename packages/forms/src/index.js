@@ -13,3 +13,4 @@ export submitFormCf2 from './Http/handlers/submitFormCf2';
 export handleFormSubmitCf2 from './Http/handlers/handleFormSubmitCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
 export {useCf2FormTokens} from './hooks/useCf2FormTokens'
+export {FormAdmin} from "./FormAdmin/FormAdmin";
