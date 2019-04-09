@@ -192,10 +192,6 @@ describe('createFieldRule', () => {
 		expect(rule(fieldValues)).toBe(true);
 	});
 
-
-
-
-
 	test('Empty conditional returns FALSE for zero', () => {
 		const fieldValues = {
 			f2: 9,

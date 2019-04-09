@@ -84,6 +84,16 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 				return values.toLowerCase().indexOf( testValue ) >= 0;
 
 			};
+		case 'empty':
+			return (fieldValues) => {
+				const value = findFieldValue(fieldId, fieldValues);
+
+				return (
+					null === value
+					|| '' === value
+					|| Array.isArray(value) && 0 === value.length
+				);
+			};
 
 		default:
 			return () => false;

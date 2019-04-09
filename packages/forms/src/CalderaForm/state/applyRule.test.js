@@ -217,7 +217,7 @@ describe( 'Applying rules to conditional state', ()=> {
 		[submitButton.fieldId]: null
 	};
 
-	it.skip( "Disables an empty field", () => {
+	it( "Disables an empty field", () => {
 		let conditionalState = new ConditionalState(initialState);
 		conditionals.forEach(rule => {
 			applyRuleToState(rule, conditionalState)
@@ -227,10 +227,10 @@ describe( 'Applying rules to conditional state', ()=> {
 		expect( conditionalState.isFieldDisabled(textField.fieldId)).toBe(false);
 	});
 
-	it.skip( 'Disables both fields', () => {
+	it( 'Disables both fields', () => {
 		conditionals = [...conditionals, {
 			type: 'disable',
-			rule: createFieldRule('is', textField.fieldId, '' ),
+			rule: createFieldRule('empty', textField.fieldId, '' ),
 			fields: [
 				submitButton.fieldId
 			]
