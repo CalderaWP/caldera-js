@@ -3,13 +3,25 @@ import getCf2Token from "../Http/handlers/getCf2Token";
 import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
 import React, {useState, useEffect, Fragment} from 'react';
 import { Notice } from '@wordpress/components';
+import PropTypes from "prop-types";
 
+/**
+ *
+ * @param apiRootUri
+ * @param formConfig
+ * @param axios
+ * @param _tokens
+ * @return {*}
+ * @constructor
+ */
 export const CF2Form = (
 	{
 		apiRootUri,
 		formConfig,
 		axios,
-		_tokens
+		_tokens,
+		onChange,
+		onBlur,
 	}
 ) => {
 
@@ -66,8 +78,9 @@ export const CF2Form = (
 					form={form}
 					fields={form.fields}
 					onChange={newValues => {
-
+						onChange(onChange);
 					}}
+					onBlur={onBlur}
 					onSubmit={(values, actions) => {
 						setIsSubmitting(true);
 						actions.setSubmitting(false);
@@ -97,3 +110,9 @@ export const CF2Form = (
 	);
 
 }
+
+CF2Form.propTypes = {...CalderaForm.propTypes};
+
+const noop = () => {
+};
+CF2Form.defaultProps = {...CalderaForm.defaultProps};

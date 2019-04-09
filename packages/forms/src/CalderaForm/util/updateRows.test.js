@@ -152,8 +152,41 @@ describe('updateRows', () => {
 			}
 		];
 		expect( typeof updateRows(state,rows,[field])[0].columns[0].render).toEqual('function');
+
+
 	});
 
+	it( 'sets columnId', () => {
+		const field = {
+			fieldType: 'input',
+			html5Type: 'number',
+			fieldId: 'showField',
+		};
+
+		const state = new ConditionalState( {
+			hideField: 'h',
+			showField: 's'
+		});
+		const rows = updateRows(state,[
+			{
+				rowId: 'r1',
+				columns: [
+					{
+						fields: [field, checkboxField],
+						width: '1/2',
+						columnId: '1a'
+					},
+					{
+						fields: [textField],
+						width: '1/4',
+						columnId: '1b'
+					}
+				]
+			}
+		],[field]);
+		expect(  rows[0].columns[0].columnId).toEqual('1a');
+		expect(  rows[0].columns[1].columnId).toEqual('1b');
+	})
 	it( 'should allow fields to have render', () => {
 		const _Field = props => <input id={'test808'} type={'number'}/>;
 		const state = new ConditionalState( {

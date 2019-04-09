@@ -6,7 +6,6 @@ import {updateRows} from './util/updateRows';
 import {collectFieldValues, classNameService, Row, Column, FieldArea} from '@calderajs/components';
 import {applyRuleToState} from './state/applyRule';
 
-import {CalderaGrid} from './CalderaGrid';
 import classNames from "classnames";
 
 
@@ -154,9 +153,6 @@ export class CalderaForm extends Component {
 		)
 	};
 
-	 xRender = () => {
-		return <div>Hi</div>
-	}
 
 	render() {
 		const {onSubmit,form} = this.props;
@@ -166,24 +162,13 @@ export class CalderaForm extends Component {
 			<div
 				className={classNameService.getFormWrapperClassNames(form.ID)}
 			>
-				<div>Above</div>
 				<Formik
 					className={'caldera-form'}
 					initialValues={initialValues}
 					onSubmit={onSubmit}
-					render={({
-								 errors,
-								 status,
-								 touched,
-								 isSubmitting,
-								 handleChange,
-								 handleBlur,
-								 setFieldValue,
-								 handleSubmit,
-								 values
-							 }) => {
-						return this.xRender();
-					} }
+					render={props => (
+						<Fragment>{this.renderForm(props)}</Fragment>
+					)}
 				/>
 			</div>
 		);

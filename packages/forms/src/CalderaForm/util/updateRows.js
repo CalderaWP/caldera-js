@@ -25,8 +25,10 @@ export const updateRows = (newState, rows, fields) => {
 			};
 			if (row.columns) {
 				row.columns.forEach(column => {
+					const {columnId} = column;
 					if (! column.render) {
 						let outputColumn = {
+							columnId,
 							fields: [],
 						};
 						if (column.fields) {
