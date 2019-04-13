@@ -7,7 +7,7 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import BaseControl from "../../Controls/BaseControl";
+import BaseControl from "../Controls/BaseControl";
 
 export const InputField = (
 	{
@@ -32,6 +32,7 @@ export const InputField = (
 		const checked = value ? true : false;
 		return (
 			<BaseControl
+				fieldType={fieldType}
 				label={label}
 				id={fieldId}
 				help={description}
@@ -53,7 +54,12 @@ export const InputField = (
 		);
 	} else {
 		return (
-			<BaseControl label={label} id={fieldId} help={description} className={''}>
+			<BaseControl
+				label={label}
+				id={fieldId}
+				help={description}
+				fieldType={fieldType}
+			>
 				<input
 					className={fieldClassNames(fieldType)}
 					type={fieldType}

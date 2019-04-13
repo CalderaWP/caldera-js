@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
 import {isEmpty} from "lodash";
-import BaseControl from "../../Controls/BaseControl";
+import BaseControl from "../Controls/BaseControl";
 import classnames from "classnames";
+import {FieldLabel} from "../FieldLabel/FieldLabel";
 export const RadioField = ({
 	attributes,
 	label,
@@ -18,14 +19,17 @@ export const RadioField = ({
 }) => {
 	attributes = parseAttributes(attributes, 'radio');
 	const onChangeValue = (event) => onChange(event.target.value);
-
-
 	return !isEmpty(options) && (
-		<BaseControl label={label} id={fieldId} help={description} className={classnames(className, 'components-radio-control')}>
+		<BaseControl
+			fieldType={'radio'}
+			label={label}
+			id={fieldId}
+			help={description}
+		>
 			{options.map((option, index) =>
 				<div
 					key={`${ fieldId }-${ index }`}
-					className="components-radio-control__option"
+					className={fieldClassNames('radio')}
 				>
 					<input
 						id={`${ fieldId }-${ index }`}
@@ -36,10 +40,11 @@ export const RadioField = ({
 						onChange={onChangeValue}
 						checked={option.value === value}
 						aria-describedby={!!description ? `${ fieldId }__help` : undefined}
+						{...attributes}
 					/>
-					<label htmlFor={`${ fieldId }-${ index }`}>
+					<FieldLabel htmlFor={`${ fieldId }-${ index }`}>
 						{option.label}
-					</label>
+					</FieldLabel>
 				</div>
 			)}
 		</BaseControl>

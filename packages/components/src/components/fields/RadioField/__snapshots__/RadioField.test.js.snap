@@ -2,58 +2,49 @@
 
 exports[`RadioField Field component matches snapshot 1`] = `
 <div
-  className="components-base-control components-radio-control"
+  className="caldera-field-wrapper caldera-field-wrapper-radio"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="selection-hats"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="selection-hats"
-    >
-      Select A Hat!
+    Select A Hat!
+  </label>
+  <div
+    className="caldera-field caldera-field-radio"
+  >
+    <input
+      aria-describedby="selection-hats__help"
+      checked={false}
+      className="caldera-field caldera-field-radio"
+      id="selection-hats-0"
+      name="selection-hats"
+      onChange={[Function]}
+      type="radio"
+      value={100}
+    />
+    <label>
+      Hat One
     </label>
-    <div
-      className="components-radio-control__option"
-    >
-      <input
-        aria-describedby="selection-hats__help"
-        checked={false}
-        className="caldera-field caldera-field-radio"
-        id="selection-hats-0"
-        name="selection-hats"
-        onChange={[Function]}
-        type="radio"
-        value={100}
-      />
-      <label
-        htmlFor="selection-hats-0"
-      >
-        Hat One
-      </label>
-    </div>
-    <div
-      className="components-radio-control__option"
-    >
-      <input
-        aria-describedby="selection-hats__help"
-        checked={false}
-        className="caldera-field caldera-field-radio"
-        id="selection-hats-1"
-        name="selection-hats"
-        onChange={[Function]}
-        type="radio"
-        value={200}
-      />
-      <label
-        htmlFor="selection-hats-1"
-      >
-        Hat Two
-      </label>
-    </div>
+  </div>
+  <div
+    className="caldera-field caldera-field-radio"
+  >
+    <input
+      aria-describedby="selection-hats__help"
+      checked={false}
+      className="caldera-field caldera-field-radio"
+      id="selection-hats-1"
+      name="selection-hats"
+      onChange={[Function]}
+      type="radio"
+      value={200}
+    />
+    <label>
+      Hat Two
+    </label>
   </div>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="selection-hats__help"
   >
     selection of hats

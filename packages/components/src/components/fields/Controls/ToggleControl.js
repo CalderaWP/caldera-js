@@ -5,7 +5,7 @@ import React from 'react';
 import { Component } from '@wordpress/element';
 import {SVG,Path} from "./primitives/svg";
 import BaseControl from "./BaseControl";
-import {fieldClassNames,labelClassNames} from "../fields/util";
+import {fieldClassNames,labelClassNames} from "../util";
 
 
 
@@ -65,15 +65,16 @@ class ToggleControl extends Component {
 
 		return (
 			<BaseControl
+				fieldType={'toggle'}
 				id={ id }
 				help={ helpLabel }
-				className={fieldClassNames('toggle')}
 			>
 				<FormToggle
 					id={ id }
 					checked={ checked }
 					onChange={ this.onChange }
 					aria-describedby={ describedBy }
+					className={fieldClassNames('toggle')}
 				/>
 				<label
 					htmlFor={ id }

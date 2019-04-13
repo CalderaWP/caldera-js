@@ -1,4 +1,4 @@
-import {BaseControl} from '../../Controls';
+import {BaseControl} from '../Controls';
 import React from "react";
 import {fieldClassNames, parseAttributes} from "../util";
 
@@ -25,6 +25,7 @@ export const SubmitButton = (props) => {
 		<BaseControl
 			id={fieldId}
 			help={description}
+			fieldType={'submit'}
 		>
 			<input
 				className={fieldClassNames('text')}

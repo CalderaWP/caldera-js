@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {parseAttributes, fieldClassNames, isValidHtml5type} from '../util';
 import {isEmpty} from "lodash";
-import BaseControl from "../../Controls/BaseControl";
+import BaseControl from "../Controls/BaseControl";
 
 export const SelectField = ({
 								attributes,
@@ -31,7 +31,11 @@ export const SelectField = ({
 
 	/* eslint-disable jsx-a11y/no-onchange */
 	return !isEmpty(options) && (
-		<BaseControl label={label} id={fieldId} help={description} className={''}>
+		<BaseControl
+			label={label}
+			id={fieldId}
+			help={description}
+			fieldType={'select'}>
 			<select
 				id={fieldId}
 				className={fieldClassNames('select')}

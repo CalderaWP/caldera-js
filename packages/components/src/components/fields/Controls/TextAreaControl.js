@@ -1,15 +1,20 @@
 import React from 'react';
 
 import BaseControl from "./BaseControl";
-import {fieldClassNames} from "../fields/util";
+import {fieldClassNames} from "../util";
 
 function TextareaControl( { label, value, help, instanceId, onChange, id, rows = 4, className, ...props } ) {
 	const onChangeValue = ( event ) => onChange( event.target.value );
 
 	return (
-		<BaseControl label={ label } id={ id } help={ help } className={ className }>
+		<BaseControl
+			label={ label } id={ id }
+			help={ help }
+			fieldType={'textarea'}
+
+		>
 			<textarea
-				className={fieldClassNames('text-area')}
+				className={fieldClassNames('textarea')}
 					id={ id }
 				rows={ rows }
 				onChange={ onChangeValue }

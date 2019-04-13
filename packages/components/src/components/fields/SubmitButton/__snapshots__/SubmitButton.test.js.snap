@@ -2,21 +2,20 @@
 
 exports[`Select Field component matches snapshot 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-submit"
 >
-  <div
-    className="components-base-control__field"
-  >
-    <input
-      className="caldera-field caldera-field-text"
-      disabled={false}
-      id="button"
-      type="submit"
-      value="Send Message"
-    />
-  </div>
+  <label
+    htmlFor="button"
+  />
+  <input
+    className="caldera-field caldera-field-text"
+    disabled={false}
+    id="button"
+    type="submit"
+    value="Send Message"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="button__help"
   >
     Click to sendu

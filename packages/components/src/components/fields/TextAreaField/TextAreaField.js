@@ -7,7 +7,7 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import TextareaControl from "../../Controls/TextAreaControl";
+import TextareaControl from "../Controls/TextAreaControl";
 
 export const TextAreaField = ({
 	label,

@@ -2,41 +2,26 @@
 
 exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="autoComplete1"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="autoComplete1"
-    >
-      Options
-    </label>
-    <input
-      className="caldera-field caldera-field-autocomplete"
-      id="autoComplete1"
-      onChange={[Function]}
-      suggestions={
-        Array [
-          "f",
-          "y",
-          "%selectFieldId%",
-          "Select Field Label",
-          "%checkboxFieldLabel%",
-          "Checkbox Labe",
-        ]
-      }
-      value={
-        Array [
-          "One",
-          "Three",
-        ]
-      }
-    />
-  </div>
+    Options
+  </label>
+  <input
+    className="caldera-field caldera-field-autocomplete"
+    id="autoComplete1"
+    onChange={[Function]}
+    value={
+      Array [
+        "One",
+        "Three",
+      ]
+    }
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="autoComplete1__help"
   >
     Help text
@@ -46,39 +31,26 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
 
 exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="autoComplete1"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="autoComplete1"
-    >
-      Options
-    </label>
-    <input
-      className="caldera-field caldera-field-autocomplete"
-      id="autoComplete1"
-      onChange={[Function]}
-      suggestions={
-        Array [
-          "%selectFieldId%",
-          "Select Field Label",
-          "%checkboxFieldLabel%",
-          "Checkbox Labe",
-        ]
-      }
-      value={
-        Array [
-          "One",
-          "Three",
-        ]
-      }
-    />
-  </div>
+    Options
+  </label>
+  <input
+    className="caldera-field caldera-field-autocomplete"
+    id="autoComplete1"
+    onChange={[Function]}
+    value={
+      Array [
+        "One",
+        "Three",
+      ]
+    }
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="autoComplete1__help"
   >
     Help text

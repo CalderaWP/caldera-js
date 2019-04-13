@@ -8,126 +8,106 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     Checkbox Field Set Label
   </legend>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-1"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-1"
-      >
-        One
-      </label>
-      <input
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-1"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-1"
-      >
-        One
-      </label>
-    </div>
+      One
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-1"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-1"
+    >
+      One
+    </label>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-2"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-2"
-      >
-        Two
-      </label>
-      <input
-        aria-describedby="opt-2__help"
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-2"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-2"
-      >
-        Two
-      </label>
-    </div>
+      Two
+    </label>
+    <input
+      aria-describedby="opt-2__help"
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-2"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-2"
+    >
+      Two
+    </label>
     <p
-      className="components-base-control__help"
+      className="caldera-control__help"
       id="opt-2__help"
     >
       The Second Option
     </p>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-3"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-3"
-      >
-        Three
-      </label>
-      <input
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-3"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-3"
-      >
-        Three
-      </label>
-    </div>
+      Three
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-3"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-3"
+    >
+      Three
+    </label>
   </div>
 </fieldset>
 `;
 
 exports[`fieldFactory Creates a number field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-number"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="numberFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="numberFieldId"
-    >
-      Number Field Label
-    </label>
-    <input
-      aria-describedby="numberFieldId__help"
-      className="caldera-field caldera-field-number"
-      id="numberFieldId"
-      max={10}
-      min={1}
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="number"
-      value={3}
-    />
-  </div>
+    Number Field Label
+  </label>
+  <input
+    aria-describedby="numberFieldId__help"
+    className="caldera-field caldera-field-number"
+    id="numberFieldId"
+    max={10}
+    min={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="number"
+    value={3}
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="numberFieldId__help"
   >
     Number field description
@@ -137,77 +117,66 @@ exports[`fieldFactory Creates a number field 1`] = `
 
 exports[`fieldFactory Creates a radio field 1`] = `
 <div
-  className="components-base-control components-radio-control"
+  className="caldera-field-wrapper caldera-field-wrapper-radio"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="radioFieldLabel"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="radioFieldLabel"
-    >
-      Radio Field Label
+    Radio Field Label
+  </label>
+  <div
+    className="caldera-field caldera-field-radio"
+  >
+    <input
+      aria-describedby="radioFieldLabel__help"
+      checked={false}
+      className="caldera-field caldera-field-radio"
+      id="radioFieldLabel-0"
+      name="radioFieldLabel"
+      onChange={[Function]}
+      type="radio"
+      value={0}
+    />
+    <label>
+      Zero
     </label>
-    <div
-      className="components-radio-control__option"
-    >
-      <input
-        aria-describedby="radioFieldLabel__help"
-        checked={false}
-        className="caldera-field caldera-field-radio"
-        id="radioFieldLabel-0"
-        name="radioFieldLabel"
-        onChange={[Function]}
-        type="radio"
-        value={0}
-      />
-      <label
-        htmlFor="radioFieldLabel-0"
-      >
-        Zero
-      </label>
-    </div>
-    <div
-      className="components-radio-control__option"
-    >
-      <input
-        aria-describedby="radioFieldLabel__help"
-        checked={true}
-        className="caldera-field caldera-field-radio"
-        id="radioFieldLabel-1"
-        name="radioFieldLabel"
-        onChange={[Function]}
-        type="radio"
-        value={1}
-      />
-      <label
-        htmlFor="radioFieldLabel-1"
-      >
-        One
-      </label>
-    </div>
-    <div
-      className="components-radio-control__option"
-    >
-      <input
-        aria-describedby="radioFieldLabel__help"
-        checked={false}
-        className="caldera-field caldera-field-radio"
-        id="radioFieldLabel-2"
-        name="radioFieldLabel"
-        onChange={[Function]}
-        type="radio"
-        value={2}
-      />
-      <label
-        htmlFor="radioFieldLabel-2"
-      >
-        Two
-      </label>
-    </div>
+  </div>
+  <div
+    className="caldera-field caldera-field-radio"
+  >
+    <input
+      aria-describedby="radioFieldLabel__help"
+      checked={true}
+      className="caldera-field caldera-field-radio"
+      id="radioFieldLabel-1"
+      name="radioFieldLabel"
+      onChange={[Function]}
+      type="radio"
+      value={1}
+    />
+    <label>
+      One
+    </label>
+  </div>
+  <div
+    className="caldera-field caldera-field-radio"
+  >
+    <input
+      aria-describedby="radioFieldLabel__help"
+      checked={false}
+      className="caldera-field caldera-field-radio"
+      id="radioFieldLabel-2"
+      name="radioFieldLabel"
+      onChange={[Function]}
+      type="radio"
+      value={2}
+    />
+    <label>
+      Two
+    </label>
   </div>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="radioFieldLabel__help"
   >
     Radio field description
@@ -217,21 +186,20 @@ exports[`fieldFactory Creates a radio field 1`] = `
 
 exports[`fieldFactory Creates a submit button 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-submit"
 >
-  <div
-    className="components-base-control__field"
-  >
-    <input
-      className="caldera-field caldera-field-text"
-      disabled={false}
-      id="clickButton"
-      type="submit"
-      value="Click Me"
-    />
-  </div>
+  <label
+    htmlFor="clickButton"
+  />
+  <input
+    className="caldera-field caldera-field-text"
+    disabled={false}
+    id="clickButton"
+    type="submit"
+    value="Click Me"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="clickButton__help"
   >
     your first name
@@ -241,29 +209,24 @@ exports[`fieldFactory Creates a submit button 1`] = `
 
 exports[`fieldFactory Creates a text field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-text"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="firstName"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="firstName"
-    >
-      First Name
-    </label>
-    <input
-      aria-describedby="firstName__help"
-      className="caldera-field caldera-field-text"
-      id="firstName"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-      value="roy"
-    />
-  </div>
+    First Name
+  </label>
+  <input
+    aria-describedby="firstName__help"
+    className="caldera-field caldera-field-text"
+    id="firstName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value="roy"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="firstName__help"
   >
     your first name
@@ -273,38 +236,26 @@ exports[`fieldFactory Creates a text field 1`] = `
 
 exports[`fieldFactory Creates an autocomplete field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="autoComplete1"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="autoComplete1"
-    >
-      Options
-    </label>
-    <input
-      className="caldera-field caldera-field-autocomplete"
-      id="autoComplete1"
-      onChange={[Function]}
-      suggestions={
-        Array [
-          "One",
-          "Two",
-          "Three",
-        ]
-      }
-      value={
-        Array [
-          "One",
-          "Three",
-        ]
-      }
-    />
-  </div>
+    Options
+  </label>
+  <input
+    className="caldera-field caldera-field-autocomplete"
+    id="autoComplete1"
+    onChange={[Function]}
+    value={
+      Array [
+        "One",
+        "Three",
+      ]
+    }
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="autoComplete1__help"
   >
     Help text
@@ -314,35 +265,30 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
 
 exports[`fieldFactory Creates an checkbox field field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-checkbox"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="checkboxFieldLabel"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="checkboxFieldLabel"
-    >
-      Checkbox Labe
-    </label>
-    <input
-      aria-describedby="checkboxFieldLabel__help"
-      checked={true}
-      className="caldera-field caldera-field-checkbox"
-      id="checkboxFieldLabel"
-      onChange={[Function]}
-      type="checkbox"
-      value="1"
-    />
-    <label
-      className="components-checkbox-control__label"
-      htmlFor="checkboxFieldLabel"
-    >
-      Checkbox Labe
-    </label>
-  </div>
+    Checkbox Labe
+  </label>
+  <input
+    aria-describedby="checkboxFieldLabel__help"
+    checked={true}
+    className="caldera-field caldera-field-checkbox"
+    id="checkboxFieldLabel"
+    onChange={[Function]}
+    type="checkbox"
+    value="1"
+  />
+  <label
+    className="components-checkbox-control__label"
+    htmlFor="checkboxFieldLabel"
+  >
+    Checkbox Labe
+  </label>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="checkboxFieldLabel__help"
   >
     Checkbox field description
@@ -358,125 +304,105 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     Checkbox Field Set Label
   </legend>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-1"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-1"
-      >
-        One
-      </label>
-      <input
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-1"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-1"
-      >
-        One
-      </label>
-    </div>
+      One
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-1"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-1"
+    >
+      One
+    </label>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-2"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-2"
-      >
-        Two
-      </label>
-      <input
-        aria-describedby="opt-2__help"
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-2"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-2"
-      >
-        Two
-      </label>
-    </div>
+      Two
+    </label>
+    <input
+      aria-describedby="opt-2__help"
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-2"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-2"
+    >
+      Two
+    </label>
     <p
-      className="components-base-control__help"
+      className="caldera-control__help"
       id="opt-2__help"
     >
       The Second Option
     </p>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-3"
     >
-      <label
-        className="components-base-control__label"
-        htmlFor="opt-3"
-      >
-        Three
-      </label>
-      <input
-        checked={true}
-        className="caldera-field caldera-field-checkbox"
-        id="opt-3"
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="opt-3"
-      >
-        Three
-      </label>
-    </div>
+      Three
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-3"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      className="components-checkbox-control__label"
+      htmlFor="opt-3"
+    >
+      Three
+    </label>
   </div>
 </fieldset>
 `;
 
 exports[`fieldFactory Creates an email field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-email"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="emailFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="emailFieldId"
-    >
-      Email Field Label
-    </label>
-    <input
-      aria-describedby="emailFieldId__help"
-      className="caldera-field caldera-field-email"
-      id="emailFieldId"
-      multiple={true}
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="email"
-      value="emai@email.com"
-    />
-  </div>
+    Email Field Label
+  </label>
+  <input
+    aria-describedby="emailFieldId__help"
+    className="caldera-field caldera-field-email"
+    id="emailFieldId"
+    multiple={true}
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="email"
+    value="emai@email.com"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="emailFieldId__help"
   >
     Email field description
@@ -486,34 +412,21 @@ exports[`fieldFactory Creates an email field 1`] = `
 
 exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="firstName"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="firstName"
-    >
-      First Name
-    </label>
-    <input
-      className="caldera-field caldera-field-autocomplete"
-      id="firstName"
-      onChange={[Function]}
-      suggestions={
-        Array [
-          "%firstName%",
-          "First Name",
-          "%textArea1%",
-          "Your message",
-        ]
-      }
-      value="roy"
-    />
-  </div>
+    First Name
+  </label>
+  <input
+    className="caldera-field caldera-field-autocomplete"
+    id="firstName"
+    onChange={[Function]}
+    value="roy"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="firstName__help"
   >
     your first name
@@ -523,43 +436,38 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
 
 exports[`fieldFactory Creates an select field 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="selectFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="selectFieldId"
+    Select Field Label
+  </label>
+  <select
+    aria-describedby="selectFieldId__help"
+    className="caldera-field caldera-field-select"
+    id="selectFieldId"
+    multiple={false}
+    onChange={[Function]}
+  >
+    <option
+      value={0}
     >
-      Select Field Label
-    </label>
-    <select
-      aria-describedby="selectFieldId__help"
-      className="caldera-field caldera-field-select"
-      id="selectFieldId"
-      multiple={false}
-      onChange={[Function]}
+      Zero
+    </option>
+    <option
+      value={1}
     >
-      <option
-        value={0}
-      >
-        Zero
-      </option>
-      <option
-        value={1}
-      >
-        One
-      </option>
-      <option
-        value={2}
-      >
-        Two
-      </option>
-    </select>
-  </div>
+      One
+    </option>
+    <option
+      value={2}
+    >
+      Two
+    </option>
+  </select>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="selectFieldId__help"
   >
     Select field description
@@ -569,43 +477,38 @@ exports[`fieldFactory Creates an select field 1`] = `
 
 exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="selectFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="selectFieldId"
+    Select Field Label
+  </label>
+  <select
+    aria-describedby="selectFieldId__help"
+    className="caldera-field caldera-field-select"
+    id="selectFieldId"
+    multiple={false}
+    onChange={[Function]}
+  >
+    <option
+      value={0}
     >
-      Select Field Label
-    </label>
-    <select
-      aria-describedby="selectFieldId__help"
-      className="caldera-field caldera-field-select"
-      id="selectFieldId"
-      multiple={false}
-      onChange={[Function]}
+      Zero
+    </option>
+    <option
+      value={1}
     >
-      <option
-        value={0}
-      >
-        Zero
-      </option>
-      <option
-        value={1}
-      >
-        One
-      </option>
-      <option
-        value={2}
-      >
-        Two
-      </option>
-    </select>
-  </div>
+      One
+    </option>
+    <option
+      value={2}
+    >
+      Two
+    </option>
+  </select>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="selectFieldId__help"
   >
     Select field description
@@ -615,33 +518,28 @@ exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
 
 exports[`fieldFactory should create textarea 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-textarea"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="textArea1"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="textArea1"
-    >
-      Your message
-    </label>
-    <textarea
-      aria-describedby="textArea1__help"
-      className="caldera-field caldera-field-text-area"
-      cols={8}
-      id="textArea1"
-      maxLength={500}
-      minlength={10}
-      onBlur={[Function]}
-      onChange={[Function]}
-      required={true}
-      rows={5}
-      value="The content of text area"
-    />
-  </div>
+    Your message
+  </label>
+  <textarea
+    aria-describedby="textArea1__help"
+    className="caldera-field caldera-field-textarea"
+    cols={8}
+    id="textArea1"
+    maxLength={500}
+    minlength={10}
+    onBlur={[Function]}
+    onChange={[Function]}
+    required={true}
+    rows={5}
+    value="The content of text area"
+  />
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="textArea1__help"
   >
     your first name
@@ -651,61 +549,53 @@ exports[`fieldFactory should create textarea 1`] = `
 
 exports[`fieldFactory should create toggle 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="toggleFieldLabel"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="toggleFieldLabel"
+    Toggle Label
+  </label>
+  <div
+    className="caldera-field-wrapper caldera-field-wrapper-toggle"
+  >
+    <label />
+    <span
+      className="components-form-toggle caldera-field caldera-field-toggle is-checked"
     >
-      Toggle Label
-    </label>
-    <div
-      className="components-base-control caldera-field caldera-field-toggle"
-    >
-      <div
-        className="components-base-control__field"
+      <input
+        checked={true}
+        className="caldera-field caldera-field-toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="components-form-toggle__track"
+      />
+      <span
+        className="components-form-toggle__thumb"
+      />
+      <svg
+        aria-hidden="true"
+        className="components-form-toggle__on"
+        focusable="false"
+        height="6"
+        role="img"
+        viewBox="0 0 2 6"
+        width="2"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          className="components-form-toggle is-checked"
-        >
-          <input
-            checked={true}
-            className="caldera-field caldera-field-toggle"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <span
-            className="components-form-toggle__track"
-          />
-          <span
-            className="components-form-toggle__thumb"
-          />
-          <svg
-            aria-hidden="true"
-            className="components-form-toggle__on"
-            focusable="false"
-            height="6"
-            role="img"
-            viewBox="0 0 2 6"
-            width="2"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 0h2v6H0z"
-            />
-          </svg>
-        </span>
-        <label
-          className="caldera-field-label caldera-field-label-toggle"
+        <path
+          d="M0 0h2v6H0z"
         />
-      </div>
-    </div>
+      </svg>
+    </span>
+    <label
+      className="caldera-field-label caldera-field-label-toggle"
+    />
   </div>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="toggleFieldLabel__help"
   >
     Toggle field description
