@@ -6,6 +6,7 @@ exports[`InputField  matches snapshot with all props 1`] = `
 >
   <label>
     Hi Roy
+     
   </label>
   <input
     aria-describedby="undefined__help"

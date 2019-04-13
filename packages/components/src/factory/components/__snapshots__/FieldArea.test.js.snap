@@ -12,6 +12,7 @@ exports[`FieldArea component Creates a text field 1`] = `
       htmlFor="firstName"
     >
       First Name
+       
     </label>
     <input
       aria-describedby="firstName__help"
@@ -44,6 +45,7 @@ exports[`FieldArea component Creates an select field 1`] = `
       htmlFor="selectFieldId"
     >
       Select Field Label
+       
     </label>
     <select
       aria-describedby="selectFieldId__help"
@@ -51,6 +53,7 @@ exports[`FieldArea component Creates an select field 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
+      required={true}
     >
       <option
         value={0}
@@ -90,6 +93,7 @@ exports[`FieldArea component Shows errors 1`] = `
       htmlFor="firstName"
     >
       First Name
+       
     </label>
     <input
       aria-describedby="firstName__help"

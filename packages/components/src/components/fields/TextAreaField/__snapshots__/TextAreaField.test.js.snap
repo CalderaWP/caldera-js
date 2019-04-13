@@ -6,6 +6,7 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
 >
   <label>
     Hi Roy
+     
   </label>
   <textarea
     aria-describedby="undefined__help"
@@ -15,7 +16,6 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
     minlength={1}
     onBlur={[MockFunction]}
     onChange={[Function]}
-    required={false}
     rows={5}
     value="Roy"
   />

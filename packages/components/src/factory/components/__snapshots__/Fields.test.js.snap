@@ -11,6 +11,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       htmlFor="firstName"
     >
       First Name
+       
     </label>
     <input
       aria-describedby="firstName__help"
@@ -35,6 +36,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
+       
     </label>
     <input
       aria-describedby="checkboxFieldLabel__help"
@@ -46,10 +48,13 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       value="1"
     />
     <label
-      className="components-checkbox-control__label"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
+       
+      <span>
+        *
+      </span>
     </label>
     <p
       className="caldera-control__help"
@@ -78,6 +83,7 @@ exports[`Fields component Creates all five fields 1`] = `
         htmlFor="opt-1"
       >
         One
+         
       </label>
       <input
         checked={true}
@@ -88,10 +94,10 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
-        className="components-checkbox-control__label"
         htmlFor="opt-1"
       >
         One
+         
       </label>
     </div>
     <div
@@ -101,6 +107,7 @@ exports[`Fields component Creates all five fields 1`] = `
         htmlFor="opt-2"
       >
         Two
+         
       </label>
       <input
         aria-describedby="opt-2__help"
@@ -112,10 +119,10 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
-        className="components-checkbox-control__label"
         htmlFor="opt-2"
       >
         Two
+         
       </label>
       <p
         className="caldera-control__help"
@@ -131,6 +138,7 @@ exports[`Fields component Creates all five fields 1`] = `
         htmlFor="opt-3"
       >
         Three
+         
       </label>
       <input
         checked={true}
@@ -141,10 +149,10 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
-        className="components-checkbox-control__label"
         htmlFor="opt-3"
       >
         Three
+         
       </label>
     </div>
   </fieldset>
@@ -155,6 +163,7 @@ exports[`Fields component Creates all five fields 1`] = `
       htmlFor="selectFieldId"
     >
       Select Field Label
+       
     </label>
     <select
       aria-describedby="selectFieldId__help"
@@ -162,6 +171,7 @@ exports[`Fields component Creates all five fields 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
+      required={true}
     >
       <option
         value={0}
@@ -193,6 +203,7 @@ exports[`Fields component Creates all five fields 1`] = `
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
+       
     </label>
     <input
       aria-describedby="checkboxFieldLabel__help"
@@ -204,10 +215,13 @@ exports[`Fields component Creates all five fields 1`] = `
       value="1"
     />
     <label
-      className="components-checkbox-control__label"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
+       
+      <span>
+        *
+      </span>
     </label>
     <p
       className="caldera-control__help"
@@ -223,6 +237,7 @@ exports[`Fields component Creates all five fields 1`] = `
       htmlFor="numberFieldId"
     >
       Number Field Label
+       
     </label>
     <input
       aria-describedby="numberFieldId__help"
@@ -249,6 +264,7 @@ exports[`Fields component Creates all five fields 1`] = `
       htmlFor="firstName"
     >
       First Name
+       
     </label>
     <input
       aria-describedby="firstName__help"
@@ -273,6 +289,7 @@ exports[`Fields component Creates all five fields 1`] = `
       htmlFor="emailFieldId"
     >
       Email Field Label
+       
     </label>
     <input
       aria-describedby="emailFieldId__help"

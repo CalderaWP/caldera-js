@@ -6,11 +6,14 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
 >
   <label>
     Hi Roy
+     
   </label>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-toggle"
   >
-    <label />
+    <label>
+       
+    </label>
     <span
       className="components-form-toggle caldera-field caldera-field-toggle"
     >

@@ -5,6 +5,7 @@ import {isEmpty} from "lodash";
 import BaseControl from "../Controls/BaseControl";
 
 export const SelectField = ({
+								required,
 								attributes,
 								label,
 								fieldId,
@@ -35,8 +36,11 @@ export const SelectField = ({
 			label={label}
 			id={fieldId}
 			help={description}
-			fieldType={'select'}>
+			fieldType={'select'}
+			required={required}
+		>
 			<select
+				required={required}
 				id={fieldId}
 				className={fieldClassNames('select')}
 				onChange={onChangeValue}

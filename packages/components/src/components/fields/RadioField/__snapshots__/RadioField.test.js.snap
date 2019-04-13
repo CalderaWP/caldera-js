@@ -8,6 +8,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
     htmlFor="selection-hats"
   >
     Select A Hat!
+     
   </label>
   <div
     className="caldera-field caldera-field-radio"
@@ -24,6 +25,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
     />
     <label>
       Hat One
+       
     </label>
   </div>
   <div
@@ -41,6 +43,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
     />
     <label>
       Hat Two
+       
     </label>
   </div>
   <p

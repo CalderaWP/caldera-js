@@ -12,6 +12,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
       htmlFor="firstName"
     >
       First Name
+       
     </label>
     <input
       aria-describedby="firstName__help"
@@ -44,6 +45,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
       htmlFor="selectFieldId"
     >
       Select Field Label
+       
     </label>
     <select
       aria-describedby="selectFieldId__help"
@@ -51,6 +53,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
+      required={true}
     >
       <option
         value={0}
@@ -90,6 +93,7 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
       htmlFor="autoComplete1"
     >
       Options
+       
     </label>
     <input
       className="caldera-field caldera-field-autocomplete"
@@ -124,6 +128,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
       htmlFor="textArea1"
     >
       Your message
+       
     </label>
     <textarea
       aria-describedby="textArea1__help"
@@ -134,7 +139,6 @@ exports[`fieldAreaFactory should create textarea 1`] = `
       minlength={10}
       onBlur={[Function]}
       onChange={[Function]}
-      required={true}
       rows={5}
       value="The content of text area"
     />
@@ -160,11 +164,14 @@ exports[`fieldAreaFactory should create toggle 1`] = `
       htmlFor="toggleFieldLabel"
     >
       Toggle Label
+       
     </label>
     <div
       className="caldera-field-wrapper caldera-field-wrapper-toggle"
     >
-      <label />
+      <label>
+         
+      </label>
       <span
         className="components-form-toggle caldera-field caldera-field-toggle is-checked"
       >

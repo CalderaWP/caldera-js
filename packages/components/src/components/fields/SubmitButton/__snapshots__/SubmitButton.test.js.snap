@@ -6,7 +6,9 @@ exports[`Select Field component matches snapshot 1`] = `
 >
   <label
     htmlFor="button"
-  />
+  >
+     
+  </label>
   <input
     className="caldera-field caldera-field-text"
     disabled={false}

@@ -8,6 +8,7 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseControl from "../Controls/BaseControl";
+import {FieldLabel} from "../FieldLabel/FieldLabel";
 
 export const InputField = (
 	{
@@ -47,9 +48,12 @@ export const InputField = (
 					aria-describedby={!!description ? fieldId + '__help' : undefined}
 					{..._attributes}
 				/>
-				<label className="components-checkbox-control__label" htmlFor={fieldId}>
+				<FieldLabel
+					fieldId={fieldId}
+					required={required}
+				>
 					{label}
-				</label>
+				</FieldLabel>
 			</BaseControl>
 		);
 	} else {

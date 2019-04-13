@@ -8,6 +8,7 @@ exports[`AutoCompleteField should match snapshot 1`] = `
     htmlFor="auto-complete-hats"
   >
     Select A Hat
+     
   </label>
   <input
     className="caldera-field caldera-field-autocomplete"

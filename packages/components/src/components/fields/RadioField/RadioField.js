@@ -15,6 +15,7 @@ export const RadioField = ({
 	multiple,
 	description,
 	placeholder,
+	required,
 							   className
 }) => {
 	attributes = parseAttributes(attributes, 'radio');
@@ -25,6 +26,7 @@ export const RadioField = ({
 			label={label}
 			id={fieldId}
 			help={description}
+			required={required}
 		>
 			{options.map((option, index) =>
 				<div
