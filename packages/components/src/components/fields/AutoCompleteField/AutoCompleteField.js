@@ -20,7 +20,7 @@ export const AutoCompleteField = (props) => {
 			label={label}
 			help={description}
 		>
-			<TextControl
+			<input
 				className={fieldClassNames('autocomplete')}
 				id={fieldId}
 				value={ value }

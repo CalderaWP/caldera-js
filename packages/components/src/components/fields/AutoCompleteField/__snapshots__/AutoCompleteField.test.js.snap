@@ -13,27 +13,18 @@ exports[`AutoCompleteField should match snapshot 1`] = `
     >
       Select A Hat
     </label>
-    <div
-      className="components-base-control caldera-field caldera-field-autocomplete"
-    >
-      <div
-        className="components-base-control__field"
-      >
-        <input
-          className="components-text-control__input"
-          id="auto-complete-hats"
-          onChange={[Function]}
-          suggestions={
-            Array [
-              "a",
-              "Boom",
-              "stick",
-            ]
-          }
-          type="text"
-        />
-      </div>
-    </div>
+    <input
+      className="caldera-field caldera-field-autocomplete"
+      id="auto-complete-hats"
+      onChange={[Function]}
+      suggestions={
+        Array [
+          "a",
+          "Boom",
+          "stick",
+        ]
+      }
+    />
   </div>
   <p
     className="components-base-control__help"

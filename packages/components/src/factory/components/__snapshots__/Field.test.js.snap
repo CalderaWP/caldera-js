@@ -2,31 +2,32 @@
 
 exports[`Field component Creates a number field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-number"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="numberFieldId"
     >
       Number Field Label
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="numberFieldId__help"
       className="components-text-control__input"
       id="numberFieldId"
       max={10}
       min={1}
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="number"
       value={3}
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="numberFieldId__help"
   >
     Number field description
   </p>
@@ -35,29 +36,30 @@ exports[`Field component Creates a number field 1`] = `
 
 exports[`Field component Creates a text field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-text"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="firstName"
     >
       First Name
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="firstName__help"
       className="components-text-control__input"
       id="firstName"
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="text"
       value="roy"
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="firstName__help"
   >
     your first name
   </p>
@@ -77,17 +79,23 @@ exports[`Field component Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-1"
+      >
+        One
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-1"
       >
         One
       </label>
@@ -99,25 +107,31 @@ exports[`Field component Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-2"
+      >
+        Two
+      </label>
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="opt-2__help"
         checked={true}
         className="components-checkbox-control__input"
         id="opt-2"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-2"
       >
         Two
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="undefined__help"
+      id="opt-2__help"
     >
       The Second Option
     </p>
@@ -128,17 +142,23 @@ exports[`Field component Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-3"
+      >
+        Three
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-3"
       >
         Three
       </label>
@@ -149,30 +169,31 @@ exports[`Field component Creates an checkbox field set 1`] = `
 
 exports[`Field component Creates an email field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-email"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="emailFieldId"
     >
       Email Field Label
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="emailFieldId__help"
       className="components-text-control__input"
       id="emailFieldId"
       multiple={true}
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="email"
       value="emai@email.com"
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="emailFieldId__help"
   >
     Email field description
   </p>
@@ -181,7 +202,7 @@ exports[`Field component Creates an email field 1`] = `
 
 exports[`Field component Creates an select field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
@@ -198,7 +219,6 @@ exports[`Field component Creates an select field 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
-      value={1}
     >
       <option
         value={0}
@@ -228,7 +248,7 @@ exports[`Field component Creates an select field 1`] = `
 
 exports[`Field component Creates an select field identified as dropdown 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
@@ -245,7 +265,6 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
-      value={1}
     >
       <option
         value={0}

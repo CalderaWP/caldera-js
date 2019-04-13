@@ -7,8 +7,7 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import CheckboxControl from "../../Controls/CheckboxControl";
-import TextControl from "../../Controls/TextControl";
+import BaseControl from "../../Controls/BaseControl";
 export const InputField = ({
 	label,
 	description,
@@ -22,35 +21,44 @@ export const InputField = ({
 	attributes,
 	children
 }) => {
+	const onChangeValue = ( event ) => onChange( event.target.value );
+
 	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const _attributes = parseAttributes(attributes, fieldType);
 	if ('checkbox' === fieldType) {
 		const checked = value ? true : false;
 		return (
-			<CheckboxControl
-				id={fieldId}
-				checked={checked}
-				help={description}
-				{..._attributes}
-				onChange={onChange}
-				label={label}
-				onBlur={onBlur}
-			/>
+			<BaseControl label={ label } id={ fieldId } help={ description } className={ '' }>
+				<input
+					id={ fieldId }
+					className="components-checkbox-control__input"
+					type="checkbox"
+					value="1"
+					onChange={ onChangeValue }
+					checked={ checked }
+					aria-describedby={ !! description ? fieldId + '__help' : undefined }
+					{..._attributes}
+				/>
+				<label className="components-checkbox-control__label" htmlFor={ fieldId }>
+					{ label }
+				</label>
+			</BaseControl>
 		);
 	} else {
 		return (
-			<TextControl
-				label={label}
-				className={fieldClassNames(fieldType)}
-				id={fieldId}
-				value={value}
-				placeholder={placeholder}
-				type={fieldType}
-				onChange={onChange}
-				onBlur={onBlur}
-				help={description}
-				{..._attributes}
-			/>
+			<BaseControl label={ label } id={ fieldId } help={ description } className={ '' }>
+				<input className="components-text-control__input"
+					   type={ fieldType }
+					   id={ fieldId }
+					   value={ value }
+					   onChange={ onChangeValue }
+					   aria-describedby={ !! description ? fieldId + '__help' : undefined }
+					   placeholder={placeholder}
+					   onChange={onChange}
+					   onBlur={onBlur}
+					   {..._attributes}
+				/>
+			</BaseControl>
 		);
 	}
 };

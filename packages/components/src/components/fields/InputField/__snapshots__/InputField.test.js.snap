@@ -2,7 +2,7 @@
 
 exports[`InputField  matches snapshot with all props 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-text"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
@@ -16,7 +16,7 @@ exports[`InputField  matches snapshot with all props 1`] = `
       aria-describedby="undefined__help"
       className="components-text-control__input"
       onBlur={[MockFunction]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       placeholder="Hello"
       type="text"
       value="Roy"

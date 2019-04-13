@@ -13,17 +13,23 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-1"
+      >
+        One
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-1"
       >
         One
       </label>
@@ -35,25 +41,31 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-2"
+      >
+        Two
+      </label>
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="opt-2__help"
         checked={true}
         className="components-checkbox-control__input"
         id="opt-2"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-2"
       >
         Two
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="undefined__help"
+      id="opt-2__help"
     >
       The Second Option
     </p>
@@ -64,17 +76,23 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-3"
+      >
+        Three
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-3"
       >
         Three
       </label>
@@ -85,31 +103,32 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
 
 exports[`fieldFactory Creates a number field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-number"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="numberFieldId"
     >
       Number Field Label
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="numberFieldId__help"
       className="components-text-control__input"
       id="numberFieldId"
       max={10}
       min={1}
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="number"
       value={3}
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="numberFieldId__help"
   >
     Number field description
   </p>
@@ -118,30 +137,32 @@ exports[`fieldFactory Creates a number field 1`] = `
 
 exports[`fieldFactory Creates a radio field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-radio components-radio-control"
+  className="components-base-control components-radio-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="radioFieldLabel"
     >
       Radio Field Label
-    </span>
+    </label>
     <div
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="radioFieldLabel__help"
         checked={false}
         className="components-radio-control__input"
-        id="undefined-0"
+        id="radioFieldLabel-0"
+        name="radioFieldLabel"
         onChange={[Function]}
         type="radio"
         value={0}
       />
       <label
-        htmlFor="undefined-0"
+        htmlFor="radioFieldLabel-0"
       >
         Zero
       </label>
@@ -150,16 +171,17 @@ exports[`fieldFactory Creates a radio field 1`] = `
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="radioFieldLabel__help"
         checked={true}
         className="components-radio-control__input"
-        id="undefined-1"
+        id="radioFieldLabel-1"
+        name="radioFieldLabel"
         onChange={[Function]}
         type="radio"
         value={1}
       />
       <label
-        htmlFor="undefined-1"
+        htmlFor="radioFieldLabel-1"
       >
         One
       </label>
@@ -168,16 +190,17 @@ exports[`fieldFactory Creates a radio field 1`] = `
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="radioFieldLabel__help"
         checked={false}
         className="components-radio-control__input"
-        id="undefined-2"
+        id="radioFieldLabel-2"
+        name="radioFieldLabel"
         onChange={[Function]}
         type="radio"
         value={2}
       />
       <label
-        htmlFor="undefined-2"
+        htmlFor="radioFieldLabel-2"
       >
         Two
       </label>
@@ -185,7 +208,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="radioFieldLabel__help"
   >
     Radio field description
   </p>
@@ -217,29 +240,30 @@ exports[`fieldFactory Creates a submit button 1`] = `
 
 exports[`fieldFactory Creates a text field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-text"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="firstName"
     >
       First Name
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="firstName__help"
       className="components-text-control__input"
       id="firstName"
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="text"
       value="roy"
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="firstName__help"
   >
     your first name
   </p>
@@ -259,33 +283,24 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
     >
       Options
     </label>
-    <div
-      className="components-base-control caldera-field caldera-field-autocomplete"
-    >
-      <div
-        className="components-base-control__field"
-      >
-        <input
-          className="components-text-control__input"
-          id="autoComplete1"
-          onChange={[Function]}
-          suggestions={
-            Array [
-              "One",
-              "Two",
-              "Three",
-            ]
-          }
-          type="text"
-          value={
-            Array [
-              "One",
-              "Three",
-            ]
-          }
-        />
-      </div>
-    </div>
+    <input
+      className="caldera-field caldera-field-autocomplete"
+      id="autoComplete1"
+      onChange={[Function]}
+      suggestions={
+        Array [
+          "One",
+          "Two",
+          "Three",
+        ]
+      }
+      value={
+        Array [
+          "One",
+          "Three",
+        ]
+      }
+    />
   </div>
   <p
     className="components-base-control__help"
@@ -303,25 +318,31 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
   <div
     className="components-base-control__field"
   >
+    <label
+      className="components-base-control__label"
+      htmlFor="checkboxFieldLabel"
+    >
+      Checkbox Labe
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="checkboxFieldLabel__help"
       checked={true}
       className="components-checkbox-control__input"
       id="checkboxFieldLabel"
-      onBlur={[Function]}
       onChange={[Function]}
       type="checkbox"
       value="1"
     />
     <label
       className="components-checkbox-control__label"
+      htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
     </label>
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="checkboxFieldLabel__help"
   >
     Checkbox field description
   </p>
@@ -341,17 +362,23 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-1"
+      >
+        One
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-1"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-1"
       >
         One
       </label>
@@ -363,25 +390,31 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-2"
+      >
+        Two
+      </label>
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="opt-2__help"
         checked={true}
         className="components-checkbox-control__input"
         id="opt-2"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-2"
       >
         Two
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="undefined__help"
+      id="opt-2__help"
     >
       The Second Option
     </p>
@@ -392,17 +425,23 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     <div
       className="components-base-control__field"
     >
+      <label
+        className="components-base-control__label"
+        htmlFor="opt-3"
+      >
+        Three
+      </label>
       <input
         checked={true}
         className="components-checkbox-control__input"
         id="opt-3"
-        onBlur={[Function]}
         onChange={[Function]}
         type="checkbox"
         value="1"
       />
       <label
         className="components-checkbox-control__label"
+        htmlFor="opt-3"
       >
         Three
       </label>
@@ -413,30 +452,31 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
 
 exports[`fieldFactory Creates an email field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-email"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="emailFieldId"
     >
       Email Field Label
-    </span>
+    </label>
     <input
-      aria-describedby="undefined__help"
+      aria-describedby="emailFieldId__help"
       className="components-text-control__input"
       id="emailFieldId"
       multiple={true}
       onBlur={[Function]}
-      onChange={[Function]}
+      onChange={[MockFunction]}
       type="email"
       value="emai@email.com"
     />
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="emailFieldId__help"
   >
     Email field description
   </p>
@@ -456,29 +496,20 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
     >
       First Name
     </label>
-    <div
-      className="components-base-control caldera-field caldera-field-autocomplete"
-    >
-      <div
-        className="components-base-control__field"
-      >
-        <input
-          className="components-text-control__input"
-          id="firstName"
-          onChange={[Function]}
-          suggestions={
-            Array [
-              "%firstName%",
-              "First Name",
-              "%textArea1%",
-              "Your message",
-            ]
-          }
-          type="text"
-          value="roy"
-        />
-      </div>
-    </div>
+    <input
+      className="caldera-field caldera-field-autocomplete"
+      id="firstName"
+      onChange={[Function]}
+      suggestions={
+        Array [
+          "%firstName%",
+          "First Name",
+          "%textArea1%",
+          "Your message",
+        ]
+      }
+      value="roy"
+    />
   </div>
   <p
     className="components-base-control__help"
@@ -491,7 +522,7 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
 
 exports[`fieldFactory Creates an select field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
@@ -508,7 +539,6 @@ exports[`fieldFactory Creates an select field 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
-      value={1}
     >
       <option
         value={0}
@@ -538,7 +568,7 @@ exports[`fieldFactory Creates an select field 1`] = `
 
 exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="components-base-control"
 >
   <div
     className="components-base-control__field"
@@ -555,7 +585,6 @@ exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
-      value={1}
     >
       <option
         value={0}

@@ -2,30 +2,32 @@
 
 exports[`RadioField Field component matches snapshot 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-radio components-radio-control"
+  className="components-base-control components-radio-control"
 >
   <div
     className="components-base-control__field"
   >
-    <span
+    <label
       className="components-base-control__label"
+      htmlFor="selection-hats"
     >
       Select A Hat!
-    </span>
+    </label>
     <div
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="selection-hats__help"
         checked={false}
         className="components-radio-control__input"
-        id="undefined-0"
+        id="selection-hats-0"
+        name="selection-hats"
         onChange={[Function]}
         type="radio"
         value={100}
       />
       <label
-        htmlFor="undefined-0"
+        htmlFor="selection-hats-0"
       >
         Hat One
       </label>
@@ -34,16 +36,17 @@ exports[`RadioField Field component matches snapshot 1`] = `
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="selection-hats__help"
         checked={false}
         className="components-radio-control__input"
-        id="undefined-1"
+        id="selection-hats-1"
+        name="selection-hats"
         onChange={[Function]}
         type="radio"
         value={200}
       />
       <label
-        htmlFor="undefined-1"
+        htmlFor="selection-hats-1"
       >
         Hat Two
       </label>
@@ -51,7 +54,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="undefined__help"
+    id="selection-hats__help"
   >
     selection of hats
   </p>

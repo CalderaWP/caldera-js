@@ -5,29 +5,30 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >
   <div
-    className="components-base-control caldera-field caldera-field-text"
+    className="components-base-control"
   >
     <div
       className="components-base-control__field"
     >
-      <span
+      <label
         className="components-base-control__label"
+        htmlFor="firstName"
       >
         First Name
-      </span>
+      </label>
       <input
-        aria-describedby="undefined__help"
+        aria-describedby="firstName__help"
         className="components-text-control__input"
         id="firstName"
         onBlur={[Function]}
-        onChange={[Function]}
+        onChange={[MockFunction]}
         type="text"
         value="roy"
       />
     </div>
     <p
       className="components-base-control__help"
-      id="undefined__help"
+      id="firstName__help"
     >
       your first name
     </p>
@@ -40,7 +41,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >
   <div
-    className="components-base-control caldera-field caldera-field-select"
+    className="components-base-control"
   >
     <div
       className="components-base-control__field"
@@ -57,7 +58,6 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
         id="selectFieldId"
         multiple={false}
         onChange={[Function]}
-        value={1}
       >
         <option
           value={0}
@@ -102,33 +102,24 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
       >
         Options
       </label>
-      <div
-        className="components-base-control caldera-field caldera-field-autocomplete"
-      >
-        <div
-          className="components-base-control__field"
-        >
-          <input
-            className="components-text-control__input"
-            id="autoComplete1"
-            onChange={[Function]}
-            suggestions={
-              Array [
-                "One",
-                "Two",
-                "Three",
-              ]
-            }
-            type="text"
-            value={
-              Array [
-                "One",
-                "Three",
-              ]
-            }
-          />
-        </div>
-      </div>
+      <input
+        className="caldera-field caldera-field-autocomplete"
+        id="autoComplete1"
+        onChange={[Function]}
+        suggestions={
+          Array [
+            "One",
+            "Two",
+            "Three",
+          ]
+        }
+        value={
+          Array [
+            "One",
+            "Three",
+          ]
+        }
+      />
     </div>
     <p
       className="components-base-control__help"
