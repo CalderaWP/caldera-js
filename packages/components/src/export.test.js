@@ -7,7 +7,6 @@ import {
 	FieldSet,
 	SelectField,
 	InputField,
-	RichText,
 	MagicRichText,
 	addOrRemoveFromArray,
 	toBoolean,
@@ -54,9 +53,7 @@ describe('exports', () => {
 	test('InputField', () => {
 		expect(typeof InputField).toBe('function');
 	});
-	test.skip('RichText', () => {
-		expect(typeof RichText).toBe('function');
-	});
+
 	test.skip('MagicRichText', () => {
 		expect(typeof MagicRichText).toBe('function');
 	});
