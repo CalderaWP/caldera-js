@@ -2711,6 +2711,13 @@
   dependencies:
     "@babel/runtime" "^7.3.1"
 
+"@wordpress/hooks@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/hooks/-/hooks-2.2.0.tgz#626cef9424ded5546333891fced140eab890fe34"
+  integrity sha512-pzLDgcQOPCU4xSN0yuGoPd9xeNW2MnB2o7O52qaFZ2DSmf9tN+OkPDg7lKsg7SEds0J7GngBS8tu+a4Lqywy/w==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
 "@wordpress/is-shallow-equal@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@wordpress/is-shallow-equal/-/is-shallow-equal-1.2.0.tgz#5835930dad01c76c6c1300b307a45077c017136d"

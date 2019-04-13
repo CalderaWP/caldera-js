@@ -20,7 +20,8 @@ import {
 	collectFieldValues,
 	SubmitButton,
 	classNameService,
-	LazyIFrame
+	LazyIFrame,
+	CalderaNotice
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -80,6 +81,9 @@ describe('exports', () => {
 
 	test('LazyIFrame', () => {
 		expect(typeof LazyIFrame).toBe('function');
+	});
+	test('CalderaNotice', () => {
+		expect(typeof CalderaNotice).toBe('function');
 	});
 });
 

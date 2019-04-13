@@ -7,27 +7,25 @@ exports[`RadioField Field component matches snapshot 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-radio-control-0"
     >
       Select A Hat!
-    </label>
+    </span>
     <div
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="inspector-radio-control-0__help"
+        aria-describedby="undefined__help"
         checked={false}
         className="components-radio-control__input"
-        id="inspector-radio-control-0-0"
-        name="inspector-radio-control-0"
+        id="undefined-0"
         onChange={[Function]}
         type="radio"
         value={100}
       />
       <label
-        htmlFor="inspector-radio-control-0-0"
+        htmlFor="undefined-0"
       >
         Hat One
       </label>
@@ -36,17 +34,16 @@ exports[`RadioField Field component matches snapshot 1`] = `
       className="components-radio-control__option"
     >
       <input
-        aria-describedby="inspector-radio-control-0__help"
+        aria-describedby="undefined__help"
         checked={false}
         className="components-radio-control__input"
-        id="inspector-radio-control-0-1"
-        name="inspector-radio-control-0"
+        id="undefined-1"
         onChange={[Function]}
         type="radio"
         value={200}
       />
       <label
-        htmlFor="inspector-radio-control-0-1"
+        htmlFor="undefined-1"
       >
         Hat Two
       </label>
@@ -54,7 +51,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-radio-control-0__help"
+    id="undefined__help"
   >
     selection of hats
   </p>

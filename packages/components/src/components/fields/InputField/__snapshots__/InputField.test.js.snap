@@ -7,14 +7,13 @@ exports[`InputField  matches snapshot with all props 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-text-control-0"
     >
       Hi Roy
-    </label>
+    </span>
     <input
-      aria-describedby="inspector-text-control-0__help"
+      aria-describedby="undefined__help"
       className="components-text-control__input"
       onBlur={[MockFunction]}
       onChange={[Function]}
@@ -25,7 +24,7 @@ exports[`InputField  matches snapshot with all props 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-text-control-0__help"
+    id="undefined__help"
   >
     Say Hi
   </p>

@@ -7,14 +7,13 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-textarea-control-0"
     >
       Hi Roy
-    </label>
+    </span>
     <textarea
-      aria-describedby="inspector-textarea-control-0__help"
+      aria-describedby="undefined__help"
       className="components-textarea-control__input"
       cols={8}
       maxLength={5}
@@ -28,7 +27,7 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-textarea-control-0__help"
+    id="undefined__help"
   >
     Say Hi
   </p>

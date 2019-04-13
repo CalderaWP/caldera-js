@@ -1,5 +1,5 @@
-import { SelectControl } from '@wordpress/components';
 import React from 'react';
+import SelectControl from "../../Controls/SelectControl";
 
 export const Select = ({
 	fieldId,

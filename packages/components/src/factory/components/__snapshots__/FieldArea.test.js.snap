@@ -10,14 +10,13 @@ exports[`FieldArea component Creates a text field 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-0"
       >
         First Name
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-0__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="firstName"
         onBlur={[Function]}
@@ -28,7 +27,7 @@ exports[`FieldArea component Creates a text field 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-0__help"
+      id="undefined__help"
     >
       your first name
     </p>
@@ -48,12 +47,12 @@ exports[`FieldArea component Creates an select field 1`] = `
     >
       <label
         className="components-base-control__label"
-        htmlFor="inspector-select-control-0"
+        htmlFor="selectFieldId"
       >
         Select Field Label
       </label>
       <select
-        aria-describedby="inspector-select-control-0__help"
+        aria-describedby="selectFieldId__help"
         className="components-select-control__input"
         id="selectFieldId"
         multiple={false}
@@ -79,7 +78,7 @@ exports[`FieldArea component Creates an select field 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-select-control-0__help"
+      id="selectFieldId__help"
     >
       Select field description
     </p>
@@ -97,14 +96,13 @@ exports[`FieldArea component Shows errors 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-1"
       >
         First Name
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-1__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="firstName"
         onBlur={[Function]}
@@ -115,7 +113,7 @@ exports[`FieldArea component Shows errors 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-1__help"
+      id="undefined__help"
     >
       your first name
     </p>

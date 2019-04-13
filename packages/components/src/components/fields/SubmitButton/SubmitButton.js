@@ -1,5 +1,4 @@
-import {FormTokenField} from '@wordpress/components';
-import { BaseControl } from '@wordpress/components';
+import { BaseControl } from '../../Controls';
 import React from "react";
 import {fieldClassNames, parseAttributes} from "../util";
 export const SubmitButton = (props) => {

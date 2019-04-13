@@ -2,7 +2,7 @@ import {CalderaForm} from "../CalderaForm";
 import getCf2Token from "../Http/handlers/getCf2Token";
 import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
 import React, {useState, useEffect, Fragment} from 'react';
-import { Notice } from '@wordpress/components';
+
 import PropTypes from "prop-types";
 
 /**
@@ -60,16 +60,9 @@ export const CF2Form = (
 
 	if (hideForm) {
 		return (
-			<Notice
-				isError={false}
-				onRemove={() => {
-					setHideForm(false);
-					setTokensFetched(false);
-				}}
-			>
-				{message}
-			</Notice>
-		)
+			 <div className={isError ? 'error' : 'success'}>{message}</div>
+
+	)
 	}
 	return (
 		<Fragment>

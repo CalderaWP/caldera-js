@@ -3,13 +3,11 @@ import {
 	FormClient,
 	formClientFactory,
 	HorizontalForm,
-	FormEditor,
 	getCf2Token,
 	submitFormCf2,
 	useCf2FormTokens,
 	handleFormSubmitCf2,
 	CF2Form,
-	FormAdmin
 } from '@calderajs/forms';
 
 
@@ -29,9 +27,7 @@ describe('Exports', () => {
 	it('exports HorizontalForm', () => {
 		expect(typeof HorizontalForm).toBe('function');
 	});
-	it('exports FormEditor', () => {
-		expect(typeof FormEditor).toBe('function');
-	});
+
 	it('exports getCf2Token', () => {
 		expect(typeof getCf2Token).toBe('function');
 	});
@@ -48,7 +44,4 @@ describe('Exports', () => {
 		expect(typeof CF2Form).toBe('function');
 	});
 
-	test('FormAdmin', () => {
-		expect(typeof FormAdmin).toBe('function');
-	});
 });

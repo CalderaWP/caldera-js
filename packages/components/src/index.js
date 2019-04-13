@@ -25,7 +25,6 @@ export {Column} from './factory/components/Grid/Column';
 /**
  * UI Elements
  */
-export FormEntryViewer from './components/EntryViewer/FormEntryViewer';
 export {Message} from './components/Messages/Message';
 export {
 	messageObjectFactory
@@ -34,7 +33,7 @@ export {FieldSet} from './components/fields/FieldSet/FieldSet';
 export {FieldWrapper} from './components/fields/FieldWrapper/FieldWrapper';
 export {RemotePost} from './components/elements/RemotePost/RemotePost';
 export { LazyIFrame } from './components/elements/LazyIFrame/LazyIFrame';
-
+export {CalderaNotice} from './components/elements/CalderaNotice/CalderaNotice'
 /**
  * Field class util functions
  */

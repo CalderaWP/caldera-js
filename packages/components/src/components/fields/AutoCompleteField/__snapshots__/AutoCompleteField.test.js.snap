@@ -14,44 +14,24 @@ exports[`AutoCompleteField should match snapshot 1`] = `
       Select A Hat
     </label>
     <div
-      className="components-form-token-field"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyPress={[Function]}
-      tabIndex="-1"
+      className="components-base-control caldera-field caldera-field-autocomplete"
     >
-      <label
-        className="components-form-token-field__label"
-        htmlFor="components-form-token-input-0"
-      >
-        Add item
-      </label>
       <div
-        className="caldera-field caldera-field-autocomplete components-form-token-field__input-container"
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        tabIndex="-1"
+        className="components-base-control__field"
       >
         <input
-          aria-autocomplete="list"
-          aria-describedby="components-form-token-suggestions-howto-0"
-          aria-expanded={false}
-          className="components-form-token-field__input"
-          disabled={false}
-          id="components-form-token-input-0"
-          onBlur={[Function]}
+          className="components-text-control__input"
+          id="auto-complete-hats"
           onChange={[Function]}
-          role="combobox"
-          size={1}
+          suggestions={
+            Array [
+              "a",
+              "Boom",
+              "stick",
+            ]
+          }
           type="text"
-          value=""
         />
-      </div>
-      <div
-        className="screen-reader-text"
-        id="components-form-token-suggestions-howto-0"
-      >
-        Separate with commas
       </div>
     </div>
   </div>

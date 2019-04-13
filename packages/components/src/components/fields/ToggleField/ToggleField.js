@@ -7,7 +7,7 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { BaseControl, ToggleControl } from '@wordpress/components';
+import { BaseControl, ToggleControl } from '../../Controls';
 export const ToggleField = ({
 	label,
 	description,

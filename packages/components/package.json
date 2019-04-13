@@ -61,6 +61,7 @@
     "@rebass/grid": "^6.0.0-7",
     "@wordpress/compose": "^3.0.0",
     "@wordpress/element": "^2.1.8",
+    "@wordpress/hooks": "^2.2.0",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "deepmerge": "^3.0.0",

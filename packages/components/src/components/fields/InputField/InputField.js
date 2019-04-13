@@ -7,7 +7,8 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TextControl, CheckboxControl } from '@wordpress/components';
+import CheckboxControl from "../../Controls/CheckboxControl";
+import TextControl from "../../Controls/TextControl";
 export const InputField = ({
 	label,
 	description,

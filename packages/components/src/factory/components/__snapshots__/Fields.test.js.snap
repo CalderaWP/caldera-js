@@ -10,14 +10,13 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-1"
       >
         First Name
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-1__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="firstName"
         onBlur={[Function]}
@@ -28,7 +27,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-1__help"
+      id="undefined__help"
     >
       your first name
     </p>
@@ -40,7 +39,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby="inspector-checkbox-control-0__help"
+        aria-describedby="undefined__help"
         checked={true}
         className="components-checkbox-control__input"
         id="checkboxFieldLabel"
@@ -51,14 +50,13 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       />
       <label
         className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-0"
       >
         Checkbox Labe
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-checkbox-control-0__help"
+      id="undefined__help"
     >
       Checkbox field description
     </p>
@@ -93,7 +91,6 @@ exports[`Fields component Creates all five fields 1`] = `
         />
         <label
           className="components-checkbox-control__label"
-          htmlFor="inspector-checkbox-control-1"
         >
           One
         </label>
@@ -106,7 +103,7 @@ exports[`Fields component Creates all five fields 1`] = `
         className="components-base-control__field"
       >
         <input
-          aria-describedby="inspector-checkbox-control-2__help"
+          aria-describedby="undefined__help"
           checked={true}
           className="components-checkbox-control__input"
           id="opt-2"
@@ -117,14 +114,13 @@ exports[`Fields component Creates all five fields 1`] = `
         />
         <label
           className="components-checkbox-control__label"
-          htmlFor="inspector-checkbox-control-2"
         >
           Two
         </label>
       </div>
       <p
         className="components-base-control__help"
-        id="inspector-checkbox-control-2__help"
+        id="undefined__help"
       >
         The Second Option
       </p>
@@ -146,7 +142,6 @@ exports[`Fields component Creates all five fields 1`] = `
         />
         <label
           className="components-checkbox-control__label"
-          htmlFor="inspector-checkbox-control-3"
         >
           Three
         </label>
@@ -161,12 +156,12 @@ exports[`Fields component Creates all five fields 1`] = `
     >
       <label
         className="components-base-control__label"
-        htmlFor="inspector-select-control-1"
+        htmlFor="selectFieldId"
       >
         Select Field Label
       </label>
       <select
-        aria-describedby="inspector-select-control-1__help"
+        aria-describedby="selectFieldId__help"
         className="components-select-control__input"
         id="selectFieldId"
         multiple={false}
@@ -192,7 +187,7 @@ exports[`Fields component Creates all five fields 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-select-control-1__help"
+      id="selectFieldId__help"
     >
       Select field description
     </p>
@@ -204,7 +199,7 @@ exports[`Fields component Creates all five fields 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby="inspector-checkbox-control-4__help"
+        aria-describedby="undefined__help"
         checked={true}
         className="components-checkbox-control__input"
         id="checkboxFieldLabel"
@@ -215,14 +210,13 @@ exports[`Fields component Creates all five fields 1`] = `
       />
       <label
         className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-4"
       >
         Checkbox Labe
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-checkbox-control-4__help"
+      id="undefined__help"
     >
       Checkbox field description
     </p>
@@ -233,14 +227,13 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-2"
       >
         Number Field Label
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-2__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="numberFieldId"
         max={10}
@@ -253,7 +246,7 @@ exports[`Fields component Creates all five fields 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-2__help"
+      id="undefined__help"
     >
       Number field description
     </p>
@@ -264,14 +257,13 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-3"
       >
         First Name
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-3__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="firstName"
         onBlur={[Function]}
@@ -282,7 +274,7 @@ exports[`Fields component Creates all five fields 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-3__help"
+      id="undefined__help"
     >
       your first name
     </p>
@@ -293,14 +285,13 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="components-base-control__field"
     >
-      <label
+      <span
         className="components-base-control__label"
-        htmlFor="inspector-text-control-4"
       >
         Email Field Label
-      </label>
+      </span>
       <input
-        aria-describedby="inspector-text-control-4__help"
+        aria-describedby="undefined__help"
         className="components-text-control__input"
         id="emailFieldId"
         multiple={true}
@@ -312,7 +303,7 @@ exports[`Fields component Creates all five fields 1`] = `
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-text-control-4__help"
+      id="undefined__help"
     >
       Email field description
     </p>

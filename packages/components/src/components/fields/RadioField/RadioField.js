@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { RadioControl } from '@wordpress/components';
 import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
+import RadioControl from "../../Controls/RadioControl";
 export const RadioField = ({
 	attributes,
 	label,

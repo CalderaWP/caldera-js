@@ -7,7 +7,8 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TextareaControl } from '@wordpress/components';
+import TextareaControl from "../../Controls/TextAreaControl";
+
 export const TextAreaField = ({
 	label,
 	description,

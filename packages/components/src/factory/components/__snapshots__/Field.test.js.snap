@@ -7,14 +7,13 @@ exports[`Field component Creates a number field 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-text-control-1"
     >
       Number Field Label
-    </label>
+    </span>
     <input
-      aria-describedby="inspector-text-control-1__help"
+      aria-describedby="undefined__help"
       className="components-text-control__input"
       id="numberFieldId"
       max={10}
@@ -27,7 +26,7 @@ exports[`Field component Creates a number field 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-text-control-1__help"
+    id="undefined__help"
   >
     Number field description
   </p>
@@ -41,14 +40,13 @@ exports[`Field component Creates a text field 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-text-control-0"
     >
       First Name
-    </label>
+    </span>
     <input
-      aria-describedby="inspector-text-control-0__help"
+      aria-describedby="undefined__help"
       className="components-text-control__input"
       id="firstName"
       onBlur={[Function]}
@@ -59,7 +57,7 @@ exports[`Field component Creates a text field 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-text-control-0__help"
+    id="undefined__help"
   >
     your first name
   </p>
@@ -90,7 +88,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
       />
       <label
         className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-1"
       >
         One
       </label>
@@ -103,7 +100,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       className="components-base-control__field"
     >
       <input
-        aria-describedby="inspector-checkbox-control-2__help"
+        aria-describedby="undefined__help"
         checked={true}
         className="components-checkbox-control__input"
         id="opt-2"
@@ -114,14 +111,13 @@ exports[`Field component Creates an checkbox field set 1`] = `
       />
       <label
         className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-2"
       >
         Two
       </label>
     </div>
     <p
       className="components-base-control__help"
-      id="inspector-checkbox-control-2__help"
+      id="undefined__help"
     >
       The Second Option
     </p>
@@ -143,7 +139,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
       />
       <label
         className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-3"
       >
         Three
       </label>
@@ -159,14 +154,13 @@ exports[`Field component Creates an email field 1`] = `
   <div
     className="components-base-control__field"
   >
-    <label
+    <span
       className="components-base-control__label"
-      htmlFor="inspector-text-control-2"
     >
       Email Field Label
-    </label>
+    </span>
     <input
-      aria-describedby="inspector-text-control-2__help"
+      aria-describedby="undefined__help"
       className="components-text-control__input"
       id="emailFieldId"
       multiple={true}
@@ -178,7 +172,7 @@ exports[`Field component Creates an email field 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-text-control-2__help"
+    id="undefined__help"
   >
     Email field description
   </p>
@@ -194,12 +188,12 @@ exports[`Field component Creates an select field 1`] = `
   >
     <label
       className="components-base-control__label"
-      htmlFor="inspector-select-control-0"
+      htmlFor="selectFieldId"
     >
       Select Field Label
     </label>
     <select
-      aria-describedby="inspector-select-control-0__help"
+      aria-describedby="selectFieldId__help"
       className="components-select-control__input"
       id="selectFieldId"
       multiple={false}
@@ -225,7 +219,7 @@ exports[`Field component Creates an select field 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-select-control-0__help"
+    id="selectFieldId__help"
   >
     Select field description
   </p>
@@ -241,12 +235,12 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
   >
     <label
       className="components-base-control__label"
-      htmlFor="inspector-select-control-1"
+      htmlFor="selectFieldId"
     >
       Select Field Label
     </label>
     <select
-      aria-describedby="inspector-select-control-1__help"
+      aria-describedby="selectFieldId__help"
       className="components-select-control__input"
       id="selectFieldId"
       multiple={false}
@@ -272,7 +266,7 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
   </div>
   <p
     className="components-base-control__help"
-    id="inspector-select-control-1__help"
+    id="selectFieldId__help"
   >
     Select field description
   </p>

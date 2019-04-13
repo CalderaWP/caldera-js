@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { SelectControl } from '@wordpress/components';
 import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
+import SelectControl from "../../Controls/SelectControl";
 export const SelectField = ({
 	attributes,
 	label,
