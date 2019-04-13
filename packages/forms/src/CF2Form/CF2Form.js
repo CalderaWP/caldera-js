@@ -60,9 +60,9 @@ export const CF2Form = (
 
 	if (hideForm) {
 		return (
-			 <div className={isError ? 'error' : 'success'}>{message}</div>
+			<div className={'error'}>{message}</div>
 
-	)
+		)
 	}
 	return (
 		<Fragment>

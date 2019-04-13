@@ -22,6 +22,7 @@ export class CalderaForm extends Component {
 	}
 
 	/**
+	/**
 	 * Run conditional logic and update state
 	 */
 	applyConditionalRules = () => {
