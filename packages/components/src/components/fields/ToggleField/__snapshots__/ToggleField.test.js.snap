@@ -2,61 +2,53 @@
 
 exports[`ToggleField  matches snapshot with all props 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
+  <label>
+    Hi Roy
+     
+  </label>
   <div
-    className="components-base-control__field"
+    className="caldera-field-wrapper caldera-field-wrapper-toggle"
   >
+    <label>
+       
+    </label>
     <span
-      className="components-base-control__label"
+      className="components-form-toggle caldera-field caldera-field-toggle"
     >
-      Hi Roy
-    </span>
-    <div
-      className="components-base-control components-toggle-control"
-    >
-      <div
-        className="components-base-control__field"
+      <input
+        className="caldera-field caldera-field-toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="components-form-toggle__track"
+      />
+      <span
+        className="components-form-toggle__thumb"
+      />
+      <svg
+        aria-hidden="true"
+        className="components-form-toggle__off"
+        focusable="false"
+        height="6"
+        role="img"
+        viewBox="0 0 6 6"
+        width="6"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span
-          className="components-form-toggle"
-        >
-          <input
-            className="components-form-toggle__input"
-            id="inspector-toggle-control-0"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <span
-            className="components-form-toggle__track"
-          />
-          <span
-            className="components-form-toggle__thumb"
-          />
-          <svg
-            aria-hidden="true"
-            className="components-form-toggle__off"
-            focusable="false"
-            height="6"
-            role="img"
-            viewBox="0 0 6 6"
-            width="6"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 1.5c.8 0 1.5.7 1.5 1.5S3.8 4.5 3 4.5 1.5 3.8 1.5 3 2.2 1.5 3 1.5M3 0C1.3 0 0 1.3 0 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"
-            />
-          </svg>
-        </span>
-        <label
-          className="components-toggle-control__label"
-          htmlFor="inspector-toggle-control-0"
+        <path
+          d="M3 1.5c.8 0 1.5.7 1.5 1.5S3.8 4.5 3 4.5 1.5 3.8 1.5 3 2.2 1.5 3 1.5M3 0C1.3 0 0 1.3 0 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"
         />
-      </div>
-    </div>
+      </svg>
+    </span>
+    <label
+      className="caldera-field-label caldera-field-label-toggle"
+    />
   </div>
   <p
-    className="components-base-control__help"
+    className="caldera-control__help"
     id="undefined__help"
   >
     Say Hi

@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { RadioControl } from '@wordpress/components';
 import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
+import {isEmpty} from "lodash";
+import BaseControl from "../Controls/BaseControl";
+import classnames from "classnames";
+import {FieldLabel} from "../FieldLabel/FieldLabel";
 export const RadioField = ({
 	attributes,
 	label,
@@ -11,21 +14,42 @@ export const RadioField = ({
 	options,
 	multiple,
 	description,
-	placeholder
+	placeholder,
+	required,
+							   className
 }) => {
 	attributes = parseAttributes(attributes, 'radio');
-
-	return (
-		<RadioControl
-			className={fieldClassNames('radio')}
-			id={fieldId}
-			selected={value}
-			options={options}
-			onChange={onChange}
+	const onChangeValue = (event) => onChange(event.target.value);
+	return !isEmpty(options) && (
+		<BaseControl
+			fieldType={'radio'}
 			label={label}
+			id={fieldId}
 			help={description}
-			{...attributes}
-		/>
+			required={required}
+		>
+			{options.map((option, index) =>
+				<div
+					key={`${ fieldId }-${ index }`}
+					className={fieldClassNames('radio')}
+				>
+					<input
+						id={`${ fieldId }-${ index }`}
+						className={fieldClassNames('radio')}
+						type="radio"
+						name={fieldId}
+						value={option.value}
+						onChange={onChangeValue}
+						checked={option.value === value}
+						aria-describedby={!!description ? `${ fieldId }__help` : undefined}
+						{...attributes}
+					/>
+					<FieldLabel htmlFor={`${ fieldId }-${ index }`}>
+						{option.label}
+					</FieldLabel>
+				</div>
+			)}
+		</BaseControl>
 	);
 };
 
@@ -34,7 +58,8 @@ RadioField.propTypes = {
 	description: PropTypes.string,
 	fieldId: PropTypes.string,
 	required: PropTypes.bool,
-	multiple: PropTypes.bool
+	multiple: PropTypes.bool,
+	options: PropTypes.array
 };
 
 RadioField.defaultProps = {

@@ -2,30 +2,24 @@
 
 exports[`InputField  matches snapshot with all props 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-text"
+  className="caldera-field-wrapper caldera-field-wrapper-text"
 >
-  <div
-    className="components-base-control__field"
-  >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-text-control-0"
-    >
-      Hi Roy
-    </label>
-    <input
-      aria-describedby="inspector-text-control-0__help"
-      className="components-text-control__input"
-      onBlur={[MockFunction]}
-      onChange={[Function]}
-      placeholder="Hello"
-      type="text"
-      value="Roy"
-    />
-  </div>
+  <label>
+    Hi Roy
+     
+  </label>
+  <input
+    aria-describedby="undefined__help"
+    className="caldera-field caldera-field-text"
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    placeholder="Hello"
+    type="text"
+    value="Roy"
+  />
   <p
-    className="components-base-control__help"
-    id="inspector-text-control-0__help"
+    className="caldera-control__help"
+    id="undefined__help"
   >
     Say Hi
   </p>

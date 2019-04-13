@@ -7,49 +7,75 @@ import {
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TextControl, CheckboxControl } from '@wordpress/components';
-export const InputField = ({
-	label,
-	description,
-	fieldId,
-	placeholder,
-	required,
-	html5type,
-	value,
-	onChange,
-	onBlur,
-	attributes,
-	children
-}) => {
+import BaseControl from "../Controls/BaseControl";
+import {FieldLabel} from "../FieldLabel/FieldLabel";
+
+export const InputField = (
+	{
+		label,
+		description,
+		fieldId,
+		placeholder,
+		required,
+		html5type,
+		value,
+		onChange,
+		onBlur,
+		attributes,
+		children
+	}
+) => {
+	const onChangeValue = (event) => onChange(event.target.value);
+
 	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const _attributes = parseAttributes(attributes, fieldType);
 	if ('checkbox' === fieldType) {
 		const checked = value ? true : false;
 		return (
-			<CheckboxControl
-				id={fieldId}
-				checked={checked}
-				help={description}
-				{..._attributes}
-				onChange={onChange}
+			<BaseControl
+				fieldType={fieldType}
 				label={label}
-				onBlur={onBlur}
-			/>
+				id={fieldId}
+				help={description}
+				className={''}>
+				<input
+					id={fieldId}
+					className={fieldClassNames(fieldType)}
+					type="checkbox"
+					value="1"
+					onChange={onChangeValue}
+					checked={checked}
+					aria-describedby={!!description ? fieldId + '__help' : undefined}
+					{..._attributes}
+				/>
+				<FieldLabel
+					fieldId={fieldId}
+					required={required}
+				>
+					{label}
+				</FieldLabel>
+			</BaseControl>
 		);
 	} else {
 		return (
-			<TextControl
+			<BaseControl
 				label={label}
-				className={fieldClassNames(fieldType)}
 				id={fieldId}
-				value={value}
-				placeholder={placeholder}
-				type={fieldType}
-				onChange={onChange}
-				onBlur={onBlur}
 				help={description}
-				{..._attributes}
-			/>
+				fieldType={fieldType}
+			>
+				<input
+					className={fieldClassNames(fieldType)}
+					type={fieldType}
+					id={fieldId}
+					value={value}
+					onChange={onChangeValue}
+					aria-describedby={!!description ? fieldId + '__help' : undefined}
+					placeholder={placeholder}
+					onBlur={onBlur}
+					{..._attributes}
+				/>
+			</BaseControl>
 		);
 	}
 };
@@ -73,7 +99,8 @@ InputField.propTypes = {
 };
 
 InputField.defaultProps = {
-	onBlur: () => {},
+	onBlur: () => {
+	},
 	required: false,
 	html5type: 'text'
 };

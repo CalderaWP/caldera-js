@@ -1,4 +1,5 @@
-import { FieldWrapper, Message } from '@calderajs/components';
+import { FieldWrapper } from '../../components/fields/FieldWrapper/FieldWrapper';
+import { Message } from '../../components/Messages/Message';
 import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import { fieldFactory } from './fieldFactory';
@@ -14,11 +15,15 @@ export const fieldAreaFactory = (
 	const error = fieldErrors && fieldErrors[fieldId];
 	const touched = fieldsTouch && fieldsTouch[fieldId];
 	return (
-		<FieldWrapper
-			fieldType={'text'}
-			className={classNames('caldera-field-group', {
+		<div
+			data-field-type={fieldType}
+			className={classNames(
+				'caldera-field-group',
+				`caldera-field-area-${fieldType}`
+				, {
 				'has-error': touched && error,
-				'is-required': required
+				'is-required': required,
+
 			})}
 		>
 			<Fragment key={`${fieldId}-1`}>
@@ -34,6 +39,6 @@ export const fieldAreaFactory = (
 					/>
 				</Fragment>
 			)}
-		</FieldWrapper>
+		</div>
 	);
 };

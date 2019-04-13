@@ -1,7 +1,7 @@
-import {FormTokenField} from '@wordpress/components';
-import { BaseControl } from '@wordpress/components';
+import {BaseControl} from '../Controls';
 import React from "react";
 import {fieldClassNames, parseAttributes} from "../util";
+
 export const SubmitButton = (props) => {
 	const {
 		label,
@@ -25,8 +25,10 @@ export const SubmitButton = (props) => {
 		<BaseControl
 			id={fieldId}
 			help={description}
+			fieldType={'submit'}
 		>
 			<input
+				className={fieldClassNames('text')}
 				type={'submit'}
 				id={fieldId}
 				value={label}

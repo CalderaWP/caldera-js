@@ -1,5 +1,4 @@
-import {FormTokenField} from '@wordpress/components';
-import { BaseControl } from '@wordpress/components';
+import { BaseControl,TextControl } from '../Controls';
 import React from "react";
 import {fieldClassNames} from "../util";
 import {SelectField} from '../SelectField/SelectField';
@@ -13,19 +12,19 @@ export const AutoCompleteField = (props) => {
 		value,
 		onChange,
 		onBlur,
-		options
+		options,
 	} = props;
 	return (
 		<BaseControl
 			id={fieldId}
 			label={label}
 			help={description}
+			fieldType={'autocomplete'}
 		>
-			<FormTokenField
+			<input
 				className={fieldClassNames('autocomplete')}
 				id={fieldId}
 				value={ value }
-				suggestions={ options }
 				onChange={ tokens => onChange(tokens) }
 				placeholder={placeholder}
 			/>
@@ -33,5 +32,5 @@ export const AutoCompleteField = (props) => {
 	);
 }
 
-AutoCompleteField.propTypes = SelectField.propTypes;
-AutoCompleteField.defaultProps = SelectField.defaultProps;
+//AutoCompleteField.propTypes = SelectField.propTypes;
+//AutoCompleteField.defaultProps = SelectField.defaultProps;

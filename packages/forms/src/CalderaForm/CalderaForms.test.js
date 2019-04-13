@@ -74,8 +74,8 @@ describe('Caldera Forms', () => {
 				onChange={onChange}
 			/>
 		);
-		expect(component.find('#' + textField.fieldId).children().length).toBe(2);
-		expect(component.find('#' + emailField.fieldId).children().length).toBe(2);
+		expect(component.find('#' + textField.fieldId).children().length).toBe(1);
+		expect(component.find('#' + emailField.fieldId).children().length).toBe(1);
 	});
 
 	it('A row can have a render prop', () => {

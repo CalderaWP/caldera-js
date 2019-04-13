@@ -10,8 +10,7 @@ import {
 	emailField,
 	textField,
 	submitButton} from "./fields.fixtures";
-import { FormTokenField } from '@wordpress/components';
-import { withState } from '@wordpress/compose';
+
 
 
 const form = {

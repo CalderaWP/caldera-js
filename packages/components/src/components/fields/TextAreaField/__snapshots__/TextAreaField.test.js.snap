@@ -2,33 +2,26 @@
 
 exports[`TextAreaField  matches snapshot with all props 1`] = `
 <div
-  className="components-base-control"
+  className="caldera-field-wrapper caldera-field-wrapper-textarea"
 >
-  <div
-    className="components-base-control__field"
-  >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-textarea-control-0"
-    >
-      Hi Roy
-    </label>
-    <textarea
-      aria-describedby="inspector-textarea-control-0__help"
-      className="components-textarea-control__input"
-      cols={8}
-      maxLength={5}
-      minlength={1}
-      onBlur={[MockFunction]}
-      onChange={[Function]}
-      required={false}
-      rows={5}
-      value="Roy"
-    />
-  </div>
+  <label>
+    Hi Roy
+     
+  </label>
+  <textarea
+    aria-describedby="undefined__help"
+    className="caldera-field caldera-field-textarea"
+    cols={8}
+    maxLength={5}
+    minlength={1}
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    rows={5}
+    value="Roy"
+  />
   <p
-    className="components-base-control__help"
-    id="inspector-textarea-control-0__help"
+    className="caldera-control__help"
+    id="undefined__help"
   >
     Say Hi
   </p>

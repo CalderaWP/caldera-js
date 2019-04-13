@@ -11,12 +11,7 @@ export const FormFieldsAutoComplete = ({
 	value,
 	additionalOptions
 								}) => {
-	const options = [...additionalOptions];
 	const {fields} = form;
-	fields.forEach(field => {
-		options.push(`%${field.fieldId}%`);
-		options.push(field.label);
-	});
 
 	return (
 		<AutoCompleteField
@@ -24,14 +19,14 @@ export const FormFieldsAutoComplete = ({
 			fieldId={fieldId}
 			description={description}
 			value={value}
-			options={options}
+			options={[]}
 		/>
 	);
 };
 
 FormFieldsAutoComplete.IDENTIFIER  = 'fields-autocomplete';
 
-
+/**
 FormFieldsAutoComplete.propTypes = {
 	...AutoCompleteField.propTypes,
 	additionalOptions: PropTypes.array,
@@ -39,4 +34,4 @@ FormFieldsAutoComplete.propTypes = {
 
 FormFieldsAutoComplete.defaultProps = {
 	additionalOptions: [],
-};
+};**/

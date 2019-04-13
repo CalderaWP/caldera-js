@@ -2,32 +2,28 @@
 
 exports[`Field component Creates a number field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-number"
+  className="caldera-field-wrapper caldera-field-wrapper-number"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="numberFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-text-control-1"
-    >
-      Number Field Label
-    </label>
-    <input
-      aria-describedby="inspector-text-control-1__help"
-      className="components-text-control__input"
-      id="numberFieldId"
-      max={10}
-      min={1}
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="number"
-      value={3}
-    />
-  </div>
+    Number Field Label
+     
+  </label>
+  <input
+    aria-describedby="numberFieldId__help"
+    className="caldera-field caldera-field-number"
+    id="numberFieldId"
+    max={10}
+    min={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="number"
+    value={3}
+  />
   <p
-    className="components-base-control__help"
-    id="inspector-text-control-1__help"
+    className="caldera-control__help"
+    id="numberFieldId__help"
   >
     Number field description
   </p>
@@ -36,30 +32,26 @@ exports[`Field component Creates a number field 1`] = `
 
 exports[`Field component Creates a text field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-text"
+  className="caldera-field-wrapper caldera-field-wrapper-text"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="firstName"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-text-control-0"
-    >
-      First Name
-    </label>
-    <input
-      aria-describedby="inspector-text-control-0__help"
-      className="components-text-control__input"
-      id="firstName"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-      value="roy"
-    />
-  </div>
+    First Name
+     
+  </label>
+  <input
+    aria-describedby="firstName__help"
+    className="caldera-field caldera-field-text"
+    id="firstName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value="roy"
+  />
   <p
-    className="components-base-control__help"
-    id="inspector-text-control-0__help"
+    className="caldera-control__help"
+    id="firstName__help"
   >
     your first name
   </p>
@@ -74,111 +66,110 @@ exports[`Field component Creates an checkbox field set 1`] = `
     Checkbox Field Set Label
   </legend>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-1"
     >
-      <input
-        checked={true}
-        className="components-checkbox-control__input"
-        id="opt-1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-1"
-      >
-        One
-      </label>
-    </div>
+      One
+       
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-1"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      htmlFor="opt-1"
+    >
+      One
+       
+    </label>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-2"
     >
-      <input
-        aria-describedby="inspector-checkbox-control-2__help"
-        checked={true}
-        className="components-checkbox-control__input"
-        id="opt-2"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-2"
-      >
-        Two
-      </label>
-    </div>
+      Two
+       
+    </label>
+    <input
+      aria-describedby="opt-2__help"
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-2"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      htmlFor="opt-2"
+    >
+      Two
+       
+    </label>
     <p
-      className="components-base-control__help"
-      id="inspector-checkbox-control-2__help"
+      className="caldera-control__help"
+      id="opt-2__help"
     >
       The Second Option
     </p>
   </div>
   <div
-    className="components-base-control"
+    className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <div
-      className="components-base-control__field"
+    <label
+      htmlFor="opt-3"
     >
-      <input
-        checked={true}
-        className="components-checkbox-control__input"
-        id="opt-3"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="checkbox"
-        value="1"
-      />
-      <label
-        className="components-checkbox-control__label"
-        htmlFor="inspector-checkbox-control-3"
-      >
-        Three
-      </label>
-    </div>
+      Three
+       
+    </label>
+    <input
+      checked={true}
+      className="caldera-field caldera-field-checkbox"
+      id="opt-3"
+      onChange={[Function]}
+      type="checkbox"
+      value="1"
+    />
+    <label
+      htmlFor="opt-3"
+    >
+      Three
+       
+    </label>
   </div>
 </fieldset>
 `;
 
 exports[`Field component Creates an email field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-email"
+  className="caldera-field-wrapper caldera-field-wrapper-email"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="emailFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-text-control-2"
-    >
-      Email Field Label
-    </label>
-    <input
-      aria-describedby="inspector-text-control-2__help"
-      className="components-text-control__input"
-      id="emailFieldId"
-      multiple={true}
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="email"
-      value="emai@email.com"
-    />
-  </div>
+    Email Field Label
+     
+  </label>
+  <input
+    aria-describedby="emailFieldId__help"
+    className="caldera-field caldera-field-email"
+    id="emailFieldId"
+    multiple={true}
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="email"
+    value="emai@email.com"
+  />
   <p
-    className="components-base-control__help"
-    id="inspector-text-control-2__help"
+    className="caldera-control__help"
+    id="emailFieldId__help"
   >
     Email field description
   </p>
@@ -187,45 +178,41 @@ exports[`Field component Creates an email field 1`] = `
 
 exports[`Field component Creates an select field 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="selectFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-select-control-0"
+    Select Field Label
+     
+  </label>
+  <select
+    aria-describedby="selectFieldId__help"
+    className="caldera-field caldera-field-select"
+    id="selectFieldId"
+    multiple={false}
+    onChange={[Function]}
+    required={true}
+  >
+    <option
+      value={0}
     >
-      Select Field Label
-    </label>
-    <select
-      aria-describedby="inspector-select-control-0__help"
-      className="components-select-control__input"
-      id="selectFieldId"
-      multiple={false}
-      onChange={[Function]}
+      Zero
+    </option>
+    <option
       value={1}
     >
-      <option
-        value={0}
-      >
-        Zero
-      </option>
-      <option
-        value={1}
-      >
-        One
-      </option>
-      <option
-        value={2}
-      >
-        Two
-      </option>
-    </select>
-  </div>
+      One
+    </option>
+    <option
+      value={2}
+    >
+      Two
+    </option>
+  </select>
   <p
-    className="components-base-control__help"
-    id="inspector-select-control-0__help"
+    className="caldera-control__help"
+    id="selectFieldId__help"
   >
     Select field description
   </p>
@@ -234,45 +221,41 @@ exports[`Field component Creates an select field 1`] = `
 
 exports[`Field component Creates an select field identified as dropdown 1`] = `
 <div
-  className="components-base-control caldera-field caldera-field-select"
+  className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <div
-    className="components-base-control__field"
+  <label
+    htmlFor="selectFieldId"
   >
-    <label
-      className="components-base-control__label"
-      htmlFor="inspector-select-control-1"
+    Select Field Label
+     
+  </label>
+  <select
+    aria-describedby="selectFieldId__help"
+    className="caldera-field caldera-field-select"
+    id="selectFieldId"
+    multiple={false}
+    onChange={[Function]}
+    required={true}
+  >
+    <option
+      value={0}
     >
-      Select Field Label
-    </label>
-    <select
-      aria-describedby="inspector-select-control-1__help"
-      className="components-select-control__input"
-      id="selectFieldId"
-      multiple={false}
-      onChange={[Function]}
+      Zero
+    </option>
+    <option
       value={1}
     >
-      <option
-        value={0}
-      >
-        Zero
-      </option>
-      <option
-        value={1}
-      >
-        One
-      </option>
-      <option
-        value={2}
-      >
-        Two
-      </option>
-    </select>
-  </div>
+      One
+    </option>
+    <option
+      value={2}
+    >
+      Two
+    </option>
+  </select>
   <p
-    className="components-base-control__help"
-    id="inspector-select-control-1__help"
+    className="caldera-control__help"
+    id="selectFieldId__help"
   >
     Select field description
   </p>
