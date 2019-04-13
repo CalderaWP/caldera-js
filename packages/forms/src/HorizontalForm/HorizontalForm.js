@@ -38,6 +38,7 @@ export const HorizontalForm = ({
 	});
 	const form = {
 		id: `horizontal-form-${instanceId}`,
+		ID: `horizontal-form-${instanceId}`,
 		fields,
 		rows,
 		conditionals

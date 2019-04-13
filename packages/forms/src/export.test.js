@@ -1,6 +1,5 @@
 import {
 	CalderaForm,
-	CalderaGrid,
 	FormClient,
 	formClientFactory,
 	HorizontalForm,
@@ -19,9 +18,6 @@ describe('Exports', () => {
 		expect(typeof CalderaForm).toBe('function');
 	});
 
-	it('exports CalderaGrid', () => {
-		expect(typeof CalderaGrid).toBe('function');
-	});
 
 	it('exports formClientFactory', () => {
 		expect(typeof formClientFactory).toBe('function');

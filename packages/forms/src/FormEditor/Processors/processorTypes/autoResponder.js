@@ -43,7 +43,6 @@ export const autoResponder = {
 		},
 		{
 			fieldType: 'select',
-			value: true,
 			label: 'HTML Mode',
 			fieldId: 'autoResponderHtmlMode',
 			description: 'HTML or Plain Text',

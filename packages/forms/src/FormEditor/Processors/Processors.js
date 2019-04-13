@@ -5,6 +5,7 @@ import {Row, fieldAreaFactory} from "@calderajs/components";
 import {processorTypesPropType} from './processorTypesPropType';
 import processorFactory from './processorTypes/processorFactory';
 import {AddProcessor} from './AddProcessor';
+import {defaultProcessorTypes} from "./processorTypes/defaultProcessorTypes";
 
 
 export class Processors extends Component {
@@ -77,7 +78,7 @@ export class Processors extends Component {
 	handleCreateProcessor = () => {
 		const {processors, updateProcessors} = this.props;
 		const {activeProcessor,newProcessorType} = this.state;
-		const newProcessor = processorFactory(newProcessorType);
+		const newProcessor = processorFactory(newProcessorType,defaultProcessorTypes);
 		const {id} = newProcessor;
 		updateProcessors([...processors, newProcessor]);
 		this.setState({activeProcessorId:id,newProcessorType: ''});

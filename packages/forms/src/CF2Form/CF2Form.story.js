@@ -10,7 +10,6 @@ import axios from "axios";
 
 
 
-
 const form = {
 	ID: 'cf2',
 	rows: [

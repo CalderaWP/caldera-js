@@ -13,6 +13,9 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 			: null;
 	};
 
+	const findFieldValueAsFloat = (fieldId,fieldValues) => {
+		return parseFloat(findFieldValue(fieldId,fieldValues));
+	};
 	switch(testType){
 		case 'is':
 		case '==':
@@ -20,7 +23,7 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 				const value = findFieldValue(fieldId,fieldValues);
 				return value == testValue;
 			};
-		case '====':
+		case '===':
 			return (fieldValues) => {
 				const value = findFieldValue(fieldId,fieldValues);
 				return value === testValue;
@@ -30,7 +33,10 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 		case '!=':
 			return (fieldValues) => {
 				const value = findFieldValue(fieldId,fieldValues);
-				return value != testValue;
+				if( null === value ){
+					return false;
+				}
+				return  value != testValue;
 			};
 		case '!==':
 			return (fieldValues) => {
@@ -40,13 +46,13 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 		case '>':
 		case 'greater':
 			return (fieldValues) => {
-				const value = findFieldValue(fieldId,fieldValues);
+				const value = findFieldValueAsFloat(fieldId,fieldValues);
 				return value > testValue;
 			};
 		case '<':
 		case 'smaller':
 			return (fieldValues) => {
-				const value = findFieldValue(fieldId,fieldValues);
+				const value = findFieldValueAsFloat(fieldId,fieldValues);
 				return value < testValue;
 			};
 
@@ -60,7 +66,6 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 			};
 
 		case 'endswith':
-
 			return (fieldValues) => {
 				const value = findFieldValue(fieldId, fieldValues);
 				if ('object' === typeof  value) {
@@ -78,6 +83,16 @@ export const createFieldRule = (testType,fieldId,testValue) => {
 
 				return values.toLowerCase().indexOf( testValue ) >= 0;
 
+			};
+		case 'empty':
+			return (fieldValues) => {
+				const value = findFieldValue(fieldId, fieldValues);
+
+				return (
+					null === value
+					|| '' === value
+					|| Array.isArray(value) && 0 === value.length
+				);
 			};
 
 		default:

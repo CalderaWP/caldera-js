@@ -6,7 +6,10 @@ import { formRows } from './columns.fixtures';
 import {collectFieldValues} from '@calderajs/components';
 import {createFieldRule} from './state/createFieldRule';
 import { getValuesFromFormLayout } from './util/getValuesFromFormLayout';
-import {emailField, textField} from "./fields.fixtures";
+import {
+	emailField,
+	textField,
+	submitButton} from "./fields.fixtures";
 import { FormTokenField } from '@wordpress/components';
 import { withState } from '@wordpress/compose';
 
@@ -27,11 +30,22 @@ const form = {
 					columnId: '1b'
 				}
 			]
+		},
+		{
+			rowId: 'r2',
+			columns: [
+				{
+					fields: [submitButton.fieldId],
+					width: '1',
+					columnId: '1r2'
+				}
+			]
 		}
 	],
 	fields: [
 		emailField,
-		textField
+		textField,
+		submitButton
 	],
 	conditionals :[
 		{
@@ -41,6 +55,20 @@ const form = {
 				textField.fieldId
 			]
 		},
+		{
+			type: 'disable',
+			rule: createFieldRule('empty', emailField.fieldId, null ),
+			fields: [
+				submitButton.fieldId
+			]
+		},
+		{
+			type: 'disable',
+			rule: createFieldRule('empty', textField.fieldId,null ),
+			fields: [
+				submitButton.fieldId
+			]
+		}
 
 	]
 };

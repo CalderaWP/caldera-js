@@ -208,6 +208,7 @@ exports[`fieldFactory Creates a submit button 1`] = `
     className="components-base-control__field"
   >
     <input
+      disabled={false}
       id="clickButton"
       type="submit"
       value="Click Me"
