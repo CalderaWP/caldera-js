@@ -8,55 +8,62 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseControl from "../../Controls/BaseControl";
-export const InputField = ({
-	label,
-	description,
-	fieldId,
-	placeholder,
-	required,
-	html5type,
-	value,
-	onChange,
-	onBlur,
-	attributes,
-	children
-}) => {
-	const onChangeValue = ( event ) => onChange( event.target.value );
+
+export const InputField = (
+	{
+		label,
+		description,
+		fieldId,
+		placeholder,
+		required,
+		html5type,
+		value,
+		onChange,
+		onBlur,
+		attributes,
+		children
+	}
+) => {
+	const onChangeValue = (event) => onChange(event.target.value);
 
 	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const _attributes = parseAttributes(attributes, fieldType);
 	if ('checkbox' === fieldType) {
 		const checked = value ? true : false;
 		return (
-			<BaseControl label={ label } id={ fieldId } help={ description } className={ '' }>
+			<BaseControl
+				label={label}
+				id={fieldId}
+				help={description}
+				className={''}>
 				<input
-					id={ fieldId }
-					className="components-checkbox-control__input"
+					id={fieldId}
+					className={fieldClassNames(fieldType)}
 					type="checkbox"
 					value="1"
-					onChange={ onChangeValue }
-					checked={ checked }
-					aria-describedby={ !! description ? fieldId + '__help' : undefined }
+					onChange={onChangeValue}
+					checked={checked}
+					aria-describedby={!!description ? fieldId + '__help' : undefined}
 					{..._attributes}
 				/>
-				<label className="components-checkbox-control__label" htmlFor={ fieldId }>
-					{ label }
+				<label className="components-checkbox-control__label" htmlFor={fieldId}>
+					{label}
 				</label>
 			</BaseControl>
 		);
 	} else {
 		return (
-			<BaseControl label={ label } id={ fieldId } help={ description } className={ '' }>
-				<input className="components-text-control__input"
-					   type={ fieldType }
-					   id={ fieldId }
-					   value={ value }
-					   onChange={ onChangeValue }
-					   aria-describedby={ !! description ? fieldId + '__help' : undefined }
-					   placeholder={placeholder}
-					   onChange={onChange}
-					   onBlur={onBlur}
-					   {..._attributes}
+			<BaseControl label={label} id={fieldId} help={description} className={''}>
+				<input
+					className={fieldClassNames(fieldType)}
+					type={fieldType}
+					id={fieldId}
+					value={value}
+					onChange={onChangeValue}
+					aria-describedby={!!description ? fieldId + '__help' : undefined}
+					placeholder={placeholder}
+					onBlur={onBlur}
+					{..._attributes}
 				/>
 			</BaseControl>
 		);
@@ -82,7 +89,8 @@ InputField.propTypes = {
 };
 
 InputField.defaultProps = {
-	onBlur: () => {},
+	onBlur: () => {
+	},
 	required: false,
 	html5type: 'text'
 };

@@ -18,10 +18,10 @@ exports[`FieldArea component Creates a text field 1`] = `
       </label>
       <input
         aria-describedby="firstName__help"
-        className="components-text-control__input"
+        className="caldera-field caldera-field-text"
         id="firstName"
         onBlur={[Function]}
-        onChange={[MockFunction]}
+        onChange={[Function]}
         type="text"
         value="roy"
       />
@@ -54,7 +54,7 @@ exports[`FieldArea component Creates an select field 1`] = `
       </label>
       <select
         aria-describedby="selectFieldId__help"
-        className="components-select-control__input"
+        className="caldera-field caldera-field-select"
         id="selectFieldId"
         multiple={false}
         onChange={[Function]}
@@ -104,10 +104,10 @@ exports[`FieldArea component Shows errors 1`] = `
       </label>
       <input
         aria-describedby="firstName__help"
-        className="components-text-control__input"
+        className="caldera-field caldera-field-text"
         id="firstName"
         onBlur={[Function]}
-        onChange={[MockFunction]}
+        onChange={[Function]}
         type="text"
         value="roy"
       />

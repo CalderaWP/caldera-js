@@ -29,7 +29,7 @@ export const RadioField = ({
 				>
 					<input
 						id={`${ fieldId }-${ index }`}
-						className="components-radio-control__input"
+						className={fieldClassNames('radio')}
 						type="radio"
 						name={fieldId}
 						value={option.value}

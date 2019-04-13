@@ -8,6 +8,7 @@ exports[`Select Field component matches snapshot 1`] = `
     className="components-base-control__field"
   >
     <input
+      className="caldera-field caldera-field-text"
       disabled={false}
       id="button"
       type="submit"

@@ -13,7 +13,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
       Hi Roy
     </span>
     <div
-      className="components-base-control components-toggle-control"
+      className="components-base-control caldera-field caldera-field-toggle"
     >
       <div
         className="components-base-control__field"
@@ -22,7 +22,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
           className="components-form-toggle"
         >
           <input
-            className="components-form-toggle__input"
+            className="caldera-field caldera-field-toggle"
             onChange={[Function]}
             type="checkbox"
           />
@@ -48,7 +48,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
           </svg>
         </span>
         <label
-          className="components-toggle-control__label"
+          className="caldera-field-label caldera-field-label-toggle"
         />
       </div>
     </div>

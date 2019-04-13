@@ -14,7 +14,7 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
     </span>
     <textarea
       aria-describedby="undefined__help"
-      className="components-textarea-control__input"
+      className="caldera-field caldera-field-text-area"
       cols={8}
       maxLength={5}
       minlength={1}

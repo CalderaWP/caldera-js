@@ -19,7 +19,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
       <input
         aria-describedby="selection-hats__help"
         checked={false}
-        className="components-radio-control__input"
+        className="caldera-field caldera-field-radio"
         id="selection-hats-0"
         name="selection-hats"
         onChange={[Function]}
@@ -38,7 +38,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
       <input
         aria-describedby="selection-hats__help"
         checked={false}
-        className="components-radio-control__input"
+        className="caldera-field caldera-field-radio"
         id="selection-hats-1"
         name="selection-hats"
         onChange={[Function]}

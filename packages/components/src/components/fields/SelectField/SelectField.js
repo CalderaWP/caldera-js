@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
+import {parseAttributes, fieldClassNames, isValidHtml5type} from '../util';
 import {isEmpty} from "lodash";
 import BaseControl from "../../Controls/BaseControl";
+
 export const SelectField = ({
-	attributes,
-	label,
-	fieldId,
-	onChange,
-	value,
-	options,
-	multiple,
-	description,
-	placeholder
-}) => {
+								attributes,
+								label,
+								fieldId,
+								onChange,
+								value,
+								options,
+								multiple,
+								description,
+								placeholder
+							}) => {
 	attributes = parseAttributes(attributes, 'select');
 
 	if (!value && placeholder) {
@@ -33,7 +34,7 @@ export const SelectField = ({
 		<BaseControl label={label} id={fieldId} help={description} className={''}>
 			<select
 				id={fieldId}
-				className="components-select-control__input"
+				className={fieldClassNames('select')}
 				onChange={onChangeValue}
 				aria-describedby={!!description ? `${ fieldId }__help` : undefined}
 				multiple={multiple}

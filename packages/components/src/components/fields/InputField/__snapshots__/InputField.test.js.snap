@@ -14,9 +14,9 @@ exports[`InputField  matches snapshot with all props 1`] = `
     </span>
     <input
       aria-describedby="undefined__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-text"
       onBlur={[MockFunction]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       placeholder="Hello"
       type="text"
       value="Roy"

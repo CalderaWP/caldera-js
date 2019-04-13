@@ -15,12 +15,12 @@ exports[`Field component Creates a number field 1`] = `
     </label>
     <input
       aria-describedby="numberFieldId__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-number"
       id="numberFieldId"
       max={10}
       min={1}
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="number"
       value={3}
     />
@@ -49,10 +49,10 @@ exports[`Field component Creates a text field 1`] = `
     </label>
     <input
       aria-describedby="firstName__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-text"
       id="firstName"
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="text"
       value="roy"
     />
@@ -87,7 +87,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-1"
         onChange={[Function]}
         type="checkbox"
@@ -116,7 +116,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       <input
         aria-describedby="opt-2__help"
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-2"
         onChange={[Function]}
         type="checkbox"
@@ -150,7 +150,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-3"
         onChange={[Function]}
         type="checkbox"
@@ -182,11 +182,11 @@ exports[`Field component Creates an email field 1`] = `
     </label>
     <input
       aria-describedby="emailFieldId__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-email"
       id="emailFieldId"
       multiple={true}
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="email"
       value="emai@email.com"
     />
@@ -215,7 +215,7 @@ exports[`Field component Creates an select field 1`] = `
     </label>
     <select
       aria-describedby="selectFieldId__help"
-      className="components-select-control__input"
+      className="caldera-field caldera-field-select"
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
@@ -261,7 +261,7 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
     </label>
     <select
       aria-describedby="selectFieldId__help"
-      className="components-select-control__input"
+      className="caldera-field caldera-field-select"
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}

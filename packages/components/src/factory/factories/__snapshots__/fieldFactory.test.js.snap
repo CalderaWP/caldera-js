@@ -21,7 +21,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-1"
         onChange={[Function]}
         type="checkbox"
@@ -50,7 +50,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       <input
         aria-describedby="opt-2__help"
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-2"
         onChange={[Function]}
         type="checkbox"
@@ -84,7 +84,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-3"
         onChange={[Function]}
         type="checkbox"
@@ -116,12 +116,12 @@ exports[`fieldFactory Creates a number field 1`] = `
     </label>
     <input
       aria-describedby="numberFieldId__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-number"
       id="numberFieldId"
       max={10}
       min={1}
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="number"
       value={3}
     />
@@ -154,7 +154,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       <input
         aria-describedby="radioFieldLabel__help"
         checked={false}
-        className="components-radio-control__input"
+        className="caldera-field caldera-field-radio"
         id="radioFieldLabel-0"
         name="radioFieldLabel"
         onChange={[Function]}
@@ -173,7 +173,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       <input
         aria-describedby="radioFieldLabel__help"
         checked={true}
-        className="components-radio-control__input"
+        className="caldera-field caldera-field-radio"
         id="radioFieldLabel-1"
         name="radioFieldLabel"
         onChange={[Function]}
@@ -192,7 +192,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       <input
         aria-describedby="radioFieldLabel__help"
         checked={false}
-        className="components-radio-control__input"
+        className="caldera-field caldera-field-radio"
         id="radioFieldLabel-2"
         name="radioFieldLabel"
         onChange={[Function]}
@@ -223,6 +223,7 @@ exports[`fieldFactory Creates a submit button 1`] = `
     className="components-base-control__field"
   >
     <input
+      className="caldera-field caldera-field-text"
       disabled={false}
       id="clickButton"
       type="submit"
@@ -253,10 +254,10 @@ exports[`fieldFactory Creates a text field 1`] = `
     </label>
     <input
       aria-describedby="firstName__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-text"
       id="firstName"
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="text"
       value="roy"
     />
@@ -327,7 +328,7 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
     <input
       aria-describedby="checkboxFieldLabel__help"
       checked={true}
-      className="components-checkbox-control__input"
+      className="caldera-field caldera-field-checkbox"
       id="checkboxFieldLabel"
       onChange={[Function]}
       type="checkbox"
@@ -370,7 +371,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-1"
         onChange={[Function]}
         type="checkbox"
@@ -399,7 +400,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       <input
         aria-describedby="opt-2__help"
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-2"
         onChange={[Function]}
         type="checkbox"
@@ -433,7 +434,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       </label>
       <input
         checked={true}
-        className="components-checkbox-control__input"
+        className="caldera-field caldera-field-checkbox"
         id="opt-3"
         onChange={[Function]}
         type="checkbox"
@@ -465,11 +466,11 @@ exports[`fieldFactory Creates an email field 1`] = `
     </label>
     <input
       aria-describedby="emailFieldId__help"
-      className="components-text-control__input"
+      className="caldera-field caldera-field-email"
       id="emailFieldId"
       multiple={true}
       onBlur={[Function]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       type="email"
       value="emai@email.com"
     />
@@ -535,7 +536,7 @@ exports[`fieldFactory Creates an select field 1`] = `
     </label>
     <select
       aria-describedby="selectFieldId__help"
-      className="components-select-control__input"
+      className="caldera-field caldera-field-select"
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
@@ -581,7 +582,7 @@ exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
     </label>
     <select
       aria-describedby="selectFieldId__help"
-      className="components-select-control__input"
+      className="caldera-field caldera-field-select"
       id="selectFieldId"
       multiple={false}
       onChange={[Function]}
@@ -627,7 +628,7 @@ exports[`fieldFactory should create textarea 1`] = `
     </label>
     <textarea
       aria-describedby="textArea1__help"
-      className="components-textarea-control__input"
+      className="caldera-field caldera-field-text-area"
       cols={8}
       id="textArea1"
       maxLength={500}
@@ -662,7 +663,7 @@ exports[`fieldFactory should create toggle 1`] = `
       Toggle Label
     </label>
     <div
-      className="components-base-control components-toggle-control"
+      className="components-base-control caldera-field caldera-field-toggle"
     >
       <div
         className="components-base-control__field"
@@ -672,7 +673,7 @@ exports[`fieldFactory should create toggle 1`] = `
         >
           <input
             checked={true}
-            className="components-form-toggle__input"
+            className="caldera-field caldera-field-toggle"
             onChange={[Function]}
             type="checkbox"
           />
@@ -698,7 +699,7 @@ exports[`fieldFactory should create toggle 1`] = `
           </svg>
         </span>
         <label
-          className="components-toggle-control__label"
+          className="caldera-field-label caldera-field-label-toggle"
         />
       </div>
     </div>

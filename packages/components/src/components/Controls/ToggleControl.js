@@ -5,6 +5,7 @@ import React from 'react';
 import { Component } from '@wordpress/element';
 import {SVG,Path} from "./primitives/svg";
 import BaseControl from "./BaseControl";
+import {fieldClassNames,labelClassNames} from "../fields/util";
 
 
 
@@ -18,7 +19,7 @@ function FormToggle( { className, checked, id, onChange = noop, ...props } ) {
 	return (
 		<span className={ wrapperClasses }>
 			<input
-				className="components-form-toggle__input"
+				className={fieldClassNames('toggle')}
 				id={ id }
 				type="checkbox"
 				checked={ checked }
@@ -53,8 +54,8 @@ class ToggleControl extends Component {
 	}
 
 	render() {
-		const { label, checked, help, instanceId, className } = this.props;
-		const id = instanceId;
+		const { label, checked, help, fieldId, className } = this.props;
+		const id = fieldId;
 
 		let describedBy, helpLabel;
 		if ( help ) {
@@ -66,7 +67,7 @@ class ToggleControl extends Component {
 			<BaseControl
 				id={ id }
 				help={ helpLabel }
-				className={ classnames( 'components-toggle-control', className ) }
+				className={fieldClassNames('toggle')}
 			>
 				<FormToggle
 					id={ id }
@@ -76,7 +77,7 @@ class ToggleControl extends Component {
 				/>
 				<label
 					htmlFor={ id }
-					className="components-toggle-control__label"
+					className={labelClassNames('toggle')}
 				>
 					{ label }
 				</label>

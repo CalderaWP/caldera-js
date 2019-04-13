@@ -18,10 +18,10 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
       </label>
       <input
         aria-describedby="firstName__help"
-        className="components-text-control__input"
+        className="caldera-field caldera-field-text"
         id="firstName"
         onBlur={[Function]}
-        onChange={[MockFunction]}
+        onChange={[Function]}
         type="text"
         value="roy"
       />
@@ -54,7 +54,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
       </label>
       <select
         aria-describedby="selectFieldId__help"
-        className="components-select-control__input"
+        className="caldera-field caldera-field-select"
         id="selectFieldId"
         multiple={false}
         onChange={[Function]}
@@ -149,7 +149,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
       </label>
       <textarea
         aria-describedby="textArea1__help"
-        className="components-textarea-control__input"
+        className="caldera-field caldera-field-text-area"
         cols={8}
         id="textArea1"
         maxLength={500}
@@ -188,7 +188,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
         Toggle Label
       </label>
       <div
-        className="components-base-control components-toggle-control"
+        className="components-base-control caldera-field caldera-field-toggle"
       >
         <div
           className="components-base-control__field"
@@ -198,7 +198,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
           >
             <input
               checked={true}
-              className="components-form-toggle__input"
+              className="caldera-field caldera-field-toggle"
               onChange={[Function]}
               type="checkbox"
             />
@@ -224,7 +224,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
             </svg>
           </span>
           <label
-            className="components-toggle-control__label"
+            className="caldera-field-label caldera-field-label-toggle"
           />
         </div>
       </div>

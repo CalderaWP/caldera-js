@@ -1,6 +1,7 @@
-import { BaseControl } from '../../Controls';
+import {BaseControl} from '../../Controls';
 import React from "react";
 import {fieldClassNames, parseAttributes} from "../util";
+
 export const SubmitButton = (props) => {
 	const {
 		label,
@@ -26,6 +27,7 @@ export const SubmitButton = (props) => {
 			help={description}
 		>
 			<input
+				className={fieldClassNames('text')}
 				type={'submit'}
 				id={fieldId}
 				value={label}
