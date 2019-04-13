@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 /**
  * Form submit handler for Caldera Forms in "cf2" mode.
  *

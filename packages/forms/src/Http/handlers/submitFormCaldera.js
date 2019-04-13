@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 /**
  * Default form submission handler
  *
