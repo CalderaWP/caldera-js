@@ -45,7 +45,7 @@ export const CF2Form = (
 			getCf2Token(apiRootUri, formId, axios)
 				.then(r => {
 					setTokens(r);
-					setTokensFetched(true)
+					setTimeout(() => setTokensFetched(true), 500);
 				})
 		}
 
@@ -90,12 +90,12 @@ export const CF2Form = (
 						formId,
 						axios
 					}).then(r => {
-						setIsSubmitting(false);
+						setTimeout(() => setIsSubmitting(false), 500);
 						setHideForm(true);
 						setMessage(r.data.message);
 						actions.resetForm();
 					}).catch(e => {
-						setIsSubmitting(false);
+						setTimeout(() => setIsSubmitting(false), 500 );
 						console.log(e);
 					})
 
