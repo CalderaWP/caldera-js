@@ -2,6 +2,7 @@ import {CalderaForm} from "../CalderaForm";
 import getCf2Token from "../Http/handlers/getCf2Token";
 import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
 import React, {useState, useEffect, Fragment} from 'react';
+import { RingLoader,PacmanLoader } from 'react-spinners';
 
 import PropTypes from "prop-types";
 
@@ -64,40 +65,50 @@ export const CF2Form = (
 
 		)
 	}
+
+	const FormOrLoading = () => {
+		if(  isSubmitting ) {
+			return (
+				<div><PacmanLoader/></div>
+			);
+		}
+		return (
+			<CalderaForm
+				form={form}
+				fields={form.fields}
+				onChange={newValues => {
+					onChange(onChange);
+				}}
+				onBlur={onBlur}
+				onSubmit={(values, actions) => {
+					setIsSubmitting(true);
+					actions.setSubmitting(false);
+					handleFormSubmitCf2({
+						entryValues: values,
+						tokens,
+						apiRootUri,
+						formId,
+						axios
+					}).then(r => {
+						setIsSubmitting(false);
+						setHideForm(true);
+						setMessage(r.data.message);
+						actions.resetForm();
+					}).catch(e => {
+						setIsSubmitting(false);
+						console.log(e);
+					})
+
+				}}
+			/>
+		)
+
+	};
 	return (
 		<Fragment>
 			{tokensFetched ?
-				<CalderaForm
-					form={form}
-					fields={form.fields}
-					onChange={newValues => {
-						onChange(onChange);
-					}}
-					onBlur={onBlur}
-					onSubmit={(values, actions) => {
-						setIsSubmitting(true);
-						actions.setSubmitting(false);
-						handleFormSubmitCf2({
-							entryValues: values,
-							tokens,
-							apiRootUri,
-							formId,
-							axios
-						}).then(r => {
-							setIsSubmitting(false);
-							setHideForm(true);
-							setMessage(r.data.message);
-							actions.resetForm();
-						}).catch(e => {
-							setIsSubmitting(false);
-							console.log(e);
-						})
-
-					}}
-				/>
-				:
-				<div>Loading Spinner</div>
-
+				<FormOrLoading/>
+				: <div><RingLoader /></div>
 			}
 		</Fragment>
 	);
