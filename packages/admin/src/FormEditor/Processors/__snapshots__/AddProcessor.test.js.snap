@@ -22,20 +22,20 @@ Array [
           id="newProcessorType"
           multiple={false}
           onChange={[Function]}
-          value=""
+          optionValue=""
         >
           <option
-            value={null}
+            optionValue={null}
           >
             --
           </option>
           <option
-            value="apiRequest"
+            optionValue="apiRequest"
           >
             apiRequest
           </option>
           <option
-            value="redirect"
+            optionValue="redirect"
           >
             redirect
           </option>

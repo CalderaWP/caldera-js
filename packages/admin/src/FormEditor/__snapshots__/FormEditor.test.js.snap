@@ -128,30 +128,30 @@ exports[`FormEditor should match snapshot 1`] = `
                     id="newProcessorType"
                     multiple={false}
                     onChange={[Function]}
-                    value=""
+                    optionValue=""
                   >
                     <option
-                      value={null}
+                      optionValue={null}
                     >
                       --
                     </option>
                     <option
-                      value="apiRequest"
+                      optionValue="apiRequest"
                     >
                       apiRequest
                     </option>
                     <option
-                      value="redirect"
+                      optionValue="redirect"
                     >
                       redirect
                     </option>
                     <option
-                      value="autoResponder"
+                      optionValue="autoResponder"
                     >
                       autoResponder
                     </option>
                     <option
-                      value="apiRequest"
+                      optionValue="apiRequest"
                     >
                       apiRequest
                     </option>
@@ -163,8 +163,8 @@ exports[`FormEditor should match snapshot 1`] = `
               disabled={true}
               onClick={[Function]}
             >
-              Add 
-              
+              Add
+
                Processor
             </button>
           </div>

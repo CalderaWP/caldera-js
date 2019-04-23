@@ -5,8 +5,8 @@
 Decorates an object literal with getter/ setters and the ability to hide a field and disbale a field.
 
  * The method getCurrentState() provides the current values of all VISIBLE fields.
-  	- A hidden field's value can NOT be accessed or updated.
- 	- A disabled field's value can NOT be update. It can be accessed.
+  	- A hidden field's optionValue can NOT be accessed or updated.
+ 	- A disabled field's optionValue can NOT be update. It can be accessed.
  	
 This state does not determine hide/show or enable/disable state. It has methods for consumers of these objects to signal that field is to be hidden/unhidden or enabled/disabled as well as if it is hidden/disabled, etc.
 

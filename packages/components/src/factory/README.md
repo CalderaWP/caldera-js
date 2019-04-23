@@ -46,7 +46,7 @@ This creates the complete HTML area around a field. `<wrapper><label/><input /><
 const nameField = {
     fieldType: 'input',
     html5Type: 'text',
-    value: 'Infinite Vague',
+    optionValue: 'Infinite Vague',
     label: 'Name',
     fieldId: 'fromName',
     required: true,
@@ -67,14 +67,14 @@ return (
 ```js
 const magicField = {
     fieldType: 'magic-richtext',
-    value: 'Infinite Vague',
+    optionValue: 'Infinite Vague',
     label: 'Message',
     fieldId: 'message',
     fieldCompletes: {
-        { id: 1, value: '%field1%'}	
+        { id: 1, optionValue: '%field1%'}	
     },
     otherCompletes: {
-        { id: 1, value: '%field1%'}	
+        { id: 1, optionValue: '%field1%'}	
     }
 };
 return (

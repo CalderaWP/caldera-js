@@ -114,8 +114,8 @@ const form = {
             fieldId: 'sendEmail',
             label: 'Would you like to provide an email?',
             options: [
-            	{value: true, label: 'Yes' },
-            	{value: false, label: 'No' },
+            	{optionValue: true, label: 'Yes' },
+            	{optionValue: false, label: 'No' },
             ]
         },
 		{
@@ -147,9 +147,9 @@ A column in a grid may be React component or an object describing a form field, 
 
 #### The `rows` prop
 Main Rules: 
-* A row MUST have a `rowId` key. This value MUST be unique, among all rows of the grid.
+* A row MUST have a `rowId` key. This optionValue MUST be unique, among all rows of the grid.
 * A row SHOULD have an array of columns.
-* A column MUST have a `columndId` key. This value MUST be unique, among all columns of the row.
+* A column MUST have a `columndId` key. This optionValue MUST be unique, among all columns of the row.
 * A column SHOULD have a `width` key. This describes the width of the column, as a fraction.
     - The sum of all of the `width` keys of all columns in a row SHOULD be less than or equal to 1.
 * A column MAY have `fields` key. If an array of field configs -- as expected by `fieldAreaFactory` is passed, those fields will be rendered for the column. 
@@ -166,7 +166,7 @@ Notes:
 * `onAnyChange` - Function - Callback when any field changes values.
 * `onAnyBlur`  - Function - Callback when any field is blurred.
 * `fieldValues` Object - Current values of all fields
-* `setFieldValue` Function - Function that can set a field's value when supplied `fieldId, newValue`.
+* `setFieldValue` Function - Function that can set a field's optionValue when supplied `fieldId, newValue`.
 * `fieldErrors` Object. - The current field errors.
     - Passed from Formik.
 *`fieldTouched` Object. - The current field errors.

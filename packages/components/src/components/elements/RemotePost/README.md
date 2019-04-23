@@ -23,7 +23,7 @@ import {RemotePost} from '@calderajs/components';
 ```
 
 ### Show Excerpt Only
-The prop `showFullContent`, if set to false, which is its default value, causes the component to display the post excerpt - `post.excerpt.rendered`
+The prop `showFullContent`, if set to false, which is its default optionValue, causes the component to display the post excerpt - `post.excerpt.rendered`
 
 ```jsx
 <RemotePost 

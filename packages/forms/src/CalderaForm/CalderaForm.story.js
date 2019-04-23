@@ -9,7 +9,9 @@ import { getValuesFromFormLayout } from './util/getValuesFromFormLayout';
 import {
 	emailField,
 	textField,
-	submitButton} from "./fields.fixtures";
+	submitButton,
+	checkboxFieldset
+} from "./fields.fixtures";
 
 
 
@@ -75,6 +77,68 @@ const form = {
 storiesOf('CalderaForm', module).add('Forms', () => (
 	<CalderaForm
 		form={form}
+		onSubmit={(values, actions) => {
+			setTimeout(() => {
+				alert(JSON.stringify(values, null, 2));
+				actions.setSubmitting(false);
+			}, 1000);
+		}}
+	/>
+));
+
+const field = {
+	fieldType: 'checkboxes',
+	label: 'Select One',
+	fieldId: 'checkboxFieldSetLabel',
+	description: 'Checkbox field set description',
+	required: true,
+	options: [
+		{
+			value: 1,
+			label: 'One',
+			id: 'opt-1'
+		},
+		{
+			value: 2,
+			label: 'Two',
+			id: 'opt-2',
+			description: 'The Second Option',
+			attributes: {
+				checked: true
+			}
+		},
+		{
+			value: 3,
+			label: 'Three',
+			id: 'opt-3'
+		}
+	],
+	value: ['opt-3']
+}
+const form2 = {
+	rows: [
+		{
+			rowId: 'r1',
+			columns: [
+				{
+					fields: [field.fieldId],
+					width: '1',
+					columnId: 'a'
+				}
+			]
+		}
+	],
+	fields: [
+		field
+	],
+	conditionals :[
+
+	]
+};
+
+storiesOf('CalderaForm', module).add('Checkbox fieldset', () => (
+	<CalderaForm
+		form={form2}
 		onSubmit={(values, actions) => {
 			setTimeout(() => {
 				alert(JSON.stringify(values, null, 2));

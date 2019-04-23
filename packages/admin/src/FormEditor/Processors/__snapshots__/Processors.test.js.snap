@@ -45,10 +45,10 @@ exports[`Processors collection in processors UI Renders with a list of processor
             id="newProcessorType"
             multiple={false}
             onChange={[Function]}
-            value=""
+            optionValue=""
           >
             <option
-              value={null}
+              optionValue={null}
             >
               --
             </option>
@@ -60,8 +60,8 @@ exports[`Processors collection in processors UI Renders with a list of processor
       disabled={true}
       onClick={[Function]}
     >
-      Add 
-      
+      Add
+
        Processor
     </button>
   </div>

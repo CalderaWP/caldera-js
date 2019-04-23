@@ -25,11 +25,10 @@ export const InputField = (
 		children
 	}
 ) => {
-	const onChangeValue = (event) => onChange(event.target.value);
 
 	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const _attributes = parseAttributes(attributes, fieldType);
-	if ('checkbox' === fieldType) {
+	if ('checkbox' === html5type) {
 		const checked = value ? true : false;
 		return (
 			<BaseControl
@@ -43,7 +42,9 @@ export const InputField = (
 					className={fieldClassNames(fieldType)}
 					type="checkbox"
 					value="1"
-					onChange={onChangeValue}
+					onChange={(event) => {
+						onChange(event.target.checked);
+					}}
 					checked={checked}
 					aria-describedby={!!description ? fieldId + '__help' : undefined}
 					{..._attributes}
@@ -69,7 +70,7 @@ export const InputField = (
 					type={fieldType}
 					id={fieldId}
 					value={value}
-					onChange={onChangeValue}
+					onChange={(event) => onChange(event.target.value)}
 					aria-describedby={!!description ? fieldId + '__help' : undefined}
 					placeholder={placeholder}
 					onBlur={onBlur}

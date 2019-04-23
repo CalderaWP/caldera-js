@@ -2,22 +2,22 @@
 <!--Largely Sourced Form https://gist.github.com/gsherwood/9d22f634c57f990a7c64-->
 <ruleset name="Caldera">
     <description>PSR2 with tabs instead of spaces.</description>
-    <arg name="tab-width" value="4"/>
+    <arg name="tab-width" optionValue="4"/>
     <rule ref="PSR2">
         <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
     </rule>
     <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndent">
         <properties>
-            <property name="indent" value="4"/>
-            <property name="tabIndent" value="true"/>
+            <property name="indent" optionValue="4"/>
+            <property name="tabIndent" optionValue="true"/>
         </properties>
     </rule>
     <!-- The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit. -->
      <rule ref="Generic.Files.LineLength">
       <properties>
-       <property name="lineLimit" value="120"/>
-       <property name="absoluteLineLimit" value="0"/>
+       <property name="lineLimit" optionValue="120"/>
+       <property name="absoluteLineLimit" optionValue="0"/>
       </properties>
      </rule>
 </ruleset>

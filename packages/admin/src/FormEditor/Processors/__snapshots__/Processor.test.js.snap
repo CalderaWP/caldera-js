@@ -82,7 +82,7 @@ Array [
                           onBlur={[Function]}
                           onChange={[Function]}
                           type="checkbox"
-                          value="1"
+                          optionValue="1"
                         />
                         <label
                           className="components-checkbox-control__label"
@@ -106,7 +106,7 @@ Array [
                           onBlur={[Function]}
                           onChange={[Function]}
                           type="checkbox"
-                          value="1"
+                          optionValue="1"
                         />
                         <label
                           className="components-checkbox-control__label"
@@ -135,7 +135,7 @@ Array [
                           onBlur={[Function]}
                           onChange={[Function]}
                           type="checkbox"
-                          value="1"
+                          optionValue="1"
                         />
                         <label
                           className="components-checkbox-control__label"
@@ -179,17 +179,17 @@ Array [
                         onChange={[Function]}
                       >
                         <option
-                          value={0}
+                          optionValue={0}
                         >
                           Zero
                         </option>
                         <option
-                          value={1}
+                          optionValue={1}
                         >
                           One
                         </option>
                         <option
-                          value={2}
+                          optionValue={2}
                         >
                           Two
                         </option>
@@ -229,7 +229,7 @@ Array [
                         onBlur={[Function]}
                         onChange={[Function]}
                         type="checkbox"
-                        value="1"
+                        optionValue="1"
                       />
                       <label
                         className="components-checkbox-control__label"

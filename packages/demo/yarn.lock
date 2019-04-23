@@ -1312,7 +1312,7 @@ autoprefixer@^9.1.5:
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^7.0.5"
-    postcss-value-parser "^3.3.1"
+    postcss-optionValue-parser "^3.3.1"
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -1900,13 +1900,13 @@ cache-base@^1.0.1:
   dependencies:
     collection-visit "^1.0.0"
     component-emitter "^1.2.1"
-    get-value "^2.0.6"
-    has-value "^1.0.0"
+    get-optionValue "^2.0.6"
+    has-optionValue "^1.0.0"
     isobject "^3.0.1"
-    set-value "^2.0.0"
+    set-optionValue "^2.0.0"
     to-object-path "^0.3.0"
-    union-value "^1.0.0"
-    unset-value "^1.0.0"
+    union-optionValue "^1.0.0"
+    unset-optionValue "^1.0.0"
 
 call-me-maybe@^1.0.1:
   version "1.0.1"
@@ -2455,7 +2455,7 @@ css-loader@1.0.0:
     postcss-modules-local-by-default "^1.2.0"
     postcss-modules-scope "^1.1.0"
     postcss-modules-values "^1.3.0"
-    postcss-value-parser "^3.3.0"
+    postcss-optionValue-parser "^3.3.0"
     source-list-map "^2.0.0"
 
 css-select-base-adapter@~0.1.0:
@@ -3901,9 +3901,9 @@ get-stream@^3.0.0:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
   integrity sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
 
-get-value@^2.0.3, get-value@^2.0.6:
+get-optionValue@^2.0.3, get-optionValue@^2.0.6:
   version "2.0.6"
-  resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
+  resolved "https://registry.yarnpkg.com/get-optionValue/-/get-optionValue-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
 getpass@^0.1.1:
@@ -4141,21 +4141,21 @@ has-unicode@^2.0.0:
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
   integrity sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
 
-has-value@^0.3.1:
+has-optionValue@^0.3.1:
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/has-value/-/has-value-0.3.1.tgz#7b1f58bada62ca827ec0a2078025654845995e1f"
+  resolved "https://registry.yarnpkg.com/has-optionValue/-/has-optionValue-0.3.1.tgz#7b1f58bada62ca827ec0a2078025654845995e1f"
   integrity sha1-ex9YutpiyoJ+wKIHgCVlSEWZXh8=
   dependencies:
-    get-value "^2.0.3"
+    get-optionValue "^2.0.3"
     has-values "^0.1.4"
     isobject "^2.0.0"
 
-has-value@^1.0.0:
+has-optionValue@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/has-value/-/has-value-1.0.0.tgz#18b281da585b1c5c51def24c930ed29a0be6b177"
+  resolved "https://registry.yarnpkg.com/has-optionValue/-/has-optionValue-1.0.0.tgz#18b281da585b1c5c51def24c930ed29a0be6b177"
   integrity sha1-GLKB2lhbHFxR3vJMkw7SmgvmsXc=
   dependencies:
-    get-value "^2.0.6"
+    get-optionValue "^2.0.6"
     has-values "^1.0.0"
     isobject "^3.0.0"
 
@@ -6816,7 +6816,7 @@ postcss-calc@^7.0.0:
     css-unit-converter "^1.1.1"
     postcss "^7.0.5"
     postcss-selector-parser "^5.0.0-rc.4"
-    postcss-value-parser "^3.3.1"
+    postcss-optionValue-parser "^3.3.1"
 
 postcss-color-functional-notation@^2.0.1:
   version "2.0.1"
@@ -6860,7 +6860,7 @@ postcss-colormin@^4.0.2:
     color "^3.0.0"
     has "^1.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-convert-values@^4.0.1:
   version "4.0.1"
@@ -6868,7 +6868,7 @@ postcss-convert-values@^4.0.1:
   integrity sha512-Kisdo1y77KUC0Jmn0OXU/COOJbzM8cImvw1ZFsBgBgMgb1iL23Zs/LXRe3r+EZqM3vGYKdQ2YJVQ5VkJI+zEJQ==
   dependencies:
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-custom-media@^7.0.4:
   version "7.0.7"
@@ -7036,7 +7036,7 @@ postcss-merge-longhand@^4.0.9:
   dependencies:
     css-color-names "0.0.4"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
     stylehacks "^4.0.0"
 
 postcss-merge-rules@^4.0.2:
@@ -7057,7 +7057,7 @@ postcss-minify-font-values@^4.0.2:
   integrity sha512-j85oO6OnRU9zPf04+PZv1LYIYOprWm6IA6zkXkrJXyRveDEuQggG6tvoy8ir8ZwjLxLuGfNkCZEQG7zan+Hbtg==
   dependencies:
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-minify-gradients@^4.0.1:
   version "4.0.1"
@@ -7067,7 +7067,7 @@ postcss-minify-gradients@^4.0.1:
     cssnano-util-get-arguments "^4.0.0"
     is-color-stop "^1.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-minify-params@^4.0.1:
   version "4.0.1"
@@ -7078,7 +7078,7 @@ postcss-minify-params@^4.0.1:
     browserslist "^4.0.0"
     cssnano-util-get-arguments "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
     uniqs "^2.0.0"
 
 postcss-minify-selectors@^4.0.1:
@@ -7143,7 +7143,7 @@ postcss-normalize-display-values@^4.0.1:
   dependencies:
     cssnano-util-get-match "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-positions@^4.0.1:
   version "4.0.1"
@@ -7153,7 +7153,7 @@ postcss-normalize-positions@^4.0.1:
     cssnano-util-get-arguments "^4.0.0"
     has "^1.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-repeat-style@^4.0.1:
   version "4.0.1"
@@ -7163,7 +7163,7 @@ postcss-normalize-repeat-style@^4.0.1:
     cssnano-util-get-arguments "^4.0.0"
     cssnano-util-get-match "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-string@^4.0.1:
   version "4.0.1"
@@ -7172,7 +7172,7 @@ postcss-normalize-string@^4.0.1:
   dependencies:
     has "^1.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-timing-functions@^4.0.1:
   version "4.0.1"
@@ -7181,7 +7181,7 @@ postcss-normalize-timing-functions@^4.0.1:
   dependencies:
     cssnano-util-get-match "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-unicode@^4.0.1:
   version "4.0.1"
@@ -7190,7 +7190,7 @@ postcss-normalize-unicode@^4.0.1:
   dependencies:
     browserslist "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-url@^4.0.1:
   version "4.0.1"
@@ -7200,7 +7200,7 @@ postcss-normalize-url@^4.0.1:
     is-absolute-url "^2.0.0"
     normalize-url "^3.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-normalize-whitespace@^4.0.1:
   version "4.0.1"
@@ -7208,7 +7208,7 @@ postcss-normalize-whitespace@^4.0.1:
   integrity sha512-U8MBODMB2L+nStzOk6VvWWjZgi5kQNShCyjRhMT3s+W9Jw93yIjOnrEkKYD3Ul7ChWbEcjDWmXq0qOL9MIAnAw==
   dependencies:
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-ordered-values@^4.1.1:
   version "4.1.1"
@@ -7217,7 +7217,7 @@ postcss-ordered-values@^4.1.1:
   dependencies:
     cssnano-util-get-arguments "^4.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-overflow-shorthand@^2.0.0:
   version "2.0.0"
@@ -7305,7 +7305,7 @@ postcss-reduce-transforms@^4.0.1:
     cssnano-util-get-match "^4.0.0"
     has "^1.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
 
 postcss-replace-overflow-wrap@^3.0.0:
   version "3.0.0"
@@ -7362,7 +7362,7 @@ postcss-svgo@^4.0.1:
   dependencies:
     is-svg "^3.0.0"
     postcss "^7.0.0"
-    postcss-value-parser "^3.0.0"
+    postcss-optionValue-parser "^3.0.0"
     svgo "^1.0.0"
 
 postcss-unique-selectors@^4.0.1:
@@ -7374,9 +7374,9 @@ postcss-unique-selectors@^4.0.1:
     postcss "^7.0.0"
     uniqs "^2.0.0"
 
-postcss-value-parser@^3.0.0, postcss-value-parser@^3.3.0, postcss-value-parser@^3.3.1:
+postcss-optionValue-parser@^3.0.0, postcss-optionValue-parser@^3.3.0, postcss-optionValue-parser@^3.3.1:
   version "3.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
+  resolved "https://registry.yarnpkg.com/postcss-optionValue-parser/-/postcss-optionValue-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
 postcss-values-parser@^2.0.0:
@@ -7840,7 +7840,7 @@ regexpu-core@^4.1.3, regexpu-core@^4.2.0:
     regjsgen "^0.4.0"
     regjsparser "^0.3.0"
     unicode-match-property-ecmascript "^1.0.4"
-    unicode-match-property-value-ecmascript "^1.0.2"
+    unicode-match-property-optionValue-ecmascript "^1.0.2"
 
 regjsgen@^0.2.0:
   version "0.2.0"
@@ -8223,9 +8223,9 @@ set-blocking@^2.0.0, set-blocking@~2.0.0:
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
 
-set-value@^0.4.3:
+set-optionValue@^0.4.3:
   version "0.4.3"
-  resolved "https://registry.yarnpkg.com/set-value/-/set-value-0.4.3.tgz#7db08f9d3d22dc7f78e53af3c3bf4666ecdfccf1"
+  resolved "https://registry.yarnpkg.com/set-optionValue/-/set-optionValue-0.4.3.tgz#7db08f9d3d22dc7f78e53af3c3bf4666ecdfccf1"
   integrity sha1-fbCPnT0i3H945Trzw79GZuzfzPE=
   dependencies:
     extend-shallow "^2.0.1"
@@ -8233,9 +8233,9 @@ set-value@^0.4.3:
     is-plain-object "^2.0.1"
     to-object-path "^0.3.0"
 
-set-value@^2.0.0:
+set-optionValue@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/set-value/-/set-value-2.0.0.tgz#71ae4a88f0feefbbf52d1ea604f3fb315ebb6274"
+  resolved "https://registry.yarnpkg.com/set-optionValue/-/set-optionValue-2.0.0.tgz#71ae4a88f0feefbbf52d1ea604f3fb315ebb6274"
   integrity sha512-hw0yxk9GT/Hr5yJEYnHNKYXkIA8mVJgd9ditYZCe16ZczcaELYYcfvaXesNACk2O8O0nTiPQcQhGUQj8JLzeeg==
   dependencies:
     extend-shallow "^2.0.1"
@@ -9013,9 +9013,9 @@ unicode-match-property-ecmascript@^1.0.4:
     unicode-canonical-property-names-ecmascript "^1.0.4"
     unicode-property-aliases-ecmascript "^1.0.4"
 
-unicode-match-property-value-ecmascript@^1.0.2:
+unicode-match-property-optionValue-ecmascript@^1.0.2:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-1.0.2.tgz#9f1dc76926d6ccf452310564fd834ace059663d4"
+  resolved "https://registry.yarnpkg.com/unicode-match-property-optionValue-ecmascript/-/unicode-match-property-optionValue-ecmascript-1.0.2.tgz#9f1dc76926d6ccf452310564fd834ace059663d4"
   integrity sha512-Rx7yODZC1L/T8XKo/2kNzVAQaRE88AaMvI1EF/Xnj3GW2wzN6fop9DDWuFAKUVFH7vozkz26DzP0qyWLKLIVPQ==
 
 unicode-property-aliases-ecmascript@^1.0.4:
@@ -9023,15 +9023,15 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.4.tgz#5a533f31b4317ea76f17d807fa0d116546111dd0"
   integrity sha512-2WSLa6OdYd2ng8oqiGIWnJqyFArvhn+5vgx5GTxMbUYjCYKUcuKS62YLFF0R/BDGlB1yzXjQOLtPAfHsgirEpg==
 
-union-value@^1.0.0:
+union-optionValue@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"
+  resolved "https://registry.yarnpkg.com/union-optionValue/-/union-optionValue-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"
   integrity sha1-XHHDTLW61dzr4+oM0IIHulqhrqQ=
   dependencies:
     arr-union "^3.1.0"
-    get-value "^2.0.6"
+    get-optionValue "^2.0.6"
     is-extendable "^0.1.1"
-    set-value "^0.4.3"
+    set-optionValue "^0.4.3"
 
 uniq@^1.0.1:
   version "1.0.1"
@@ -9072,12 +9072,12 @@ unquote@~1.1.1:
   resolved "https://registry.yarnpkg.com/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"
   integrity sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=
 
-unset-value@^1.0.0:
+unset-optionValue@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unset-value/-/unset-value-1.0.0.tgz#8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559"
+  resolved "https://registry.yarnpkg.com/unset-optionValue/-/unset-optionValue-1.0.0.tgz#8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559"
   integrity sha1-g3aHP30jNRef+x5vw6jtDfyKtVk=
   dependencies:
-    has-value "^0.3.1"
+    has-optionValue "^0.3.1"
     isobject "^3.0.0"
 
 upath@^1.0.5:

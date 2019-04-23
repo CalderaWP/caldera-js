@@ -44,7 +44,7 @@ const client = clientFactory(form,{
 ```
 
 ### Getting Field Values
-If a form has a field with the id of `firstName` then you can get its value using the property `firstName` of the client. 
+If a form has a field with the id of `firstName` then you can get its optionValue using the property `firstName` of the client. 
 
 ```js
 const form = {
@@ -58,7 +58,7 @@ let firstName = client.firstName; //Value is Valkyrie
 ```
 
 ### Setting Field Values
-If a form has a field with the id of `firstName` then you can set its value using the property `firstName` of the client. 
+If a form has a field with the id of `firstName` then you can set its optionValue using the property `firstName` of the client. 
 
 ```js
 const form = {
