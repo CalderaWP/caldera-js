@@ -4,7 +4,7 @@ import { formRows } from '../CalderaForm/columns.fixtures';
 
 import {collectFieldValues} from '@calderajs/components';
 import {createFieldRule} from '../CalderaForm/state/createFieldRule';
-import {emailField, textField} from "../CalderaForm/fields.fixtures";
+import {emailField, textField,checkboxFieldset} from "../CalderaForm/fields.fixtures";
 import {CF2Form} from "./CF2Form";
 import axios from "axios";
 
@@ -19,19 +19,28 @@ const form = {
 				{
 					fields: [emailField.fieldId],
 					width: '1/2',
-					columnId: '1aaaaa'
+					columnId: '1a'
 				},
 				{
 					fields: [textField.fieldId],
 					width: '1/4',
 					columnId: '1b'
+				},
+				{
+					fields: [checkboxFieldset.fieldId],
+					width: '1/4',
+					columnId: '1c'
 				}
 			]
 		}
 	],
 	fields: [
 		emailField,
-		textField
+		textField,
+		{
+			...checkboxFieldset,
+			value: [],
+		}
 	],
 	conditionals :[
 		{

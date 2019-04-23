@@ -38,4 +38,5 @@ describe('Field label', () => {
 			attributes.form
 		);
 	});
+
 });
