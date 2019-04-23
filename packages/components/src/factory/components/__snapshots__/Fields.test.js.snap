@@ -86,7 +86,7 @@ exports[`Fields component Creates all five fields 1`] = `
          
       </label>
       <input
-        checked={true}
+        checked={false}
         className="caldera-field caldera-field-checkbox"
         id="opt-1"
         onChange={[Function]}
@@ -141,7 +141,7 @@ exports[`Fields component Creates all five fields 1`] = `
          
       </label>
       <input
-        checked={true}
+        checked={false}
         className="caldera-field caldera-field-checkbox"
         id="opt-3"
         onChange={[Function]}

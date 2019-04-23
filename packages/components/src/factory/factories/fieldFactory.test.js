@@ -174,7 +174,8 @@ describe('fieldFactory', () => {
 							value: 7,
 							label: 'One'
 						}
-					]
+					],
+					value: []
 				},
 				onChange,
 				onBlur

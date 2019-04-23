@@ -21,16 +21,19 @@ class CheckboxFieldSet extends React.Component {
 		super(props);
 		const {value,options} = props.field;
 		let checkboxValues = {};
-		options.map( option => {
-			checkboxValues[this.findOptionId(option)] = -1 !== value.findIndex(v => v === this.findOptionId(option));
+		if (value) {
+			options.map(option => {
+				checkboxValues[this.findOptionId(option)] = -1 !== value.findIndex(v => v === this.findOptionId(option));
 
-		});
+			});
+		}
 		this.state = {
 			checkboxValues
 		}
 	}
 
 	findOptionId(option) {
+		const {fieldId} = this.props.field;
 		return option.hasOwnProperty('id')
 			? option.id
 			: `opt-${fieldId}-${option.value}`;
@@ -58,7 +61,7 @@ class CheckboxFieldSet extends React.Component {
 					} = option;
 
 					const optionId = this.findOptionId(option);
-					const isChecked = value.includes(optionId);
+					const isChecked = Array.isArray(value) ? value.includes(optionId) : false;
 
 					return (
 						<InputField

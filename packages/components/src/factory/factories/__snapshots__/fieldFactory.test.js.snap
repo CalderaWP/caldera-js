@@ -17,7 +17,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
        
     </label>
     <input
-      checked={true}
+      checked={false}
       className="caldera-field caldera-field-checkbox"
       id="opt-1"
       onChange={[Function]}
@@ -72,7 +72,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
        
     </label>
     <input
-      checked={true}
+      checked={false}
       className="caldera-field caldera-field-checkbox"
       id="opt-3"
       onChange={[Function]}
@@ -329,7 +329,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
        
     </label>
     <input
-      checked={true}
+      checked={false}
       className="caldera-field caldera-field-checkbox"
       id="opt-1"
       onChange={[Function]}
@@ -384,7 +384,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
        
     </label>
     <input
-      checked={true}
+      checked={false}
       className="caldera-field caldera-field-checkbox"
       id="opt-3"
       onChange={[Function]}

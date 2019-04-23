@@ -32,21 +32,21 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 htmlFor="opt-1"
               >
                 One
-
+                 
               </label>
               <input
-                checked={true}
+                checked={false}
                 className="caldera-field caldera-field-checkbox"
                 id="opt-1"
                 onChange={[Function]}
                 type="checkbox"
-                optionValue="1"
+                value="1"
               />
               <label
                 htmlFor="opt-1"
               >
                 One
-
+                 
               </label>
             </div>
             <div
@@ -56,7 +56,7 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 htmlFor="opt-2"
               >
                 Two
-
+                 
               </label>
               <input
                 aria-describedby="opt-2__help"
@@ -65,13 +65,13 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 id="opt-2"
                 onChange={[Function]}
                 type="checkbox"
-                optionValue="1"
+                value="1"
               />
               <label
                 htmlFor="opt-2"
               >
                 Two
-
+                 
               </label>
               <p
                 className="caldera-control__help"
@@ -87,21 +87,21 @@ exports[`HorizontalForm Matches snapshot 1`] = `
                 htmlFor="opt-3"
               >
                 Three
-
+                 
               </label>
               <input
-                checked={true}
+                checked={false}
                 className="caldera-field caldera-field-checkbox"
                 id="opt-3"
                 onChange={[Function]}
                 type="checkbox"
-                optionValue="1"
+                value="1"
               />
               <label
                 htmlFor="opt-3"
               >
                 Three
-
+                 
               </label>
             </div>
           </fieldset>
@@ -126,7 +126,7 @@ exports[`HorizontalForm Matches snapshot 1`] = `
               htmlFor="selectFieldId"
             >
               Select Field Label
-
+               
             </label>
             <select
               aria-describedby="selectFieldId__help"
@@ -137,17 +137,17 @@ exports[`HorizontalForm Matches snapshot 1`] = `
               required={true}
             >
               <option
-                optionValue={0}
+                value={0}
               >
                 Zero
               </option>
               <option
-                optionValue={1}
+                value={1}
               >
                 One
               </option>
               <option
-                optionValue={2}
+                value={2}
               >
                 Two
               </option>
@@ -180,7 +180,7 @@ exports[`HorizontalForm Matches snapshot 1`] = `
               htmlFor="checkboxFieldLabel"
             >
               Checkbox Labe
-
+               
             </label>
             <input
               aria-describedby="checkboxFieldLabel__help"
@@ -189,13 +189,13 @@ exports[`HorizontalForm Matches snapshot 1`] = `
               id="checkboxFieldLabel"
               onChange={[Function]}
               type="checkbox"
-              optionValue="1"
+              value="1"
             />
             <label
               htmlFor="checkboxFieldLabel"
             >
               Checkbox Labe
-
+               
               <span>
                 *
               </span>
