@@ -14,6 +14,9 @@ import {
 
 import React from 'react';
 
+/**
+ * Special component for fieldset checkbox groups
+ */
 class CheckboxFieldSet extends React.Component {
 
 
