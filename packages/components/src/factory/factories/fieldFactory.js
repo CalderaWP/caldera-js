@@ -24,15 +24,32 @@ class CheckboxFieldSet extends React.Component {
 		super(props);
 		const {value,options} = props.field;
 		let checkboxValues = {};
-		if (value) {
+		if (Array.isArray(value)) {
 			options.map(option => {
 				checkboxValues[this.findOptionId(option)] = -1 !== value.findIndex(v => v === this.findOptionId(option));
-
 			});
 		}
 		this.state = {
 			checkboxValues
+		};
+		this.onChange = this.onChange.bind(this);
+	}
+
+	onChange(optionId,checked){
+		let newValue = this.state.checkboxValues || {};
+		if( checked ){
+			newValue[optionId] = true;
+		}else{
+			newValue[optionId] = false;
 		}
+		this.setState({checkboxValues:newValue})
+		const update = [];
+		Object.keys(newValue).map(option => {
+			if( this.state.checkboxValues[option]){
+				update.push(option);
+			}
+		});
+		this.props.onChange(update);
 	}
 
 	findOptionId(option) {
@@ -77,13 +94,7 @@ class CheckboxFieldSet extends React.Component {
 							html5type={'checkbox'}
 							attributes={attributes}
 							onChange={(checked) => {
-								let newValue = value;
-								if( checked ){
-									newValue.push(optionId)
-								}else{
-									newValue = remove(newValue,optionId);
-								}
-								onChange([...new Set(newValue)]);
+								this.onChange(optionId,checked);
 							}}
 						/>
 					);
