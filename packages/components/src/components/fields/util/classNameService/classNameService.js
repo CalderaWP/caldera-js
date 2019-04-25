@@ -69,5 +69,16 @@ classNameService.getFormColumnClassNames = (columnId, width) => {
 	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-column`);
 };
 
+/**
+ * Remove all filters added with this service
+ */
+classNameService.reset = () => {
+	Object.keys(classNameService.filters).map( filter => {
+		if( '__current' !== filter ){
+			classNameService.removeAllFilters(filter);
+		}
+	});
+};
+
 
 export default classNameService;

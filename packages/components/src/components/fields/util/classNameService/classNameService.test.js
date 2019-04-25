@@ -4,7 +4,7 @@ import classNameService, {
 	FILTER_FIELD_LABEL_CLASS_NAME,
 	FILTER_FIELD_SET_CLASS_NAME,
 	FILTER_FIELD_WRAPPER_CLASS_NAME,
-	cf1ClassNames, FILTER_FORM_ELEMENT_CLASS, FILTER_FORM_WRAPPER_CLASS
+	cf1ClassNames, FILTER_FORM_ELEMENT_CLASS, FILTER_FORM_WRAPPER_CLASS, FILTER_FORM_ROW_CLASS
 } from './classNameService'
 import {fieldClassNames} from "../fieldClassNames";
 import {fieldSetClassNames} from "../fieldSetClassNames";
@@ -29,8 +29,20 @@ describe( 'className service API', () => {
 		expect(value2).toEqual('ORIGINAL')
 	})
 });
-describe('classNameHooks', () => {
 
+describe( 'rest', () => {
+	it( 'resets', () => {
+		const OTHER_FILTER = 'random';
+		classNameService.addFilter(FILTER_FORM_ROW_CLASS, TEST_CONSUMER, () => 'A1');
+		classNameService.addFilter(OTHER_FILTER, TEST_CONSUMER, () => 'A2');
+		classNameService.reset();
+		expect( classNameService.getFormRowClassNames('111') ).toEqual( 'caldera-row');
+		expect( classNameService.applyFilters(OTHER_FILTER, 11 ) ).toEqual(11);
+
+
+	});
+})
+describe('classNameHooks', () => {
 	beforeEach( () => {
 		Object.keys(cf1ClassNames).forEach(filter => classNameService.removeAllFilters(filter) );
 	});
