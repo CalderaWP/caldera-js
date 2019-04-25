@@ -47,7 +47,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
     </label>
   </div>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="selection-hats__help"
   >
     selection of hats

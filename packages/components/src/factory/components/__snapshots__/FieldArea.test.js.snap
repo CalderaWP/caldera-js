@@ -24,7 +24,7 @@ exports[`FieldArea component Creates a text field 1`] = `
       value="roy"
     />
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="firstName__help"
     >
       your first name
@@ -72,7 +72,7 @@ exports[`FieldArea component Creates an select field 1`] = `
       </option>
     </select>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="selectFieldId__help"
     >
       Select field description
@@ -105,7 +105,7 @@ exports[`FieldArea component Shows errors 1`] = `
       value="roy"
     />
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="firstName__help"
     >
       your first name

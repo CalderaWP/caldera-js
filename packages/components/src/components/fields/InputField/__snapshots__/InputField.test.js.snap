@@ -18,7 +18,7 @@ exports[`InputField  matches snapshot with all props 1`] = `
     value="Roy"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="undefined__help"
   >
     Say Hi

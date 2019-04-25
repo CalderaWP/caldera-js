@@ -5,13 +5,17 @@ import React, {useState, useEffect, Fragment} from 'react';
 import { RingLoader,PacmanLoader } from 'react-spinners';
 
 import PropTypes from "prop-types";
+import setCf1ClassNames from "./setCf1ClassNames";
 
 /**
- *
+ * A Caldera Form designed to be processed against Caldera Forms' cf2 REST API.
  * @param apiRootUri
  * @param formConfig
  * @param axios
  * @param _tokens
+ * @param onChange
+ * @param onBlur
+ * @param useCf1ClassNames
  * @return {*}
  * @constructor
  */
@@ -23,6 +27,7 @@ export const CF2Form = (
 		_tokens,
 		onChange,
 		onBlur,
+		useCf1ClassNames
 	}
 ) => {
 
@@ -58,6 +63,17 @@ export const CF2Form = (
 
 
 	}, [tokensFetched]);
+
+	/**
+	 * Setup class service when mounting, if needed
+	 */
+	useEffect(() => {
+
+		if( useCf1ClassNames ){
+			setCf1ClassNames();
+		}
+
+	}, [useCf1ClassNames]);
 
 	if (hideForm) {
 		return (
@@ -104,6 +120,8 @@ export const CF2Form = (
 		)
 
 	};
+
+
 	return (
 		<Fragment>
 			{tokensFetched ?
@@ -115,8 +133,11 @@ export const CF2Form = (
 
 }
 
-CF2Form.propTypes = {...CalderaForm.propTypes};
+CF2Form.propTypes = {
+	...CalderaForm.propTypes,
+	useCf1ClassNames: PropTypes.bool
+};
 
 const noop = () => {
 };
-CF2Form.defaultProps = {...CalderaForm.defaultProps};
+CF2Form.defaultProps = {...CalderaForm.defaultProps,useCf1ClassNames:false};

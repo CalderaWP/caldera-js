@@ -17,7 +17,7 @@ exports[`Select Field component matches snapshot 1`] = `
     value="Send Message"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="button__help"
   >
     Click to sendu

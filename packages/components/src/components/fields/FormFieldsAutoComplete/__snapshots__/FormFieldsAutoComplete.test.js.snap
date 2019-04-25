@@ -22,7 +22,7 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
     }
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="autoComplete1__help"
   >
     Help text
@@ -52,7 +52,7 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
     }
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="autoComplete1__help"
   >
     Help text

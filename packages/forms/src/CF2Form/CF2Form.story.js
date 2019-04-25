@@ -69,3 +69,18 @@ storiesOf('CF2 Form').add('Forms', () => (
 	</div>
 
 ));
+
+storiesOf('CF2 Form').add('With CF1 class names', () => (
+	<div>
+		<CF2Form
+			formConfig={form}
+			axios={axios}
+			_tokens={{
+				_cf_verify: 'a',
+				_sessionPublicKey: 'b'
+			}}
+			useCf1ClassNames={true}
+		/>
+	</div>
+
+));

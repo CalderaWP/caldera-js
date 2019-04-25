@@ -24,7 +24,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
       value="roy"
     />
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="firstName__help"
     >
       your first name
@@ -72,7 +72,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
       </option>
     </select>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="selectFieldId__help"
     >
       Select field description
@@ -107,7 +107,7 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
       }
     />
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="autoComplete1__help"
     >
       Help text
@@ -143,7 +143,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
       value="The content of text area"
     />
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="textArea1__help"
     >
       your first name
@@ -207,7 +207,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
       />
     </div>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="toggleFieldLabel__help"
     >
       Toggle field description

@@ -22,7 +22,7 @@ exports[`Field component Creates a number field 1`] = `
     value={3}
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="numberFieldId__help"
   >
     Number field description
@@ -50,7 +50,7 @@ exports[`Field component Creates a text field 1`] = `
     value="roy"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="firstName__help"
   >
     your first name
@@ -114,7 +114,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
        
     </label>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="opt-2__help"
     >
       The Second Option
@@ -168,7 +168,7 @@ exports[`Field component Creates an email field 1`] = `
     value="emai@email.com"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="emailFieldId__help"
   >
     Email field description
@@ -211,7 +211,7 @@ exports[`Field component Creates an select field 1`] = `
     </option>
   </select>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="selectFieldId__help"
   >
     Select field description
@@ -254,7 +254,7 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
     </option>
   </select>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="selectFieldId__help"
   >
     Select field description

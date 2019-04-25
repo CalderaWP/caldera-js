@@ -56,7 +56,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
        
     </label>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="opt-2__help"
     >
       The Second Option
@@ -111,7 +111,7 @@ exports[`fieldFactory Creates a number field 1`] = `
     value={3}
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="numberFieldId__help"
   >
     Number field description
@@ -184,7 +184,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
     </label>
   </div>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="radioFieldLabel__help"
   >
     Radio field description
@@ -209,7 +209,7 @@ exports[`fieldFactory Creates a submit button 1`] = `
     value="Click Me"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="clickButton__help"
   >
     your first name
@@ -237,7 +237,7 @@ exports[`fieldFactory Creates a text field 1`] = `
     value="roy"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="firstName__help"
   >
     your first name
@@ -267,7 +267,7 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
     }
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="autoComplete1__help"
   >
     Help text
@@ -304,7 +304,7 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
     </span>
   </label>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="checkboxFieldLabel__help"
   >
     Checkbox field description
@@ -368,7 +368,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
        
     </label>
     <p
-      className="caldera-control__help"
+      className="caldera-control__help description"
       id="opt-2__help"
     >
       The Second Option
@@ -422,7 +422,7 @@ exports[`fieldFactory Creates an email field 1`] = `
     value="emai@email.com"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="emailFieldId__help"
   >
     Email field description
@@ -447,7 +447,7 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
     value="roy"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="firstName__help"
   >
     your first name
@@ -490,7 +490,7 @@ exports[`fieldFactory Creates an select field 1`] = `
     </option>
   </select>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="selectFieldId__help"
   >
     Select field description
@@ -533,7 +533,7 @@ exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
     </option>
   </select>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="selectFieldId__help"
   >
     Select field description
@@ -564,7 +564,7 @@ exports[`fieldFactory should create textarea 1`] = `
     value="The content of text area"
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="textArea1__help"
   >
     your first name
@@ -623,7 +623,7 @@ exports[`fieldFactory should create toggle 1`] = `
     />
   </div>
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="toggleFieldLabel__help"
   >
     Toggle field description

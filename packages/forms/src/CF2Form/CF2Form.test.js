@@ -56,6 +56,12 @@ describe( 'CF2Form', () => {
 		conditionals: []
 	};
 
+	it( 'Matches snapshot with cf2 classnames used', () => {
+		expect(render(<CF2Form formConfig={formConfig} axios={axios} useCf1ClassNames={true} _tokens={{
+			_cf_verify: 'a',
+			_sessionPublicKey: 'b'
+		}}/>)).toMatchSnapshot();
+	});
 
 	it.skip( 'Matches snapshot', () => {
 		expect(render(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();

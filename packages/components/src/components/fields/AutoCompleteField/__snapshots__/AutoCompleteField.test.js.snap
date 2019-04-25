@@ -16,7 +16,7 @@ exports[`AutoCompleteField should match snapshot 1`] = `
     onChange={[Function]}
   />
   <p
-    className="caldera-control__help"
+    className="caldera-control__help description"
     id="auto-complete-hats__help"
   >
     selection of hats

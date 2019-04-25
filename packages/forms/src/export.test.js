@@ -8,6 +8,7 @@ import {
 	useCf2FormTokens,
 	handleFormSubmitCf2,
 	CF2Form,
+	setCf1ClassNames
 } from '@calderajs/forms';
 
 
@@ -43,5 +44,9 @@ describe('Exports', () => {
 	it('exports CF2Form', () => {
 		expect(typeof CF2Form).toBe('function');
 	});
+	it('exports setCf1ClassNames', () => {
+		expect(typeof setCf1ClassNames).toBe('function');
+	});
+
 
 });
