@@ -1,10 +1,12 @@
 import {
 	classNameService,
 	cf1ClassNames,
+	FILTER_FORM_COLUMN_PREFIX,
 	FILTER_FORM_COLUMN_CLASS,
 	FILTER_FORM_ELEMENT_CLASS
 } from '@calderajs/components';
 
+const IDENTIFIER = 'cf1-classes';
 
 /**
  * Sets all form classes to match Caldera Forms 1.x
@@ -14,9 +16,13 @@ import {
 export default function setCf1ClassNames(){
 	classNameService.reset();
 	Object.keys(cf1ClassNames).map( filterName => {
-		classNameService.addFilter(filterName, 'cf1-classes', () => {
+		classNameService.addFilter(filterName, IDENTIFIER, () => {
 			return cf1ClassNames[filterName]
 		});
+	});
+
+	classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, IDENTIFIER, (prefix,columnId) => {
+		return 'col-sm-';
 	});
 
 

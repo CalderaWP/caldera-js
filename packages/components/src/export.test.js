@@ -28,7 +28,8 @@ import {
 	FILTER_FIELD_WRAPPER_CLASS_NAME,
 	FILTER_FORM_ELEMENT_CLASS,
 	FILTER_FORM_WRAPPER_CLASS,
-	FILTER_FORM_COLUMN_CLASS
+	FILTER_FORM_COLUMN_CLASS,
+	FILTER_FORM_COLUMN_PREFIX
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -109,6 +110,7 @@ describe('exports factory', () => {
 	it( 'exports filter constants', () => {
 		[
 			CLASS_NAME_HOOKS,
+			FILTER_FORM_COLUMN_PREFIX,
 			FILTER_FIELD_CLASS_NAME,
 			FILTER_FIELD_LABEL_CLASS_NAME,
 			FILTER_FIELD_SET_CLASS_NAME,

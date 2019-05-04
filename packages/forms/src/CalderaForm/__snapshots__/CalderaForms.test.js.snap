@@ -12,7 +12,7 @@ exports[`Caldera Forms Forms 1`] = `
       className="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
     >
       <div
-        className="caldera-column sc-bdVaJa iHZvIS"
+        className="caldera-column width-1 sc-bdVaJa iHZvIS"
         id="1aaaaa"
       >
         <div
@@ -23,6 +23,7 @@ exports[`Caldera Forms Forms 1`] = `
             className="caldera-field-wrapper caldera-field-wrapper-email"
           >
             <label
+              className="caldera-field-label caldera-field-label-email"
               htmlFor="emailFieldId"
             >
               Email Field Label
@@ -38,7 +39,7 @@ exports[`Caldera Forms Forms 1`] = `
               type="email"
             />
             <p
-              className="caldera-control__help"
+              className="caldera-control__help description"
               id="emailFieldId__help"
             >
               Email field description
@@ -47,7 +48,7 @@ exports[`Caldera Forms Forms 1`] = `
         </div>
       </div>
       <div
-        className="caldera-column sc-bdVaJa iHZvIS"
+        className="caldera-column width-1 sc-bdVaJa iHZvIS"
         id="1b"
       >
         <div
@@ -58,6 +59,7 @@ exports[`Caldera Forms Forms 1`] = `
             className="caldera-field-wrapper caldera-field-wrapper-text"
           >
             <label
+              className="caldera-field-label caldera-field-label-text"
               htmlFor="firstName"
             >
               First Name
@@ -72,7 +74,7 @@ exports[`Caldera Forms Forms 1`] = `
               type="text"
             />
             <p
-              className="caldera-control__help"
+              className="caldera-control__help description"
               id="firstName__help"
             >
               your first name

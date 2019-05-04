@@ -109,7 +109,7 @@ Object {
             class="sc-bdVaJa caldera-form-row row sc-bwzfXH pjOvZ"
           >
             <div
-              class="sm--undefined sc-bdVaJa iHZvIS"
+              class=" col-sm-1 sc-bdVaJa iHZvIS"
               id="r2-fld_7908577"
             >
               <div
@@ -123,6 +123,7 @@ Object {
                     class="control-label"
                     for="fld_7908577"
                   >
+                    
                      
                   </label>
                   <input
@@ -150,7 +151,7 @@ Object {
           class="sc-bdVaJa caldera-form-row row sc-bwzfXH pjOvZ"
         >
           <div
-            class="sm--undefined sc-bdVaJa iHZvIS"
+            class=" col-sm-1 sc-bdVaJa iHZvIS"
             id="r2-fld_7908577"
           >
             <div
@@ -164,6 +165,7 @@ Object {
                   class="control-label"
                   for="fld_7908577"
                 >
+                  
                    
                 </label>
                 <input

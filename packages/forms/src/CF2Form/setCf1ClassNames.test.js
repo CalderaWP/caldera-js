@@ -28,9 +28,9 @@ describe( 'setCf1ClassNames', () => {
 	it( 'handles column classes', () => {
 		setCf1ClassNames();
 
-		expect( classNameService.applyFilters(FILTER_FORM_COLUMN_CLASS, 'a') ).toBe(111);
-		expect(classNameService.getFormColumnClassNames('1', '12')).toBe('col-sm-12');
-		expect(classNameService.getFormColumnClassNames('1', '2')).toBe('col-sm-112');
+		expect(classNameService.getFormColumnClassNames('1', '1')).toBe(' col-sm-12');
+		expect(classNameService.getFormColumnClassNames('1', '1/2')).toBe(' col-sm-6');
+		expect(classNameService.getFormColumnClassNames('1', '1/3')).toBe(' col-sm-3');
 
 	});
 
