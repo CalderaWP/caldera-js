@@ -33,13 +33,6 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="checkboxFieldLabel"
-    >
-      Checkbox Labe
-       
-    </label>
     <input
       aria-describedby="checkboxFieldLabel__help"
       checked={true}
@@ -50,13 +43,11 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
        
-      <span>
-        *
-      </span>
     </label>
     <p
       className="caldera-control__help description"
@@ -81,13 +72,6 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
-      <label
-        className="caldera-field-label caldera-field-label-checkbox"
-        htmlFor="opt-1"
-      >
-        One
-         
-      </label>
       <input
         checked={false}
         className="caldera-field caldera-field-checkbox"
@@ -97,6 +81,7 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-1"
       >
         One
@@ -106,13 +91,6 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
-      <label
-        className="caldera-field-label caldera-field-label-checkbox"
-        htmlFor="opt-2"
-      >
-        Two
-         
-      </label>
       <input
         aria-describedby="opt-2__help"
         checked={true}
@@ -123,6 +101,7 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-2"
       >
         Two
@@ -138,13 +117,6 @@ exports[`Fields component Creates all five fields 1`] = `
     <div
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
-      <label
-        className="caldera-field-label caldera-field-label-checkbox"
-        htmlFor="opt-3"
-      >
-        Three
-         
-      </label>
       <input
         checked={false}
         className="caldera-field caldera-field-checkbox"
@@ -154,6 +126,7 @@ exports[`Fields component Creates all five fields 1`] = `
         value="1"
       />
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-3"
       >
         Three
@@ -205,13 +178,6 @@ exports[`Fields component Creates all five fields 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="checkboxFieldLabel"
-    >
-      Checkbox Labe
-       
-    </label>
     <input
       aria-describedby="checkboxFieldLabel__help"
       checked={true}
@@ -222,13 +188,11 @@ exports[`Fields component Creates all five fields 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
        
-      <span>
-        *
-      </span>
     </label>
     <p
       className="caldera-control__help description"

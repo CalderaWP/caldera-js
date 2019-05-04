@@ -70,13 +70,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-1"
-    >
-      One
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -86,6 +79,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -95,13 +89,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-2"
-    >
-      Two
-       
-    </label>
     <input
       aria-describedby="opt-2__help"
       checked={true}
@@ -112,6 +99,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -127,13 +115,6 @@ exports[`Field component Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-3"
-    >
-      Three
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -143,6 +124,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three

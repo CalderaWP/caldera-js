@@ -36,7 +36,9 @@ export const InputField = (
 				label={label}
 				id={fieldId}
 				help={description}
-				className={''}>
+				className={''}
+				labelBefore={false}
+			>
 				<input
 					id={fieldId}
 					className={fieldClassNames(fieldType)}
@@ -49,12 +51,6 @@ export const InputField = (
 					aria-describedby={!!description ? fieldId + '__help' : undefined}
 					{..._attributes}
 				/>
-				<FieldLabel
-					fieldId={fieldId}
-					required={required}
-				>
-					{label}
-				</FieldLabel>
 			</BaseControl>
 		);
 	} else {

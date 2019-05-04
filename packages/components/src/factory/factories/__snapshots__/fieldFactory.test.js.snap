@@ -10,13 +10,6 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-1"
-    >
-      One
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -26,6 +19,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -35,13 +29,6 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-2"
-    >
-      Two
-       
-    </label>
     <input
       aria-describedby="opt-2__help"
       checked={true}
@@ -52,6 +39,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -67,13 +55,6 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-3"
-    >
-      Three
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -83,6 +64,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three
@@ -211,6 +193,7 @@ exports[`fieldFactory Creates a submit button 1`] = `
     className="caldera-field-label caldera-field-label-submit"
     htmlFor="clickButton"
   >
+    
      
   </label>
   <input
@@ -293,13 +276,6 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-checkbox"
 >
-  <label
-    className="caldera-field-label caldera-field-label-checkbox"
-    htmlFor="checkboxFieldLabel"
-  >
-    Checkbox Labe
-     
-  </label>
   <input
     aria-describedby="checkboxFieldLabel__help"
     checked={true}
@@ -310,13 +286,11 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
     value="1"
   />
   <label
+    className="caldera-field-label caldera-field-label-checkbox"
     htmlFor="checkboxFieldLabel"
   >
     Checkbox Labe
      
-    <span>
-      *
-    </span>
   </label>
   <p
     className="caldera-control__help description"
@@ -337,13 +311,6 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-1"
-    >
-      One
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -353,6 +320,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -362,13 +330,6 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-2"
-    >
-      Two
-       
-    </label>
     <input
       aria-describedby="opt-2__help"
       checked={true}
@@ -379,6 +340,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -394,13 +356,6 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
-    <label
-      className="caldera-field-label caldera-field-label-checkbox"
-      htmlFor="opt-3"
-    >
-      Three
-       
-    </label>
     <input
       checked={false}
       className="caldera-field caldera-field-checkbox"
@@ -410,6 +365,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
       value="1"
     />
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three
@@ -613,6 +569,7 @@ exports[`fieldFactory should create toggle 1`] = `
       className="caldera-field-label caldera-field-label-toggle"
       htmlFor="toggleFieldLabel"
     >
+      
        
     </label>
     <span

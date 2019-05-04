@@ -18,6 +18,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
       className="caldera-field-label caldera-field-label-toggle"
       htmlFor="t1"
     >
+      
        
     </label>
     <span

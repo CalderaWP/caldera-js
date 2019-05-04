@@ -178,6 +178,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
         className="caldera-field-label caldera-field-label-toggle"
         htmlFor="toggleFieldLabel"
       >
+        
          
       </label>
       <span

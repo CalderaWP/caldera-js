@@ -23,6 +23,7 @@ export const SubmitButton = (props) => {
 	const {disabled} = _attributes;
 	return (
 		<BaseControl
+			label={''}
 			id={fieldId}
 			help={description}
 			fieldType={'submit'}

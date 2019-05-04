@@ -65,6 +65,7 @@ class ToggleControl extends Component {
 
 		return (
 			<BaseControl
+				label={''}
 				fieldType={'toggle'}
 				id={ id }
 				help={ helpLabel }
