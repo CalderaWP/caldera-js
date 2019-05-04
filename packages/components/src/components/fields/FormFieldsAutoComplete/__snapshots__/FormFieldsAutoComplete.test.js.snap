@@ -5,6 +5,7 @@ exports[`FormFieldsAutoComplete Additional options merged in 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
   <label
+    className="caldera-field-label caldera-field-label-autocomplete"
     htmlFor="autoComplete1"
   >
     Options
@@ -35,6 +36,7 @@ exports[`FormFieldsAutoComplete Matches snapshot 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
   <label
+    className="caldera-field-label caldera-field-label-autocomplete"
     htmlFor="autoComplete1"
   >
     Options

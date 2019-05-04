@@ -4,7 +4,9 @@ exports[`TextAreaField  matches snapshot with all props 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-textarea"
 >
-  <label>
+  <label
+    className="caldera-field-label caldera-field-label-textarea"
+  >
     Hi Roy
      
   </label>

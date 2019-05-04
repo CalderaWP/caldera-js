@@ -21,6 +21,7 @@ describe('InputField  as checkbox field', () => {
 	it('Allows checkbox attributes', () => {
 		const component = mount(
 			<InputField
+				fieldId={'i11'}
 				label={'Can do thing'}
 				html5type={'checkbox'}
 				onChange={onChange}
@@ -37,6 +38,7 @@ describe('InputField  as checkbox field', () => {
 	it('Sets checked based on value prop', () => {
 		const component = mount(
 			<InputField
+				fieldId={'i11'}
 				label={'Can do thing'}
 				html5type={'checkbox'}
 				value={true}

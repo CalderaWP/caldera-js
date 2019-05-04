@@ -1,4 +1,5 @@
 import {createHooks} from '@wordpress/hooks';
+import {fractionToWidth} from "./fractionToWidth";
 
 /**
  * WordPress hooks instance to provide extensible naming for classes used in forms
@@ -18,6 +19,7 @@ export const FILTER_FORM_ELEMENT_CLASS = 'classNameHooksFormClass';
 export const FILTER_FORM_WRAPPER_CLASS = 'classNameHooksgridClass';
 export const FILTER_FORM_ROW_CLASS = 'classNameHooksRowClass';
 export const FILTER_FORM_COLUMN_CLASS = 'classNameHooksColumnsClass';
+export const FILTER_FORM_COLUMN_PREFIX = 'classNameHooksColumnPrefix';
 
 export const cf1ClassNames = {
 	[FILTER_FIELD_CLASS_NAME]: 'field-set',
@@ -27,6 +29,8 @@ export const cf1ClassNames = {
 	[FILTER_FORM_WRAPPER_CLASS]: 'caldera-grid',
 	[FILTER_FORM_ELEMENT_CLASS]: 'caldera_forms_form',
 	[FILTER_FORM_ROW_CLASS]: 'row',
+	[FILTER_FORM_COLUMN_CLASS]: '',
+
 };
 
 /**
@@ -61,12 +65,22 @@ classNameService.getFormRowClassNames = (rowId) => {
 
 /**
  * Get class name for column
+ * @return {*|void}
+ */
+classNameService.getFormColumnClassPrefix = (columnId) => {
+	return classNameService.applyFilters(FILTER_FORM_COLUMN_PREFIX, 'width-',columnId );
+};
+
+/**
+ * Get class name for column
  * @param columnId
  * @param width
  * @return {*|void}
  */
 classNameService.getFormColumnClassNames = (columnId, width) => {
-	return classNameService.applyFilters(FILTER_FORM_ELEMENT_CLASS, `caldera-column`);
+	const className = classNameService.applyFilters(FILTER_FORM_COLUMN_CLASS, 'caldera-column');
+	const prefix = classNameService.getFormColumnClassPrefix(columnId);
+	return `${className} ${prefix}${fractionToWidth( width )}`;
 };
 
 /**

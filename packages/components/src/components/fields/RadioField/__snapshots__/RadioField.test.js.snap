@@ -5,6 +5,7 @@ exports[`RadioField Field component matches snapshot 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-radio"
 >
   <label
+    className="caldera-field-label caldera-field-label-radio"
     htmlFor="selection-hats"
   >
     Select A Hat!

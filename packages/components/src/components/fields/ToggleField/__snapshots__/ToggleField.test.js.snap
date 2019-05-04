@@ -4,14 +4,19 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
-  <label>
+  <label
+    className="caldera-field-label caldera-field-label-select"
+    htmlFor="t1"
+  >
     Hi Roy
      
   </label>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-toggle"
   >
-    <label>
+    <label
+      className="caldera-field-label caldera-field-label-toggle"
+    >
        
     </label>
     <span
@@ -49,7 +54,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
   </div>
   <p
     className="caldera-control__help description"
-    id="undefined__help"
+    id="t1__help"
   >
     Say Hi
   </p>

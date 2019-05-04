@@ -12,6 +12,7 @@ describe('RadioField Field component', () => {
 	it('matches snapshot', () => {
 		const component = renderer.create(
 			<RadioField
+				fieldId={'r1'}
 				label={'Select A Hat!'}
 				description={'selection of hats'}
 				fieldId={'selection-hats'}
@@ -27,6 +28,7 @@ describe('RadioField Field component', () => {
 	it('Fires on change event', () => {
 		const component = mount(
 			<RadioField
+				fieldId={'r1'}
 				label={'Select A Hat'}
 				onChange={onChange}
 				description={'selection of hats'}

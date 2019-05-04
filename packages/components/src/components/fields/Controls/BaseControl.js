@@ -8,6 +8,7 @@ function BaseControl( { id, label, help, className, children,fieldType } ) {
 		<FieldWrapper
 			fieldType={fieldType}>
 			<FieldLabel
+				className={labelClassNames(fieldType)}
 				fieldId={id}
 			>
 				{label}

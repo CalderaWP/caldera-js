@@ -4,6 +4,8 @@ import classNameService, {
 	FILTER_FIELD_LABEL_CLASS_NAME,
 	FILTER_FIELD_SET_CLASS_NAME,
 	FILTER_FIELD_WRAPPER_CLASS_NAME,
+	FILTER_FORM_COLUMN_CLASS,
+	FILTER_FORM_COLUMN_PREFIX,
 	cf1ClassNames, FILTER_FORM_ELEMENT_CLASS, FILTER_FORM_WRAPPER_CLASS, FILTER_FORM_ROW_CLASS
 } from './classNameService'
 import {fieldClassNames} from "../fieldClassNames";
@@ -14,6 +16,12 @@ import {labelClassNames} from "../labelClassNames";
 const TEST_CONSUMER = 'namespace';
 
 describe( 'className service API', () => {
+
+	afterEach( () => {
+		classNameService.reset();
+	});
+
+
 	it('filters work as expected', () => {
 		classNameService.addFilter('headerPath', TEST_CONSUMER, () => 'ALT!');
 		const headerPath = classNameService.applyFilters('headerPath', './Header');
@@ -45,6 +53,10 @@ describe( 'rest', () => {
 describe('classNameHooks', () => {
 	beforeEach( () => {
 		Object.keys(cf1ClassNames).forEach(filter => classNameService.removeAllFilters(filter) );
+	});
+
+	afterEach( () => {
+		classNameService.reset();
 	});
 
 	it('filters work as expected', () => {
@@ -86,6 +98,40 @@ describe('classNameHooks', () => {
 		expect(classNameService.getFormElementClassNames('')).toBe(cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
 	});
 
+
+
+});
+
+
+describe( 'column class names with width', () => {
+	beforeEach( () => {
+		Object.keys(cf1ClassNames).forEach(filter => classNameService.removeAllFilters(filter) );
+		classNameService.reset();
+	});
+	afterEach( () => {
+		classNameService.reset();
+	});
+
+	it( 'Filters column prefix', () => {
+		classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, TEST_CONSUMER, () => {
+			return `p-`
+		});
+		expect(classNameService.getFormColumnClassPrefix()).toBe('p-');
+	});
+
+	it( 'Prefixes column class name', () => {
+		classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, TEST_CONSUMER, () => {
+			return `p-`
+		});
+		expect(classNameService.getFormColumnClassNames('c1', '1/2')).toBe('caldera-column p-6');
+	});
+
+	it( 'can use width in column prefix', () => {
+		classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, TEST_CONSUMER, (prefix,columnId) => {
+			return `${prefix}-${columnId}`
+		});
+		expect(classNameService.getFormColumnClassNames('c1', '1')).toBe('caldera-column width--c112');
+	})
 
 });
 

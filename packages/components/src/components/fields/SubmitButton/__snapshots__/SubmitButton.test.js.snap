@@ -5,6 +5,7 @@ exports[`Select Field component matches snapshot 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-submit"
 >
   <label
+    className="caldera-field-label caldera-field-label-submit"
     htmlFor="button"
   >
      

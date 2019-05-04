@@ -9,6 +9,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
     <label
+      className="caldera-field-label caldera-field-label-text"
       htmlFor="firstName"
     >
       First Name
@@ -42,6 +43,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
     <label
+      className="caldera-field-label caldera-field-label-select"
       htmlFor="selectFieldId"
     >
       Select Field Label
@@ -90,6 +92,7 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
   >
     <label
+      className="caldera-field-label caldera-field-label-autocomplete"
       htmlFor="autoComplete1"
     >
       Options
@@ -125,6 +128,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-textarea"
   >
     <label
+      className="caldera-field-label caldera-field-label-textarea"
       htmlFor="textArea1"
     >
       Your message
@@ -161,6 +165,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
     <label
+      className="caldera-field-label caldera-field-label-select"
       htmlFor="toggleFieldLabel"
     >
       Toggle Label
@@ -169,7 +174,9 @@ exports[`fieldAreaFactory should create toggle 1`] = `
     <div
       className="caldera-field-wrapper caldera-field-wrapper-toggle"
     >
-      <label>
+      <label
+        className="caldera-field-label caldera-field-label-toggle"
+      >
          
       </label>
       <span

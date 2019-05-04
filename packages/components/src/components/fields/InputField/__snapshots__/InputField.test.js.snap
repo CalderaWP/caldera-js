@@ -4,13 +4,17 @@ exports[`InputField  matches snapshot with all props 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >
-  <label>
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="i11"
+  >
     Hi Roy
      
   </label>
   <input
-    aria-describedby="undefined__help"
+    aria-describedby="i11__help"
     className="caldera-field caldera-field-text"
+    id="i11"
     onBlur={[MockFunction]}
     onChange={[Function]}
     placeholder="Hello"
@@ -19,7 +23,7 @@ exports[`InputField  matches snapshot with all props 1`] = `
   />
   <p
     className="caldera-control__help description"
-    id="undefined__help"
+    id="i11__help"
   >
     Say Hi
   </p>

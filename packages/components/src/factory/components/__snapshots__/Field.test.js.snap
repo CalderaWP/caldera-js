@@ -5,6 +5,7 @@ exports[`Field component Creates a number field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-number"
 >
   <label
+    className="caldera-field-label caldera-field-label-number"
     htmlFor="numberFieldId"
   >
     Number Field Label
@@ -35,6 +36,7 @@ exports[`Field component Creates a text field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >
   <label
+    className="caldera-field-label caldera-field-label-text"
     htmlFor="firstName"
   >
     First Name
@@ -69,6 +71,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -93,6 +96,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -124,6 +128,7 @@ exports[`Field component Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three
@@ -152,6 +157,7 @@ exports[`Field component Creates an email field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-email"
 >
   <label
+    className="caldera-field-label caldera-field-label-email"
     htmlFor="emailFieldId"
   >
     Email Field Label
@@ -181,6 +187,7 @@ exports[`Field component Creates an select field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
+    className="caldera-field-label caldera-field-label-select"
     htmlFor="selectFieldId"
   >
     Select Field Label
@@ -224,6 +231,7 @@ exports[`Field component Creates an select field identified as dropdown 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
+    className="caldera-field-label caldera-field-label-select"
     htmlFor="selectFieldId"
   >
     Select Field Label

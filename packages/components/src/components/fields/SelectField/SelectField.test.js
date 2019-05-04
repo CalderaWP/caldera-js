@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
 import { SelectField } from './SelectField';
+import {RadioField} from "../../..";
 
 describe('Select Field component', () => {
 	let onChange;
@@ -12,6 +13,7 @@ describe('Select Field component', () => {
 	it('matches snapshot, not multiple', () => {
 		const component = renderer.create(
 			<SelectField
+				fieldId={'s1'}
 				label={'Select A Hat!'}
 				description={'selection of hats'}
 				fieldId={'selection-hats'}
@@ -25,6 +27,7 @@ describe('Select Field component', () => {
 	it('Fires on change event', () => {
 		const component = mount(
 			<SelectField
+				fieldId={'s1'}
 				label={'Select A Hat'}
 				onChange={onChange}
 				description={'selection of hats'}

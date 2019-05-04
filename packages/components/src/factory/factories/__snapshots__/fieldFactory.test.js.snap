@@ -11,6 +11,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -35,6 +36,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -66,6 +68,7 @@ exports[`fieldFactory Creates a checkbox fieldset 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three
@@ -94,6 +97,7 @@ exports[`fieldFactory Creates a number field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-number"
 >
   <label
+    className="caldera-field-label caldera-field-label-number"
     htmlFor="numberFieldId"
   >
     Number Field Label
@@ -124,6 +128,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-radio"
 >
   <label
+    className="caldera-field-label caldera-field-label-radio"
     htmlFor="radioFieldLabel"
   >
     Radio Field Label
@@ -197,6 +202,7 @@ exports[`fieldFactory Creates a submit button 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-submit"
 >
   <label
+    className="caldera-field-label caldera-field-label-submit"
     htmlFor="clickButton"
   >
      
@@ -222,6 +228,7 @@ exports[`fieldFactory Creates a text field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >
   <label
+    className="caldera-field-label caldera-field-label-text"
     htmlFor="firstName"
   >
     First Name
@@ -250,6 +257,7 @@ exports[`fieldFactory Creates an autocomplete field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
   <label
+    className="caldera-field-label caldera-field-label-autocomplete"
     htmlFor="autoComplete1"
   >
     Options
@@ -280,6 +288,7 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-checkbox"
 >
   <label
+    className="caldera-field-label caldera-field-label-checkbox"
     htmlFor="checkboxFieldLabel"
   >
     Checkbox Labe
@@ -323,6 +332,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-1"
     >
       One
@@ -347,6 +357,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-2"
     >
       Two
@@ -378,6 +389,7 @@ exports[`fieldFactory Creates an checkbox field set 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="opt-3"
     >
       Three
@@ -406,6 +418,7 @@ exports[`fieldFactory Creates an email field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-email"
 >
   <label
+    className="caldera-field-label caldera-field-label-email"
     htmlFor="emailFieldId"
   >
     Email Field Label
@@ -435,6 +448,7 @@ exports[`fieldFactory Creates an fields-autocomplete field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
 >
   <label
+    className="caldera-field-label caldera-field-label-autocomplete"
     htmlFor="firstName"
   >
     First Name
@@ -460,6 +474,7 @@ exports[`fieldFactory Creates an select field 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
+    className="caldera-field-label caldera-field-label-select"
     htmlFor="selectFieldId"
   >
     Select Field Label
@@ -503,6 +518,7 @@ exports[`fieldFactory Creates an select field identified as dropdown 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
+    className="caldera-field-label caldera-field-label-select"
     htmlFor="selectFieldId"
   >
     Select Field Label
@@ -546,6 +562,7 @@ exports[`fieldFactory should create textarea 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-textarea"
 >
   <label
+    className="caldera-field-label caldera-field-label-textarea"
     htmlFor="textArea1"
   >
     Your message
@@ -577,6 +594,7 @@ exports[`fieldFactory should create toggle 1`] = `
   className="caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
+    className="caldera-field-label caldera-field-label-select"
     htmlFor="toggleFieldLabel"
   >
     Toggle Label
@@ -585,7 +603,9 @@ exports[`fieldFactory should create toggle 1`] = `
   <div
     className="caldera-field-wrapper caldera-field-wrapper-toggle"
   >
-    <label>
+    <label
+      className="caldera-field-label caldera-field-label-toggle"
+    >
        
     </label>
     <span

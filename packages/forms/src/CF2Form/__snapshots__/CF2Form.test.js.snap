@@ -109,7 +109,7 @@ Object {
             class="sc-bdVaJa caldera-form-row row sc-bwzfXH pjOvZ"
           >
             <div
-              class="caldera_forms_form sc-bdVaJa iHZvIS"
+              class="sm--undefined sc-bdVaJa iHZvIS"
               id="r2-fld_7908577"
             >
               <div
@@ -120,6 +120,7 @@ Object {
                   class="form-group"
                 >
                   <label
+                    class="control-label"
                     for="fld_7908577"
                   >
                      
@@ -149,7 +150,7 @@ Object {
           class="sc-bdVaJa caldera-form-row row sc-bwzfXH pjOvZ"
         >
           <div
-            class="caldera_forms_form sc-bdVaJa iHZvIS"
+            class="sm--undefined sc-bdVaJa iHZvIS"
             id="r2-fld_7908577"
           >
             <div
@@ -160,6 +161,7 @@ Object {
                 class="form-group"
               >
                 <label
+                  class="control-label"
                   for="fld_7908577"
                 >
                    

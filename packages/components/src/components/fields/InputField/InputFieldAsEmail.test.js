@@ -22,6 +22,7 @@ describe('InputField  as email field', () => {
 	it('Allows email attributes', () => {
 		const component = mount(
 			<InputField
+				fieldId={'i11'}
 				label={'Email addresses'}
 				html5type={'email'}
 				value={'roy@hiroy.club'}

@@ -16,6 +16,7 @@ describe('ToggleField ', () => {
 	it('matches snapshot with all props', () => {
 		const component = renderer.create(
 			<ToggleField
+				fieldId={'t1'}
 				label={'Hi Roy'}
 				description={'Say Hi'}
 				value={'Roy'}
@@ -29,6 +30,7 @@ describe('ToggleField ', () => {
 	it('Changes calls change handler', () => {
 		const component = mount(
 			<ToggleField
+				fieldId={'t2'}
 				label={'Hi Roy'}
 				description={'Say Hi'}
 				placeholder={'Hello'}

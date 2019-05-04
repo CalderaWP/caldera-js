@@ -9,6 +9,7 @@ exports[`FieldArea component Creates a text field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
     <label
+      className="caldera-field-label caldera-field-label-text"
       htmlFor="firstName"
     >
       First Name
@@ -42,6 +43,7 @@ exports[`FieldArea component Creates an select field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
     <label
+      className="caldera-field-label caldera-field-label-select"
       htmlFor="selectFieldId"
     >
       Select Field Label
@@ -90,6 +92,7 @@ exports[`FieldArea component Shows errors 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
     <label
+      className="caldera-field-label caldera-field-label-text"
       htmlFor="firstName"
     >
       First Name

@@ -22,6 +22,7 @@ describe('InputField  as number', () => {
 	it('Allows min, max and step attributes', () => {
 		const component = mount(
 			<InputField
+				fieldId={'i11'}
 				label={'Number of Roys'}
 				html5type={'number'}
 				value={5}

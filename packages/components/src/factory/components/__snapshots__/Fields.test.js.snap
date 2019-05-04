@@ -8,6 +8,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
     <label
+      className="caldera-field-label caldera-field-label-text"
       htmlFor="firstName"
     >
       First Name
@@ -33,6 +34,7 @@ exports[`Fields component Creates a text and checkbox field field 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
@@ -80,6 +82,7 @@ exports[`Fields component Creates all five fields 1`] = `
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-1"
       >
         One
@@ -104,6 +107,7 @@ exports[`Fields component Creates all five fields 1`] = `
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-2"
       >
         Two
@@ -135,6 +139,7 @@ exports[`Fields component Creates all five fields 1`] = `
       className="caldera-field-wrapper caldera-field-wrapper-checkbox"
     >
       <label
+        className="caldera-field-label caldera-field-label-checkbox"
         htmlFor="opt-3"
       >
         Three
@@ -160,6 +165,7 @@ exports[`Fields component Creates all five fields 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
     <label
+      className="caldera-field-label caldera-field-label-select"
       htmlFor="selectFieldId"
     >
       Select Field Label
@@ -200,6 +206,7 @@ exports[`Fields component Creates all five fields 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-checkbox"
   >
     <label
+      className="caldera-field-label caldera-field-label-checkbox"
       htmlFor="checkboxFieldLabel"
     >
       Checkbox Labe
@@ -234,6 +241,7 @@ exports[`Fields component Creates all five fields 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-number"
   >
     <label
+      className="caldera-field-label caldera-field-label-number"
       htmlFor="numberFieldId"
     >
       Number Field Label
@@ -261,6 +269,7 @@ exports[`Fields component Creates all five fields 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
     <label
+      className="caldera-field-label caldera-field-label-text"
       htmlFor="firstName"
     >
       First Name
@@ -286,6 +295,7 @@ exports[`Fields component Creates all five fields 1`] = `
     className="caldera-field-wrapper caldera-field-wrapper-email"
   >
     <label
+      className="caldera-field-label caldera-field-label-email"
       htmlFor="emailFieldId"
     >
       Email Field Label

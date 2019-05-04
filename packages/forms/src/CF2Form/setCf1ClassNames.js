@@ -1,6 +1,8 @@
 import {
 	classNameService,
 	cf1ClassNames,
+	FILTER_FORM_COLUMN_CLASS,
+	FILTER_FORM_ELEMENT_CLASS
 } from '@calderajs/components';
 
 
@@ -16,6 +18,12 @@ export default function setCf1ClassNames(){
 			return cf1ClassNames[filterName]
 		});
 	});
+
+
+
+	/**
+	 * Remove all filters
+	 */
 	const reset = () => {
 		Object.keys(cf1ClassNames).map( filterName => {
 			classNameService.removeAllFilters(filterName);
