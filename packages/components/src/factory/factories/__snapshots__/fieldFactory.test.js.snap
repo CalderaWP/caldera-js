@@ -93,6 +93,7 @@ exports[`fieldFactory Creates a number field 1`] = `
     min={1}
     onBlur={[Function]}
     onChange={[Function]}
+    required={true}
     type="number"
     value={3}
   />
@@ -126,6 +127,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       id="radioFieldLabel-0"
       name="radioFieldLabel"
       onChange={[Function]}
+      required={true}
       type="radio"
       value={0}
     />
@@ -146,6 +148,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       id="radioFieldLabel-1"
       name="radioFieldLabel"
       onChange={[Function]}
+      required={true}
       type="radio"
       value={1}
     />
@@ -166,6 +169,7 @@ exports[`fieldFactory Creates a radio field 1`] = `
       id="radioFieldLabel-2"
       name="radioFieldLabel"
       onChange={[Function]}
+      required={true}
       type="radio"
       value={2}
     />
@@ -282,6 +286,7 @@ exports[`fieldFactory Creates an checkbox field field 1`] = `
     className="caldera-field caldera-field-checkbox"
     id="checkboxFieldLabel"
     onChange={[Function]}
+    required={true}
     type="checkbox"
     value="1"
   />
@@ -393,6 +398,7 @@ exports[`fieldFactory Creates an email field 1`] = `
     multiple={true}
     onBlur={[Function]}
     onChange={[Function]}
+    required={true}
     type="email"
     value="emai@email.com"
   />

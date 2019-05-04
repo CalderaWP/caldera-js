@@ -222,6 +222,8 @@ describe('fieldFactory', () => {
 		expect(component.find('input').prop('type')).toEqual('number');
 	});
 
+
+
 	test('Field can supply a component and will be provided with field config as props', () => {
 		const _Field = ({fieldId}) => (
 			<input id={fieldId} type={'number'} key={88}/>

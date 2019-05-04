@@ -154,6 +154,7 @@ exports[`HorizontalForm Matches snapshot 1`] = `
             className="caldera-field caldera-field-checkbox"
             id="checkboxFieldLabel"
             onChange={[Function]}
+            required={true}
             type="checkbox"
             value="1"
           />

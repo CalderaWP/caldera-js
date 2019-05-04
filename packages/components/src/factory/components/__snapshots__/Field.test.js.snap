@@ -19,6 +19,7 @@ exports[`Field component Creates a number field 1`] = `
     min={1}
     onBlur={[Function]}
     onChange={[Function]}
+    required={true}
     type="number"
     value={3}
   />
@@ -152,6 +153,7 @@ exports[`Field component Creates an email field 1`] = `
     multiple={true}
     onBlur={[Function]}
     onChange={[Function]}
+    required={true}
     type="email"
     value="emai@email.com"
   />

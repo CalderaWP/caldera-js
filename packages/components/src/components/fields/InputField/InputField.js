@@ -23,7 +23,7 @@ export const InputField = (
 		onBlur,
 		attributes,
 		children,
-		wrapperClassNames
+		wrapperClassNames,
 	}
 ) => {
 
@@ -39,6 +39,7 @@ export const InputField = (
 				help={description}
 				wrapperClassNames={wrapperClassNames}
 				labelBefore={false}
+				required={required}
 			>
 				<input
 					id={fieldId}

@@ -22,7 +22,7 @@ class CheckboxFieldSet extends React.Component {
 
 	constructor(props) {
 		super(props);
-		const {value,options} = props.field;
+		const {value, options} = props.field;
 		let checkboxValues = {};
 		if (Array.isArray(value)) {
 			options.map(option => {
@@ -35,17 +35,17 @@ class CheckboxFieldSet extends React.Component {
 		this.onChange = this.onChange.bind(this);
 	}
 
-	onChange(optionId,checked){
+	onChange(optionId, checked) {
 		let newValue = this.state.checkboxValues || {};
-		if( checked ){
+		if (checked) {
 			newValue[optionId] = true;
-		}else{
+		} else {
 			newValue[optionId] = false;
 		}
-		this.setState({checkboxValues:newValue})
+		this.setState({checkboxValues: newValue})
 		const update = [];
 		Object.keys(newValue).map(option => {
-			if( this.state.checkboxValues[option]){
+			if (this.state.checkboxValues[option]) {
 				update.push(option);
 			}
 		});
@@ -60,9 +60,10 @@ class CheckboxFieldSet extends React.Component {
 	}
 
 	render() {
-		const {field,onChange,wrapperClassNames} = this.props;
-		const {fieldId, label, fieldType, attributes, options,value} = field;
+		const {field, onChange, wrapperClassNames} = this.props;
+		const {fieldId, label, fieldType, attributes, options, value} = field;
 		const {checkboxValues} = this.state;
+
 		function remove(array, element) {
 			return array.filter(el => el !== element);
 		}
@@ -95,7 +96,7 @@ class CheckboxFieldSet extends React.Component {
 							html5type={'checkbox'}
 							attributes={attributes}
 							onChange={(checked) => {
-								this.onChange(optionId,checked);
+								this.onChange(optionId, checked);
 							}}
 						/>
 					);
@@ -119,18 +120,35 @@ CheckboxFieldSet.defaultProps = {
  * @param field
  * @param onChange
  * @param onBlur
+ * @param wrapperClassNames
+ * @param Message
  * @return {*}
  */
-export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,Message) => {
+export const fieldFactory = (field, onChange, onBlur, wrapperClassNames, Message) => {
 		const {
 			fieldType,
 			label,
-			attributes,
 			options,
 			fieldId,
 			messages,
-			render
+			render,
+			required,
+			isRequired
 		} = field;
+
+		let {attributes} = field;
+
+		function isFieldRequired() {
+			return required || isRequired;
+		}
+
+		if (!attributes || undefined === typeof attributes) {
+			attributes = {};
+		}
+		if (isFieldRequired()) {
+			attributes.required = true;
+		}
+
 
 		if (render) {
 			return React.createElement(render, field);
@@ -139,37 +157,37 @@ export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,Message) 
 
 		switch (fieldType) {
 			case 'checkboxes':
-				return <CheckboxFieldSet field={field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>
+				return <CheckboxFieldSet field={field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>
 			case 'magic-richtext'
 			:
-				return <MagicRichText {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <MagicRichText {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'autocomplete'
 			:
-				return <AutoCompleteField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <AutoCompleteField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()} />;
 			case
 			'fields-autocomplete'
 			:
-				return <FormFieldsAutoComplete {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <FormFieldsAutoComplete {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'textarea'
 			:
-				return <TextAreaField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <TextAreaField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'toggle'
 			:
-				return <ToggleField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <ToggleField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'radio'
 			:
-				return <RadioField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <RadioField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'select'
 			:
 			case
 			'dropdown'
 			:
-				return <SelectField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <SelectField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'submit'
 			:
@@ -197,7 +215,7 @@ export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,Message) 
 				} else {
 					field.html5type = 'text';
 				}
-				return <InputField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
+				return <InputField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()} />;
 		}
 	}
 ;

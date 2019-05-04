@@ -31,7 +31,7 @@ exports[`FieldArea component Creates a text field 1`] = `
 
 exports[`FieldArea component Creates an select field 1`] = `
 <div
-  className="caldera-field-wrapper caldera-field-wrapper-select"
+  className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
     className="caldera-field-label caldera-field-label-select"
