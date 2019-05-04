@@ -16,6 +16,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
   >
     <label
       className="caldera-field-label caldera-field-label-toggle"
+      htmlFor="t1"
     >
        
     </label>
@@ -24,6 +25,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
     >
       <input
         className="caldera-field caldera-field-toggle"
+        id="t1"
         onChange={[Function]}
         type="checkbox"
       />
@@ -50,6 +52,7 @@ exports[`ToggleField  matches snapshot with all props 1`] = `
     </span>
     <label
       className="caldera-field-label caldera-field-label-toggle"
+      htmlFor="t1"
     />
   </div>
   <p

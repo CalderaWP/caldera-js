@@ -24,7 +24,9 @@ exports[`RadioField Field component matches snapshot 1`] = `
       type="radio"
       value={100}
     />
-    <label>
+    <label
+      htmlFor="selection-hats-0"
+    >
       Hat One
        
     </label>
@@ -42,7 +44,9 @@ exports[`RadioField Field component matches snapshot 1`] = `
       type="radio"
       value={200}
     />
-    <label>
+    <label
+      htmlFor="selection-hats-1"
+    >
       Hat Two
        
     </label>

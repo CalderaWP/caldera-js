@@ -44,7 +44,7 @@ export const RadioField = ({
 						aria-describedby={!!description ? `${ fieldId }__help` : undefined}
 						{...attributes}
 					/>
-					<FieldLabel htmlFor={`${ fieldId }-${ index }`}>
+					<FieldLabel fieldId={`${ fieldId }-${ index }`}>
 						{option.label}
 					</FieldLabel>
 				</div>

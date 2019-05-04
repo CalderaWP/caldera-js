@@ -147,7 +147,9 @@ exports[`fieldFactory Creates a radio field 1`] = `
       type="radio"
       value={0}
     />
-    <label>
+    <label
+      htmlFor="radioFieldLabel-0"
+    >
       Zero
        
     </label>
@@ -165,7 +167,9 @@ exports[`fieldFactory Creates a radio field 1`] = `
       type="radio"
       value={1}
     />
-    <label>
+    <label
+      htmlFor="radioFieldLabel-1"
+    >
       One
        
     </label>
@@ -183,7 +187,9 @@ exports[`fieldFactory Creates a radio field 1`] = `
       type="radio"
       value={2}
     />
-    <label>
+    <label
+      htmlFor="radioFieldLabel-2"
+    >
       Two
        
     </label>
@@ -605,6 +611,7 @@ exports[`fieldFactory should create toggle 1`] = `
   >
     <label
       className="caldera-field-label caldera-field-label-toggle"
+      htmlFor="toggleFieldLabel"
     >
        
     </label>
@@ -614,6 +621,7 @@ exports[`fieldFactory should create toggle 1`] = `
       <input
         checked={true}
         className="caldera-field caldera-field-toggle"
+        id="toggleFieldLabel"
         onChange={[Function]}
         type="checkbox"
       />
@@ -640,6 +648,7 @@ exports[`fieldFactory should create toggle 1`] = `
     </span>
     <label
       className="caldera-field-label caldera-field-label-toggle"
+      htmlFor="toggleFieldLabel"
     />
   </div>
   <p

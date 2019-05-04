@@ -29,6 +29,7 @@ export const ToggleField = ({
 			fieldType={'select'}
 		>
 			<ToggleControl
+				fieldId={fieldId}
 				onBlur={onBlur}
 				checked={ checked }
 				onChange={ onChange }

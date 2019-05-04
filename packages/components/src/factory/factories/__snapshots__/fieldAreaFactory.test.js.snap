@@ -176,6 +176,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
     >
       <label
         className="caldera-field-label caldera-field-label-toggle"
+        htmlFor="toggleFieldLabel"
       >
          
       </label>
@@ -185,6 +186,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
         <input
           checked={true}
           className="caldera-field caldera-field-toggle"
+          id="toggleFieldLabel"
           onChange={[Function]}
           type="checkbox"
         />
@@ -211,6 +213,7 @@ exports[`fieldAreaFactory should create toggle 1`] = `
       </span>
       <label
         className="caldera-field-label caldera-field-label-toggle"
+        htmlFor="toggleFieldLabel"
       />
     </div>
     <p

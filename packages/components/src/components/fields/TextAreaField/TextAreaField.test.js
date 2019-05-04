@@ -16,6 +16,7 @@ describe('TextAreaField ', () => {
 	it('matches snapshot with all props', () => {
 		const component = renderer.create(
 			<TextAreaField
+				fieldId={'ta1'}
 				label={'Hi Roy'}
 				description={'Say Hi'}
 				value={'Roy'}
@@ -32,6 +33,7 @@ describe('TextAreaField ', () => {
 	it('Passes rows and cols props', () => {
 		const component = mount(
 			<TextAreaField
+				fieldId={'ta1'}
 				label={'Hi Roy'}
 				description={'Say Hi'}
 				placeholder={'Hello'}
@@ -54,6 +56,7 @@ describe('TextAreaField ', () => {
 	it('Changes calls change handler', () => {
 		const component = mount(
 			<TextAreaField
+				fieldId={'ta1'}
 				label={'Hi Roy'}
 				description={'Say Hi'}
 				placeholder={'Hello'}
