@@ -113,26 +113,21 @@ Object {
               id="r2-fld_7908577"
             >
               <div
-                class="caldera-field-group caldera-field-area-submit"
-                data-field-type="submit"
+                class="caldera-field-group caldera-field-area-submit form-group"
               >
-                <div
-                  class="form-group"
+                <label
+                  class="control-label"
+                  for="fld_7908577"
                 >
-                  <label
-                    class="control-label"
-                    for="fld_7908577"
-                  >
-                    
-                     
-                  </label>
-                  <input
-                    class="form-control"
-                    id="fld_7908577"
-                    type="submit"
-                    value="Click Me"
-                  />
-                </div>
+                  
+                   
+                </label>
+                <input
+                  class="form-control"
+                  id="fld_7908577"
+                  type="submit"
+                  value="Click Me"
+                />
               </div>
             </div>
           </div>
@@ -155,26 +150,21 @@ Object {
             id="r2-fld_7908577"
           >
             <div
-              class="caldera-field-group caldera-field-area-submit"
-              data-field-type="submit"
+              class="caldera-field-group caldera-field-area-submit form-group"
             >
-              <div
-                class="form-group"
+              <label
+                class="control-label"
+                for="fld_7908577"
               >
-                <label
-                  class="control-label"
-                  for="fld_7908577"
-                >
-                  
-                   
-                </label>
-                <input
-                  class="form-control"
-                  id="fld_7908577"
-                  type="submit"
-                  value="Click Me"
-                />
-              </div>
+                
+                 
+              </label>
+              <input
+                class="form-control"
+                id="fld_7908577"
+                type="submit"
+                value="Click Me"
+              />
             </div>
           </div>
         </div>

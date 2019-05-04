@@ -16,35 +16,30 @@ exports[`Caldera Forms Forms 1`] = `
         id="1aaaaa"
       >
         <div
-          className="caldera-field-group caldera-field-area-email is-required"
-          data-field-type="email"
+          className="caldera-field-wrapper caldera-field-wrapper-email"
         >
-          <div
-            className="caldera-field-wrapper caldera-field-wrapper-email"
+          <label
+            className="caldera-field-label caldera-field-label-email"
+            htmlFor="emailFieldId"
           >
-            <label
-              className="caldera-field-label caldera-field-label-email"
-              htmlFor="emailFieldId"
-            >
-              Email Field Label
-               
-            </label>
-            <input
-              aria-describedby="emailFieldId__help"
-              className="caldera-field caldera-field-email"
-              id="emailFieldId"
-              multiple={true}
-              onBlur={[Function]}
-              onChange={[Function]}
-              type="email"
-            />
-            <p
-              className="caldera-control__help description"
-              id="emailFieldId__help"
-            >
-              Email field description
-            </p>
-          </div>
+            Email Field Label
+             
+          </label>
+          <input
+            aria-describedby="emailFieldId__help"
+            className="caldera-field caldera-field-email"
+            id="emailFieldId"
+            multiple={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="email"
+          />
+          <p
+            className="caldera-control__help description"
+            id="emailFieldId__help"
+          >
+            Email field description
+          </p>
         </div>
       </div>
       <div
@@ -52,34 +47,29 @@ exports[`Caldera Forms Forms 1`] = `
         id="1b"
       >
         <div
-          className="caldera-field-group caldera-field-area-text is-required"
-          data-field-type="text"
+          className="caldera-field-wrapper caldera-field-wrapper-text"
         >
-          <div
-            className="caldera-field-wrapper caldera-field-wrapper-text"
+          <label
+            className="caldera-field-label caldera-field-label-text"
+            htmlFor="firstName"
           >
-            <label
-              className="caldera-field-label caldera-field-label-text"
-              htmlFor="firstName"
-            >
-              First Name
-               
-            </label>
-            <input
-              aria-describedby="firstName__help"
-              className="caldera-field caldera-field-text"
-              id="firstName"
-              onBlur={[Function]}
-              onChange={[Function]}
-              type="text"
-            />
-            <p
-              className="caldera-control__help description"
-              id="firstName__help"
-            >
-              your first name
-            </p>
-          </div>
+            First Name
+             
+          </label>
+          <input
+            aria-describedby="firstName__help"
+            className="caldera-field caldera-field-text"
+            id="firstName"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="text"
+          />
+          <p
+            className="caldera-control__help description"
+            id="firstName__help"
+          >
+            your first name
+          </p>
         </div>
       </div>
     </div>

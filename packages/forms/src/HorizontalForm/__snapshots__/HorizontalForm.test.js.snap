@@ -15,82 +15,77 @@ exports[`HorizontalForm Matches snapshot 1`] = `
         className="caldera-column width-1 sc-bdVaJa iHZvIS"
         id="c-test-1-0"
       >
-        <div
-          className="caldera-field-group caldera-field-area-checkboxes is-required"
-          data-field-type="checkboxes"
+        <fieldset
+          className="caldera-fieldset caldera-fieldset-checkboxes"
         >
-          <fieldset
-            className="caldera-fieldset caldera-fieldset-checkboxes"
+          <legend>
+            Checkbox Field Set Label
+          </legend>
+          <div
+            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
           >
-            <legend>
-              Checkbox Field Set Label
-            </legend>
-            <div
-              className="caldera-field-wrapper caldera-field-wrapper-checkbox"
+            <input
+              checked={false}
+              className="caldera-field caldera-field-checkbox"
+              id="opt-1"
+              onChange={[Function]}
+              type="checkbox"
+              value="1"
+            />
+            <label
+              className="caldera-field-label caldera-field-label-checkbox"
+              htmlFor="opt-1"
             >
-              <input
-                checked={false}
-                className="caldera-field caldera-field-checkbox"
-                id="opt-1"
-                onChange={[Function]}
-                type="checkbox"
-                value="1"
-              />
-              <label
-                className="caldera-field-label caldera-field-label-checkbox"
-                htmlFor="opt-1"
-              >
-                One
-                 
-              </label>
-            </div>
-            <div
-              className="caldera-field-wrapper caldera-field-wrapper-checkbox"
+              One
+               
+            </label>
+          </div>
+          <div
+            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+          >
+            <input
+              aria-describedby="opt-2__help"
+              checked={true}
+              className="caldera-field caldera-field-checkbox"
+              id="opt-2"
+              onChange={[Function]}
+              type="checkbox"
+              value="1"
+            />
+            <label
+              className="caldera-field-label caldera-field-label-checkbox"
+              htmlFor="opt-2"
             >
-              <input
-                aria-describedby="opt-2__help"
-                checked={true}
-                className="caldera-field caldera-field-checkbox"
-                id="opt-2"
-                onChange={[Function]}
-                type="checkbox"
-                value="1"
-              />
-              <label
-                className="caldera-field-label caldera-field-label-checkbox"
-                htmlFor="opt-2"
-              >
-                Two
-                 
-              </label>
-              <p
-                className="caldera-control__help description"
-                id="opt-2__help"
-              >
-                The Second Option
-              </p>
-            </div>
-            <div
-              className="caldera-field-wrapper caldera-field-wrapper-checkbox"
+              Two
+               
+            </label>
+            <p
+              className="caldera-control__help description"
+              id="opt-2__help"
             >
-              <input
-                checked={false}
-                className="caldera-field caldera-field-checkbox"
-                id="opt-3"
-                onChange={[Function]}
-                type="checkbox"
-                value="1"
-              />
-              <label
-                className="caldera-field-label caldera-field-label-checkbox"
-                htmlFor="opt-3"
-              >
-                Three
-                 
-              </label>
-            </div>
-          </fieldset>
-        </div>
+              The Second Option
+            </p>
+          </div>
+          <div
+            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+          >
+            <input
+              checked={false}
+              className="caldera-field caldera-field-checkbox"
+              id="opt-3"
+              onChange={[Function]}
+              type="checkbox"
+              value="1"
+            />
+            <label
+              className="caldera-field-label caldera-field-label-checkbox"
+              htmlFor="opt-3"
+            >
+              Three
+               
+            </label>
+          </div>
+        </fieldset>
       </div>
     </div>
     <div
@@ -101,50 +96,45 @@ exports[`HorizontalForm Matches snapshot 1`] = `
         id="c-test-1-1"
       >
         <div
-          className="caldera-field-group caldera-field-area-select is-required"
-          data-field-type="select"
+          className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
         >
-          <div
-            className="caldera-field-wrapper caldera-field-wrapper-select"
+          <label
+            className="caldera-field-label caldera-field-label-select"
+            htmlFor="selectFieldId"
           >
-            <label
-              className="caldera-field-label caldera-field-label-select"
-              htmlFor="selectFieldId"
+            Select Field Label
+             
+          </label>
+          <select
+            aria-describedby="selectFieldId__help"
+            className="caldera-field caldera-field-select"
+            id="selectFieldId"
+            multiple={false}
+            onChange={[Function]}
+            required={true}
+          >
+            <option
+              value={0}
             >
-              Select Field Label
-               
-            </label>
-            <select
-              aria-describedby="selectFieldId__help"
-              className="caldera-field caldera-field-select"
-              id="selectFieldId"
-              multiple={false}
-              onChange={[Function]}
-              required={true}
+              Zero
+            </option>
+            <option
+              value={1}
             >
-              <option
-                value={0}
-              >
-                Zero
-              </option>
-              <option
-                value={1}
-              >
-                One
-              </option>
-              <option
-                value={2}
-              >
-                Two
-              </option>
-            </select>
-            <p
-              className="caldera-control__help description"
-              id="selectFieldId__help"
+              One
+            </option>
+            <option
+              value={2}
             >
-              Select field description
-            </p>
-          </div>
+              Two
+            </option>
+          </select>
+          <p
+            className="caldera-control__help description"
+            id="selectFieldId__help"
+          >
+            Select field description
+          </p>
         </div>
       </div>
     </div>
@@ -156,35 +146,30 @@ exports[`HorizontalForm Matches snapshot 1`] = `
         id="c-test-1-2"
       >
         <div
-          className="caldera-field-group caldera-field-area-checkbox is-required"
-          data-field-type="checkbox"
+          className="caldera-field-group caldera-field-area-checkbox is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
         >
-          <div
-            className="caldera-field-wrapper caldera-field-wrapper-checkbox"
+          <input
+            aria-describedby="checkboxFieldLabel__help"
+            checked={true}
+            className="caldera-field caldera-field-checkbox"
+            id="checkboxFieldLabel"
+            onChange={[Function]}
+            type="checkbox"
+            value="1"
+          />
+          <label
+            className="caldera-field-label caldera-field-label-checkbox"
+            htmlFor="checkboxFieldLabel"
           >
-            <input
-              aria-describedby="checkboxFieldLabel__help"
-              checked={true}
-              className="caldera-field caldera-field-checkbox"
-              id="checkboxFieldLabel"
-              onChange={[Function]}
-              type="checkbox"
-              value="1"
-            />
-            <label
-              className="caldera-field-label caldera-field-label-checkbox"
-              htmlFor="checkboxFieldLabel"
-            >
-              Checkbox Labe
-               
-            </label>
-            <p
-              className="caldera-control__help description"
-              id="checkboxFieldLabel__help"
-            >
-              Checkbox field description
-            </p>
-          </div>
+            Checkbox Labe
+             
+          </label>
+          <p
+            className="caldera-control__help description"
+            id="checkboxFieldLabel__help"
+          >
+            Checkbox field description
+          </p>
         </div>
       </div>
     </div>
