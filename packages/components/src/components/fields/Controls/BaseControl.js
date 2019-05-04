@@ -2,6 +2,7 @@ import React, {createElement} from 'react';
 import {FieldWrapper} from "../../..";
 import {FieldLabel} from "../FieldLabel/FieldLabel";
 import {labelClassNames} from "../util";
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages,wrapperClassNames} ) {
 	const Label = () => (
@@ -12,10 +13,11 @@ function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages
 			{label}
 		</FieldLabel>
 	);
+
 	return (
 		<FieldWrapper
 			fieldType={fieldType}
-			className={wrapperClassNames}
+			className={classNames(wrapperClassNames)}
 		>
 			{labelBefore && <Label />}
 			{children}
@@ -42,6 +44,10 @@ BaseControl.propTypes= {
 	messages: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
+	]),
+	wrapperClassNames: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.array,
 	])
 };
 

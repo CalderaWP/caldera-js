@@ -6,15 +6,15 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
 >
   <label
     className="caldera-field-label caldera-field-label-text"
-    htmlFor="firstName"
+    htmlFor="textFieldId"
   >
     First Name
      
   </label>
   <input
-    aria-describedby="firstName__help"
+    aria-describedby="textFieldId__help"
     className="caldera-field caldera-field-text"
-    id="firstName"
+    id="textFieldId"
     onBlur={[Function]}
     onChange={[Function]}
     type="text"
@@ -22,7 +22,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
   />
   <p
     className="caldera-control__help description"
-    id="firstName__help"
+    id="textFieldId__help"
   >
     your first name
   </p>

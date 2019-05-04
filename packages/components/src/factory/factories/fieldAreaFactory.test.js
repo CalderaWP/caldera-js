@@ -12,6 +12,8 @@ import {
 	radioField, textAreaField, toggleField, autoCompleteField
 } from '../fields.fixtures';
 
+textField.fieldId = 'textFieldId';
+
 import { fieldWrapperClassNames } from '@calderajs/components';
 import { fieldFactory } from './fieldFactory';
 
@@ -89,12 +91,15 @@ describe('Showing errors', () => {
 		const component = mount(
 			fieldAreaFactory(textField, onChange, onBlur, fieldErrors, {})
 		);
+
+
 		expect(
-			component.find('.caldera-field-group').hasClass('has-error')
+			component.find('.caldera-field-wrapper').hasClass('has-error')
 		).toBe(false);
 	});
-	it('Does not display error class on field wrapper if field has  been touched', () => {
+	it.only('Does  display error class on field wrapper if field has  been touched', () => {
 		const errorMessage = 'Fails!';
+
 		const fieldErrors = {
 			[textField.fieldId]: errorMessage
 		};
@@ -110,9 +115,10 @@ describe('Showing errors', () => {
 				fieldTouched
 			)
 		);
+
 		expect(
 			component
-				.find('.caldera-field-group')
+				.find('.caldera-field-wrapper')
 				.first()
 				.hasClass('has-error')
 		).toBe(true);
@@ -133,6 +139,7 @@ describe('Showing errors', () => {
 				fieldTouched
 			)
 		);
+
 		expect(component.find('.caldera-components-error').length).toBe(0);
 	});
 
@@ -153,7 +160,6 @@ describe('Showing errors', () => {
 				fieldTouched
 			)
 		);
-
 		expect(
 			component.find('.caldera-components-error').hasClass('has-error')
 		).toBe(true);

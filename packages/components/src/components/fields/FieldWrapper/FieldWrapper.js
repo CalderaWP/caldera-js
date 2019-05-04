@@ -4,14 +4,17 @@ import React, {Fragment} from 'react';
 import classNames from 'classnames';
 
 
-export const FieldWrapper = ({ fieldType, attributes, children,wrapperClassNames }) => {
+export const FieldWrapper = ({ fieldType, attributes, children,className }) => {
+	if( 'string' === typeof  className ){
+		className = [className];
+	}
+	if( ! Array.isArray(className)){
+		className= [];
+	}
 	return (
 		<div
 			className={
-				classNames(
-					wrapperClassNames,
-					fieldWrapperClassNames(fieldType)
-				)
+				classNames([...className,fieldWrapperClassNames(fieldType)])
 			}
 		 	{...attributes}
 		>
@@ -27,7 +30,7 @@ FieldWrapper.propTypes = {
 		PropTypes.node
 	]).isRequired,
 	attributes: PropTypes.object,
-	wrapperClassNames: PropTypes.oneOfType([
+	className: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.string),
 		PropTypes.string
 	])

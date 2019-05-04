@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Field label Matches snapshot 1`] = `
+exports[`Field wrapper Matches snapshot 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-checkbox"
 >

@@ -12,14 +12,16 @@ export const fieldAreaFactory = (
 	fieldsTouch
 ) => {
 	const { fieldType, fieldId, required } = field;
-	const error = fieldErrors && fieldErrors[fieldId];
+	const hasError = fieldErrors && 'string' === typeof fieldErrors[fieldId]
+	const error = hasError && fieldErrors[fieldId];
 	const touched = fieldsTouch && fieldsTouch[fieldId];
 	let wrapperClassNames = [
 		'caldera-field-group',
 		`caldera-field-area-${fieldType}`,
 	];
 
-	if( touched && error ){
+	const showErrors = touched && hasError;
+	if( showErrors ){
 		wrapperClassNames.push( 'has-error');
 	}
 
@@ -29,7 +31,7 @@ export const fieldAreaFactory = (
 
 	const MessageZone = () => (
 		<Fragment>
-			{touched && error && (
+			{showErrors && (
 				<Message
 					message={{
 						error: true,
