@@ -8,18 +8,20 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 import { BaseControl, ToggleControl } from '../Controls';
-export const ToggleField = ({
-	label,
-	description,
-	fieldId,
-	placeholder,
-	required,
-	html5type,
-	onChange,
-	onBlur,
-
-								checked,
-}) => {
+export const ToggleField = (
+	{
+		label,
+		description,
+		fieldId,
+		placeholder,
+		required,
+		html5type,
+		onChange,
+		onBlur,
+		wrapperClassNames,
+		checked,
+	}
+) => {
 
 	return(
 		<BaseControl
@@ -27,6 +29,7 @@ export const ToggleField = ({
 			label={label}
 			help={description}
 			fieldType={'select'}
+			wrapperClassNames={wrapperClassNames}
 		>
 			<ToggleControl
 				fieldId={fieldId}

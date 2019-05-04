@@ -9,24 +9,27 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import TextareaControl from "../Controls/TextAreaControl";
 
-export const TextAreaField = ({
-	label,
-	description,
-	fieldId,
-	placeholder,
-	required,
-	html5type,
-	value,
-	onChange,
-	onBlur,
-	attributes,
-}) => {
+export const TextAreaField = (
+	{
+		label,
+		description,
+		fieldId,
+		placeholder,
+		required,
+		html5type,
+		value,
+		onChange,
+		onBlur,
+		attributes,
+		wrapperClassNames,
+	}
+) => {
 	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const _attributes = parseAttributes(attributes, 'textarea');
 	const rows = _attributes.hasOwnProperty('rows') ? _attributes.rows : 6;
-	return(
+	return (
 		<TextareaControl
-			rows={rows }
+			rows={rows}
 			label={label}
 			id={fieldId}
 			required={required}
@@ -34,6 +37,7 @@ export const TextAreaField = ({
 			help={description}
 			onChange={onChange}
 			onBlur={onBlur}
+			wrapperClassNames={wrapperClassNames}
 			{..._attributes}
 		/>
 	)
@@ -57,6 +61,7 @@ TextAreaField.propTypes = {
 };
 
 TextAreaField.defaultProps = {
-	onBlur: () => {},
+	onBlur: () => {
+	},
 	required: false,
 };

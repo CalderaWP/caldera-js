@@ -3,7 +3,7 @@ import React from 'react';
 import BaseControl from "./BaseControl";
 import {fieldClassNames} from "../util";
 
-function TextareaControl( { label, value, help, instanceId, onChange, id, rows = 4, className, required, ...props } ) {
+function TextareaControl( { label, value, help, instanceId, onChange, id, rows = 4, className, required, wrapperClassNames, ...props } ) {
 	const onChangeValue = ( event ) => onChange( event.target.value );
 
 	return (
@@ -12,6 +12,7 @@ function TextareaControl( { label, value, help, instanceId, onChange, id, rows =
 			help={ help }
 			fieldType={'textarea'}
 			required={required}
+			wrapperClassNames={wrapperClassNames}
 
 		>
 			<textarea

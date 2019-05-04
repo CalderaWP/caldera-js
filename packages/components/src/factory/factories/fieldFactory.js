@@ -60,7 +60,7 @@ class CheckboxFieldSet extends React.Component {
 	}
 
 	render() {
-		const {field,onChange} = this.props;
+		const {field,onChange,wrapperClassNames} = this.props;
 		const {fieldId, label, fieldType, attributes, options,value} = field;
 		const {checkboxValues} = this.state;
 		function remove(array, element) {
@@ -85,6 +85,7 @@ class CheckboxFieldSet extends React.Component {
 
 					return (
 						<InputField
+							wrapperClassNames={wrapperClassNames}
 							key={optionId}
 							id={optionId}
 							fieldId={optionId}
@@ -105,6 +106,10 @@ class CheckboxFieldSet extends React.Component {
 	}
 }
 
+CheckboxFieldSet.defaultProps = {
+	wrapperClassNames: '',
+}
+
 
 /**
  * Create a field from an object describing it.
@@ -116,7 +121,7 @@ class CheckboxFieldSet extends React.Component {
  * @param onBlur
  * @return {*}
  */
-export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,children) => {
+export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,Message) => {
 		const {
 			fieldType,
 			label,
@@ -134,44 +139,44 @@ export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,children)
 
 		switch (fieldType) {
 			case 'checkboxes':
-				return <CheckboxFieldSet field={field} onChange={onChange}/>
+				return <CheckboxFieldSet field={field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>
 			case 'magic-richtext'
 			:
-				return <MagicRichText {...field} onChange={onChange}/>;
+				return <MagicRichText {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'autocomplete'
 			:
-				return <AutoCompleteField {...field} onChange={onChange}/>;
+				return <AutoCompleteField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'fields-autocomplete'
 			:
-				return <FormFieldsAutoComplete {...field} onChange={onChange}/>;
+				return <FormFieldsAutoComplete {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'textarea'
 			:
-				return <TextAreaField {...field} onChange={onChange}/>;
+				return <TextAreaField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'toggle'
 			:
-				return <ToggleField {...field} onChange={onChange}/>;
+				return <ToggleField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'radio'
 			:
-				return <RadioField {...field} onChange={onChange}/>;
+				return <RadioField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'select'
 			:
 			case
 			'dropdown'
 			:
-				return <SelectField {...field} onChange={onChange}/>;
+				return <SelectField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 			case
 			'submit'
 			:
 				delete field.value;
 				delete field.onBlur;
 				delete field.onChange;
-				return <SubmitButton {...field} />;
+				return <SubmitButton {...field} wrapperClassNames={wrapperClassNames} />;
 			case
 			'text'
 			:
@@ -192,7 +197,7 @@ export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,children)
 				} else {
 					field.html5type = 'text';
 				}
-				return <InputField {...field} onChange={onChange}/>;
+				return <InputField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames}/>;
 		}
 	}
 ;

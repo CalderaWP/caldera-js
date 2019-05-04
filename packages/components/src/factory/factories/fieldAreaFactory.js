@@ -41,13 +41,10 @@ export const fieldAreaFactory = (
 	);
 
 	return (
-		<div
+		<Fragment>
+			{fieldFactory(field, onChange, onBlur,wrapperClassNames,MessageZone)}
+		</Fragment>
 
-		>
-			<Fragment key={`${fieldId}-1`}>
-				{fieldFactory(field, onChange, onBlur,wrapperClassNames,MessageZone)}
-			</Fragment>
 
-		</div>
 	);
 };

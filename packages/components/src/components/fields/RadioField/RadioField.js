@@ -16,7 +16,8 @@ export const RadioField = ({
 	description,
 	placeholder,
 	required,
-							   className
+   wrapperClassNames,
+   className
 }) => {
 	attributes = parseAttributes(attributes, 'radio');
 	const onChangeValue = (event) => onChange(event.target.value);
@@ -27,6 +28,7 @@ export const RadioField = ({
 			id={fieldId}
 			help={description}
 			required={required}
+			wrapperClassNames={wrapperClassNames}
 		>
 			{options.map((option, index) =>
 				<div

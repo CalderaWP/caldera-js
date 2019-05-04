@@ -4,18 +4,21 @@ import {parseAttributes, fieldClassNames, isValidHtml5type} from '../util';
 import {isEmpty} from "lodash";
 import BaseControl from "../Controls/BaseControl";
 
-export const SelectField = ({
-								required,
-								attributes,
-								label,
-								fieldId,
-								onChange,
-								value,
-								options,
-								multiple,
-								description,
-								placeholder
-							}) => {
+export const SelectField = (
+	{
+		required,
+		attributes,
+		label,
+		fieldId,
+		onChange,
+		value,
+		options,
+		multiple,
+		description,
+		placeholder,
+		wrapperClassNames
+	}
+							) => {
 	attributes = parseAttributes(attributes, 'select');
 
 	if (!value && placeholder) {
@@ -38,6 +41,7 @@ export const SelectField = ({
 			help={description}
 			fieldType={'select'}
 			required={required}
+			wrapperClassNames={wrapperClassNames}
 		>
 			<select
 				required={required}

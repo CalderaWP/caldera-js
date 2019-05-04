@@ -3,7 +3,7 @@ import {FieldWrapper} from "../../..";
 import {FieldLabel} from "../FieldLabel/FieldLabel";
 import {labelClassNames} from "../util";
 import PropTypes from 'prop-types';
-function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages } ) {
+function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages,wrapperClassNames} ) {
 	const Label = () => (
 		<FieldLabel
 			className={labelClassNames(fieldType)}
@@ -15,6 +15,7 @@ function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages
 	return (
 		<FieldWrapper
 			fieldType={fieldType}
+			className={wrapperClassNames}
 		>
 			{labelBefore && <Label />}
 			{children}

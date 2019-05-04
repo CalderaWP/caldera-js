@@ -22,7 +22,8 @@ export const InputField = (
 		onChange,
 		onBlur,
 		attributes,
-		children
+		children,
+		wrapperClassNames
 	}
 ) => {
 
@@ -36,7 +37,7 @@ export const InputField = (
 				label={label}
 				id={fieldId}
 				help={description}
-				className={''}
+				wrapperClassNames={wrapperClassNames}
 				labelBefore={false}
 			>
 				<input

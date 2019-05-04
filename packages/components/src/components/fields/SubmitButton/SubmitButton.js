@@ -2,19 +2,20 @@ import {BaseControl} from '../Controls';
 import React from "react";
 import {fieldClassNames, parseAttributes} from "../util";
 
-export const SubmitButton = (props) => {
-	const {
-		label,
-		description,
-		fieldId,
-		placeholder,
-		required,
-		value,
-		onChange,
-		onBlur,
-		options,
-		attributes
-	} = props;
+export const SubmitButton = ({
+								 label,
+								 description,
+								 fieldId,
+								 placeholder,
+								 required,
+								 value,
+								 onChange,
+								 onBlur,
+								 options,
+								 attributes,
+								 wrapperClassNames,
+							 }) => {
+
 	const _attributes = {
 		disabled: 'object' === typeof  attributes
 			&& attributes.hasOwnProperty('disabled')
@@ -27,6 +28,7 @@ export const SubmitButton = (props) => {
 			id={fieldId}
 			help={description}
 			fieldType={'submit'}
+			wrapperClassNames={wrapperClassNames}
 		>
 			<input
 				className={fieldClassNames('text')}
