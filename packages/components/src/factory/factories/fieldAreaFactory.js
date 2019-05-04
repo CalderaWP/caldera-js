@@ -14,31 +14,40 @@ export const fieldAreaFactory = (
 	const { fieldType, fieldId, required } = field;
 	const error = fieldErrors && fieldErrors[fieldId];
 	const touched = fieldsTouch && fieldsTouch[fieldId];
+	let wrapperClassNames = [
+		'caldera-field-group',
+		`caldera-field-area-${fieldType}`,
+	];
+
+	if( touched && error ){
+		wrapperClassNames.push( 'has-error');
+	}
+
+	if( required ){
+		wrapperClassNames.push('is-required')
+	}
+
+	const MessageZone = () => (
+		<Fragment>
+			{touched && error && (
+				<Message
+					message={{
+						error: true,
+						message: error
+					}}
+				/>
+			)}
+		</Fragment>
+	);
+
 	return (
 		<div
-			data-field-type={fieldType}
-			className={classNames(
-				'caldera-field-group',
-				`caldera-field-area-${fieldType}`
-				, {
-				'has-error': touched && error,
-				'is-required': required,
 
-			})}
 		>
 			<Fragment key={`${fieldId}-1`}>
-				{fieldFactory(field, onChange, onBlur)}
+				{fieldFactory(field, onChange, onBlur,wrapperClassNames,MessageZone)}
 			</Fragment>
-			{touched && error && (
-				<Fragment key={`${fieldId}-2`}>
-					<Message
-						message={{
-							error: true,
-							message: error
-						}}
-					/>
-				</Fragment>
-			)}
+
 		</div>
 	);
 };

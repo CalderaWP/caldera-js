@@ -105,6 +105,7 @@ class CheckboxFieldSet extends React.Component {
 	}
 }
 
+
 /**
  * Create a field from an object describing it.
  *
@@ -115,7 +116,7 @@ class CheckboxFieldSet extends React.Component {
  * @param onBlur
  * @return {*}
  */
-export const fieldFactory = (field, onChange, onBlur) => {
+export const fieldFactory = (field, onChange, onBlur,wrapperClassNames,children) => {
 		const {
 			fieldType,
 			label,

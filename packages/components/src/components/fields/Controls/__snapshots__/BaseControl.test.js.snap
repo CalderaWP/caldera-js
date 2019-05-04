@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseControl  Renderes children 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="a1"
+  >
+    label
+     
+  </label>
+  <input />
+  <p
+    className="caldera-control__help description"
+    id="a1__help"
+  >
+    help-text
+  </p>
+</div>
+`;
