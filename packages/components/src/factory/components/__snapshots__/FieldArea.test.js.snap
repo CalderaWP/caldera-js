@@ -1,109 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldArea component Creates a text field 1`] = `
-<div>
-  <div
-    className="caldera-field-wrapper caldera-field-wrapper-text"
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="firstName"
   >
-    <label
-      className="caldera-field-label caldera-field-label-text"
-      htmlFor="firstName"
-    >
-      First Name
-       
-    </label>
-    <input
-      aria-describedby="firstName__help"
-      className="caldera-field caldera-field-text"
-      id="firstName"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-      value="roy"
-    />
-    <p
-      className="caldera-control__help description"
-      id="firstName__help"
-    >
-      your first name
-    </p>
-  </div>
+    First Name
+     
+  </label>
+  <input
+    aria-describedby="firstName__help"
+    className="caldera-field caldera-field-text"
+    id="firstName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value="roy"
+  />
+  <p
+    className="caldera-control__help description"
+    id="firstName__help"
+  >
+    your first name
+  </p>
 </div>
 `;
 
 exports[`FieldArea component Creates an select field 1`] = `
-<div>
-  <div
-    className="caldera-field-wrapper caldera-field-wrapper-select"
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-select"
+>
+  <label
+    className="caldera-field-label caldera-field-label-select"
+    htmlFor="selectFieldId"
   >
-    <label
-      className="caldera-field-label caldera-field-label-select"
-      htmlFor="selectFieldId"
+    Select Field Label
+     
+  </label>
+  <select
+    aria-describedby="selectFieldId__help"
+    className="caldera-field caldera-field-select"
+    id="selectFieldId"
+    multiple={false}
+    onChange={[Function]}
+    required={true}
+  >
+    <option
+      value={0}
     >
-      Select Field Label
-       
-    </label>
-    <select
-      aria-describedby="selectFieldId__help"
-      className="caldera-field caldera-field-select"
-      id="selectFieldId"
-      multiple={false}
-      onChange={[Function]}
-      required={true}
+      Zero
+    </option>
+    <option
+      value={1}
     >
-      <option
-        value={0}
-      >
-        Zero
-      </option>
-      <option
-        value={1}
-      >
-        One
-      </option>
-      <option
-        value={2}
-      >
-        Two
-      </option>
-    </select>
-    <p
-      className="caldera-control__help description"
-      id="selectFieldId__help"
+      One
+    </option>
+    <option
+      value={2}
     >
-      Select field description
-    </p>
-  </div>
+      Two
+    </option>
+  </select>
+  <p
+    className="caldera-control__help description"
+    id="selectFieldId__help"
+  >
+    Select field description
+  </p>
 </div>
 `;
 
 exports[`FieldArea component Shows errors 1`] = `
-<div>
-  <div
-    className="caldera-field-wrapper caldera-field-wrapper-text"
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="firstName"
   >
-    <label
-      className="caldera-field-label caldera-field-label-text"
-      htmlFor="firstName"
-    >
-      First Name
-       
-    </label>
-    <input
-      aria-describedby="firstName__help"
-      className="caldera-field caldera-field-text"
-      id="firstName"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-      value="roy"
-    />
-    <p
-      className="caldera-control__help description"
-      id="firstName__help"
-    >
-      your first name
-    </p>
-  </div>
+    First Name
+     
+  </label>
+  <input
+    aria-describedby="firstName__help"
+    className="caldera-field caldera-field-text"
+    id="firstName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value="roy"
+  />
+  <p
+    className="caldera-control__help description"
+    id="firstName__help"
+  >
+    your first name
+  </p>
 </div>
 `;
