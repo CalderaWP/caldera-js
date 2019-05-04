@@ -127,7 +127,7 @@ Object {
                      
                   </label>
                   <input
-                    class="field-set"
+                    class="form-control"
                     id="fld_7908577"
                     type="submit"
                     value="Click Me"
@@ -169,7 +169,7 @@ Object {
                    
                 </label>
                 <input
-                  class="field-set"
+                  class="form-control"
                   id="fld_7908577"
                   type="submit"
                   value="Click Me"

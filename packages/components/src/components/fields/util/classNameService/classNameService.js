@@ -22,8 +22,8 @@ export const FILTER_FORM_COLUMN_CLASS = 'classNameHooksColumnsClass';
 export const FILTER_FORM_COLUMN_PREFIX = 'classNameHooksColumnPrefix';
 
 export const cf1ClassNames = {
-	[FILTER_FIELD_CLASS_NAME]: 'field-set',
-	[FILTER_FIELD_SET_CLASS_NAME]: 'form-control',
+	[FILTER_FIELD_CLASS_NAME]: 'form-control',
+	[FILTER_FIELD_SET_CLASS_NAME]: 'field-set',
 	[FILTER_FIELD_WRAPPER_CLASS_NAME]: 'form-group',
 	[FILTER_FIELD_LABEL_CLASS_NAME]: 'control-label',
 	[FILTER_FORM_WRAPPER_CLASS]: 'caldera-grid',
