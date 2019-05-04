@@ -6,7 +6,7 @@ exports[`Row component Applies padding to x and y  1`] = `
   id="twoColumns"
 >
   <div
-    className="caldera-column width-12 sc-bdVaJa gfmZBt"
+    className="caldera-column width-6 sc-bdVaJa gfmZBt"
     width="1/2"
   />
 </div>
@@ -18,15 +18,15 @@ exports[`Row component Creates columns 1`] = `
   id="twoColumns"
 >
   <div
-    className="caldera-column width-12 sc-bdVaJa gfmZBt"
+    className="caldera-column width-6 sc-bdVaJa gfmZBt"
     width="1/2"
   />
   <div
-    className="caldera-column width-12 sc-bdVaJa jlBFAP"
+    className="caldera-column width-4 sc-bdVaJa jlBFAP"
     width="1/4"
   />
   <div
-    className="caldera-column width-12 sc-bdVaJa jlBFAP"
+    className="caldera-column width-4 sc-bdVaJa jlBFAP"
     width="1/4"
   />
 </div>

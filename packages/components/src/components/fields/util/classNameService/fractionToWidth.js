@@ -27,6 +27,6 @@ export const fractionToWidth = (fraction, defaultWidth = 1 ) => {
 		'2/12': 2,
 		'1/12': 1,
 	};
-	return fractionMap.hasOwnProperty(fraction) ? fractionMap[defaultWidth] : 1;
+	return fractionMap.hasOwnProperty(fraction) ? fractionMap[fraction] : defaultWidth;
 }
 
