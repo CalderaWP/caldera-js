@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldArea component Creates a text field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-text is-required"
-  data-field-type="text"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
@@ -35,10 +32,7 @@ exports[`FieldArea component Creates a text field 1`] = `
 `;
 
 exports[`FieldArea component Creates an select field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-select is-required"
-  data-field-type="select"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
@@ -84,10 +78,7 @@ exports[`FieldArea component Creates an select field 1`] = `
 `;
 
 exports[`FieldArea component Shows errors 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-text has-error is-required"
-  data-field-type="text"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
@@ -113,11 +104,6 @@ exports[`FieldArea component Shows errors 1`] = `
     >
       your first name
     </p>
-  </div>
-  <div
-    className="caldera-components-message has-error caldera-components-error"
-  >
-    Fail Cake!
   </div>
 </div>
 `;

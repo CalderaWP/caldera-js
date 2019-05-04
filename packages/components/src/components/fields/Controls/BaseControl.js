@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {createElement} from 'react';
 import {FieldWrapper} from "../../..";
 import {FieldLabel} from "../FieldLabel/FieldLabel";
 import {labelClassNames} from "../util";
 import PropTypes from 'prop-types';
-function BaseControl( { id, label, help, children,fieldType,labelBefore } ) {
+function BaseControl( { id, label, help, children,fieldType,labelBefore,Messages } ) {
 	const Label = () => (
 		<FieldLabel
 			className={labelClassNames(fieldType)}
@@ -20,6 +20,7 @@ function BaseControl( { id, label, help, children,fieldType,labelBefore } ) {
 			{children}
 			{! labelBefore && <Label />}
 			{ !! help && <p id={ id + '__help' } className="caldera-control__help description">{ help }</p> }
+			{ !! Messages && <Messages /> }
 		</FieldWrapper>
 	);
 }
@@ -36,7 +37,11 @@ BaseControl.propTypes= {
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
-	]).isRequired
+	]).isRequired,
+	messages: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	])
 };
 
 export default BaseControl;

@@ -1,6 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BaseControl  Renderes children 1`] = `
+exports[`BaseControl  Puts label after 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <input />
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="a1"
+  >
+    label
+     
+  </label>
+  <p
+    className="caldera-control__help description"
+    id="a1__help"
+  >
+    help-text
+  </p>
+</div>
+`;
+
+exports[`BaseControl  Puts label after 2`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-text"
+>
+  <input />
+  <label
+    className="caldera-field-label caldera-field-label-text"
+    htmlFor="a1"
+  >
+    label
+     
+  </label>
+  <p
+    className="caldera-control__help description"
+    id="a1__help"
+  >
+    help-text
+  </p>
+</div>
+`;
+
+exports[`BaseControl  Renders children 1`] = `
 <div
   className="caldera-field-wrapper caldera-field-wrapper-text"
 >

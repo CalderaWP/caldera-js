@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fieldAreaFactory Creates a text field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-text is-required"
-  data-field-type="text"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-text"
   >
@@ -35,10 +32,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
 `;
 
 exports[`fieldAreaFactory Creates an select field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-select is-required"
-  data-field-type="select"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
@@ -84,10 +78,7 @@ exports[`fieldAreaFactory Creates an select field 1`] = `
 `;
 
 exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-autocomplete"
-  data-field-type="autocomplete"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
   >
@@ -120,10 +111,7 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
 `;
 
 exports[`fieldAreaFactory should create textarea 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-textarea is-required"
-  data-field-type="textarea"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-textarea"
   >
@@ -157,10 +145,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
 `;
 
 exports[`fieldAreaFactory should create toggle 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-toggle is-required"
-  data-field-type="toggle"
->
+<div>
   <div
     className="caldera-field-wrapper caldera-field-wrapper-select"
   >
