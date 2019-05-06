@@ -25,7 +25,7 @@
     "storybook:app": "yarn --cwd packages/demo storybook",
     "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook",
-    "release": "yarn lerna publish",
+    "release": "yarn build && yarn lerna publish",
     "nuke": "rm -rf node_modules && rm yarn.lock"
   },
   "devDependencies": {
