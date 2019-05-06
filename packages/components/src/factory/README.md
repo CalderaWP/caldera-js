@@ -177,6 +177,13 @@ const autoCompleteField = {
 	description: 'Help text',
 	options: [ 'One', 'Two', 'Three' ]
 }
+
+const submitButton = {
+    fieldId: 'clickButton',
+    label: 'Click Me',
+    fieldType: 'submit',
+    
+};
 ```
 
 

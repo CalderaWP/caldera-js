@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {parseAttributes, fieldClassNames, isValidHtml5type} from '../util';
-import {isEmpty} from "lodash";
 import BaseControl from "../Controls/BaseControl";
 
 export const SelectField = (
@@ -34,7 +33,7 @@ export const SelectField = (
 	// Disable reason: A select with an onchange throws a warning
 
 	/* eslint-disable jsx-a11y/no-onchange */
-	return !isEmpty(options) && (
+	return (options.length) && (
 		<BaseControl
 			label={label}
 			id={fieldId}
@@ -72,11 +71,18 @@ SelectField.propTypes = {
 	description: PropTypes.string,
 	fieldId: PropTypes.string,
 	required: PropTypes.bool,
-	multiple: PropTypes.bool
+	multiple: PropTypes.bool,
+	options: PropTypes.array
 };
 
 SelectField.defaultProps = {
 	required: false,
 	multiple: false,
-	description: ''
+	description: '',
+	options: [
+		{
+			label: '--',
+			value: null,
+		}
+	]
 };
