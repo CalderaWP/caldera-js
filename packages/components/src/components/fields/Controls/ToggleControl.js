@@ -1,5 +1,4 @@
 
-import { isFunction } from 'lodash';
 import classnames from 'classnames';
 import React from 'react';
 import { Component } from '@wordpress/element';
@@ -7,7 +6,9 @@ import {SVG,Path} from "./primitives/svg";
 import BaseControl from "./BaseControl";
 import {fieldClassNames,labelClassNames} from "../util";
 
-
+function isFunction(_function){
+	return 'function' === typeof _function;
+}
 
 function FormToggle( { className, checked, id, onChange = noop, ...props } ) {
 	const wrapperClasses = classnames(

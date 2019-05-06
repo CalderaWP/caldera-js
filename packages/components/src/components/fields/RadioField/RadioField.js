@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { parseAttributes, fieldClassNames, isValidHtml5type } from '../util';
-import {isEmpty} from "lodash";
 import BaseControl from "../Controls/BaseControl";
 import classnames from "classnames";
 import {FieldLabel} from "../FieldLabel/FieldLabel";
@@ -21,7 +20,7 @@ export const RadioField = ({
 }) => {
 	attributes = parseAttributes(attributes, 'radio');
 	const onChangeValue = (event) => onChange(event.target.value);
-	return !isEmpty(options) && (
+	return options.length && (
 		<BaseControl
 			fieldType={'radio'}
 			label={label}
@@ -66,5 +65,6 @@ RadioField.propTypes = {
 
 RadioField.defaultProps = {
 	required: false,
-	multiple: false
+	multiple: false,
+	options: []
 };
