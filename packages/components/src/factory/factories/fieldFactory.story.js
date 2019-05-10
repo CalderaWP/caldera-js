@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {storiesOf} from '@storybook/react';
 import {fieldFactory} from "./fieldFactory";
-import {textField} from "../fields.fixtures";
+import {textField,radioField} from "../fields.fixtures";
 
 class TextFieldTest extends React.Component {
 	constructor(props) {
@@ -68,7 +68,10 @@ const field = {
 	],
 	value: ['opt-3']
 }
+
 storiesOf('FieldFactory', module).add('Checboxfieldset', () => (
 	<TextFieldTest field={field}/>
 
+)).add('Radio field', ()=> (
+	<Fragment>{fieldFactory(radioField, ()=> {})}</Fragment>
 ));
