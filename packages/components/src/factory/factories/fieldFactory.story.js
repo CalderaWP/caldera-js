@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import {storiesOf} from '@storybook/react';
 import {fieldFactory} from "./fieldFactory";
-import {textField,radioField} from "../fields.fixtures";
+import {textField,radioField,selectField} from "../fields.fixtures";
 
-class TextFieldTest extends React.Component {
+class FieldTest extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -35,8 +35,9 @@ class TextFieldTest extends React.Component {
 	}
 }
 
-storiesOf('FieldFactory', module).add('textField', () => (
-	<TextFieldTest field={textField}/>
+
+storiesOf('FieldFactory', module).add('Text Field - With state.', () => (
+	<FieldTest field={textField}/>
 ));
 
 const field = {
@@ -69,9 +70,18 @@ const field = {
 	value: ['opt-3']
 }
 
-storiesOf('FieldFactory', module).add('Checboxfieldset', () => (
-	<TextFieldTest field={field}/>
+storiesOf('FieldFactory', module).add('Checkbox field set', () => (
+	<FieldTest field={field}/>
 
-)).add('Radio field', ()=> (
+))
+.add('Radio field', ()=> (
 	<Fragment>{fieldFactory(radioField, ()=> {})}</Fragment>
+))
+.add('Radio field with state', ()=> (
+	<FieldTest field={radioField}/>
+));
+
+
+storiesOf('FieldFactory', module).add('Select Field - With state.', () => (
+	<FieldTest field={selectField}/>
 ));
