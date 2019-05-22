@@ -63,7 +63,6 @@ HorizontalForm.propTypes = {
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func,
 	onClose: PropTypes.func,
-	initialValues: PropTypes.object,
 	conditionals: PropTypes.array,
 };
 
