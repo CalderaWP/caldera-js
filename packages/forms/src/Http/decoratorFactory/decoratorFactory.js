@@ -7,7 +7,7 @@
  * @return {Proxy}
  */
 export const decorateObjectLiteral = decoratedObject => {
-	let handler = {
+	const handler = {
 		get(obj, prop) {
 			return decoratedObject.hasOwnProperty(prop)
 				? decoratedObject[prop]

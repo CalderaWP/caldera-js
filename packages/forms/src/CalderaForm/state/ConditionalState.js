@@ -5,7 +5,7 @@ const getMultiSelectFieldValue = (fieldId) => {
 
 };
 
-const setMultiSelectFieldValue = (fieldId ) => {
+const setMultiSelectFieldValue = (fieldId) => {
 
 };
 
@@ -34,8 +34,8 @@ export class ConditionalState {
 	 */
 	getCurrentState = () => {
 		const state = {}; //Must return a new object each time.
-		this.allowedFields.forEach( fieldId => {
-			if( !this.isFieldHidden(fieldId) ){
+		this.allowedFields.forEach(fieldId => {
+			if (!this.isFieldHidden(fieldId)) {
 				state[fieldId] = this.getValue(fieldId);
 			}
 		});

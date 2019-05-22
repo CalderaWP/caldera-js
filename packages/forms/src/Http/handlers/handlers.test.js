@@ -46,16 +46,16 @@ describe('get form token', () => {
 
 	const apiRootUri = 'https://something.com/wp-json/caldera-api';
 	const formId = 'cf1';
-	it('gets tokens with  request to the right url', async (done) => {
+	it('gets tokens with  request to the right url', async(done) => {
 		getCf2Token('https://ap.com', formId, axios)
 			.then(r =>
 			{
 				expect(axios.post.mock.calls[0][0]).toEqual('https://ap.com/v3/process/submission/cf1/token');
 				done();
-			})
+			});
 
 	});
-})
+});
 
 describe('submitFormCaldera', () => {
 	const fieldValues = {
@@ -142,7 +142,7 @@ describe('handleFormSubmitCf2', () => {
 		formId
 	};
 
-	it('calls axios with the right url', async (done) => {
+	it('calls axios with the right url', async(done) => {
 		handleFormSubmitCf2({
 			apiRootUri,
 			formId,
@@ -158,7 +158,7 @@ describe('handleFormSubmitCf2', () => {
 
 	});
 
-	it('calls axios with the field values in body', async (done) => {
+	it('calls axios with the field values in body', async(done) => {
 		handleFormSubmitCf2({
 			apiRootUri,
 			formId,
@@ -178,7 +178,7 @@ describe('handleFormSubmitCf2', () => {
 		});
 	});
 
-	it('Uses POST method', async (done) => {
+	it('Uses POST method', async(done) => {
 		handleFormSubmitCf2({
 			apiRootUri,
 			formId,
@@ -228,8 +228,8 @@ describe('submitFormCf2', () => {
 	});
 
 	it('calls fetch with the _cf_verify token in body', () => {
-		let _cf_verify = 'jwt.jwt.jwt;';
-		let _sessionPublicKey = 'a42';
+		const _cf_verify = 'jwt.jwt.jwt;';
+		const _sessionPublicKey = 'a42';
 		submitFormCf2(fieldValues, {
 			...eventOptions,
 			_cf_verify,
@@ -239,8 +239,8 @@ describe('submitFormCf2', () => {
 	});
 
 	it('calls fetch with the _sessionPublicKey token in body', () => {
-		let _cf_verify = 'jwt.jwt.jwt;';
-		let _sessionPublicKey = 'a42';
+		const _cf_verify = 'jwt.jwt.jwt;';
+		const _sessionPublicKey = 'a42';
 		submitFormCf2(fieldValues, {
 			...eventOptions,
 			_cf_verify,
@@ -251,8 +251,8 @@ describe('submitFormCf2', () => {
 
 
 	it('Extracts _cf_verify and _sessionPublicKey from fieldValues if needed', () => {
-		let _cf_verify = 'jwt.jwt.jwt;';
-		let _sessionPublicKey = 'a42';
+		const _cf_verify = 'jwt.jwt.jwt;';
+		const _sessionPublicKey = 'a42';
 		submitFormCf2(
 			{
 				...fieldValues,

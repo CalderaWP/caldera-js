@@ -48,24 +48,24 @@ const form = {
 		textField,
 		submitButton
 	],
-	conditionals :[
+	conditionals: [
 		{
 			type: 'hide',
-			rule: createFieldRule('is', emailField.fieldId, 'hide' ),
+			rule: createFieldRule('is', emailField.fieldId, 'hide'),
 			fields: [
 				textField.fieldId
 			]
 		},
 		{
 			type: 'disable',
-			rule: createFieldRule('empty', emailField.fieldId, null ),
+			rule: createFieldRule('empty', emailField.fieldId, null),
 			fields: [
 				submitButton.fieldId
 			]
 		},
 		{
 			type: 'disable',
-			rule: createFieldRule('empty', textField.fieldId,null ),
+			rule: createFieldRule('empty', textField.fieldId, null),
 			fields: [
 				submitButton.fieldId
 			]
@@ -114,7 +114,7 @@ const field = {
 		}
 	],
 	value: ['opt-3']
-}
+};
 const form2 = {
 	rows: [
 		{
@@ -131,7 +131,7 @@ const form2 = {
 	fields: [
 		field
 	],
-	conditionals :[
+	conditionals: [
 
 	]
 };

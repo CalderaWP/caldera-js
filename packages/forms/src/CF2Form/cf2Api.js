@@ -17,9 +17,9 @@ async function cf2Api(apiRootUri, formId, axios) {
 				entryValues,
 				tokens,
 				axios
-			})
+			});
 		}
-	}
+	};
 
 }
 

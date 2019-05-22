@@ -9,10 +9,10 @@ describe('updateRows', () => {
 	const rows = [
 		{
 			rowId: 'r1',
-			columns :[
+			columns: [
 				{
 					columnId: 'c1',
-					fields : [
+					fields: [
 						{
 							fieldId: 'hideField'
 						},
@@ -25,22 +25,22 @@ describe('updateRows', () => {
 		}
 	];
 	it('should remove a hidden row', () => {
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
-		},['hideField']);
-		expect( updateRows(state,rows)[0].columns[0].fields.findIndex(f => f.fieldId === 'showField')).toEqual(0);
-		expect( updateRows(state,rows)[0].columns[0].fields.findIndex(f => f.fieldId === 'hideField')).toEqual(-1);
+		}, ['hideField']);
+		expect(updateRows(state, rows)[0].columns[0].fields.findIndex(f => f.fieldId === 'showField')).toEqual(0);
+		expect(updateRows(state, rows)[0].columns[0].fields.findIndex(f => f.fieldId === 'hideField')).toEqual(-1);
 	});
 
-	it( 'should replace field ids with fields', () => {
+	it('should replace field ids with fields', () => {
 		const field = {
 			fieldType: 'input',
 			html5Type: 'number',
 			fieldId: 'showField',
 		};
 
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
@@ -48,10 +48,10 @@ describe('updateRows', () => {
 		const rows = [
 			{
 				rowId: 'r1',
-				columns :[
+				columns: [
 					{
 						columnId: 'c1',
-						fields : [
+						fields: [
 							{
 								fieldId: 'hideField'
 							},
@@ -62,18 +62,18 @@ describe('updateRows', () => {
 				]
 			}
 		];
-		expect( updateRows(state,rows,[field])[0].columns[0].fields.find(f => f.fieldId === 'showField')).toEqual(field);
+		expect(updateRows(state, rows, [field])[0].columns[0].fields.find(f => f.fieldId === 'showField')).toEqual(field);
 	});
 
 
-	it( 'should remove invalid fields', () => {
+	it('should remove invalid fields', () => {
 		const field = {
 			fieldType: 'input',
 			html5Type: 'number',
 			fieldId: 'showField',
 		};
 
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
@@ -81,10 +81,10 @@ describe('updateRows', () => {
 		const rows = [
 			{
 				rowId: 'r1',
-				columns :[
+				columns: [
 					{
 						columnId: 'c1',
-						fields : [
+						fields: [
 							{
 								fieldId: 'hideField'
 							},
@@ -95,17 +95,17 @@ describe('updateRows', () => {
 				]
 			}
 		];
-		expect( updateRows(state,rows,[field])[0].columns[0].fields.length).toEqual(1);
+		expect(updateRows(state, rows, [field])[0].columns[0].fields.length).toEqual(1);
 	});
 
-	it( 'should allow rows to have render', () => {
+	it('should allow rows to have render', () => {
 		const field = {
 			fieldType: 'input',
 			html5Type: 'number',
 			fieldId: 'showField',
 		};
 
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
@@ -116,17 +116,17 @@ describe('updateRows', () => {
 				render: () =>  <div>1</div>
 			}
 		];
-		expect( typeof updateRows(state,rows,[field])[0].render).toEqual('function');
+		expect(typeof updateRows(state, rows, [field])[0].render).toEqual('function');
 	});
 
-	it( 'should allow columns to have render', () => {
+	it('should allow columns to have render', () => {
 		const field = {
 			fieldType: 'input',
 			html5Type: 'number',
 			fieldId: 'showField',
 		};
 
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
@@ -151,23 +151,23 @@ describe('updateRows', () => {
 				]
 			}
 		];
-		expect( typeof updateRows(state,rows,[field])[0].columns[0].render).toEqual('function');
+		expect(typeof updateRows(state, rows, [field])[0].columns[0].render).toEqual('function');
 
 
 	});
 
-	it( 'sets columnId', () => {
+	it('sets columnId', () => {
 		const field = {
 			fieldType: 'input',
 			html5Type: 'number',
 			fieldId: 'showField',
 		};
 
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
-		const rows = updateRows(state,[
+		const rows = updateRows(state, [
 			{
 				rowId: 'r1',
 				columns: [
@@ -183,13 +183,13 @@ describe('updateRows', () => {
 					}
 				]
 			}
-		],[field]);
-		expect(  rows[0].columns[0].columnId).toEqual('1a');
-		expect(  rows[0].columns[1].columnId).toEqual('1b');
-	})
-	it( 'should allow fields to have render', () => {
+		], [field]);
+		expect(rows[0].columns[0].columnId).toEqual('1a');
+		expect(rows[0].columns[1].columnId).toEqual('1b');
+	});
+	it('should allow fields to have render', () => {
 		const _Field = props => <input id={'test808'} type={'number'}/>;
-		const state = new ConditionalState( {
+		const state = new ConditionalState({
 			hideField: 'h',
 			showField: 's'
 		});
@@ -216,7 +216,7 @@ describe('updateRows', () => {
 				]
 			}
 		];
-		expect(  typeof  updateRows(state,rows,[field])[0].columns[0].fields[0].render).toEqual('function');
+		expect(typeof  updateRows(state, rows, [field])[0].columns[0].fields[0].render).toEqual('function');
 
-	})
+	});
 });

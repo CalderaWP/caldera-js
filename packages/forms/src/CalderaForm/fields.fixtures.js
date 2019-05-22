@@ -111,7 +111,7 @@ const submitButton = {
 	fieldId: 'Clicker',
 	fieldType: 'submit',
 	label: 'Submit Button'
-}
+};
 
 export {
 	submitButton,

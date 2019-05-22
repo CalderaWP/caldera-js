@@ -19,7 +19,7 @@ export const updateRows = (newState, rows, fields) => {
 
 		if (! row.render) {
 			const {rowId} = row;
-			let outputRow = {
+			const outputRow = {
 				rowId: rowId,
 				columns: []
 			};
@@ -27,7 +27,7 @@ export const updateRows = (newState, rows, fields) => {
 				row.columns.forEach(column => {
 					const {columnId} = column;
 					if (! column.render) {
-						let outputColumn = {
+						const outputColumn = {
 							columnId,
 							fields: [],
 						};
@@ -52,14 +52,14 @@ export const updateRows = (newState, rows, fields) => {
 								}
 							});
 						}
-						outputRow.columns.push(outputColumn)
+						outputRow.columns.push(outputColumn);
 					} else {
-						outputRow.columns.push(column)
+						outputRow.columns.push(column);
 					}
 				});
 			}
 			outputRows.push(outputRow);
-		}else{
+		} else {
 			outputRows.push(row);
 		}
 

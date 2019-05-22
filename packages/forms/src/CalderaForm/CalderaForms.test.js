@@ -7,20 +7,20 @@ import {formRows, formRowOne, checkboxField} from './columns.fixtures';
 import {getValuesFromFormLayout} from './util/getValuesFromFormLayout';
 import {emailField, textField} from './fields.fixtures';
 
-import {Column,fieldAreaFactory,collectFieldValues} from '@calderajs/components';
+import {Column, fieldAreaFactory, collectFieldValues} from '@calderajs/components';
 
-describe( 'Factory import', () => {
-	it( 'imports factory', () => {
-		expect( typeof  fieldAreaFactory ).toBe( 'function' );
+describe('Factory import', () => {
+	it('imports factory', () => {
+		expect(typeof  fieldAreaFactory).toBe('function');
 	});
 
-	it( 'imports component', () => {
-		expect( typeof Column ).toBe('function')
+	it('imports component', () => {
+		expect(typeof Column).toBe('function');
 	});
 
-	it( 'imports util function', () => {
-		expect( typeof collectFieldValues ).toBe( 'function');
-	})
+	it('imports util function', () => {
+		expect(typeof collectFieldValues).toBe('function');
+	});
 });
 
 describe('Caldera Forms', () => {
@@ -52,7 +52,7 @@ describe('Caldera Forms', () => {
 			emailField,
 			textField
 		]
-	}
+	};
 
 	it('Forms', () => {
 		const component = renderer.create(
@@ -142,7 +142,7 @@ describe('Caldera Forms', () => {
 		};
 
 		const form = {
-			fields: [checkboxField,textField],
+			fields: [checkboxField, textField],
 			rows: [
 				{
 					rowId: 'r1',
@@ -204,13 +204,13 @@ describe('Updates ', () => {
 	};
 
 
-	it.skip( 'hides a field when it should ', () => {
+	it.skip('hides a field when it should ', () => {
 		const _form = {
 			...form,
-			conditionals :[
+			conditionals: [
 				{
 					type: 'hide',
-					rule: createFieldRule( 'is', emailField.fieldId, 'hide' ),
+					rule: createFieldRule('is', emailField.fieldId, 'hide'),
 					fields: [
 						textField.fieldId
 					]

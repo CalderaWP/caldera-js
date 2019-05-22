@@ -9,7 +9,7 @@ import { decorateObjectLiteralWithMethods } from './decoratorFactory/decoratorFa
  */
 export default function FormClient(form, options) {
 	this.fieldValues = form.fieldValues;
-	let { apiRootUri, fetch } = options;
+	const { apiRootUri, fetch } = options;
 
 	this.eventOpts = () => {
 		return {

@@ -16,7 +16,7 @@
     "build-storybook": "build-storybook",
     "reset": "rm -rf node_modules && rm yarn.lock && yarn",
     "lint": "eslint src/**",
-    "lint-fix": "eslint src/** --fix"
+    "lint:fix": "eslint src/** --fix"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",

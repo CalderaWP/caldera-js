@@ -4,7 +4,7 @@ import { formRows } from '../CalderaForm/columns.fixtures';
 
 import {collectFieldValues} from '@calderajs/components';
 import {createFieldRule} from '../CalderaForm/state/createFieldRule';
-import {emailField, textField,checkboxFieldset} from "../CalderaForm/fields.fixtures";
+import {emailField, textField, checkboxFieldset} from "../CalderaForm/fields.fixtures";
 import {CF2Form} from "./CF2Form";
 import axios from "axios";
 
@@ -42,10 +42,10 @@ const form = {
 			value: [],
 		}
 	],
-	conditionals :[
+	conditionals: [
 		{
 			type: 'hide',
-			rule: createFieldRule('is', emailField.fieldId, 'hide' ),
+			rule: createFieldRule('is', emailField.fieldId, 'hide'),
 			fields: [
 				textField.fieldId
 			]

@@ -2,7 +2,7 @@ import {CalderaForm} from "../CalderaForm";
 import getCf2Token from "../Http/handlers/getCf2Token";
 import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
 import React, {useState, useEffect, Fragment} from 'react';
-import { RingLoader,PacmanLoader } from 'react-spinners';
+import { RingLoader, PacmanLoader } from 'react-spinners';
 
 import PropTypes from "prop-types";
 import setCf1ClassNames from "./setCf1ClassNames";
@@ -51,7 +51,7 @@ export const CF2Form = (
 				.then(r => {
 					setTokens(r);
 					setTimeout(() => setTokensFetched(true), 500);
-				})
+				});
 		}
 
 		if (tokens._cf_verify && tokens._sessionPublicKey) {
@@ -69,7 +69,7 @@ export const CF2Form = (
 	 */
 	useEffect(() => {
 
-		if( useCf1ClassNames ){
+		if (useCf1ClassNames) {
 			setCf1ClassNames();
 		}
 
@@ -79,11 +79,11 @@ export const CF2Form = (
 		return (
 			<div className={'error'}>{message}</div>
 
-		)
+		);
 	}
 
 	const FormOrLoading = () => {
-		if(  isSubmitting ) {
+		if (isSubmitting) {
 			return (
 				<div><PacmanLoader/></div>
 			);
@@ -111,13 +111,13 @@ export const CF2Form = (
 						setMessage(r.data.message);
 						actions.resetForm();
 					}).catch(e => {
-						setTimeout(() => setIsSubmitting(false), 500 );
+						setTimeout(() => setIsSubmitting(false), 500);
 						console.log(e);
-					})
+					});
 
 				}}
 			/>
-		)
+		);
 
 	};
 
@@ -131,7 +131,7 @@ export const CF2Form = (
 		</Fragment>
 	);
 
-}
+};
 
 CF2Form.propTypes = {
 	...CalderaForm.propTypes,
@@ -140,4 +140,4 @@ CF2Form.propTypes = {
 
 const noop = () => {
 };
-CF2Form.defaultProps = {...CalderaForm.defaultProps,useCf1ClassNames:false};
+CF2Form.defaultProps = {...CalderaForm.defaultProps, useCf1ClassNames: false};

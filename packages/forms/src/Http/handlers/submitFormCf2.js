@@ -1,4 +1,4 @@
-import 'whatwg-fetch'
+import 'whatwg-fetch';
 /**
  * Form submit handler for Caldera Forms in "cf2" mode.
  *
@@ -14,11 +14,11 @@ export default function submitFormCf2(fieldValues, eventOptions, fetch) {
 	let {  _cf_verify, _sessionPublicKey } = eventOptions;
 	const entryValues = [];
 	Object.keys(fieldValues).forEach(fieldId => {
-		if( '_sessionPublicKey' === fieldId ) {
+		if ('_sessionPublicKey' === fieldId) {
 			_sessionPublicKey = fieldValues[fieldId];
-		}else if( '_cf_verify' === fieldId ){
+		} else if ('_cf_verify' === fieldId) {
 			_cf_verify = fieldValues[fieldId];
-		}else {
+		} else {
 			entryValues.push({
 				fieldId: fieldValues[fieldId]
 			});

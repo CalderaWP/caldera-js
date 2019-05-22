@@ -30,7 +30,7 @@ export class CalderaForm extends Component {
 		if (conditionals && conditionals.length) {
 			const conditionalState = this.state.conditionalState ? this.state.conditionalState : new ConditionalState(collectFieldValues(fields));
 			conditionals.forEach(rule => {
-				applyRuleToState(rule, conditionalState)
+				applyRuleToState(rule, conditionalState);
 			});
 			this.setState({
 				formRows: updateRows(conditionalState, rows, fields),
@@ -65,8 +65,8 @@ export class CalderaForm extends Component {
 					  values
 				  }) => {
 		const {onSubmit, onChange, form} = this.props;
-		const {state,applyConditionalRules} = this;
-		const {conditionalState,formRows }= state;
+		const {state, applyConditionalRules} = this;
+		const {conditionalState, formRows }= state;
 
 		return (
 			<form
@@ -151,12 +151,12 @@ export class CalderaForm extends Component {
 					})}
 				</Fragment>
 			</form>
-		)
+		);
 	};
 
 
 	render() {
-		const {onSubmit,form} = this.props;
+		const {onSubmit, form} = this.props;
 		const {initialValues} = this.state;
 
 		return (
@@ -178,8 +178,8 @@ export class CalderaForm extends Component {
 }
 
 CalderaForm.propTypes = {
-	form:  PropTypes.shape({
-		ID: PropTypes.oneOfType([PropTypes.string,PropTypes.number])
+	form: PropTypes.shape({
+		ID: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 	}),
 	onSubmit: PropTypes.func,
 	onChange: PropTypes.func,

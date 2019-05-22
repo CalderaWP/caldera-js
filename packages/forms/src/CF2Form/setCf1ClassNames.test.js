@@ -10,14 +10,14 @@ import {
 	FILTER_FORM_WRAPPER_CLASS,
 	fieldWrapperClassNames, FILTER_FORM_COLUMN_CLASS
 } from '@calderajs/components';
-describe( 'setCf1ClassNames', () => {
-	beforeEach( () => {
+describe('setCf1ClassNames', () => {
+	beforeEach(() => {
 		classNameService.reset();
 	});
-	afterEach( () => {
+	afterEach(() => {
 		classNameService.reset();
 	});
-	it( 'Sets classes', () => {
+	it('Sets classes', () => {
 		setCf1ClassNames();
 		expect(classNameService.getFormWrapperClassNames('')).toBe('caldera-grid');
 		expect(classNameService.getFormElementClassNames('')).toBe(cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
@@ -25,7 +25,7 @@ describe( 'setCf1ClassNames', () => {
 		expect(fieldSetClassNames('text')).toBe(cf1ClassNames[FILTER_FIELD_SET_CLASS_NAME]);
 	});
 
-	it( 'handles column classes', () => {
+	it('handles column classes', () => {
 		setCf1ClassNames();
 
 		expect(classNameService.getFormColumnClassNames('1', '1')).toBe(' col-sm-12');
@@ -34,14 +34,14 @@ describe( 'setCf1ClassNames', () => {
 
 	});
 
-	it( 'resets itself', () => {
+	it('resets itself', () => {
 		const reset = setCf1ClassNames();
 		const testFilter = 'hiRoy';
-		classNameService.addFilter( testFilter, 'namespace', () => {return 'Mike';} );
+		classNameService.addFilter(testFilter, 'namespace', () => { return 'Mike'; });
 		expect(classNameService.getFormWrapperClassNames('')).toBe('caldera-grid');
 		expect(classNameService.getFormElementClassNames('')).toBe(cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]);
 		reset();
-		expect( classNameService.hasFilter( testFilter ) ).toBe(true);
+		expect(classNameService.hasFilter(testFilter)).toBe(true);
 		expect(classNameService.getFormWrapperClassNames('')).toBe('caldera');
 	});
 });

@@ -18,12 +18,12 @@ export const useCf2FormTokens = (initialFormId) => {
 		setTokens({
 			_cf_verify,
 			_sessionPublicKey
-		})
+		});
 	};
 	return [
 		tokens,
 		updateTokens,
 		tokensFetched,
 		setTokensFetched
-	]
+	];
 };

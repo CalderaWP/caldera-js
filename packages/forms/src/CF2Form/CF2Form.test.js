@@ -2,7 +2,7 @@ import {CF2Form} from "./CF2Form";
 import React, { useEffect } from "react";
 import renderer from 'react-test-renderer';
 import { render, fireEvent, getByTestId} from "react-testing-library";
-describe( 'CF2Form', () => {
+describe('CF2Form', () => {
 
 
 	it("calls effect", () => {
@@ -56,18 +56,18 @@ describe( 'CF2Form', () => {
 		conditionals: []
 	};
 
-	it( 'Matches snapshot with cf2 classnames used', () => {
+	it('Matches snapshot with cf2 classnames used', () => {
 		expect(render(<CF2Form formConfig={formConfig} axios={axios} useCf1ClassNames={true} _tokens={{
 			_cf_verify: 'a',
 			_sessionPublicKey: 'b'
 		}}/>)).toMatchSnapshot();
 	});
 
-	it.skip( 'Matches snapshot', () => {
+	it.skip('Matches snapshot', () => {
 		expect(render(<CF2Form formConfig={formConfig} axios={axios}/>)).toMatchSnapshot();
 	});
 
-	it.skip( 'Snapshot with tokens',async () => {
+	it.skip('Snapshot with tokens', async() => {
 		expect(render(
 			<CF2Form
 				apiRootUri={'https://localhost/'}
@@ -79,7 +79,7 @@ describe( 'CF2Form', () => {
 				}}
 			/>)
 
-		).toMatchSnapshot()
+		).toMatchSnapshot();
 
 	});
 });

@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint src/**",
-    "lint-fix": "eslint src/** --fix"
+    "lint:fix": "eslint src/** --fix"
   },
   "peerDependencies": {
     "react": "^16.8.6",

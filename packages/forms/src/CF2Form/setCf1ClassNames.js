@@ -13,15 +13,15 @@ const IDENTIFIER = 'cf1-classes';
  *
  * NOTE: Resets class service first.
  */
-export default function setCf1ClassNames(){
+export default function setCf1ClassNames() {
 	classNameService.reset();
-	Object.keys(cf1ClassNames).map( filterName => {
+	Object.keys(cf1ClassNames).map(filterName => {
 		classNameService.addFilter(filterName, IDENTIFIER, () => {
-			return cf1ClassNames[filterName]
+			return cf1ClassNames[filterName];
 		});
 	});
 
-	classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, IDENTIFIER, (prefix,columnId) => {
+	classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, IDENTIFIER, (prefix, columnId) => {
 		return 'col-sm-';
 	});
 
@@ -31,7 +31,7 @@ export default function setCf1ClassNames(){
 	 * Remove all filters
 	 */
 	const reset = () => {
-		Object.keys(cf1ClassNames).map( filterName => {
+		Object.keys(cf1ClassNames).map(filterName => {
 			classNameService.removeAllFilters(filterName);
 		});
 	};
