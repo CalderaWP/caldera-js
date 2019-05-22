@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HiddenField  matches snapshot with all props 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-hidden"
+>
+  <input
+    className="caldera-field caldera-field-hidden"
+    id="i11"
+    onChange={[Function]}
+    type="hidden"
+    value="Roy"
+  />
+</div>
+`;

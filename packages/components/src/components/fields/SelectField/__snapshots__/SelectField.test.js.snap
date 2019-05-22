@@ -1,3 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select Field component matches snapshot, not multiple 1`] = `null`;
+exports[`Select Field component matches snapshot, not multiple 1`] = `
+<div
+  className="caldera-field-wrapper caldera-field-wrapper-select"
+>
+  <label
+    className="caldera-field-label caldera-field-label-select"
+    htmlFor="selection-hats"
+  >
+    Select A Hat!
+     
+  </label>
+  <select
+    aria-describedby="selection-hats__help"
+    className="caldera-field caldera-field-select"
+    id="selection-hats"
+    multiple={false}
+    onChange={[Function]}
+    required={false}
+  >
+    <option
+      value={null}
+    >
+      --
+    </option>
+  </select>
+  <p
+    className="caldera-control__help description"
+    id="selection-hats__help"
+  >
+    selection of hats
+  </p>
+</div>
+`;

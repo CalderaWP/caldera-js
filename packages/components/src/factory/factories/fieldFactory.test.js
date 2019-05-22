@@ -46,6 +46,13 @@ describe('fieldFactory', () => {
 		expect(component.find('input').prop('type')).toBe('text');
 	});
 
+	it('Creates a hidden field when field type is hidden', () => {
+		const component = mount(
+			fieldFactory({...textField, fieldType: 'hidden'}, onChange, onBlur)
+		);
+		expect(component.find('input').prop('type')).toBe('hidden');
+	});
+
 	it('Creates a number field', () => {
 		const component = renderer.create(
 			fieldFactory(numberField, onChange, onBlur)

@@ -31,7 +31,7 @@ exports[`fieldAreaFactory Creates a text field 1`] = `
 
 exports[`fieldAreaFactory Creates an select field 1`] = `
 <div
-  className="caldera-field-wrapper caldera-field-wrapper-select"
+  className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
     className="caldera-field-label caldera-field-label-select"
@@ -106,7 +106,7 @@ exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
 
 exports[`fieldAreaFactory should create textarea 1`] = `
 <div
-  className="caldera-field-wrapper caldera-field-wrapper-textarea"
+  className="caldera-field-group caldera-field-area-textarea is-required caldera-field-wrapper caldera-field-wrapper-textarea"
 >
   <label
     className="caldera-field-label caldera-field-label-textarea"
@@ -138,7 +138,7 @@ exports[`fieldAreaFactory should create textarea 1`] = `
 
 exports[`fieldAreaFactory should create toggle 1`] = `
 <div
-  className="caldera-field-wrapper caldera-field-wrapper-select"
+  className="caldera-field-group caldera-field-area-toggle is-required caldera-field-wrapper caldera-field-wrapper-select"
 >
   <label
     className="caldera-field-label caldera-field-label-select"

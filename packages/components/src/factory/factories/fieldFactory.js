@@ -9,7 +9,8 @@ import {
 	isValidHtml5type,
 	AutoCompleteField,
 	FormFieldsAutoComplete,
-	SubmitButton
+	SubmitButton,
+	HiddenField
 } from "../..";
 
 import React from 'react';
@@ -177,6 +178,8 @@ export const fieldFactory = (field, onChange, onBlur, wrapperClassNames, Message
 			'toggle'
 			:
 				return <ToggleField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
+			case 'hidden':
+				return  <HiddenField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
 			case
 			'radio'
 			:

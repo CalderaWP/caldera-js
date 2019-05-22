@@ -29,7 +29,8 @@ import {
 	FILTER_FORM_ELEMENT_CLASS,
 	FILTER_FORM_WRAPPER_CLASS,
 	FILTER_FORM_COLUMN_CLASS,
-	FILTER_FORM_COLUMN_PREFIX
+	FILTER_FORM_COLUMN_PREFIX,
+	HiddenField
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -83,6 +84,9 @@ describe('exports', () => {
 	});
 	test('SubmitButton', () => {
 		expect(typeof SubmitButton).toBe('function');
+	});
+	test('HiddenField', () => {
+		expect(typeof HiddenField).toBe('function');
 	});
 
 	test('LazyIFrame', () => {

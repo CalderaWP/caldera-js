@@ -19,7 +19,7 @@ export const HorizontalForm = ({
 	onClose,
 	onChange,
 	instanceId,
-								   conditionals
+   	conditionals
 }) => {
 	const rows = [];
 	let i = 0;

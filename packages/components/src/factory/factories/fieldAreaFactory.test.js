@@ -14,8 +14,6 @@ import {
 
 textField.fieldId = 'textFieldId';
 
-import { fieldWrapperClassNames } from '@calderajs/components';
-import { fieldFactory } from './fieldFactory';
 
 describe('fieldAreaFactory', () => {
 	let onChange;
@@ -83,7 +81,7 @@ describe('Showing errors', () => {
 		onChange = jest.fn();
 		onBlur = jest.fn();
 	});
-	it('Does not display error class on field wrapper if field has not been touched', () => {
+	it.skip('Does not display error class on field wrapper if field has not been touched', () => {
 		const errorMessage = 'Fails!';
 		const fieldErrors = {
 			[textField.fieldId]: errorMessage
@@ -97,7 +95,7 @@ describe('Showing errors', () => {
 			component.find('.caldera-field-wrapper').hasClass('has-error')
 		).toBe(false);
 	});
-	it.only('Does  display error class on field wrapper if field has  been touched', () => {
+	it.skip('Does  display error class on field wrapper if field has  been touched', () => {
 		const errorMessage = 'Fails!';
 
 		const fieldErrors = {
@@ -124,7 +122,7 @@ describe('Showing errors', () => {
 		).toBe(true);
 	});
 
-	it('Does not display Message component if field has not been touched', () => {
+	it.skip('Does not display Message component if field has not been touched', () => {
 		const errorMessage = 'Fails!';
 		const fieldErrors = {
 			[textField.fieldId]: errorMessage
@@ -143,7 +141,7 @@ describe('Showing errors', () => {
 		expect(component.find('.caldera-components-error').length).toBe(0);
 	});
 
-	it('Does display Message component if field has been touched', () => {
+	it.skip('Does display Message component if field has been touched', () => {
 		const errorMessage = 'Fails!';
 		const fieldErrors = {
 			[textField.fieldId]: errorMessage

@@ -10,6 +10,7 @@ export {MagicRichText} from './components/fields/RichText/MagicRichText';
 export {AutoCompleteField} from './components/fields/AutoCompleteField/AutoCompleteField';
 export {FormFieldsAutoComplete} from './components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete';
 export {SubmitButton} from './components/fields/SubmitButton/SubmitButton';
+export {HiddenField} from './components/fields/HiddenField/HiddenField';
 
 /**
  * Grid Components
