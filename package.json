@@ -26,7 +26,13 @@
     "storybook:forms": "yarn --cwd packages/forms storybook",
     "storybook:components": "yarn --cwd packages/components storybook",
     "release": "yarn build && yarn lerna publish",
-    "nuke": "rm -rf node_modules && rm yarn.lock"
+    "nuke": "rm -rf node_modules && rm yarn.lock",
+    "lint": "",
+    "lint:forms": "yarn --cwd packages/forms lint",
+    "lint:components": "yarn --cwd packages/components lint",
+    "lint:fix": "yarn lint:fix-forms && yarn lint:fix-components",
+    "lint:fix-forms": "yarn --cwd packages/forms lint:fix",
+    "lint:fix-components": "yarn --cwd packages/components lint:fix"
   },
   "devDependencies": {
     "lerna": "^3.13.1"

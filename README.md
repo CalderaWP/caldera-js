@@ -52,6 +52,12 @@ Testing tools:
     - `yarn storybook:components`
 * Start Forms Storybook
     - `yarn storybook:forms`
+    
+### Linting
+* Lint and fix fixable issues in forms and components
+    - `yarn lint:fix`
+* Lint  forms and components
+    - `yarn lint`
 
 
 ## Using Mono Repo

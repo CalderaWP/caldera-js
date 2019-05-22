@@ -7,12 +7,13 @@
     "test": "yarn test:watch",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci",
-    "lint": "eslint 'src/**/*.js'",
     "del-dist": "del-cli dist",
     "prebuild": "yarn del-dist",
     "build": "rm -rf dist && babel src -d dist --ignore \"src/**/*.fixture.js\",\"src/**/*.story.js\",\"src/**/*.test.js\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint src/**",
+    "lint-fix": "eslint src/** --fix"
   },
   "peerDependencies": {
     "react": "^16.8.6",

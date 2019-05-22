@@ -14,7 +14,9 @@
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "reset": "rm -rf node_modules && rm yarn.lock && yarn"
+    "reset": "rm -rf node_modules && rm yarn.lock && yarn",
+    "lint": "eslint src/**",
+    "lint-fix": "eslint src/** --fix"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",
