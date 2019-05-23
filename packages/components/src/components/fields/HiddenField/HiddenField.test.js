@@ -32,6 +32,7 @@ describe('HiddenField ', () => {
 			/>
 		);
 
+		expect( component.find('input').prop('value')).toEqual( 'Roy');
 		component.find('input').simulate('change');
 		expect(onChange.mock.calls.length).toBe(1);
 	});
