@@ -1,6 +1,6 @@
 {
   "name": "@calderajs/forms",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/polyfill": "^7.4.0",
     "@babel/preset-react": "^7.0.0",
-    "@calderajs/components": "^0.8.1",
+    "@calderajs/components": "^0.8.3",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "lodash": "^4.17.11",
