@@ -1924,7 +1924,7 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@rebass/grid@^6.0.0-7":
+"@rebass/grid@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@rebass/grid/-/grid-6.0.0.tgz#79ad5ae7951bba41a62db5caf1ee2006a201b3b1"
   integrity sha512-2pbkfObgbfbPUL+spk5JaYt+L4zXAayBLfdDuqnDUxBcBRe2SMqDBTOkEcq1tQvsuhmtfkZ9rB51FyjBkO92vw==
