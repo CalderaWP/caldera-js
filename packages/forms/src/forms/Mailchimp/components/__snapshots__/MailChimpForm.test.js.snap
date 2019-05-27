@@ -1,0 +1,615 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MailChimp mailChimpTestForm Loads if it has proper mailChimpTestForm 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="css-16tm1g7-wrapper-wrapper"
+        >
+          <div
+            class="css-1anlcob-pacmanStyle"
+          />
+          <div
+            class="css-1oj2eaa-pacmanStyle"
+          />
+          <div
+            class="css-1y2ttxx-ballStyle"
+          />
+          <div
+            class="css-im5qma-ballStyle"
+          />
+          <div
+            class="css-10tjdos-ballStyle"
+          />
+          <div
+            class="css-x3nw5t-ballStyle"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        
+        <div
+          class="caldera"
+        >
+          <form
+            class="mc-45907f0c59 caldera-form"
+          >
+            <div
+              class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-1-1"
+              >
+                <div
+                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <label
+                    class="caldera-field-label caldera-field-label-text"
+                    for="mc-email"
+                  >
+                    Email
+                     
+                  </label>
+                  <input
+                    class="caldera-field caldera-field-text"
+                    id="mc-email"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-1-2"
+              >
+                <div
+                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <label
+                    class="caldera-field-label caldera-field-label-text"
+                    for="FNAME"
+                  >
+                    First Name
+                     
+                  </label>
+                  <input
+                    class="caldera-field caldera-field-text"
+                    id="FNAME"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-2-1"
+              >
+                <div
+                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <label
+                    class="caldera-field-label caldera-field-label-text"
+                    for="LNAME"
+                  >
+                    Last Name
+                     
+                  </label>
+                  <input
+                    class="caldera-field caldera-field-text"
+                    id="LNAME"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-2-2"
+              >
+                <div
+                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                >
+                  <label
+                    class="caldera-field-label caldera-field-label-text"
+                    for="MMERGE3"
+                  >
+                    Primary Website
+                     
+                  </label>
+                  <input
+                    class="caldera-field caldera-field-text"
+                    id="MMERGE3"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-3-1"
+              >
+                <fieldset
+                  class="caldera-fieldset caldera-fieldset-checkboxes"
+                >
+                  <legend>
+                    What React Framework Do You Want To Learn?
+                  </legend>
+                  <div
+                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                  >
+                    <input
+                      class="caldera-field caldera-field-checkbox"
+                      id="75091baaad"
+                      type="checkbox"
+                      value="1"
+                    />
+                    <label
+                      class="caldera-field-label caldera-field-label-checkbox"
+                      for="75091baaad"
+                    >
+                      Gatsby
+                       
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                  >
+                    <input
+                      class="caldera-field caldera-field-checkbox"
+                      id="0a4dc88500"
+                      type="checkbox"
+                      value="1"
+                    />
+                    <label
+                      class="caldera-field-label caldera-field-label-checkbox"
+                      for="0a4dc88500"
+                    >
+                      Next.Js
+                       
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                  >
+                    <input
+                      class="caldera-field caldera-field-checkbox"
+                      id="5a44f196ec"
+                      type="checkbox"
+                      value="1"
+                    />
+                    <label
+                      class="caldera-field-label caldera-field-label-checkbox"
+                      for="5a44f196ec"
+                    >
+                      Create React App
+                       
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div
+              class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+            >
+              <div
+                class="caldera-column width-1 sc-bdVaJa iHZvIS"
+                id="mc-45907f0c59-4-2"
+              >
+                <div
+                  class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+                >
+                  <label
+                    class="caldera-field-label caldera-field-label-submit"
+                    for="mc-submit"
+                  >
+                    
+                     
+                  </label>
+                  <input
+                    class="caldera-field caldera-field-text"
+                    id="mc-submit"
+                    type="submit"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      
+      <div
+        class="caldera"
+      >
+        <form
+          class="mc-45907f0c59 caldera-form"
+        >
+          <div
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+          >
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-1-1"
+            >
+              <div
+                class="caldera-field-wrapper caldera-field-wrapper-text"
+              >
+                <label
+                  class="caldera-field-label caldera-field-label-text"
+                  for="mc-email"
+                >
+                  Email
+                   
+                </label>
+                <input
+                  class="caldera-field caldera-field-text"
+                  id="mc-email"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-1-2"
+            >
+              <div
+                class="caldera-field-wrapper caldera-field-wrapper-text"
+              >
+                <label
+                  class="caldera-field-label caldera-field-label-text"
+                  for="FNAME"
+                >
+                  First Name
+                   
+                </label>
+                <input
+                  class="caldera-field caldera-field-text"
+                  id="FNAME"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+          >
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-2-1"
+            >
+              <div
+                class="caldera-field-wrapper caldera-field-wrapper-text"
+              >
+                <label
+                  class="caldera-field-label caldera-field-label-text"
+                  for="LNAME"
+                >
+                  Last Name
+                   
+                </label>
+                <input
+                  class="caldera-field caldera-field-text"
+                  id="LNAME"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-2-2"
+            >
+              <div
+                class="caldera-field-wrapper caldera-field-wrapper-text"
+              >
+                <label
+                  class="caldera-field-label caldera-field-label-text"
+                  for="MMERGE3"
+                >
+                  Primary Website
+                   
+                </label>
+                <input
+                  class="caldera-field caldera-field-text"
+                  id="MMERGE3"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+          >
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-3-1"
+            >
+              <fieldset
+                class="caldera-fieldset caldera-fieldset-checkboxes"
+              >
+                <legend>
+                  What React Framework Do You Want To Learn?
+                </legend>
+                <div
+                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                >
+                  <input
+                    class="caldera-field caldera-field-checkbox"
+                    id="75091baaad"
+                    type="checkbox"
+                    value="1"
+                  />
+                  <label
+                    class="caldera-field-label caldera-field-label-checkbox"
+                    for="75091baaad"
+                  >
+                    Gatsby
+                     
+                  </label>
+                </div>
+                <div
+                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                >
+                  <input
+                    class="caldera-field caldera-field-checkbox"
+                    id="0a4dc88500"
+                    type="checkbox"
+                    value="1"
+                  />
+                  <label
+                    class="caldera-field-label caldera-field-label-checkbox"
+                    for="0a4dc88500"
+                  >
+                    Next.Js
+                     
+                  </label>
+                </div>
+                <div
+                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
+                >
+                  <input
+                    class="caldera-field caldera-field-checkbox"
+                    id="5a44f196ec"
+                    type="checkbox"
+                    value="1"
+                  />
+                  <label
+                    class="caldera-field-label caldera-field-label-checkbox"
+                    for="5a44f196ec"
+                  >
+                    Create React App
+                     
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+          >
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="mc-45907f0c59-4-2"
+            >
+              <div
+                class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+              >
+                <label
+                  class="caldera-field-label caldera-field-label-submit"
+                  for="mc-submit"
+                >
+                  
+                   
+                </label>
+                <input
+                  class="caldera-field caldera-field-text"
+                  id="mc-submit"
+                  type="submit"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`MailChimp mailChimpTestForm Shows spinner if mailChimpTestForm does not have fields 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="css-16tm1g7-wrapper-wrapper"
+        >
+          <div
+            class="css-1anlcob-pacmanStyle"
+          />
+          <div
+            class="css-1oj2eaa-pacmanStyle"
+          />
+          <div
+            class="css-1y2ttxx-ballStyle"
+          />
+          <div
+            class="css-im5qma-ballStyle"
+          />
+          <div
+            class="css-10tjdos-ballStyle"
+          />
+          <div
+            class="css-x3nw5t-ballStyle"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="css-16tm1g7-wrapper-wrapper"
+      >
+        <div
+          class="css-1anlcob-pacmanStyle"
+        />
+        <div
+          class="css-1oj2eaa-pacmanStyle"
+        />
+        <div
+          class="css-1y2ttxx-ballStyle"
+        />
+        <div
+          class="css-im5qma-ballStyle"
+        />
+        <div
+          class="css-10tjdos-ballStyle"
+        />
+        <div
+          class="css-x3nw5t-ballStyle"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

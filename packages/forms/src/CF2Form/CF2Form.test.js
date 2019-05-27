@@ -1,6 +1,5 @@
 import {CF2Form} from "./CF2Form";
 import React, { useEffect } from "react";
-import renderer from 'react-test-renderer';
 import { render, fireEvent, getByTestId} from "react-testing-library";
 describe('CF2Form', () => {
 
