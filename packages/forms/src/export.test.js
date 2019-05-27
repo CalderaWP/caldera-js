@@ -85,8 +85,12 @@ describe('Mailchimp export', function () {
         getForm,
         prepareData,
         createSubscriber,
+        AdminClient,
         updateSubscriber,
     } = mailChimpApi;
+    it('exports AdminClient', () => {
+        expect(typeof AdminClient).toBe('function');
+    });
     it('exports AddApiKey', () => {
         expect(typeof AddApiKey).toBe('function');
     });

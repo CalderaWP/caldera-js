@@ -28,12 +28,12 @@ export {FormClient};
  *
  */
 import {
+    AdminClient,
     getAccounts,
     getAccountsUi,
     getListsUi,
     getLists,
     saveApiKey,
-    //public API client
     getForm,
     prepareData,
     createSubscriber,
@@ -42,6 +42,7 @@ import {
 
 
 export const mailChimpApi = {
+    AdminClient,
     //Admin API client
     getAccounts,
     getAccountsUi,

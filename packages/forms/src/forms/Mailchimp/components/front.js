@@ -1,4 +1,4 @@
-import {blockClassNameIdentifiers} from "../../../../../../../calderawp/wp-content/plugins/caldera-mailchimp/src/blocks/blockClassNameIdentifiers";
+import {blockClassNameIdentifiers} from "../blockClassNameIdentifiers";
 import React from "react";
 import CalderaMailChimpForm from "./CalderaMailChimpForm";
 import ReactDOM from "react-dom";
