@@ -16,17 +16,8 @@ import {
     CalderaMailChimpSurveyForm,
     AddApiKey,
     SelectList,
-    //Admin API client
-    getAccounts,
-    getAccountsUi,
-    getListsUi,
-    getLists,
-    saveApiKey,
-    //public API client
-    getForm,
-    prepareData,
-    createSubscriber,
-    updateSubscriber,
+    //Mailchimp API
+    mailChimpApi,
     //hooks
     useCalderaMailChimpFormConfig
 } from '@calderajs/forms';
@@ -82,6 +73,20 @@ describe('Mailchimp export', function () {
     it('exports CalderaMailChimpSurveyForm', () => {
         expect(typeof CalderaMailChimpSurveyForm).toBe('function');
     });
+
+    const {
+        //Admin API client
+        getAccounts,
+        getAccountsUi,
+        getListsUi,
+        getLists,
+        saveApiKey,
+        //public API client
+        getForm,
+        prepareData,
+        createSubscriber,
+        updateSubscriber,
+    } = mailChimpApi;
     it('exports AddApiKey', () => {
         expect(typeof AddApiKey).toBe('function');
     });

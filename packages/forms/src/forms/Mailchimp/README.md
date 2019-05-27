@@ -36,20 +36,26 @@ import {
     CalderaMailChimpSurveyForm,
     AddApiKey,
     SelectList,
-    //Admin API client
-    getAccounts,
-    getAccountsUi,
-    getListsUi,
-    getLists,
-    saveApiKey,
-    //public API client
-    getForm,
-    prepareData,
-    createSubscriber,
-    updateSubscriber,
+    //Api client
+    mailchimpApi,
     //hooks
     useCalderaMailChimpFormConfig
 } from '@calderajs/forms';
+
+const {
+        //Admin API client
+        getAccounts,
+        getAccountsUi,
+        getListsUi,
+        getLists,
+        saveApiKey,
+        //public API client
+        getForm,
+        prepareData,
+        createSubscriber,
+        updateSubscriber,
+    } = mailChimpApi;
+
 ```
 
 ### `CalderaMailChimpForm`
