@@ -8,7 +8,27 @@ import {
     useCf2FormTokens,
     handleFormSubmitCf2,
     CF2Form,
-    setCf1ClassNames
+    setCf1ClassNames,
+    //Mailchimp components
+    MailChimpForm,
+    MailChimpSurveyForm,
+    CalderaMailChimpForm,
+    CalderaMailChimpSurveyForm,
+    AddApiKey,
+    SelectList,
+    //Admin API client
+    getAccounts,
+    getAccountsUi,
+    getListsUi,
+    getLists,
+    saveApiKey,
+    //public API client
+    getForm,
+    prepareData,
+    createSubscriber,
+    updateSubscriber,
+    //hooks
+    useCalderaMailChimpFormConfig
 } from '@calderajs/forms';
 
 describe('Exports', () => {
@@ -48,3 +68,57 @@ describe('Exports', () => {
     });
 
 });
+
+describe('Mailchimp export', function () {
+    it('exports MailChimpForm', () => {
+        expect(typeof MailChimpForm).toBe('function');
+    });
+    it('exports MailChimpSurveyForm', () => {
+        expect(typeof MailChimpSurveyForm).toBe('function');
+    });
+    it('exports CalderaMailChimpForm', () => {
+        expect(typeof CalderaMailChimpForm).toBe('function');
+    });
+    it('exports CalderaMailChimpSurveyForm', () => {
+        expect(typeof CalderaMailChimpSurveyForm).toBe('function');
+    });
+    it('exports AddApiKey', () => {
+        expect(typeof AddApiKey).toBe('function');
+    });
+    it('exports SelectList', () => {
+        expect(typeof SelectList).toBe('function');
+    });
+    it('exports getAccounts', () => {
+        expect(typeof getAccounts).toBe('function');
+    });
+    it('exports getAccountsUi', () => {
+        expect(typeof getAccountsUi).toBe('function');
+    });
+    it('exports getListsUi', () => {
+        expect(typeof getListsUi).toBe('function');
+    });
+    it('exports getLists', () => {
+        expect(typeof getLists).toBe('function');
+    });
+    it('exports saveApiKey', () => {
+        expect(typeof saveApiKey).toBe('function');
+    });
+    it('exports getForm', () => {
+        expect(typeof getForm).toBe('function');
+    });
+    it('exports getAccountsUi', () => {
+        expect(typeof prepareData).toBe('function');
+    });
+    it('exports prepareData', () => {
+        expect(typeof getAccountsUi).toBe('function');
+    });
+    it('exports createSubscriber', () => {
+        expect(typeof createSubscriber).toBe('function');
+    });
+    it('exports updateSubscriber', () => {
+        expect(typeof updateSubscriber).toBe('function');
+    });
+    it('exports useCalderaMailChimpFormConfig', () => {
+        expect(typeof useCalderaMailChimpFormConfig).toBe('function');
+    });
+})

@@ -1,11 +1,5 @@
-import MailChimpForm from './MailChimpForm';
-import MailChimpSurveyForm from './MailChimpSurveyForm';
-import CalderaMailChimpForm from './CalderaMailChimpForm';
-import CalderaMailChimpSurveyForm from './CalderaMailChimpSurveyForm';
-
-export {
-	MailChimpForm,
-	MailChimpSurveyForm,
-	CalderaMailChimpForm,
-	CalderaMailChimpSurveyForm,
-}
+export MailChimpForm from './MailChimpForm';
+export MailChimpSurveyForm from './MailChimpSurveyForm';
+export CalderaMailChimpForm from './CalderaMailChimpForm';
+export CalderaMailChimpSurveyForm from './CalderaMailChimpSurveyForm';
+export {AddApiKey,SelectList} from "./Admin";

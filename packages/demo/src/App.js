@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import {Message} from "@calderajs/components";
 import './App.css';
 import {
-	CF2Form
+	CF2Form,
+	CalderaMailChimpForm,
+	CalderaMailChimpSurveyForm
 } from "@calderajs/forms";
 import axios from 'axios';
 
@@ -23,6 +25,18 @@ const App = ({apiRootUri, formId, formConfig}) => {
 					apiRootUri={apiRootUri}
 					formConfig={form}
 					axios={axios}
+				/>
+			</div>
+			<div>
+				<CalderaMailChimpForm
+					apiRoot={'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1'}
+					listId={'45907f0c59'}
+					onSubmit={(values) => alert(JSON.stringify(values))}
+				/>
+				<CalderaMailChimpSurveyForm
+					apiRoot={'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1'}
+					listId={'45907f0c59'}
+					onSubmit={(values) => alert(JSON.stringify(values))}
 				/>
 			</div>
 		</div>

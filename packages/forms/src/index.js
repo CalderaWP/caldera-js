@@ -12,3 +12,25 @@ export handleFormSubmitCf2 from './Http/handlers/handleFormSubmitCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
 export {useCf2FormTokens} from './hooks/useCf2FormTokens';
 export setCf1ClassNames from './CF2Form/setCf1ClassNames';
+export {
+    //Mailchimp components
+    MailChimpForm,
+    MailChimpSurveyForm,
+    CalderaMailChimpForm,
+    CalderaMailChimpSurveyForm,
+    AddApiKey,
+    SelectList,
+    //Admin API client
+    getAccounts,
+    getAccountsUi,
+    getListsUi,
+    getLists,
+    saveApiKey,
+    //public API client
+    getForm,
+    prepareData,
+    createSubscriber,
+    updateSubscriber,
+    //hooks
+    useCalderaMailChimpFormConfig
+} from './forms/Mailchimp';

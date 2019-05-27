@@ -26,11 +26,8 @@ This is a React component library for forms. It is designed to be used in Calder
 ### `<CalderaForm />`
 >This component is used for all forms in the Caldera Framework. The Caldera Forms front-end (Caldera Forms 2.0+) and all UI sections.
 
+
 This component uses [Formik](https://jaredpalmer.com/formik/) for managing state and validation. The layout uses the `CalderaGrid` component of this package and uses the fieldAreaFactory from the `calderawp/@factory` package.
-#### `<HorizontalForm`>
-🌋👀[Documentation](./src/HorizontalForm/README.md)
-#### Form Editor 
-🌋👀[Documentation](./src/FormEditor/README.md)
 
 #### Why Formik?
 I originally wanted to use redux-forms. I didn't love the API or the validation. Also, I had a less articulate version of [these conncerns](https://jaredpalmer.com/formik/docs/overview#why-not-redux-form). We're using more of Formik's features than you need to create a working form. Formik feels like it does the basics really well and everything is extensible.
@@ -44,12 +41,11 @@ Specific benefits:
 * [Great Documentation](https://jaredpalmer.com/formik/docs/overview)
 * Allows us to supply our own field components, CSS, layouts, etc.
     * Formik has text, select, textarea fields, but we don't have to use them.
- 
-
+    
 #### Import With webpack
 `import {CalderaForm} from '@calderajs/forms';`
    
-#### How A Caldera Forms
+#### Creating a form
 The Caldera Forms component is totally decoupled from Caldera Forms 1.x form submission. The `<CF2Form />` component is designed to be used with Caldera Forms 1.9 or later.
 
 ```jsx
@@ -141,7 +137,23 @@ const form = {
 	]
 }
 ```
+ 
+### `<CF2Form`>
+Wrapper for `<CalderaForm />` designed to be used with the "cf2" API in Caldera Forms 1.x.
 
+🌋👀[Documentation](./src/CF2Form/README.md)
+
+### `<HorizontalForm`>
+Wrapper for `<CalderaForm />` where every field is in its own 100% wide row. Useful for Gutenberg block settings for field settings in Caldera Forms form builder.
+
+🌋👀[Documentation](./src/HorizontalForm/README.md)
+
+### MailChimp Forms
+Mailchimp sign up and survey forms.
+
+🌋👀[Documentation](./src/forms/Mailchimp/README.md)
 
 ### Clients
 [See the clients Readme](./src/components/Http/README.md)
+
+
