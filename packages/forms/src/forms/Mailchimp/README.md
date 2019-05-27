@@ -6,25 +6,78 @@
 * ListId is the Mailchimp List ID.
 * ListId must correspond to an account authorized with Caldera Mailchimp.
 * Do not put a trailingslash on API root.
+
+#### Example
 ```jsx
+import React,{useState,useEffect} from 'react';
+import {Message} from "@calderajs/components";
+import './App.css';
 import {
     CalderaMailChimpForm,
-    CalderaMailChimpSurveyForm,
-} from '@calderajs/forms';
+    CalderaMailChimpSurveyForm
+} from "@calderajs/forms";
 
-<div>
-    <CalderaMailChimpForm
-        apiRoot={'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1'}
-        listId={'45907f0c59'}
-        onSubmit={(values) => alert(JSON.stringify(values))}
-    />
-    <CalderaMailChimpSurveyForm
-        apiRoot={'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1'}
-        listId={'45907f0c59'}
-        onSubmit={(values) => alert(JSON.stringify(values))}
-    />
-</div>
+/**
+ * Sign up form and survey form
+ */
+function Forms({apiRoot,onSubmit,token,listId}) {
+    return <div>
+        <CalderaMailChimpForm
+            token={token}
+            apiRoot={apiRoot}
+            listId={listId}
+            onSubmit={onSubmit}
+        />
+        <CalderaMailChimpSurveyForm
+            token={token}
+            apiRoot={apiRoot}
+            listId={listId}
+            onSubmit={onSubmit}
+        />
+    </div>;
+}
+
+/**
+ * Demo app
+ */
+const App = ({apiRoot, calderaToken,wpNonce}) => {
+    /**
+     * Track token
+     */
+    const [token,setToken] = useState(calderaToken);
+
+    /**
+     * Get token via remote API
+     */
+    useEffect( () => {
+        if( ! token ){
+            const url = wpNonce ? `${apiRoot}/token?_wpnonce=${wpNonce}` : `${apiRoot}/token`;
+            fetch(url, {
+                method: 'POST'
+            })
+                .then(r => r.json())
+                .then(r => {
+                    setToken(r.token);
+                })
+                .catch(e => console.log(e));
+        }
+    },[token,setToken]);
+
+    /**
+    * Render once token is retrieved
+    */
+    return (
+        <div className="App">
+            {token  &&
+                <Forms apiRoot={apiRoot} token={token} />
+
+            }
+        </div>
+    );
+
+};
 ```
+
 ### Import With wepback
 ```js
 
