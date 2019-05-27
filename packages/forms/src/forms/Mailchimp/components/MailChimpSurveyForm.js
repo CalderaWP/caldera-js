@@ -3,12 +3,12 @@ import MailChimpForm from './MailChimpForm'
 import PropTypes from 'prop-types';
 import {CalderaNotice} from '@calderajs/components';
 import {updateSubscriber, createSubscriber} from "../http/publicClient";
-import { isEmail } from '../../util/isEmailValid'
-
+import {isEmail} from '../../util/isEmailValid'
 
 
 function MailChimpSurveyForm(
     {
+        token,
         submitUrl,
         emailField,
         questions,
@@ -105,16 +105,10 @@ function MailChimpSurveyForm(
         };
     }
 
-    let initialEmailField = emailField;
-    if (isEmail(emailAddress)) {
-        initialEmailField.fieldType = 'hidden';
-        initialEmailField.value = emailAddress;
-    }
-
     const initialForm = createForm({
         formId,
         currentQuestion: initialQuestion,
-        emailField: initialEmailField,
+        emailField,
         submitButton,
         questionRowId,
         submitUrl,
@@ -161,27 +155,48 @@ function MailChimpSurveyForm(
      * @return {Promise<any>}
      */
     const submitHandler = (values) => {
+        updateEmailField(values);
+
         function afterSubmit(r, reject, resolve) {
-            if (400 === r.data.status) {
+            if ('object' === typeof r.data && r.data.status && 400 === r.data.status) {
+                setMessage(r.message);
+                reject(new Error(r.hasOwnProperty('message') ? r.message : 'Invalid'));
+            } else if(r.hasOwnProperty('success') && ! r.success ){
                 setMessage(r.message);
                 reject(new Error(r.hasOwnProperty('message') ? r.message : 'Invalid'));
             } else {
+                setMessage(r.message);
                 updateForm();
                 resolve(new Response(JSON.stringify({message: r.hasOwnProperty('message') ? r.message : 'Continue'})));
             }
         }
 
+        const emailFieldId = getEmaiLFieldId();
+
+        if (!values.hasOwnProperty(emailFieldId)
+            || (!isEmail(values[emailFieldId]) && isEmail(emailAddress))
+        ) {
+            values[emailFieldId] = emailAddress
+        }
+
+
         return new Promise((resolve, reject) => {
             const processor = form.processors[0];
             if (0 === currentQuestionIndex) {
-                createSubscriber(values, processor).then(r => r.json()).then(r => {
+                createSubscriber({
+                    ...values,
+                    token
+                }, processor).then(r => r.json()).then(r => {
                     afterSubmit(r, reject, resolve);
                 })
                     .catch(e => {
                         reject(e);
                     });
             } else {
-                updateSubscriber(values, processor).then(r => r.json()).then(r => {
+                updateSubscriber({
+                    ...values,
+                    token
+                }, processor).then(r => r.json()).then(r => {
                     afterSubmit(r, reject, resolve);
                 })
                     .catch(e => {
@@ -198,13 +213,20 @@ function MailChimpSurveyForm(
     }
 
 
-    const handleChanges = (values) => {
-        console.log(values);
-        const emailFieldId = emailField.fieldId;
+    function getEmaiLFieldId() {
+        return emailField.fieldId;
+
+    }
+
+    function updateEmailField(values) {
+        const emailFieldId = getEmaiLFieldId();
         if (values.hasOwnProperty(emailFieldId)) {
             setEmailAddress(values[emailFieldId]);
         }
+    }
 
+    const handleChanges = (values) => {
+        updateEmailField(values);
         onChange(values);
     };
 

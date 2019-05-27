@@ -5,7 +5,7 @@
  * @param processor
  * @return {{email: *, mergeFields, groupFields, listId: *}}
  */
- const prepareData = (values,processor) => {
+ const prepareData = (values,processor,update) => {
 	const getValue = (key) => {
 		if (values.hasOwnProperty(key)) {
 			return values[key];
@@ -22,12 +22,12 @@
 		groupFields[field] = getValue(field);
 	});
 
-	console.log(values,processor.emailField,getValue(processor.emailField))
 	return {
 		email: getValue(processor.emailField),
 		mergeFields,
 		groupFields,
-		listId
+		listId,
+		update
 	};
 
 };
@@ -46,7 +46,7 @@ const createSubscriber = (values,processor) => {
 		headers: {
 			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify(prepareData(values,processor))
+		body: JSON.stringify(prepareData(values,processor,false))
 	});
 };
 
@@ -60,11 +60,11 @@ const createSubscriber = (values,processor) => {
  const updateSubscriber = (values,processor) => {
 	 const {submitUrl} = processor;
 	 return fetch(submitUrl, {
-		 method: 'PUT',
+		 method: 'POST',
 		 headers: {
 			 'Content-Type': 'application/json',
 		 },
-		 body: JSON.stringify(prepareData(values,processor))
+		 body: JSON.stringify(prepareData(values,processor,true))
 	 });
  };
 

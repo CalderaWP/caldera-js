@@ -57,7 +57,7 @@ function CalderaMailChimpSurveyForm({listId, apiRoot, token, getForm, initialFor
         return groupFields;
     }
 
-    const submitUrl = `${apiRoot}/subscribe`;
+    const submitUrl = `${apiRoot}/lists/subscribe`;
     useEffect(() => {
         if (! isLoaded) {
             getForm({listId, apiRoot, token})
@@ -72,6 +72,7 @@ function CalderaMailChimpSurveyForm({listId, apiRoot, token, getForm, initialFor
     }, [isLoaded, setIsLoaded, listId, token, apiRoot]);
     if (isLoaded) {
         return <MailChimpSurveyForm
+            token={token}
             submitUrl={submitUrl}
             listId={listId}
             emailField={getEmailField(form)}
