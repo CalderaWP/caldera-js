@@ -1,43 +1,100 @@
 {
-  "name": "@calderawp/name",
+  "name": "@calderajs/name",
   "version": "0.0.1",
   "license": "GPL-2.0",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "yarn build && nodemon server.js",
-    "build": "next build",
-    "start:production": "NODE_ENV=production node server.js",
-    "test": "jest --all",
-    "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
+    "test": "yarn test:watch",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci",
+    "del-dist": "del-cli dist",
+    "prebuild": "yarn del-dist",
+    "build": "rm -rf dist && babel src -d dist --ignore \"src/**/*.fixture.js\",\"src/**/*.story.js\",\"src/**/*.test.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "reset": "rm -rf node_modules && rm yarn.lock && yarn"
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix"
   },
-  "dependencies": {
-    "cross-env": "^5.2.0",
-    "express": "^4.14.0",
-    "http-proxy-middleware": "^0.19.1",
-    "isomorphic-unfetch": "^2.0.0",
-    "next": "next",
-    "prop-types": "^15.6.2",
-    "react": "16.8.0-alpha.1",
-    "react-dom": "16.8.0-alpha.1",
-    "react-helmet": "^5.2.0",
-    "react-oembed-container": "^0.3.0",
-    "webpack-bundle-size-analyzer": "^3.0.0"
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@wordpress/element": "^2.1.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@storybook/addon-actions": "^4.1.11",
-    "@storybook/addon-links": "^4.1.11",
-    "@storybook/react": "^4.1.11",
-    "babel-core": "^7.0.0-bridge",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/react": "^5.0.6",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.8.0",
-    "jest": "^24.0",
+    "glob-loader": "^0.3.0",
+    "jest": "^23.0",
+    "jest-fetch-mock": "^2.1.0",
+    "jest-svg-transformer": "^1.0.0",
     "nodemon": "^1.18.9",
     "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.4.2"
+    "react-test-renderer": "16.4.2",
+    "react-testing-library": "^6.1.2"
+  },
+  "dependencies": {
+    "@calderajs/components" : "^0.8.4"
+  },
+  "jest": {
+    "setupFiles": [
+      "./config/jest/test-shim.js",
+      "./config/jest/test-setup.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/config/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/",
+      "\\.(svg|css|scss|json)$"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "\\.(svg|css|scss|json)$"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|svg)$": "<rootDir>/config/jest/nullMock.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

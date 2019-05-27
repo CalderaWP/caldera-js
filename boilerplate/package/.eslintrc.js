@@ -34,7 +34,7 @@ module.exports = {
         'linebreak-style': ['error', 'unix'],
         'no-console': 'off',
         'no-param-reassign': 'error',
-        'no-tabs': 'error',
+        'no-tabs': 'off',
         'no-trailing-spaces': 'error',
         'no-underscore-dangle': 'error',
         'no-var': 'error',
