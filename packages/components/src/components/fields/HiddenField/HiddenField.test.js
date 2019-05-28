@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {render} from 'react-testing-library';
-import { mount } from 'enzyme';
+import {render,fireEvent} from 'react-testing-library';
 
 import { HiddenField } from './HiddenField';
 
@@ -24,7 +23,7 @@ describe('HiddenField ', () => {
 
 
 	it('Changes calls change handler', () => {
-		const component = mount(
+		const { container } = render(
 			<HiddenField
 				fieldId={'i11'}
 				value={'Roy'}
@@ -32,8 +31,9 @@ describe('HiddenField ', () => {
 			/>
 		);
 
-		expect( component.find('input').prop('value')).toEqual( 'Roy');
-		component.find('input').simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
+		const input = container.querySelector('input')
+		const event = {target: {value: 200}};
+		fireEvent.change(input, event);
+		expect(input.value).toBe('200')
 	});
 });

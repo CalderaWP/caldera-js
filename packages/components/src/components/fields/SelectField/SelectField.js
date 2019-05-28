@@ -13,15 +13,22 @@ export const SelectField = props => {
         options,
         fieldId,
         required,
-        value,
         onChange,
         onBlur,
+        placeholder
     } = props;
 
-    if( ! value ){
-        options.push(
-            emptyOption
-        )
+    let {value} = props;
+
+    if (!value) {
+
+        options.push(emptyOption);
+        console.log(placeholder);
+        if (placeholder) {
+            value = placeholder;
+        }
+        console.log(value);
+
     }
 
     function changeHandler(event) {
@@ -29,7 +36,8 @@ export const SelectField = props => {
     }
 
     return <FieldWrapper {...props}>
-        <Form.Control as="select" id={fieldId} value={value} required={required} onChange={changeHandler} onBlur={onBlur}>
+        <Form.Control as="select" id={fieldId} value={value} required={required} onChange={changeHandler}
+                      onBlur={onBlur}>
             {options.map(option => {
                 return <option key={option.value} value={option.value}>{option.label}</option>
             })}

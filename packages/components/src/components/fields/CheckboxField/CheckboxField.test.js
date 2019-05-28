@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {render} from 'react-testing-library';
-import {mount} from 'enzyme';
+import {render,fireEvent} from 'react-testing-library';
 
 import {CheckboxField} from './CheckboxField';
 
@@ -26,7 +25,7 @@ describe('Checkbox Field component', () => {
     });
 
     it('Fires on change event', () => {
-        const component = mount(
+        const { container } = render(
             <CheckboxField
                 label={'Select A Hat'}
                 onChange={onChange}
@@ -40,13 +39,10 @@ describe('Checkbox Field component', () => {
                 ]}
             />
         );
-
+        const input = container.querySelector('input')
         const event = {target: {value: 200}};
-        component
-            .find('input')
-            .first()
-            .simulate('change', event);
-        expect(onChange.mock.calls.length).toBe(1);
-        expect(onChange.mock.calls[0][0]).toBe(200);
+        fireEvent.change(input, event);
+        expect(input.value).toBe('200')
+
     });
 });

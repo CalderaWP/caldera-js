@@ -2,6 +2,7 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 
 import { InputField } from './InputField';
+import {render} from "react-testing-library";
 
 describe('InputField  as number', () => {
 	let onChange;
@@ -19,7 +20,8 @@ describe('InputField  as number', () => {
 	};
 
 	it('Allows min, max and step attributes', () => {
-		const component = mount(
+
+		const {container} = render(
 			<InputField
 				fieldId={'i11'}
 				label={'Number of Roys'}
@@ -30,8 +32,11 @@ describe('InputField  as number', () => {
 				attributes={attributes}
 			/>
 		);
+		const input = container.querySelector('input')
 
-		expect(component.find('input').prop('type')).toEqual('number');
+
+
+		expect(input.prop('type')).toEqual('number');
 		expect(component.find('input').prop('min')).toEqual(attributes.min);
 		expect(component.find('input').prop('max')).toEqual(attributes.max);
 		expect(component.find('input').prop('step')).toEqual(attributes.step);
