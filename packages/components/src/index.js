@@ -1,16 +1,18 @@
 /**
  * Fields
  */
-export {InputField} from './components/fields/InputField/InputField';
-export {SelectField} from './components/fields/SelectField/SelectField';
-export {RadioField} from './components/fields/RadioField/RadioField';
-export {ToggleField} from './components/fields/ToggleField/ToggleField';
-export {TextAreaField} from './components/fields/TextAreaField/TextAreaField';
-export {MagicRichText} from './components/fields/RichText/MagicRichText';
-export {AutoCompleteField} from './components/fields/AutoCompleteField/AutoCompleteField';
-export {FormFieldsAutoComplete} from './components/fields/FormFieldsAutoComplete/FormFieldsAutoComplete';
-export {SubmitButton} from './components/fields/SubmitButton/SubmitButton';
-export {HiddenField} from './components/fields/HiddenField/HiddenField';
+export {
+	InputField,
+	SelectField,
+	RadioField,
+	CheckboxField,
+	TextAreaField,
+	SubmitButton,
+	HiddenField,
+	FieldWrapper,
+	FieldWrapperOuter,
+	FieldSet,
+} from './components/fields/';
 
 /**
  * Grid Components
@@ -26,11 +28,7 @@ export {Column} from './factory/components/Grid/Column';
  * UI Elements
  */
 export {Message} from './components/Messages/Message';
-export {
-	messageObjectFactory
-} from './components/Messages/messageObjectFactory';
-export {FieldSet} from './components/fields/FieldSet/FieldSet';
-export {FieldWrapper} from './components/fields/FieldWrapper/FieldWrapper';
+export {messageObjectFactory} from './components/Messages/messageObjectFactory';
 export {RemotePost} from './components/elements/RemotePost/RemotePost';
 export { LazyIFrame } from './components/elements/LazyIFrame/LazyIFrame';
 export {CalderaNotice} from './components/elements/CalderaNotice/CalderaNotice'

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 
 import { RadioField } from './RadioField';
@@ -10,7 +10,7 @@ describe('RadioField Field component', () => {
 		onChange = jest.fn();
 	});
 	it('matches snapshot', () => {
-		const component = renderer.create(
+		const component = render(
 			<RadioField
 				fieldId={'r1'}
 				label={'Select A Hat!'}
@@ -22,7 +22,7 @@ describe('RadioField Field component', () => {
 				]}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Fires on change event', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -21,10 +21,10 @@ describe('Fields component', () => {
 	});
 	it('Creates a text and checkbox field field', () => {
 		const fields = [textField, checkboxField];
-		const component = renderer.create(
+		const component = render(
 			<Fields fields={fields} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates all five fields', () => {
@@ -36,10 +36,10 @@ describe('Fields component', () => {
 			textField,
 			emailField
 		];
-		const component = renderer.create(
+		const component = render(
 			<Fields fields={fields} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 });
 

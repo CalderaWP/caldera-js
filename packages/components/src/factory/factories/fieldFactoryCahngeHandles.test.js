@@ -1,6 +1,6 @@
 import {fieldFactory} from './fieldFactory';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import {mount} from 'enzyme';
 import {
 	checkboxFieldset,
@@ -11,7 +11,7 @@ import {
 
 
 
-describe('change handlers', () => {
+describe.only('change handlers', () => {
 	let onChange;
 	let onBlur;
 	beforeEach(() => {
@@ -19,7 +19,7 @@ describe('change handlers', () => {
 		onBlur = jest.fn();
 	});
 
-	it.skip('Changes calls change handler of text field', () => {
+	it.only('input field change handler', () => {
 		const component = mount(fieldFactory(textField, onChange, onBlur));
 		component.find('input').simulate('change');
 		expect(onChange.mock.calls.length).toBe(1);

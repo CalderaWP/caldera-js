@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -14,31 +14,31 @@ import {
 import { Field } from './Field';
 
 describe('Field component', () => {
-	let onChange;
-	let onBlur;
+	let onChange = jest.fn();
+	let onBlur = jest.fn();
 	beforeEach(() => {
 		onChange = jest.fn();
 		onBlur = jest.fn();
 	});
 
 	it('Creates a text field', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field field={textField} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 	it('Creates a number field', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field field={numberField} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an email field', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field field={emailField} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an checkbox field field', () => {
@@ -49,25 +49,25 @@ describe('Field component', () => {
 	});
 
 	it('Creates an checkbox field set', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field
 				field={checkboxFieldset}
 				onChange={onChange}
 				onBlur={onBlur}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an select field', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field field={selectField} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an select field identified as dropdown', () => {
-		const component = renderer.create(
+		const component = render(
 			<Field
 				field={{
 					...selectField,
@@ -77,13 +77,16 @@ describe('Field component', () => {
 				onBlur={onBlur}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Changes calls change handler of text field', () => {
 		const component = mount(
 			<Field field={textField} onChange={onChange} onBlur={onBlur} />
 		);
+
+		console.log(component.debug());
+		return;
 
 		component.find('input').simulate('change');
 		expect(onChange.mock.calls.length).toBe(1);

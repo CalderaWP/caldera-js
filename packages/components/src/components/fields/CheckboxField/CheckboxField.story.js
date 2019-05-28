@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { RadioField } from './RadioField';
+import { CheckboxField } from './CheckboxField';
 
 const onChange = newValue => {
 	console.log(newValue);
@@ -9,7 +9,7 @@ const onBlur = event => {};
 
 const STORY_NAME_RADIO = 'RadioField';
 storiesOf(STORY_NAME_RADIO, module).add('With no value selected ', () => (
-	<RadioField
+	<CheckboxField
 		label={'Select A Hat'}
 		onChange={onChange}
 		description={'selection of hats'}
@@ -19,7 +19,7 @@ storiesOf(STORY_NAME_RADIO, module).add('With no value selected ', () => (
 	/>
 ));
 storiesOf(STORY_NAME_RADIO, module).add('With  value selected ', () => (
-	<RadioField
+	<CheckboxField
 		label={'Select A Hat'}
 		onChange={onChange}
 		description={'selection of hats'}

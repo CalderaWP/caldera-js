@@ -87,6 +87,18 @@ storiesOf('FieldFactory', module).add('Select Field - With state.', () => (
     <FieldTest field={selectField}/>
 ));
 
+
+storiesOf('FieldFactory', module).add('Checkbox fieldset - With state.', () => (
+    <FieldTest field={field}/>
+));
+
+storiesOf('FieldFactory', module).add('Radio fieldset - With state.', () => (
+    <FieldTest field={{
+        ...field,
+        fieldType: 'radios'
+    }}/>
+));
+
 storiesOf('FieldFactory', module).add('Hidden field - no state', () => (
     <Fragment>
         <div>

@@ -1,27 +1,40 @@
-import { fieldWrapperClassNames, parseAttributes } from '../util';
 import PropTypes from 'prop-types';
-import React, {Fragment} from 'react';
+import React from 'react';
 import classNames from 'classnames';
+import {Form} from "react-bootstrap";
 
+export const FieldWrapperOuter = ({fieldId,wrapperClassNames,children}) => (
+	<Form.Group controlId={fieldId} className={classNames(wrapperClassNames)}>
+		{children}
+	</Form.Group>
+);
 
-export const FieldWrapper = ({ fieldType, attributes, children,className }) => {
-	if( 'string' === typeof  className ){
-		className = [className];
-	}
-	if( ! Array.isArray(className)){
-		className= [];
-	}
+export const FieldWrapper = (props)  =>{
+	const {
+		fieldId,
+		description,
+		wrapperClassNames,
+		children,
+		label,
+		required,
+		hideLabel,
+		MessageZone
+	} = props;
 	return (
-		<div
-			className={
-				classNames([...className,fieldWrapperClassNames(fieldType)])
-			}
-		 	{...attributes}
-		>
-			{typeof children !== 'undefined' ? children :<Fragment/>}
-		</div>
+		<FieldWrapperOuter fieldId={fieldId} wrapperClassNames={wrapperClassNames}>
+			<Form.Label
+				srOnly={hideLabel}
+			>
+				{label} {required && <span>*</span>}
+			</Form.Label>
+			{children}
+			{description && (
+				<Form.Text className="text-muted">{description}</Form.Text>
+			)}
+			{ !! MessageZone && <MessageZone /> }
+		</FieldWrapperOuter>
 	);
-};
+}
 
 FieldWrapper.propTypes = {
 	fieldType: PropTypes.string.isRequired,

@@ -1,7 +1,6 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-
+import {render} from "react-testing-library";
 import { TextAreaField } from './TextAreaField';
 
 describe('TextAreaField ', () => {
@@ -14,7 +13,7 @@ describe('TextAreaField ', () => {
 	});
 
 	it('matches snapshot with all props', () => {
-		const component = renderer.create(
+		const component = render(
 			<TextAreaField
 				fieldId={'ta1'}
 				label={'Hi Roy'}

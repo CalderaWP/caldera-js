@@ -1,28 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select Field component matches snapshot 1`] = `
-<div
-  className="caldera-field-wrapper caldera-field-wrapper-submit"
->
-  <label
-    className="caldera-field-label caldera-field-label-submit"
-    htmlFor="button"
-  >
-    
-     
-  </label>
-  <input
-    className="caldera-field caldera-field-text"
-    disabled={false}
-    id="button"
-    type="submit"
-    value="Send Message"
-  />
-  <p
-    className="caldera-control__help description"
-    id="button__help"
-  >
-    Click to sendu
-  </p>
-</div>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form-group"
+      >
+        <label
+          class="form-label"
+          for="button"
+        >
+          Send Message
+           
+        </label>
+        <input
+          class="caldera-field caldera-field-undefined form-control"
+          id="button"
+          value="Send Message"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          Click to sendu
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="form-label"
+        for="button"
+      >
+        Send Message
+         
+      </label>
+      <input
+        class="caldera-field caldera-field-undefined form-control"
+        id="button"
+        value="Send Message"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        Click to sendu
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

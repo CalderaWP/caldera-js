@@ -1,5 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 
 import { HiddenField } from './HiddenField';
@@ -12,14 +12,14 @@ describe('HiddenField ', () => {
 	});
 
 	it('matches snapshot with all props', () => {
-		const component = renderer.create(
+		const component = render(
 			<HiddenField
 				fieldId={'i11'}
 				value={'Roy'}
 				onChange={onChange}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 

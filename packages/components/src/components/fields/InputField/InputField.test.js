@@ -1,5 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 
 import { InputField } from './InputField';
@@ -14,7 +14,7 @@ describe('InputField ', () => {
 	});
 
 	it('matches snapshot with all props', () => {
-		const component = renderer.create(
+		const component = render(
 			<InputField
 				fieldId={'i11'}
 				label={'Hi Roy'}
@@ -26,7 +26,7 @@ describe('InputField ', () => {
 				onBlur={onBlur}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Uses text when html5type is not valid', () => {

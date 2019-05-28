@@ -1,224 +1,203 @@
+import React from "react";
+import {isValidHtml5type} from "../../components/fields/util";
+
 import {
-	TextAreaField,
-	ToggleField,
-	RadioField,
-	FieldSet,
-	SelectField,
-	InputField,
-	MagicRichText,
-	isValidHtml5type,
-	AutoCompleteField,
-	FormFieldsAutoComplete,
-	SubmitButton,
-	HiddenField
-} from "../..";
+    FieldWrapper,
+    RadioField,
+    CheckboxField,
+    InputField,
+    HiddenField,
+    SelectField,
+    SubmitButton,
+    TextAreaField
 
-import React from 'react';
+} from "../../components/fields";
 
-/**
- * Special component for fieldset checkbox groups
- */
-class CheckboxFieldSet extends React.Component {
+import {RadioOrCheckboxControl} from "../../components/fields/RadioOrCheckboxControl";
 
+function RadioOrCheckboxFieldSet(props) {
+    const {
+        options,
+        label,
+        onBlur,
+        fieldType,
+        onChange
+    } = props;
+    let {value} = props;
+    if ('checkbox' === fieldType ) {
+        if (!Array.isArray(value)) {
+            value = [value];
+        }
+    } else {
+        if (Array.isArray(value)) {
+            if (value.length) {
+                value = value[0];
+            } else {
+                value = false;
+            }
+        }
+    }
 
-	constructor(props) {
-		super(props);
-		const {value, options} = props.field;
-		let checkboxValues = {};
-		if (Array.isArray(value)) {
-			options.map(option => {
-				checkboxValues[this.findOptionId(option)] = -1 !== value.findIndex(v => v === this.findOptionId(option));
-			});
-		}
-		this.state = {
-			checkboxValues
-		};
-		this.onChange = this.onChange.bind(this);
-	}
+    function changeHandler(optionId, checked) {
+        if ('checkbox' === fieldType ) {
+            if (checked) {
+                value.push(optionId)
+            } else {
+                const index = value.indexOf(optionId);
+                if (index > -1) {
+                    value.splice(index, 1);
+                }
+            }
+            onChange(value);
+        }else{
+            value=optionId;
+            onChange(value);
+        }
 
-	onChange(optionId, checked) {
-		let newValue = this.state.checkboxValues || {};
-		if (checked) {
-			newValue[optionId] = true;
-		} else {
-			newValue[optionId] = false;
-		}
-		this.setState({checkboxValues: newValue})
-		const update = [];
-		Object.keys(newValue).map(option => {
-			if (this.state.checkboxValues[option]) {
-				update.push(option);
-			}
-		});
-		this.props.onChange(update);
-	}
+    }
 
-	findOptionId(option) {
-		const {fieldId} = this.props.field;
-		return option.hasOwnProperty('id')
-			? option.id
-			: `opt-${fieldId}-${option.value}`;
-	}
+    return (
+        <FieldWrapper {...props}>
+            <fieldset>
+                <legend>{label}</legend>
+                {options.map(option => {
 
-	render() {
-		const {field, onChange, wrapperClassNames} = this.props;
-		const {fieldId, label, fieldType, attributes, options, value} = field;
-		const {checkboxValues} = this.state;
+                    const optionLabel = option.label;
+                    const optionId = option.id;
+                    const key = option.hasOwnProperty('key') ? option.key : optionId;
+                    const isChecked = 'radio' === fieldType ? value === optionId : value.includes(optionId);
 
-		function remove(array, element) {
-			return array.filter(el => el !== element);
-		}
-
-		return (
-			<FieldSet
-				fieldType={fieldType}
-				legend={label}
-				attributes={attributes}
-			>
-				{options.map(option => {
-					const {
-						label,
-						description,
-						attributes
-					} = option;
-
-					const optionId = this.findOptionId(option);
-					const isChecked = Array.isArray(value) ? value.includes(optionId) : false;
-
-					return (
-						<InputField
-							wrapperClassNames={wrapperClassNames}
-							key={optionId}
-							id={optionId}
-							fieldId={optionId}
-							value={isChecked}
-							label={label}
-							description={description}
-							html5type={'checkbox'}
-							attributes={attributes}
-							onChange={(checked) => {
-								this.onChange(optionId, checked);
-							}}
-						/>
-					);
-				})}
-			</FieldSet>
-		);
-
-	}
-}
-
-CheckboxFieldSet.defaultProps = {
-	wrapperClassNames: '',
+                    return (<RadioOrCheckboxControl
+                        key={key}
+                        label={optionLabel}
+                        fieldType={fieldType}
+                        value={isChecked}
+                        onChange={() => {
+                            changeHandler(optionId, !isChecked)
+                        }}
+                        onBlur={onBlur}
+                    />);
+                })}
+            </fieldset>
+        </FieldWrapper>
+    );
 }
 
 
-/**
- * Create a field from an object describing it.
- *
- * Note: field.render is a render prop. If it is passed, field is passed to it.
- *
- * @param field
- * @param onChange
- * @param onBlur
- * @param wrapperClassNames
- * @param Message
- * @return {*}
- */
-export const fieldFactory = (field, onChange, onBlur, wrapperClassNames, Message) => {
-		const {
-			fieldType,
-			label,
-			options,
-			fieldId,
-			messages,
-			render,
-			required,
-			isRequired
-		} = field;
-
-		let {attributes} = field;
-
-		function isFieldRequired() {
-			return required || isRequired;
-		}
-
-		if (!attributes || undefined === typeof attributes) {
-			attributes = {};
-		}
-		if (isFieldRequired()) {
-			attributes.required = true;
-		}
 
 
-		if (render) {
-			return React.createElement(render, field);
-		}
 
 
-		switch (fieldType) {
-			case 'checkboxes':
-				return <CheckboxFieldSet field={field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>
-			case 'magic-richtext'
-			:
-				return <MagicRichText {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'autocomplete'
-			:
-				return <AutoCompleteField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()} />;
-			case
-			'fields-autocomplete'
-			:
-				return <FormFieldsAutoComplete {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'textarea'
-			:
-				return <TextAreaField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'toggle'
-			:
-				return <ToggleField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case 'hidden':
-				return  <HiddenField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'radio'
-			:
-				return <RadioField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'select'
-			:
-			case
-			'dropdown'
-			:
-				return <SelectField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()}/>;
-			case
-			'submit'
-			:
-				delete field.value;
-				delete field.onBlur;
-				delete field.onChange;
-				return <SubmitButton {...field} wrapperClassNames={wrapperClassNames} />;
-			case
-			'text'
-			:
-			case
-			'email'
-			:
-			case
-			'number'
-			:
-			case
-			'input'
-			:
-			default:
-				if (isValidHtml5type(fieldType)) {
-					if (field.html5type !== fieldType) {
-						field = {...field, html5type: fieldType};
-					}
-				} else {
-					field.html5type = 'text';
-				}
-				return <InputField {...field} onChange={onChange} wrapperClassNames={wrapperClassNames} required={isFieldRequired()} />;
-		}
-	}
-;
+
+
+
+export const fieldFactory = (
+    field, onChange, onBlur, wrapperClassNames, MessageZone
+) => {
+    const {
+        fieldType,
+        render,
+        required,
+        isRequired
+    } = field;
+
+    let {attributes} = field;
+
+    function isFieldRequired() {
+        return required || isRequired;
+    }
+
+    if (!attributes || undefined === typeof attributes) {
+        attributes = {};
+    }
+    if (isFieldRequired()) {
+        attributes.required = true;
+    }
+
+    if (render) {
+        return React.createElement(render, field);
+    }
+
+    let props = {
+        ...field,
+        wrapperClassNames,
+        onChange,
+        onBlur,
+        required: isFieldRequired(),
+        isRequired: isFieldRequired()
+    };
+
+    switch (fieldType) {
+        case "checkboxes":
+            props = {...props, fieldType: 'checkbox'};
+            return (
+                <RadioOrCheckboxFieldSet { ...props}/>
+            );
+
+        case "radios":
+            props = {...props, fieldType: 'radio'};
+
+            return (
+                <RadioOrCheckboxFieldSet { ...props}/>
+
+            );
+
+        case "textarea":
+            return (
+                <TextAreaField
+                    {...props}
+                />
+            );
+        case "hidden":
+            return (
+                <HiddenField
+                    {...props}
+                />
+            );
+        case "radio":
+            return (
+                <RadioField
+                    {...props}
+                />
+            );
+        case "checkbox":
+            return (
+                <CheckboxField
+                    {...props}
+                />
+            );
+        case "select":
+        case "dropdown":
+            return (
+                <SelectField
+                    {...props}
+                />
+            );
+        case "submit":
+            delete field.value;
+            delete field.onBlur;
+            delete field.onChange;
+            return <SubmitButton {...props} />;
+        case "text":
+        case "email":
+        case "number":
+        case "input":
+        default:
+            if (isValidHtml5type(fieldType)) {
+                if (field.html5type !== fieldType) {
+                    field = {...field, html5type: fieldType};
+                }
+            } else {
+                field.html5type = "text";
+            }
+
+            return (
+                <InputField
+                    {...{
+                        ...props,
+                        field,
+                    }}
+                />
+            );
+    }
+};

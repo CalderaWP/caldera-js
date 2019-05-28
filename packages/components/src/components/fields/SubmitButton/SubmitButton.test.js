@@ -1,7 +1,7 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import {mount} from 'enzyme';
 import { SubmitButton } from './SubmitButton';
+import {render} from "react-testing-library";
 
 describe('Select Field component', () => {
 	let onChange;
@@ -9,14 +9,14 @@ describe('Select Field component', () => {
 		onChange = jest.fn();
 	});
 	it('matches snapshot', () => {
-		const component = renderer.create(
+		const component = render(
 			<SubmitButton
 				label={'Send Message'}
 				description={'Click to sendu'}
 				fieldId={'button'}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Passes disabled attribute when set to true', () => {

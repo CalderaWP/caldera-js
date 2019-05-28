@@ -1,6 +1,6 @@
 import { fieldAreaFactory } from './fieldAreaFactory';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -23,39 +23,29 @@ describe('fieldAreaFactory', () => {
 		onBlur = jest.fn();
 	});
 	it('Creates a text field', () => {
-		const component = renderer.create(
+		const component = render(
 			fieldAreaFactory(textField, onChange, onBlur)
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an select field', () => {
-		const component = renderer.create(
+		const component = render(
 			fieldAreaFactory(selectField, onChange, onBlur)
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('should create textarea', () => {
-		const component = renderer.create(
+		const component = render(
 			fieldAreaFactory(textAreaField, onChange, onBlur)
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
-	it('should create toggle', () => {
-		const component = renderer.create(
-			fieldAreaFactory(toggleField, onChange, onBlur)
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
 
-	it('Should create an autocomplete field', () => {
-		const component = renderer.create(
-			fieldAreaFactory(autoCompleteField, onChange, onBlur)
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
+
+
 });
 
 describe('change handlers', () => {

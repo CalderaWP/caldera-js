@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -22,10 +22,10 @@ describe('FieldArea component', () => {
 	});
 
 	it('Creates a text field', () => {
-		const component = renderer.create(
+		const component = render(
 			<FieldArea field={textField} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 	it('Shows errors', () => {
 		const fieldErrors = {
@@ -35,7 +35,7 @@ describe('FieldArea component', () => {
 			[textField.fieldId]: true
 		};
 
-		const component = renderer.create(
+		const component = render(
 			<FieldArea
 				field={textField}
 				onChange={onChange}
@@ -44,18 +44,18 @@ describe('FieldArea component', () => {
 				fieldsTouch={fieldsTouched}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Creates an select field', () => {
-		const component = renderer.create(
+		const component = render(
 			<FieldArea
 				field={selectField}
 				onChange={onChange}
 				onBlur={onBlur}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Changes calls change handler of radio field', () => {

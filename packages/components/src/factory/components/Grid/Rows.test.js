@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -61,9 +61,9 @@ describe('Row component', () => {
 	};
 
 	it('Creates with two rows', () => {
-		const component = renderer.create(
+		const component = render(
 			<Rows rows={[row1, row2]} onChange={onChange} onBlur={onBlur} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 });

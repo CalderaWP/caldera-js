@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField  matches snapshot with all props 1`] = `
+exports[`Checkbox Field component matches snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -10,22 +10,32 @@ Object {
       >
         <label
           class="form-label"
-          for="i11"
+          for="selection-hats"
         >
-          Hi Roy
+          Select A Hat!
            
         </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="i11"
-          placeholder="Hello"
-          type="text"
-          value="Roy"
-        />
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            id="selection-hats"
+            type="checkbox"
+          />
+          <label
+            class="form-check-label"
+            for="selection-hats"
+            title=""
+            type="checkbox"
+          >
+            Select A Hat!
+          </label>
+        </div>
         <small
           class="text-muted form-text"
         >
-          Say Hi
+          selection of hats
         </small>
       </div>
     </div>
@@ -36,22 +46,32 @@ Object {
     >
       <label
         class="form-label"
-        for="i11"
+        for="selection-hats"
       >
-        Hi Roy
+        Select A Hat!
          
       </label>
-      <text
-        class="caldera-field caldera-field-text form-control"
-        id="i11"
-        placeholder="Hello"
-        type="text"
-        value="Roy"
-      />
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="selection-hats"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="selection-hats"
+          title=""
+          type="checkbox"
+        >
+          Select A Hat!
+        </label>
+      </div>
       <small
         class="text-muted form-text"
       >
-        Say Hi
+        selection of hats
       </small>
     </div>
   </div>,

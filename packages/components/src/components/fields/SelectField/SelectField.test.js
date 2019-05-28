@@ -1,9 +1,8 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { mount } from 'enzyme';
 
 import { SelectField } from './SelectField';
-import {RadioField} from "../../..";
 
 describe('Select Field component', () => {
 	let onChange;
@@ -11,7 +10,7 @@ describe('Select Field component', () => {
 		onChange = jest.fn();
 	});
 	it('matches snapshot, not multiple', () => {
-		const component = renderer.create(
+		const component = render(
 			<SelectField
 				fieldId={'s1'}
 				label={'Select A Hat!'}
@@ -21,7 +20,7 @@ describe('Select Field component', () => {
 				multiple={false}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Fires on change event', () => {

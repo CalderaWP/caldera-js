@@ -1,47 +1,28 @@
-import {
-	parseAttributes,
-	fieldClassNames,
-	isValidHtml5type,
-	toBoolean
-} from '../util';
-
 import PropTypes from 'prop-types';
 import React from 'react';
-import TextareaControl from "../Controls/TextAreaControl";
+import {FieldWrapper} from "..";
+import {Form} from "react-bootstrap";
 
-export const TextAreaField = (
-	{
-		label,
-		description,
-		fieldId,
-		placeholder,
-		required,
-		html5type,
-		value,
-		onChange,
-		onBlur,
-		attributes,
-		wrapperClassNames,
+export const TextAreaField = props => {
+	const {fieldId, onChange, onBlur} = props;
+	let {attributes} = props;
+	if( 'object' !== typeof  attributes ){
+		attributes = {};
 	}
-) => {
-	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
-	const _attributes = parseAttributes(attributes, 'textarea');
-	const rows = _attributes.hasOwnProperty('rows') ? _attributes.rows : 6;
-	return (
-		<TextareaControl
-			rows={rows}
-			label={label}
+	if ( !attributes.hasOwnProperty('rows')) {
+		attributes.rows = 5;
+	}
+	return <FieldWrapper {...props}>
+		<Form.Control
+			as="textarea"
+			rows={attributes.rows}
 			id={fieldId}
-			required={required}
-			value={value}
-			help={description}
+			{...attributes}
 			onChange={onChange}
 			onBlur={onBlur}
-			wrapperClassNames={wrapperClassNames}
-			{..._attributes}
 		/>
-	)
-};
+	</FieldWrapper>
+}
 
 TextAreaField.propTypes = {
 	label: PropTypes.string,

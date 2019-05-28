@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {render} from 'react-testing-library';
 import { shallow } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -39,7 +39,7 @@ describe('Row component', () => {
 	];
 
 	it('Creates columns', () => {
-		const component = renderer.create(
+		const component = render(
 			<Row
 				rowId={'twoColumns'}
 				columns={columns}
@@ -47,7 +47,7 @@ describe('Row component', () => {
 				onBlur={onBlur}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Renders children if no columns', () => {
@@ -60,7 +60,7 @@ describe('Row component', () => {
 	});
 
 	it('Applies padding to x and y ', () => {
-		const component = renderer.create(
+		const component = render(
 			<Row
 				rowId={'twoColumns'}
 				columns={[
@@ -76,6 +76,6 @@ describe('Row component', () => {
 				padding={'11'}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 });

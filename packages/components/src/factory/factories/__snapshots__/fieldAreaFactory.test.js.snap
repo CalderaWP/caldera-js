@@ -1,203 +1,500 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fieldAreaFactory Creates a text field 1`] = `
-<div
-  className="caldera-field-wrapper caldera-field-wrapper-text"
->
-  <label
-    className="caldera-field-label caldera-field-label-text"
-    htmlFor="textFieldId"
-  >
-    First Name
-     
-  </label>
-  <input
-    aria-describedby="textFieldId__help"
-    className="caldera-field caldera-field-text"
-    id="textFieldId"
-    onBlur={[Function]}
-    onChange={[Function]}
-    type="text"
-    value="roy"
-  />
-  <p
-    className="caldera-control__help description"
-    id="textFieldId__help"
-  >
-    your first name
-  </p>
-</div>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="textFieldId"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="textFieldId"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-text is-required form-group"
+    >
+      <label
+        class="form-label"
+        for="textFieldId"
+      >
+        First Name
+         
+        <span>
+          *
+        </span>
+      </label>
+      <text
+        class="caldera-field caldera-field-text form-control"
+        id="textFieldId"
+        required=""
+        type="text"
+        value="roy"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`fieldAreaFactory Creates an select field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
->
-  <label
-    className="caldera-field-label caldera-field-label-select"
-    htmlFor="selectFieldId"
-  >
-    Select Field Label
-     
-  </label>
-  <select
-    aria-describedby="selectFieldId__help"
-    className="caldera-field caldera-field-select"
-    id="selectFieldId"
-    multiple={false}
-    onChange={[Function]}
-    required={true}
-  >
-    <option
-      value={0}
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="textFieldId"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="textFieldId"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-select is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="selectFieldId"
+        >
+          Select Field Label
+           
+          <span>
+            *
+          </span>
+        </label>
+        <select
+          class="form-control"
+          id="selectFieldId"
+          required=""
+        >
+          <option
+            value="0"
+          >
+            Zero
+          </option>
+          <option
+            value="1"
+          >
+            One
+          </option>
+          <option
+            value="2"
+          >
+            Two
+          </option>
+        </select>
+        <small
+          class="text-muted form-text"
+        >
+          Select field description
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-select is-required form-group"
     >
-      Zero
-    </option>
-    <option
-      value={1}
-    >
-      One
-    </option>
-    <option
-      value={2}
-    >
-      Two
-    </option>
-  </select>
-  <p
-    className="caldera-control__help description"
-    id="selectFieldId__help"
-  >
-    Select field description
-  </p>
-</div>
-`;
-
-exports[`fieldAreaFactory Should create an autocomplete field 1`] = `
-<div
-  className="caldera-field-wrapper caldera-field-wrapper-autocomplete"
->
-  <label
-    className="caldera-field-label caldera-field-label-autocomplete"
-    htmlFor="autoComplete1"
-  >
-    Options
-     
-  </label>
-  <input
-    className="caldera-field caldera-field-autocomplete"
-    id="autoComplete1"
-    onChange={[Function]}
-    value={
-      Array [
-        "One",
-        "Three",
-      ]
-    }
-  />
-  <p
-    className="caldera-control__help description"
-    id="autoComplete1__help"
-  >
-    Help text
-  </p>
-</div>
+      <label
+        class="form-label"
+        for="selectFieldId"
+      >
+        Select Field Label
+         
+        <span>
+          *
+        </span>
+      </label>
+      <select
+        class="form-control"
+        id="selectFieldId"
+        required=""
+      >
+        <option
+          value="0"
+        >
+          Zero
+        </option>
+        <option
+          value="1"
+        >
+          One
+        </option>
+        <option
+          value="2"
+        >
+          Two
+        </option>
+      </select>
+      <small
+        class="text-muted form-text"
+      >
+        Select field description
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`fieldAreaFactory should create textarea 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-textarea is-required caldera-field-wrapper caldera-field-wrapper-textarea"
->
-  <label
-    className="caldera-field-label caldera-field-label-textarea"
-    htmlFor="textArea1"
-  >
-    Your message
-     
-  </label>
-  <textarea
-    aria-describedby="textArea1__help"
-    className="caldera-field caldera-field-textarea"
-    cols={8}
-    id="textArea1"
-    maxLength={500}
-    minlength={10}
-    onBlur={[Function]}
-    onChange={[Function]}
-    rows={5}
-    value="The content of text area"
-  />
-  <p
-    className="caldera-control__help description"
-    id="textArea1__help"
-  >
-    your first name
-  </p>
-</div>
-`;
-
-exports[`fieldAreaFactory should create toggle 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-toggle is-required caldera-field-wrapper caldera-field-wrapper-select"
->
-  <label
-    className="caldera-field-label caldera-field-label-select"
-    htmlFor="toggleFieldLabel"
-  >
-    Toggle Label
-     
-  </label>
-  <div
-    className="caldera-field-wrapper caldera-field-wrapper-toggle"
-  >
-    <label
-      className="caldera-field-label caldera-field-label-toggle"
-      htmlFor="toggleFieldLabel"
-    >
-      
-       
-    </label>
-    <span
-      className="components-form-toggle caldera-field caldera-field-toggle is-checked"
-    >
-      <input
-        checked={true}
-        className="caldera-field caldera-field-toggle"
-        id="toggleFieldLabel"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="components-form-toggle__track"
-      />
-      <span
-        className="components-form-toggle__thumb"
-      />
-      <svg
-        aria-hidden="true"
-        className="components-form-toggle__on"
-        focusable="false"
-        height="6"
-        role="img"
-        viewBox="0 0 2 6"
-        width="2"
-        xmlns="http://www.w3.org/2000/svg"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
       >
-        <path
-          d="M0 0h2v6H0z"
+        <label
+          class="form-label"
+          for="textFieldId"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="textFieldId"
+          required=""
+          type="text"
+          value="roy"
         />
-      </svg>
-    </span>
-    <label
-      className="caldera-field-label caldera-field-label-toggle"
-      htmlFor="toggleFieldLabel"
-    />
-  </div>
-  <p
-    className="caldera-control__help description"
-    id="toggleFieldLabel__help"
-  >
-    Toggle field description
-  </p>
-</div>
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-select is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="selectFieldId"
+        >
+          Select Field Label
+           
+          <span>
+            *
+          </span>
+        </label>
+        <select
+          class="form-control"
+          id="selectFieldId"
+          required=""
+        >
+          <option
+            value="0"
+          >
+            Zero
+          </option>
+          <option
+            value="1"
+          >
+            One
+          </option>
+          <option
+            value="2"
+          >
+            Two
+          </option>
+        </select>
+        <small
+          class="text-muted form-text"
+        >
+          Select field description
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-textarea is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="textArea1"
+        >
+          Your message
+           
+          <span>
+            *
+          </span>
+        </label>
+        <textarea
+          class="form-control"
+          cols="8"
+          id="textArea1"
+          maxlength="500"
+          minlength="10"
+          required=""
+          rows="5"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-textarea is-required form-group"
+    >
+      <label
+        class="form-label"
+        for="textArea1"
+      >
+        Your message
+         
+        <span>
+          *
+        </span>
+      </label>
+      <textarea
+        class="form-control"
+        cols="8"
+        id="textArea1"
+        maxlength="500"
+        minlength="10"
+        required=""
+        rows="5"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

@@ -1,88 +1,55 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {parseAttributes, fieldClassNames, isValidHtml5type} from '../util';
-import BaseControl from "../Controls/BaseControl";
+import {FieldWrapper} from "..";
+import {Form} from 'react-bootstrap'
 
-export const SelectField = (
-	{
-		required,
-		attributes,
-		label,
-		fieldId,
-		onChange,
-		value,
-		options,
-		multiple,
-		description,
-		placeholder,
-		wrapperClassNames
-	}
-							) => {
-	attributes = parseAttributes(attributes, 'select');
+const emptyOption = {
+    label: '--',
+    value: null,
+};
+export const SelectField = props => {
 
-	if (!value && placeholder) {
-		options.unshift({
-			label: placeholder
-		});
-	}
+    const {
+        options,
+        fieldId,
+        required,
+        value,
+        onChange,
+        onBlur,
+    } = props;
 
-	const onChangeValue = (event) => {
-		onChange(event.target.value);
-	};
+    if( ! value ){
+        options.push(
+            emptyOption
+        )
+    }
 
-	// Disable reason: A select with an onchange throws a warning
+    function changeHandler(event) {
+        onChange(event.target.value);
+    }
 
-	/* eslint-disable jsx-a11y/no-onchange */
-	return (options.length) && (
-		<BaseControl
-			label={label}
-			id={fieldId}
-			help={description}
-			fieldType={'select'}
-			required={required}
-			wrapperClassNames={wrapperClassNames}
-		>
-			<select
-				required={required}
-				id={fieldId}
-				className={fieldClassNames('select')}
-				onChange={onChangeValue}
-				aria-describedby={!!description ? `${ fieldId }__help` : undefined}
-				multiple={multiple}
-				{...attributes}
-			>
-				{options.map((option, index) =>
-					<option
-						key={`${ option.label }-${ option.value }-${ index }`}
-						value={option.value}
-					>
-						{option.label}
-					</option>
-				)}
-			</select>
-		</BaseControl>
-	);
-	/* eslint-enable jsx-a11y/no-onchange */
+    return <FieldWrapper {...props}>
+        <Form.Control as="select" id={fieldId} value={value} required={required} onChange={changeHandler} onBlur={onBlur}>
+            {options.map(option => {
+                return <option key={option.value} value={option.value}>{option.label}</option>
+            })}
+        </Form.Control>
+    </FieldWrapper>;
 
 };
 
 SelectField.propTypes = {
-	label: PropTypes.string,
-	description: PropTypes.string,
-	fieldId: PropTypes.string,
-	required: PropTypes.bool,
-	multiple: PropTypes.bool,
-	options: PropTypes.array
+    label: PropTypes.string,
+    description: PropTypes.string,
+    fieldId: PropTypes.string,
+    required: PropTypes.bool,
+    multiple: PropTypes.bool,
+    options: PropTypes.array
 };
 
 SelectField.defaultProps = {
-	required: false,
-	multiple: false,
-	description: '',
-	options: [
-		{
-			label: '--',
-			value: null,
-		}
-	]
+    required: false,
+    multiple: false,
+    description: '',
+    options: [emptyOption]
 };

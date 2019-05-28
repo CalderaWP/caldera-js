@@ -1,103 +1,482 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldArea component Creates a text field 1`] = `
-<div
-  className="caldera-field-wrapper caldera-field-wrapper-text"
->
-  <label
-    className="caldera-field-label caldera-field-label-text"
-    htmlFor="firstName"
-  >
-    First Name
-     
-  </label>
-  <input
-    aria-describedby="firstName__help"
-    className="caldera-field caldera-field-text"
-    id="firstName"
-    onBlur={[Function]}
-    onChange={[Function]}
-    type="text"
-    value="roy"
-  />
-  <p
-    className="caldera-control__help description"
-    id="firstName__help"
-  >
-    your first name
-  </p>
-</div>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="firstName"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-text is-required form-group"
+    >
+      <label
+        class="form-label"
+        for="firstName"
+      >
+        First Name
+         
+        <span>
+          *
+        </span>
+      </label>
+      <text
+        class="caldera-field caldera-field-text form-control"
+        id="firstName"
+        required=""
+        type="text"
+        value="roy"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`FieldArea component Creates an select field 1`] = `
-<div
-  className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
->
-  <label
-    className="caldera-field-label caldera-field-label-select"
-    htmlFor="selectFieldId"
-  >
-    Select Field Label
-     
-  </label>
-  <select
-    aria-describedby="selectFieldId__help"
-    className="caldera-field caldera-field-select"
-    id="selectFieldId"
-    multiple={false}
-    onChange={[Function]}
-    required={true}
-  >
-    <option
-      value={0}
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="firstName"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text has-error is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="firstName"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-select is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="selectFieldId"
+        >
+          Select Field Label
+           
+          <span>
+            *
+          </span>
+        </label>
+        <select
+          class="form-control"
+          id="selectFieldId"
+          required=""
+        >
+          <option
+            value="0"
+          >
+            Zero
+          </option>
+          <option
+            value="1"
+          >
+            One
+          </option>
+          <option
+            value="2"
+          >
+            Two
+          </option>
+        </select>
+        <small
+          class="text-muted form-text"
+        >
+          Select field description
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-select is-required form-group"
     >
-      Zero
-    </option>
-    <option
-      value={1}
-    >
-      One
-    </option>
-    <option
-      value={2}
-    >
-      Two
-    </option>
-  </select>
-  <p
-    className="caldera-control__help description"
-    id="selectFieldId__help"
-  >
-    Select field description
-  </p>
-</div>
+      <label
+        class="form-label"
+        for="selectFieldId"
+      >
+        Select Field Label
+         
+        <span>
+          *
+        </span>
+      </label>
+      <select
+        class="form-control"
+        id="selectFieldId"
+        required=""
+      >
+        <option
+          value="0"
+        >
+          Zero
+        </option>
+        <option
+          value="1"
+        >
+          One
+        </option>
+        <option
+          value="2"
+        >
+          Two
+        </option>
+      </select>
+      <small
+        class="text-muted form-text"
+      >
+        Select field description
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`FieldArea component Shows errors 1`] = `
-<div
-  className="caldera-field-wrapper caldera-field-wrapper-text"
->
-  <label
-    className="caldera-field-label caldera-field-label-text"
-    htmlFor="firstName"
-  >
-    First Name
-     
-  </label>
-  <input
-    aria-describedby="firstName__help"
-    className="caldera-field caldera-field-text"
-    id="firstName"
-    onBlur={[Function]}
-    onChange={[Function]}
-    type="text"
-    value="roy"
-  />
-  <p
-    className="caldera-control__help description"
-    id="firstName__help"
-  >
-    your first name
-  </p>
-</div>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="firstName"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+    <div>
+      <div
+        class="caldera-field-group caldera-field-area-text has-error is-required form-group"
+      >
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+           
+          <span>
+            *
+          </span>
+        </label>
+        <text
+          class="caldera-field caldera-field-text form-control"
+          id="firstName"
+          required=""
+          type="text"
+          value="roy"
+        />
+        <small
+          class="text-muted form-text"
+        >
+          your first name
+        </small>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="caldera-field-group caldera-field-area-text has-error is-required form-group"
+    >
+      <label
+        class="form-label"
+        for="firstName"
+      >
+        First Name
+         
+        <span>
+          *
+        </span>
+      </label>
+      <text
+        class="caldera-field caldera-field-text form-control"
+        id="firstName"
+        required=""
+        type="text"
+        value="roy"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
