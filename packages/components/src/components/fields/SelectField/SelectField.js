@@ -23,11 +23,9 @@ export const SelectField = props => {
     if (!value) {
 
         options.push(emptyOption);
-        console.log(placeholder);
         if (placeholder) {
             value = placeholder;
         }
-        console.log(value);
 
     }
 

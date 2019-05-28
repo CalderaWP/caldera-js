@@ -11,8 +11,12 @@ export const SubmitButton = props => {
 		attributes,
 	} = props;
 
+	const wrapperProps = {
+		...props,
+		fieldType: 'submit'
+	};
 	return (
-		<FieldWrapper {...props} >
+		<FieldWrapper {...wrapperProps} >
 			<Control
 				type={"submit"}
 				value={label}

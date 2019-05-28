@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {render,fireEvent} from 'react-testing-library';
+import {render,fireEvent,cleanup} from 'react-testing-library';
 
 import {CheckboxField} from './CheckboxField';
 
@@ -8,6 +8,7 @@ describe('Checkbox Field component', () => {
     beforeEach(() => {
         onChange = jest.fn();
     });
+    afterEach(cleanup);
     it('matches snapshot', () => {
         const component = render(
             <CheckboxField

@@ -1,16 +1,17 @@
 import * as React from 'react';
-import {render,fireEvent} from 'react-testing-library';
+import {render, fireEvent, cleanup} from 'react-testing-library';
 import { RadioField } from './RadioField';
 
 describe('RadioField Field component', () => {
 	let onChange;
+	afterEach(cleanup);
+
 	beforeEach(() => {
 		onChange = jest.fn();
 	});
 	it('matches snapshot', () => {
 		const component = render(
 			<RadioField
-				fieldId={'r1'}
 				label={'Select A Hat!'}
 				description={'selection of hats'}
 				fieldId={'selection-hats'}

@@ -68,6 +68,7 @@ function RadioOrCheckboxFieldSet(props) {
                     const isChecked = 'radio' === fieldType ? value === optionId : value.includes(optionId);
 
                     return (<RadioOrCheckboxControl
+                        fieldId={optionId}
                         key={key}
                         label={optionLabel}
                         fieldType={fieldType}

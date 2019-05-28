@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {render} from 'react-testing-library';
+import {render,cleanup} from 'react-testing-library';
 
 import { FieldSet } from './FieldSet';
 
 describe('Field label', () => {
+	afterEach(cleanup);
 	it('Matches snapshot', () => {
 		const component = render(
 			<FieldSet fieldType={'checkbox'} legend={'Check All options'}>

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import {render,findByLabelText} from "react-testing-library";
+import {render, fireEvent, cleanup,findByLabelText} from "react-testing-library";
 import { InputField } from './InputField';
 
 describe('InputField  as checkbox field', () => {
 	let onChange;
 	let onBlur;
+	afterEach(cleanup);
 
 	beforeEach(() => {
 		onChange = jest.fn();
@@ -34,24 +35,4 @@ describe('InputField  as checkbox field', () => {
 		expect(component.find('input').prop('value')).toEqual(attributes.value);
 	});
 
-	it('Sets checked based on value prop', () => {
-		const label = 'Can Do';
-
-		const {container} = render(
-			<InputField
-				fieldId={'i11'}
-				label={'Can do thing'}
-				html5type={'checkbox'}
-				value={true}
-				onChange={onChange}
-				onBlur={onBlur}
-			/>
-		);
-		const input = container.querySelector('input')
-		const event = {target: {value: 200}};
-		fireEvent.click(input, event);
-		expect(input.value).toBe('200')
-
-
-	});
 });

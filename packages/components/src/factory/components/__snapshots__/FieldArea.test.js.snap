@@ -129,62 +129,6 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="caldera-field-group caldera-field-area-text is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="caldera-field-group caldera-field-area-text has-error is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
         class="caldera-field-group caldera-field-area-select is-required form-group"
       >
         <label
@@ -334,34 +278,6 @@ exports[`FieldArea component Shows errors 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="caldera-field-group caldera-field-area-text is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="caldera-field-group caldera-field-area-text has-error is-required form-group"

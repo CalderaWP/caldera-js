@@ -1,11 +1,12 @@
 import * as React from 'react';
-import {render,fireEvent} from 'react-testing-library';
+import {render, fireEvent, cleanup} from 'react-testing-library';
 import renderer from 'react-test-renderer'
 import { InputField } from './InputField';
 
 describe('InputField ', () => {
 	let onChange;
 	let onBlur;
+	afterEach(cleanup);
 
 	beforeEach(() => {
 		onChange = jest.fn();

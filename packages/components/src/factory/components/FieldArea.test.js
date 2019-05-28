@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-testing-library';
+import {render, fireEvent, cleanup} from 'react-testing-library';
 import { mount } from 'enzyme';
 import {
 	checkboxFieldset,
@@ -16,6 +16,7 @@ import { FieldArea } from './FieldArea';
 describe('FieldArea component', () => {
 	let onChange;
 	let onBlur;
+	afterEach(cleanup);
 	beforeEach(() => {
 		onChange = jest.fn();
 		onBlur = jest.fn();
@@ -58,27 +59,21 @@ describe('FieldArea component', () => {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('Changes calls change handler of radio field', () => {
-		const component = mount(
-			<FieldArea field={radioField} onChange={onChange} onBlur={onBlur} />
-		);
 
-		component
-			.find('input')
-			.first()
-			.simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
-	});
-	it('Changes calls change handler of checkbox field', () => {
-		const component = mount(
+
+
+	it.skip('Changes calls change handler of text field', () => {
+		const {container} = render(
 			<FieldArea
-				field={checkboxField}
+				field={textField}
 				onChange={onChange}
 				onBlur={onBlur}
 			/>
 		);
 
-		component.find('input').simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
+		const input = container.querySelector('input');
+		const event = {target: {value: 200}};
+		fireEvent(input, event)
+		expect(input.value).toBe('200')
 	});
 });

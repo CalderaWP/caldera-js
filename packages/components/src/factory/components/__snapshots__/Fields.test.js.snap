@@ -307,12 +307,12 @@ Object {
             >
               <input
                 class="form-check-input"
-                id="checkboxFieldSetLabel"
+                id="opt-1"
                 type="checkbox"
               />
               <label
                 class="form-check-label"
-                for="checkboxFieldSetLabel"
+                for="opt-1"
                 title=""
                 type="checkbox"
               >
@@ -324,12 +324,12 @@ Object {
             >
               <input
                 class="form-check-input"
-                id="checkboxFieldSetLabel"
+                id="opt-2"
                 type="checkbox"
               />
               <label
                 class="form-check-label"
-                for="checkboxFieldSetLabel"
+                for="opt-2"
                 title=""
                 type="checkbox"
               >
@@ -341,12 +341,12 @@ Object {
             >
               <input
                 class="form-check-input"
-                id="checkboxFieldSetLabel"
+                id="opt-3"
                 type="checkbox"
               />
               <label
                 class="form-check-label"
-                for="checkboxFieldSetLabel"
+                for="opt-3"
                 title=""
                 type="checkbox"
               >
@@ -547,12 +547,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-1"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-1"
               title=""
               type="checkbox"
             >
@@ -564,12 +564,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-2"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-2"
               title=""
               type="checkbox"
             >
@@ -581,12 +581,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-3"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-3"
               title=""
               type="checkbox"
             >

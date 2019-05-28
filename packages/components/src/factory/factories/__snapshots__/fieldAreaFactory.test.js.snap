@@ -129,34 +129,6 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="caldera-field-group caldera-field-area-text is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="textFieldId"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="textFieldId"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
         class="caldera-field-group caldera-field-area-select is-required form-group"
       >
         <label
@@ -306,76 +278,6 @@ exports[`fieldAreaFactory should create textarea 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="caldera-field-group caldera-field-area-text is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="textFieldId"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="textFieldId"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="caldera-field-group caldera-field-area-select is-required form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="caldera-field-group caldera-field-area-textarea is-required form-group"

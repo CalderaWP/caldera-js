@@ -79,43 +79,4 @@ describe('Field component', () => {
 		);
 		expect(component).toMatchSnapshot();
 	});
-
-	it('Changes calls change handler of text field', () => {
-		const component = mount(
-			<Field field={textField} onChange={onChange} onBlur={onBlur} />
-		);
-
-		console.log(component.debug());
-		return;
-
-		component.find('input').simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
-	});
-	it('Changes calls change handler of select field', () => {
-		const component = mount(
-			<Field field={selectField} onChange={onChange} onBlur={onBlur} />
-		);
-
-		component.find('select').simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
-	});
-	it('Changes calls change handler of radio field', () => {
-		const component = mount(
-			<Field field={radioField} onChange={onChange} onBlur={onBlur} />
-		);
-
-		component
-			.find('input')
-			.first()
-			.simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
-	});
-	it('Changes calls change handler of checkbox field', () => {
-		const component = mount(
-			<Field field={checkboxField} onChange={onChange} onBlur={onBlur} />
-		);
-
-		component.find('input').simulate('change');
-		expect(onChange.mock.calls.length).toBe(1);
-	});
 });

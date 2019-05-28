@@ -12,6 +12,8 @@ import {
     toBoolean,
     isValidHtml5type,
     textField,
+    CheckboxField,
+    FieldWrapperOuter,
     Row,
     fieldAreaFactory,
     collectFieldValues,

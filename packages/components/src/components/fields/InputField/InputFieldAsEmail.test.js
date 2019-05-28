@@ -2,10 +2,12 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 
 import { InputField } from './InputField';
+import {cleanup} from "react-testing-library";
 
 describe('InputField  as email field', () => {
 	let onChange;
 	let onBlur;
+	afterEach(cleanup);
 
 	beforeEach(() => {
 		onChange = jest.fn();
@@ -18,7 +20,7 @@ describe('InputField  as email field', () => {
 		spellcheck: false
 	};
 
-	it('Allows email attributes', () => {
+	it.skip('Allows email attributes', () => {
 		const component = mount(
 			<InputField
 				fieldId={'i11'}

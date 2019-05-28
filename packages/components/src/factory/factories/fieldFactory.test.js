@@ -1,6 +1,6 @@
 import {fieldFactory} from './fieldFactory';
 import React from 'react';
-import {render} from 'react-testing-library';
+import {cleanup, render} from 'react-testing-library';
 import {mount} from 'enzyme';
 import {
     checkboxFieldset,
@@ -18,6 +18,8 @@ import {
 describe('fieldFactory', () => {
     let onChange;
     let onBlur;
+    afterEach(cleanup);
+
     beforeEach(() => {
         onChange = jest.fn();
         onBlur = jest.fn();
@@ -30,20 +32,25 @@ describe('fieldFactory', () => {
     });
 
     it('Creates a text field when field type is bogus', () => {
-        const component = mount(
+
+        const component = render(
             fieldFactory(
                 {...textField, fieldType: 'travels-in-space'},
                 onChange,
                 onBlur
             )
         );
-        expect(component.find('input').prop('type')).toBe('text');
+        expect(component).toMatchSnapshot();
+
+
     });
     it('Creates a text field when field type is input', () => {
-        const component = mount(
+
+        const component = render(
             fieldFactory({...textField, fieldType: 'input'}, onChange, onBlur)
         );
-        expect(component.find('input').prop('type')).toBe('text');
+        expect(component).toMatchSnapshot();
+
     });
 
     it('Creates a hidden field when field type is hidden', () => {
@@ -173,7 +180,7 @@ describe('fieldFactory', () => {
                 .find('input')
                 .first()
                 .props().id
-        ).toBe('opt-test-7');
+        ).toBe('test');
     });
 
     it('Creates an select field identified as dropdown', () => {

@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {render,fireEvent} from 'react-testing-library';
+import {render, fireEvent, cleanup} from 'react-testing-library';
 
 import { HiddenField } from './HiddenField';
 
 describe('HiddenField ', () => {
 	let onChange;
+	afterEach(cleanup);
 
 	beforeEach(() => {
 		onChange = jest.fn();

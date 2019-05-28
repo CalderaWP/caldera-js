@@ -10,132 +10,6 @@ Object {
       >
         <label
           class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
           for="checkboxFieldSetLabel"
         >
           Checkbox Field Set Label
@@ -153,12 +27,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-1"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-1"
               title=""
               type="checkbox"
             >
@@ -170,12 +44,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-2"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-2"
               title=""
               type="checkbox"
             >
@@ -187,172 +61,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-3"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="radioFieldLabel"
-        >
-          Radio Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            checked=""
-            class="form-check-input"
-            id="radioFieldLabel"
-            required=""
-            type="radio"
-          />
-          <label
-            class="form-check-label"
-            for="radioFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Radio Field Label
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Radio field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-3"
               title=""
               type="checkbox"
             >
@@ -391,12 +105,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-1"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-1"
             title=""
             type="checkbox"
           >
@@ -408,12 +122,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-2"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-2"
             title=""
             type="checkbox"
           >
@@ -425,12 +139,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-3"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-3"
             title=""
             type="checkbox"
           >
@@ -511,34 +225,6 @@ exports[`fieldFactory Creates a number field 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
@@ -666,251 +352,6 @@ exports[`fieldFactory Creates a radio field 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
@@ -1060,369 +501,6 @@ exports[`fieldFactory Creates a submit button 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="radioFieldLabel"
-        >
-          Radio Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            checked=""
-            class="form-check-input"
-            id="radioFieldLabel"
-            required=""
-            type="radio"
-          />
-          <label
-            class="form-check-label"
-            for="radioFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Radio Field Label
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Radio field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
@@ -1661,7 +739,7 @@ Object {
 }
 `;
 
-exports[`fieldFactory Creates an checkbox field field 1`] = `
+exports[`fieldFactory Creates a text field when field type is bogus 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1693,15 +771,110 @@ Object {
         </small>
       </div>
     </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="form-label"
+        for="firstName"
+      >
+        First Name
+         
+        <span>
+          *
+        </span>
+      </label>
+      <text
+        class="caldera-field caldera-field-text form-control"
+        id="firstName"
+        required=""
+        type="text"
+        value="roy"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`fieldFactory Creates a text field when field type is input 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
     <div>
       <div
         class="form-group"
       >
         <label
           class="form-label"
-          for="numberFieldId"
+          for="firstName"
         >
-          Number Field Label
+          First Name
            
           <span>
             *
@@ -1709,48 +882,113 @@ Object {
         </label>
         <text
           class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
+          id="firstName"
           required=""
           type="text"
-          value="3"
+          value="roy"
         />
         <small
           class="text-muted form-text"
         >
-          Number field description
+          your first name
         </small>
       </div>
     </div>
-    <div>
-      <div
-        class="form-group"
+  </body>,
+  "container": <div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="form-label"
+        for="firstName"
       >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
+        First Name
+         
+        <span>
+          *
+        </span>
+      </label>
+      <text
+        class="caldera-field caldera-field-text form-control"
+        id="firstName"
+        required=""
+        type="text"
+        value="roy"
+      />
+      <small
+        class="text-muted form-text"
+      >
+        your first name
+      </small>
     </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`fieldFactory Creates an checkbox field field 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
     <div>
       <div
         class="form-group"
@@ -1904,132 +1142,6 @@ Object {
       >
         <label
           class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
           for="checkboxFieldSetLabel"
         >
           Checkbox Field Set Label
@@ -2047,12 +1159,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-1"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-1"
               title=""
               type="checkbox"
             >
@@ -2064,12 +1176,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-2"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-2"
               title=""
               type="checkbox"
             >
@@ -2081,12 +1193,12 @@ Object {
           >
             <input
               class="form-check-input"
-              id="checkboxFieldSetLabel"
+              id="opt-3"
               type="checkbox"
             />
             <label
               class="form-check-label"
-              for="checkboxFieldSetLabel"
+              for="opt-3"
               title=""
               type="checkbox"
             >
@@ -2125,12 +1237,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-1"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-1"
             title=""
             type="checkbox"
           >
@@ -2142,12 +1254,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-2"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-2"
             title=""
             type="checkbox"
           >
@@ -2159,12 +1271,12 @@ Object {
         >
           <input
             class="form-check-input"
-            id="checkboxFieldSetLabel"
+            id="opt-3"
             type="checkbox"
           />
           <label
             class="form-check-label"
-            for="checkboxFieldSetLabel"
+            for="opt-3"
             title=""
             type="checkbox"
           >
@@ -2245,64 +1357,6 @@ exports[`fieldFactory Creates an email field 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
@@ -2426,209 +1480,6 @@ exports[`fieldFactory Creates an select field 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
@@ -2786,395 +1637,6 @@ Object {
       >
         <label
           class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="radioFieldLabel"
-        >
-          Radio Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            checked=""
-            class="form-check-input"
-            id="radioFieldLabel"
-            required=""
-            type="radio"
-          />
-          <label
-            class="form-check-label"
-            for="radioFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Radio Field Label
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Radio field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="clickButton"
-        >
-          Click Me
-           
-          <span>
-            *
-          </span>
-        </label>
-        <input
-          class="caldera-field caldera-field-undefined form-control"
-          id="clickButton"
-          value="Click Me"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
           for="selectFieldId"
         >
           Select Field Label
@@ -3326,437 +1788,6 @@ Object {
       >
         <label
           class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="radioFieldLabel"
-        >
-          Radio Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            checked=""
-            class="form-check-input"
-            id="radioFieldLabel"
-            required=""
-            type="radio"
-          />
-          <label
-            class="form-check-label"
-            for="radioFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Radio Field Label
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Radio field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="clickButton"
-        >
-          Click Me
-           
-          <span>
-            *
-          </span>
-        </label>
-        <input
-          class="caldera-field caldera-field-undefined form-control"
-          id="clickButton"
-          value="Click Me"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
           for="textArea1"
         >
           Your message
@@ -3878,467 +1909,6 @@ exports[`fieldFactory should create toggle 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="firstName"
-        >
-          First Name
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="firstName"
-          required=""
-          type="text"
-          value="roy"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="numberFieldId"
-        >
-          Number Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="numberFieldId"
-          max="10"
-          min="1"
-          required=""
-          type="text"
-          value="3"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Number field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="emailFieldId"
-        >
-          Email Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <text
-          class="caldera-field caldera-field-text form-control"
-          id="emailFieldId"
-          required=""
-          type="text"
-          value="emai@email.com"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          Email field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldLabel"
-        >
-          Checkbox Labe
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            class="form-check-input"
-            id="checkboxFieldLabel"
-            required=""
-            type="checkbox"
-          />
-          <label
-            class="form-check-label"
-            for="checkboxFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Checkbox Labe
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="radioFieldLabel"
-        >
-          Radio Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <div
-          class="form-check"
-        >
-          <input
-            attributes="[object Object]"
-            checked=""
-            class="form-check-input"
-            id="radioFieldLabel"
-            required=""
-            type="radio"
-          />
-          <label
-            class="form-check-label"
-            for="radioFieldLabel"
-            title=""
-            type="checkbox"
-          >
-            Radio Field Label
-          </label>
-        </div>
-        <small
-          class="text-muted form-text"
-        >
-          Radio field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="checkboxFieldSetLabel"
-        >
-          Checkbox Field Set Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <fieldset>
-          <legend>
-            Checkbox Field Set Label
-          </legend>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              One
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Two
-            </label>
-          </div>
-          <div
-            class="form-check"
-          >
-            <input
-              class="form-check-input"
-              id="checkboxFieldSetLabel"
-              type="checkbox"
-            />
-            <label
-              class="form-check-label"
-              for="checkboxFieldSetLabel"
-              title=""
-              type="checkbox"
-            >
-              Three
-            </label>
-          </div>
-        </fieldset>
-        <small
-          class="text-muted form-text"
-        >
-          Checkbox field set description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="clickButton"
-        >
-          Click Me
-           
-          <span>
-            *
-          </span>
-        </label>
-        <input
-          class="caldera-field caldera-field-undefined form-control"
-          id="clickButton"
-          value="Click Me"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="selectFieldId"
-        >
-          Select Field Label
-           
-          <span>
-            *
-          </span>
-        </label>
-        <select
-          class="form-control"
-          id="selectFieldId"
-          required=""
-        >
-          <option
-            value="0"
-          >
-            Zero
-          </option>
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-        <small
-          class="text-muted form-text"
-        >
-          Select field description
-        </small>
-      </div>
-    </div>
-    <div>
-      <div
-        class="form-group"
-      >
-        <label
-          class="form-label"
-          for="textArea1"
-        >
-          Your message
-           
-          <span>
-            *
-          </span>
-        </label>
-        <textarea
-          class="form-control"
-          cols="8"
-          id="textArea1"
-          maxlength="500"
-          minlength="10"
-          required=""
-          rows="5"
-        />
-        <small
-          class="text-muted form-text"
-        >
-          your first name
-        </small>
-      </div>
-    </div>
     <div>
       <div
         class="form-group"
