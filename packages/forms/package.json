@@ -1,6 +1,6 @@
 {
   "name": "@calderajs/forms",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "lint:fix": "eslint src/** --fix"
   },
   "dependencies": {
-    "@calderajs/components": "^0.9.4",
+    "@calderajs/components": "^0.9.5",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "lodash": "^4.17.11",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
-    "@calderajs/babel-preset-calderajs": "^0.9.4",
+    "@calderajs/babel-preset-calderajs": "^0.9.5",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/react": "^5.0.6",
