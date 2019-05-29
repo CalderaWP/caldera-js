@@ -6,7 +6,7 @@ import {createFieldRule} from './state/createFieldRule';
 import {formRows, formRowOne, checkboxField} from './columns.fixtures';
 import {getValuesFromFormLayout} from './util/getValuesFromFormLayout';
 import {emailField, textField} from './fields.fixtures';
-
+import {render} from "react-testing-library";
 import {Column, fieldAreaFactory, collectFieldValues} from '@calderajs/components';
 
 describe('Factory import', () => {
@@ -55,14 +55,14 @@ describe('Caldera Forms', () => {
 	};
 
 	it('Forms', () => {
-		const component = renderer.create(
+		const component = render(
 			<CalderaForm
 				form={form}
 				onBlur={onBlur}
 				onChange={onChange}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Forms with rows assembled by id', () => {

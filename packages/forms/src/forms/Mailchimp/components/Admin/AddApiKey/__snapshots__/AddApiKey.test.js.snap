@@ -6,18 +6,22 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="caldera-field-wrapper caldera-field-wrapper-text"
+        class="form-group"
       >
         <label
-          class="caldera-field-label caldera-field-label-text"
+          class="form-label"
           for="caldera-mc-api-key"
         >
           New API Key
            
+          <span>
+            *
+          </span>
         </label>
-        <input
-          class="caldera-field caldera-field-text"
+        <text
+          class="caldera-field caldera-field-text form-control"
           id="caldera-mc-api-key"
+          required=""
           type="text"
           value=""
         />
@@ -32,18 +36,22 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="caldera-field-wrapper caldera-field-wrapper-text"
+      class="form-group"
     >
       <label
-        class="caldera-field-label caldera-field-label-text"
+        class="form-label"
         for="caldera-mc-api-key"
       >
         New API Key
          
+        <span>
+          *
+        </span>
       </label>
-      <input
-        class="caldera-field caldera-field-text"
+      <text
+        class="caldera-field caldera-field-text form-control"
         id="caldera-mc-api-key"
+        required=""
         type="text"
         value=""
       />

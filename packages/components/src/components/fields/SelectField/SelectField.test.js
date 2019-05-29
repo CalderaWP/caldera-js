@@ -47,7 +47,7 @@ describe('Select Field component', () => {
 		expect(onChange.mock.calls[0][0]).toBe(2);
 	});
 
-	it.skip('With no value selected and placeholder', () => {
+	it('With no value selected and placeholder', () => {
 		const placeholder = '---';
 		const component = mount(
 			<SelectField
@@ -69,6 +69,6 @@ describe('Select Field component', () => {
 				.find('option')
 				.first()
 				.props()
-		).toEqual({ children: '---', value: undefined });
+		).toEqual({ children: '--', value: null });
 	});
 });

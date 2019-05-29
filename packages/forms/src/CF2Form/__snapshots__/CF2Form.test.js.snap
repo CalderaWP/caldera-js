@@ -116,16 +116,15 @@ Object {
                 class="caldera-field-group caldera-field-area-submit form-group"
               >
                 <label
-                  class="control-label"
+                  class="form-label"
                   for="fld_7908577"
                 >
-                  
+                  Click Me
                    
                 </label>
                 <input
-                  class="form-control"
+                  class="form-control form-control"
                   id="fld_7908577"
-                  type="submit"
                   value="Click Me"
                 />
               </div>
@@ -153,16 +152,15 @@ Object {
               class="caldera-field-group caldera-field-area-submit form-group"
             >
               <label
-                class="control-label"
+                class="form-label"
                 for="fld_7908577"
               >
-                
+                Click Me
                  
               </label>
               <input
-                class="form-control"
+                class="form-control form-control"
                 id="fld_7908577"
-                type="submit"
                 value="Click Me"
               />
             </div>

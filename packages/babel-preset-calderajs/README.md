@@ -23,6 +23,17 @@ npm i @calderajs/babel-preset-calderajs --dev
 
 ```
 
+* package.json
+
+```
+"devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.4.4",
+    "@calderajs/babel-preset-calderajs": "^0.9.4",
+}
+```
+
 ## BTW If Using WordPress, Do This Instead
 If you're using babel for a WordPress plugin and want to use wp.createElement() instead of React.createElement() to transform JSX, do this instead:
 

@@ -47,20 +47,23 @@ Object {
                 id="mc-45907f0c59-1-1"
               >
                 <div
-                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                  class="caldera-field-group caldera-field-area-input form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-text"
+                    class="form-label"
                     for="mc-email"
                   >
                     Email
                      
+                    <span>
+                      *
+                    </span>
                   </label>
-                  <input
-                    class="caldera-field caldera-field-text"
+                  <text
+                    class="caldera-field caldera-field-text form-control"
                     id="mc-email"
+                    required=""
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -69,20 +72,19 @@ Object {
                 id="mc-45907f0c59-1-2"
               >
                 <div
-                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                  class="caldera-field-group caldera-field-area-input form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-text"
+                    class="form-label"
                     for="FNAME"
                   >
                     First Name
                      
                   </label>
-                  <input
-                    class="caldera-field caldera-field-text"
+                  <text
+                    class="caldera-field caldera-field-text form-control"
                     id="FNAME"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -95,20 +97,19 @@ Object {
                 id="mc-45907f0c59-2-1"
               >
                 <div
-                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                  class="caldera-field-group caldera-field-area-input form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-text"
+                    class="form-label"
                     for="LNAME"
                   >
                     Last Name
                      
                   </label>
-                  <input
-                    class="caldera-field caldera-field-text"
+                  <text
+                    class="caldera-field caldera-field-text form-control"
                     id="LNAME"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -117,20 +118,19 @@ Object {
                 id="mc-45907f0c59-2-2"
               >
                 <div
-                  class="caldera-field-wrapper caldera-field-wrapper-text"
+                  class="caldera-field-group caldera-field-area-input form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-text"
+                    class="form-label"
                     for="MMERGE3"
                   >
                     Primary Website
                      
                   </label>
-                  <input
-                    class="caldera-field caldera-field-text"
+                  <text
+                    class="caldera-field caldera-field-text form-control"
                     id="MMERGE3"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -142,64 +142,73 @@ Object {
                 class="caldera-column width-1 sc-bdVaJa iHZvIS"
                 id="mc-45907f0c59-3-1"
               >
-                <fieldset
-                  class="caldera-fieldset caldera-fieldset-checkboxes"
+                <div
+                  class="caldera-field-group caldera-field-area-checkboxes form-group"
                 >
-                  <legend>
+                  <label
+                    class="form-label"
+                    for="50c908e6aa"
+                  >
                     What React Framework Do You Want To Learn?
-                  </legend>
-                  <div
-                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                  >
-                    <input
-                      class="caldera-field caldera-field-checkbox"
-                      id="75091baaad"
-                      type="checkbox"
-                      value="1"
-                    />
-                    <label
-                      class="caldera-field-label caldera-field-label-checkbox"
-                      for="75091baaad"
+                     
+                  </label>
+                  <fieldset>
+                    <legend>
+                      What React Framework Do You Want To Learn?
+                    </legend>
+                    <div
+                      class="caldera-field caldera-field-checkbox form-check"
                     >
-                      Gatsby
-                       
-                    </label>
-                  </div>
-                  <div
-                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                  >
-                    <input
-                      class="caldera-field caldera-field-checkbox"
-                      id="0a4dc88500"
-                      type="checkbox"
-                      value="1"
-                    />
-                    <label
-                      class="caldera-field-label caldera-field-label-checkbox"
-                      for="0a4dc88500"
+                      <input
+                        class="form-check-input"
+                        id="75091baaad"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="75091baaad"
+                        title=""
+                        type="checkbox"
+                      >
+                        Gatsby
+                      </label>
+                    </div>
+                    <div
+                      class="caldera-field caldera-field-checkbox form-check"
                     >
-                      Next.Js
-                       
-                    </label>
-                  </div>
-                  <div
-                    class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                  >
-                    <input
-                      class="caldera-field caldera-field-checkbox"
-                      id="5a44f196ec"
-                      type="checkbox"
-                      value="1"
-                    />
-                    <label
-                      class="caldera-field-label caldera-field-label-checkbox"
-                      for="5a44f196ec"
+                      <input
+                        class="form-check-input"
+                        id="0a4dc88500"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="0a4dc88500"
+                        title=""
+                        type="checkbox"
+                      >
+                        Next.Js
+                      </label>
+                    </div>
+                    <div
+                      class="caldera-field caldera-field-checkbox form-check"
                     >
-                      Create React App
-                       
-                    </label>
-                  </div>
-                </fieldset>
+                      <input
+                        class="form-check-input"
+                        id="5a44f196ec"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="5a44f196ec"
+                        title=""
+                        type="checkbox"
+                      >
+                        Create React App
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
             </div>
             <div
@@ -210,19 +219,18 @@ Object {
                 id="mc-45907f0c59-4-2"
               >
                 <div
-                  class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+                  class="caldera-field-group caldera-field-area-submit form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-submit"
+                    class="form-label"
                     for="mc-submit"
                   >
-                    
                      
                   </label>
                   <input
-                    class="caldera-field caldera-field-text"
+                    class="caldera-field caldera-field-undefined form-control"
                     id="mc-submit"
-                    type="submit"
+                    value=""
                   />
                 </div>
               </div>
@@ -249,20 +257,23 @@ Object {
               id="mc-45907f0c59-1-1"
             >
               <div
-                class="caldera-field-wrapper caldera-field-wrapper-text"
+                class="caldera-field-group caldera-field-area-input form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-text"
+                  class="form-label"
                   for="mc-email"
                 >
                   Email
                    
+                  <span>
+                    *
+                  </span>
                 </label>
-                <input
-                  class="caldera-field caldera-field-text"
+                <text
+                  class="caldera-field caldera-field-text form-control"
                   id="mc-email"
+                  required=""
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -271,20 +282,19 @@ Object {
               id="mc-45907f0c59-1-2"
             >
               <div
-                class="caldera-field-wrapper caldera-field-wrapper-text"
+                class="caldera-field-group caldera-field-area-input form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-text"
+                  class="form-label"
                   for="FNAME"
                 >
                   First Name
                    
                 </label>
-                <input
-                  class="caldera-field caldera-field-text"
+                <text
+                  class="caldera-field caldera-field-text form-control"
                   id="FNAME"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -297,20 +307,19 @@ Object {
               id="mc-45907f0c59-2-1"
             >
               <div
-                class="caldera-field-wrapper caldera-field-wrapper-text"
+                class="caldera-field-group caldera-field-area-input form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-text"
+                  class="form-label"
                   for="LNAME"
                 >
                   Last Name
                    
                 </label>
-                <input
-                  class="caldera-field caldera-field-text"
+                <text
+                  class="caldera-field caldera-field-text form-control"
                   id="LNAME"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -319,20 +328,19 @@ Object {
               id="mc-45907f0c59-2-2"
             >
               <div
-                class="caldera-field-wrapper caldera-field-wrapper-text"
+                class="caldera-field-group caldera-field-area-input form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-text"
+                  class="form-label"
                   for="MMERGE3"
                 >
                   Primary Website
                    
                 </label>
-                <input
-                  class="caldera-field caldera-field-text"
+                <text
+                  class="caldera-field caldera-field-text form-control"
                   id="MMERGE3"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -344,64 +352,73 @@ Object {
               class="caldera-column width-1 sc-bdVaJa iHZvIS"
               id="mc-45907f0c59-3-1"
             >
-              <fieldset
-                class="caldera-fieldset caldera-fieldset-checkboxes"
+              <div
+                class="caldera-field-group caldera-field-area-checkboxes form-group"
               >
-                <legend>
+                <label
+                  class="form-label"
+                  for="50c908e6aa"
+                >
                   What React Framework Do You Want To Learn?
-                </legend>
-                <div
-                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                >
-                  <input
-                    class="caldera-field caldera-field-checkbox"
-                    id="75091baaad"
-                    type="checkbox"
-                    value="1"
-                  />
-                  <label
-                    class="caldera-field-label caldera-field-label-checkbox"
-                    for="75091baaad"
+                   
+                </label>
+                <fieldset>
+                  <legend>
+                    What React Framework Do You Want To Learn?
+                  </legend>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
                   >
-                    Gatsby
-                     
-                  </label>
-                </div>
-                <div
-                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                >
-                  <input
-                    class="caldera-field caldera-field-checkbox"
-                    id="0a4dc88500"
-                    type="checkbox"
-                    value="1"
-                  />
-                  <label
-                    class="caldera-field-label caldera-field-label-checkbox"
-                    for="0a4dc88500"
+                    <input
+                      class="form-check-input"
+                      id="75091baaad"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="75091baaad"
+                      title=""
+                      type="checkbox"
+                    >
+                      Gatsby
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
                   >
-                    Next.Js
-                     
-                  </label>
-                </div>
-                <div
-                  class="caldera-field-group caldera-field-area-checkboxes caldera-field-wrapper caldera-field-wrapper-checkbox"
-                >
-                  <input
-                    class="caldera-field caldera-field-checkbox"
-                    id="5a44f196ec"
-                    type="checkbox"
-                    value="1"
-                  />
-                  <label
-                    class="caldera-field-label caldera-field-label-checkbox"
-                    for="5a44f196ec"
+                    <input
+                      class="form-check-input"
+                      id="0a4dc88500"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="0a4dc88500"
+                      title=""
+                      type="checkbox"
+                    >
+                      Next.Js
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
                   >
-                    Create React App
-                     
-                  </label>
-                </div>
-              </fieldset>
+                    <input
+                      class="form-check-input"
+                      id="5a44f196ec"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="5a44f196ec"
+                      title=""
+                      type="checkbox"
+                    >
+                      Create React App
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
             </div>
           </div>
           <div
@@ -412,19 +429,18 @@ Object {
               id="mc-45907f0c59-4-2"
             >
               <div
-                class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+                class="caldera-field-group caldera-field-area-submit form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-submit"
+                  class="form-label"
                   for="mc-submit"
                 >
-                  
                    
                 </label>
                 <input
-                  class="caldera-field caldera-field-text"
+                  class="caldera-field caldera-field-undefined form-control"
                   id="mc-submit"
-                  type="submit"
+                  value=""
                 />
               </div>
             </div>

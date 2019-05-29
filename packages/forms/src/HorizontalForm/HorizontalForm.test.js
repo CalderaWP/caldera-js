@@ -1,7 +1,7 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-
+import {render} from "react-testing-library";
 import { HorizontalForm } from './HorizontalForm';
 
 import {
@@ -26,7 +26,7 @@ describe('HorizontalForm', () => {
 	});
 
 	it('Matches snapshot', () => {
-		const component = renderer.create(
+		const component = render(
 			<HorizontalForm
 				fields={[checkboxFieldset, selectField, checkboxField]}
 				initialValues={{}}
@@ -36,7 +36,7 @@ describe('HorizontalForm', () => {
 				instanceId={'test-1'}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Calls on change', () => {

@@ -22,11 +22,11 @@ it( 'Changes list', () => {
 			listFieldConfig={field[0]}
 			listId={''}
 			onChange={onChange}
-			instanceId={'1'}
+			instanceId={'test'}
 		/>
 	);
 
-	component.find( 'input' ).first().simulate(
+	component.find( '#caldera-mc-select-test' ).first().simulate(
 		'change',
 		{target: {value:'45907f0c59'}}
 	);

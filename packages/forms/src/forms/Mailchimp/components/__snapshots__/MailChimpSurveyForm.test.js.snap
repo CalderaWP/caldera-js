@@ -22,21 +22,32 @@ Object {
                 id="r1-c1"
               >
                 <div
-                  class="caldera-field-group caldera-field-area-checkbox caldera-field-wrapper caldera-field-wrapper-checkbox"
+                  class="caldera-field-group caldera-field-area-checkbox form-group"
                 >
-                  <input
-                    class="caldera-field caldera-field-checkbox"
-                    id="fakeGroup2"
-                    type="checkbox"
-                    value="1"
-                  />
                   <label
-                    class="caldera-field-label caldera-field-label-checkbox"
+                    class="form-label"
                     for="fakeGroup2"
                   >
                     Are you new to JavaScript
                      
                   </label>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="fakeGroup2"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="fakeGroup2"
+                      title=""
+                      type="checkbox"
+                    >
+                      Are you new to JavaScript
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -52,19 +63,18 @@ Object {
                 id="r2-c2"
               >
                 <div
-                  class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+                  class="caldera-field-group caldera-field-area-submit form-group"
                 >
                   <label
-                    class="caldera-field-label caldera-field-label-submit"
+                    class="form-label"
                     for="submitQuestion"
                   >
-                    
                      
                   </label>
                   <input
-                    class="caldera-field caldera-field-text"
+                    class="caldera-field caldera-field-undefined form-control"
                     id="submitQuestion"
-                    type="submit"
+                    value=""
                   />
                 </div>
               </div>
@@ -92,21 +102,32 @@ Object {
               id="r1-c1"
             >
               <div
-                class="caldera-field-group caldera-field-area-checkbox caldera-field-wrapper caldera-field-wrapper-checkbox"
+                class="caldera-field-group caldera-field-area-checkbox form-group"
               >
-                <input
-                  class="caldera-field caldera-field-checkbox"
-                  id="fakeGroup2"
-                  type="checkbox"
-                  value="1"
-                />
                 <label
-                  class="caldera-field-label caldera-field-label-checkbox"
+                  class="form-label"
                   for="fakeGroup2"
                 >
                   Are you new to JavaScript
                    
                 </label>
+                <div
+                  class="caldera-field caldera-field-checkbox form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="fakeGroup2"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="fakeGroup2"
+                    title=""
+                    type="checkbox"
+                  >
+                    Are you new to JavaScript
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -122,19 +143,18 @@ Object {
               id="r2-c2"
             >
               <div
-                class="caldera-field-group caldera-field-area-submit caldera-field-wrapper caldera-field-wrapper-submit"
+                class="caldera-field-group caldera-field-area-submit form-group"
               >
                 <label
-                  class="caldera-field-label caldera-field-label-submit"
+                  class="form-label"
                   for="submitQuestion"
                 >
-                  
                    
                 </label>
                 <input
-                  class="caldera-field caldera-field-text"
+                  class="caldera-field caldera-field-undefined form-control"
                   id="submitQuestion"
-                  type="submit"
+                  value=""
                 />
               </div>
             </div>

@@ -1,179 +1,454 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalForm Matches snapshot 1`] = `
-<div
-  className="caldera"
->
-  <form
-    className="horizontal-form-test-1 caldera-form"
-    onSubmit={[Function]}
-  >
-    <div
-      className="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
-    >
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
       <div
-        className="caldera-column width-1 sc-bdVaJa iHZvIS"
-        id="c-test-1-0"
+        class="caldera"
       >
-        <fieldset
-          className="caldera-fieldset caldera-fieldset-checkboxes"
+        <form
+          class="horizontal-form-test-1 caldera-form"
         >
-          <legend>
-            Checkbox Field Set Label
-          </legend>
           <div
-            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
           >
-            <input
-              checked={false}
-              className="caldera-field caldera-field-checkbox"
-              id="opt-1"
-              onChange={[Function]}
-              type="checkbox"
-              value="1"
-            />
-            <label
-              className="caldera-field-label caldera-field-label-checkbox"
-              htmlFor="opt-1"
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="c-test-1-0"
             >
-              One
-               
-            </label>
+              <div
+                class="caldera-field-group caldera-field-area-checkboxes is-required form-group"
+              >
+                <label
+                  class="form-label"
+                  for="checkboxFieldSetLabel"
+                >
+                  Checkbox Field Set Label
+                   
+                  <span>
+                    *
+                  </span>
+                </label>
+                <fieldset>
+                  <legend>
+                    Checkbox Field Set Label
+                  </legend>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="opt-1"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="opt-1"
+                      title=""
+                      type="checkbox"
+                    >
+                      One
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="opt-2"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="opt-2"
+                      title=""
+                      type="checkbox"
+                    >
+                      Two
+                    </label>
+                  </div>
+                  <div
+                    class="caldera-field caldera-field-checkbox form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="opt-3"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="opt-3"
+                      title=""
+                      type="checkbox"
+                    >
+                      Three
+                    </label>
+                  </div>
+                </fieldset>
+                <small
+                  class="text-muted form-text"
+                >
+                  Checkbox field set description
+                </small>
+              </div>
+            </div>
           </div>
           <div
-            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
           >
-            <input
-              aria-describedby="opt-2__help"
-              checked={true}
-              className="caldera-field caldera-field-checkbox"
-              id="opt-2"
-              onChange={[Function]}
-              type="checkbox"
-              value="1"
-            />
-            <label
-              className="caldera-field-label caldera-field-label-checkbox"
-              htmlFor="opt-2"
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="c-test-1-1"
             >
-              Two
-               
-            </label>
-            <p
-              className="caldera-control__help description"
-              id="opt-2__help"
-            >
-              The Second Option
-            </p>
+              <div
+                class="caldera-field-group caldera-field-area-select is-required form-group"
+              >
+                <label
+                  class="form-label"
+                  for="selectFieldId"
+                >
+                  Select Field Label
+                   
+                  <span>
+                    *
+                  </span>
+                </label>
+                <select
+                  class="caldera-field caldera-field-select form-control"
+                  id="selectFieldId"
+                  required=""
+                >
+                  <option
+                    value="0"
+                  >
+                    Zero
+                  </option>
+                  <option
+                    value="1"
+                  >
+                    One
+                  </option>
+                  <option
+                    value="2"
+                  >
+                    Two
+                  </option>
+                  <option>
+                    --
+                  </option>
+                </select>
+                <small
+                  class="text-muted form-text"
+                >
+                  Select field description
+                </small>
+              </div>
+            </div>
           </div>
           <div
-            className="caldera-field-group caldera-field-area-checkboxes is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+            class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
           >
-            <input
-              checked={false}
-              className="caldera-field caldera-field-checkbox"
-              id="opt-3"
-              onChange={[Function]}
-              type="checkbox"
-              value="1"
-            />
-            <label
-              className="caldera-field-label caldera-field-label-checkbox"
-              htmlFor="opt-3"
+            <div
+              class="caldera-column width-1 sc-bdVaJa iHZvIS"
+              id="c-test-1-2"
             >
-              Three
-               
-            </label>
+              <div
+                class="caldera-field-group caldera-field-area-checkbox is-required form-group"
+              >
+                <label
+                  class="form-label"
+                  for="checkboxFieldLabel"
+                >
+                  Checkbox Labe
+                   
+                  <span>
+                    *
+                  </span>
+                </label>
+                <div
+                  class="caldera-field caldera-field-checkbox form-check"
+                >
+                  <input
+                    attributes="[object Object]"
+                    class="form-check-input"
+                    id="checkboxFieldLabel"
+                    required=""
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="checkboxFieldLabel"
+                    title=""
+                    type="checkbox"
+                  >
+                    Checkbox Labe
+                  </label>
+                </div>
+                <small
+                  class="text-muted form-text"
+                >
+                  Checkbox field description
+                </small>
+              </div>
+            </div>
           </div>
-        </fieldset>
+        </form>
       </div>
     </div>
+  </body>,
+  "container": <div>
     <div
-      className="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+      class="caldera"
     >
-      <div
-        className="caldera-column width-1 sc-bdVaJa iHZvIS"
-        id="c-test-1-1"
+      <form
+        class="horizontal-form-test-1 caldera-form"
       >
         <div
-          className="caldera-field-group caldera-field-area-select is-required caldera-field-wrapper caldera-field-wrapper-select"
+          class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
         >
-          <label
-            className="caldera-field-label caldera-field-label-select"
-            htmlFor="selectFieldId"
+          <div
+            class="caldera-column width-1 sc-bdVaJa iHZvIS"
+            id="c-test-1-0"
           >
-            Select Field Label
-             
-          </label>
-          <select
-            aria-describedby="selectFieldId__help"
-            className="caldera-field caldera-field-select"
-            id="selectFieldId"
-            multiple={false}
-            onChange={[Function]}
-            required={true}
-          >
-            <option
-              value={0}
+            <div
+              class="caldera-field-group caldera-field-area-checkboxes is-required form-group"
             >
-              Zero
-            </option>
-            <option
-              value={1}
-            >
-              One
-            </option>
-            <option
-              value={2}
-            >
-              Two
-            </option>
-          </select>
-          <p
-            className="caldera-control__help description"
-            id="selectFieldId__help"
-          >
-            Select field description
-          </p>
+              <label
+                class="form-label"
+                for="checkboxFieldSetLabel"
+              >
+                Checkbox Field Set Label
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <fieldset>
+                <legend>
+                  Checkbox Field Set Label
+                </legend>
+                <div
+                  class="caldera-field caldera-field-checkbox form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="opt-1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="opt-1"
+                    title=""
+                    type="checkbox"
+                  >
+                    One
+                  </label>
+                </div>
+                <div
+                  class="caldera-field caldera-field-checkbox form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="opt-2"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="opt-2"
+                    title=""
+                    type="checkbox"
+                  >
+                    Two
+                  </label>
+                </div>
+                <div
+                  class="caldera-field caldera-field-checkbox form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="opt-3"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="opt-3"
+                    title=""
+                    type="checkbox"
+                  >
+                    Three
+                  </label>
+                </div>
+              </fieldset>
+              <small
+                class="text-muted form-text"
+              >
+                Checkbox field set description
+              </small>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
-    >
-      <div
-        className="caldera-column width-1 sc-bdVaJa iHZvIS"
-        id="c-test-1-2"
-      >
         <div
-          className="caldera-field-group caldera-field-area-checkbox is-required caldera-field-wrapper caldera-field-wrapper-checkbox"
+          class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
         >
-          <input
-            aria-describedby="checkboxFieldLabel__help"
-            checked={true}
-            className="caldera-field caldera-field-checkbox"
-            id="checkboxFieldLabel"
-            onChange={[Function]}
-            required={true}
-            type="checkbox"
-            value="1"
-          />
-          <label
-            className="caldera-field-label caldera-field-label-checkbox"
-            htmlFor="checkboxFieldLabel"
+          <div
+            class="caldera-column width-1 sc-bdVaJa iHZvIS"
+            id="c-test-1-1"
           >
-            Checkbox Labe
-             
-          </label>
-          <p
-            className="caldera-control__help description"
-            id="checkboxFieldLabel__help"
-          >
-            Checkbox field description
-          </p>
+            <div
+              class="caldera-field-group caldera-field-area-select is-required form-group"
+            >
+              <label
+                class="form-label"
+                for="selectFieldId"
+              >
+                Select Field Label
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <select
+                class="caldera-field caldera-field-select form-control"
+                id="selectFieldId"
+                required=""
+              >
+                <option
+                  value="0"
+                >
+                  Zero
+                </option>
+                <option
+                  value="1"
+                >
+                  One
+                </option>
+                <option
+                  value="2"
+                >
+                  Two
+                </option>
+                <option>
+                  --
+                </option>
+              </select>
+              <small
+                class="text-muted form-text"
+              >
+                Select field description
+              </small>
+            </div>
+          </div>
         </div>
-      </div>
+        <div
+          class="sc-bdVaJa caldera-form-row caldera-row sc-bwzfXH pjOvZ"
+        >
+          <div
+            class="caldera-column width-1 sc-bdVaJa iHZvIS"
+            id="c-test-1-2"
+          >
+            <div
+              class="caldera-field-group caldera-field-area-checkbox is-required form-group"
+            >
+              <label
+                class="form-label"
+                for="checkboxFieldLabel"
+              >
+                Checkbox Labe
+                 
+                <span>
+                  *
+                </span>
+              </label>
+              <div
+                class="caldera-field caldera-field-checkbox form-check"
+              >
+                <input
+                  attributes="[object Object]"
+                  class="form-check-input"
+                  id="checkboxFieldLabel"
+                  required=""
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="checkboxFieldLabel"
+                  title=""
+                  type="checkbox"
+                >
+                  Checkbox Labe
+                </label>
+              </div>
+              <small
+                class="text-muted form-text"
+              >
+                Checkbox field description
+              </small>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

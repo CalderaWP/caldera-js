@@ -6,16 +6,16 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="caldera-field-wrapper caldera-field-wrapper-text"
+        class="form-group"
       >
         <label
-          class="caldera-field-label caldera-field-label-text"
+          class="form-label"
           for="caldera-mc-select-list-a"
         >
            
         </label>
-        <input
-          class="caldera-field caldera-field-text"
+        <text
+          class="caldera-field caldera-field-text form-control"
           id="caldera-mc-select-list-a"
           type="text"
           value="45907f0c59"
@@ -25,16 +25,16 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="caldera-field-wrapper caldera-field-wrapper-text"
+      class="form-group"
     >
       <label
-        class="caldera-field-label caldera-field-label-text"
+        class="form-label"
         for="caldera-mc-select-list-a"
       >
          
       </label>
-      <input
-        class="caldera-field caldera-field-text"
+      <text
+        class="caldera-field caldera-field-text form-control"
         id="caldera-mc-select-list-a"
         type="text"
         value="45907f0c59"

@@ -22,8 +22,7 @@ export const SelectField = props => {
     let {value} = props;
 
     if (!value) {
-
-        options.push(emptyOption);
+        options.unshift(emptyOption);
         if (placeholder) {
             value = placeholder;
         }
@@ -37,7 +36,8 @@ export const SelectField = props => {
     const wrapperProps = {
         ...props,
         fieldType: 'select'
-    }
+    };
+
     return (
         <FieldWrapper {...wrapperProps}>
             <Form.Control
