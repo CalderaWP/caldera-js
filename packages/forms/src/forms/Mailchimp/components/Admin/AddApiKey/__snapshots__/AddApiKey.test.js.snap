@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Shows list 1`] = `
+exports[`AddApiKey Mailchimp Shows list 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -12,7 +12,7 @@ Object {
           class="form-label"
           for="caldera-mc-api-key"
         >
-          New API Key
+          The Label
            
           <span>
             *
@@ -27,7 +27,7 @@ Object {
         />
       </div>
       <button
-        id="a-mc-add-api-key"
+        id="test-mc-add-api-key"
         title="Save API Key"
       >
         Save API Key
@@ -42,7 +42,7 @@ Object {
         class="form-label"
         for="caldera-mc-api-key"
       >
-        New API Key
+        The Label
          
         <span>
           *
@@ -57,7 +57,7 @@ Object {
       />
     </div>
     <button
-      id="a-mc-add-api-key"
+      id="test-mc-add-api-key"
       title="Save API Key"
     >
       Save API Key

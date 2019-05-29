@@ -1,12 +1,8 @@
 import React, {Fragment} from 'react'
 import {Field} from '@calderajs/components';
-const field = {
-	fieldType: 'text',
-	value: '',
-	label: 'New API Key',
-	fieldId: 'caldera-mc-api-key',
-	required: true
-};
+
+
+
 /**
  * Add Mailchimp API Key
  *
@@ -17,7 +13,14 @@ const field = {
  * @return {*}
  * @constructor
  */
-export const AddApiKey = ({onChange,instanceId,apiKey,onSaveApiKey}) => {
+export const AddApiKey = ({onChange,instanceId,apiKey,onSaveApiKey,label}) => {
+	const field = {
+		fieldType: 'text',
+		value:apiKey,
+		label,
+		fieldId: 'caldera-mc-api-key',
+		required: true
+	};
 	return(
 		<Fragment>
 			<Field
@@ -41,5 +44,10 @@ export const AddApiKey = ({onChange,instanceId,apiKey,onSaveApiKey}) => {
 
 	)
 
-}
+};
+
+AddApiKey.defaultProps = {
+	label:  'New API Key',
+	apiKey: ''
+};
 
