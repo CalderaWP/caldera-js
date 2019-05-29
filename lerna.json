@@ -4,7 +4,7 @@
     "packages/components",
     "packages/babel-preset-caldera-js"
   ],
-  "version": "0.9.3",
+  "version": "0.9.4",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "publishConfig": {
