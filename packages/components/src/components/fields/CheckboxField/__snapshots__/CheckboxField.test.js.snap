@@ -16,7 +16,7 @@ Object {
            
         </label>
         <div
-          class="form-check"
+          class="caldera-field caldera-field-checkbox form-check"
         >
           <input
             class="form-check-input"
@@ -52,7 +52,7 @@ Object {
          
       </label>
       <div
-        class="form-check"
+        class="caldera-field caldera-field-checkbox form-check"
       >
         <input
           class="form-check-input"

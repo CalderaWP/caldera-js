@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FieldWrapper} from "..";
 import {Form} from 'react-bootstrap'
-
+import {fieldClassNames} from "../util";
+import classNames from 'classnames'
 const emptyOption = {
     label: '--',
     value: null,
@@ -33,14 +34,27 @@ export const SelectField = props => {
         onChange(event.target.value);
     }
 
-    return <FieldWrapper {...props}>
-        <Form.Control as="select" id={fieldId} value={value} required={required} onChange={changeHandler}
-                      onBlur={onBlur}>
-            {options.map(option => {
-                return <option key={option.value} value={option.value}>{option.label}</option>
-            })}
-        </Form.Control>
-    </FieldWrapper>;
+    const wrapperProps = {
+        ...props,
+        fieldType: 'select'
+    }
+    return (
+        <FieldWrapper {...wrapperProps}>
+            <Form.Control
+                className={classNames(fieldClassNames('select'))}
+                as="select"
+                id={fieldId}
+                value={value}
+                required={required}
+                onChange={changeHandler}
+                          onBlur={onBlur}
+            >
+                {options.map(option => {
+                    return <option key={option.value} value={option.value}>{option.label}</option>
+                })}
+            </Form.Control>
+        </FieldWrapper>
+    );
 
 };
 

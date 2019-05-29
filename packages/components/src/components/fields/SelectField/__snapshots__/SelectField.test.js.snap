@@ -16,7 +16,7 @@ Object {
            
         </label>
         <select
-          class="form-control"
+          class="caldera-field caldera-field-select form-control"
           id="selection-hats"
         >
           <option>
@@ -46,7 +46,7 @@ Object {
          
       </label>
       <select
-        class="form-control"
+        class="caldera-field caldera-field-select form-control"
         id="selection-hats"
       >
         <option>

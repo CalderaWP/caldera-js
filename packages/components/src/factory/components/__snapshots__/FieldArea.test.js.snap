@@ -142,7 +142,7 @@ Object {
           </span>
         </label>
         <select
-          class="form-control"
+          class="caldera-field caldera-field-select form-control"
           id="selectFieldId"
           required=""
         >
@@ -185,7 +185,7 @@ Object {
         </span>
       </label>
       <select
-        class="form-control"
+        class="caldera-field caldera-field-select form-control"
         id="selectFieldId"
         required=""
       >

@@ -2,6 +2,7 @@ import React from 'react';
 import {Form} from "react-bootstrap";
 import {fieldClassNames} from "./util";
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 export const Control = ({fieldId, fieldType, placeholder, value, onChange, onBlur, required, attributes, as}) => {
     return <Form.Control
@@ -14,7 +15,7 @@ export const Control = ({fieldId, fieldType, placeholder, value, onChange, onBlu
         onBlur={onBlur}
         required={required}
         {...attributes}
-        className={fieldClassNames(fieldType)}
+        className={classNames(fieldClassNames(fieldType))}
     />;
 };
 const noop = () => {};
@@ -35,4 +36,4 @@ Control.propTypes = {
     required: PropTypes.bool,
     attributes: PropTypes.object,
     as: PropTypes.string
-}
+};

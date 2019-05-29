@@ -48,7 +48,7 @@ Object {
             </span>
           </label>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               attributes="[object Object]"
@@ -119,7 +119,7 @@ Object {
           </span>
         </label>
         <div
-          class="form-check"
+          class="caldera-field caldera-field-checkbox form-check"
         >
           <input
             attributes="[object Object]"
@@ -255,7 +255,7 @@ Object {
             </span>
           </label>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               attributes="[object Object]"
@@ -303,7 +303,7 @@ Object {
               Checkbox Field Set Label
             </legend>
             <div
-              class="form-check"
+              class="caldera-field caldera-field-checkbox form-check"
             >
               <input
                 class="form-check-input"
@@ -320,7 +320,7 @@ Object {
               </label>
             </div>
             <div
-              class="form-check"
+              class="caldera-field caldera-field-checkbox form-check"
             >
               <input
                 class="form-check-input"
@@ -337,7 +337,7 @@ Object {
               </label>
             </div>
             <div
-              class="form-check"
+              class="caldera-field caldera-field-checkbox form-check"
             >
               <input
                 class="form-check-input"
@@ -374,7 +374,7 @@ Object {
             </span>
           </label>
           <select
-            class="form-control"
+            class="caldera-field caldera-field-select form-control"
             id="selectFieldId"
             required=""
           >
@@ -414,7 +414,7 @@ Object {
             </span>
           </label>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               attributes="[object Object]"
@@ -543,7 +543,7 @@ Object {
             Checkbox Field Set Label
           </legend>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               class="form-check-input"
@@ -560,7 +560,7 @@ Object {
             </label>
           </div>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               class="form-check-input"
@@ -577,7 +577,7 @@ Object {
             </label>
           </div>
           <div
-            class="form-check"
+            class="caldera-field caldera-field-checkbox form-check"
           >
             <input
               class="form-check-input"
@@ -614,7 +614,7 @@ Object {
           </span>
         </label>
         <select
-          class="form-control"
+          class="caldera-field caldera-field-select form-control"
           id="selectFieldId"
           required=""
         >
@@ -654,7 +654,7 @@ Object {
           </span>
         </label>
         <div
-          class="form-check"
+          class="caldera-field caldera-field-checkbox form-check"
         >
           <input
             attributes="[object Object]"

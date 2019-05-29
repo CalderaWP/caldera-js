@@ -16,7 +16,7 @@ Object {
            
         </label>
         <textarea
-          class="form-control"
+          class="caldera-field caldera-field-textarea form-control"
           cols="8"
           id="ta1"
           maxlength="5"
@@ -43,7 +43,7 @@ Object {
          
       </label>
       <textarea
-        class="form-control"
+        class="caldera-field caldera-field-textarea form-control"
         cols="8"
         id="ta1"
         maxlength="5"

@@ -1,7 +1,8 @@
 {
   "packages": [
     "packages/forms",
-    "packages/components"
+    "packages/components",
+    "packages/babel-preset-caldera-js"
   ],
   "version": "0.9.3",
   "npmClient": "yarn",

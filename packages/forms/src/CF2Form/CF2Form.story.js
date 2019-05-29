@@ -84,3 +84,5 @@ storiesOf('CF2 Form').add('With CF1 class names', () => (
 	</div>
 
 ));
+
+

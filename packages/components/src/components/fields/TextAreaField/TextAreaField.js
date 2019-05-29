@@ -2,9 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FieldWrapper} from "..";
 import {Form} from "react-bootstrap";
+import classNames from "classnames";
+import {fieldClassNames} from "../util";
 
 export const TextAreaField = props => {
 	const {fieldId, onChange, onBlur} = props;
+	const fieldType = 'textarea';
 	let {attributes} = props;
 	if( 'object' !== typeof  attributes ){
 		attributes = {};
@@ -12,7 +15,12 @@ export const TextAreaField = props => {
 	if ( !attributes.hasOwnProperty('rows')) {
 		attributes.rows = 5;
 	}
-	return <FieldWrapper {...props}>
+
+	const wrapperProps = {
+		...props,
+		fieldType,
+	};
+	return <FieldWrapper {...wrapperProps}>
 		<Form.Control
 			as="textarea"
 			rows={attributes.rows}
@@ -20,6 +28,8 @@ export const TextAreaField = props => {
 			{...attributes}
 			onChange={onChange}
 			onBlur={onBlur}
+			className={classNames(fieldClassNames(fieldType))}
+
 		/>
 	</FieldWrapper>
 }

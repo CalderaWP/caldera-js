@@ -1,5 +1,7 @@
 import {Form} from "react-bootstrap";
 import React from 'react';
+import classNames from "classnames";
+import {fieldClassNames} from "./util";
 export const RadioOrCheckboxControl = props => {
     const {
         label,
@@ -14,6 +16,7 @@ export const RadioOrCheckboxControl = props => {
 
     return (
         <Form.Check
+            className={classNames(fieldClassNames(fieldType))}
             onBlur={onBlur}
             required={required}
             checked={value}
