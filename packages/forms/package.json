@@ -19,10 +19,6 @@
     "lint:fix": "eslint src/** --fix"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/plugin-transform-runtime": "^7.4.0",
-    "@babel/polyfill": "^7.4.0",
-    "@babel/preset-react": "^7.0.0",
     "@calderajs/components": "^0.9.4",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
@@ -40,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@calderajs/babel-preset-calderajs": "^0.9.4",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/react": "^5.0.6",
