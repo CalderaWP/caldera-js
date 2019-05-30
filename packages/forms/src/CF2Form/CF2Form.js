@@ -27,11 +27,11 @@ export const CF2Form = (
 		_tokens,
 		onChange,
 		onBlur,
-		useCf1ClassNames
+		useCf1ClassNames,
+		onReady
 	}
 ) => {
 
-	const [formLoaded, setFormLoaded] = useState(false);
 	const [tokensFetched, setTokensFetched] = useState(false);
 	const [message, setMessage] = useState('');
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,6 +56,9 @@ export const CF2Form = (
 
 		if (tokens._cf_verify && tokens._sessionPublicKey) {
 			setTokensFetched(true);
+			Promise.all([onReady])
+                .then(function() {})
+                .catch(e => { console.log(e)});
 			return;
 		}
 
@@ -135,9 +138,12 @@ export const CF2Form = (
 
 CF2Form.propTypes = {
 	...CalderaForm.propTypes,
-	useCf1ClassNames: PropTypes.bool
+	useCf1ClassNames: PropTypes.bool,
+	onReady:PropTypes.instanceOf(Promise),
 };
 
-const noop = () => {
-};
-CF2Form.defaultProps = {...CalderaForm.defaultProps, useCf1ClassNames: false};
+const noop = new Promise((resolve) =>{
+	resolve();
+});
+
+CF2Form.defaultProps = {...CalderaForm.defaultProps, useCf1ClassNames: false,onReady:noop};

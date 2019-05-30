@@ -69,12 +69,13 @@ Object {
                     class="form-label"
                     for="submitQuestion"
                   >
+                    Subscribe
                      
                   </label>
                   <input
                     class="caldera-field caldera-field-undefined form-control"
                     id="submitQuestion"
-                    value=""
+                    value="Subscribe"
                   />
                 </div>
               </div>
@@ -149,12 +150,13 @@ Object {
                   class="form-label"
                   for="submitQuestion"
                 >
+                  Subscribe
                    
                 </label>
                 <input
                   class="caldera-field caldera-field-undefined form-control"
                   id="submitQuestion"
-                  value=""
+                  value="Subscribe"
                 />
               </div>
             </div>
