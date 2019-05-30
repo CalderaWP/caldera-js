@@ -1,6 +1,6 @@
 {
   "name": "@calderajs/components",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.0.0",
     "@babel/polyfill": "^7.4.4",
-    "@calderajs/babel-preset-calderajs": "^0.9.5",
+    "@calderajs/babel-preset-calderajs": "^0.9.6",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/react": "^5.0.6",
