@@ -59,11 +59,12 @@ Object {
                       *
                     </span>
                   </label>
-                  <text
+                  <input
                     class="caldera-field caldera-field-text form-control"
                     id="mc-email"
                     required=""
                     type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -81,10 +82,11 @@ Object {
                     First Name
                      
                   </label>
-                  <text
+                  <input
                     class="caldera-field caldera-field-text form-control"
                     id="FNAME"
                     type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -106,10 +108,11 @@ Object {
                     Last Name
                      
                   </label>
-                  <text
+                  <input
                     class="caldera-field caldera-field-text form-control"
                     id="LNAME"
                     type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -127,10 +130,11 @@ Object {
                     Primary Website
                      
                   </label>
-                  <text
+                  <input
                     class="caldera-field caldera-field-text form-control"
                     id="MMERGE3"
                     type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -269,11 +273,12 @@ Object {
                     *
                   </span>
                 </label>
-                <text
+                <input
                   class="caldera-field caldera-field-text form-control"
                   id="mc-email"
                   required=""
                   type="text"
+                  value=""
                 />
               </div>
             </div>
@@ -291,10 +296,11 @@ Object {
                   First Name
                    
                 </label>
-                <text
+                <input
                   class="caldera-field caldera-field-text form-control"
                   id="FNAME"
                   type="text"
+                  value=""
                 />
               </div>
             </div>
@@ -316,10 +322,11 @@ Object {
                   Last Name
                    
                 </label>
-                <text
+                <input
                   class="caldera-field caldera-field-text form-control"
                   id="LNAME"
                   type="text"
+                  value=""
                 />
               </div>
             </div>
@@ -337,10 +344,11 @@ Object {
                   Primary Website
                    
                 </label>
-                <text
+                <input
                   class="caldera-field caldera-field-text form-control"
                   id="MMERGE3"
                   type="text"
+                  value=""
                 />
               </div>
             </div>

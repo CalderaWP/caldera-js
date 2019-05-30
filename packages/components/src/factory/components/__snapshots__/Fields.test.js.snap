@@ -21,7 +21,7 @@ Object {
               *
             </span>
           </label>
-          <text
+          <input
             class="caldera-field caldera-field-text form-control"
             id="firstName"
             required=""
@@ -92,7 +92,7 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="firstName"
           required=""
@@ -228,7 +228,7 @@ Object {
               *
             </span>
           </label>
-          <text
+          <input
             class="caldera-field caldera-field-text form-control"
             id="firstName"
             required=""
@@ -451,7 +451,7 @@ Object {
               *
             </span>
           </label>
-          <text
+          <input
             class="caldera-field caldera-field-text form-control"
             id="numberFieldId"
             max="10"
@@ -479,7 +479,7 @@ Object {
               *
             </span>
           </label>
-          <text
+          <input
             class="caldera-field caldera-field-text form-control"
             id="firstName"
             required=""
@@ -505,9 +505,10 @@ Object {
               *
             </span>
           </label>
-          <text
+          <input
             class="caldera-field caldera-field-text form-control"
             id="emailFieldId"
+            multiple=""
             required=""
             type="text"
             value="emai@email.com"
@@ -691,7 +692,7 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="numberFieldId"
           max="10"
@@ -719,7 +720,7 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="firstName"
           required=""
@@ -745,9 +746,10 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="emailFieldId"
+          multiple=""
           required=""
           type="text"
           value="emai@email.com"

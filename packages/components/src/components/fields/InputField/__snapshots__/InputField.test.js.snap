@@ -15,7 +15,7 @@ Object {
           Hi Roy
            
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="i11"
           placeholder="Hello"
@@ -41,7 +41,7 @@ Object {
         Hi Roy
          
       </label>
-      <text
+      <input
         class="caldera-field caldera-field-text form-control"
         id="i11"
         placeholder="Hello"

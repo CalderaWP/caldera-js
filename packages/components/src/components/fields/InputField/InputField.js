@@ -13,7 +13,7 @@ export const InputField = props => {
     };
     return (
         <FieldWrapper {...fieldProps}>
-            <Control {...fieldProps} />
+            <Control {...fieldProps} as={'input'} />
         </FieldWrapper>
     );
 };

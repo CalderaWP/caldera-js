@@ -14,7 +14,7 @@ Object {
         >
            
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="caldera-mc-select-list-a"
           type="text"
@@ -33,7 +33,7 @@ Object {
       >
          
       </label>
-      <text
+      <input
         class="caldera-field caldera-field-text form-control"
         id="caldera-mc-select-list-a"
         type="text"

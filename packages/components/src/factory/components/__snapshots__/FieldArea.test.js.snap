@@ -18,7 +18,7 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="firstName"
           required=""
@@ -47,7 +47,7 @@ Object {
           *
         </span>
       </label>
-      <text
+      <input
         class="caldera-field caldera-field-text form-control"
         id="firstName"
         required=""
@@ -292,7 +292,7 @@ Object {
             *
           </span>
         </label>
-        <text
+        <input
           class="caldera-field caldera-field-text form-control"
           id="firstName"
           required=""
@@ -321,7 +321,7 @@ Object {
           *
         </span>
       </label>
-      <text
+      <input
         class="caldera-field caldera-field-text form-control"
         id="firstName"
         required=""

@@ -120,6 +120,9 @@ Object {
                   id="selectFieldId"
                   required=""
                 >
+                  <option>
+                    --
+                  </option>
                   <option
                     value="0"
                   >
@@ -134,9 +137,6 @@ Object {
                     value="2"
                   >
                     Two
-                  </option>
-                  <option>
-                    --
                   </option>
                 </select>
                 <small
@@ -314,6 +314,9 @@ Object {
                 id="selectFieldId"
                 required=""
               >
+                <option>
+                  --
+                </option>
                 <option
                   value="0"
                 >
@@ -328,9 +331,6 @@ Object {
                   value="2"
                 >
                   Two
-                </option>
-                <option>
-                  --
                 </option>
               </select>
               <small

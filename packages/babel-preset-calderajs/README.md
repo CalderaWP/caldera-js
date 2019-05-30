@@ -31,6 +31,7 @@ npm i @calderajs/babel-preset-calderajs --dev
     "@babel/core": "^7.0.0",
     "@babel/polyfill": "^7.4.4",
     "@calderajs/babel-preset-calderajs": "^0.9.4",
+    "babel-loader": "^8.0.5"
 }
 ```
 
