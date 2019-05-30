@@ -4,7 +4,7 @@ Displays a list of forms
 ## Usage
 `import {FormsList} from '@calderajs/components';`
 
-### Listing FOrms
+### Listing Forms
 ```jsx
 const forms = [
     {
