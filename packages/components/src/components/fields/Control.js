@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 export const Control = ({fieldId, fieldType, placeholder, value, onChange, onBlur, required, attributes, as}) => {
     return <Form.Control
-        as={as ? as : fieldType}
+        as={as ? as : fieldType ? fieldType : 'input'}
         id={fieldId}
         type={fieldType}
         placeholder={placeholder}

@@ -18,6 +18,7 @@ export const SubmitButton = props => {
 	return (
 		<FieldWrapper {...wrapperProps} >
 			<Control
+				as={'input'}
 				type={"submit"}
 				value={label ? label : value}
 				onChange={onChange}

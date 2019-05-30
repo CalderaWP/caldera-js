@@ -44,7 +44,11 @@ function MailChimpSurveyForm(
 
 
     const submitButtonId = 'submitQuestion';
-    const submitButton = {"fieldId": submitButtonId, "fieldType": "submit", "label": "Subscribe"};
+    const submitButton = {
+        "fieldId": submitButtonId,
+        "fieldType": "submit",
+        "label": "Subscribe"
+    };
     const initialQuestion = questions[currentQuestionIndex];
     const questionRowId = 'r1';
 
