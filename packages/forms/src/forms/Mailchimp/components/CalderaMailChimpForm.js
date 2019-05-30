@@ -16,7 +16,7 @@ import useCalderaMailChimpFormConfig from "../hooks/useCalderaMailChimpFormConfi
  * @return {*}
  * @constructor
  */
-function CalderaMailChimpForm({listId, apiRoot, token, hideOnSubmit, getForm, initialForm}) {
+function CalderaMailChimpForm({listId, apiRoot, token, hideOnSubmit, getForm, initialForm,onReady}) {
     const {lastListId, isLoaded, setIsLoaded, form, setForm} = useCalderaMailChimpFormConfig(listId, initialForm);
     const Spinner = () => (
         <div><PacmanLoader/></div>
@@ -39,6 +39,7 @@ function CalderaMailChimpForm({listId, apiRoot, token, hideOnSubmit, getForm, in
                 form={form}
                 onSubmit={createSubscriber}
                 hideOnSubmit={hideOnSubmit}
+                onReady={onReady}
                 listId={lastListId.current}
             />);
     } else {
@@ -54,6 +55,7 @@ CalderaMailChimpForm.propTypes = {
     listId: PropTypes.string.isRequired,
     apiRoot: PropTypes.string,
     hideOnSubmit: PropTypes.bool,
+    onReady: PropTypes.instanceOf(Promise),
 };
 
 CalderaMailChimpForm.defaultProps = {

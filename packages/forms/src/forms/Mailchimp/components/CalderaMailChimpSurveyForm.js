@@ -15,7 +15,7 @@ import {PacmanLoader} from "react-spinners";
  * @return {*}
  * @constructor
  */
-function CalderaMailChimpSurveyForm({listId, apiRoot, token, getForm, initialForm}) {
+function CalderaMailChimpSurveyForm({listId, apiRoot, token, getForm, initialForm,onReady}) {
     const {
         isLoaded,
         setIsLoaded,
@@ -72,6 +72,7 @@ function CalderaMailChimpSurveyForm({listId, apiRoot, token, getForm, initialFor
     }, [isLoaded, setIsLoaded, listId, token, apiRoot]);
     if (isLoaded) {
         return <MailChimpSurveyForm
+            onReady={onReady}
             token={token}
             submitUrl={submitUrl}
             listId={listId}
@@ -90,6 +91,7 @@ CalderaMailChimpSurveyForm.propTypes = {
     listId: PropTypes.string.isRequired,
     apiRoot: PropTypes.string,
     hideOnSubmit: PropTypes.bool,
+    onReady: PropTypes.instanceOf(Promise),
 };
 
 CalderaMailChimpSurveyForm.defaultProps = {

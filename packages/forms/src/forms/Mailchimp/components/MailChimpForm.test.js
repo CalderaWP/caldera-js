@@ -4,6 +4,7 @@ import { render, fireEvent, getByTestId} from "react-testing-library";
 import MailChimpForm from "./MailChimpForm";
 
 import {mailChimpTestForm} from "./mailChimpTestForm.fixture";
+import {CF2Form} from "../../..";
 
 
 describe( 'MailChimp mailChimpTestForm', () => {
@@ -42,6 +43,25 @@ describe( 'MailChimp mailChimpTestForm', () => {
 		)).toMatchSnapshot();
 
 
+	});
+
+
+	it('calls the onReady', async (done) => {
+		expect.assertions(1);
+		const onReady = new Promise((resolve) => {
+			resolve();
+			expect(1).toBe(1);
+			done();
+		});
+		const component = render(
+			<MailChimpForm
+				onReady={onReady}
+				form={mailChimpTestForm}
+				onBlur={onBlur}
+				onChange={onChange}
+				onSubmit={onSubmit}
+			/>
+		);
 	});
 });
 

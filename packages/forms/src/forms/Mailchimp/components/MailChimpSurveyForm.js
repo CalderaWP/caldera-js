@@ -171,7 +171,7 @@ function MailChimpSurveyForm(
             }
         }
 
-        const emailFieldId = getEmaiLFieldId();
+        const emailFieldId = getEmailField();
 
         if (!values.hasOwnProperty(emailFieldId)
             || (!isEmail(values[emailFieldId]) && isEmail(emailAddress))
@@ -213,13 +213,13 @@ function MailChimpSurveyForm(
     }
 
 
-    function getEmaiLFieldId() {
+    function getEmailField() {
         return emailField.fieldId;
 
     }
 
     function updateEmailField(values) {
-        const emailFieldId = getEmaiLFieldId();
+        const emailFieldId = getEmailField();
         if (values.hasOwnProperty(emailFieldId)) {
             setEmailAddress(values[emailFieldId]);
         }
@@ -254,13 +254,15 @@ function MailChimpSurveyForm(
     )
 }
 
-
+const noop = () => {
+};
+const promiseNoop = new Promise((resolve) => {
+    resolve();
+});
 MailChimpSurveyForm.defaultProps = {
 
-    onChange: () => {
-    },
-    onBlur: () => {
-    },
+    onChange: noop,
+    onBlur: noop,
     onSubmit: () => {
         return new Promise((resolve, reject) => {
             resolve(new Response(JSON.stringify({})));
@@ -274,7 +276,7 @@ MailChimpSurveyForm.defaultProps = {
         "label": "Email",
         "default": ""
     },
-
+    onReady: promiseNoop,
     submitUrl: 'https://formcalderas.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1/lists/subscribe',
     defaultEmailAddress: '',
 };
@@ -288,6 +290,7 @@ MailChimpSurveyForm.propTypes = {
     onBlur: PropTypes.func,
     onSubmit: PropTypes.func,
     defaultEmailAddress: PropTypes.string,
+    onReady: PropTypes.instanceOf(Promise),
 };
 
 export default MailChimpSurveyForm;

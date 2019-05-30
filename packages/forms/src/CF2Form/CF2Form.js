@@ -56,7 +56,7 @@ export const CF2Form = (
 
 		if (tokens._cf_verify && tokens._sessionPublicKey) {
 			setTokensFetched(true);
-			Promise.all([onReady])
+            Promise.resolve(onReady)
                 .then(function() {})
                 .catch(e => { console.log(e)});
 			return;
@@ -147,3 +147,4 @@ const noop = new Promise((resolve) =>{
 });
 
 CF2Form.defaultProps = {...CalderaForm.defaultProps, useCf1ClassNames: false,onReady:noop};
+
