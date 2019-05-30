@@ -1,9 +1,9 @@
 {
   "name": "@calderajs/demo",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "dependencies": {
-    "@calderajs/components": "^0.9.7",
-    "@calderajs/forms": "^0.9.7",
+    "@calderajs/components": "^0.9.8",
+    "@calderajs/forms": "^0.9.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"

@@ -1,6 +1,6 @@
 {
   "name": "@calderajs/components",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "license": "GPL-2.0",
   "main": "dist/index.js",
   "scripts": {
