@@ -18,8 +18,9 @@ import {
     SelectList,
     //Mailchimp API
     mailChimpApi,
-    //hooks
-    useCalderaMailChimpFormConfig
+    //hooks + HOC
+    useCalderaMailChimpFormConfig,
+    WithStylesheet
 } from '@calderajs/forms';
 
 describe('Exports', () => {
@@ -56,6 +57,8 @@ describe('Exports', () => {
     });
     it('exports setCf1ClassNames', () => {
         expect(typeof setCf1ClassNames).toBe('function');
+    }); it('exports WithStylesheet', () => {
+        expect(typeof WithStylesheet).toBe('function');
     });
 
 });

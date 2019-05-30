@@ -22,6 +22,7 @@ export handleFormSubmitCf2 from './Http/handlers/handleFormSubmitCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
 export { formClientFactory } from './Http/clientFactory';
 import FormClient from './Http/FormClient';
+export {WithStylesheet} from './HOC/WithStylesheet';
 export {FormClient};
 /**
  * Mailchimp API
@@ -39,8 +40,6 @@ import {
     createSubscriber,
     updateSubscriber,
 } from './forms/Mailchimp'
-
-
 export const mailChimpApi = {
     AdminClient,
     //Admin API client

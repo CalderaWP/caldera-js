@@ -1,10 +1,11 @@
-import React, {useEffect,useRef,useState} from 'react';
+import React, {Fragment, useEffect, useRef, useState} from 'react';
 
 /**
+ * Add a stylesheet to header
+ *
  * Based on https://github.com/palmerhq/the-platform/blob/master/src/Stylesheet.tsx
  */
-
-function load({ href, media = 'all',id }) {
+function addStyleSheetToDom({ href, media = 'all',id }) {
     return new Promise((resolve, reject) => {
         if( null === document.getElementById(id) ){
             const link = document.createElement('link');
@@ -22,14 +23,24 @@ function load({ href, media = 'all',id }) {
     });
 }
 
-
-export const WithStylesheet = ({Component,href,media,Loading}) => {
+/**
+ * HOC to load a component after appending a stylesheet to DOM
+ *
+ * @param children
+ * @param href
+ * @param media
+ * @param Loading
+ * @returns {*}
+ * @constructor
+ */
+export const WithStylesheet = ({children,href,media,Loading}) => {
     const loaded = useRef(false);
+    const id = useRef(`caldera-loaded-style-${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`);
     const [loading,setLoading] = useState(false);
     useEffect( () => {
        if( ! loaded.current && ! loading){
            setLoading(true);
-           load({href,media}).then( () => {
+           addStyleSheetToDom({href,media,id}).then( () => {
            loaded.current=true;
               setLoading(false);
            });
@@ -38,7 +49,9 @@ export const WithStylesheet = ({Component,href,media,Loading}) => {
     if( ! loaded.current ){
         return <Loading/>
     }
-    return  <Component/>
+    return  <Fragment>
+        {children}
+    </Fragment>
 
 };
 

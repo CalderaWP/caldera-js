@@ -9,7 +9,6 @@ import {
 } from "../CalderaForm/fields.fixtures";
 import {WithStylesheet} from "./WithStylesheet";
 
-
 const form = {
     rows: [
         {
@@ -47,17 +46,25 @@ const form = {
 };
 
 storiesOf('With Stylesheet', module).add('Forms', () => {
-    const Component =  <CalderaForm
-        form={form}
-        onSubmit={(values, actions) => {
-            setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                actions.setSubmitting(false);
-            }, 1000);
-        }}
-    />;
+
     return (
 
-    <WithStylesheet Component={Component} Loading={'Loading'} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} />
+    <WithStylesheet Loading={'Loading'} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} >
+        <div className={'container'}>
+            <div className={'row'}>
+                <input
+                    className="btn btn-primary"
+                    type="submit"
+                    value="Click Me Primary Button"
+                />
+            </div>
+
+            <div className={'row'}>
+                <div className={'col-sm-4'}>1 of 3</div>
+                <div className={'col-sm-4'}>2 of 3</div>
+                <div className={'col-sm-4'}>3 of 3</div>
+            </div>
+        </div>
+    </WithStylesheet>
 
 )});
