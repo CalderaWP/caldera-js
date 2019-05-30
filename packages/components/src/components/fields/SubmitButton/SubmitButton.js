@@ -5,7 +5,7 @@ import {Control} from "../Control";
 export const SubmitButton = props => {
 	const {
 		label,
-
+		value,
 		onChange,
 		onBlur,
 		attributes,
@@ -19,7 +19,7 @@ export const SubmitButton = props => {
 		<FieldWrapper {...wrapperProps} >
 			<Control
 				type={"submit"}
-				value={label}
+				value={label ? label : value}
 				onChange={onChange}
 				onClick={
 					attributes && attributes.hasOwnProperty("onClick")

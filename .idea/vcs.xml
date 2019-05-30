@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../Caldera-Forms" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins/cache-generator/vendor/a5hleyrich/wp-queue" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins/cache-generator/vendor/calderawp/caldera-db" vcs="Git" />

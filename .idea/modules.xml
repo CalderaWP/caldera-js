@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Caldera-Forms/.idea/Caldera-Forms.iml" filepath="$PROJECT_DIR$/../Caldera-Forms/.idea/Caldera-Forms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/caldera-js.iml" filepath="$PROJECT_DIR$/.idea/caldera-js.iml" />
     </modules>
   </component>

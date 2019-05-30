@@ -44,7 +44,7 @@ function MailChimpSurveyForm(
 
 
     const submitButtonId = 'submitQuestion';
-    const submitButton = {"fieldId": submitButtonId, "fieldType": "submit", "value": "Subscribe"};
+    const submitButton = {"fieldId": submitButtonId, "fieldType": "submit", "label": "Subscribe"};
     const initialQuestion = questions[currentQuestionIndex];
     const questionRowId = 'r1';
 
@@ -161,7 +161,7 @@ function MailChimpSurveyForm(
             if ('object' === typeof r.data && r.data.status && 400 === r.data.status) {
                 setMessage(r.message);
                 reject(new Error(r.hasOwnProperty('message') ? r.message : 'Invalid'));
-            } else if(r.hasOwnProperty('success') && ! r.success ){
+            } else if (r.hasOwnProperty('success') && !r.success) {
                 setMessage(r.message);
                 reject(new Error(r.hasOwnProperty('message') ? r.message : 'Invalid'));
             } else {
