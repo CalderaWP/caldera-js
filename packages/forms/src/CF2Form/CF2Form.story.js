@@ -7,6 +7,7 @@ import {createFieldRule} from '../CalderaForm/state/createFieldRule';
 import {emailField, textField, checkboxFieldset} from "../CalderaForm/fields.fixtures";
 import {CF2Form} from "./CF2Form";
 import axios from "axios";
+import {render} from "react-testing-library";
 
 
 
@@ -84,6 +85,27 @@ storiesOf('CF2 Form').add('With CF1 class names', () => (
 	</div>
 
 ));
+
+
+
+
+storiesOf('CF2 Form').add('Resolves promise onReady', () => {
+	const onReady = new Promise((resolve) => {
+		console.log('loaded');
+		resolve();
+	});
+	return(
+		<CF2Form
+			formConfig={formConfig}
+			axios={axios}
+			onReady={onReady}
+			_tokens={{
+				_cf_verify: 'a',
+				_sessionPublicKey: 'b'
+			}}
+		/>
+	);
+});
 
 
 
