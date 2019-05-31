@@ -150,8 +150,10 @@ Wrapper for `<CalderaForm />` where every field is in its own 100% wide row. Use
 
 ### MailChimp Forms
 Mailchimp sign up and survey forms.
-
 🌋👀[Documentation](./src/forms/Mailchimp/README.md)
+
+### Contact Form
+🌋👀[Documentation](./src/forms/README.md)
 
 ### Clients
 [See the clients Readme](./src/components/Http/README.md)

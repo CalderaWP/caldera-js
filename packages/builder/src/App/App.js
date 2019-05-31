@@ -6,12 +6,15 @@ import {FormProvider,FormContext} from "./FormContext";
 import {MenuProvider} from "./MenuContext";
 import {FormsList} from "..";
 import {BodyWithContext} from "./components/Body";
+import {creatContactFormConfig} from './hooks/useContactFormConfig';
+
+const contactForm = creatContactFormConfig({config:{
+	id: 'contact-form',
+	name: 'Contact Form',
+}});
 
 const initialForms = [
-	{
-		id: 'contact-form',
-		name: 'Contact Form'
-	},
+	contactForm,
 	{
 		id: 'other-form',
 		name: 'Other Form'

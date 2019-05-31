@@ -9,6 +9,8 @@ import {
     handleFormSubmitCf2,
     CF2Form,
     setCf1ClassNames,
+    ContactForm,
+    useContactFormConfig,
     //Mailchimp components
     MailChimpForm,
     MailChimpSurveyForm,
@@ -69,6 +71,12 @@ describe('Exports', () => {
     });
     it('exports WithStylesheets', () => {
         expect(typeof WithStylesheets).toBe('function');
+    });
+    it('exports ContactForm', () => {
+        expect(typeof ContactForm).toBe('function');
+    });
+    it('exports useContactFormConfig', () => {
+        expect(typeof useContactFormConfig).toBe('function');
     });
 
 });

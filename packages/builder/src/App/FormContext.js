@@ -5,11 +5,23 @@ export const FormContext = createContext({});
 export const FormProvider = ({initialForms: initialForms,children}) => {
 
     const [forms, setForms] = useState(initialForms||[]);
+    const [activeFormId, setActiveFormId] = useState('');
+
+
     return (
         <FormContext.Provider
             value={{
                 forms,
-                setForms
+                setForms,
+                activeFormId,
+                setActiveFormId,
+                getActiveForm(){
+                    if( ! activeFormId ){
+                        return null;
+                    }
+                    return  forms.find( form => activeFormId === form.id );
+
+                }
             }}
         >
             {children}

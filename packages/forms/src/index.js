@@ -4,7 +4,7 @@
 export { CalderaForm } from './CalderaForm/CalderaForm';
 export { CF2Form } from './CF2Form/CF2Form';
 export {HorizontalForm} from './HorizontalForm/HorizontalForm';
-
+export {ContactForm,useContactFormConfig} from "./forms/ContactForm";
 /**
  * Form helpers
  */
@@ -70,7 +70,6 @@ export {
 
 
 } from './forms/Mailchimp';
-
 
 /**
  * Higher order components

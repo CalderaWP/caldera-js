@@ -1,8 +1,3 @@
-import React,{useState} from 'react';
-import {CalderaForm} from '../CalderaForm';
-
-import PropTypes from 'prop-types'
-
 const defaults = {
     firstName:'',
     email:'',
@@ -10,7 +5,7 @@ const defaults = {
     emailLabel: 'Email'
 };
 
-export function useContactFormConfig(firstName, firstNameLabel, email, emailLabel,c) {
+export const  creatContactFormConfig = ({firstName, firstNameLabel, email, emailLabel,config}) => {
     const textField = {
         fieldType: 'text',
         value: firstName ? firstName : defaults.firstName,
@@ -72,28 +67,5 @@ export function useContactFormConfig(firstName, firstNameLabel, email, emailLabe
         ],
         conditionals: []
     };
-    return [form];
-}
-
-export const ContactForm = ({onSubmit,firstName, email, firstNameLabel,emailLabel}) => {
-    const [form] = useContactFormConfig(firstName, firstNameLabel, email, emailLabel);
-
-    return (
-        <CalderaForm
-            form={form}
-            onSubmit={onSubmit}
-        />
-    );
+    return form;
 };
-
-
-ContactForm.defaultProps = defaults;
-
-ContactForm.propTypes = {
-    onSubmit: CalderaForm.propTypes.onSubmit,
-    firstName:PropTypes.string,
-    email:PropTypes.string,
-    firstNameLabel: PropTypes.string,
-    mailLabel: PropTypes.string
-};
-
