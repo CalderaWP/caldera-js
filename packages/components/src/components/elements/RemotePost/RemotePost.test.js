@@ -1,10 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+
 import { RemotePost } from './RemotePost';
-Enzyme.configure({ adapter: new Adapter() });
 
 const post = {
 	id: 42,

@@ -1,24 +1,14 @@
 import renderer from 'react-test-renderer';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Enzyme from 'enzyme';
+import {render} from "react-testing-library";
 import { Message, MESSAGE_CLASS } from './Message';
 import { messageObjectFactory } from './messageObjectFactory';
 
 describe('Message component', () => {
-	it('Shows a message', () => {
-		const wrapper = shallow(
-			<Message
-				message={{
-					message: 'Good Things Happened'
-				}}
-			/>
-		);
-		expect(wrapper).toHaveLength(1);
-	});
 
 	it('Renders message', () => {
-		const wrapper = renderer.create(
+		const wrapper = render(
 			<Message
 				message={{
 					message: 'Hi Roy',
@@ -26,11 +16,11 @@ describe('Message component', () => {
 				}}
 			/>
 		);
-		expect(wrapper.toJSON()).toMatchSnapshot();
+		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('Renders error message', () => {
-		const wrapper = renderer.create(
+		const wrapper = render(
 			<Message
 				message={{
 					message: 'An error happened',
@@ -38,18 +28,18 @@ describe('Message component', () => {
 				}}
 			/>
 		);
-		expect(wrapper.toJSON()).toMatchSnapshot();
+		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('Renders no error message', () => {
-		const wrapper = renderer.create(
+		const wrapper = render(
 			<Message
 				message={{
 					error: true
 				}}
 			/>
 		);
-		expect(wrapper.toJSON()).toMatchSnapshot();
+		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('Shows the right message message', () => {

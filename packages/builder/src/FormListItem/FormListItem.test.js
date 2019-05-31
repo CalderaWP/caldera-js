@@ -1,11 +1,10 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import {render} from "react-testing-library";
 
-import { FormListItem } from './FormListItem';
-import { forms } from "../../../admin/src/EntryViewer/forms.fixtures";
+import { FormListitem } from './FormListitem';
 
-describe('FormListItem', () => {
+describe('FormListitemem', () => {
 	let form;
 	let onFormAction;
 	const formId = 'cf1';
@@ -15,19 +14,19 @@ describe('FormListItem', () => {
 		};
 		onFormAction = jest.fn();
 	});
-	it.skip('Matches snapshot', () => {
-		const component = renderer.create(
-			<FormListit.skipem form={form} onFormAction={onFormAction} />
+	it('Matches snapshot', () => {
+		const component = render(
+			<FormListitem form={form} onFormAction={onFormAction} />
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it.skip('clicking on edit.skip', () => {
-		const component = mount(
-			<FormListit.skipem form={form} onFormAction={onFormAction}/>
+		const component = render(
+			<FormListitem form={form} onFormAction={onFormAction}/>
 		);
 		component
-			.find('.' + FormListit.skipem.defaultProps.classNames.edit.skip + ' button')
+			.find('.' + FormListitem.defaultProps.classNames.edit.skip + ' button')
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
 		expect(onFormAction.mock.calls[0][1]).toBe('edit.skip');
@@ -36,10 +35,10 @@ describe('FormListItem', () => {
 
 	it.skip('clicking on edit.skip', () => {
 		const component = mount(
-			<FormListit.skipem form={form} onFormAction={onFormAction} />
+			<FormListitem form={form} onFormAction={onFormAction} />
 		);
 		component
-			.find('.' + FormListit.skipem.defaultProps.classNames.edit.skip + ' button')
+			.find('.' + FormListitem.defaultProps.classNames.edit.skip + ' button')
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
 		expect(onFormAction.mock.calls[0][1]).toBe('edit.skip');
@@ -47,12 +46,12 @@ describe('FormListItem', () => {
 
 	it.skip('clicking on view entries', () => {
 		const component = mount(
-			<FormListit.skipem form={form} onFormAction={onFormAction} />
+			<FormListitem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
 				'.' +
-					FormListit.skipem.defaultProps.classNames['view-entries'] +
+					FormListitem.defaultProps.classNames['view-entries'] +
 					' button'
 			)
 			.simulate('click');
@@ -62,11 +61,11 @@ describe('FormListItem', () => {
 
 	it.skip('clicking on preview', () => {
 		const component = mount(
-			<FormListit.skipem form={form} onFormAction={onFormAction} />
+			<FormListitem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
-				'.' + FormListit.skipem.defaultProps.classNames.preview + ' button'
+				'.' + FormListitem.defaultProps.classNames.preview + ' button'
 			)
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
@@ -75,11 +74,11 @@ describe('FormListItem', () => {
 
 	it.skip('clicking on settings', () => {
 		const component = mount(
-			<FormListit.skipem form={form} onFormAction={onFormAction} />
+			<FormListitem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
-				'.' + FormListit.skipem.defaultProps.classNames.settings + ' button'
+				'.' + FormListitem.defaultProps.classNames.settings + ' button'
 			)
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
