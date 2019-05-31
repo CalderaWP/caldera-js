@@ -22,7 +22,6 @@ export handleFormSubmitCf2 from './Http/handlers/handleFormSubmitCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
 export { formClientFactory } from './Http/clientFactory';
 import FormClient from './Http/FormClient';
-export {WithStylesheet} from './HOC/WithStylesheet';
 export {FormClient};
 /**
  * Mailchimp API
@@ -71,3 +70,13 @@ export {
 
 
 } from './forms/Mailchimp';
+
+
+/**
+ * Higher order components
+ */
+export  {
+    WithStylesheet,
+    WithBootstrapStyle,
+    WithStylesheets
+} from './HOC'

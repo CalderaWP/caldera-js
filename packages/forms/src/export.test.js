@@ -20,7 +20,10 @@ import {
     mailChimpApi,
     //hooks + HOC
     useCalderaMailChimpFormConfig,
-    WithStylesheet
+    WithStylesheet,
+    WithStylesheet,
+    WithBootstrapStyle,
+    WithStylesheets
 } from '@calderajs/forms';
 
 describe('Exports', () => {
@@ -57,8 +60,15 @@ describe('Exports', () => {
     });
     it('exports setCf1ClassNames', () => {
         expect(typeof setCf1ClassNames).toBe('function');
-    }); it('exports WithStylesheet', () => {
+    });
+    it('exports WithStylesheet', () => {
         expect(typeof WithStylesheet).toBe('function');
+    });
+    it('exports WithBootstrapStyle', () => {
+        expect(typeof WithBootstrapStyle).toBe('function');
+    });
+    it('exports WithStylesheets', () => {
+        expect(typeof WithStylesheets).toBe('function');
     });
 
 });
