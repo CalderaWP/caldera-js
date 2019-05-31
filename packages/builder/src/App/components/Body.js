@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
-import {FormsList} from "../..";
+import React, {useContext,useState} from 'react';
+import {FormEditor, FormsList} from "../..";
 import {MenuContext} from "../MenuContext";
 import {FormContext} from "../FormContext";
 import {FormEntryViewer} from '../../'
 export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => {
     const {name} = tab;
+
+    const [showSingleForm,setShowSingleForm] = useState(false);
     const onFormAction = (formId, action) => {
         console.log(action);
         switch (action) {
@@ -14,8 +16,10 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
             break;
             case 'edit':
                 setActiveFormId(formId);
-                setActiveItem('entries');
-            break;
+                setActiveItem('forms');
+                setShowSingleForm(true);
+
+                break;
             default:
                 setActiveFormId(formId);
                 setActiveItem('forms');
@@ -26,8 +30,14 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     switch (name) {
         case 'forms':
             props = {forms, panelTitle: 'Forms', classname: '', onFormAction};
+            if( showSingleForm ){
+                return <FormEditor form={activeForm} />
+            }
             return <FormsList {...props} />;
         case 'entries':
+            if( ! activeForm ){
+                return  <div>No Form Selected</div>
+            }
             props ={ form:activeForm, noItemsMessage: `No Entries Found For ${activeForm.id}`, entries: {} };
             return <FormEntryViewer {...props} />
         default:

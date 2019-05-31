@@ -160,6 +160,7 @@ FormEditor.propTypes = {
 };
 
 FormEditor.defaultProps = {
-
-}
+	processorTypes: [],
+	updateForm: () => {}
+};
 
