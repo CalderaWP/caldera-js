@@ -7,6 +7,8 @@ import {MenuProvider} from "./MenuContext";
 import {FormsList} from "..";
 import {BodyWithContext} from "./components/Body";
 import {creatContactFormConfig} from './hooks/useContactFormConfig';
+import {Header} from "./components/Header";
+import {HeaderInside} from "./components/HeaderInside";
 
 const contactForm = creatContactFormConfig({config:{
 	id: 'contact-form',
@@ -60,6 +62,9 @@ const menuItems = [
 export const App = ({ className}) => (
 	<MenuProvider menuItems={menuItems}>
 		<FormProvider initialForms={initialForms}>
+			<Header>
+				<HeaderInside />
+			</Header>
 			<MainMenuWithContext>
 				<BodyWithContext />
 			</MainMenuWithContext>

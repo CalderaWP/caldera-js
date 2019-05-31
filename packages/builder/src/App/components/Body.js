@@ -8,7 +8,6 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
 
     const [showSingleForm,setShowSingleForm] = useState(false);
     const onFormAction = (formId, action) => {
-        console.log(action);
         switch (action) {
             case 'view-entries':
                 setActiveFormId(formId);
