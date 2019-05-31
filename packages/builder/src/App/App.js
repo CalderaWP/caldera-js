@@ -1,8 +1,9 @@
 import React,{useState,Fragment,useContext} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {MainMenu} from './components/MainMenu';
+import {MainMenuWithContext} from './components/MainMenu';
 import {FormProvider,FormContext} from "./FormContext";
+import {MenuContex,MenuProvider} from "./MenuContext";
 import {FormsList} from "..";
 
 const initialForms = [
@@ -29,13 +30,37 @@ export const FormsListWithContext = () => {
 	)
 
 };
-
+const menuItems = [
+	{
+		name: 'forms',
+		title: 'Forms',
+	},
+	{
+		name: 'entries',
+		title: 'Entries',
+	},
+	{
+		name: 'settings',
+		title: 'Setting',
+	},
+	{
+		name: 'documentation',
+		title: 'Documentation',
+	},
+	{
+		name: 'account',
+		title: 'Account',
+	},
+];
 
 export const App = ({ className}) => (
-	<FormProvider initialForms={initialForms}>
-		<MainMenu />
-		<FormsListWithContext />
-	</FormProvider>
+	<MenuProvider menuItems={menuItems}>
+		<FormProvider initialForms={initialForms}>
+			<MainMenuWithContext />
+			<FormsListWithContext />
+		</FormProvider>
+	</MenuProvider>
+
 );
 
 

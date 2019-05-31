@@ -1,33 +1,19 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import {TabPanel} from "@wordpress/components";
+import {MenuContext} from "../MenuContext";
 
-export const MainMenu = ({className,onSelect}) => {
+export const MainMenu = ({
+                             className,
+                             menuItems,
+                             activeItem,
+                             setActiveItem,
+}) => {
     return(
         <TabPanel className={className}
                   activeClass="active-tab"
-                  onSelect={onSelect}
-                  tabs={[
-                      {
-                          name: 'forms',
-                          title: 'Forms',
-                      },
-                      {
-                          name: 'entries',
-                          title: 'Entries',
-                      },
-                      {
-                          name: 'settings',
-                          title: 'Setting',
-                      },
-                      {
-                          name: 'documentation',
-                          title: 'Documentation',
-                      },
-                      {
-                          name: 'account',
-                          title: 'Account',
-                      },
-                  ]}
+                  onSelect={setActiveItem}
+                  initialTabName={activeItem}
+                  tabs={menuItems}
         >
             {
                 (tab) => (
@@ -40,4 +26,18 @@ export const MainMenu = ({className,onSelect}) => {
         </TabPanel>
     );
 
+};
+
+
+export const MainMenuWithContext = ({children}) => {
+    const {
+        menuItems,
+        activeItem,
+        setActiveItem
+    } = useContext(MenuContext);
+    return <MainMenu { ... {
+        menuItems,
+        activeItem,
+        setActiveItem
+    } } >{children}</MainMenu>
 }
