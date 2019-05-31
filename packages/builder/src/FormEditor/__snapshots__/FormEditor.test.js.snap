@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormEditor should match snapshot 1`] = `
+<div>
+  <div
+    className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
+  >
+    <div
+      className="caldera-column sc-bdVaJa iHZvIS"
+    >
+      <p>
+        Form Name
+      </p>
+    </div>
+  </div>
+  <div
+    className="caldera-processor"
+  >
+    <div
+      aria-orientation="horizontal"
+      className="components-tab-panel__tabs"
+      onKeyDown={[Function]}
+      role="tablist"
+    >
+      <button
+        aria-controls="0-editor-view"
+        aria-selected={false}
+        className="components-button caldera-forms-editor-layout-tab-btn "
+        id="0-editor"
+        onClick={[Function]}
+        role="tab"
+        tabIndex={-1}
+        type="button"
+      >
+        Layout
+      </button>
+      <button
+        aria-controls="0-processors-view"
+        aria-selected={true}
+        className="components-button caldera-forms-editor-processors-tab-btn active-tab"
+        id="0-processors"
+        onClick={[Function]}
+        role="tab"
+        tabIndex={null}
+        type="button"
+      >
+        Processors
+      </button>
+      <button
+        aria-controls="0-Mailer-view"
+        aria-selected={false}
+        className="components-button caldera-forms-editor-mailer-tab-btn "
+        id="0-Mailer"
+        onClick={[Function]}
+        role="tab"
+        tabIndex={-1}
+        type="button"
+      >
+        mailer
+      </button>
+      <button
+        aria-controls="0-settings-view"
+        aria-selected={false}
+        className="components-button caldera-forms-editor-settings-tab-btn "
+        id="0-settings"
+        onClick={[Function]}
+        role="tab"
+        tabIndex={-1}
+        type="button"
+      >
+        Settings
+      </button>
+    </div>
+    <div
+      aria-labelledby="0-processors"
+      className="components-tab-panel__tab-content"
+      id="0-processors-view"
+      role="tabpanel"
+      tabIndex="0"
+    >
+      <div
+        className="caldera-forms-editor-processors"
+      >
+        <h2>
+          Processors
+        </h2>
+        <div>
+          <div>
+            <div
+              className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
+            >
+              <button
+                className="caldera-forms-choose-processor caldera-forms-choose-processor-season7Episode2"
+                onClick={[Function]}
+              >
+                Test sending form data to test API
+              </button>
+            </div>
+            <div
+              className="sc-bdVaJa caldera-row sc-bwzfXH pjOvZ"
+            >
+              <button
+                className="caldera-forms-choose-processor caldera-forms-choose-processor-p2"
+                onClick={[Function]}
+              >
+                Main MailChimp
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              className="caldera-field-wrapper caldera-field-wrapper-text"
+            >
+              <div
+                className="components-base-control caldera-field caldera-field-select"
+              >
+                <div
+                  className="components-base-control__field"
+                >
+                  <label
+                    className="components-base-control__label"
+                    htmlFor="inspector-select-control-0"
+                  >
+                    Processor Type
+                  </label>
+                  <select
+                    className="components-select-control__input"
+                    id="newProcessorType"
+                    multiple={false}
+                    onChange={[Function]}
+                    optionValue=""
+                  >
+                    <option
+                      optionValue={null}
+                    >
+                      --
+                    </option>
+                    <option
+                      optionValue="apiRequest"
+                    >
+                      apiRequest
+                    </option>
+                    <option
+                      optionValue="redirect"
+                    >
+                      redirect
+                    </option>
+                    <option
+                      optionValue="autoResponder"
+                    >
+                      autoResponder
+                    </option>
+                    <option
+                      optionValue="apiRequest"
+                    >
+                      apiRequest
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button
+              disabled={true}
+              onClick={[Function]}
+            >
+              Add
+
+               Processor
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

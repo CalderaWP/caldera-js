@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProcessor Shows the choices 1`] = `
+Array [
+  <div
+    className="caldera-field-wrapper caldera-field-wrapper-text"
+  >
+    <div
+      className="components-base-control caldera-field caldera-field-select"
+    >
+      <div
+        className="components-base-control__field"
+      >
+        <label
+          className="components-base-control__label"
+          htmlFor="inspector-select-control-0"
+        >
+          Processor Type
+        </label>
+        <select
+          className="components-select-control__input"
+          id="newProcessorType"
+          multiple={false}
+          onChange={[Function]}
+          optionValue=""
+        >
+          <option
+            optionValue={null}
+          >
+            --
+          </option>
+          <option
+            optionValue="apiRequest"
+          >
+            apiRequest
+          </option>
+          <option
+            optionValue="redirect"
+          >
+            redirect
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>,
+  <button
+    disabled={true}
+    onClick={[MockFunction]}
+  />,
+]
+`;
