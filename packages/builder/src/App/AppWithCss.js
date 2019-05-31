@@ -10,6 +10,7 @@ export const AppWithCss = (props) => {
                 [
                     'https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.2/wp-includes/css/dist/components/style.min.css',
                     'https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.2/wp-includes/css/dist/editor/style.min.css',
+                    'https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.2/wp-includes/css/dist/block-editor/style.min.css'
                 ]
             }
         >
