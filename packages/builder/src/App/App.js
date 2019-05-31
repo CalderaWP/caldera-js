@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {MainMenuWithContext} from './components/MainMenu';
 import {FormProvider,FormContext} from "./FormContext";
-import {MenuContex,MenuProvider} from "./MenuContext";
+import {MenuProvider} from "./MenuContext";
 import {FormsList} from "..";
+import {BodyWithContext} from "./components/Body";
 
 const initialForms = [
 	{
@@ -56,8 +57,10 @@ const menuItems = [
 export const App = ({ className}) => (
 	<MenuProvider menuItems={menuItems}>
 		<FormProvider initialForms={initialForms}>
-			<MainMenuWithContext />
-			<FormsListWithContext />
+			<MainMenuWithContext>
+				<BodyWithContext />
+			</MainMenuWithContext>
+
 		</FormProvider>
 	</MenuProvider>
 

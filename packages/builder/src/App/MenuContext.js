@@ -5,12 +5,23 @@ export const MenuContext = createContext({});
 export const MenuProvider = ({children,menuItems,initialActiveItem}) => {
 
    const [activeItem,setActiveItem] = useState(initialActiveItem);
+
+   const getIntialActiveTab = () => menuItems.find(menuItem => initialActiveItem === menuItem.name );
+   const getActiveTab = () => {
+       if( ! activeItem ){
+           return getIntialActiveTab()
+       }
+       return menuItems.find( menuItem => activeItem === menuItem.name );
+
+   }
+
     return (
         <MenuContext.Provider
             value={{
                 menuItems,
                 activeItem,
-                setActiveItem
+                setActiveItem,
+                getActiveTab
             }}
         >
             {children}
@@ -21,7 +32,7 @@ export const MenuProvider = ({children,menuItems,initialActiveItem}) => {
 
 MenuProvider.defaultProps = {
     items: [],
-    initialActiveItem: '',
+    initialActiveItem: 'forms',
 };
 MenuProvider.propTypes = {
     items: PropTypes.array,

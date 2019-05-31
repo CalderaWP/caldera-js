@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React, {Fragment, useContext,createElement} from 'react';
 import {TabPanel} from "@wordpress/components";
 import {MenuContext} from "../MenuContext";
 
@@ -7,6 +7,7 @@ export const MainMenu = ({
                              menuItems,
                              activeItem,
                              setActiveItem,
+    children
 }) => {
     return(
         <TabPanel className={className}
@@ -16,12 +17,7 @@ export const MainMenu = ({
                   tabs={menuItems}
         >
             {
-                (tab) => (
-                    <div
-                    >
-                        {tab.name}
-                    </div>
-                )
+                (tab) => createElement(Fragment,{tab},children)
             }
         </TabPanel>
     );
