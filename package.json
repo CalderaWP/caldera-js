@@ -37,7 +37,8 @@
     "lint:components": "yarn --cwd packages/components lint",
     "lint:fix": "yarn lint:fix-forms && yarn lint:fix-components",
     "lint:fix-forms": "yarn --cwd packages/forms lint:fix",
-    "lint:fix-components": "yarn --cwd packages/components lint:fix"
+    "lint:fix-components": "yarn --cwd packages/components lint:fix",
+    "add:builder": "yarn workspace @calderajs/builder add"
   },
   "devDependencies": {
     "lerna": "^3.13.1"
