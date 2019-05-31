@@ -6,8 +6,13 @@ import {FormEntryViewer} from '../../'
 export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => {
     const {name} = tab;
     const onFormAction = (formId, action) => {
+        console.log(action);
         switch (action) {
             case 'view-entries':
+                setActiveFormId(formId);
+                setActiveItem('entries');
+            break;
+            case 'edit':
                 setActiveFormId(formId);
                 setActiveItem('entries');
             break;
@@ -16,7 +21,7 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
                 setActiveItem('forms');
                 break;
         }
-    }
+    };
     let props = {};
     switch (name) {
         case 'forms':
