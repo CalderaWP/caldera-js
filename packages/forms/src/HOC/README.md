@@ -1,11 +1,12 @@
 
 
+## Load One stylesheet
 ```jsx 
 import {WithStyleSheet} from '@calderajs/forms';
 
 function(){
     return (
-        <WithStylesheet Loading={'Loading'} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} >
+        <WithStylesheet loading={(<div>LOADING!!!</div>)} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} >
                 <div className={'container'}>
                     <div className={'row'}>
                         <input
@@ -25,15 +26,35 @@ function(){
     );
 }
 
+## Load Many stylesheets
+```jsx 
+import {WithStyleSheets} from '@calderajs/forms';
+
+function(){
+    return (
+        <WithStylesheets 
+            loading={(<div>LOADING!!!</div>)} 
+            hrefs={
+                [
+                    'https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.2/wp-includes/css/dist/components/style.min.css',
+                    'https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.2/wp-includes/css/dist/editor/style.min.css',
+                ]
+            }
+            >
+                <div>Gutes</div>
+        </WithStylesheets>
+    );
+}
+
 ```
+## Load With Bootstap stylesheet. Provide version. jsdelivr is used as CDN.
 
-
-```jsx harmony
+```jsx
 import {WithBootstrapStyle} from '@calderajs/forms';
 
 function(){
     return (
-        <WithBootstrapStyle Loading={'Loading'} version={'4.3.1'} >
+        <WithBootstrapStyle loading={(<div>LOADING!!!</div>)} version={'4.3.1'} >
                 <div className={'container'}>
                     <div className={'row'}>
                         <input

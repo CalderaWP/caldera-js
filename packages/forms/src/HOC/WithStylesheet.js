@@ -5,9 +5,9 @@ import React, {Fragment, useEffect, useRef, useState} from 'react';
  *
  * Based on https://github.com/palmerhq/the-platform/blob/master/src/Stylesheet.tsx
  */
-function addStyleSheetToDom({ href, media = 'all',id }) {
+export function addStyleSheetToDom({href, media = 'all', id}) {
     return new Promise((resolve, reject) => {
-        if( null === document.getElementById(id) ){
+        if (null === document.getElementById(id)) {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = href;
@@ -16,12 +16,14 @@ function addStyleSheetToDom({ href, media = 'all',id }) {
             link.onload = resolve;
             link.onerror = reject;
             document.body.appendChild(link);
-        }else{
+        } else {
             resolve();
         }
 
     });
 }
+
+export const styleSheetId = () => `caldera-loaded-style-${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`;
 
 /**
  * HOC to load a component after appending a stylesheet to DOM
@@ -33,25 +35,23 @@ function addStyleSheetToDom({ href, media = 'all',id }) {
  * @returns {*}
  * @constructor
  */
-export const WithStylesheet = ({children,href,media,Loading}) => {
+export const WithStylesheet = ({children, href, media, loading}) => {
     const loaded = useRef(false);
-    const id = useRef(`caldera-loaded-style-${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`);
-    const [loading,setLoading] = useState(false);
-    useEffect( () => {
-       if( ! loaded.current && ! loading){
-           setLoading(true);
-           addStyleSheetToDom({href,media,id}).then( () => {
-           loaded.current=true;
-              setLoading(false);
-           });
-       }
-    },[loaded,loading,setLoading,href,media]);
-    if( ! loaded.current ){
-        return <Loading/>
+    const elementId = useRef(styleSheetId());
+    const [isLoading, setLoading] = useState(false);
+    useEffect(() => {
+        if (!loaded.current && !isLoading) {
+            setLoading(true);
+            addStyleSheetToDom({href, media, id: elementId.current}).then(() => {
+                loaded.current = true;
+                setLoading(false);
+            });
+        }
+    }, [loaded, isLoading, setLoading, href, media]);
+    if (!loaded.current) {
+        return <Fragment>{loading}</Fragment>
     }
-    return  <Fragment>
-        {children}
-    </Fragment>
+    return <Fragment>{children}</Fragment>
 
 };
 

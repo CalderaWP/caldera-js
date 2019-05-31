@@ -8,6 +8,7 @@ import {
 
 } from "../CalderaForm/fields.fixtures";
 import {WithStylesheet} from "./WithStylesheet";
+import {WithBootstrapStyle} from "./WithBootstrapStyle";
 
 const form = {
     rows: [
@@ -45,11 +46,11 @@ const form = {
 
 };
 
-storiesOf('With Stylesheet', module).add('Forms', () => {
+storiesOf('With Stylesheet', module).add('WithStylesheet Loads bootstrap (or other csss) via cdn - specify href', () => {
 
     return (
 
-    <WithStylesheet Loading={'Loading'} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} >
+    <WithStylesheet loading={(<div>LOADING!!!</div>)} href={'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'} >
         <div className={'container'}>
             <div className={'row'}>
                 <input
@@ -68,3 +69,28 @@ storiesOf('With Stylesheet', module).add('Forms', () => {
     </WithStylesheet>
 
 )});
+
+
+storiesOf('With Stylesheet', module).add('WithBootstrapStyle  Loads bootstrap (or other csss) via cdn - specify href', () => {
+
+    return (
+
+        <WithBootstrapStyle loading={(<div>LOADING!!!</div>)} version={'4.3.1'} >
+            <div className={'container'}>
+                <div className={'row'}>
+                    <input
+                        className="btn btn-primary"
+                        type="submit"
+                        value="Click Me Primary Button"
+                    />
+                </div>
+
+                <div className={'row'}>
+                    <div className={'col-sm-4'}>1 of 3</div>
+                    <div className={'col-sm-4'}>2 of 3</div>
+                    <div className={'col-sm-4'}>3 of 3</div>
+                </div>
+            </div>
+        </WithBootstrapStyle>
+
+    )});

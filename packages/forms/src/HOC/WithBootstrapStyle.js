@@ -14,7 +14,7 @@ import {WithStylesheet} from "./WithStylesheet";
 export const WithBootstrapStyle = ({children,version,media,Loading}) => {
    return (
        <WithStylesheet
-           href={`https://maxcdn.bootstrapcdn.com/bootstrap/${version}/css/bootstrap.min.css`}
+           href={`https://cdn.jsdelivr.net/npm/bootstrap@${version}/dist/css/bootstrap.min.css`}
            media={media}
            Loading={Loading}
        >
