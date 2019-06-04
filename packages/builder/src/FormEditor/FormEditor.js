@@ -6,6 +6,7 @@ import {Row, Column,fieldAreaFactory} from "@calderajs/components";
 import {processorTypesPropType} from './propTypes';
 import {MainSection} from './MainSection';
 import {defaultProcessorTypes} from './Processors/processorTypes/defaultProcessorTypes';
+import {FormEntryViewer} from "..";
 
 export class FormEditor extends Component {
 	state = {
@@ -43,6 +44,12 @@ export class FormEditor extends Component {
 			classNameForComponent: 'caldera-forms-editor-layout'
 		},
 		{
+			name: 'entries',
+			title: 'Entries',
+			className: 'caldera-forms-editor-entries-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-entries'
+		},
+		{
 			name: 'processors',
 			title: 'Processors',
 			className: 'caldera-forms-editor-processors-tab-btn',
@@ -60,7 +67,6 @@ export class FormEditor extends Component {
 			title: 'Settings',
 			className: 'caldera-forms-editor-settings-tab-btn',
 			classNameForComponent: 'caldera-forms-editor-settings'
-
 		},
 	];
 
@@ -77,7 +83,7 @@ export class FormEditor extends Component {
 	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
 
 	render() {
-		const {form, processorTypes, updateForm} = this.props;
+		const {form, processorTypes, updateForm,entries} = this.props;
 		const theProcessorTypes = [
 			...processorTypes,
 			...defaultProcessorTypes
@@ -136,6 +142,22 @@ export class FormEditor extends Component {
 											})
 										}
 									)}
+								</MainSection>
+							)
+						}
+						if ('entries' === name) {
+							let entryViewerProps ={
+								form,
+								noItemsMessage: `No Entries Found For ${form.id}`,
+								entries: {}
+							};
+
+							return (
+								<MainSection
+									className={classNameForComponent}
+									title={title}
+								>
+									<FormEntryViewer {...entryViewerProps} />
 								</MainSection>
 							)
 						}
