@@ -7,6 +7,7 @@ import {
     SubmitButton,
     HiddenField,
     FieldWrapper,
+    ButtonField,
     FieldSet,
     addOrRemoveFromArray,
     toBoolean,
@@ -29,6 +30,7 @@ import {
     FILTER_FORM_WRAPPER_CLASS,
     FILTER_FORM_COLUMN_CLASS,
     FILTER_FORM_COLUMN_PREFIX,
+
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -63,6 +65,9 @@ describe('exports', () => {
     });
     test('InputField', () => {
         expect(typeof InputField).toBe('function');
+    });
+    test('ButtonField', () => {
+        expect(typeof ButtonField).toBe('function');
     });
 
     test('addOrRemoveFromArray', () => {

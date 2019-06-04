@@ -8,3 +8,4 @@ export {HiddenField} from "./HiddenField/HiddenField";
 export {SubmitButton} from "./SubmitButton/SubmitButton";
 export {FieldSet} from "./FieldSet/FieldSet";
 export {SelectField} from "./SelectField/SelectField";
+export {ButtonField} from "./ButtonField/ButtonField";

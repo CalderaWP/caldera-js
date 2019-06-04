@@ -9,8 +9,8 @@ import {
     HiddenField,
     SelectField,
     SubmitButton,
-    TextAreaField
-
+    TextAreaField,
+    ButtonField
 } from "../../components/fields";
 
 import {RadioOrCheckboxControl} from "../../components/fields/RadioOrCheckboxControl";
@@ -174,6 +174,10 @@ export const fieldFactory = (
                     {...props}
                 />
             );
+        case "button":
+            const inside = props.hasOwnProperty('children') ? props.children : props.value;
+            props = {...props};
+            return  <ButtonField {...props } >{inside}</ButtonField>
         case "submit":
             delete field.value;
             delete field.onBlur;

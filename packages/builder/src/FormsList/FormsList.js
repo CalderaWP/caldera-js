@@ -28,10 +28,18 @@ const fuzzysearch = function(needle, haystack) {
  * @constructor
  */
 export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
-    const [searchBy,setSearchBy] = useState('');
-    const [sortedForms,setSortedForms] = useState(forms);
-    const [sortBy,setSortBy] = useState('name');
-    const [sortOrder,setSortOrder] = useState('DESC');
+    const searchDefaults = {
+        searchBy: '',
+        sortedForms: forms,
+        sortBy: 'name',
+        sortOrder: 'DESC',
+        formNames: [],
+    };
+    const [searchBy,setSearchBy] = useState(searchDefaults.searchBy);
+    const [sortedForms,setSortedForms] = useState(searchDefaults.sortedForms);
+    const [sortBy,setSortBy] = useState(searchDefaults.sortBy);
+    const [sortOrder,setSortOrder] = useState(searchDefaults.sortOrder);
+    const [formNames,setFormNames] = useState(searchDefaults.formNames);
 
 
 
@@ -41,11 +49,21 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
        doSort()
     },[sortBy,forms,sortOrder,searchBy]);
 
-
-    const getFormNames = () => {
+    useEffect( () => {
         let names = [];
         forms.forEach(form => {names.push(form.name)});
-        return names;
+        setFormNames(names);
+    },[forms]);
+
+
+    const resetSearch =() =>{
+        setSearchBy(searchDefaults.searchBy);
+        setSortOrder(searchDefaults.sortBy)
+    };
+
+
+    const getFormNames = () => {
+        return formNames ? formNames : [];
     };
 
     const doSort = () => {
@@ -133,20 +151,23 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
 
     const searchField = {
         fieldType: 'text',
-        label: 'Search Forms By',
+        label: 'Search Forms By Name',
         value: searchBy,
-
     };
 
-
+    const resetButton = {
+        fieldType: 'input',
+        html5type: 'button',
+        label: 'Rest Search'
+    };
 
     const FormSearch = () => {
         return (
             <Fragment>
+                {fieldAreaFactory(resetButton, resetSearch )}
                 {fieldAreaFactory(searchField, setSearchBy )}
                 {fieldAreaFactory(sortField, setSortBy)}
                 {fieldAreaFactory(orderField, setSortOrder)}
-
             </Fragment>
         )
     };

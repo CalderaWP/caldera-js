@@ -12,6 +12,7 @@ export {
 	FieldWrapper,
 	FieldWrapperOuter,
 	FieldSet,
+	ButtonField
 } from './components/fields/';
 
 /**

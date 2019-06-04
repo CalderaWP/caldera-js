@@ -109,3 +109,23 @@ storiesOf('FieldFactory', module).add('Hidden field - no state', () => (
     </Fragment>
 ));
 
+
+storiesOf('FieldFactory', module).add('Button', () => (
+    <Fragment>
+
+        {fieldFactory({ fieldType: 'button', value: 'The Value Prop Sets The Button Text'}, () => {
+        })}
+    </Fragment>
+));
+
+storiesOf('FieldFactory', module).add('Has Label', () => (
+    <Fragment>
+
+        {fieldFactory({
+            fieldType: 'button',
+            value: 'The Value Prop Sets The Button Text',
+            label: 'The Label'
+        }, () => {
+        })}
+    </Fragment>
+));
