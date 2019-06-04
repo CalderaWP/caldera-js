@@ -43,7 +43,7 @@ const menuItems = [
 	},
 	{
 		name: 'settings',
-		title: 'Setting',
+		title: 'Settings',
 	},
 	{
 		name: 'documentation',

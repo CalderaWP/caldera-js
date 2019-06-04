@@ -1,4 +1,4 @@
-import React, {useContext,useState} from 'react';
+import React, {useContext,useState,useEffect} from 'react';
 import {FormEditor, FormsList} from "../..";
 import {MenuContext} from "../MenuContext";
 import {FormContext} from "../FormContext";
@@ -7,17 +7,26 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     const {name} = tab;
 
     const [showSingleForm,setShowSingleForm] = useState(false);
-    const [formView,setFormView] = useState('form');
+    const [entryViewerOpen,setEntryViewerOpen] = useState(false);
+
+    useEffect( () => {
+        if( 'forms' !== name ){
+            setEntryViewerOpen(false);
+            setShowSingleForm(false);
+        }
+    },[name,setEntryViewerOpen,setShowSingleForm]);
     const onFormAction = (formId, action) => {
         switch (action) {
             case 'view-entries':
                 setActiveFormId(formId);
                 setActiveItem('forms');
+                setEntryViewerOpen(true);
             break;
             case 'edit':
                 setActiveFormId(formId);
                 setActiveItem('forms');
                 setShowSingleForm(true);
+                setEntryViewerOpen(false);
                 break;
             default:
                 setActiveFormId(formId);
@@ -28,19 +37,13 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     let props = {};
     switch (name) {
         case 'forms':
-            props = {forms, panelTitle: 'Forms', classname: '', onFormAction, hideTabs: ['editor', 'layout']};
+            props = {forms, panelTitle: 'Forms', classname: '', onFormAction, hideTabs: ['editor', 'layout'],entryViewerOpen,setEntryViewerOpen};
             if( showSingleForm ){
                 return <FormEditor form={activeForm} {...props} />
             }
             return <FormsList {...props} />;
         case 'settings':
             return  <div>Settings</div>
-        case 'entries':
-            if( ! activeForm ){
-                return  <div>No Form Selected</div>
-            }
-            props ={ form:activeForm, noItemsMessage: `No Entries Found For ${activeForm.id}`, entries: {} };
-            return <FormEntryViewer {...props} />
         default:
             return <div>{name}</div>;
     }

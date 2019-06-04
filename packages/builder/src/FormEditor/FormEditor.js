@@ -15,6 +15,9 @@ export class FormEditor extends Component {
 	};
 
 	onSetTab = activeTab => {
+		if( 'entries' !== activeTab ){
+			props.setEntryViewerOpen(false);
+		}
 		this.setState({activeTab});
 	};
 
@@ -83,7 +86,7 @@ export class FormEditor extends Component {
 	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
 
 	render() {
-		const {form, processorTypes, updateForm,entries} = this.props;
+		const {form, processorTypes, updateForm,entries,entryViewerOpen} = this.props;
 		const theProcessorTypes = [
 			...processorTypes,
 			...defaultProcessorTypes
@@ -103,7 +106,12 @@ export class FormEditor extends Component {
 					tabs={this.getTabs()}
 				>
 					{tab => {
-						const {name, classNameForComponent, title} = tab;
+						let  {name, classNameForComponent, title} = tab;
+						if (entryViewerOpen) {
+							 name = this.tabs.find( tab => 'entries' === tab.name );
+							 console.log(name);
+						}
+
 						if ('processors' === name) {
 							return (
 								<MainSection
@@ -149,7 +157,7 @@ export class FormEditor extends Component {
 							let entryViewerProps ={
 								form,
 								noItemsMessage: `No Entries Found For ${form.id}`,
-								entries: {}
+								entries: false,//@todo change to props.entries
 							};
 
 							return (
@@ -188,12 +196,16 @@ FormEditor.propTypes = {
 		settings: PropTypes.array,
 		processors: processorsCollectionPropType,
 	}),
-	hideTabs: PropTypes.array
+	hideTabs: PropTypes.array,
+	entryViewerOpen: PropTypes.bool,
+	setEntryViewerOpen: PropTypes.func
 };
 
 FormEditor.defaultProps = {
 	processorTypes: [],
+	setEntryViewerOpen: () => {},
 	updateForm: () => {},
-	hideTabs: []
+	hideTabs: [],
+	entryViewerOpen: false,
 };
 
