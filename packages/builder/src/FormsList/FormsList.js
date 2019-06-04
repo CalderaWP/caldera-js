@@ -3,9 +3,20 @@ import {Panel, PanelBody, PanelRow} from '@wordpress/components';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {FormListItem} from '../FormListItem/FormListItem';
-import {fieldAreaFactory} from "@calderajs/components";
+import {fieldAreaFactory,fieldFactory} from "@calderajs/components";
 import moment from 'moment';
-
+const fuzzysearch = function(needle, haystack) {
+    if( ! haystack.length || ! needle.length ){
+        return [];
+    }
+    const results = [];
+    haystack.forEach(item  => {
+        if( needle === item || item.includes(needle) ){
+            results.push(item);
+        }
+    });
+    return  results;
+};
 
 /**
  *
@@ -17,6 +28,7 @@ import moment from 'moment';
  * @constructor
  */
 export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
+    const [searchBy,setSearchBy] = useState('');
     const [sortedForms,setSortedForms] = useState(forms);
     const [sortBy,setSortBy] = useState('name');
     const [sortOrder,setSortOrder] = useState('DESC');
@@ -27,14 +39,31 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
 
     useEffect( () => {
        doSort()
-    },[sortBy,forms,sortOrder]);
+    },[sortBy,forms,sortOrder,searchBy]);
+
+
+    const getFormNames = () => {
+        let names = [];
+        forms.forEach(form => {names.push(form.name)});
+        return names;
+    };
 
     const doSort = () => {
         let sorted = forms;
-        setSortedForms([]);
+        let _forms = forms;
+        if( searchBy && 2 < searchBy.length ){
+            const foundFormNames = fuzzysearch( searchBy, getFormNames() );
+            if( ! foundFormNames.length ){
+                setSortedForms([]);
+                return;
+            }else{
+                _forms = forms.filter( form => foundFormNames.includes(form.name) );
+            }
+        }
+
         switch (sortBy) {
             case '_last_updated':
-                sorted = forms.sort((form,lastForm) => {
+                sorted = _forms.sort((form,lastForm) => {
                     const d1 = getFormKey(form,sortBy,null).replace(/[^\+]*$/, '').replace( ' +', '' );
                     const d2 = getFormKey(lastForm,sortBy,null).replace(/[^\+]*$/, '').replace( ' +', '' );
                     const currentMoment = moment(d1);
@@ -56,7 +85,7 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
                 break;
             case 'name':
             default:
-                sorted = forms.sort((form,lastForm) => {
+                sorted = _forms.sort((form,lastForm) => {
                     const current = getFormKey(form, 'name', null);
                     const last = getFormKey(lastForm, 'name', null);
                     if ('ASC' === sortOrder) {
@@ -102,9 +131,19 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
         ]
     };
 
+    const searchField = {
+        fieldType: 'text',
+        label: 'Search Forms By',
+        value: searchBy,
+
+    };
+
+
+
     const FormSearch = () => {
         return (
             <Fragment>
+                {fieldAreaFactory(searchField, setSearchBy )}
                 {fieldAreaFactory(sortField, setSortBy)}
                 {fieldAreaFactory(orderField, setSortOrder)}
 

@@ -11,7 +11,7 @@ export const Control = ({fieldId, fieldType, placeholder, value, onChange, onBlu
         type={fieldType}
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        onChange={(event) => onChange(event.target.value)}
         onBlur={onBlur}
         required={required}
         {...attributes}
