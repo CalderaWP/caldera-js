@@ -18,16 +18,7 @@ const fuzzysearch = function(needle, haystack) {
     return  results;
 };
 
-/**
- *
- * @param forms
- * @param panelTitle
- * @param classname
- * @param onFormAction
- * @return {*}
- * @constructor
- */
-export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
+const FormSearch = ({forms,onSort}) => {
     const searchDefaults = {
         searchBy: '',
         sortedForms: forms,
@@ -41,13 +32,12 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
     const [sortOrder,setSortOrder] = useState(searchDefaults.sortOrder);
     const [formNames,setFormNames] = useState(searchDefaults.formNames);
 
-
-
     const getFormKey = (form,key,defaultValue) => form.hasOwnProperty(key) ? form[key] : defaultValue;
 
     useEffect( () => {
-       doSort()
+        onSort(doSort())
     },[sortBy,forms,sortOrder,searchBy]);
+
 
     useEffect( () => {
         let names = [];
@@ -73,7 +63,7 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
             const foundFormNames = fuzzysearch( searchBy, getFormNames() );
             if( ! foundFormNames.length ){
                 setSortedForms([]);
-                return;
+                return [];
             }else{
                 _forms = forms.filter( form => foundFormNames.includes(form.name) );
             }
@@ -113,9 +103,10 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
 
 
                 });
-        break;
+                break;
         }
         setSortedForms(sorted);
+        return  sorted;
     };
 
     const sortField = {
@@ -156,27 +147,46 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
     };
 
     const resetButton = {
-        fieldType: 'input',
-        html5type: 'button',
-        label: 'Rest Search'
+        fieldType: 'button',
+        value: 'Reset Search'
     };
 
-    const FormSearch = () => {
-        return (
-            <Fragment>
-                {fieldAreaFactory(resetButton, resetSearch )}
-                {fieldAreaFactory(searchField, setSearchBy )}
-                {fieldAreaFactory(sortField, setSortBy)}
-                {fieldAreaFactory(orderField, setSortOrder)}
-            </Fragment>
-        )
-    };
+
+
+    return (
+        <Fragment>
+            {fieldAreaFactory(resetButton, resetSearch )}
+            {fieldAreaFactory(searchField, setSearchBy )}
+            {fieldAreaFactory(sortField, setSortBy)}
+            {fieldAreaFactory(orderField, setSortOrder)}
+        </Fragment>
+    )
+};
+
+FormSearch.defaultProps = {
+    onSort: () => {},
+};
+FormSearch.propTypes = {
+    onSort: PropTypes.func,
+};
+
+/**
+ *
+ * @param forms
+ * @param panelTitle
+ * @param classname
+ * @param onFormAction
+ * @return {*}
+ * @constructor
+ */
+export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
+    const [sortedForms,setSortedForms] = useState(forms);
 
 
     return (
         <Panel classname={classNames(classname)}>
             <PanelBody title={panelTitle} icon="feedback" initialOpen={true}>
-                <FormSearch />
+                <FormSearch forms={forms} onSort={setSortedForms} />
                 {sortedForms.map(form => {
                     return (
                         <PanelRow key={form.id}>
@@ -202,7 +212,8 @@ FormsList.propTypes = {
     forms: PropTypes.array,
     panelTitle: PropTypes.string,
     noFormsMessage: PropTypes.string,
-    onFormAction: PropTypes.func.isRequired
+    onFormAction: PropTypes.func.isRequired,
+
 };
 
 /**
@@ -213,5 +224,6 @@ FormsList.propTypes = {
 FormsList.defaultProps = {
     forms: [],
     panelTitle: 'All Forms',
-    noFormsMessage: 'No Forms Found'
+    noFormsMessage: 'No Forms Found',
+    onSort: () => {}
 };
