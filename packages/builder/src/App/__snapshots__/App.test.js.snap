@@ -1,0 +1,732 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div
+      aria-atomic="true"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="a11y-speak-region"
+      id="a11y-speak-polite"
+      style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      aria-relevant="additions text"
+      class="a11y-speak-region"
+      id="a11y-speak-assertive"
+      style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;"
+    />
+    <div>
+      <header>
+        <h1
+          style="align-content: normal; align-items: normal; align-self: auto; alignment-baseline: auto; animation: none 0s ease 0s 1 normal none running; animation-delay: 0s; animation-direction: normal; animation-duration: 0s; animation-fill-mode: none; animation-iteration-count: 1; animation-name: none; animation-play-state: running; animation-timing-function: ease; background-attachment: scroll; background-blend-mode: normal; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-image: none; background-origin: padding-box; background-position: 0% 0%; background-position-x: 0%; background-position-y: 0%; background-repeat: repeat; background-size: auto; baseline-shift: 0px; block-size: 103px; border-block-end: 1px solid rgba(0, 0, 0, 0); border-block-end-color: rgba(0, 0, 0, 0); border-block-end-style: solid; border-block-end-width: 1px; border-block-start: 1px solid rgba(0, 0, 0, 0); border-block-start-color: rgba(0, 0, 0, 0); border-block-start-style: solid; border-block-start-width: 1px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-collapse: separate; border-image: none; border-image-outset: 0px; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-inline-end: 1px solid rgba(0, 0, 0, 0); border-inline-end-color: rgba(0, 0, 0, 0); border-inline-end-style: solid; border-inline-end-width: 1px; border-inline-start: 0px solid rgba(0, 0, 0, 0); border-inline-start-color: rgba(0, 0, 0, 0); border-inline-start-style: solid; border-inline-start-width: 0px; border-radius: 0px; border-spacing: 0px 0px; border-style: solid; border-top-left-radius: 0px; border-top-right-radius: 0px; border-top-style: solid; border-width: 1px 1px 1px 0px; box-shadow: none; box-sizing: border-box; break-after: auto; break-before: auto; break-inside: auto; caption-side: top; caret-color: rgb(25, 30, 35); clear: none; clip: auto; clip-path: none; clip-rule: nonzero; color: rgb(25, 30, 35); color-interpolation: srgb; color-interpolation-filters: linearrgb; color-rendering: auto; column-count: auto; column-fill: balance; column-gap: normal; column-rule: 0px none rgb(25, 30, 35); column-rule-color: rgb(25, 30, 35); column-rule-style: none; column-rule-width: 0px; column-span: none; column-width: auto; columns: auto auto; contain: none; content: normal; counter-increment: none; counter-reset: none; cursor: text; direction: ltr; display: block; dominant-baseline: auto; empty-cells: show; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; filter: none; flex: 0 1 auto; flex-basis: auto; flex-direction: column; flex-flow: column nowrap; flex-grow: 0; flex-shrink: 1; flex-wrap: nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font: sans-serif 63px normal normal normal 63px; font-family: -apple-system, system-ui, \\"Segoe UI\\", Roboto, Oxygen, Ubuntu, Cantarell, \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", sans-serif; font-feature-settings: normal; font-kerning: auto; font-size: 45px; font-stretch: 100%; font-style: normal; font-variant: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variation-settings: normal; font-weight: 700; gap: normal normal; grid: none / none / none / row / auto / auto; grid-area: auto / auto / auto / auto; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-column: auto / auto; grid-column-end: auto; grid-column-start: auto; grid-row: auto / auto; grid-row-end: auto; grid-row-start: auto; grid-template: none / none / none; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: 103px; hyphens: manual; image-rendering: auto; inline-size: 775.5px; isolation: auto; justify-content: normal; justify-items: normal; justify-self: auto; letter-spacing: normal; lighting-color: rgb(255, 255, 255); line-break: auto; line-height: 63px; list-style: disc outside none; list-style-image: none; list-style-position: outside; list-style-type: disc; margin: 0px 0px 0px 0px; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px; marker-end: none; marker-mid: none; marker-start: none; mask: none; mask-type: luminance; max-block-size: none; max-height: none; max-inline-size: none; max-width: none; min-block-size: 0px; min-height: 0px; min-inline-size: 0px; min-width: 0px; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset: none 0px auto 0deg; offset-distance: 0px; offset-path: none; offset-rotate: auto 0deg; opacity: 1; order: 0; orphans: 2; outline: rgba(0, 0, 0, 0) solid 1px; outline-color: rgba(0, 0, 0, 0); outline-offset: 0px; outline-style: solid; outline-width: 1px; overflow: hidden; overflow-wrap: break-word; overflow-x: hidden; overflow-y: hidden; padding: 19px 14px 19px 14px; padding-block-end: 19px; padding-block-start: 19px; padding-inline-end: 14px; padding-inline-start: 14px; page-break-after: auto; page-break-before: auto; page-break-inside: auto; place-content: normal normal; place-items: normal normal; place-self: auto auto; pointer-events: auto; position: static; resize: none; row-gap: normal; scroll-behavior: auto; scroll-margin: 0px; scroll-margin-block: 0px; scroll-margin-block-end: 0px; scroll-margin-block-start: 0px; scroll-margin-bottom: 0px; scroll-margin-inline: 0px; scroll-margin-inline-end: 0px; scroll-margin-inline-start: 0px; scroll-margin-left: 0px; scroll-margin-right: 0px; scroll-margin-top: 0px; scroll-padding: auto; scroll-padding-block: auto; scroll-padding-block-end: auto; scroll-padding-block-start: auto; scroll-padding-bottom: auto; scroll-padding-inline: auto; scroll-padding-inline-end: auto; scroll-padding-inline-start: auto; scroll-padding-left: auto; scroll-padding-right: auto; scroll-padding-top: auto; scroll-snap-align: none; scroll-snap-stop: normal; scroll-snap-type: none; shape-image-threshold: 0; shape-margin: 0px; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; tab-size: 8; table-layout: auto; text-align: start; text-align-last: auto; text-anchor: start; text-combine-upright: none; text-decoration: none solid rgb(25, 30, 35); text-decoration-color: rgb(25, 30, 35); text-decoration-line: none; text-decoration-style: solid; text-indent: 0px; text-orientation: mixed; text-overflow: clip; text-rendering: auto; text-shadow: none; text-transform: none; text-underline-position: auto; transform: none; transform-box: view-box; transform-origin: 387.75px 51.5px; transition: border 0.1s ease-out 0s, box-shadow 0.1s linear 0s; transition-delay: 0s, 0s; transition-duration: 0.1s, 0.1s; transition-property: border, box-shadow; transition-timing-function: ease-out, linear; unicode-bidi: normal; user-select: auto; vector-effect: none; vertical-align: baseline; visibility: visible; webkit-animation: none 0s ease 0s 1 normal none running; webkit-animation-delay: 0s; webkit-animation-direction: normal; webkit-animation-duration: 0s; webkit-animation-fill-mode: none; webkit-animation-iteration-count: 1; webkit-animation-name: none; webkit-animation-play-state: running; webkit-animation-timing-function: ease; webkit-appearance: none; webkit-backface-visibility: visible; webkit-background-clip: border-box; webkit-background-origin: padding-box; webkit-background-size: auto; webkit-border-after: 1px solid rgba(0, 0, 0, 0); -webkit-border-after-color: rgba(0, 0, 0, 0); webkit-border-after-style: solid; webkit-border-after-width: 1px; webkit-border-before: 1px solid rgba(0, 0, 0, 0); -webkit-border-before-color: rgba(0, 0, 0, 0); webkit-border-before-style: solid; webkit-border-before-width: 1px; webkit-border-end: 1px solid rgba(0, 0, 0, 0); -webkit-border-end-color: rgba(0, 0, 0, 0); webkit-border-end-style: solid; webkit-border-end-width: 1px; webkit-border-horizontal-spacing: 0px; webkit-border-image: none; webkit-border-radius: 0px; webkit-border-start: 0px solid rgba(0, 0, 0, 0); -webkit-border-start-color: rgba(0, 0, 0, 0); webkit-border-start-style: solid; webkit-border-start-width: 0px; webkit-border-vertical-spacing: 0px; webkit-box-align: stretch; webkit-box-direction: normal; webkit-box-flex: 0; webkit-box-ordinal-group: 1; webkit-box-orient: horizontal; webkit-box-pack: start; webkit-box-reflect: none; webkit-box-shadow: none; webkit-column-break-after: auto; webkit-column-break-before: auto; webkit-column-break-inside: auto; webkit-column-count: auto; webkit-column-gap: normal; webkit-column-rule: 0px none rgb(25, 30, 35); -webkit-column-rule-color: rgb(25, 30, 35); webkit-column-rule-style: none; webkit-column-rule-width: 0px; webkit-column-span: none; webkit-column-width: auto; webkit-columns: auto auto; webkit-filter: none; webkit-flex-direction: column; webkit-flex-flow: column nowrap; webkit-flex-wrap: nowrap; webkit-font-feature-settings: normal; webkit-font-smoothing: subpixel-antialiased; webkit-highlight: none; webkit-hyphenate-character: auto; webkit-line-break: auto; webkit-line-clamp: none; webkit-locale: \\"en-US\\"; webkit-logical-height: 103px; webkit-logical-width: 775.5px; webkit-margin-after: 0px; webkit-margin-after-collapse: collapse; webkit-margin-before: 0px; webkit-margin-before-collapse: collapse; webkit-margin-bottom-collapse: collapse; webkit-margin-end: 0px; webkit-margin-start: 0px; webkit-margin-top-collapse: collapse; webkit-mask-box-image: none; webkit-mask-box-image-outset: 0px; webkit-mask-box-image-repeat: stretch; webkit-mask-box-image-slice: 0 fill; webkit-mask-box-image-source: none; webkit-mask-box-image-width: auto; webkit-mask-clip: border-box; webkit-mask-composite: source-over; webkit-mask-image: none; webkit-mask-origin: border-box; webkit-mask-position: 0% 0%; webkit-mask-position-x: 0%; webkit-mask-position-y: 0%; webkit-mask-repeat: repeat; webkit-mask-size: auto; webkit-max-logical-height: none; webkit-max-logical-width: none; webkit-min-logical-height: 0px; webkit-min-logical-width: 0px; webkit-padding-after: 19px; webkit-padding-before: 19px; webkit-padding-end: 14px; webkit-padding-start: 14px; webkit-perspective: none; webkit-perspective-origin: 387.75px 51.5px; webkit-print-color-adjust: economy; webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4); webkit-text-combine: none; webkit-text-decorations-in-effect: none; -webkit-text-emphasis-color: rgb(25, 30, 35); webkit-text-emphasis-position: over right; webkit-text-emphasis-style: none; -webkit-text-fill-color: rgb(25, 30, 35); webkit-text-orientation: vertical-right; webkit-text-security: none; webkit-text-size-adjust: auto; -webkit-text-stroke-color: rgb(25, 30, 35); webkit-text-stroke-width: 0px; webkit-transform: none; webkit-transform-origin: 387.75px 51.5px; webkit-transform-style: flat; webkit-transition: border 0.1s ease-out 0s, box-shadow 0.1s linear 0s; webkit-transition-delay: 0s, 0s; webkit-transition-duration: 0.1s, 0.1s; webkit-transition-property: border, box-shadow; webkit-transition-timing-function: ease-out, linear; webkit-user-drag: auto; webkit-user-modify: read-only; webkit-user-select: auto; webkit-writing-mode: horizontal-tb; white-space: pre-wrap; widows: 2; width: 775.5px; will-change: auto; word-break: keep-all; word-spacing: 0px; word-wrap: break-word; writing-mode: horizontal-tb; z-index: auto; zoom: 1;"
+        >
+          Caldera Forms
+        </h1>
+      </header>
+      <div>
+        <div
+          aria-orientation="horizontal"
+          class="components-tab-panel__tabs"
+          role="tablist"
+        >
+          <button
+            aria-controls="0-forms-view"
+            aria-selected="true"
+            class="components-button undefined active-tab"
+            id="0-forms"
+            role="tab"
+            type="button"
+          >
+            Forms
+          </button>
+          <button
+            aria-controls="0-entries-view"
+            aria-selected="false"
+            class="components-button undefined "
+            id="0-entries"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Entries
+          </button>
+          <button
+            aria-controls="0-settings-view"
+            aria-selected="false"
+            class="components-button undefined "
+            id="0-settings"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Setting
+          </button>
+          <button
+            aria-controls="0-documentation-view"
+            aria-selected="false"
+            class="components-button undefined "
+            id="0-documentation"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Documentation
+          </button>
+          <button
+            aria-controls="0-account-view"
+            aria-selected="false"
+            class="components-button undefined "
+            id="0-account"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Account
+          </button>
+        </div>
+        <div
+          aria-labelledby="0-forms"
+          class="components-tab-panel__tab-content"
+          id="0-forms-view"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="components-panel"
+          >
+            <div
+              class="components-panel__body is-opened"
+            >
+              <h2
+                class="components-panel__body-title"
+              >
+                <button
+                  aria-expanded="true"
+                  class="components-button components-panel__body-toggle"
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="components-panel__arrow"
+                      focusable="false"
+                      height="24px"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M0,0h24v24H0V0z"
+                          fill="none"
+                        />
+                      </g>
+                      <g>
+                        <path
+                          d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                  Forms
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-feedback components-panel__icon"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div
+                class="components-panel__row"
+              >
+                <div>
+                  <div>
+                    Contact Form
+                  </div>
+                  <div
+                    class="components-toolbar"
+                  >
+                    <button
+                      aria-label="Edit Form"
+                      class="components-button components-icon-button form-list-item form-list-item-edit"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-edit"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="View Entries"
+                      class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-list-view"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="Preview Form"
+                      class="components-button components-icon-button form-list-item form-list-item-preview"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-feedback"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="Form Settings"
+                      class="components-button components-icon-button form-list-item form-list-item-settings"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-admin-settings"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="components-panel__row"
+              >
+                <div>
+                  <div>
+                    Other Form
+                  </div>
+                  <div
+                    class="components-toolbar"
+                  >
+                    <button
+                      aria-label="Edit Form"
+                      class="components-button components-icon-button form-list-item form-list-item-edit"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-edit"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="View Entries"
+                      class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-list-view"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="Preview Form"
+                      class="components-button components-icon-button form-list-item form-list-item-preview"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-feedback"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="Form Settings"
+                      class="components-button components-icon-button form-list-item form-list-item-settings"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="dashicon dashicons-admin-settings"
+                        focusable="false"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 20 20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <header>
+      <h1
+        style="align-content: normal; align-items: normal; align-self: auto; alignment-baseline: auto; animation: none 0s ease 0s 1 normal none running; animation-delay: 0s; animation-direction: normal; animation-duration: 0s; animation-fill-mode: none; animation-iteration-count: 1; animation-name: none; animation-play-state: running; animation-timing-function: ease; background-attachment: scroll; background-blend-mode: normal; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-image: none; background-origin: padding-box; background-position: 0% 0%; background-position-x: 0%; background-position-y: 0%; background-repeat: repeat; background-size: auto; baseline-shift: 0px; block-size: 103px; border-block-end: 1px solid rgba(0, 0, 0, 0); border-block-end-color: rgba(0, 0, 0, 0); border-block-end-style: solid; border-block-end-width: 1px; border-block-start: 1px solid rgba(0, 0, 0, 0); border-block-start-color: rgba(0, 0, 0, 0); border-block-start-style: solid; border-block-start-width: 1px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-collapse: separate; border-image: none; border-image-outset: 0px; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-inline-end: 1px solid rgba(0, 0, 0, 0); border-inline-end-color: rgba(0, 0, 0, 0); border-inline-end-style: solid; border-inline-end-width: 1px; border-inline-start: 0px solid rgba(0, 0, 0, 0); border-inline-start-color: rgba(0, 0, 0, 0); border-inline-start-style: solid; border-inline-start-width: 0px; border-radius: 0px; border-spacing: 0px 0px; border-style: solid; border-top-left-radius: 0px; border-top-right-radius: 0px; border-top-style: solid; border-width: 1px 1px 1px 0px; box-shadow: none; box-sizing: border-box; break-after: auto; break-before: auto; break-inside: auto; caption-side: top; caret-color: rgb(25, 30, 35); clear: none; clip: auto; clip-path: none; clip-rule: nonzero; color: rgb(25, 30, 35); color-interpolation: srgb; color-interpolation-filters: linearrgb; color-rendering: auto; column-count: auto; column-fill: balance; column-gap: normal; column-rule: 0px none rgb(25, 30, 35); column-rule-color: rgb(25, 30, 35); column-rule-style: none; column-rule-width: 0px; column-span: none; column-width: auto; columns: auto auto; contain: none; content: normal; counter-increment: none; counter-reset: none; cursor: text; direction: ltr; display: block; dominant-baseline: auto; empty-cells: show; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; filter: none; flex: 0 1 auto; flex-basis: auto; flex-direction: column; flex-flow: column nowrap; flex-grow: 0; flex-shrink: 1; flex-wrap: nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font: sans-serif 63px normal normal normal 63px; font-family: -apple-system, system-ui, \\"Segoe UI\\", Roboto, Oxygen, Ubuntu, Cantarell, \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", sans-serif; font-feature-settings: normal; font-kerning: auto; font-size: 45px; font-stretch: 100%; font-style: normal; font-variant: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variation-settings: normal; font-weight: 700; gap: normal normal; grid: none / none / none / row / auto / auto; grid-area: auto / auto / auto / auto; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-column: auto / auto; grid-column-end: auto; grid-column-start: auto; grid-row: auto / auto; grid-row-end: auto; grid-row-start: auto; grid-template: none / none / none; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: 103px; hyphens: manual; image-rendering: auto; inline-size: 775.5px; isolation: auto; justify-content: normal; justify-items: normal; justify-self: auto; letter-spacing: normal; lighting-color: rgb(255, 255, 255); line-break: auto; line-height: 63px; list-style: disc outside none; list-style-image: none; list-style-position: outside; list-style-type: disc; margin: 0px 0px 0px 0px; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px; marker-end: none; marker-mid: none; marker-start: none; mask: none; mask-type: luminance; max-block-size: none; max-height: none; max-inline-size: none; max-width: none; min-block-size: 0px; min-height: 0px; min-inline-size: 0px; min-width: 0px; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset: none 0px auto 0deg; offset-distance: 0px; offset-path: none; offset-rotate: auto 0deg; opacity: 1; order: 0; orphans: 2; outline: rgba(0, 0, 0, 0) solid 1px; outline-color: rgba(0, 0, 0, 0); outline-offset: 0px; outline-style: solid; outline-width: 1px; overflow: hidden; overflow-wrap: break-word; overflow-x: hidden; overflow-y: hidden; padding: 19px 14px 19px 14px; padding-block-end: 19px; padding-block-start: 19px; padding-inline-end: 14px; padding-inline-start: 14px; page-break-after: auto; page-break-before: auto; page-break-inside: auto; place-content: normal normal; place-items: normal normal; place-self: auto auto; pointer-events: auto; position: static; resize: none; row-gap: normal; scroll-behavior: auto; scroll-margin: 0px; scroll-margin-block: 0px; scroll-margin-block-end: 0px; scroll-margin-block-start: 0px; scroll-margin-bottom: 0px; scroll-margin-inline: 0px; scroll-margin-inline-end: 0px; scroll-margin-inline-start: 0px; scroll-margin-left: 0px; scroll-margin-right: 0px; scroll-margin-top: 0px; scroll-padding: auto; scroll-padding-block: auto; scroll-padding-block-end: auto; scroll-padding-block-start: auto; scroll-padding-bottom: auto; scroll-padding-inline: auto; scroll-padding-inline-end: auto; scroll-padding-inline-start: auto; scroll-padding-left: auto; scroll-padding-right: auto; scroll-padding-top: auto; scroll-snap-align: none; scroll-snap-stop: normal; scroll-snap-type: none; shape-image-threshold: 0; shape-margin: 0px; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; tab-size: 8; table-layout: auto; text-align: start; text-align-last: auto; text-anchor: start; text-combine-upright: none; text-decoration: none solid rgb(25, 30, 35); text-decoration-color: rgb(25, 30, 35); text-decoration-line: none; text-decoration-style: solid; text-indent: 0px; text-orientation: mixed; text-overflow: clip; text-rendering: auto; text-shadow: none; text-transform: none; text-underline-position: auto; transform: none; transform-box: view-box; transform-origin: 387.75px 51.5px; transition: border 0.1s ease-out 0s, box-shadow 0.1s linear 0s; transition-delay: 0s, 0s; transition-duration: 0.1s, 0.1s; transition-property: border, box-shadow; transition-timing-function: ease-out, linear; unicode-bidi: normal; user-select: auto; vector-effect: none; vertical-align: baseline; visibility: visible; webkit-animation: none 0s ease 0s 1 normal none running; webkit-animation-delay: 0s; webkit-animation-direction: normal; webkit-animation-duration: 0s; webkit-animation-fill-mode: none; webkit-animation-iteration-count: 1; webkit-animation-name: none; webkit-animation-play-state: running; webkit-animation-timing-function: ease; webkit-appearance: none; webkit-backface-visibility: visible; webkit-background-clip: border-box; webkit-background-origin: padding-box; webkit-background-size: auto; webkit-border-after: 1px solid rgba(0, 0, 0, 0); -webkit-border-after-color: rgba(0, 0, 0, 0); webkit-border-after-style: solid; webkit-border-after-width: 1px; webkit-border-before: 1px solid rgba(0, 0, 0, 0); -webkit-border-before-color: rgba(0, 0, 0, 0); webkit-border-before-style: solid; webkit-border-before-width: 1px; webkit-border-end: 1px solid rgba(0, 0, 0, 0); -webkit-border-end-color: rgba(0, 0, 0, 0); webkit-border-end-style: solid; webkit-border-end-width: 1px; webkit-border-horizontal-spacing: 0px; webkit-border-image: none; webkit-border-radius: 0px; webkit-border-start: 0px solid rgba(0, 0, 0, 0); -webkit-border-start-color: rgba(0, 0, 0, 0); webkit-border-start-style: solid; webkit-border-start-width: 0px; webkit-border-vertical-spacing: 0px; webkit-box-align: stretch; webkit-box-direction: normal; webkit-box-flex: 0; webkit-box-ordinal-group: 1; webkit-box-orient: horizontal; webkit-box-pack: start; webkit-box-reflect: none; webkit-box-shadow: none; webkit-column-break-after: auto; webkit-column-break-before: auto; webkit-column-break-inside: auto; webkit-column-count: auto; webkit-column-gap: normal; webkit-column-rule: 0px none rgb(25, 30, 35); -webkit-column-rule-color: rgb(25, 30, 35); webkit-column-rule-style: none; webkit-column-rule-width: 0px; webkit-column-span: none; webkit-column-width: auto; webkit-columns: auto auto; webkit-filter: none; webkit-flex-direction: column; webkit-flex-flow: column nowrap; webkit-flex-wrap: nowrap; webkit-font-feature-settings: normal; webkit-font-smoothing: subpixel-antialiased; webkit-highlight: none; webkit-hyphenate-character: auto; webkit-line-break: auto; webkit-line-clamp: none; webkit-locale: \\"en-US\\"; webkit-logical-height: 103px; webkit-logical-width: 775.5px; webkit-margin-after: 0px; webkit-margin-after-collapse: collapse; webkit-margin-before: 0px; webkit-margin-before-collapse: collapse; webkit-margin-bottom-collapse: collapse; webkit-margin-end: 0px; webkit-margin-start: 0px; webkit-margin-top-collapse: collapse; webkit-mask-box-image: none; webkit-mask-box-image-outset: 0px; webkit-mask-box-image-repeat: stretch; webkit-mask-box-image-slice: 0 fill; webkit-mask-box-image-source: none; webkit-mask-box-image-width: auto; webkit-mask-clip: border-box; webkit-mask-composite: source-over; webkit-mask-image: none; webkit-mask-origin: border-box; webkit-mask-position: 0% 0%; webkit-mask-position-x: 0%; webkit-mask-position-y: 0%; webkit-mask-repeat: repeat; webkit-mask-size: auto; webkit-max-logical-height: none; webkit-max-logical-width: none; webkit-min-logical-height: 0px; webkit-min-logical-width: 0px; webkit-padding-after: 19px; webkit-padding-before: 19px; webkit-padding-end: 14px; webkit-padding-start: 14px; webkit-perspective: none; webkit-perspective-origin: 387.75px 51.5px; webkit-print-color-adjust: economy; webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4); webkit-text-combine: none; webkit-text-decorations-in-effect: none; -webkit-text-emphasis-color: rgb(25, 30, 35); webkit-text-emphasis-position: over right; webkit-text-emphasis-style: none; -webkit-text-fill-color: rgb(25, 30, 35); webkit-text-orientation: vertical-right; webkit-text-security: none; webkit-text-size-adjust: auto; -webkit-text-stroke-color: rgb(25, 30, 35); webkit-text-stroke-width: 0px; webkit-transform: none; webkit-transform-origin: 387.75px 51.5px; webkit-transform-style: flat; webkit-transition: border 0.1s ease-out 0s, box-shadow 0.1s linear 0s; webkit-transition-delay: 0s, 0s; webkit-transition-duration: 0.1s, 0.1s; webkit-transition-property: border, box-shadow; webkit-transition-timing-function: ease-out, linear; webkit-user-drag: auto; webkit-user-modify: read-only; webkit-user-select: auto; webkit-writing-mode: horizontal-tb; white-space: pre-wrap; widows: 2; width: 775.5px; will-change: auto; word-break: keep-all; word-spacing: 0px; word-wrap: break-word; writing-mode: horizontal-tb; z-index: auto; zoom: 1;"
+      >
+        Caldera Forms
+      </h1>
+    </header>
+    <div>
+      <div
+        aria-orientation="horizontal"
+        class="components-tab-panel__tabs"
+        role="tablist"
+      >
+        <button
+          aria-controls="0-forms-view"
+          aria-selected="true"
+          class="components-button undefined active-tab"
+          id="0-forms"
+          role="tab"
+          type="button"
+        >
+          Forms
+        </button>
+        <button
+          aria-controls="0-entries-view"
+          aria-selected="false"
+          class="components-button undefined "
+          id="0-entries"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Entries
+        </button>
+        <button
+          aria-controls="0-settings-view"
+          aria-selected="false"
+          class="components-button undefined "
+          id="0-settings"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Setting
+        </button>
+        <button
+          aria-controls="0-documentation-view"
+          aria-selected="false"
+          class="components-button undefined "
+          id="0-documentation"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Documentation
+        </button>
+        <button
+          aria-controls="0-account-view"
+          aria-selected="false"
+          class="components-button undefined "
+          id="0-account"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Account
+        </button>
+      </div>
+      <div
+        aria-labelledby="0-forms"
+        class="components-tab-panel__tab-content"
+        id="0-forms-view"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <div
+          class="components-panel"
+        >
+          <div
+            class="components-panel__body is-opened"
+          >
+            <h2
+              class="components-panel__body-title"
+            >
+              <button
+                aria-expanded="true"
+                class="components-button components-panel__body-toggle"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="components-panel__arrow"
+                    focusable="false"
+                    height="24px"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M0,0h24v24H0V0z"
+                        fill="none"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+                Forms
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-feedback components-panel__icon"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              class="components-panel__row"
+            >
+              <div>
+                <div>
+                  Contact Form
+                </div>
+                <div
+                  class="components-toolbar"
+                >
+                  <button
+                    aria-label="Edit Form"
+                    class="components-button components-icon-button form-list-item form-list-item-edit"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-edit"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="View Entries"
+                    class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-list-view"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Preview Form"
+                    class="components-button components-icon-button form-list-item form-list-item-preview"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-feedback"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Form Settings"
+                    class="components-button components-icon-button form-list-item form-list-item-settings"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-admin-settings"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="components-panel__row"
+            >
+              <div>
+                <div>
+                  Other Form
+                </div>
+                <div
+                  class="components-toolbar"
+                >
+                  <button
+                    aria-label="Edit Form"
+                    class="components-button components-icon-button form-list-item form-list-item-edit"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-edit"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="View Entries"
+                    class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-list-view"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Preview Form"
+                    class="components-button components-icon-button form-list-item form-list-item-preview"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-feedback"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Form Settings"
+                    class="components-button components-icon-button form-list-item form-list-item-settings"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="dashicon dashicons-admin-settings"
+                      focusable="false"
+                      height="20"
+                      role="img"
+                      viewBox="0 0 20 20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

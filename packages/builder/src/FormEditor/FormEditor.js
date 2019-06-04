@@ -50,8 +50,8 @@ export class FormEditor extends Component {
 
 		},
 		{
-			name: 'Mailer',
-			title: 'mailer',
+			name: 'mailer',
+			title: 'Mail',
 			className: 'caldera-forms-editor-mailer-tab-btn',
 			classNameForComponent: 'caldera-forms-editor-mailer'
 		},
@@ -63,6 +63,15 @@ export class FormEditor extends Component {
 
 		},
 	];
+
+	getTabs(){
+		const {hideTabs} = this.props;
+		if( ! hideTabs.length ){
+			return this.tabs;
+		}
+
+		return  this.tabs.filter( tab =>!hideTabs.includes(tab.name) );
+	}
 
 
 	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
@@ -85,7 +94,7 @@ export class FormEditor extends Component {
 					activeClass="active-tab"
 					onSelect={this.onSetTab}
 					initialTabName={'processors'}
-					tabs={this.tabs}
+					tabs={this.getTabs()}
 				>
 					{tab => {
 						const {name, classNameForComponent, title} = tab;
@@ -157,10 +166,12 @@ FormEditor.propTypes = {
 		settings: PropTypes.array,
 		processors: processorsCollectionPropType,
 	}),
+	hideTabs: PropTypes.array
 };
 
 FormEditor.defaultProps = {
 	processorTypes: [],
-	updateForm: () => {}
+	updateForm: () => {},
+	hideTabs: []
 };
 

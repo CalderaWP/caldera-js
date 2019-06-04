@@ -7,17 +7,17 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     const {name} = tab;
 
     const [showSingleForm,setShowSingleForm] = useState(false);
+    const [formView,setFormView] = useState('form');
     const onFormAction = (formId, action) => {
         switch (action) {
             case 'view-entries':
                 setActiveFormId(formId);
-                setActiveItem('entries');
+                setActiveItem('forms');
             break;
             case 'edit':
                 setActiveFormId(formId);
                 setActiveItem('forms');
                 setShowSingleForm(true);
-
                 break;
             default:
                 setActiveFormId(formId);
@@ -28,11 +28,13 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     let props = {};
     switch (name) {
         case 'forms':
-            props = {forms, panelTitle: 'Forms', classname: '', onFormAction};
+            props = {forms, panelTitle: 'Forms', classname: '', onFormAction, hideTabs: ['editor', 'layout']};
             if( showSingleForm ){
-                return <FormEditor form={activeForm} />
+                return <FormEditor form={activeForm} {...props} />
             }
             return <FormsList {...props} />;
+        case 'settings':
+            return  <div>Settings</div>
         case 'entries':
             if( ! activeForm ){
                 return  <div>No Form Selected</div>

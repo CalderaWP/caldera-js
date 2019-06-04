@@ -42,10 +42,6 @@ const menuItems = [
 		title: 'Forms',
 	},
 	{
-		name: 'entries',
-		title: 'Entries',
-	},
-	{
 		name: 'settings',
 		title: 'Setting',
 	},
