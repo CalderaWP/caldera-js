@@ -13,13 +13,22 @@ import {HeaderInside} from "./components/HeaderInside";
 const contactForm = creatContactFormConfig({config:{
 	id: 'contact-form',
 	name: 'Contact Form',
+		_last_updated: 'Wed, 24 Oct 2018 19:34:12 +0000'
 }});
 
 const initialForms = [
-	contactForm,
 	{
 		id: 'other-form',
-		name: 'Other Form'
+		name: 'Other Form 2017',
+		_last_updated: 'Wed, 24 Oct 2017 19:34:12 +0000'
+
+	},
+	contactForm,
+	{
+		id: 'z-form',
+		name: 'Z Form 2011',
+		_last_updated: 'Wed, 24 Oct 2011 19:34:12 +0000'
+
 	}
 ];
 
