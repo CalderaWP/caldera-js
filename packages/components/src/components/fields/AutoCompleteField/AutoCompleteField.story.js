@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState,useMemo} from 'react';
 import { storiesOf } from '@storybook/react';
 import {AutoCompleteField} from "./AutoCompleteField";
 import ReactAutocomplete from 'react-autocomplete';
+import {textField,checkboxField} from "@calderajs/forms/src/CalderaForm/fields.fixtures";
+
 const onChange = newValue => {
 	console.log(newValue);
 };
@@ -24,28 +26,31 @@ function Wrapped(){
 	)
 }
 
-function ExampleWrapped(){
+const  form = {
+	id: 'test',
+	fields: [
+		checkboxField,
+		textField
+	]
+};
+
+function FieldsPoc({form}){
 	const[value,onChange]= useState('');
+	const options = useMemo( () => form.fields.map( field => {
+		return {
+			label: field.label,
+			value: field.fieldId
+		}
+	}),[form]);
 	return (
-		<ReactAutocomplete
-			items={[
-				{ id: 'foo', label: 'foo' },
-				{ id: 'bar', label: 'bar' },
-				{ id: 'baz', label: 'baz' },
-			]}
-			shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
-			getItemValue={item => item.label}
-			renderItem={(item, highlighted) =>
-				<div
-					key={item.id}
-					style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
-				>
-					{item.label}
-				</div>
-			}
+		<AutoCompleteField
+			label={'Select A Field'}
+			onChange={onChange}
+			description={'selection of hats'}
+			fieldId={'selection-hats'}
 			value={value}
-			onChange={e => onChange(e.target.value )}
-			onSelect={value => onChange( value )}
+			required={false}
+			options={options}
 		/>
 	)
 }
@@ -53,8 +58,8 @@ storiesOf(STORY_NAME, module).add('Default Variant ', () => (
 
 
 	<Wrapped/>
-));storiesOf(STORY_NAME, module).add('Example ', () => (
-	<ExampleWrapped />
+));storiesOf(STORY_NAME, module).add('FieldsPoc ', () => (
+	<FieldsPoc form={form}/>
 
 
 ));

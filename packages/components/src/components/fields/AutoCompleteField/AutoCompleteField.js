@@ -8,20 +8,30 @@ import {Control} from "../Control";
 export const AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER = 'auto-complete';
 
 
+const RenderInput = props => <Control { ...props} />
+const RenderMenu = (items, value, style) => (
+     <ul style={{ ...style }} children={items}/>
+);
 
-
+const RenderItem = (item, highlighted) =>
+    <li
+        key={item.id ? item.id : item.value }
+        style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
+    >
+        {item.label}
+    </li>
 
 export const AutoCompleteField = props => {
     const {
         options,
-        fieldId,
         required,
         onChange,
         onBlur,
-        placeholder,
         value
     } = props;    const fieldProps = {
         ...props,
+        required,
+        onBlur,
         fieldType: AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
     };
 
@@ -36,21 +46,12 @@ export const AutoCompleteField = props => {
 
     return (
             <Autocomplete
-                items={[
-                    { value: 'foo', label: 'foo' },
-                    { value: 'bar', label: 'bar' },
-                    { value: 'baz', label: 'baz' },
-                ]}
+                items={options}
                 shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
                 getItemValue={item => item.value}
-                renderItem={(item, highlighted) =>
-                    <div
-                        key={item.id ? item.id : item.value }
-                        style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
-                    >
-                        {item.label}
-                    </div>
-                }
+                renderItem={RenderItem}
+                renderMenu={RenderMenu}
+                RenderInput={(props) => <RenderInput {...{...props,...fieldProps} } />}
                 value={value}
                 onChange={e => handleChange(e )}
                 onSelect={value => handleChange( value )}
