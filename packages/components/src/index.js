@@ -12,7 +12,11 @@ export {
 	FieldWrapper,
 	FieldWrapperOuter,
 	FieldSet,
-	ButtonField
+	ButtonField,
+	AutoCompleteField,
+	FormFieldsAutoComplete,
+	FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
+	AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER
 } from './components/fields/';
 
 /**

@@ -30,7 +30,10 @@ import {
     FILTER_FORM_WRAPPER_CLASS,
     FILTER_FORM_COLUMN_CLASS,
     FILTER_FORM_COLUMN_PREFIX,
-
+    AutoCompleteField,
+    FormFieldsAutoComplete,
+    FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
+    AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER
 } from '@calderajs/components';
 
 describe('exports', () => {
@@ -92,6 +95,18 @@ describe('exports', () => {
     });
     test('CalderaNotice', () => {
         expect(typeof CalderaNotice).toBe('function');
+    });
+    test('AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER', () => {
+        expect(typeof AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER).toBe('string');
+    });
+    test('FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER', () => {
+        expect(typeof FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER).toBe('string');
+    });
+    test('FormFieldsAutoComplete', () => {
+        expect(typeof FormFieldsAutoComplete).toBe('function');
+    });
+    test('AutoCompleteField', () => {
+        expect(typeof AutoCompleteField).toBe('function');
     });
 });
 

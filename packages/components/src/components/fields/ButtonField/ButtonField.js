@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {Fragment} from 'react';
-import {isValidHtml5type} from "../util";
+import React from 'react';
 import {FieldWrapper} from "..";
 import Button from "react-bootstrap/Button";
-import {InputField} from "..";
+import {InputField} from "../InputField/InputField";
 export const ButtonField = props => {
     const {variant,children} = props;
     const fieldProps = {

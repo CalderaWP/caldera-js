@@ -9,3 +9,7 @@ export {SubmitButton} from "./SubmitButton/SubmitButton";
 export {FieldSet} from "./FieldSet/FieldSet";
 export {SelectField} from "./SelectField/SelectField";
 export {ButtonField} from "./ButtonField/ButtonField";
+export {AutoCompleteField} from "./AutoCompleteField/AutoCompleteField";
+export {FormFieldsAutoComplete} from "./FormFieldsAutoComplete/FormFieldsAutoComplete";
+export {FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from "./FormFieldsAutoComplete/FormFieldsAutoComplete";
+export {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from "./AutoCompleteField/AutoCompleteField";
