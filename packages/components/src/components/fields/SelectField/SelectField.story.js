@@ -9,7 +9,7 @@ const onBlur = event => {};
 
 const STORY_NAME_SELECT = 'SelectField';
 storiesOf(STORY_NAME_SELECT, module).add(
-	'With no value selected and  placeholder',
+	'With no value selected and placeholder',
 	() => (
 		<SelectField
 			label={'Select A Hat'}
