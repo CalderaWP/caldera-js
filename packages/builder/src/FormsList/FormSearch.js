@@ -32,12 +32,10 @@ export const FormSearch = ({forms,onSort}) => {
 
     const getFormKey = (form,key,defaultValue) => form.hasOwnProperty(key) ? form[key] : defaultValue;
 
-
     useEffect( () => {
         const update = doSort();
         onSort([...update]);
     },[sortBy,forms,sortOrder,searchBy]);
-
 
     useEffect( () => {
         let names = [];
@@ -50,7 +48,6 @@ export const FormSearch = ({forms,onSort}) => {
         setSearchBy(searchDefaults.searchBy);
         setSortOrder(searchDefaults.sortBy);
     };
-
 
     const getFormNames = () => {
         return formNames ? formNames : [];
@@ -152,8 +149,6 @@ export const FormSearch = ({forms,onSort}) => {
         onClick: resetSearch
     };
 
-
-
     return (
         <Fragment>
             {fieldAreaFactory(resetButton, resetSearch )}
@@ -169,6 +164,7 @@ FormSearch.defaultProps = {
     forms: []
 
 };
+
 FormSearch.propTypes = {
     onSort: PropTypes.func,
     forms: PropTypes.array

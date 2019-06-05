@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { FormEntryViewer } from './FormEntryViewer';
 import { forms, entriesContactForm } from './forms.fixtures';

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
-
+import {render} from "react-testing-library";
 import { FormsList } from './FormsList';
 
 describe('FormsList', () => {
@@ -20,14 +19,13 @@ describe('FormsList', () => {
 	});
 
 	it('Matches snapshot ', () => {
-		const component = renderer.create(
+		expect(render(
 			<FormsList
 				forms={forms}
 				panelTitle={'Panel Title'}
 				noFormsMessage={'Custom No Forms Found'}
 				onFormAction={() => {}}
 			/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
+		)).toMatchSnapshot();
 	});
 });

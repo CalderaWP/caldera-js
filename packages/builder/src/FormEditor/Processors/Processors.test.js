@@ -1,21 +1,9 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {Processor} from "./Processor";
+
 import {Processors} from "./Processors";
 import {mount} from 'enzyme';
-import renderer from 'react-test-renderer';
 import {processorsCollection} from './processors.fixtures';
-
-import {
-	checkboxFieldset,
-	selectField,
-	checkboxField,
-	numberField,
-	textField,
-	emailField,
-	radioField
-} from "@calderajs/components";
-import {FormEditor} from "../FormEditor";
+import {render} from "react-testing-library";
 
 describe('Processors', () => {
 	const processors = [
@@ -121,7 +109,7 @@ describe( 'Processors collection in processors UI', () => {
 	});
 
 	it( 'Renders with a list of processors', () => {
-		const component = renderer.create(
+		const component = render(
 			<Processors
 				processors={processorsCollection}
 				form={form}
@@ -129,7 +117,7 @@ describe( 'Processors collection in processors UI', () => {
 				updateProcessors={updateProcessors}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('should open processor editor', () => {

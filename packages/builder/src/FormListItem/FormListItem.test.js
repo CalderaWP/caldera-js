@@ -1,10 +1,9 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import {render} from "react-testing-library";
 
-import { FormListitem } from './FormListitem';
+import { FormListItem } from './FormListItem';
 
-describe('FormListitemem', () => {
+describe('FormListItem', () => {
 	let form;
 	let onFormAction;
 	const formId = 'cf1';
@@ -16,17 +15,17 @@ describe('FormListitemem', () => {
 	});
 	it('Matches snapshot', () => {
 		const component = render(
-			<FormListitem form={form} onFormAction={onFormAction} />
+			<FormListItem form={form} onFormAction={onFormAction} />
 		);
 		expect(component).toMatchSnapshot();
 	});
 
 	it.skip('clicking on edit.skip', () => {
 		const component = render(
-			<FormListitem form={form} onFormAction={onFormAction}/>
+			<FormListItem form={form} onFormAction={onFormAction}/>
 		);
 		component
-			.find('.' + FormListitem.defaultProps.classNames.edit.skip + ' button')
+			.find('.' + FormListItem.defaultProps.classNames.edit.skip + ' button')
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
 		expect(onFormAction.mock.calls[0][1]).toBe('edit.skip');
@@ -35,10 +34,10 @@ describe('FormListitemem', () => {
 
 	it.skip('clicking on edit.skip', () => {
 		const component = mount(
-			<FormListitem form={form} onFormAction={onFormAction} />
+			<FormListItem form={form} onFormAction={onFormAction} />
 		);
 		component
-			.find('.' + FormListitem.defaultProps.classNames.edit.skip + ' button')
+			.find('.' + FormListItem.defaultProps.classNames.edit.skip + ' button')
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
 		expect(onFormAction.mock.calls[0][1]).toBe('edit.skip');
@@ -46,12 +45,12 @@ describe('FormListitemem', () => {
 
 	it.skip('clicking on view entries', () => {
 		const component = mount(
-			<FormListitem form={form} onFormAction={onFormAction} />
+			<FormListItem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
 				'.' +
-					FormListitem.defaultProps.classNames['view-entries'] +
+					FormListItem.defaultProps.classNames['view-entries'] +
 					' button'
 			)
 			.simulate('click');
@@ -61,11 +60,11 @@ describe('FormListitemem', () => {
 
 	it.skip('clicking on preview', () => {
 		const component = mount(
-			<FormListitem form={form} onFormAction={onFormAction} />
+			<FormListItem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
-				'.' + FormListitem.defaultProps.classNames.preview + ' button'
+				'.' + FormListItem.defaultProps.classNames.preview + ' button'
 			)
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);
@@ -74,11 +73,11 @@ describe('FormListitemem', () => {
 
 	it.skip('clicking on settings', () => {
 		const component = mount(
-			<FormListitem form={form} onFormAction={onFormAction} />
+			<FormListItem form={form} onFormAction={onFormAction} />
 		);
 		component
 			.find(
-				'.' + FormListitem.defaultProps.classNames.settings + ' button'
+				'.' + FormListItem.defaultProps.classNames.settings + ' button'
 			)
 			.simulate('click');
 		expect(onFormAction.mock.calls[0][0]).toBe(formId);

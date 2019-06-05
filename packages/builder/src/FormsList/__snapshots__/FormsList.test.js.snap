@@ -1,80 +1,746 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormsList Matches snapshot  1`] = `
-<div
-  classname=""
->
-  <div
-    icon="feedback"
-    initialOpen={true}
-    title="Panel Title"
-  >
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div
+      aria-atomic="true"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="a11y-speak-region"
+      id="a11y-speak-polite"
+      style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;"
+    />
+    <div
+      aria-atomic="true"
+      aria-live="assertive"
+      aria-relevant="additions text"
+      class="a11y-speak-region"
+      id="a11y-speak-assertive"
+      style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;"
+    />
     <div>
-      <div>
-        <div>
-          Contact Form
-        </div>
-        <div>
-          <button
-            className="form-list-item form-list-item-edit"
-            onClick={[Function]}
+      <div
+        class="components-panel"
+      >
+        <div
+          class="components-panel__body is-opened"
+        >
+          <h2
+            class="components-panel__body-title"
           >
-            Edit Form
-          </button>
-          <button
-            className="form-list-item form-list-item-view-entries"
-            onClick={[Function]}
+            <button
+              aria-expanded="true"
+              class="components-button components-panel__body-toggle"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="components-panel__arrow"
+                  focusable="false"
+                  height="24px"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0,0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Panel Title
+              <svg
+                aria-hidden="true"
+                class="dashicon dashicons-feedback components-panel__icon"
+                focusable="false"
+                height="20"
+                role="img"
+                viewBox="0 0 20 20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            class="caldera-field-group caldera-field-area-button form-group"
           >
-            View Entries
-          </button>
-          <button
-            className="form-list-item form-list-item-preview"
-            onClick={[Function]}
+            <label
+              class="form-label"
+            >
+               
+            </label>
+            <button
+              class="btn btn-secondary"
+              fieldtype="button"
+              html5type="text"
+              type="button"
+              value="Reset Search"
+              wrapperclassnames="caldera-field-group,caldera-field-area-button"
+            >
+              Reset Search
+            </button>
+          </div>
+          <div
+            class="caldera-field-group caldera-field-area-text form-group"
           >
-            Preview Form
-          </button>
-          <button
-            className="form-list-item form-list-item-settings"
-            onClick={[Function]}
+            <label
+              class="form-label"
+            >
+              Search Forms By Name
+               
+            </label>
+            <input
+              class="caldera-field caldera-field-text form-control"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="caldera-field-group caldera-field-area-dropdown form-group"
           >
-            Form Settings
-          </button>
+            <label
+              class="form-label"
+            >
+              Sort Forms By
+               
+            </label>
+            <select
+              class="caldera-field caldera-field-select form-control"
+            >
+              <option
+                value="name"
+              >
+                Name
+              </option>
+              <option
+                value="_last_updated"
+              >
+                Updated
+              </option>
+            </select>
+            
+          </div>
+          <div
+            class="caldera-field-group caldera-field-area-dropdown form-group"
+          >
+            <label
+              class="form-label"
+            >
+              Order Forms By
+               
+            </label>
+            <select
+              class="caldera-field caldera-field-select form-control"
+            >
+              <option
+                value="ASC"
+              >
+                Alphabetical
+              </option>
+              <option
+                value="DESC"
+              >
+                Reverse Alphabetical
+              </option>
+            </select>
+            
+          </div>
+          <div
+            class="components-panel__row"
+          >
+            <div>
+              <div>
+                Contact Form
+              </div>
+              <div
+                class="components-toolbar"
+              >
+                <button
+                  aria-label="Edit Form"
+                  class="components-button components-icon-button form-list-item form-list-item-edit"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-edit"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="View Entries"
+                  class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-list-view"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Preview Form"
+                  class="components-button components-icon-button form-list-item form-list-item-preview"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-feedback"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Form Settings"
+                  class="components-button components-icon-button form-list-item form-list-item-settings"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-admin-settings"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="components-panel__row"
+          >
+            <div>
+              <div>
+                Other Form
+              </div>
+              <div
+                class="components-toolbar"
+              >
+                <button
+                  aria-label="Edit Form"
+                  class="components-button components-icon-button form-list-item form-list-item-edit"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-edit"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="View Entries"
+                  class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-list-view"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Preview Form"
+                  class="components-button components-icon-button form-list-item form-list-item-preview"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-feedback"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Form Settings"
+                  class="components-button components-icon-button form-list-item form-list-item-settings"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="dashicon dashicons-admin-settings"
+                    focusable="false"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <div>
-        <div>
-          Other Form
+  </body>,
+  "container": <div>
+    <div
+      class="components-panel"
+    >
+      <div
+        class="components-panel__body is-opened"
+      >
+        <h2
+          class="components-panel__body-title"
+        >
+          <button
+            aria-expanded="true"
+            class="components-button components-panel__body-toggle"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              <svg
+                aria-hidden="true"
+                class="components-panel__arrow"
+                focusable="false"
+                height="24px"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M0,0h24v24H0V0z"
+                    fill="none"
+                  />
+                </g>
+                <g>
+                  <path
+                    d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                  />
+                </g>
+              </svg>
+            </span>
+            Panel Title
+            <svg
+              aria-hidden="true"
+              class="dashicon dashicons-feedback components-panel__icon"
+              focusable="false"
+              height="20"
+              role="img"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+              />
+            </svg>
+          </button>
+        </h2>
+        <div
+          class="caldera-field-group caldera-field-area-button form-group"
+        >
+          <label
+            class="form-label"
+          >
+             
+          </label>
+          <button
+            class="btn btn-secondary"
+            fieldtype="button"
+            html5type="text"
+            type="button"
+            value="Reset Search"
+            wrapperclassnames="caldera-field-group,caldera-field-area-button"
+          >
+            Reset Search
+          </button>
         </div>
-        <div>
-          <button
-            className="form-list-item form-list-item-edit"
-            onClick={[Function]}
+        <div
+          class="caldera-field-group caldera-field-area-text form-group"
+        >
+          <label
+            class="form-label"
           >
-            Edit Form
-          </button>
-          <button
-            className="form-list-item form-list-item-view-entries"
-            onClick={[Function]}
+            Search Forms By Name
+             
+          </label>
+          <input
+            class="caldera-field caldera-field-text form-control"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="caldera-field-group caldera-field-area-dropdown form-group"
+        >
+          <label
+            class="form-label"
           >
-            View Entries
-          </button>
-          <button
-            className="form-list-item form-list-item-preview"
-            onClick={[Function]}
+            Sort Forms By
+             
+          </label>
+          <select
+            class="caldera-field caldera-field-select form-control"
           >
-            Preview Form
-          </button>
-          <button
-            className="form-list-item form-list-item-settings"
-            onClick={[Function]}
+            <option
+              value="name"
+            >
+              Name
+            </option>
+            <option
+              value="_last_updated"
+            >
+              Updated
+            </option>
+          </select>
+          
+        </div>
+        <div
+          class="caldera-field-group caldera-field-area-dropdown form-group"
+        >
+          <label
+            class="form-label"
           >
-            Form Settings
-          </button>
+            Order Forms By
+             
+          </label>
+          <select
+            class="caldera-field caldera-field-select form-control"
+          >
+            <option
+              value="ASC"
+            >
+              Alphabetical
+            </option>
+            <option
+              value="DESC"
+            >
+              Reverse Alphabetical
+            </option>
+          </select>
+          
+        </div>
+        <div
+          class="components-panel__row"
+        >
+          <div>
+            <div>
+              Contact Form
+            </div>
+            <div
+              class="components-toolbar"
+            >
+              <button
+                aria-label="Edit Form"
+                class="components-button components-icon-button form-list-item form-list-item-edit"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-edit"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="View Entries"
+                class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-list-view"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Preview Form"
+                class="components-button components-icon-button form-list-item form-list-item-preview"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-feedback"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Form Settings"
+                class="components-button components-icon-button form-list-item form-list-item-settings"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-admin-settings"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="components-panel__row"
+        >
+          <div>
+            <div>
+              Other Form
+            </div>
+            <div
+              class="components-toolbar"
+            >
+              <button
+                aria-label="Edit Form"
+                class="components-button components-icon-button form-list-item form-list-item-edit"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-edit"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.89 3.39l2.71 2.72c.46.46.42 1.24.03 1.64l-8.01 8.02-5.56 1.16 1.16-5.58s7.6-7.63 7.99-8.03c.39-.39 1.22-.39 1.68.07zm-2.73 2.79l-5.59 5.61 1.11 1.11 5.54-5.65zm-2.97 8.23l5.58-5.6-1.07-1.08-5.59 5.6z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="View Entries"
+                class="components-button components-icon-button form-list-item form-list-item-view-entries"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-list-view"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 19h16c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1H2c-.55 0-1 .45-1 1v16c0 .55.45 1 1 1zM4 3c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V3h11zM4 7c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6V7h11zM4 11c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11zM4 15c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm13 0v2H6v-2h11z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Preview Form"
+                class="components-button components-icon-button form-list-item form-list-item-preview"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-feedback"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Form Settings"
+                class="components-button components-icon-button form-list-item form-list-item-settings"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="dashicon dashicons-admin-settings"
+                  focusable="false"
+                  height="20"
+                  role="img"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 16V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h13c.55 0 1-.45 1-1zM8 11h1c.55 0 1 .45 1 1s-.45 1-1 1H8v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V13H6c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V11zm5-2h-1c-.55 0-1-.45-1-1s.45-1 1-1h1V5.5c0-.28.22-.5.5-.5s.5.22.5.5V7h1c.55 0 1 .45 1 1s-.45 1-1 1h-1v5.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V9z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

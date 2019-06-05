@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {mount} from 'enzyme';
-import renderer from 'react-test-renderer';
 import {AddProcessor} from './AddProcessor'
+import {render} from "react-testing-library";
 
 describe('AddProcessor', () => {
 	let setNewProcessorType = jest.fn();
@@ -20,13 +20,14 @@ describe('AddProcessor', () => {
 	];
 
 	it('Shows the choices', () => {
-		const component = renderer.create(<AddProcessor
-			setNewProcessorType={setNewProcessorType}
-			processorTypes={processorTypes}
-			value={''}
-			onCreate={onCreate}
-		/>);
-		expect(component.toJSON()).toMatchSnapshot()
+		expect(render(
+			<AddProcessor
+				setNewProcessorType={setNewProcessorType}
+				processorTypes={processorTypes}
+				value={''}
+				onCreate={onCreate}
+			/>
+		)).toMatchSnapshot()
 	});
 
 	it('Activates the button', () => {
@@ -38,7 +39,7 @@ describe('AddProcessor', () => {
 		/>);
 		expect(component.find( 'button').prop( 'disabled')).toBe(false)
 
-	})
+	});
 
 	it('Has the processor options', () => {
 		const component = mount(<AddProcessor
@@ -49,5 +50,5 @@ describe('AddProcessor', () => {
 		/>);
 		expect(component.find( 'select').find( 'option').length ).toBe(processorTypes.length + 1 );
 
-	})
+	});
 });

@@ -1,18 +1,12 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-
+import {render} from "react-testing-library";
 import { Processor } from './Processor';
 
 import {
 	checkboxFieldset,
 	selectField,
 	checkboxField,
-	numberField,
-	textField,
-	emailField,
-	radioField,
-	FormFieldsAutoComplete
 } from "@calderajs/components";
 
 describe('Processor', () => {
@@ -31,12 +25,8 @@ describe('Processor', () => {
 		onBlur = jest.fn();
 	});
 
-	it( 'imports FormFieldsAutoComplete from components', () => {
-		expect( typeof  FormFieldsAutoComplete ).toBe('function')
-	});
-
 	it('Matches snapshot', () => {
-		const component = renderer.create(
+		const component = render(
 			<Processor
 				fields={[checkboxFieldset, selectField, checkboxField]}
 				initialValues={{}}
@@ -47,7 +37,7 @@ describe('Processor', () => {
 				form={form}
 			/>
 		);
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(component).toMatchSnapshot();
 	});
 
 	it('Can switch to conditionals', () => {

@@ -1,93 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddProcessor Shows the choices 1`] = `
+exports[`ButtonField  component Shows children 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="caldera-field-group caldera-field-area-select is-required form-group"
+        class="form-group"
       >
         <label
           class="form-label"
-          for="newProcessorType"
         >
-          Processor Type
            
-          <span>
-            *
-          </span>
         </label>
-        <select
-          class="caldera-field caldera-field-select form-control"
-          id="newProcessorType"
-          required=""
+        <button
+          class="btn btn-secondary"
+          fieldtype="button"
+          html5type="text"
+          type="button"
         >
-          <option>
-            --
-          </option>
-          <option>
-            --
-          </option>
-          <option
-            value="apiRequest"
-          >
-            apiRequest
-          </option>
-          <option
-            value="redirect"
-          >
-            redirect
-          </option>
-        </select>
-        
+          Click Me
+        </button>
       </div>
-      <button
-        disabled=""
-      />
     </div>
   </body>,
   "container": <div>
     <div
-      class="caldera-field-group caldera-field-area-select is-required form-group"
+      class="form-group"
     >
       <label
         class="form-label"
-        for="newProcessorType"
       >
-        Processor Type
          
-        <span>
-          *
-        </span>
       </label>
-      <select
-        class="caldera-field caldera-field-select form-control"
-        id="newProcessorType"
-        required=""
+      <button
+        class="btn btn-secondary"
+        fieldtype="button"
+        html5type="text"
+        type="button"
       >
-        <option>
-          --
-        </option>
-        <option>
-          --
-        </option>
-        <option
-          value="apiRequest"
-        >
-          apiRequest
-        </option>
-        <option
-          value="redirect"
-        >
-          redirect
-        </option>
-      </select>
-      
+        Click Me
+      </button>
     </div>
-    <button
-      disabled=""
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
