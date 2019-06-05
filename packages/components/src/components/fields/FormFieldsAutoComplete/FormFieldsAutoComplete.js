@@ -6,7 +6,15 @@ import {AutoCompleteField} from "../AutoCompleteField/AutoCompleteField";
 export const FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER = 'form-fields-auto-complete';
 
 
-
+const RenderItem = (item, highlighted) =>
+    <li
+        className={'tag'}
+        key={item.id ? item.id : item.value }
+        style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
+        title={item.description}
+    >
+        {item.label}
+    </li>;
 export const FormFieldsAutoComplete = props => {
     const {
         form,
@@ -16,15 +24,18 @@ export const FormFieldsAutoComplete = props => {
         value,
         label,
         description,
-        fieldId
+        fieldId,
     } = props;
 
 
 
     const options = useMemo( () => form.fields.map( field => {
+        const tag = `%${field.fieldId}%`;
         return {
-            label: field.label,
-            value: field.fieldId
+            label: `${tag}`,
+            value: `${tag}`,
+            type: 'field',
+            description: `Use the value of the field ${field.label}`
         }
     }),[form]);
     return (
@@ -37,6 +48,7 @@ export const FormFieldsAutoComplete = props => {
             onBlur={onBlur}
             required={required}
             options={options}
+            RenderItem={RenderItem}
         />
     )
 };

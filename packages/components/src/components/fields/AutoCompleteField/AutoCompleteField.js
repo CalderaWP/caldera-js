@@ -15,11 +15,12 @@ const RenderMenu = (items, value, style) => (
 
 const RenderItem = (item, highlighted) =>
     <li
+        className={'tag'}
         key={item.id ? item.id : item.value }
         style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
     >
         {item.label}
-    </li>
+    </li>;
 
 export const AutoCompleteField = props => {
     const {
@@ -27,7 +28,8 @@ export const AutoCompleteField = props => {
         required,
         onChange,
         onBlur,
-        value
+        value,
+        RenderItem
     } = props;    const fieldProps = {
         ...props,
         required,
@@ -66,4 +68,5 @@ AutoCompleteField.propTypes = {
 
 AutoCompleteField.defaultProps = {
     ...SelectField.defaultProps,
+    RenderItem,
 };
