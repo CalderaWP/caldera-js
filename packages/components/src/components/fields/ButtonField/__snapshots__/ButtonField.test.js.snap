@@ -16,7 +16,6 @@ Object {
         <button
           class="btn btn-secondary"
           fieldtype="button"
-          html5type="text"
           type="button"
         >
           Click Me
@@ -36,7 +35,6 @@ Object {
       <button
         class="btn btn-secondary"
         fieldtype="button"
-        html5type="text"
         type="button"
       >
         Click Me

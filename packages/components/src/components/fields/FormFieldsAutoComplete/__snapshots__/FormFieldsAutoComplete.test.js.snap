@@ -6,6 +6,41 @@ Object {
   "baseElement": <body>
     <div>
       <div
+        class="form-group"
+      >
+        <label
+          class="form-label"
+          for="selection-field"
+        >
+          Select A Field
+           
+        </label>
+        <div
+          style="display: inline-block;"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-expanded="false"
+            autocomplete="off"
+            role="combobox"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="form-label"
+        for="selection-field"
+      >
+        Select A Field
+         
+      </label>
+      <div
         style="display: inline-block;"
       >
         <input
@@ -16,19 +51,6 @@ Object {
           value=""
         />
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      style="display: inline-block;"
-    >
-      <input
-        aria-autocomplete="list"
-        aria-expanded="false"
-        autocomplete="off"
-        role="combobox"
-        value=""
-      />
     </div>
   </div>,
   "debug": [Function],
@@ -99,6 +121,41 @@ Object {
   "baseElement": <body>
     <div>
       <div
+        class="form-group"
+      >
+        <label
+          class="form-label"
+          for="selection-field"
+        >
+          Select A Field
+           
+        </label>
+        <div
+          style="display: inline-block;"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-expanded="false"
+            autocomplete="off"
+            role="combobox"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="form-label"
+        for="selection-field"
+      >
+        Select A Field
+         
+      </label>
+      <div
         style="display: inline-block;"
       >
         <input
@@ -109,19 +166,6 @@ Object {
           value=""
         />
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      style="display: inline-block;"
-    >
-      <input
-        aria-autocomplete="list"
-        aria-expanded="false"
-        autocomplete="off"
-        role="combobox"
-        value=""
-      />
     </div>
   </div>,
   "debug": [Function],

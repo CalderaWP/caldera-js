@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {FieldWrapper} from "../FieldWrapper/FieldWrapper";
-import {SelectField} from "../SelectField/SelectField";
 import Autocomplete from 'react-autocomplete'
 import {Control} from "../Control";
 
@@ -30,7 +29,8 @@ export const AutoCompleteField = props => {
         onBlur,
         value,
         RenderItem,
-        fieldId
+        fieldId,
+        label
     } = props;
 
     const fieldProps = {
@@ -72,10 +72,9 @@ export const AutoCompleteField = props => {
 };
 
 AutoCompleteField.propTypes = {
-    ...SelectField.propTypes,
+    RenderItem: PropTypes.func
 };
 
 AutoCompleteField.defaultProps = {
-    ...SelectField.defaultProps,
     RenderItem,
 };
