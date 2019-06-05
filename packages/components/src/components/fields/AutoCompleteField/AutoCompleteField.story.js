@@ -26,40 +26,8 @@ function Wrapped(){
 	)
 }
 
-const  form = {
-	id: 'test',
-	fields: [
-		checkboxField,
-		textField
-	]
-};
 
-function FieldsPoc({form}){
-	const[value,onChange]= useState('');
-	const options = useMemo( () => form.fields.map( field => {
-		return {
-			label: field.label,
-			value: field.fieldId
-		}
-	}),[form]);
-	return (
-		<AutoCompleteField
-			label={'Select A Field'}
-			onChange={onChange}
-			description={'selection of hats'}
-			fieldId={'selection-hats'}
-			value={value}
-			required={false}
-			options={options}
-		/>
-	)
-}
+
 storiesOf(STORY_NAME, module).add('Default Variant ', () => (
-
-
 	<Wrapped/>
-));storiesOf(STORY_NAME, module).add('FieldsPoc ', () => (
-	<FieldsPoc form={form}/>
-
-
 ));
