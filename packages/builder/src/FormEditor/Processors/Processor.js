@@ -8,10 +8,11 @@ import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from "../../index";
 
 const ProcessorLabel = ({label}) => <div>{label}</div>;
 
-const ProcessorLabelEdit = ({label,onChange,id,value}) => (
+const ProcessorLabelEdit = ({label,onChange,id}) => (
 	<InputField 
 		label={'Processor Label'} 
-		value={value} onChange={onChange} 
+		value={label}
+		 onChange={onChange} 
 		html5type={'text'} 
 		fieldId={`processor-label-${id}`}
 	/>
@@ -59,8 +60,12 @@ export class Processor extends Component {
 		return props;
 	};
 
+	onEditLabel = (label) => {
+		this.props.onChange({label});
+	};
+
 	render() {
-		const { onClose, onRemove,label} = this.props;
+		const { onClose, onRemove,label,id,type} = this.props;
 		return (
 			<Fragment>
 				<Row>
@@ -78,7 +83,8 @@ export class Processor extends Component {
 							if ('settings' === name) {
 								return (
 									<div>
-										<ProcessorLabel label={label} />
+										<ProcessorLabel label={label ? label : type} />
+										<ProcessorLabelEdit label={label} onChange={this.onEditLabel} id={id} />
 										<HorizontalForm
 										{...this.formProps()}
 										className={'caldera-processor-settings'}
