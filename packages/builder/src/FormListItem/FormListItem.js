@@ -3,6 +3,27 @@ import { Toolbar, IconButton } from '@wordpress/components';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+const FormListItemButton = ({icon,label,formId,actionName}) => (
+	<IconButton
+		icon={icon}
+		label={label}
+		className={`form-list-item form-list-item-${actionName}`}
+		onClick={() => {
+			onFormAction(formId, actionName);
+		}}
+	/>
+);
+
+FormListItemButton.propTypes = {
+	icon: PropTypes.string,
+	label: PropTypes.string.isRequired,
+	formId: PropTypes.string.isRequired,
+	actionName: PropTypes.string.isRequired,
+};
+
+FormListItemButton.defaultProps = {
+	icon: 'edit'
+}
 /**
  *
  * @param form
@@ -10,55 +31,56 @@ import classNames from 'classnames';
  * @return {*}
  * @constructor
  */
-export const FormListItem = ({ form, onFormAction }) => (
-	<div>
-		<div>{form.name}</div>
-		<Toolbar>
-			<IconButton
-				icon="edit"
-				label="Edit Form"
-				className={'form-list-item form-list-item-edit'}
-				onClick={() => {
-					onFormAction(form.id, 'edit');
-				}}
-			/>
-			<IconButton
-				icon="list-view"
-				label="View Entries"
-				className={'form-list-item form-list-item-view-entries'}
-				onClick={() => {
-					onFormAction(form.id, 'view-entries');
-				}}
-			/>
-			<IconButton
-				icon="feedback"
-				label="Preview Form"
-				className={'form-list-item form-list-item-preview'}
-				onClick={() => {
-					onFormAction(form.id, 'preview');
-				}}
-			/>
-			<IconButton
-				icon="admin-settings"
-				label="Form Settings"
-				className={'form-list-item form-list-item-settings'}
-				onClick={() => {
-					onFormAction(form.id, 'settings');
-				}}
-			/>
-		</Toolbar>
-	</div>
-);
-
+export const FormListItem = ({ form, onFormAction,items }) =>{ 
+	items.forEach(item => item.formId = form.id );
+	console.log(items);
+	return(
+		<div>
+			<div>{form.name}</div>
+			<Toolbar>
+				{items.map(item => <FormListItemButton key={item.actionName} {...item } />	)}		
+			</Toolbar>
+		</div>
+	);
+};
+const items = [
+	{
+		icon: 'edit',
+		label: 'Edit Form',
+		actionName: 'edit',
+	},
+	{
+		icon: 'list-view',
+		label: 'View Entries',
+		actionName: 'view-entries',
+	},
+	{
+		icon: 'download',
+		label: 'Export',
+		actionName: 'export',
+	},
+	{
+		icon: 'feedback',
+		label: 'Preview Form',
+		actionName: 'preview',
+	},
+	{
+		icon: 'admin-settings',
+		label: 'Form Settings',
+		actionName: 'settings',
+	}
+]
 FormListItem.defaultProps = {
 	classNames: {
 		edit: 'form-list-item-edit',
 		'view-entries': 'form-list-item-view-entries',
 		preview: 'form-list-item-preview',
 		settings: 'form-list-item-settings'
-	}
+	},
+	items
 };
 FormListItem.propTypes = {
 	form: PropTypes.object,
-	onFormAction: PropTypes.func.isRequired
+	onFormAction: PropTypes.func.isRequired,
+	items: PropTypes.array
 };
