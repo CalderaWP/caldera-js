@@ -89,7 +89,6 @@ Object {
             <button
               class="btn btn-secondary"
               fieldtype="button"
-              html5type="text"
               type="button"
               value="Reset Search"
               wrapperclassnames="caldera-field-group,caldera-field-area-button"
@@ -421,7 +420,6 @@ Object {
           <button
             class="btn btn-secondary"
             fieldtype="button"
-            html5type="text"
             type="button"
             value="Reset Search"
             wrapperclassnames="caldera-field-group,caldera-field-area-button"

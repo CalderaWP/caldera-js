@@ -41,6 +41,7 @@
     "add:builder": "yarn workspace @calderajs/builder add"
   },
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "lerna": "^3.13.1",
+    "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1"
   }
 }
