@@ -3,6 +3,7 @@ export const processorsCollection = [
 		"id": "season7Episode2",
 		"label": "Test sending form data to test API",
 		"type": "apiRequest",
+		typeLabel: 'Api Request',
 		"config": {
 			"requestURL": "https:\/\/something.com",
 			"requestMethod": "POST",
@@ -32,6 +33,7 @@ export const processorsCollection = [
 		"id": "p2",
 		"label": "Main MailChimp",
 		"type": "mailchimp",
+		typeLabel: 'MailChimp',
 		"config": {
 			"listId": "7",
 		},

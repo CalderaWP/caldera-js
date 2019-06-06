@@ -16,7 +16,9 @@ export class FormEditor extends Component {
 
 	onSetTab = activeTab => {
 		if( 'entries' !== activeTab ){
-			props.setEntryViewerOpen(false);
+			this.props.setEntryViewerOpen(false);
+		}else{
+			this.props.setEntryViewerOpen(open);
 		}
 		this.setState({activeTab});
 	};
@@ -85,12 +87,20 @@ export class FormEditor extends Component {
 
 	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
 
-	render() {
-		const {form, processorTypes, updateForm,entries,entryViewerOpen} = this.props;
-		const theProcessorTypes = [
+	getProcessorTypes = (processorTypes,defaultProcessorTypes) =>{
+		defaultProcessorTypes.forEach(processorType => {
+			console.log(processorType);
+		});
+		
+		return [
 			...processorTypes,
 			...defaultProcessorTypes
 		];
+	};
+	render() {
+		const {form, processorTypes, updateForm,entries,entryViewerOpen} = this.props;
+		const theProcessorTypes = this.getProcessorTypes(processorTypes,defaultProcessorTypes);
+		console.log(theProcessorTypes);
 		return (
 			<div>
 				<Row>

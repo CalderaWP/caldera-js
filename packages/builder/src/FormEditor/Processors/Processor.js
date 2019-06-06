@@ -3,7 +3,7 @@ import { TabPanel } from '@wordpress/components';
 import { Row, Column,SelectFieldl,InputField } from "@calderajs/components";
 import { HorizontalForm } from"@calderajs/forms";
 import PropTypes from 'prop-types';
-import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from "../../index";
+import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '@calderajs/components';
 
 
 const ProcessorLabel = ({label}) => <div>{label}</div>;
@@ -51,10 +51,8 @@ export class Processor extends Component {
 		fields.forEach( (field,i) => {
 			const {fieldType} = field;
 			if( AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER === fieldType ){
-				props.options = props.hasOwnProperty('options' ) ? props.options : [];
-				props.options[i] = [
-					{'value':null, label: 'Should be field select'}
-				];
+				props.form = form;
+				console.log(props);
 			}
 		});
 		return props;
@@ -131,6 +129,10 @@ Processor.propTypes = {
 	onRemove: PropTypes.func,
 	type: PropTypes.string,
 	id: PropTypes.string,
+	form: PropTypes.shape({
+		id:PropTypes.string.isRequired,
+		fields: PropTypes.array.isRequired
+	}).isRequired
 };
 
 Processor.defaultProps = {

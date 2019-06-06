@@ -1,8 +1,9 @@
 import{createFieldRule}from "@calderajs/forms";
-import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '../../../index';
+import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '@calderajs/components';
 export const AUTO_RESPONDER_PROCESSOR_TYPE = 'autoResponder';
 export const autoResponder = {
 	type: AUTO_RESPONDER_PROCESSOR_TYPE,
+	typeLabel: 'Auto Responder',
 	fields: [
 		{
 			fieldType: AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,

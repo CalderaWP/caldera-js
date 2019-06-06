@@ -3,6 +3,7 @@ export const defaultProcessorTypes = [
 	autoResponder,
 	{
 		type: 'apiRequest',
+		typeLabel: 'API Request',
 		fields:  [
 			{
 				fieldId: 'requestURL',

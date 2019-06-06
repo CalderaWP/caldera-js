@@ -106,18 +106,21 @@ export class Processors extends Component {
 							config,
 							type,
 							label,
-							conditionals
+							conditionals,
+							typeLabel
 						} = processor;
 						if (this.isActiveProcessor(id)) {
 							return (
-								<Fragment key={id}>
+								<Fragment 
+									key={id}
+								>
 									<Processor
 										form={form}
 										className={`caldera-forms-active-processor-${id}`}
 										fields={fields}
 										conditionals={conditionals}
 										initialValues={config}
-										label={label}
+										label={label ? label : typeLabel }
 										type={type}
 										onChange={(fieldValues) => this.handleProcessorChange(id, fieldValues)}
 										onRemove={() => this.handleRemoveProcessor(id)}
@@ -132,7 +135,7 @@ export class Processors extends Component {
 									className={`caldera-forms-choose-processor caldera-forms-choose-processor-${id}`}
 									onClick={() => this.setActive(id)}
 								>
-									{label ? label : type}
+									{label ? label : typeLabel}
 								</button>
 							</Row>
 
