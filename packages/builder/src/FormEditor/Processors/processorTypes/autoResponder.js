@@ -1,12 +1,12 @@
 import{createFieldRule}from "@calderajs/forms";
-import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '@calderajs/components';
+import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '@calderajs/components';
 export const AUTO_RESPONDER_PROCESSOR_TYPE = 'autoResponder';
 export const autoResponder = {
 	type: AUTO_RESPONDER_PROCESSOR_TYPE,
 	typeLabel: 'Auto Responder',
 	fields: [
 		{
-			fieldType: AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
+			fieldType: FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 			html5type: 'string',
 			value: '',
 			label: 'From Name',
@@ -15,7 +15,7 @@ export const autoResponder = {
 			required: true
 		},
 		{
-			fieldType: 'input',
+			fieldType: FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 			html5type: 'email',
 			value: '',
 			label: 'From email',
@@ -24,7 +24,7 @@ export const autoResponder = {
 			required: true
 		},
 		{
-			fieldType: 'input',
+			fieldType: FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 			html5type: 'string',
 			value: '',
 			label: 'Recipient Name',
@@ -33,7 +33,7 @@ export const autoResponder = {
 			required: true
 		},
 		{
-			fieldType: 'input',
+			fieldType: FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 			html5type: 'email',
 			value: '',
 			label: 'Recipient email',

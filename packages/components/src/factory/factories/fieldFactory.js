@@ -126,6 +126,13 @@ export const fieldFactory = (
     };
 
     switch (fieldType) {
+        case FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER : 
+            props = {...props, fieldType};
+            return <FormFieldsAutoComplete {...props } />;
+            
+        case AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER : 
+            props = {...props, fieldType};
+            return <AutoCompleteField {...props } />;
         case "checkboxes":
             props = {...props, fieldType: 'checkbox'};
             return (

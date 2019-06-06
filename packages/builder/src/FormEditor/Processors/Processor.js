@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import { TabPanel } from '@wordpress/components';
-import { Row, Column,SelectFieldl,InputField } from "@calderajs/components";
+import { Row, Column,SelectFieldl,InputField, FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER } from "@calderajs/components";
 import { HorizontalForm } from"@calderajs/forms";
 import PropTypes from 'prop-types';
 import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from '@calderajs/components';
@@ -46,13 +46,22 @@ export class Processor extends Component {
 	 * @return {Processor.props}
 	 */
 	formProps = () => {
+		const {form} = this.props;
 		let props = {...this.props};
+		props.fields.map( field => {
+			if( FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER === field.fieldType ){
+				field.form = form;
+			}
+			return field;
+		});
 		return props;
 	};
 
 	onEditLabel = (label) => {
 		this.props.onChange({label});
 	};
+
+	
 
 	render() {
 		const { onClose, onRemove,label,id,type} = this.props;
