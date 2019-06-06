@@ -1,10 +1,21 @@
 import React, { Fragment, Component } from 'react';
-import { TabPanel, } from '@wordpress/components';
-import { Row, Column,SelectField } from"@calderajs/components";
+import { TabPanel } from '@wordpress/components';
+import { Row, Column,SelectFieldl,InputField } from "@calderajs/components";
 import { HorizontalForm } from"@calderajs/forms";
 import PropTypes from 'prop-types';
 import {AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER} from "../../index";
 
+
+const ProcessorLabel = ({label}) => <div>{label}</div>;
+
+const ProcessorLabelEdit = ({label,onChange,id,value}) => (
+	<InputField 
+		label={'Processor Label'} 
+		value={value} onChange={onChange} 
+		html5type={'text'} 
+		fieldId={`processor-label-${id}`}
+	/>
+);
 export class Processor extends Component {
 	state = {
 		activeTab: 'settings'
@@ -49,7 +60,7 @@ export class Processor extends Component {
 	};
 
 	render() {
-		const { onClose, onRemove } = this.props;
+		const { onClose, onRemove,label} = this.props;
 		return (
 			<Fragment>
 				<Row>
@@ -66,10 +77,14 @@ export class Processor extends Component {
 							const { name } = tab;
 							if ('settings' === name) {
 								return (
-									<HorizontalForm
+									<div>
+										<ProcessorLabel label={label} />
+										<HorizontalForm
 										{...this.formProps()}
 										className={'caldera-processor-settings'}
 									/>
+									</div>
+									
 								);
 							}
 							return (

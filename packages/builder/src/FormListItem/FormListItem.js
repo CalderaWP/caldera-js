@@ -32,14 +32,12 @@ FormListItemButton.defaultProps = {
  * @constructor
  */
 export const FormListItem = ({ form, onFormAction,items }) =>{ 
-	items.forEach(item => item.formId = form.id );
-	items.forEach(item => item.onFormAction = onFormAction );
-
+	const formId = form.id;
 	return(
 		<div>
 			<div>{form.name}</div>
 			<Toolbar>
-				{items.map(item => <FormListItemButton key={item.actionName} {...item } />	)}		
+				{items.map(item => <FormListItemButton key={item.actionName}formId={formId} onFormAction={onFormAction} {...item } />	)}		
 			</Toolbar>
 		</div>
 	);
