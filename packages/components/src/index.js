@@ -22,9 +22,7 @@ export {
 /**
  * Grid Components
  */
-export {Field} from './factory/components/Field';
 export {FieldArea} from './factory/components/FieldArea';
-export {Fields} from './factory/components/Fields';
 export {Row} from './factory/components/Grid/Row';
 export {Rows} from './factory/components/Grid/Rows';
 export {Column} from './factory/components/Grid/Column';

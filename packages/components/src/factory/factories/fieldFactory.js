@@ -10,7 +10,11 @@ import {
     SelectField,
     SubmitButton,
     TextAreaField,
-    ButtonField
+    ButtonField,
+    AutoCompleteField,
+    FormFieldsAutoComplete,
+    FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
+    AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER
 } from "../../components/fields";
 
 import {RadioOrCheckboxControl} from "../../components/fields/RadioOrCheckboxControl";
@@ -83,13 +87,6 @@ function RadioOrCheckboxFieldSet(props) {
         </FieldWrapper>
     );
 }
-
-
-
-
-
-
-
 
 
 export const fieldFactory = (
