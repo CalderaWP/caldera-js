@@ -3,7 +3,7 @@ import { Toolbar, IconButton } from '@wordpress/components';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const FormListItemButton = ({icon,label,formId,actionName}) => (
+const FormListItemButton = ({icon,label,formId,actionName,onFormAction}) => (
 	<IconButton
 		icon={icon}
 		label={label}
@@ -33,7 +33,8 @@ FormListItemButton.defaultProps = {
  */
 export const FormListItem = ({ form, onFormAction,items }) =>{ 
 	items.forEach(item => item.formId = form.id );
-	console.log(items);
+	items.forEach(item => item.onFormAction = onFormAction );
+
 	return(
 		<div>
 			<div>{form.name}</div>

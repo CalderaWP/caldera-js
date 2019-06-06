@@ -26,6 +26,8 @@ storiesOf('FormsList', module).add('With forms', () => (
 		forms={Object.values(forms)}
 		panelTitle={'Panel Title'}
 		noFormsMessage={'Custom No Forms Found'}
-		onFormAction={() => {}}
+		onFormAction={(formId,actionName) => {
+			console.log(formId,actionName);
+		}}
 	/>
 ));
