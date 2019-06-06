@@ -3,7 +3,7 @@ import {FormEditor, FormsList} from "../..";
 import {MenuContext} from "../MenuContext";
 import {FormContext} from "../FormContext";
 import {FormEntryViewer} from '../../'
-export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => {
+export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId,updateForm}) => {
     const {name} = tab;
 
     const [showSingleForm,setShowSingleForm] = useState(false);
@@ -37,7 +37,7 @@ export const Body = ({tab, forms,activeForm, setActiveItem,setActiveFormId}) => 
     let props = {};
     switch (name) {
         case 'forms':
-            props = {forms, panelTitle: 'Forms', classname: '', onFormAction, hideTabs: ['editor', 'layout'],entryViewerOpen,setEntryViewerOpen};
+            props = {updateForm,forms, panelTitle: 'Forms', classname: '', onFormAction, hideTabs: ['editor', 'layout'],entryViewerOpen,setEntryViewerOpen};
             if( showSingleForm ){
                 return <FormEditor form={activeForm} {...props} />
             }
@@ -58,10 +58,19 @@ export const BodyWithContext = ({children}) => {
         forms,
         activeFormId,
         setActiveFormId,
-        getActiveForm
+        getActiveForm,
+        updateForm
     } = useContext(FormContext);
 
-    const props = { forms, tab: getActiveTab(),activeForm: getActiveForm(), setActiveItem,setActiveFormId };
+    forms.forEach(form => {
+        ['fields', 'conditionals', 'processors'].forEach( key  => {
+            if( ! form.hasOwnProperty(key)){
+                form[key] = [];
+            }
+        });
+    })
+
+    const props = { updateForm,forms, tab: getActiveTab(),activeForm: getActiveForm(), setActiveItem,setActiveFormId };
     return <Body { ...props }/>
 
 

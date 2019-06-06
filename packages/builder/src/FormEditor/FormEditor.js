@@ -88,10 +88,6 @@ export class FormEditor extends Component {
 	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
 
 	getProcessorTypes = (processorTypes,defaultProcessorTypes) =>{
-		defaultProcessorTypes.forEach(processorType => {
-			console.log(processorType);
-		});
-		
 		return [
 			...processorTypes,
 			...defaultProcessorTypes
@@ -100,8 +96,7 @@ export class FormEditor extends Component {
 	render() {
 		const {form, processorTypes, updateForm,entries,entryViewerOpen} = this.props;
 		const theProcessorTypes = this.getProcessorTypes(processorTypes,defaultProcessorTypes);
-		console.log(theProcessorTypes);
-		return (
+					return (
 			<div>
 				<Row>
 					<Column>

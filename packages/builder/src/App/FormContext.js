@@ -21,6 +21,16 @@ export const FormProvider = ({initialForms: initialForms,children}) => {
                     }
                     return  forms.find( form => activeFormId === form.id );
 
+                },
+                updateForm(form){
+                    const existingForm = forms.find( f => f.id === form.id );
+                    const update = forms.map(f => {
+                        if( f.id === form.id ){
+                            f = {...form};
+                        }
+                        return f;
+                    });
+                    setForms(update);
                 }
             }}
         >

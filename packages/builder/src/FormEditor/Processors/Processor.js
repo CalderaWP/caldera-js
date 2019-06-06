@@ -47,14 +47,6 @@ export class Processor extends Component {
 	 */
 	formProps = () => {
 		let props = {...this.props};
-		const {fields} = this.props;
-		fields.forEach( (field,i) => {
-			const {fieldType} = field;
-			if( AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER === fieldType ){
-				props.form = form;
-				console.log(props);
-			}
-		});
 		return props;
 	};
 

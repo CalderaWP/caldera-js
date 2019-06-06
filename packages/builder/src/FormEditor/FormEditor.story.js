@@ -108,7 +108,7 @@ class MockFormApp extends Component {
 		form: {
 			ID: 'a-form',
 			name: 'Form Name',
-			processors: processorsCollection,
+			processors: [],
 			fields: [
 				checkboxField,
 				radioField,

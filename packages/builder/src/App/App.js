@@ -20,8 +20,10 @@ const initialForms = [
 	{
 		id: 'other-form',
 		name: 'Other Form 2017',
-		_last_updated: 'Wed, 24 Oct 2017 19:34:12 +0000'
-
+		_last_updated: 'Wed, 24 Oct 2017 19:34:12 +0000',
+		fields: [],
+		processors: [],
+		conditionals: [],
 	},
 	contactForm,
 	{
