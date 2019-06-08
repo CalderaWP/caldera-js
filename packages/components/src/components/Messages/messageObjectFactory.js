@@ -1,4 +1,4 @@
-import { toBoolean } from '../fields/util';
+import { toBoolean } from "../fields/util";
 
 /**
  * Prepares messages object in fieldConfigs
@@ -8,12 +8,12 @@ import { toBoolean } from '../fields/util';
  * @return {{message: *, error: boolean}}
  */
 export const messageObjectFactory = ({ message, error }) => {
-	if ('string' !== typeof message) {
-		message = '';
+	if ("string" !== typeof message) {
+		message = "";
 	}
 
 	return {
 		message: message,
-		error: toBoolean(error)
+		error: toBoolean(error),
 	};
 };

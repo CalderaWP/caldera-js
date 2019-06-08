@@ -1,24 +1,18 @@
 import React from "react";
-import {FieldWrapper} from "..";
-import {Control} from "../Control";
+import { FieldWrapper } from "..";
+import { Control } from "../Control";
 
 export const SubmitButton = props => {
-	const {
-		label,
-		value,
-		onChange,
-		onBlur,
-		attributes,
-	} = props;
+	const { label, value, onChange, onBlur, attributes } = props;
 
 	const wrapperProps = {
 		...props,
-		fieldType: 'submit'
+		fieldType: "submit",
 	};
 	return (
-		<FieldWrapper {...wrapperProps} >
+		<FieldWrapper {...wrapperProps}>
 			<Control
-				as={'input'}
+				as={"input"}
 				type={"submit"}
 				value={label ? label : value}
 				onChange={onChange}
@@ -33,4 +27,3 @@ export const SubmitButton = props => {
 		</FieldWrapper>
 	);
 };
-

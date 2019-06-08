@@ -1,4 +1,4 @@
-import 'whatwg-fetch';
+import "whatwg-fetch";
 /**
  * Default form submission handler
  *
@@ -12,19 +12,19 @@ export default function submitFormCaldera(fieldValues, eventOptions, fetch) {
 	const entryValues = [];
 	Object.keys(fieldValues).forEach(fieldId => {
 		entryValues.push({
-			fieldId: fieldValues[fieldId]
+			fieldId: fieldValues[fieldId],
 		});
 	});
 	const url = `${apiRootUri}/v1/entries`;
 	return fetch(url, {
-		method: 'PUT',
+		method: "PUT",
 		headers: {
-			'Content-Type': 'application/json',
-			'X-CWP-TOKEN': token
+			"Content-Type": "application/json",
+			"X-CWP-TOKEN": token,
 		},
 		body: JSON.stringify({
 			formId,
-			entryValues: fieldValues
-		})
+			entryValues: fieldValues,
+		}),
 	});
 }

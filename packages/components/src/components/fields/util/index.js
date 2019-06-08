@@ -1,8 +1,8 @@
-import { parseAttributes } from './parseAttributes';
-import { fieldClassNames } from './fieldClassNames';
-import { labelClassNames } from './labelClassNames';
-import { fieldSetClassNames } from './fieldSetClassNames';
-import { fieldWrapperClassNames } from './fieldWrapperClassNames';
+import { parseAttributes } from "./parseAttributes";
+import { fieldClassNames } from "./fieldClassNames";
+import { labelClassNames } from "./labelClassNames";
+import { fieldSetClassNames } from "./fieldSetClassNames";
+import { fieldWrapperClassNames } from "./fieldWrapperClassNames";
 /**
  * Checks if a given input type is an acceptable HTML5 input type
  *
@@ -11,16 +11,16 @@ import { fieldWrapperClassNames } from './fieldWrapperClassNames';
  */
 const isValidHtml5type = type => {
 	return [
-		'text',
-		'email',
-		'number',
-		'date',
-		'datetime',
-		'password',
-		'submit',
-		'reset',
-		'checkbox',
-		'hidden'
+		"text",
+		"email",
+		"number",
+		"date",
+		"datetime",
+		"password",
+		"submit",
+		"reset",
+		"checkbox",
+		"hidden",
 	].includes(type);
 };
 
@@ -50,11 +50,11 @@ const addOrRemoveFromArray = (value, array) => {
 const toBoolean = value => {
 	switch (value) {
 		case true:
-		case 'true':
+		case "true":
 		case 1:
-		case '1':
-		case 'on':
-		case 'yes':
+		case "1":
+		case "on":
+		case "yes":
 			return true;
 		default:
 			return false;
@@ -69,5 +69,5 @@ export {
 	toBoolean,
 	isValidHtml5type,
 	fieldSetClassNames,
-	fieldWrapperClassNames
+	fieldWrapperClassNames,
 };

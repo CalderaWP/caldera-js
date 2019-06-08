@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import {FieldWrapper} from "..";
-import {Form} from "react-bootstrap";
+import PropTypes from "prop-types";
+import React from "react";
+import { FieldWrapper } from "..";
+import { Form } from "react-bootstrap";
 import classNames from "classnames";
-import {fieldClassNames} from "../util";
+import { fieldClassNames } from "../util";
 
 export const TextAreaField = props => {
-	const {fieldId, onChange, onBlur} = props;
-	const fieldType = 'textarea';
-	let {attributes} = props;
-	if( 'object' !== typeof  attributes ){
+	const { fieldId, onChange, onBlur } = props;
+	const fieldType = "textarea";
+	let { attributes } = props;
+	if ("object" !== typeof attributes) {
 		attributes = {};
 	}
-	if ( !attributes.hasOwnProperty('rows')) {
+	if (!attributes.hasOwnProperty("rows")) {
 		attributes.rows = 5;
 	}
 
@@ -20,19 +20,20 @@ export const TextAreaField = props => {
 		...props,
 		fieldType,
 	};
-	return <FieldWrapper {...wrapperProps}>
-		<Form.Control
-			as="textarea"
-			rows={attributes.rows}
-			id={fieldId}
-			{...attributes}
-			onChange={onChange}
-			onBlur={onBlur}
-			className={classNames(fieldClassNames(fieldType))}
-
-		/>
-	</FieldWrapper>
-}
+	return (
+		<FieldWrapper {...wrapperProps}>
+			<Form.Control
+				as="textarea"
+				rows={attributes.rows}
+				id={fieldId}
+				{...attributes}
+				onChange={onChange}
+				onBlur={onBlur}
+				className={classNames(fieldClassNames(fieldType))}
+			/>
+		</FieldWrapper>
+	);
+};
 
 TextAreaField.propTypes = {
 	label: PropTypes.string,
@@ -45,14 +46,13 @@ TextAreaField.propTypes = {
 		PropTypes.string,
 		PropTypes.number,
 		PropTypes.array,
-		PropTypes.bool
+		PropTypes.bool,
 	]),
 	onChange: PropTypes.func,
-	onBlur: PropTypes.func
+	onBlur: PropTypes.func,
 };
 
 TextAreaField.defaultProps = {
-	onBlur: () => {
-	},
+	onBlur: () => {},
 	required: false,
 };

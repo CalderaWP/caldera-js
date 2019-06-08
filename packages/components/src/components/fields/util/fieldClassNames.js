@@ -1,4 +1,6 @@
-import classNameService, {FILTER_FIELD_CLASS_NAME} from "./classNameService/classNameService";
+import classNameService, {
+	FILTER_FIELD_CLASS_NAME,
+} from "./classNameService/classNameService";
 
 /**
  * Get the class names for a field

@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import { Row, rowPropTypes } from './Row';
-import PropTypes from 'prop-types';
+import React, { Fragment } from "react";
+import { Row, rowPropTypes } from "./Row";
+import PropTypes from "prop-types";
 
 export const Rows = ({ rows, onChange, onBlur, className }) => (
 	<Fragment>
@@ -20,5 +20,5 @@ Rows.propTypes = {
 	rows: PropTypes.arrayOf(PropTypes.shape(rowPropTypes)),
 	onChange: PropTypes.func.isRequired,
 	onBlur: PropTypes.func,
-	className: PropTypes.string
+	className: PropTypes.string,
 };

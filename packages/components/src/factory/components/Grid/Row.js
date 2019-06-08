@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { Flex } from '@rebass/grid';
-import { Column } from './Column';
-import classNames from 'classnames';
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
+import { Flex } from "@rebass/grid";
+import { Column } from "./Column";
+import classNames from "classnames";
 
-import {classNameService} from "../../..";
+import { classNameService } from "../../..";
 
 /**
  *
@@ -23,12 +23,16 @@ export const Row = ({
 	onBlur,
 	className,
 	rowId,
-	children
+	children,
 }) => {
 	return (
-		<Flex className={
-			classNames(className, classNameService.getFormRowClassNames(rowId))
-		} id={rowId}>
+		<Flex
+			className={classNames(
+				className,
+				classNameService.getFormRowClassNames(rowId)
+			)}
+			id={rowId}
+		>
 			{columns ? (
 				<Fragment>
 					{columns.map(column => {
@@ -63,12 +67,12 @@ export const rowPropTypes = {
 	columns: PropTypes.arrayOf(
 		PropTypes.shape({
 			width: PropTypes.string.isRequired,
-			columnId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+			columnId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 		})
 	),
 	rowId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func,
-	className: PropTypes.string
+	className: PropTypes.string,
 };
 Row.propTypes = rowPropTypes;

@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
-import { storiesOf } from '@storybook/react';
-import { Processor } from './Processors/Processor';
-import { Processors } from './Processors/Processors';
-import {processorsCollection} from './Processors/processors.fixtures';
+import React, { Component } from "react";
+import { storiesOf } from "@storybook/react";
+import { Processor } from "./Processors/Processor";
+import { Processors } from "./Processors/Processors";
+import { processorsCollection } from "./Processors/processors.fixtures";
 
-import { FormEditor } from './FormEditor';
+import { FormEditor } from "./FormEditor";
 
 const form = {
-	fields: []
-}
+	fields: [],
+};
 
 import {
 	checkboxFieldset,
@@ -17,9 +17,9 @@ import {
 	numberField,
 	textField,
 	emailField,
-	radioField
+	radioField,
 } from "@calderajs/components";
-storiesOf('FormEditor', module).add('The processor', () => (
+storiesOf("FormEditor", module).add("The processor", () => (
 	<Processor
 		fields={[
 			checkboxFieldset,
@@ -28,11 +28,11 @@ storiesOf('FormEditor', module).add('The processor', () => (
 			numberField,
 			textField,
 			emailField,
-			radioField
+			radioField,
 		]}
 		form={form}
-		type={'mailchimp'}
-		label={'Main Segment'}
+		type={"mailchimp"}
+		label={"Main Segment"}
 		onChange={values => console.log(values)}
 		onClose={values => console.log(values)}
 		onRemove={values => console.log(values)}
@@ -41,35 +41,31 @@ storiesOf('FormEditor', module).add('The processor', () => (
 
 const processorTypes = [
 	{
-		type: 'apiRequest'
+		type: "apiRequest",
 	},
 	{
-		type: 'redirect'
-	}
+		type: "redirect",
+	},
 ];
-
 
 class MockProcessorsUI extends Component {
 	state = {
 		processors: [...processorsCollection],
 		form: {
-			ID: 'a-form',
-			name: 'Form Name',
-			fields: [
-				checkboxField,
-				radioField,
-				textField
-			]
-		}
+			ID: "a-form",
+			name: "Form Name",
+			fields: [checkboxField, radioField, textField],
+		},
 	};
 
-	updateProcessors = (processors) => this.setState({
-		processors
-	});
+	updateProcessors = processors =>
+		this.setState({
+			processors,
+		});
 
-	render(){
-		const {form,processors} = this.state;
-		return(
+	render() {
+		const { form, processors } = this.state;
+		return (
 			<Processors
 				processorTypes={processorTypes}
 				processors={processors}
@@ -80,59 +76,52 @@ class MockProcessorsUI extends Component {
 				form={form}
 				updateProcessors={this.updateProcessors}
 			/>
-		)
+		);
 	}
 }
 
+storiesOf("FormEditor", module).add(
+	"The processors list - non-functional",
+	() => (
+		<Processors
+			processorTypes={processorTypes}
+			processors={processorsCollection}
+			onChange={values => console.log(values)}
+			onClose={values => console.log(values)}
+			onRemove={values => console.log(values)}
+			formFields={[]}
+			form={form}
+			updateProcessors={values => console.log(values)}
+		/>
+	)
+);
 
-storiesOf('FormEditor', module).add('The processors list - non-functional', () => (
-	<Processors
-		processorTypes={processorTypes}
-		processors={processorsCollection}
-		onChange={values => console.log(values)}
-		onClose={values => console.log(values)}
-		onRemove={values => console.log(values)}
-		formFields={[]}
-		form={form}
-		updateProcessors={values => console.log(values)}
-	/>
-));
-
-storiesOf('FormEditor', module).add('The processors list - functional', () => (
+storiesOf("FormEditor", module).add("The processors list - functional", () => (
 	<MockProcessorsUI />
 ));
-
 
 class MockFormApp extends Component {
 	state = {
 		form: {
-			ID: 'a-form',
-			name: 'Form Name',
+			ID: "a-form",
+			name: "Form Name",
 			processors: [],
-			fields: [
-				checkboxField,
-				radioField,
-				textField
-			]
-		}
+			fields: [checkboxField, radioField, textField],
+		},
 	};
 
-	updateForm = (form) => this.setState({form});
+	updateForm = form => this.setState({ form });
 
-	render(){
-		const {form} = this.state;
-		return(
+	render() {
+		const { form } = this.state;
+		return (
 			<FormEditor
 				processorTypes={processorTypes}
 				updateForm={this.updateForm}
-				form={ form }
+				form={form}
 			/>
-		)
+		);
 	}
 }
 
-storiesOf('FormEditor', module).add('The form editor', () => (
-	<MockFormApp />
-));
-
-
+storiesOf("FormEditor", module).add("The form editor", () => <MockFormApp />);

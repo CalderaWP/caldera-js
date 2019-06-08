@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 /**
  * The shape of the message object passed to Message compoent
@@ -7,5 +7,5 @@ import PropTypes from 'prop-types';
  */
 export const messagePropShape = PropTypes.shape({
 	error: PropTypes.bool,
-	text: PropTypes.string
+	text: PropTypes.string,
 });

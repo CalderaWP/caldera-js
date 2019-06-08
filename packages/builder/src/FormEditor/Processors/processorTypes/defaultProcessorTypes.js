@@ -1,27 +1,26 @@
-import {autoResponder} from './autoResponder';
+import { autoResponder } from "./autoResponder";
 export const defaultProcessorTypes = [
 	autoResponder,
 	{
-		type: 'apiRequest',
-		typeLabel: 'API Request',
-		fields:  [
+		type: "apiRequest",
+		typeLabel: "API Request",
+		fields: [
 			{
-				fieldId: 'requestURL',
-				fieldType: 'input',
-				html5type: 'url',
+				fieldId: "requestURL",
+				fieldType: "input",
+				html5type: "url",
 				required: true,
 			},
 			{
-				fieldId: 'requestMethod',
-				fieldType: 'select',
-				label: 'Request Method',
-				default: 'GET',
+				fieldId: "requestMethod",
+				fieldType: "select",
+				label: "Request Method",
+				default: "GET",
 				options: [
-					{ value: "GET", label: 'GET' },
-					{ value: "POST", label: 'POST' },
-				]
-			}
-
-		]
-	}
+					{ value: "GET", label: "GET" },
+					{ value: "POST", label: "POST" },
+				],
+			},
+		],
+	},
 ];

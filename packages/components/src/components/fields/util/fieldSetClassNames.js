@@ -1,4 +1,6 @@
-import classNameService,{FILTER_FIELD_SET_CLASS_NAME} from "./classNameService/classNameService";
+import classNameService, {
+	FILTER_FIELD_SET_CLASS_NAME,
+} from "./classNameService/classNameService";
 
 /**
  * Get the class names for a fieldset
@@ -6,7 +8,7 @@ import classNameService,{FILTER_FIELD_SET_CLASS_NAME} from "./classNameService/c
  * @return {string}
  */
 export const fieldSetClassNames = fieldType => {
-	return  classNameService.applyFilters(
+	return classNameService.applyFilters(
 		FILTER_FIELD_SET_CLASS_NAME,
 		`caldera-fieldset caldera-fieldset-${fieldType}`
 	);

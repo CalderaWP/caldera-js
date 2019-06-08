@@ -1,26 +1,24 @@
-import React, {Component, Fragment} from 'react';
-import PropTypes from 'prop-types';
-import {Processor} from "./Processor";
-import {Row, fieldAreaFactory} from "@calderajs/components";
-import {processorTypesPropType} from './processorTypesPropType';
-import processorFactory from './processorTypes/processorFactory';
-import {AddProcessor} from './AddProcessor';
-import {defaultProcessorTypes} from "./processorTypes/defaultProcessorTypes";
-
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import { Processor } from "./Processor";
+import { Row, fieldAreaFactory } from "@calderajs/components";
+import { processorTypesPropType } from "./processorTypesPropType";
+import processorFactory from "./processorTypes/processorFactory";
+import { AddProcessor } from "./AddProcessor";
+import { defaultProcessorTypes } from "./processorTypes/defaultProcessorTypes";
 
 export class Processors extends Component {
-
 	state = {
-		activeProcessorId: '',
-		newProcessorType: ''
+		activeProcessorId: "",
+		newProcessorType: "",
 	};
 
 	/**
 	 * Set which processor is active
 	 * @param activeProcessorId
 	 */
-	setActive = (activeProcessorId) => {
-		this.setState({activeProcessorId});
+	setActive = activeProcessorId => {
+		this.setState({ activeProcessorId });
 	};
 
 	/**
@@ -28,8 +26,8 @@ export class Processors extends Component {
 	 * @param processorId
 	 * @return {string|boolean}
 	 */
-	isActiveProcessor = (processorId) => {
-		const {activeProcessorId} = this.state;
+	isActiveProcessor = processorId => {
+		const { activeProcessorId } = this.state;
 		return activeProcessorId && processorId === activeProcessorId;
 	};
 
@@ -40,9 +38,9 @@ export class Processors extends Component {
 	 * @param updatedProcessor
 	 */
 	handleProcessorChange = (processorId, updatedProcessor) => {
-		const {processors, updateProcessors} = this.props;
+		const { processors, updateProcessors } = this.props;
 		let processorIndex = processors.findIndex(processor => {
-			return processorId === processor.id
+			return processorId === processor.id;
 		});
 		if (-1 !== processorIndex) {
 			let processor = processors[processorIndex];
@@ -50,13 +48,11 @@ export class Processors extends Component {
 				...processors.splice(processorIndex - 1, 1),
 				{
 					...processor,
-					...updatedProcessor
-				}
+					...updatedProcessor,
+				},
 			];
 			updateProcessors(update);
 		}
-
-
 	};
 
 	/**
@@ -64,11 +60,13 @@ export class Processors extends Component {
 	 *
 	 * @param processorId
 	 */
-	handleRemoveProcessor = (processorId) => {
-		const {processors, updateProcessors} = this.props;
-		updateProcessors([...processors.filter(processor => {
-			return processorId !== processor.id
-		})]);
+	handleRemoveProcessor = processorId => {
+		const { processors, updateProcessors } = this.props;
+		updateProcessors([
+			...processors.filter(processor => {
+				return processorId !== processor.id;
+			}),
+		]);
 	};
 
 	/**
@@ -76,12 +74,15 @@ export class Processors extends Component {
 
 	 */
 	handleCreateProcessor = () => {
-		const {processors, updateProcessors} = this.props;
-		const {activeProcessor,newProcessorType} = this.state;
-		const newProcessor = processorFactory(newProcessorType,defaultProcessorTypes);
-		const {id} = newProcessor;
+		const { processors, updateProcessors } = this.props;
+		const { activeProcessor, newProcessorType } = this.state;
+		const newProcessor = processorFactory(
+			newProcessorType,
+			defaultProcessorTypes
+		);
+		const { id } = newProcessor;
 		updateProcessors([...processors, newProcessor]);
-		this.setState({activeProcessorId:id,newProcessorType: ''});
+		this.setState({ activeProcessorId: id, newProcessorType: "" });
 	};
 
 	/**
@@ -90,12 +91,13 @@ export class Processors extends Component {
 	 * @param newProcessorType
 	 * @return {*}
 	 */
-	setNewProcessorType = (newProcessorType) => this.setState({newProcessorType});
+	setNewProcessorType = newProcessorType =>
+		this.setState({ newProcessorType });
 
 	/** @inheritDoc **/
 	render() {
-		const {activeProcessor,newProcessorType} = this.state;
-		const {processors,processorTypes,form} = this.props;
+		const { activeProcessor, newProcessorType } = this.state;
+		const { processors, processorTypes, form } = this.props;
 		return (
 			<div>
 				<div>
@@ -107,27 +109,32 @@ export class Processors extends Component {
 							type,
 							label,
 							conditionals,
-							typeLabel
+							typeLabel,
 						} = processor;
 						if (this.isActiveProcessor(id)) {
 							return (
-								<Fragment 
-									key={id}
-								>
+								<Fragment key={id}>
 									<Processor
 										form={form}
 										className={`caldera-forms-active-processor-${id}`}
 										fields={fields}
 										conditionals={conditionals}
 										initialValues={config}
-										label={label ? label : typeLabel }
+										label={label ? label : typeLabel}
 										type={type}
-										onChange={(fieldValues) => this.handleProcessorChange(id, fieldValues)}
-										onRemove={() => this.handleRemoveProcessor(id)}
-										onClose={() => this.setActive('')}
+										onChange={fieldValues =>
+											this.handleProcessorChange(
+												id,
+												fieldValues
+											)
+										}
+										onRemove={() =>
+											this.handleRemoveProcessor(id)
+										}
+										onClose={() => this.setActive("")}
 									/>
 								</Fragment>
-							)
+							);
 						}
 						return (
 							<Row key={id}>
@@ -138,8 +145,7 @@ export class Processors extends Component {
 									{label ? label : typeLabel}
 								</button>
 							</Row>
-
-						)
+						);
 					})}
 				</div>
 				<div>
@@ -149,7 +155,8 @@ export class Processors extends Component {
 						value={newProcessorType}
 						onCreate={this.handleCreateProcessor}
 					>
-						Add {! newProcessorType ? '' : newProcessorType } Processor
+						Add {!newProcessorType ? "" : newProcessorType}{" "}
+						Processor
 					</AddProcessor>
 				</div>
 			</div>
@@ -163,7 +170,7 @@ export const processorsCollectionPropType = PropTypes.arrayOf(
 		label: PropTypes.string,
 		type: PropTypes.string,
 		fields: PropTypes.array,
-		config: PropTypes.object
+		config: PropTypes.object,
 	})
 );
 
@@ -172,10 +179,10 @@ Processors.propTypes = {
 	processors: processorsCollectionPropType,
 	updateProcessors: PropTypes.func,
 	form: PropTypes.object,
-	formFields: PropTypes.array
+	formFields: PropTypes.array,
 };
 
 Processors.defaultProps = {
 	processors: [],
-	processorTypes: []
+	processorTypes: [],
 };

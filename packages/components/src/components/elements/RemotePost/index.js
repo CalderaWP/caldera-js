@@ -1,8 +1,8 @@
-import { RemotePost } from './RemotePost';
+import { RemotePost } from "./RemotePost";
 
-import postPropTypes from './propTypes';
+import postPropTypes from "./propTypes";
 
 export default {
 	RemotePost,
-	postPropTypes
+	postPropTypes,
 };

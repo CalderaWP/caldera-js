@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import {FieldWrapper} from "..";
-import {RadioOrCheckboxControl} from "../RadioOrCheckboxControl";
+import PropTypes from "prop-types";
+import React from "react";
+import { FieldWrapper } from "..";
+import { RadioOrCheckboxControl } from "../RadioOrCheckboxControl";
 
 export const RadioField = props => {
-	const fieldProps = {...props, fieldType: 'radio'};
+	const fieldProps = { ...props, fieldType: "radio" };
 	return (
 		<FieldWrapper {...fieldProps}>
-			<RadioOrCheckboxControl { ...fieldProps}/>
+			<RadioOrCheckboxControl {...fieldProps} />
 		</FieldWrapper>
 	);
 };
@@ -18,11 +18,11 @@ RadioField.propTypes = {
 	fieldId: PropTypes.string,
 	required: PropTypes.bool,
 	multiple: PropTypes.bool,
-	options: PropTypes.array
+	options: PropTypes.array,
 };
 
 RadioField.defaultProps = {
 	required: false,
 	multiple: false,
-	options: []
+	options: [],
 };

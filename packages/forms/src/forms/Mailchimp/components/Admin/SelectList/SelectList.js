@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react'
-import {Field} from '@calderajs/components';
+import React, { Fragment } from "react";
+import { Field } from "@calderajs/components";
 
 /**
  * Select a MailChimp List
@@ -11,7 +11,12 @@ import {Field} from '@calderajs/components';
  * @return {*}
  * @constructor
  */
-export const SelectList = ({listFieldConfig,listId,setListId,instanceId}) => (
+export const SelectList = ({
+	listFieldConfig,
+	listId,
+	setListId,
+	instanceId,
+}) => (
 	<Fragment>
 		<Field
 			field={{
@@ -19,7 +24,7 @@ export const SelectList = ({listFieldConfig,listId,setListId,instanceId}) => (
 				fieldId: `caldera-mc-select-list-${instanceId}`,
 				value: listId,
 			}}
-			onChange={(newValue)=>{
+			onChange={newValue => {
 				setListId(newValue);
 			}}
 		/>

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React, { Fragment, createElement } from 'react';
+import PropTypes from "prop-types";
+import React, { Fragment, createElement } from "react";
 
 export const EntryActions = ({ entryId, formId, actions, onAction }) => {
 	return (
@@ -26,10 +26,10 @@ EntryActions.propTypes = {
 	actions: PropTypes.arrayOf(
 		PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 	),
-	onAction: PropTypes.func
+	onAction: PropTypes.func,
 };
 
 EntryActions.defaultProps = {
 	required: false,
-	multiple: false
+	multiple: false,
 };

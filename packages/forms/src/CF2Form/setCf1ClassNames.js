@@ -3,10 +3,10 @@ import {
 	cf1ClassNames,
 	FILTER_FORM_COLUMN_PREFIX,
 	FILTER_FORM_COLUMN_CLASS,
-	FILTER_FORM_ELEMENT_CLASS
-} from '@calderajs/components';
+	FILTER_FORM_ELEMENT_CLASS,
+} from "@calderajs/components";
 
-const IDENTIFIER = 'cf1-classes';
+const IDENTIFIER = "cf1-classes";
 
 /**
  * Sets all form classes to match Caldera Forms 1.x
@@ -21,11 +21,13 @@ export default function setCf1ClassNames() {
 		});
 	});
 
-	classNameService.addFilter(FILTER_FORM_COLUMN_PREFIX, IDENTIFIER, (prefix, columnId) => {
-		return 'col-sm-';
-	});
-
-
+	classNameService.addFilter(
+		FILTER_FORM_COLUMN_PREFIX,
+		IDENTIFIER,
+		(prefix, columnId) => {
+			return "col-sm-";
+		}
+	);
 
 	/**
 	 * Remove all filters
@@ -38,4 +40,3 @@ export default function setCf1ClassNames() {
 
 	return reset;
 }
-

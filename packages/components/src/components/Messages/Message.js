@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { messagePropShape } from './messagePropTypes';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import { messagePropShape } from "./messagePropTypes";
+import classNames from "classnames";
 
 /**
  * The class that message components always wrap messages in
  * @type {string}
  */
-export const MESSAGE_CLASS = 'caldera-components-message';
+export const MESSAGE_CLASS = "caldera-components-message";
 
 /**
  * Prop for showing a validation message
@@ -20,15 +20,15 @@ export const MESSAGE_CLASS = 'caldera-components-message';
  */
 export const Message = props => {
 	const { message, error } = props.message;
-	if (!message || '' === message) {
+	if (!message || "" === message) {
 		return <React.Fragment />;
 	}
 	return (
 		<div
 			className={classNames(props.className, MESSAGE_CLASS, {
-				'has-error': error,
-				'caldera-components-error': error,
-				'caldera-components-not-error': !error
+				"has-error": error,
+				"caldera-components-error": error,
+				"caldera-components-not-error": !error,
 			})}
 		>
 			{message}
@@ -43,5 +43,5 @@ export const Message = props => {
  */
 Message.propTypes = {
 	className: PropTypes.string,
-	message: messagePropShape
+	message: messagePropShape,
 };

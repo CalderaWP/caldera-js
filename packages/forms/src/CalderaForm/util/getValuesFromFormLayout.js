@@ -1,4 +1,4 @@
-import {collectFieldValues} from '@calderajs/components';
+import { collectFieldValues } from "@calderajs/components";
 
 /**
  * Given a Caldera Layout for a form, grab all field values
@@ -15,7 +15,7 @@ export const getValuesFromFormLayout = rows => {
 			const { fields } = column;
 			values = {
 				...values,
-				...collectFieldValues(fields)
+				...collectFieldValues(fields),
 			};
 		});
 	});

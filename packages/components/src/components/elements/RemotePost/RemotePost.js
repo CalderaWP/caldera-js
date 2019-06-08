@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
-import { postPropTypes } from './propTypes';
-import EmbedContainer from 'react-oembed-container';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { Fragment } from "react";
+import { postPropTypes } from "./propTypes";
+import EmbedContainer from "react-oembed-container";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 /**
  * Show a WordPress post from the REST API with embeds allowed
@@ -14,7 +14,7 @@ import classNames from 'classnames';
 export const RemotePost = ({
 	post, //WordPress post
 	showFullContent, //false show excerpt
-	className //extra class name for wrapper component
+	className, //extra class name for wrapper component
 }) => {
 	return (
 		<EmbedContainer markup={post.content.rendered}>
@@ -25,7 +25,7 @@ export const RemotePost = ({
 					`post-${post.id}`,
 					`type-${post.type}`,
 					`status-${post.status}`,
-					'hentry entry' //I need to return post_class or something from REST API??
+					"hentry entry" //I need to return post_class or something from REST API??
 				)}
 				id={`post-${post.id}`}
 			>
@@ -37,14 +37,14 @@ export const RemotePost = ({
 						<div
 							className="entry-content"
 							dangerouslySetInnerHTML={{
-								__html: post.content.rendered
+								__html: post.content.rendered,
 							}}
 						/>
 					) : (
 						<div
 							className="entry-excerpt"
 							dangerouslySetInnerHTML={{
-								__html: post.excerpt.rendered
+								__html: post.excerpt.rendered,
 							}}
 						/>
 					)}
@@ -57,9 +57,9 @@ export const RemotePost = ({
 RemotePost.propTypes = {
 	...postPropTypes,
 	className: PropTypes.string,
-	showFullContent: PropTypes.bool
+	showFullContent: PropTypes.bool,
 };
 
 RemotePost.defaultPosts = {
-	showFullContent: false
+	showFullContent: false,
 };

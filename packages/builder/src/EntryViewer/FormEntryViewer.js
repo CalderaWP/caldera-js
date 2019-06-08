@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDataGrid from 'react-data-grid';
+import React from "react";
+import ReactDataGrid from "react-data-grid";
 //import "./styles.css";
 
 export class FormEntryViewer extends React.Component {
@@ -18,14 +18,14 @@ export class FormEntryViewer extends React.Component {
 		const rows = [];
 		const defaultColumnProperties = {
 			resizable: true,
-			width: 120
+			width: 120,
 		};
 		Object.values(form.fields).forEach(field => {
 			columns.push({
 				...defaultColumnProperties,
 				key: field.id,
 				name: field.label,
-				editable: false
+				editable: false,
 			});
 		});
 
@@ -38,7 +38,7 @@ export class FormEntryViewer extends React.Component {
 		Object.values(entries).forEach(entry => {
 			const entryId = entry.id;
 			const row = {
-				key: entryId
+				key: entryId,
 			};
 			columns.forEach(field => {
 				const entryValue = findEntryValue(entry, field);
@@ -73,7 +73,7 @@ export class FormEntryViewer extends React.Component {
 				/>
 			);
 		} else {
-			return <div className={'has-error'}>{noItemsMessage}</div>;
+			return <div className={"has-error"}>{noItemsMessage}</div>;
 		}
 	}
 }

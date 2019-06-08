@@ -1,6 +1,6 @@
 //Based on https://github.com/lukashala/react-simply/blob/master/tools/state/src/index.js
-import React, { createContext, useContext, useReducer } from 'react';
-import PropTypes from 'prop-types';
+import React, { createContext, useContext, useReducer } from "react";
+import PropTypes from "prop-types";
 
 export const ComponentContext = createContext();
 
@@ -26,7 +26,7 @@ ComponentProvider.propTypes = {
 	 * @param {object} state
 	 * @param {object} action
 	 */
-	reducer: PropTypes.func.isRequired
+	reducer: PropTypes.func.isRequired,
 };
 
 export const getState = () => useContext(ComponentContext);

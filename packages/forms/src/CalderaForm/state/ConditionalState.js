@@ -1,15 +1,6 @@
+const getMultiSelectFieldValue = fieldId => {};
 
-
-const getMultiSelectFieldValue = (fieldId) => {
-
-
-};
-
-const setMultiSelectFieldValue = (fieldId) => {
-
-};
-
-
+const setMultiSelectFieldValue = fieldId => {};
 
 /**
  * Describes the state of a form or other collection of fields where some fields may be hidden or disabled.
@@ -19,14 +10,11 @@ const setMultiSelectFieldValue = (fieldId) => {
  * 	- A disabled field's value can NOT be update. It can be accessed.
  */
 export class ConditionalState {
-
 	constructor(initialState, fieldsHidden = [], fieldsDisabled = []) {
-
 		this.allowedFields = Object.keys(initialState);
 		this.actualState = initialState;
 		this.fieldsHidden = fieldsHidden;
 		this.fieldsDisabled = fieldsDisabled;
-
 	}
 
 	/**
@@ -47,11 +35,11 @@ export class ConditionalState {
 	 *
 	 * @param newState
 	 */
-	setState = (newState) => {
+	setState = newState => {
 		Object.keys(newState).forEach(stateKey => {
 			if (
-				this.isValidField(stateKey)
-				&& !this.isFieldDisabled(stateKey)
+				this.isValidField(stateKey) &&
+				!this.isFieldDisabled(stateKey)
 			) {
 				this.actualState[stateKey] = newState[stateKey];
 			}
@@ -65,17 +53,16 @@ export class ConditionalState {
 	 * @param {string} fieldId
 	 * @return {*}
 	 */
-	getValue = (fieldId) => {
+	getValue = fieldId => {
 		if (
-			this.isValidField(fieldId)
-			&& ! this.isFieldHidden(fieldId)
-			&& this.actualState.hasOwnProperty(fieldId)) {
+			this.isValidField(fieldId) &&
+			!this.isFieldHidden(fieldId) &&
+			this.actualState.hasOwnProperty(fieldId)
+		) {
 			return this.actualState[fieldId];
 		}
 		return null;
 	};
-
-
 
 	/**
 	 * Set the value of a visible and enabled field
@@ -97,7 +84,7 @@ export class ConditionalState {
 	 * @param {string} fieldId
 	 * @return {boolean}
 	 */
-	isValidField = (fieldId) => {
+	isValidField = fieldId => {
 		return this.allowedFields.includes(fieldId);
 	};
 
@@ -106,7 +93,7 @@ export class ConditionalState {
 	 *
 	 * @param {string} fieldId
 	 */
-	hideField = (fieldId) => {
+	hideField = fieldId => {
 		if (this.isValidField(fieldId)) {
 			this.fieldsHidden.push(fieldId);
 		}
@@ -118,12 +105,13 @@ export class ConditionalState {
 	 *
 	 * @param {string} fieldId
 	 */
-	showField = (fieldId) => {
+	showField = fieldId => {
 		if (this.isValidField(fieldId)) {
-			this.fieldsHidden = this.fieldsHidden.filter(hiddenFieldId => hiddenFieldId !== fieldId);
+			this.fieldsHidden = this.fieldsHidden.filter(
+				hiddenFieldId => hiddenFieldId !== fieldId
+			);
 		}
 		return this.getCurrentState();
-
 	};
 
 	/**
@@ -132,8 +120,10 @@ export class ConditionalState {
 	 * @param fieldId
 	 * @return {boolean}
 	 */
-	isFieldHidden = (fieldId) => {
-		return this.isValidField(fieldId)&&this.fieldsHidden.includes(fieldId);
+	isFieldHidden = fieldId => {
+		return (
+			this.isValidField(fieldId) && this.fieldsHidden.includes(fieldId)
+		);
 	};
 
 	/**
@@ -141,7 +131,7 @@ export class ConditionalState {
 	 *
 	 * @param {string} fieldId
 	 */
-	disableField = (fieldId) => {
+	disableField = fieldId => {
 		if (this.isValidField(fieldId)) {
 			this.fieldsDisabled.push(fieldId);
 		}
@@ -153,12 +143,13 @@ export class ConditionalState {
 	 *
 	 * @param {string} fieldId
 	 */
-	enableField = (fieldId) => {
+	enableField = fieldId => {
 		if (this.isValidField(fieldId)) {
-			this.fieldsDisabled = this.fieldsDisabled.filter(disabledFieldId => disabledFieldId !== fieldId);
+			this.fieldsDisabled = this.fieldsDisabled.filter(
+				disabledFieldId => disabledFieldId !== fieldId
+			);
 		}
 		return this.getCurrentState();
-
 	};
 
 	/**
@@ -167,8 +158,9 @@ export class ConditionalState {
 	 * @param fieldId
 	 * @return {boolean}
 	 */
-	isFieldDisabled = (fieldId) => {
-		return this.isValidField(fieldId)&&this.fieldsDisabled.includes(fieldId);
+	isFieldDisabled = fieldId => {
+		return (
+			this.isValidField(fieldId) && this.fieldsDisabled.includes(fieldId)
+		);
 	};
-
 }

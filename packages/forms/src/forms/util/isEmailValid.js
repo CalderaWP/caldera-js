@@ -1,4 +1,3 @@
-
 /**
  * Just a noop for spoofing a default Function
  * @return {Function}
@@ -14,10 +13,10 @@ const noop = () => {};
  * @return {Boolean}          Is the email valid?
  */
 export const isEmailValid = (email, cb = noop) => {
-    const isValid = /\S+@\S+\.\S+/.test(email);
-    if (isValid) cb(true);
-    return isValid;
-}
+	const isValid = /\S+@\S+\.\S+/.test(email);
+	if (isValid) cb(true);
+	return isValid;
+};
 
 /**
  * isEmailValidPromise is an indirect alias for isEmailValid, except that this
@@ -26,7 +25,8 @@ export const isEmailValid = (email, cb = noop) => {
  * @param  {String}  email Email that should be validated
  * @return {Promise}       Is the email valid?
  */
-export const isEmailValidPromise = email => Promise.resolve(isEmailValid(email));
+export const isEmailValidPromise = email =>
+	Promise.resolve(isEmailValid(email));
 
 /**
  * isEmail is an alias for isEmailValid

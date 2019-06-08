@@ -1,97 +1,91 @@
-import {CF2Form} from "../../../..";
-import axios from 'axios/index';
-import {createElement} from "react";
+import { CF2Form } from "../../../..";
+import axios from "axios/index";
+import { createElement } from "react";
 
-const FIRST_NAME_ID = 'name';
-const COMMENTS_FIELD_ID = 'comments_questions';
-const EMAIL_FIELD_ID = 'email';
-const SUBMIT_BUTTON_FIELD_ID = 'submit';
+const FIRST_NAME_ID = "name";
+const COMMENTS_FIELD_ID = "comments_questions";
+const EMAIL_FIELD_ID = "email";
+const SUBMIT_BUTTON_FIELD_ID = "submit";
 
 const firstNameField = {
-    fieldType: 'text',
-    value: '',
-    label: 'First Name',
-    fieldId: FIRST_NAME_ID,
-    required: true
+	fieldType: "text",
+	value: "",
+	label: "First Name",
+	fieldId: FIRST_NAME_ID,
+	required: true,
 };
 
 const emailField = {
-    fieldType: 'text',
-    value: '',
-    label: 'Last Name',
-    fieldId: EMAIL_FIELD_ID,
-    required: true
+	fieldType: "text",
+	value: "",
+	label: "Last Name",
+	fieldId: EMAIL_FIELD_ID,
+	required: true,
 };
 
 const commentsField = {
-    fieldType: 'textarea',
-    value: '',
-    label: 'Your Message',
-    fieldId: COMMENTS_FIELD_ID,
-    required: false
+	fieldType: "textarea",
+	value: "",
+	label: "Your Message",
+	fieldId: COMMENTS_FIELD_ID,
+	required: false,
 };
-
 
 const submitButton = {
-    fieldId: SUBMIT_BUTTON_FIELD_ID,
-    label: 'Send Your Message',
-    fieldType: 'submit',
+	fieldId: SUBMIT_BUTTON_FIELD_ID,
+	label: "Send Your Message",
+	fieldType: "submit",
 };
 
-const formId = 'contact';
+const formId = "contact";
 
 const formConfig = {
-    ID: formId,
-    rows: [
-        {
-            columns: [
-                {
-                    fields: [FIRST_NAME_ID],
-                    width: '1/2',
-                },
-                {
-                    fields: [EMAIL_FIELD_ID],
-                    width: '1/2',
-                }
-            ]
-        },
-        {
-            columns: [
-                {
-                    fields: [COMMENTS_FIELD_ID],
-                    width: '100',
-                }
-            ]
-        },
-        {
-            columns: [
-                {
-                    fields: [SUBMIT_BUTTON_FIELD_ID],
-                    width: '1',
-                },
-            ]
-        },
-    ],
-    fields: [
-        submitButton,
-        firstNameField,
-        emailField,
-        commentsField
-    ],
-    conditionals: []
+	ID: formId,
+	rows: [
+		{
+			columns: [
+				{
+					fields: [FIRST_NAME_ID],
+					width: "1/2",
+				},
+				{
+					fields: [EMAIL_FIELD_ID],
+					width: "1/2",
+				},
+			],
+		},
+		{
+			columns: [
+				{
+					fields: [COMMENTS_FIELD_ID],
+					width: "100",
+				},
+			],
+		},
+		{
+			columns: [
+				{
+					fields: [SUBMIT_BUTTON_FIELD_ID],
+					width: "1",
+				},
+			],
+		},
+	],
+	fields: [submitButton, firstNameField, emailField, commentsField],
+	conditionals: [],
 };
 
 let rowIndex = 1;
 let columnIndex;
-formConfig.rows.forEach( row => {
-    row.rowId = `row-${rowIndex}`;
-    columnIndex = 1;
-    row.columns.forEach( column => {
-        column.columnId =`row-${rowIndex}-column-${columnIndex}`;
-        columnIndex ++;
-    });
-    rowIndex++;
-} );
+formConfig.rows.forEach(row => {
+	row.rowId = `row-${rowIndex}`;
+	columnIndex = 1;
+	row.columns.forEach(column => {
+		column.columnId = `row-${rowIndex}-column-${columnIndex}`;
+		columnIndex++;
+	});
+	rowIndex++;
+});
 
 /**
  * Caldera Forms Contact Form
@@ -100,12 +94,11 @@ formConfig.rows.forEach( row => {
  * @return {*}
  * @constructor
  */
-export const CalderaContactForm = ({apiRootUrl}) => (
-    <CF2Form
-        formId={formId}
-        formConfig={formConfig}
-        axios={axios}
-        apiRootUri={apiRootUrl}
-    />
+export const CalderaContactForm = ({ apiRootUrl }) => (
+	<CF2Form
+		formId={formId}
+		formConfig={formConfig}
+		axios={axios}
+		apiRootUri={apiRootUrl}
+	/>
 );
-

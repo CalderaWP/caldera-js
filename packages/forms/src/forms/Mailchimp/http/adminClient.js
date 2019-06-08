@@ -1,4 +1,4 @@
-import {prepareData} from "./publicClient";
+import { prepareData } from "./publicClient";
 
 /**
  * Get all lists for an account
@@ -7,13 +7,7 @@ import {prepareData} from "./publicClient";
  * @param token
  * @param accountId
  */
-const getLists = (
-	{
-		apiRoot,
-		token,
-		accountId
-	}
-) => {
+const getLists = ({ apiRoot, token, accountId }) => {
 	const url = `${apiRoot}/lists?accountId=${accountId}&asUiConfig=0&token=${token}`;
 	return fetch(url);
 };
@@ -25,14 +19,8 @@ const getLists = (
  * @param token
  * @param accountId
  */
-const getListsUi = (
-	{
-		apiRoot,
-		token,
-		accountId
-	}
-) => {
-	const url = `${apiRoot}/lists?accountId=${accountId}&token=${token}&asUiConfig=1`
+const getListsUi = ({ apiRoot, token, accountId }) => {
+	const url = `${apiRoot}/lists?accountId=${accountId}&token=${token}&asUiConfig=1`;
 	return fetch(url);
 };
 
@@ -43,13 +31,7 @@ const getListsUi = (
  * @param token
  * @param listId
  */
-const getListUi = (
-	{
-		apiRoot,
-		token,
-		listId
-	}
-) => {
+const getListUi = ({ apiRoot, token, listId }) => {
 	const url = `${apiRoot}/forms/${listId}?asUiConfig=1&token=${token}`;
 	return fetch(url);
 };
@@ -61,21 +43,17 @@ const getListUi = (
  * @param token
  * @param apiKey
  */
-const saveApiKey = ({
-	apiRoot,
-	token,
-	apiKey
-}) => {
-	const url =`${apiRoot}/accounts`
-	return fetch(url,{
-		method: 'PUT',
+const saveApiKey = ({ apiRoot, token, apiKey }) => {
+	const url = `${apiRoot}/accounts`;
+	return fetch(url, {
+		method: "PUT",
 		headers: {
-			'Content-Type': 'application/json',
+			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
 			apiKey,
-			token
-		})
+			token,
+		}),
 	});
 };
 
@@ -85,12 +63,7 @@ const saveApiKey = ({
  * @param apiRoot
  * @param token
  */
-const getAccounts = (
-	{
-		apiRoot,
-		token
-	}
-) =>{
+const getAccounts = ({ apiRoot, token }) => {
 	const url = `${apiRoot}/accounts?asUiConfig=0&token=${token}`;
 	return fetch(url);
 };
@@ -101,54 +74,48 @@ const getAccounts = (
  * @param apiRoot
  * @param token
  */
-const getAccountsUi = (
-	{
-		apiRoot,
-		token
-	}
-) =>{
+const getAccountsUi = ({ apiRoot, token }) => {
 	const url = `${apiRoot}/accounts?token=${token}&asUiConfig=1`;
 	return fetch(url);
 };
 
-function AdminClient(apiRoot,token) {
+function AdminClient(apiRoot, token) {
 	return {
 		getAccounts() {
-			return getAccounts({apiRoot,token})
+			return getAccounts({ apiRoot, token });
 		},
-		getAccountsUi(){
-			return getAccountsUi({apiRoot,token})
+		getAccountsUi() {
+			return getAccountsUi({ apiRoot, token });
 		},
-		getLists(accountId){
+		getLists(accountId) {
 			return getLists({
 				apiRoot,
 				token,
-				accountId
+				accountId,
 			});
 		},
-		getListsUi(accountId){
+		getListsUi(accountId) {
 			return getListsUi({
 				apiRoot,
 				token,
-				accountId
+				accountId,
 			});
 		},
-		getListUi(listId){
+		getListUi(listId) {
 			return getListUi({
 				apiRoot,
 				token,
-				listId
+				listId,
 			});
 		},
-		saveApiKey(apiKey){
-			return  saveApiKey({
+		saveApiKey(apiKey) {
+			return saveApiKey({
 				apiRoot,
 				token,
-				apiKey
+				apiKey,
 			});
-		}
+		},
 	};
-
 }
 
 export {
@@ -157,6 +124,5 @@ export {
 	getAccountsUi,
 	getListsUi,
 	getLists,
-	saveApiKey
-}
-
+	saveApiKey,
+};

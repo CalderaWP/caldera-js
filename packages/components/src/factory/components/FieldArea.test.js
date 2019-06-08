@@ -1,6 +1,6 @@
-import React from 'react';
-import {render, fireEvent, cleanup} from 'react-testing-library';
-import { mount } from 'enzyme';
+import React from "react";
+import { render, fireEvent, cleanup } from "react-testing-library";
+import { mount } from "enzyme";
 import {
 	checkboxFieldset,
 	selectField,
@@ -8,12 +8,12 @@ import {
 	numberField,
 	textField,
 	radioField,
-	emailField
-} from '../fields.fixtures';
+	emailField,
+} from "../fields.fixtures";
 
-import { FieldArea } from './FieldArea';
+import { FieldArea } from "./FieldArea";
 
-describe('FieldArea component', () => {
+describe("FieldArea component", () => {
 	let onChange;
 	let onBlur;
 	afterEach(cleanup);
@@ -22,18 +22,18 @@ describe('FieldArea component', () => {
 		onBlur = jest.fn();
 	});
 
-	it('Creates a text field', () => {
+	it("Creates a text field", () => {
 		const component = render(
 			<FieldArea field={textField} onChange={onChange} onBlur={onBlur} />
 		);
 		expect(component).toMatchSnapshot();
 	});
-	it('Shows errors', () => {
+	it("Shows errors", () => {
 		const fieldErrors = {
-			[textField.fieldId]: 'Fail Cake!'
+			[textField.fieldId]: "Fail Cake!",
 		};
 		const fieldsTouched = {
-			[textField.fieldId]: true
+			[textField.fieldId]: true,
 		};
 
 		const component = render(
@@ -48,7 +48,7 @@ describe('FieldArea component', () => {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('Creates an select field', () => {
+	it("Creates an select field", () => {
 		const component = render(
 			<FieldArea
 				field={selectField}
@@ -59,21 +59,14 @@ describe('FieldArea component', () => {
 		expect(component).toMatchSnapshot();
 	});
 
-
-
-
-	it.skip('Changes calls change handler of text field', () => {
-		const {container} = render(
-			<FieldArea
-				field={textField}
-				onChange={onChange}
-				onBlur={onBlur}
-			/>
+	it.skip("Changes calls change handler of text field", () => {
+		const { container } = render(
+			<FieldArea field={textField} onChange={onChange} onBlur={onBlur} />
 		);
 
-		const input = container.querySelector('input');
-		const event = {target: {value: 200}};
-		fireEvent(input, event)
-		expect(input.value).toBe('200')
+		const input = container.querySelector("input");
+		const event = { target: { value: 200 } };
+		fireEvent(input, event);
+		expect(input.value).toBe("200");
 	});
 });

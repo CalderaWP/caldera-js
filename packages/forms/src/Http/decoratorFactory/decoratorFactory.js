@@ -19,7 +19,7 @@ export const decorateObjectLiteral = decoratedObject => {
 				return true;
 			}
 			return false;
-		}
+		},
 	};
 	return new Proxy(decoratedObject, handler);
 };
@@ -35,6 +35,6 @@ export const decorateObjectLiteral = decoratedObject => {
 export const decorateObjectLiteralWithMethods = (decoratedObject, methods) => {
 	return decorateObjectLiteral({
 		...decoratedObject,
-		...methods
+		...methods,
 	});
 };

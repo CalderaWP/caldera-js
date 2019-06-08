@@ -1,10 +1,9 @@
-import React,{useState} from 'react';
-import {Panel, PanelBody, PanelRow} from '@wordpress/components';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import {FormListItem} from '../FormListItem/FormListItem';
-import {FormSearch} from "./FormSearch";
-
+import React, { useState } from "react";
+import { Panel, PanelBody, PanelRow } from "@wordpress/components";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { FormListItem } from "../FormListItem/FormListItem";
+import { FormSearch } from "./FormSearch";
 
 /**
  *
@@ -15,27 +14,27 @@ import {FormSearch} from "./FormSearch";
  * @return {*}
  * @constructor
  */
-export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
-    const [sortedForms,setSortedForms] = useState(forms);
+export const FormsList = ({ forms, panelTitle, classname, onFormAction }) => {
+	const [sortedForms, setSortedForms] = useState(forms);
 
-    return (
-        <Panel classname={classNames(classname)}>
-            <PanelBody title={panelTitle} icon="feedback" initialOpen={true}>
-                <FormSearch forms={forms} onSort={setSortedForms} />
-                {sortedForms.map(form => {
-                    return (
-                        <PanelRow key={form.id}>
-                            <FormListItem
-                                key={form.id}
-                                form={form}
-                                onFormAction={onFormAction}
-                            />
-                        </PanelRow>
-                    );
-                })}
-            </PanelBody>
-        </Panel>
-    )
+	return (
+		<Panel classname={classNames(classname)}>
+			<PanelBody title={panelTitle} icon="feedback" initialOpen={true}>
+				<FormSearch forms={forms} onSort={setSortedForms} />
+				{sortedForms.map(form => {
+					return (
+						<PanelRow key={form.id}>
+							<FormListItem
+								key={form.id}
+								form={form}
+								onFormAction={onFormAction}
+							/>
+						</PanelRow>
+					);
+				})}
+			</PanelBody>
+		</Panel>
+	);
 };
 
 /**
@@ -44,11 +43,10 @@ export const FormsList = ({forms, panelTitle, classname, onFormAction}) => {
  * @type {{forms: shim, panelTitle: shim, noFormsMessage: shim, onFormAction: *}}
  */
 FormsList.propTypes = {
-    forms: PropTypes.array,
-    panelTitle: PropTypes.string,
-    noFormsMessage: PropTypes.string,
-    onFormAction: PropTypes.func.isRequired,
-
+	forms: PropTypes.array,
+	panelTitle: PropTypes.string,
+	noFormsMessage: PropTypes.string,
+	onFormAction: PropTypes.func.isRequired,
 };
 
 /**
@@ -57,8 +55,8 @@ FormsList.propTypes = {
  * @type {{forms: Array, panelTitle: string, noFormsMessage: string}}
  */
 FormsList.defaultProps = {
-    forms: [],
-    panelTitle: 'All Forms',
-    noFormsMessage: 'No Forms Found',
-    onSort: () => {}
+	forms: [],
+	panelTitle: "All Forms",
+	noFormsMessage: "No Forms Found",
+	onSort: () => {},
 };

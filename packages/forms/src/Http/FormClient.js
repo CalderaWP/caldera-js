@@ -1,4 +1,4 @@
-import { decorateObjectLiteralWithMethods } from './decoratorFactory/decoratorFactory';
+import { decorateObjectLiteralWithMethods } from "./decoratorFactory/decoratorFactory";
 
 /**
  *
@@ -14,7 +14,7 @@ export default function FormClient(form, options) {
 	this.eventOpts = () => {
 		return {
 			apiRootUri,
-			formId: form.id
+			formId: form.id,
 		};
 	};
 
@@ -40,7 +40,7 @@ export default function FormClient(form, options) {
 	 * @return {*}
 	 */
 	this.submitForm = () => {
-		if ('function' === typeof options.submitForm) {
+		if ("function" === typeof options.submitForm) {
 			return options.submitForm(...this.createEventBag());
 		}
 	};
@@ -53,6 +53,6 @@ export default function FormClient(form, options) {
 	return decorateObjectLiteralWithMethods(this.fieldValues, {
 		setFieldValues: this.setFieldValues,
 		getFieldValues: this.getFieldValues,
-		submitForm: this.submitForm
+		submitForm: this.submitForm,
 	});
 }

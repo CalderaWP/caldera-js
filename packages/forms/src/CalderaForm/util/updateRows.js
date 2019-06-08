@@ -1,5 +1,4 @@
-import {ConditionalState} from '../state/ConditionalState';
-
+import { ConditionalState } from "../state/ConditionalState";
 
 const findFieldById = (fieldId, fields) => {
 	if (-1 !== fields.findIndex(f => f.fieldId === fieldId)) {
@@ -16,17 +15,16 @@ const findFieldById = (fieldId, fields) => {
 export const updateRows = (newState, rows, fields) => {
 	const outputRows = [];
 	rows.forEach(row => {
-
-		if (! row.render) {
-			const {rowId} = row;
+		if (!row.render) {
+			const { rowId } = row;
 			const outputRow = {
 				rowId: rowId,
-				columns: []
+				columns: [],
 			};
 			if (row.columns) {
 				row.columns.forEach(column => {
-					const {columnId} = column;
-					if (! column.render) {
+					const { columnId } = column;
+					if (!column.render) {
 						const outputColumn = {
 							columnId,
 							fields: [],
@@ -35,14 +33,21 @@ export const updateRows = (newState, rows, fields) => {
 							column.fields.forEach(field => {
 								if (field) {
 									if (!field.render) {
-										if ('string' === typeof field) {
-											const _field = findFieldById(field, fields);
+										if ("string" === typeof field) {
+											const _field = findFieldById(
+												field,
+												fields
+											);
 											if (_field) {
 												field = _field;
 											}
 										}
-										if (field.hasOwnProperty('fieldId')) {
-											if (!newState.isFieldHidden(field.fieldId)) {
+										if (field.hasOwnProperty("fieldId")) {
+											if (
+												!newState.isFieldHidden(
+													field.fieldId
+												)
+											) {
 												outputColumn.fields.push(field);
 											}
 										}
@@ -62,7 +67,6 @@ export const updateRows = (newState, rows, fields) => {
 		} else {
 			outputRows.push(row);
 		}
-
 	});
 
 	return outputRows;

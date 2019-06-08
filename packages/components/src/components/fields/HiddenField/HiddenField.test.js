@@ -1,9 +1,9 @@
-import * as React from 'react';
-import {render, fireEvent, cleanup} from 'react-testing-library';
+import * as React from "react";
+import { render, fireEvent, cleanup } from "react-testing-library";
 
-import { HiddenField } from './HiddenField';
+import { HiddenField } from "./HiddenField";
 
-describe('HiddenField ', () => {
+describe("HiddenField ", () => {
 	let onChange;
 	afterEach(cleanup);
 
@@ -11,30 +11,21 @@ describe('HiddenField ', () => {
 		onChange = jest.fn();
 	});
 
-	it('matches snapshot with all props', () => {
+	it("matches snapshot with all props", () => {
 		const component = render(
-			<HiddenField
-				fieldId={'i11'}
-				value={'Roy'}
-				onChange={onChange}
-			/>
+			<HiddenField fieldId={"i11"} value={"Roy"} onChange={onChange} />
 		);
 		expect(component).toMatchSnapshot();
 	});
 
-
-	it('Changes calls change handler', () => {
+	it("Changes calls change handler", () => {
 		const { container } = render(
-			<HiddenField
-				fieldId={'i11'}
-				value={'Roy'}
-				onChange={onChange}
-			/>
+			<HiddenField fieldId={"i11"} value={"Roy"} onChange={onChange} />
 		);
 
-		const input = container.querySelector('input')
-		const event = {target: {value: 200}};
+		const input = container.querySelector("input");
+		const event = { target: { value: 200 } };
 		fireEvent.change(input, event);
-		expect(input.value).toBe('200')
+		expect(input.value).toBe("200");
 	});
 });
