@@ -32,7 +32,7 @@
     "storybook:components": "yarn --cwd packages/components storybook",
     "release": "yarn build && yarn lerna publish",
     "nuke": "rm -rf node_modules && rm yarn.lock",
-    "lint": "",
+    "lint": "prettier --write packages/*/src/**/*.js",
     "lint:forms": "yarn --cwd packages/forms lint",
     "lint:components": "yarn --cwd packages/components lint",
     "lint:fix": "yarn lint:fix-forms && yarn lint:fix-components",
@@ -41,7 +41,8 @@
     "add:builder": "yarn workspace @calderajs/builder add"
   },
   "devDependencies": {
+    "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1",
     "lerna": "^3.13.1",
-    "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1"
+    "prettier": "^1.18.2"
   }
 }
