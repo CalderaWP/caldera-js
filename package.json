@@ -35,12 +35,6 @@
     "lint": "prettier --write packages/*/src/**/*.js",
     "add:builder": "yarn workspace @calderajs/builder add"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn lint"
-    }
-  },
   "devDependencies": {
     "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1",
     "husky": "^2.4.0",
