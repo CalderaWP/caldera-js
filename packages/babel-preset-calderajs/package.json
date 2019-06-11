@@ -1,6 +1,6 @@
 {
   "name": "@calderajs/babel-preset-calderajs",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "dependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.0.0",
