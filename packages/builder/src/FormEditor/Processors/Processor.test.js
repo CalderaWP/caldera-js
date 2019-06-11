@@ -1,21 +1,21 @@
-import * as React from "react";
-import { mount } from "enzyme";
-import { render } from "react-testing-library";
-import { Processor } from "./Processor";
+import * as React from 'react';
+import { mount } from 'enzyme';
+import { render } from 'react-testing-library';
+import { Processor } from './Processor';
 
 import {
 	checkboxFieldset,
 	selectField,
 	checkboxField,
-} from "@calderajs/components";
+} from '@calderajs/components';
 
-describe("Processor", () => {
+describe('Processor', () => {
 	let onClose;
 	let onChange;
 	let onBlur;
 
 	const form = {
-		ID: "cf1",
+		ID: 'cf1',
 		fields: [checkboxFieldset, selectField, checkboxField],
 	};
 
@@ -25,7 +25,7 @@ describe("Processor", () => {
 		onBlur = jest.fn();
 	});
 
-	it("Matches snapshot", () => {
+	it('Matches snapshot', () => {
 		const component = render(
 			<Processor
 				fields={[checkboxFieldset, selectField, checkboxField]}
@@ -33,14 +33,14 @@ describe("Processor", () => {
 				onClose={onClose}
 				onChange={onChange}
 				onBlur={onBlur}
-				instanceId={"test-1"}
+				instanceId={'test-1'}
 				form={form}
 			/>
 		);
 		expect(component).toMatchSnapshot();
 	});
 
-	it("Can switch to conditionals", () => {
+	it('Can switch to conditionals', () => {
 		const component = mount(
 			<Processor
 				fields={[checkboxFieldset, selectField, checkboxField]}
@@ -48,16 +48,16 @@ describe("Processor", () => {
 				onClose={onClose}
 				onChange={onChange}
 				onBlur={onBlur}
-				initialActiveTab={"conditionals"}
-				instanceId={"test-1"}
+				initialActiveTab={'conditionals'}
+				instanceId={'test-1'}
 				form={form}
 			/>
 		);
-		component.instance().onSetTab("conditionals");
-		expect(component.state("activeTab")).toBe("conditionals");
+		component.instance().onSetTab('conditionals');
+		expect(component.state('activeTab')).toBe('conditionals');
 	});
 
-	it("Can show conditionals", () => {
+	it('Can show conditionals', () => {
 		const component = mount(
 			<Processor
 				fields={[checkboxFieldset, selectField, checkboxField]}
@@ -65,15 +65,15 @@ describe("Processor", () => {
 				onClose={onClose}
 				onChange={onChange}
 				onBlur={onBlur}
-				initialActiveTab={"conditionals"}
-				instanceId={"test-1"}
+				initialActiveTab={'conditionals'}
+				instanceId={'test-1'}
 				form={form}
 			/>
 		);
-		expect(component.find(".caldera-processor-conditionals").length).toBe(
+		expect(component.find('.caldera-processor-conditionals').length).toBe(
 			0
 		);
-		component.setState({ activeTab: "conditionals" });
-		expect(component.state("activeTab")).toBe("conditionals");
+		component.setState({ activeTab: 'conditionals' });
+		expect(component.state('activeTab')).toBe('conditionals');
 	});
 });

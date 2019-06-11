@@ -1,4 +1,4 @@
-import { decorateObjectLiteralWithMethods } from "./decoratorFactory/decoratorFactory";
+import { decorateObjectLiteralWithMethods } from './decoratorFactory/decoratorFactory';
 
 /**
  *
@@ -40,7 +40,7 @@ export default function FormClient(form, options) {
 	 * @return {*}
 	 */
 	this.submitForm = () => {
-		if ("function" === typeof options.submitForm) {
+		if ('function' === typeof options.submitForm) {
 			return options.submitForm(...this.createEventBag());
 		}
 	};

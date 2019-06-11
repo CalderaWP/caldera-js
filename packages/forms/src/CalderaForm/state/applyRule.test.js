@@ -1,21 +1,21 @@
-import { applyRule, applyRuleToState } from "./applyRule";
-import { ConditionalState } from "./ConditionalState";
-import { createFieldRule } from "./createFieldRule";
-import { emailField, submitButton, textField } from "../fields.fixtures";
+import { applyRule, applyRuleToState } from './applyRule';
+import { ConditionalState } from './ConditionalState';
+import { createFieldRule } from './createFieldRule';
+import { emailField, submitButton, textField } from '../fields.fixtures';
 
-describe("applyRule", () => {
+describe('applyRule', () => {
 	const rule = {
 		rule: jest.fn(),
 	};
 
-	it("Calls function in rule prop, passing fieldvalues", () => {
+	it('Calls function in rule prop, passing fieldvalues', () => {
 		const fieldValues = {};
 		applyRule(rule, fieldValues);
 		expect(rule.rule.mock.calls[0][0]).toEqual(fieldValues);
 	});
 });
 
-describe("applyRuleToState", () => {
+describe('applyRuleToState', () => {
 	function createMockConditionalState(
 		fieldValues
 		//initialState, fieldsHidden = [], fieldsDisabled = []
@@ -31,12 +31,12 @@ describe("applyRuleToState", () => {
 
 	const fieldValues = {};
 
-	it("Hides field when it should hide", () => {
+	it('Hides field when it should hide', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "hide",
-			fields: ["f1"],
+			type: 'hide',
+			fields: ['f1'],
 			rule: jest.fn(() => true),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -44,12 +44,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.showField.mock.calls.length).toBe(0);
 	});
 
-	it("Shows field when it should not hide", () => {
+	it('Shows field when it should not hide', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "hide",
-			fields: ["f1"],
+			type: 'hide',
+			fields: ['f1'],
 			rule: jest.fn(() => false),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -57,12 +57,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.showField.mock.calls.length).toBe(1);
 	});
 
-	it("Shows field when it should show", () => {
+	it('Shows field when it should show', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "show",
-			fields: ["f1"],
+			type: 'show',
+			fields: ['f1'],
 			rule: jest.fn(() => true),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -70,12 +70,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.showField.mock.calls.length).toBe(1);
 	});
 
-	it("Hides field when it should not show", () => {
+	it('Hides field when it should not show', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "show",
-			fields: ["f1"],
+			type: 'show',
+			fields: ['f1'],
 			rule: jest.fn(() => false),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -83,12 +83,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.showField.mock.calls.length).toBe(0);
 	});
 
-	it("Enables field when it should enabled", () => {
+	it('Enables field when it should enabled', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "enable",
-			fields: ["f1"],
+			type: 'enable',
+			fields: ['f1'],
 			rule: jest.fn(() => true),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -96,12 +96,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.disableField.mock.calls.length).toBe(0);
 	});
 
-	it("Disables field when it should not enable", () => {
+	it('Disables field when it should not enable', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "enable",
-			fields: ["f1"],
+			type: 'enable',
+			fields: ['f1'],
 			rule: jest.fn(() => false),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -109,12 +109,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.disableField.mock.calls.length).toBe(1);
 	});
 
-	it("Disables field when it should disable", () => {
+	it('Disables field when it should disable', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "disable",
-			fields: ["f1"],
+			type: 'disable',
+			fields: ['f1'],
 			rule: jest.fn(() => true),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -122,12 +122,12 @@ describe("applyRuleToState", () => {
 		expect(mockConditionalState.disableField.mock.calls.length).toBe(1);
 	});
 
-	it("Enables field when it should  not disable", () => {
+	it('Enables field when it should  not disable', () => {
 		const fieldValues = { f1: 1 };
 		const mockConditionalState = createMockConditionalState(fieldValues);
 		const rule = {
-			type: "disable",
-			fields: ["f1"],
+			type: 'disable',
+			fields: ['f1'],
 			rule: jest.fn(() => false),
 		};
 		applyRuleToState(rule, mockConditionalState);
@@ -136,56 +136,56 @@ describe("applyRuleToState", () => {
 	});
 });
 
-describe("Applying rules to conditional state", () => {
-	it("Resulting state hides multiple fields", () => {
+describe('Applying rules to conditional state', () => {
+	it('Resulting state hides multiple fields', () => {
 		const intitialState = {
-			x: "initialX",
-			y: "initialY",
-			r: "initialR",
+			x: 'initialX',
+			y: 'initialY',
+			r: 'initialR',
 		};
 		const state = new ConditionalState(intitialState);
 		const rule = {
-			type: "hide",
-			fields: ["x", "y"],
+			type: 'hide',
+			fields: ['x', 'y'],
 			rule: () => true,
 		};
 		const nextState = applyRuleToState(rule, state);
 		expect(nextState.getCurrentState()).toEqual({
-			r: "initialR",
+			r: 'initialR',
 		});
-		expect(nextState.isFieldHidden("x")).toBe(true);
-		expect(nextState.isFieldHidden("y")).toBe(true);
-		expect(nextState.isFieldHidden("r")).toBe(false);
+		expect(nextState.isFieldHidden('x')).toBe(true);
+		expect(nextState.isFieldHidden('y')).toBe(true);
+		expect(nextState.isFieldHidden('r')).toBe(false);
 	});
 
-	it("Resulting state disables multiple fields", () => {
+	it('Resulting state disables multiple fields', () => {
 		const intitialState = {
-			x: "initialX",
-			y: "initialY",
-			r: "initialR",
+			x: 'initialX',
+			y: 'initialY',
+			r: 'initialR',
 		};
 		const state = new ConditionalState(intitialState);
 		const rule = {
-			type: "disable",
-			fields: ["x", "y"],
+			type: 'disable',
+			fields: ['x', 'y'],
 			rule: () => true,
 		};
 		const nextState = applyRuleToState(rule, state);
 		expect(nextState.getCurrentState()).toEqual(intitialState);
-		expect(nextState.isFieldDisabled("x")).toBe(true);
-		expect(nextState.isFieldDisabled("y")).toBe(true);
-		expect(nextState.isFieldDisabled("r")).toBe(false);
+		expect(nextState.isFieldDisabled('x')).toBe(true);
+		expect(nextState.isFieldDisabled('y')).toBe(true);
+		expect(nextState.isFieldDisabled('r')).toBe(false);
 	});
 
 	let conditionals = [
 		{
-			type: "hide",
-			rule: createFieldRule("is", emailField.fieldId, "hide"),
+			type: 'hide',
+			rule: createFieldRule('is', emailField.fieldId, 'hide'),
 			fields: [textField.fieldId],
 		},
 		{
-			type: "disable",
-			rule: createFieldRule("empty", emailField.fieldId, null),
+			type: 'disable',
+			rule: createFieldRule('empty', emailField.fieldId, null),
 			fields: [submitButton.fieldId],
 		},
 	];
@@ -196,7 +196,7 @@ describe("Applying rules to conditional state", () => {
 		[submitButton.fieldId]: null,
 	};
 
-	it("Disables an empty field", () => {
+	it('Disables an empty field', () => {
 		const conditionalState = new ConditionalState(initialState);
 		conditionals.forEach(rule => {
 			applyRuleToState(rule, conditionalState);
@@ -210,12 +210,12 @@ describe("Applying rules to conditional state", () => {
 		expect(conditionalState.isFieldDisabled(textField.fieldId)).toBe(false);
 	});
 
-	it("Disables both fields", () => {
+	it('Disables both fields', () => {
 		conditionals = [
 			...conditionals,
 			{
-				type: "disable",
-				rule: createFieldRule("empty", textField.fieldId, ""),
+				type: 'disable',
+				rule: createFieldRule('empty', textField.fieldId, ''),
 				fields: [submitButton.fieldId],
 			},
 		];

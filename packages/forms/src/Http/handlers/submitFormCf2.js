@@ -1,4 +1,4 @@
-import "whatwg-fetch";
+import 'whatwg-fetch';
 /**
  * Form submit handler for Caldera Forms in "cf2" mode.
  *
@@ -14,9 +14,9 @@ export default function submitFormCf2(fieldValues, eventOptions, fetch) {
 	let { _cf_verify, _sessionPublicKey } = eventOptions;
 	const entryValues = [];
 	Object.keys(fieldValues).forEach(fieldId => {
-		if ("_sessionPublicKey" === fieldId) {
+		if ('_sessionPublicKey' === fieldId) {
 			_sessionPublicKey = fieldValues[fieldId];
-		} else if ("_cf_verify" === fieldId) {
+		} else if ('_cf_verify' === fieldId) {
 			_cf_verify = fieldValues[fieldId];
 		} else {
 			entryValues.push({
@@ -27,9 +27,9 @@ export default function submitFormCf2(fieldValues, eventOptions, fetch) {
 	//http://localhost:8228/wp-json/cf-api/v3/process/submission/CF5c9f8b765badd
 	const url = `${apiRootUri}/v3/process/submission/${formId}`;
 	return fetch(url, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify({
 			formId,

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { mount } from "enzyme";
-import { AddProcessor } from "./AddProcessor";
-import { render } from "react-testing-library";
+import React, { Component } from 'react';
+import { mount } from 'enzyme';
+import { AddProcessor } from './AddProcessor';
+import { render } from 'react-testing-library';
 
-describe("AddProcessor", () => {
+describe('AddProcessor', () => {
 	let setNewProcessorType = jest.fn();
 	let onCreate = jest.fn();
 	beforeEach(() => {
@@ -12,48 +12,48 @@ describe("AddProcessor", () => {
 	});
 	const processorTypes = [
 		{
-			type: "apiRequest",
+			type: 'apiRequest',
 		},
 		{
-			type: "redirect",
+			type: 'redirect',
 		},
 	];
 
-	it("Shows the choices", () => {
+	it('Shows the choices', () => {
 		expect(
 			render(
 				<AddProcessor
 					setNewProcessorType={setNewProcessorType}
 					processorTypes={processorTypes}
-					value={""}
+					value={''}
 					onCreate={onCreate}
 				/>
 			)
 		).toMatchSnapshot();
 	});
 
-	it("Activates the button", () => {
+	it('Activates the button', () => {
 		const component = mount(
 			<AddProcessor
 				setNewProcessorType={setNewProcessorType}
 				processorTypes={processorTypes}
-				value={"redirect"}
+				value={'redirect'}
 				onCreate={onCreate}
 			/>
 		);
-		expect(component.find("button").prop("disabled")).toBe(false);
+		expect(component.find('button').prop('disabled')).toBe(false);
 	});
 
-	it("Has the processor options", () => {
+	it('Has the processor options', () => {
 		const component = mount(
 			<AddProcessor
 				setNewProcessorType={setNewProcessorType}
 				processorTypes={processorTypes}
-				value={"redirect"}
+				value={'redirect'}
 				onCreate={onCreate}
 			/>
 		);
-		expect(component.find("select").find("option").length).toBe(
+		expect(component.find('select').find('option').length).toBe(
 			processorTypes.length + 1
 		);
 	});

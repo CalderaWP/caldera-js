@@ -17,20 +17,20 @@ export const createFieldRule = (testType, fieldId, testValue) => {
 		return parseFloat(findFieldValue(fieldId, fieldValues));
 	};
 	switch (testType) {
-		case "is":
-		case "==":
+		case 'is':
+		case '==':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
 				return value == testValue;
 			};
-		case "===":
+		case '===':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
 				return value === testValue;
 			};
-		case "isnot":
-		case "not":
-		case "!=":
+		case 'isnot':
+		case 'not':
+		case '!=':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
 				if (null === value) {
@@ -38,28 +38,28 @@ export const createFieldRule = (testType, fieldId, testValue) => {
 				}
 				return value != testValue;
 			};
-		case "!==":
+		case '!==':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
 				return value !== testValue;
 			};
-		case ">":
-		case "greater":
+		case '>':
+		case 'greater':
 			return fieldValues => {
 				const value = findFieldValueAsFloat(fieldId, fieldValues);
 				return value > testValue;
 			};
-		case "<":
-		case "smaller":
+		case '<':
+		case 'smaller':
 			return fieldValues => {
 				const value = findFieldValueAsFloat(fieldId, fieldValues);
 				return value < testValue;
 			};
 
-		case "startswith":
+		case 'startswith':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
-				if ("object" === typeof value) {
+				if ('object' === typeof value) {
 					return false;
 				}
 				return (
@@ -70,10 +70,10 @@ export const createFieldRule = (testType, fieldId, testValue) => {
 				);
 			};
 
-		case "endswith":
+		case 'endswith':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
-				if ("object" === typeof value) {
+				if ('object' === typeof value) {
 					return false;
 				}
 
@@ -86,22 +86,22 @@ export const createFieldRule = (testType, fieldId, testValue) => {
 						) === testValue.toLowerCase()
 				);
 			};
-		case "contains":
+		case 'contains':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
-				if ("object" === typeof value) {
+				if ('object' === typeof value) {
 					return false;
 				}
 
 				return values.toLowerCase().indexOf(testValue) >= 0;
 			};
-		case "empty":
+		case 'empty':
 			return fieldValues => {
 				const value = findFieldValue(fieldId, fieldValues);
 
 				return (
 					null === value ||
-					"" === value ||
+					'' === value ||
 					(Array.isArray(value) && 0 === value.length)
 				);
 			};

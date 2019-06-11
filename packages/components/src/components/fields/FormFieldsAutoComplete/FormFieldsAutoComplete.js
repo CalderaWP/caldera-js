@@ -1,16 +1,16 @@
-import PropTypes from "prop-types";
-import React, { useMemo } from "react";
+import PropTypes from 'prop-types';
+import React, { useMemo } from 'react';
 
-import { AutoCompleteField } from "../AutoCompleteField/AutoCompleteField";
+import { AutoCompleteField } from '../AutoCompleteField/AutoCompleteField';
 
 export const FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER =
-	"form-fields-auto-complete";
+	'form-fields-auto-complete';
 
 const RenderItem = (item, highlighted) => (
 	<li
-		className={"tag"}
+		className={'tag'}
 		key={item.id ? item.id : item.value}
-		style={{ backgroundColor: highlighted ? "#eee" : "transparent" }}
+		style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
 		title={item.description}
 	>
 		{item.label}
@@ -35,7 +35,7 @@ export const FormFieldsAutoComplete = props => {
 				return {
 					label: `${tag}`,
 					value: `${tag}`,
-					type: "field",
+					type: 'field',
 					description: `Use the value of the field ${field.label}`,
 				};
 			}),

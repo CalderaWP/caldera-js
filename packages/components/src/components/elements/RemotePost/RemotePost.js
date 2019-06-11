@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import { postPropTypes } from "./propTypes";
-import EmbedContainer from "react-oembed-container";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React, { Fragment } from 'react';
+import { postPropTypes } from './propTypes';
+import EmbedContainer from 'react-oembed-container';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /**
  * Show a WordPress post from the REST API with embeds allowed
@@ -25,7 +25,7 @@ export const RemotePost = ({
 					`post-${post.id}`,
 					`type-${post.type}`,
 					`status-${post.status}`,
-					"hentry entry" //I need to return post_class or something from REST API??
+					'hentry entry' //I need to return post_class or something from REST API??
 				)}
 				id={`post-${post.id}`}
 			>

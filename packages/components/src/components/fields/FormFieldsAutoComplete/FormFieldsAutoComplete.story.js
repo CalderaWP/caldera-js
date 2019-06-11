@@ -1,22 +1,22 @@
-import React, { useState, useMemo } from "react";
-import { storiesOf } from "@storybook/react";
-import { FormFieldsAutoComplete } from "./FormFieldsAutoComplete";
-import { textField, checkboxField } from "../../../factory";
+import React, { useState, useMemo } from 'react';
+import { storiesOf } from '@storybook/react';
+import { FormFieldsAutoComplete } from './FormFieldsAutoComplete';
+import { textField, checkboxField } from '../../../factory';
 
 const onChange = newValue => {
 	console.log(newValue);
 };
 const onBlur = event => {};
 
-const STORY_NAME = "Form Fields Auto Complete field";
+const STORY_NAME = 'Form Fields Auto Complete field';
 
 function Wrapped({ form }) {
-	const [value, onChange] = useState("");
+	const [value, onChange] = useState('');
 	return (
 		<FormFieldsAutoComplete
-			label={"Setting Field"}
+			label={'Setting Field'}
 			onChange={onChange}
-			fieldId={"selection-hats"}
+			fieldId={'selection-hats'}
 			value={value}
 			form={form}
 		/>
@@ -24,10 +24,10 @@ function Wrapped({ form }) {
 }
 
 const form = {
-	id: "test",
+	id: 'test',
 	fields: [checkboxField, textField],
 };
 
-storiesOf(STORY_NAME, module).add("Select fields ", () => (
+storiesOf(STORY_NAME, module).add('Select fields ', () => (
 	<Wrapped form={form} />
 ));

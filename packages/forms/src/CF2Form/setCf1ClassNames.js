@@ -4,9 +4,9 @@ import {
 	FILTER_FORM_COLUMN_PREFIX,
 	FILTER_FORM_COLUMN_CLASS,
 	FILTER_FORM_ELEMENT_CLASS,
-} from "@calderajs/components";
+} from '@calderajs/components';
 
-const IDENTIFIER = "cf1-classes";
+const IDENTIFIER = 'cf1-classes';
 
 /**
  * Sets all form classes to match Caldera Forms 1.x
@@ -25,7 +25,7 @@ export default function setCf1ClassNames() {
 		FILTER_FORM_COLUMN_PREFIX,
 		IDENTIFIER,
 		(prefix, columnId) => {
-			return "col-sm-";
+			return 'col-sm-';
 		}
 	);
 

@@ -18,7 +18,7 @@ export default async function handleFormSubmitCf2({
 	try {
 		const response = await axios.request({
 			url: `${apiRootUri}/v3/process/submission/${formId}`,
-			method: "POST",
+			method: 'POST',
 			data: {
 				formId,
 				_sessionPublicKey: tokens._sessionPublicKey,

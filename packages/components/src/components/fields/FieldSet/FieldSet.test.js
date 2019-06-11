@@ -1,17 +1,17 @@
-import * as React from "react";
-import { render, cleanup } from "react-testing-library";
+import * as React from 'react';
+import { render, cleanup } from 'react-testing-library';
 
-import { FieldSet } from "./FieldSet";
+import { FieldSet } from './FieldSet';
 
-describe("Field label", () => {
+describe('Field label', () => {
 	afterEach(cleanup);
-	it("Matches snapshot", () => {
+	it('Matches snapshot', () => {
 		const component = render(
-			<FieldSet fieldType={"checkbox"} legend={"Check All options"}>
+			<FieldSet fieldType={'checkbox'} legend={'Check All options'}>
 				<label htmlFor="one">One</label>
-				<input id="one" type={"checkbox"} />
+				<input id="one" type={'checkbox'} />
 				<label htmlFor="two">Two</label>
-				<input id="two" type={"checkbox"} />
+				<input id="two" type={'checkbox'} />
 			</FieldSet>
 		);
 		expect(component).toMatchSnapshot();

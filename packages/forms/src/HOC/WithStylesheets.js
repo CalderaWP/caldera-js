@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { addStyleSheetToDom, styleSheetId } from "./WithStylesheet";
+import React, { Fragment, useEffect, useRef, useState } from 'react';
+import { addStyleSheetToDom, styleSheetId } from './WithStylesheet';
 
 /**
  * HOC to load a component after appending a stylesheet to DOM

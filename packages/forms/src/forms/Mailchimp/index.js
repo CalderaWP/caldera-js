@@ -5,8 +5,8 @@ export {
 	CalderaMailChimpSurveyForm,
 	AddApiKey,
 	SelectList,
-} from "./components";
-export useCalderaMailChimpFormConfig from "./hooks/useCalderaMailChimpFormConfig";
+} from './components';
+export useCalderaMailChimpFormConfig from './hooks/useCalderaMailChimpFormConfig';
 export {
 	AdminClient,
 	getAccounts,
@@ -14,11 +14,11 @@ export {
 	getListsUi,
 	getLists,
 	saveApiKey,
-} from "./http/adminClient";
+} from './http/adminClient';
 
 export {
 	getForm,
 	prepareData,
 	createSubscriber,
 	updateSubscriber,
-} from "./http/publicClient";
+} from './http/publicClient';

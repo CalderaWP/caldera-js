@@ -1,4 +1,4 @@
-const shortid = require("shortid");
+const shortid = require('shortid');
 
 export default function processorFactory(type, processorTypes = {}) {
 	return {

@@ -1,24 +1,24 @@
-import React, { Component, Fragment, createElement } from "react";
-import PropTypes from "prop-types";
+import React, { Component, Fragment, createElement } from 'react';
+import PropTypes from 'prop-types';
 import {
 	Processors,
 	processorsCollectionPropType,
-} from "./Processors/Processors";
-import { TabPanel } from "@wordpress/components";
-import { Row, Column, fieldAreaFactory } from "@calderajs/components";
-import { processorTypesPropType } from "./propTypes";
-import { MainSection } from "./MainSection";
-import { defaultProcessorTypes } from "./Processors/processorTypes/defaultProcessorTypes";
-import { FormEntryViewer } from "..";
+} from './Processors/Processors';
+import { TabPanel } from '@wordpress/components';
+import { Row, Column, fieldAreaFactory } from '@calderajs/components';
+import { processorTypesPropType } from './propTypes';
+import { MainSection } from './MainSection';
+import { defaultProcessorTypes } from './Processors/processorTypes/defaultProcessorTypes';
+import { FormEntryViewer } from '..';
 
 export class FormEditor extends Component {
 	state = {
-		activeTab: "processors",
-		newProcessorType: "", //the next processor to be created will use this type
+		activeTab: 'processors',
+		newProcessorType: '', //the next processor to be created will use this type
 	};
 
 	onSetTab = activeTab => {
-		if ("entries" !== activeTab) {
+		if ('entries' !== activeTab) {
 			this.props.setEntryViewerOpen(false);
 		} else {
 			this.props.setEntryViewerOpen(open);
@@ -46,34 +46,34 @@ export class FormEditor extends Component {
 
 	tabs = [
 		{
-			name: "editor",
-			title: "Layout",
-			className: "caldera-forms-editor-layout-tab-btn",
-			classNameForComponent: "caldera-forms-editor-layout",
+			name: 'editor',
+			title: 'Layout',
+			className: 'caldera-forms-editor-layout-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-layout',
 		},
 		{
-			name: "entries",
-			title: "Entries",
-			className: "caldera-forms-editor-entries-tab-btn",
-			classNameForComponent: "caldera-forms-editor-entries",
+			name: 'entries',
+			title: 'Entries',
+			className: 'caldera-forms-editor-entries-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-entries',
 		},
 		{
-			name: "processors",
-			title: "Processors",
-			className: "caldera-forms-editor-processors-tab-btn",
-			classNameForComponent: "caldera-forms-editor-processors",
+			name: 'processors',
+			title: 'Processors',
+			className: 'caldera-forms-editor-processors-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-processors',
 		},
 		{
-			name: "mailer",
-			title: "Mail",
-			className: "caldera-forms-editor-mailer-tab-btn",
-			classNameForComponent: "caldera-forms-editor-mailer",
+			name: 'mailer',
+			title: 'Mail',
+			className: 'caldera-forms-editor-mailer-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-mailer',
 		},
 		{
-			name: "settings",
-			title: "Settings",
-			className: "caldera-forms-editor-settings-tab-btn",
-			classNameForComponent: "caldera-forms-editor-settings",
+			name: 'settings',
+			title: 'Settings',
+			className: 'caldera-forms-editor-settings-tab-btn',
+			classNameForComponent: 'caldera-forms-editor-settings',
 		},
 	];
 
@@ -115,19 +115,19 @@ export class FormEditor extends Component {
 					className="caldera-processor"
 					activeClass="active-tab"
 					onSelect={this.onSetTab}
-					initialTabName={"processors"}
+					initialTabName={'processors'}
 					tabs={this.getTabs()}
 				>
 					{tab => {
 						let { name, classNameForComponent, title } = tab;
 						if (entryViewerOpen) {
 							name = this.tabs.find(
-								tab => "entries" === tab.name
+								tab => 'entries' === tab.name
 							);
 							console.log(name);
 						}
 
-						if ("processors" === name) {
+						if ('processors' === name) {
 							return (
 								<MainSection
 									className={classNameForComponent}
@@ -143,12 +143,12 @@ export class FormEditor extends Component {
 								</MainSection>
 							);
 						}
-						if ("settings" === name) {
+						if ('settings' === name) {
 							const nameField = {
-								fieldType: "text",
+								fieldType: 'text',
 								value: form.name,
-								label: "Form Name",
-								fieldId: "formName",
+								label: 'Form Name',
+								fieldId: 'formName',
 								required: true,
 							};
 							return (
@@ -165,7 +165,7 @@ export class FormEditor extends Component {
 								</MainSection>
 							);
 						}
-						if ("entries" === name) {
+						if ('entries' === name) {
 							let entryViewerProps = {
 								form,
 								noItemsMessage: `No Entries Found For ${form.id}`,

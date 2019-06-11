@@ -1,30 +1,30 @@
-import React from "react";
-import { render } from "react-testing-library";
-import { FormEditor } from "./FormEditor";
-import { processorsCollection } from "./Processors/processors.fixtures";
+import React from 'react';
+import { render } from 'react-testing-library';
+import { FormEditor } from './FormEditor';
+import { processorsCollection } from './Processors/processors.fixtures';
 const form = {
-	id: "a-form",
-	name: "Form Name",
+	id: 'a-form',
+	name: 'Form Name',
 	processors: processorsCollection,
 };
 
 const processorTypes = [
 	{
-		type: "apiRequest",
+		type: 'apiRequest',
 	},
 	{
-		type: "redirect",
+		type: 'redirect',
 	},
 ];
 
 let updateForm = jest.fn();
 
-describe("FormEditor", () => {
+describe('FormEditor', () => {
 	beforeEach(() => {
 		updateForm = jest.fn();
 	});
 
-	it("should match snapshot", () => {
+	it('should match snapshot', () => {
 		const component = render(
 			<FormEditor
 				processorTypes={processorTypes}

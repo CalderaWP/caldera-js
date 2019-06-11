@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { fieldAreaFactory } from "../factories/fieldAreaFactory";
+import React, { Fragment } from 'react';
+import { fieldAreaFactory } from '../factories/fieldAreaFactory';
 
 export const FieldArea = ({
 	field,

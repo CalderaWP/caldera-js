@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import React, { Fragment, createElement } from "react";
+import PropTypes from 'prop-types';
+import React, { Fragment, createElement } from 'react';
 
 export const EntryActions = ({ entryId, formId, actions, onAction }) => {
 	return (

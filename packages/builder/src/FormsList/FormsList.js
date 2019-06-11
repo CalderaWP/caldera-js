@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Panel, PanelBody, PanelRow } from "@wordpress/components";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { FormListItem } from "../FormListItem/FormListItem";
-import { FormSearch } from "./FormSearch";
+import React, { useState } from 'react';
+import { Panel, PanelBody, PanelRow } from '@wordpress/components';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { FormListItem } from '../FormListItem/FormListItem';
+import { FormSearch } from './FormSearch';
 
 /**
  *
@@ -56,7 +56,7 @@ FormsList.propTypes = {
  */
 FormsList.defaultProps = {
 	forms: [],
-	panelTitle: "All Forms",
-	noFormsMessage: "No Forms Found",
+	panelTitle: 'All Forms',
+	noFormsMessage: 'No Forms Found',
 	onSort: () => {},
 };

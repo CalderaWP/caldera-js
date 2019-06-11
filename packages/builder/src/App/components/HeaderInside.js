@@ -1,6 +1,6 @@
-import React, { useContext, Fragment } from "react";
-import { FormContext } from "../FormContext";
-import { Button } from "@wordpress/components";
+import React, { useContext, Fragment } from 'react';
+import { FormContext } from '../FormContext';
+import { Button } from '@wordpress/components';
 
 export const HeaderInside = () => {
 	const { activeFormId } = useContext(FormContext);

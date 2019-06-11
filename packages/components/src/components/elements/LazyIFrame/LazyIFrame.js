@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 /**
  * Basic lazy-iframe loader
@@ -38,6 +38,6 @@ LazyIFrame.propTypes = {
 };
 
 LazyIFrame.defaultPosts = {
-	width: "100%",
-	height: "100%",
+	width: '100%',
+	height: '100%',
 };

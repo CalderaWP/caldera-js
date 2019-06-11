@@ -1,4 +1,4 @@
-import { ConditionalState } from "../state/ConditionalState";
+import { ConditionalState } from '../state/ConditionalState';
 
 const findFieldById = (fieldId, fields) => {
 	if (-1 !== fields.findIndex(f => f.fieldId === fieldId)) {
@@ -33,7 +33,7 @@ export const updateRows = (newState, rows, fields) => {
 							column.fields.forEach(field => {
 								if (field) {
 									if (!field.render) {
-										if ("string" === typeof field) {
+										if ('string' === typeof field) {
 											const _field = findFieldById(
 												field,
 												fields
@@ -42,7 +42,7 @@ export const updateRows = (newState, rows, fields) => {
 												field = _field;
 											}
 										}
-										if (field.hasOwnProperty("fieldId")) {
+										if (field.hasOwnProperty('fieldId')) {
 											if (
 												!newState.isFieldHidden(
 													field.fieldId

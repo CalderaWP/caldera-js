@@ -1,6 +1,6 @@
-import React, { Fragment, useContext, createElement } from "react";
-import { TabPanel } from "@wordpress/components";
-import { MenuContext } from "../MenuContext";
+import React, { Fragment, useContext, createElement } from 'react';
+import { TabPanel } from '@wordpress/components';
+import { MenuContext } from '../MenuContext';
 
 export const MainMenu = ({
 	className,

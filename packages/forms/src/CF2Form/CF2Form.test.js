@@ -1,22 +1,22 @@
-import { CF2Form } from "./CF2Form";
-import React, { useEffect } from "react";
-import { render, fireEvent, getByTestId } from "react-testing-library";
+import { CF2Form } from './CF2Form';
+import React, { useEffect } from 'react';
+import { render, fireEvent, getByTestId } from 'react-testing-library';
 
-test("the data is peanut butter", done => {
+test('the data is peanut butter', done => {
 	expect.assertions(1);
 	function fetchData(callback) {
-		callback("peanut butter");
+		callback('peanut butter');
 	}
 	function callback(data) {
-		expect(data).toBe("peanut butter");
+		expect(data).toBe('peanut butter');
 		done();
 	}
 
 	fetchData(callback);
 });
 
-describe("CF2Form", () => {
-	it("calls effect", () => {
+describe('CF2Form', () => {
+	it('calls effect', () => {
 		return new Promise(resolve => {
 			render(<EffectfulComponent effect={resolve} />);
 		});
@@ -41,20 +41,20 @@ describe("CF2Form", () => {
 	});
 
 	const submitButton = {
-		fieldId: "fld_7908577",
-		label: "Click Me",
-		fieldType: "submit",
+		fieldId: 'fld_7908577',
+		label: 'Click Me',
+		fieldType: 'submit',
 	};
 
 	const formConfig = {
-		ID: "cf222",
+		ID: 'cf222',
 		rows: [
 			{
-				rowId: "r3",
+				rowId: 'r3',
 				columns: [
 					{
 						fields: [submitButton.fieldId],
-						width: "1",
+						width: '1',
 						columnId: `r2-${submitButton.fieldId}`,
 					},
 				],
@@ -64,7 +64,7 @@ describe("CF2Form", () => {
 		conditionals: [],
 	};
 
-	it("Matches snapshot with cf2 classnames used", () => {
+	it('Matches snapshot with cf2 classnames used', () => {
 		expect(
 			render(
 				<CF2Form
@@ -72,21 +72,21 @@ describe("CF2Form", () => {
 					axios={axios}
 					useCf1ClassNames={true}
 					_tokens={{
-						_cf_verify: "a",
-						_sessionPublicKey: "b",
+						_cf_verify: 'a',
+						_sessionPublicKey: 'b',
 					}}
 				/>
 			)
 		).toMatchSnapshot();
 	});
 
-	it.skip("Matches snapshot", () => {
+	it.skip('Matches snapshot', () => {
 		expect(
 			render(<CF2Form formConfig={formConfig} axios={axios} />)
 		).toMatchSnapshot();
 	});
 
-	it("calls the onReady", async done => {
+	it('calls the onReady', async done => {
 		expect.assertions(1);
 		const onReady = new Promise(resolve => {
 			resolve();
@@ -99,23 +99,23 @@ describe("CF2Form", () => {
 				axios={axios}
 				onReady={onReady}
 				_tokens={{
-					_cf_verify: "a",
-					_sessionPublicKey: "b",
+					_cf_verify: 'a',
+					_sessionPublicKey: 'b',
 				}}
 			/>
 		);
 	});
 
-	it.skip("Snapshot with tokens", async () => {
+	it.skip('Snapshot with tokens', async () => {
 		expect(
 			render(
 				<CF2Form
-					apiRootUri={"https://localhost/"}
+					apiRootUri={'https://localhost/'}
 					formConfig={formConfig}
 					axios={axios}
 					_tokens={{
-						_cf_verify: "a",
-						_sessionPublicKey: "b",
+						_cf_verify: 'a',
+						_sessionPublicKey: 'b',
 					}}
 				/>
 			)

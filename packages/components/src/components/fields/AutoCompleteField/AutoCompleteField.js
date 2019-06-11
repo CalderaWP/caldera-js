@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { FieldWrapper } from "../FieldWrapper/FieldWrapper";
-import Autocomplete from "react-autocomplete";
-import { Control } from "../Control";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FieldWrapper } from '../FieldWrapper/FieldWrapper';
+import Autocomplete from 'react-autocomplete';
+import { Control } from '../Control';
 
-export const AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER = "auto-complete";
+export const AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER = 'auto-complete';
 
 const RenderInput = props => <Control {...props} />;
 const RenderMenu = (items, value, style) => (
@@ -13,9 +13,9 @@ const RenderMenu = (items, value, style) => (
 
 const RenderItem = (item, highlighted) => (
 	<li
-		className={"tag"}
+		className={'tag'}
 		key={item.id ? item.id : item.value}
-		style={{ backgroundColor: highlighted ? "#eee" : "transparent" }}
+		style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
 	>
 		{item.label}
 	</li>
@@ -48,7 +48,7 @@ export const AutoCompleteField = props => {
 	};
 
 	function handleChange(eventOrValue) {
-		if ("object" === typeof eventOrValue) {
+		if ('object' === typeof eventOrValue) {
 			onChange(eventOrValue.target.value);
 		} else {
 			onChange(eventOrValue);

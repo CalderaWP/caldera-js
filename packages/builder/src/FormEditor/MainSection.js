@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export const MainSection = ({ title, className, children }) => (
 	<div className={className}>

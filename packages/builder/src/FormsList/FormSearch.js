@@ -1,7 +1,7 @@
-import React, { useState, useMemo, useEffect, Fragment } from "react";
-import PropTypes from "prop-types";
-import { fieldAreaFactory } from "@calderajs/components";
-import moment from "moment";
+import React, { useState, useMemo, useEffect, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { fieldAreaFactory } from '@calderajs/components';
+import moment from 'moment';
 
 const fuzzysearch = function(needle, haystack) {
 	if (!haystack.length || !needle.length) {
@@ -18,10 +18,10 @@ const fuzzysearch = function(needle, haystack) {
 
 export const FormSearch = ({ forms, onSort }) => {
 	const searchDefaults = {
-		searchBy: "",
+		searchBy: '',
 		sortedForms: forms,
-		sortBy: "name",
-		sortOrder: "DESC",
+		sortBy: 'name',
+		sortOrder: 'DESC',
 		formNames: [],
 	};
 	const [searchBy, setSearchBy] = useState(searchDefaults.searchBy);
@@ -71,17 +71,17 @@ export const FormSearch = ({ forms, onSort }) => {
 		}
 
 		switch (sortBy) {
-			case "_last_updated":
+			case '_last_updated':
 				sorted = _forms.sort((form, lastForm) => {
 					const d1 = getFormKey(form, sortBy, null)
-						.replace(/[^\+]*$/, "")
-						.replace(" +", "");
+						.replace(/[^\+]*$/, '')
+						.replace(' +', '');
 					const d2 = getFormKey(lastForm, sortBy, null)
-						.replace(/[^\+]*$/, "")
-						.replace(" +", "");
+						.replace(/[^\+]*$/, '')
+						.replace(' +', '');
 					const currentMoment = moment(d1);
 					const lastMoment = moment(d2);
-					if ("ASC" === sortOrder) {
+					if ('ASC' === sortOrder) {
 						if (currentMoment.isBefore(lastMoment)) {
 							return -1;
 						} else {
@@ -96,12 +96,12 @@ export const FormSearch = ({ forms, onSort }) => {
 					return !currentMoment.isBefore(lastMoment);
 				});
 				break;
-			case "name":
+			case 'name':
 			default:
 				sorted = _forms.sort((form, lastForm) => {
-					const current = getFormKey(form, "name", null);
-					const last = getFormKey(lastForm, "name", null);
-					if ("ASC" === sortOrder) {
+					const current = getFormKey(form, 'name', null);
+					const last = getFormKey(lastForm, 'name', null);
+					if ('ASC' === sortOrder) {
 						return last.localeCompare(current);
 					}
 					return current.localeCompare(last);
@@ -113,51 +113,51 @@ export const FormSearch = ({ forms, onSort }) => {
 	};
 
 	const sortField = {
-		fieldType: "dropdown",
-		label: "Sort Forms By",
+		fieldType: 'dropdown',
+		label: 'Sort Forms By',
 		value: sortBy,
 		options: [
 			{
-				value: "name",
-				label: "Name",
+				value: 'name',
+				label: 'Name',
 			},
 			{
-				value: "_last_updated",
-				label: "Updated",
+				value: '_last_updated',
+				label: 'Updated',
 			},
 		],
 	};
 	const orderField = {
-		fieldType: "dropdown",
-		label: "Order Forms By",
+		fieldType: 'dropdown',
+		label: 'Order Forms By',
 		value: sortOrder,
 		options: [
 			{
-				value: "ASC",
+				value: 'ASC',
 				label:
-					"name" === sortBy
-						? "Alphabetical"
-						: "Most Recently Updated",
+					'name' === sortBy
+						? 'Alphabetical'
+						: 'Most Recently Updated',
 			},
 			{
-				value: "DESC",
+				value: 'DESC',
 				label:
-					"name" === sortBy
-						? "Reverse Alphabetical"
-						: "Least Recently Updated First",
+					'name' === sortBy
+						? 'Reverse Alphabetical'
+						: 'Least Recently Updated First',
 			},
 		],
 	};
 
 	const searchField = {
-		fieldType: "text",
-		label: "Search Forms By Name",
+		fieldType: 'text',
+		label: 'Search Forms By Name',
 		value: searchBy,
 	};
 
 	const resetButton = {
-		fieldType: "button",
-		value: "Reset Search",
+		fieldType: 'button',
+		value: 'Reset Search',
 		onClick: resetSearch,
 	};
 

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { fieldFactory } from "../factory";
+import { useState } from 'react';
+import { fieldFactory } from '../factory';
 
 export default function useComponentFactory(components) {
 	const defaultComponents = {
-		input: "./InputOne",
+		input: './InputOne',
 	};
 	const [componentPaths] = useState(components);
 	const createComponent = field => {

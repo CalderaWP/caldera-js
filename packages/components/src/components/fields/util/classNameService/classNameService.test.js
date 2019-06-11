@@ -10,65 +10,65 @@ import classNameService, {
 	FILTER_FORM_ELEMENT_CLASS,
 	FILTER_FORM_WRAPPER_CLASS,
 	FILTER_FORM_ROW_CLASS,
-} from "./classNameService";
-import { fieldClassNames } from "../fieldClassNames";
-import { fieldSetClassNames } from "../fieldSetClassNames";
-import { fieldWrapperClassNames } from "../fieldWrapperClassNames";
-import { labelClassNames } from "../labelClassNames";
+} from './classNameService';
+import { fieldClassNames } from '../fieldClassNames';
+import { fieldSetClassNames } from '../fieldSetClassNames';
+import { fieldWrapperClassNames } from '../fieldWrapperClassNames';
+import { labelClassNames } from '../labelClassNames';
 
-const TEST_CONSUMER = "namespace";
+const TEST_CONSUMER = 'namespace';
 
-describe("className service API", () => {
+describe('className service API', () => {
 	afterEach(() => {
 		classNameService.reset();
 	});
 
-	it("filters work as expected", () => {
-		classNameService.addFilter("headerPath", TEST_CONSUMER, () => "ALT!");
+	it('filters work as expected', () => {
+		classNameService.addFilter('headerPath', TEST_CONSUMER, () => 'ALT!');
 		const headerPath = classNameService.applyFilters(
-			"headerPath",
-			"./Header"
+			'headerPath',
+			'./Header'
 		);
-		expect(headerPath).toEqual("ALT!");
+		expect(headerPath).toEqual('ALT!');
 	});
 
-	it("can remove", () => {
+	it('can remove', () => {
 		classNameService.addFilter(
 			FILTER_FIELD_CLASS_NAME,
 			TEST_CONSUMER,
-			() => "ALT"
+			() => 'ALT'
 		);
 		let value1 = classNameService.applyFilters(
 			FILTER_FIELD_CLASS_NAME,
-			"ORIGINAL"
+			'ORIGINAL'
 		);
-		expect(value1).toEqual("ALT");
+		expect(value1).toEqual('ALT');
 		classNameService.removeAllFilters(FILTER_FIELD_CLASS_NAME);
 		let value2 = classNameService.applyFilters(
 			FILTER_FIELD_CLASS_NAME,
-			"ORIGINAL"
+			'ORIGINAL'
 		);
-		expect(value2).toEqual("ORIGINAL");
+		expect(value2).toEqual('ORIGINAL');
 	});
 });
 
-describe("rest", () => {
-	it("resets", () => {
-		const OTHER_FILTER = "random";
+describe('rest', () => {
+	it('resets', () => {
+		const OTHER_FILTER = 'random';
 		classNameService.addFilter(
 			FILTER_FORM_ROW_CLASS,
 			TEST_CONSUMER,
-			() => "A1"
+			() => 'A1'
 		);
-		classNameService.addFilter(OTHER_FILTER, TEST_CONSUMER, () => "A2");
+		classNameService.addFilter(OTHER_FILTER, TEST_CONSUMER, () => 'A2');
 		classNameService.reset();
-		expect(classNameService.getFormRowClassNames("111")).toEqual(
-			"caldera-row"
+		expect(classNameService.getFormRowClassNames('111')).toEqual(
+			'caldera-row'
 		);
 		expect(classNameService.applyFilters(OTHER_FILTER, 11)).toEqual(11);
 	});
 });
-describe("classNameHooks", () => {
+describe('classNameHooks', () => {
 	beforeEach(() => {
 		Object.keys(cf1ClassNames).forEach(filter =>
 			classNameService.removeAllFilters(filter)
@@ -79,27 +79,27 @@ describe("classNameHooks", () => {
 		classNameService.reset();
 	});
 
-	it("filters work as expected", () => {
-		classNameService.addFilter("headerPath", TEST_CONSUMER, () => "ALT!");
+	it('filters work as expected', () => {
+		classNameService.addFilter('headerPath', TEST_CONSUMER, () => 'ALT!');
 		const headerPath = classNameService.applyFilters(
-			"headerPath",
-			"./Header"
+			'headerPath',
+			'./Header'
 		);
-		expect(headerPath).toEqual("ALT!");
+		expect(headerPath).toEqual('ALT!');
 	});
 
-	it("Adds className for field", () => {
+	it('Adds className for field', () => {
 		classNameService.addFilter(
 			FILTER_FIELD_CLASS_NAME,
 			TEST_CONSUMER,
 			() => cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]
 		);
-		expect(fieldClassNames("text")).toBe(
+		expect(fieldClassNames('text')).toBe(
 			cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]
 		);
 	});
 
-	it("Adds className for fieldset", () => {
+	it('Adds className for fieldset', () => {
 		classNameService.addFilter(
 			FILTER_FIELD_SET_CLASS_NAME,
 			TEST_CONSUMER,
@@ -107,55 +107,55 @@ describe("classNameHooks", () => {
 				return cf1ClassNames[FILTER_FIELD_SET_CLASS_NAME];
 			}
 		);
-		expect(fieldSetClassNames("text")).toBe(
+		expect(fieldSetClassNames('text')).toBe(
 			cf1ClassNames[FILTER_FIELD_SET_CLASS_NAME]
 		);
 	});
 
-	it("Adds className for field wrapper", () => {
+	it('Adds className for field wrapper', () => {
 		classNameService.addFilter(
 			FILTER_FIELD_WRAPPER_CLASS_NAME,
 			TEST_CONSUMER,
 			() => cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]
 		);
-		expect(fieldWrapperClassNames("text")).toBe(
+		expect(fieldWrapperClassNames('text')).toBe(
 			cf1ClassNames[FILTER_FIELD_WRAPPER_CLASS_NAME]
 		);
 	});
 
-	it("Adds className for field label", () => {
+	it('Adds className for field label', () => {
 		classNameService.addFilter(
 			FILTER_FIELD_LABEL_CLASS_NAME,
 			TEST_CONSUMER,
 			() => cf1ClassNames[FILTER_FIELD_LABEL_CLASS_NAME]
 		);
-		expect(labelClassNames("text")).toBe("control-label");
+		expect(labelClassNames('text')).toBe('control-label');
 	});
 
-	it("Adds className grid element ", () => {
+	it('Adds className grid element ', () => {
 		classNameService.addFilter(
 			FILTER_FORM_WRAPPER_CLASS,
 			TEST_CONSUMER,
-			() => "caldera-grid"
+			() => 'caldera-grid'
 		);
-		expect(classNameService.getFormWrapperClassNames("")).toBe(
-			"caldera-grid"
+		expect(classNameService.getFormWrapperClassNames('')).toBe(
+			'caldera-grid'
 		);
 	});
 
-	it("Adds className form element ", () => {
+	it('Adds className form element ', () => {
 		classNameService.addFilter(
 			FILTER_FORM_ELEMENT_CLASS,
 			TEST_CONSUMER,
 			() => cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]
 		);
-		expect(classNameService.getFormElementClassNames("")).toBe(
+		expect(classNameService.getFormElementClassNames('')).toBe(
 			cf1ClassNames[FILTER_FORM_ELEMENT_CLASS]
 		);
 	});
 });
 
-describe("column class names with width", () => {
+describe('column class names with width', () => {
 	beforeEach(() => {
 		Object.keys(cf1ClassNames).forEach(filter =>
 			classNameService.removeAllFilters(filter)
@@ -166,7 +166,7 @@ describe("column class names with width", () => {
 		classNameService.reset();
 	});
 
-	it("Filters column prefix", () => {
+	it('Filters column prefix', () => {
 		classNameService.addFilter(
 			FILTER_FORM_COLUMN_PREFIX,
 			TEST_CONSUMER,
@@ -174,10 +174,10 @@ describe("column class names with width", () => {
 				return `p-`;
 			}
 		);
-		expect(classNameService.getFormColumnClassPrefix()).toBe("p-");
+		expect(classNameService.getFormColumnClassPrefix()).toBe('p-');
 	});
 
-	it("Prefixes column class name", () => {
+	it('Prefixes column class name', () => {
 		classNameService.addFilter(
 			FILTER_FORM_COLUMN_PREFIX,
 			TEST_CONSUMER,
@@ -185,12 +185,12 @@ describe("column class names with width", () => {
 				return `p-`;
 			}
 		);
-		expect(classNameService.getFormColumnClassNames("c1", "1/2")).toBe(
-			"caldera-column p-6"
+		expect(classNameService.getFormColumnClassNames('c1', '1/2')).toBe(
+			'caldera-column p-6'
 		);
 	});
 
-	it("can use width in column prefix", () => {
+	it('can use width in column prefix', () => {
 		classNameService.addFilter(
 			FILTER_FORM_COLUMN_PREFIX,
 			TEST_CONSUMER,
@@ -198,8 +198,8 @@ describe("column class names with width", () => {
 				return `${prefix}-${columnId}`;
 			}
 		);
-		expect(classNameService.getFormColumnClassNames("c1", "1")).toBe(
-			"caldera-column width--c112"
+		expect(classNameService.getFormColumnClassNames('c1', '1')).toBe(
+			'caldera-column width--c112'
 		);
 	});
 });

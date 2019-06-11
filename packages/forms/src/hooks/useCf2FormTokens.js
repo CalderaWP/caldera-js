@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 /**
  * Hook for managing state of the form tokens
@@ -10,8 +10,8 @@ export const useCf2FormTokens = initialFormId => {
 	const [tokensFetched, setTokensFetched] = useState(false);
 	const [formId, setFormId] = useState(initialFormId);
 	const [tokens, setTokens] = useState({
-		_cf_verify: "",
-		_sessionPublicKey: "",
+		_cf_verify: '',
+		_sessionPublicKey: '',
 	});
 
 	const updateTokens = ({ _cf_verify, _sessionPublicKey }) => {

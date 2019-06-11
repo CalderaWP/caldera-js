@@ -1,6 +1,6 @@
-import { fieldClassNames, FieldWrapper } from "../../..";
-import React from "react";
-import { parseAttributes } from "../util";
+import { fieldClassNames, FieldWrapper } from '../../..';
+import React from 'react';
+import { parseAttributes } from '../util';
 
 export const HiddenField = ({
 	value,
@@ -9,7 +9,7 @@ export const HiddenField = ({
 	attributes,
 	wrapperClassNames,
 }) => {
-	const fieldType = "hidden";
+	const fieldType = 'hidden';
 	const _attributes = parseAttributes(attributes, fieldType);
 
 	return (
@@ -20,7 +20,7 @@ export const HiddenField = ({
 		>
 			<input
 				className={fieldClassNames(fieldType)}
-				type={"hidden"}
+				type={'hidden'}
 				id={fieldId}
 				value={value}
 				onChange={event => onChange(event.target.value)}

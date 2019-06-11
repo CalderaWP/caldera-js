@@ -1,8 +1,8 @@
-import { blockClassNameIdentifiers } from "../blockClassNameIdentifiers";
-import React from "react";
-import CalderaMailChimpForm from "./CalderaMailChimpForm";
-import ReactDOM from "react-dom";
-import CalderaMailChimpSurveyForm from "./CalderaMailChimpSurveyForm";
+import { blockClassNameIdentifiers } from '../blockClassNameIdentifiers';
+import React from 'react';
+import CalderaMailChimpForm from './CalderaMailChimpForm';
+import ReactDOM from 'react-dom';
+import CalderaMailChimpSurveyForm from './CalderaMailChimpSurveyForm';
 /**
  * Create the ID attribute string
 
@@ -48,7 +48,7 @@ export function LoadAllCalderaMailChimpForms({ apiRoot, token, wpNonce }) {
 					? `${apiRoot}/token?_wpnonce=${wpNonce}`
 					: `${apiRoot}/token`;
 				fetch(url, {
-					method: "POST",
+					method: 'POST',
 				})
 					.then(r => r.json())
 					.then(r => {
@@ -106,9 +106,9 @@ function LoadCalderaMailChimpForms(elements, token, apiRoot) {
 
 			function createComponent() {
 				return React.createElement(
-					"div",
+					'div',
 					{
-						fallback: React.createElement("div", {}, "Loading"),
+						fallback: React.createElement('div', {}, 'Loading'),
 					},
 					[
 						React.createElement(CalderaMailChimpForm, {
@@ -156,9 +156,9 @@ function LoadCalderaMailChimpSurveyForms(elements, token, apiRoot) {
 
 			function createComponent() {
 				return React.createElement(
-					"div",
+					'div',
 					{
-						fallback: React.createElement("div", {}, "Loading"),
+						fallback: React.createElement('div', {}, 'Loading'),
 					},
 					[
 						React.createElement(CalderaMailChimpSurveyForm, {

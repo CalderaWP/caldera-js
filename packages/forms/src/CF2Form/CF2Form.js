@@ -1,11 +1,11 @@
-import { CalderaForm } from "../CalderaForm";
-import getCf2Token from "../Http/handlers/getCf2Token";
-import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
-import React, { useState, useEffect, Fragment } from "react";
-import { RingLoader, PacmanLoader } from "react-spinners";
+import { CalderaForm } from '../CalderaForm';
+import getCf2Token from '../Http/handlers/getCf2Token';
+import handleFormSubmitCf2 from '../Http/handlers/handleFormSubmitCf2';
+import React, { useState, useEffect, Fragment } from 'react';
+import { RingLoader, PacmanLoader } from 'react-spinners';
 
-import PropTypes from "prop-types";
-import setCf1ClassNames from "./setCf1ClassNames";
+import PropTypes from 'prop-types';
+import setCf1ClassNames from './setCf1ClassNames';
 
 /**
  * A Caldera Form designed to be processed against Caldera Forms' cf2 REST API.
@@ -30,13 +30,13 @@ export const CF2Form = ({
 	onReady,
 }) => {
 	const [tokensFetched, setTokensFetched] = useState(false);
-	const [message, setMessage] = useState("");
+	const [message, setMessage] = useState('');
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [hideForm, setHideForm] = useState(false);
 	const [tokens, setTokens] = useState(
 		_tokens || {
-			_cf_verify: "",
-			_sessionPublicKey: "",
+			_cf_verify: '',
+			_sessionPublicKey: '',
 		}
 	);
 	const [form, setForm] = useState(formConfig);
@@ -75,7 +75,7 @@ export const CF2Form = ({
 	}, [useCf1ClassNames]);
 
 	if (hideForm) {
-		return <div className={"error"}>{message}</div>;
+		return <div className={'error'}>{message}</div>;
 	}
 
 	const FormOrLoading = () => {

@@ -1,5 +1,5 @@
-import React from "react";
-import { WithStylesheet } from "./WithStylesheet";
+import React from 'react';
+import { WithStylesheet } from './WithStylesheet';
 
 /**
  * HOC to load a component after appending bootstrap - via MAXCDN - to DOM
@@ -24,5 +24,5 @@ export const WithBootstrapStyle = ({ children, version, media, Loading }) => {
 };
 
 WithBootstrapStyle.defaultProps = {
-	version: "4.3.1",
+	version: '4.3.1',
 };

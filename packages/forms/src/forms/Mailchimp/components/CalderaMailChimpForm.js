@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { createSubscriber, getForm } from "../http/publicClient";
-import MailChimpForm from "./MailChimpForm";
-import { PacmanLoader } from "react-spinners";
-import useCalderaMailChimpFormConfig from "../hooks/useCalderaMailChimpFormConfig";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { createSubscriber, getForm } from '../http/publicClient';
+import MailChimpForm from './MailChimpForm';
+import { PacmanLoader } from 'react-spinners';
+import useCalderaMailChimpFormConfig from '../hooks/useCalderaMailChimpFormConfig';
 
 /**
  * Load remote MailChimp sign up mailChimpTestForm via the WordPress REST API
@@ -74,6 +74,6 @@ CalderaMailChimpForm.defaultProps = {
 	getForm,
 	hideOnSubmit: true,
 	apiRoot:
-		"https://formcalderas.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1/lists",
+		'https://formcalderas.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1/lists',
 };
 export default CalderaMailChimpForm;

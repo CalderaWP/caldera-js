@@ -1,8 +1,8 @@
 const defaults = {
-	firstName: "",
-	email: "",
-	firstNameLabel: "First Name",
-	emailLabel: "Email",
+	firstName: '',
+	email: '',
+	firstNameLabel: 'First Name',
+	emailLabel: 'Email',
 };
 
 export const creatContactFormConfig = ({
@@ -13,51 +13,51 @@ export const creatContactFormConfig = ({
 	config,
 }) => {
 	const textField = {
-		fieldType: "text",
+		fieldType: 'text',
 		value: firstName ? firstName : defaults.firstName,
 		label: firstNameLabel ? firstNameLabel : defaults.firstNameLabel,
-		fieldId: "textFieldId",
+		fieldId: 'textFieldId',
 		required: true,
 	};
 	const emailField = {
-		fieldType: "email",
+		fieldType: 'email',
 		value: email ? email : defaults.email,
 		label: emailLabel ? emailLabel : defaults.emailLabel,
-		fieldId: "emailFieldId",
+		fieldId: 'emailFieldId',
 		required: true,
 	};
 
 	const submitButton = {
-		fieldId: "sendSubmit",
-		fieldType: "submit",
-		label: "Send",
+		fieldId: 'sendSubmit',
+		fieldType: 'submit',
+		label: 'Send',
 	};
 
 	const form = {
 		...config,
 		rows: [
 			{
-				rowId: "row1",
+				rowId: 'row1',
 				columns: [
 					{
 						fields: [emailField.fieldId],
-						width: "1/2",
-						columnId: "row1col1",
+						width: '1/2',
+						columnId: 'row1col1',
 					},
 					{
 						fields: [textField.fieldId],
-						width: "1/2",
-						columnId: "row1col2",
+						width: '1/2',
+						columnId: 'row1col2',
 					},
 				],
 			},
 			{
-				rowId: "row2",
+				rowId: 'row2',
 				columns: [
 					{
 						fields: [submitButton.fieldId],
-						width: "12",
-						columnId: "row2col1",
+						width: '12',
+						columnId: 'row2col1',
 					},
 				],
 			},

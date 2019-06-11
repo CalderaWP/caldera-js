@@ -1,43 +1,43 @@
-import { CF2Form } from "../../../..";
-import axios from "axios/index";
-import { createElement } from "react";
+import { CF2Form } from '../../../..';
+import axios from 'axios/index';
+import { createElement } from 'react';
 
-const FIRST_NAME_ID = "name";
-const COMMENTS_FIELD_ID = "comments_questions";
-const EMAIL_FIELD_ID = "email";
-const SUBMIT_BUTTON_FIELD_ID = "submit";
+const FIRST_NAME_ID = 'name';
+const COMMENTS_FIELD_ID = 'comments_questions';
+const EMAIL_FIELD_ID = 'email';
+const SUBMIT_BUTTON_FIELD_ID = 'submit';
 
 const firstNameField = {
-	fieldType: "text",
-	value: "",
-	label: "First Name",
+	fieldType: 'text',
+	value: '',
+	label: 'First Name',
 	fieldId: FIRST_NAME_ID,
 	required: true,
 };
 
 const emailField = {
-	fieldType: "text",
-	value: "",
-	label: "Last Name",
+	fieldType: 'text',
+	value: '',
+	label: 'Last Name',
 	fieldId: EMAIL_FIELD_ID,
 	required: true,
 };
 
 const commentsField = {
-	fieldType: "textarea",
-	value: "",
-	label: "Your Message",
+	fieldType: 'textarea',
+	value: '',
+	label: 'Your Message',
 	fieldId: COMMENTS_FIELD_ID,
 	required: false,
 };
 
 const submitButton = {
 	fieldId: SUBMIT_BUTTON_FIELD_ID,
-	label: "Send Your Message",
-	fieldType: "submit",
+	label: 'Send Your Message',
+	fieldType: 'submit',
 };
 
-const formId = "contact";
+const formId = 'contact';
 
 const formConfig = {
 	ID: formId,
@@ -46,11 +46,11 @@ const formConfig = {
 			columns: [
 				{
 					fields: [FIRST_NAME_ID],
-					width: "1/2",
+					width: '1/2',
 				},
 				{
 					fields: [EMAIL_FIELD_ID],
-					width: "1/2",
+					width: '1/2',
 				},
 			],
 		},
@@ -58,7 +58,7 @@ const formConfig = {
 			columns: [
 				{
 					fields: [COMMENTS_FIELD_ID],
-					width: "100",
+					width: '100',
 				},
 			],
 		},
@@ -66,7 +66,7 @@ const formConfig = {
 			columns: [
 				{
 					fields: [SUBMIT_BUTTON_FIELD_ID],
-					width: "1",
+					width: '1',
 				},
 			],
 		},

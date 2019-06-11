@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import { Flex } from "@rebass/grid";
-import { Column } from "./Column";
-import classNames from "classnames";
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Flex } from '@rebass/grid';
+import { Column } from './Column';
+import classNames from 'classnames';
 
-import { classNameService } from "../../..";
+import { classNameService } from '../../..';
 
 /**
  *

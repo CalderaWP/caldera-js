@@ -1,6 +1,6 @@
 import classNameService, {
 	FILTER_FIELD_SET_CLASS_NAME,
-} from "./classNameService/classNameService";
+} from './classNameService/classNameService';
 
 /**
  * Get the class names for a fieldset

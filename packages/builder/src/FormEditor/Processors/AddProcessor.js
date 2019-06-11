@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import { Row, fieldAreaFactory } from "@calderajs/components";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Row, fieldAreaFactory } from '@calderajs/components';
 
 const AddProcessorButtonText = ({ processorTypes, value }) => {
 	const findProcessorLabel = type => {
 		const processor = processorTypes.find(
 			processorType => value === processorType.type
 		);
-		if (processor && processor.hasOwnProperty("typeLabel")) {
+		if (processor && processor.hasOwnProperty('typeLabel')) {
 			return processor.typeLabel;
 		}
 		return type;
@@ -32,16 +32,16 @@ export const AddProcessor = ({
 	processorTypes.map(processorType => {
 		options.push({
 			value: processorType.type,
-			label: processorType.hasOwnProperty("typeLabel")
+			label: processorType.hasOwnProperty('typeLabel')
 				? processorType.typeLabel
 				: processorType.type,
 		});
 	});
 
 	const processorTypesField = {
-		fieldType: "select",
-		label: "Processor Type",
-		fieldId: "newProcessorType",
+		fieldType: 'select',
+		label: 'Processor Type',
+		fieldId: 'newProcessorType',
 		required: true,
 		options,
 		onChange: setNewProcessorType,
@@ -70,5 +70,5 @@ AddProcessor.propTypes = {
 
 AddProcessor.defaultProps = {
 	processorTypes: [],
-	value: "",
+	value: '',
 };

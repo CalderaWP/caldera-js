@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { storiesOf } from "@storybook/react";
-import { HorizontalForm } from "./HorizontalForm";
+import React, { Component } from 'react';
+import { storiesOf } from '@storybook/react';
+import { HorizontalForm } from './HorizontalForm';
 import {
 	checkboxFieldset,
 	selectField,
@@ -9,9 +9,9 @@ import {
 	textField,
 	emailField,
 	radioField,
-} from "@calderajs/components";
+} from '@calderajs/components';
 
-storiesOf("HorizontalForm", module).add("Works with a bunch of fields", () => (
+storiesOf('HorizontalForm', module).add('Works with a bunch of fields', () => (
 	<HorizontalForm
 		fields={[
 			checkboxFieldset,

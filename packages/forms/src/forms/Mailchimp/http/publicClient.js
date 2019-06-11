@@ -41,9 +41,9 @@ const prepareData = (values, processor, update) => {
 const createSubscriber = (values, processor) => {
 	const { submitUrl } = processor;
 	return fetch(submitUrl, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(prepareData(values, processor, false)),
 	});
@@ -59,9 +59,9 @@ const createSubscriber = (values, processor) => {
 const updateSubscriber = (values, processor) => {
 	const { submitUrl } = processor;
 	return fetch(submitUrl, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(prepareData(values, processor, true)),
 	});

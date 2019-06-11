@@ -1,19 +1,19 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { isValidHtml5type } from "../util";
-import { FieldWrapper } from "..";
-import { Control } from "../Control";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { isValidHtml5type } from '../util';
+import { FieldWrapper } from '..';
+import { Control } from '../Control';
 
 export const InputField = props => {
 	const { html5type } = props;
-	const fieldType = isValidHtml5type(html5type) ? html5type : "text";
+	const fieldType = isValidHtml5type(html5type) ? html5type : 'text';
 	const fieldProps = {
 		...props,
 		fieldType,
 	};
 	return (
 		<FieldWrapper {...fieldProps}>
-			<Control {...fieldProps} as={"input"} />
+			<Control {...fieldProps} as={'input'} />
 		</FieldWrapper>
 	);
 };
@@ -39,5 +39,5 @@ InputField.propTypes = {
 InputField.defaultProps = {
 	onBlur: () => {},
 	required: false,
-	html5type: "text",
+	html5type: 'text',
 };

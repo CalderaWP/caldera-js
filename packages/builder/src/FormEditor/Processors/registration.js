@@ -12,8 +12,8 @@ export const registerProcessorType = (
 	registry = defaultRegistry
 ) => {
 	if (
-		"object" === typeof processorType &&
-		processorType.hasOwnProperty("type")
+		'object' === typeof processorType &&
+		processorType.hasOwnProperty('type')
 	) {
 		return [processorType, ...registry];
 	}
@@ -33,8 +33,8 @@ export const unregisterProcessorType = (
 	registry = defaultRegistry
 ) => {
 	if (
-		"object" === typeof processorType &&
-		processorType.hasOwnProperty("type")
+		'object' === typeof processorType &&
+		processorType.hasOwnProperty('type')
 	) {
 		processorType = processorType.type;
 	}

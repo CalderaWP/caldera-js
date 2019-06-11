@@ -1,8 +1,8 @@
-import React from "react";
-import { Form } from "react-bootstrap";
-import { fieldClassNames } from "./util";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import { Form } from 'react-bootstrap';
+import { fieldClassNames } from './util';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export const Control = ({
 	fieldId,
@@ -17,7 +17,7 @@ export const Control = ({
 }) => {
 	return (
 		<Form.Control
-			as={as ? as : fieldType ? fieldType : "input"}
+			as={as ? as : fieldType ? fieldType : 'input'}
 			id={fieldId}
 			type={fieldType}
 			placeholder={placeholder}

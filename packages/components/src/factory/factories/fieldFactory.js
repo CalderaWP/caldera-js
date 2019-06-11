@@ -1,5 +1,5 @@
-import React from "react";
-import { isValidHtml5type } from "../../components/fields/util";
+import React from 'react';
+import { isValidHtml5type } from '../../components/fields/util';
 
 import {
 	FieldWrapper,
@@ -15,14 +15,14 @@ import {
 	FormFieldsAutoComplete,
 	FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 	AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
-} from "../../components/fields";
+} from '../../components/fields';
 
-import { RadioOrCheckboxControl } from "../../components/fields/RadioOrCheckboxControl";
+import { RadioOrCheckboxControl } from '../../components/fields/RadioOrCheckboxControl';
 
 function RadioOrCheckboxFieldSet(props) {
 	const { options, label, onBlur, fieldType, onChange } = props;
 	let { value } = props;
-	if ("checkbox" === fieldType) {
+	if ('checkbox' === fieldType) {
 		if (!Array.isArray(value)) {
 			value = [value];
 		}
@@ -37,7 +37,7 @@ function RadioOrCheckboxFieldSet(props) {
 	}
 
 	function changeHandler(optionId, checked) {
-		if ("checkbox" === fieldType) {
+		if ('checkbox' === fieldType) {
 			if (checked) {
 				value.push(optionId);
 			} else {
@@ -60,11 +60,11 @@ function RadioOrCheckboxFieldSet(props) {
 				{options.map(option => {
 					const optionLabel = option.label;
 					const optionId = option.id;
-					const key = option.hasOwnProperty("key")
+					const key = option.hasOwnProperty('key')
 						? option.key
 						: optionId;
 					const isChecked =
-						"radio" === fieldType
+						'radio' === fieldType
 							? value === optionId
 							: value.includes(optionId);
 
@@ -130,48 +130,48 @@ export const fieldFactory = (
 		case AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER:
 			props = { ...props, fieldType };
 			return <AutoCompleteField {...props} />;
-		case "checkboxes":
-			props = { ...props, fieldType: "checkbox" };
+		case 'checkboxes':
+			props = { ...props, fieldType: 'checkbox' };
 			return <RadioOrCheckboxFieldSet {...props} />;
 
-		case "radios":
-			props = { ...props, fieldType: "radio" };
+		case 'radios':
+			props = { ...props, fieldType: 'radio' };
 
 			return <RadioOrCheckboxFieldSet {...props} />;
 
-		case "textarea":
+		case 'textarea':
 			return <TextAreaField {...props} />;
-		case "hidden":
+		case 'hidden':
 			return <HiddenField {...props} />;
-		case "radio":
+		case 'radio':
 			return <RadioField {...props} />;
-		case "checkbox":
+		case 'checkbox':
 			return <CheckboxField {...props} />;
-		case "select":
-		case "dropdown":
+		case 'select':
+		case 'dropdown':
 			return <SelectField {...props} />;
-		case "button":
-			const inside = props.hasOwnProperty("children")
+		case 'button':
+			const inside = props.hasOwnProperty('children')
 				? props.children
 				: props.value;
 			props = { ...props };
 			return <ButtonField {...props}>{inside}</ButtonField>;
-		case "submit":
+		case 'submit':
 			delete field.value;
 			delete field.onBlur;
 			delete field.onChange;
 			return <SubmitButton {...props} />;
-		case "text":
-		case "email":
-		case "number":
-		case "input":
+		case 'text':
+		case 'email':
+		case 'number':
+		case 'input':
 		default:
 			if (isValidHtml5type(fieldType)) {
 				if (field.html5type !== fieldType) {
 					field = { ...field, html5type: fieldType };
 				}
 			} else {
-				field.html5type = "text";
+				field.html5type = 'text';
 			}
 
 			return (

@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useMemo } from "react";
-import MailChimpForm from "./MailChimpForm";
-import PropTypes from "prop-types";
-import { CalderaNotice } from "@calderajs/components";
-import { updateSubscriber, createSubscriber } from "../http/publicClient";
-import { isEmail } from "../../util/isEmailValid";
+import React, { Fragment, useState, useMemo } from 'react';
+import MailChimpForm from './MailChimpForm';
+import PropTypes from 'prop-types';
+import { CalderaNotice } from '@calderajs/components';
+import { updateSubscriber, createSubscriber } from '../http/publicClient';
+import { isEmail } from '../../util/isEmailValid';
 
 function MailChimpSurveyForm({
 	token,
@@ -25,7 +25,7 @@ function MailChimpSurveyForm({
 	/**
 	 * Store the error/success message from server
 	 */
-	const [message, setMessage] = useState("");
+	const [message, setMessage] = useState('');
 
 	/**
 	 * Store the email address
@@ -37,14 +37,14 @@ function MailChimpSurveyForm({
 	 */
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-	const submitButtonId = "submitQuestion";
+	const submitButtonId = 'submitQuestion';
 	const submitButton = {
 		fieldId: submitButtonId,
-		fieldType: "submit",
-		label: "Subscribe",
+		fieldType: 'submit',
+		label: 'Subscribe',
 	};
 	const initialQuestion = questions[currentQuestionIndex];
-	const questionRowId = "r1";
+	const questionRowId = 'r1';
 
 	function createQuestionFieldRow(questionFieldId, questionRowId) {
 		return {
@@ -61,17 +61,17 @@ function MailChimpSurveyForm({
 
 	function createOtherRow(emailFieldId, submitButtonId) {
 		return {
-			rowId: "r2",
+			rowId: 'r2',
 			columns: [
 				{
-					columnId: "r2-c1",
+					columnId: 'r2-c1',
 					fields: [emailFieldId],
-					width: "1/2",
+					width: '1/2',
 				},
 				{
-					columnId: "r2-c2",
+					columnId: 'r2-c2',
 					fields: [submitButtonId],
-					width: "1/2",
+					width: '1/2',
 				},
 			],
 		};
@@ -86,7 +86,7 @@ function MailChimpSurveyForm({
 		submitUrl,
 	}) {
 		const processor = {
-			type: "mc-subscribe",
+			type: 'mc-subscribe',
 			listId: listId,
 			emailField: emailField.fieldId,
 			mergeFields: [],
@@ -133,7 +133,7 @@ function MailChimpSurveyForm({
 					currentQuestion: nextQuestion,
 					emailField: {
 						fieldId: emailField.fieldId,
-						fieldType: "hidden",
+						fieldType: 'hidden',
 						value: emailAddress,
 					},
 					submitButton,
@@ -157,21 +157,21 @@ function MailChimpSurveyForm({
 
 		function afterSubmit(r, reject, resolve) {
 			if (
-				"object" === typeof r.data &&
+				'object' === typeof r.data &&
 				r.data.status &&
 				400 === r.data.status
 			) {
 				setMessage(r.message);
 				reject(
 					new Error(
-						r.hasOwnProperty("message") ? r.message : "Invalid"
+						r.hasOwnProperty('message') ? r.message : 'Invalid'
 					)
 				);
-			} else if (r.hasOwnProperty("success") && !r.success) {
+			} else if (r.hasOwnProperty('success') && !r.success) {
 				setMessage(r.message);
 				reject(
 					new Error(
-						r.hasOwnProperty("message") ? r.message : "Invalid"
+						r.hasOwnProperty('message') ? r.message : 'Invalid'
 					)
 				);
 			} else {
@@ -180,9 +180,9 @@ function MailChimpSurveyForm({
 				resolve(
 					new Response(
 						JSON.stringify({
-							message: r.hasOwnProperty("message")
+							message: r.hasOwnProperty('message')
 								? r.message
-								: "Continue",
+								: 'Continue',
 						})
 					)
 				);
@@ -288,17 +288,17 @@ MailChimpSurveyForm.defaultProps = {
 		});
 	},
 	emailField: {
-		fieldId: "mc-email",
-		fieldType: "input",
-		html5Type: "email",
+		fieldId: 'mc-email',
+		fieldType: 'input',
+		html5Type: 'email',
 		isRequired: true,
-		label: "Email",
-		default: "",
+		label: 'Email',
+		default: '',
 	},
 	onReady: promiseNoop,
 	submitUrl:
-		"https://formcalderas.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1/lists/subscribe",
-	defaultEmailAddress: "",
+		'https://formcalderas.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1/lists/subscribe',
+	defaultEmailAddress: '',
 };
 
 MailChimpSurveyForm.propTypes = {

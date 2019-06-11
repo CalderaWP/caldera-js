@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { PacmanLoader } from "react-spinners";
-import PropTypes from "prop-types";
-import { createSubscriber } from "../http/publicClient";
-import { CalderaForm } from "../../../";
+import React, { useState, useRef, useEffect } from 'react';
+import { PacmanLoader } from 'react-spinners';
+import PropTypes from 'prop-types';
+import { createSubscriber } from '../http/publicClient';
+import { CalderaForm } from '../../../';
 
 /**
  * Component for stand-alone mailchimp forms served via Caldera API
@@ -24,7 +24,7 @@ function MailChimpForm({
 }) {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [completed, setIsCompleted] = useState(false);
-	const [message, setMessage] = useState("");
+	const [message, setMessage] = useState('');
 	const readyRef = useRef(false);
 	useEffect(() => {
 		readyRef.current = true;
@@ -38,15 +38,15 @@ function MailChimpForm({
 		</div>
 	);
 
-	if (!form.hasOwnProperty("fields")) {
+	if (!form.hasOwnProperty('fields')) {
 		return <Spinner />;
 	}
 
 	const { processors } = form;
-	const processor = processors.find(p => "mc-subscribe" === p.type);
+	const processor = processors.find(p => 'mc-subscribe' === p.type);
 
 	if (completed) {
-		return <div className={"success"}>{message}</div>;
+		return <div className={'success'}>{message}</div>;
 	}
 
 	if (isSubmitting) {
@@ -55,7 +55,7 @@ function MailChimpForm({
 
 	return (
 		<div>
-			{message && <div className={"error"}>{message}</div>}
+			{message && <div className={'error'}>{message}</div>}
 
 			<CalderaForm
 				form={form}
@@ -77,10 +77,10 @@ function MailChimpForm({
 						})
 						.catch(e => {
 							setIsSubmitting(false);
-							if (e.hasOwnProperty("message")) {
+							if (e.hasOwnProperty('message')) {
 								setMessage(e.message);
 							} else {
-								setMessage("An Error happened.");
+								setMessage('An Error happened.');
 							}
 						});
 				}}

@@ -1,7 +1,7 @@
-import React from "react";
-import { Toolbar, IconButton } from "@wordpress/components";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import { Toolbar, IconButton } from '@wordpress/components';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const FormListItemButton = ({
 	icon,
@@ -28,7 +28,7 @@ FormListItemButton.propTypes = {
 };
 
 FormListItemButton.defaultProps = {
-	icon: "edit",
+	icon: 'edit',
 };
 /**
  *
@@ -57,37 +57,37 @@ export const FormListItem = ({ form, onFormAction, items }) => {
 };
 const items = [
 	{
-		icon: "edit",
-		label: "Edit Form",
-		actionName: "edit",
+		icon: 'edit',
+		label: 'Edit Form',
+		actionName: 'edit',
 	},
 	{
-		icon: "list-view",
-		label: "View Entries",
-		actionName: "view-entries",
+		icon: 'list-view',
+		label: 'View Entries',
+		actionName: 'view-entries',
 	},
 	{
-		icon: "download",
-		label: "Export",
-		actionName: "export",
+		icon: 'download',
+		label: 'Export',
+		actionName: 'export',
 	},
 	{
-		icon: "feedback",
-		label: "Preview Form",
-		actionName: "preview",
+		icon: 'feedback',
+		label: 'Preview Form',
+		actionName: 'preview',
 	},
 	{
-		icon: "admin-settings",
-		label: "Form Settings",
-		actionName: "settings",
+		icon: 'admin-settings',
+		label: 'Form Settings',
+		actionName: 'settings',
 	},
 ];
 FormListItem.defaultProps = {
 	classNames: {
-		edit: "form-list-item-edit",
-		"view-entries": "form-list-item-view-entries",
-		preview: "form-list-item-preview",
-		settings: "form-list-item-settings",
+		edit: 'form-list-item-edit',
+		'view-entries': 'form-list-item-view-entries',
+		preview: 'form-list-item-preview',
+		settings: 'form-list-item-settings',
 	},
 	items,
 };

@@ -1,15 +1,15 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 
 /**
  * Add a stylesheet to header
  *
  * Based on https://github.com/palmerhq/the-platform/blob/master/src/Stylesheet.tsx
  */
-export function addStyleSheetToDom({ href, media = "all", id }) {
+export function addStyleSheetToDom({ href, media = 'all', id }) {
 	return new Promise((resolve, reject) => {
 		if (null === document.getElementById(id)) {
-			const link = document.createElement("link");
-			link.rel = "stylesheet";
+			const link = document.createElement('link');
+			link.rel = 'stylesheet';
 			link.href = href;
 			link.id = id;
 			link.media = media;
@@ -25,7 +25,7 @@ export function addStyleSheetToDom({ href, media = "all", id }) {
 export const styleSheetId = () =>
 	`caldera-loaded-style-${Math.random()
 		.toString(36)
-		.replace(/[^a-z]+/g, "")
+		.replace(/[^a-z]+/g, '')
 		.substr(0, 5)}`;
 
 /**

@@ -1,4 +1,4 @@
-import { prepareData } from "./publicClient";
+import { prepareData } from './publicClient';
 
 /**
  * Get all lists for an account
@@ -46,9 +46,9 @@ const getListUi = ({ apiRoot, token, listId }) => {
 const saveApiKey = ({ apiRoot, token, apiKey }) => {
 	const url = `${apiRoot}/accounts`;
 	return fetch(url, {
-		method: "PUT",
+		method: 'PUT',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify({
 			apiKey,

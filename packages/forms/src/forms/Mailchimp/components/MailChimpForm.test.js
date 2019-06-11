@@ -1,12 +1,12 @@
-import React from "react";
-import { render, fireEvent, getByTestId } from "react-testing-library";
+import React from 'react';
+import { render, fireEvent, getByTestId } from 'react-testing-library';
 
-import MailChimpForm from "./MailChimpForm";
+import MailChimpForm from './MailChimpForm';
 
-import { mailChimpTestForm } from "./mailChimpTestForm.fixture";
-import { CF2Form } from "../../..";
+import { mailChimpTestForm } from './mailChimpTestForm.fixture';
+import { CF2Form } from '../../..';
 
-describe("MailChimp mailChimpTestForm", () => {
+describe('MailChimp mailChimpTestForm', () => {
 	let onSubmit, onBlur, onChange;
 	beforeEach(() => {
 		onSubmit = jest.fn();
@@ -14,12 +14,12 @@ describe("MailChimp mailChimpTestForm", () => {
 		onChange = jest.fn();
 	});
 
-	it("Shows spinner if mailChimpTestForm does not have fields", () => {
+	it('Shows spinner if mailChimpTestForm does not have fields', () => {
 		expect(
 			render(
 				<MailChimpForm
 					form={{
-						ID: "mc-test-1",
+						ID: 'mc-test-1',
 					}}
 					onBlur={onBlur}
 					onChange={onChange}
@@ -29,7 +29,7 @@ describe("MailChimp mailChimpTestForm", () => {
 		).toMatchSnapshot();
 	});
 
-	it("Loads if it has proper mailChimpTestForm", () => {
+	it('Loads if it has proper mailChimpTestForm', () => {
 		expect(
 			render(
 				<MailChimpForm
@@ -42,7 +42,7 @@ describe("MailChimp mailChimpTestForm", () => {
 		).toMatchSnapshot();
 	});
 
-	it("calls the onReady", async done => {
+	it('calls the onReady', async done => {
 		expect.assertions(1);
 		const onReady = new Promise(resolve => {
 			resolve();

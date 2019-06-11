@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import { CalderaForm } from "../CalderaForm/CalderaForm";
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { CalderaForm } from '../CalderaForm/CalderaForm';
 
 /**
  * Displays a form, one field per row
@@ -30,7 +30,7 @@ export const HorizontalForm = ({
 				{
 					columnId: `c-${instanceId}-${i}`,
 					fields: [field],
-					width: "1",
+					width: '1',
 				},
 			],
 		});

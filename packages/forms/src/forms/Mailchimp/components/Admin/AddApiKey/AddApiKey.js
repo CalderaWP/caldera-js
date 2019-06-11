@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Field } from "@calderajs/components";
+import React, { Fragment } from 'react';
+import { Field } from '@calderajs/components';
 
 /**
  * Add Mailchimp API Key
@@ -19,10 +19,10 @@ export const AddApiKey = ({
 	label,
 }) => {
 	const field = {
-		fieldType: "text",
+		fieldType: 'text',
 		value: apiKey,
 		label,
-		fieldId: "caldera-mc-api-key",
+		fieldId: 'caldera-mc-api-key',
 		required: true,
 	};
 	return (
@@ -38,7 +38,7 @@ export const AddApiKey = ({
 			<button
 				onClick={onSaveApiKey}
 				id={`${instanceId}-mc-add-api-key`}
-				title={"Save API Key"}
+				title={'Save API Key'}
 			>
 				Save API Key
 			</button>
@@ -47,6 +47,6 @@ export const AddApiKey = ({
 };
 
 AddApiKey.defaultProps = {
-	label: "New API Key",
-	apiKey: "",
+	label: 'New API Key',
+	apiKey: '',
 };

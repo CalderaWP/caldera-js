@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { FieldWrapper } from "..";
-import { Form } from "react-bootstrap";
-import { fieldClassNames } from "../util";
-import classNames from "classnames";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FieldWrapper } from '..';
+import { Form } from 'react-bootstrap';
+import { fieldClassNames } from '../util';
+import classNames from 'classnames';
 const emptyOption = {
-	label: "--",
+	label: '--',
 	value: null,
 };
 export const SelectField = props => {
@@ -26,13 +26,13 @@ export const SelectField = props => {
 
 	const wrapperProps = {
 		...props,
-		fieldType: "select",
+		fieldType: 'select',
 	};
 
 	return (
 		<FieldWrapper {...wrapperProps}>
 			<Form.Control
-				className={classNames(fieldClassNames("select"))}
+				className={classNames(fieldClassNames('select'))}
 				as="select"
 				id={fieldId}
 				value={value}
@@ -64,6 +64,6 @@ SelectField.propTypes = {
 SelectField.defaultProps = {
 	required: false,
 	multiple: false,
-	description: "",
+	description: '',
 	options: [emptyOption],
 };

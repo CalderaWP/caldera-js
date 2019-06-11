@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { FieldWrapper } from "..";
-import Button from "react-bootstrap/Button";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FieldWrapper } from '..';
+import Button from 'react-bootstrap/Button';
 export const ButtonField = props => {
 	const { variant, children } = props;
 	const fieldProps = {
 		...props,
-		fieldType: "button",
+		fieldType: 'button',
 		variant,
 	};
 
@@ -22,5 +22,5 @@ ButtonField.propTypes = {
 };
 
 ButtonField.defaultProps = {
-	variant: "secondary",
+	variant: 'secondary',
 };

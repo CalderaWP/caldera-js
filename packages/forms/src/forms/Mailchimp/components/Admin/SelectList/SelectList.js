@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Field } from "@calderajs/components";
+import React, { Fragment } from 'react';
+import { Field } from '@calderajs/components';
 
 /**
  * Select a MailChimp List

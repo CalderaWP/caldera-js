@@ -1,37 +1,37 @@
-import React, { useState, Fragment, useContext } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { MainMenuWithContext } from "./components/MainMenu";
-import { FormProvider, FormContext } from "./FormContext";
-import { MenuProvider } from "./MenuContext";
-import { FormsList } from "..";
-import { BodyWithContext } from "./components/Body";
-import { creatContactFormConfig } from "./hooks/useContactFormConfig";
-import { Header } from "./components/Header";
-import { HeaderInside } from "./components/HeaderInside";
+import React, { useState, Fragment, useContext } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { MainMenuWithContext } from './components/MainMenu';
+import { FormProvider, FormContext } from './FormContext';
+import { MenuProvider } from './MenuContext';
+import { FormsList } from '..';
+import { BodyWithContext } from './components/Body';
+import { creatContactFormConfig } from './hooks/useContactFormConfig';
+import { Header } from './components/Header';
+import { HeaderInside } from './components/HeaderInside';
 
 const contactForm = creatContactFormConfig({
 	config: {
-		id: "contact-form",
-		name: "Contact Form",
-		_last_updated: "Wed, 24 Oct 2018 19:34:12 +0000",
+		id: 'contact-form',
+		name: 'Contact Form',
+		_last_updated: 'Wed, 24 Oct 2018 19:34:12 +0000',
 	},
 });
 
 const initialForms = [
 	{
-		id: "other-form",
-		name: "Other Form 2017",
-		_last_updated: "Wed, 24 Oct 2017 19:34:12 +0000",
+		id: 'other-form',
+		name: 'Other Form 2017',
+		_last_updated: 'Wed, 24 Oct 2017 19:34:12 +0000',
 		fields: [],
 		processors: [],
 		conditionals: [],
 	},
 	contactForm,
 	{
-		id: "z-form",
-		name: "Z Form 2011",
-		_last_updated: "Wed, 24 Oct 2011 19:34:12 +0000",
+		id: 'z-form',
+		name: 'Z Form 2011',
+		_last_updated: 'Wed, 24 Oct 2011 19:34:12 +0000',
 	},
 ];
 
@@ -45,8 +45,8 @@ export const FormsListWithContext = () => {
 		<Fragment>
 			<FormsList
 				forms={forms}
-				panelTitle={"Forms"}
-				classname={"forms-list"}
+				panelTitle={'Forms'}
+				classname={'forms-list'}
 				onFormAction={formActionHandler}
 			/>
 		</Fragment>
@@ -54,20 +54,20 @@ export const FormsListWithContext = () => {
 };
 const menuItems = [
 	{
-		name: "forms",
-		title: "Forms",
+		name: 'forms',
+		title: 'Forms',
 	},
 	{
-		name: "settings",
-		title: "Settings",
+		name: 'settings',
+		title: 'Settings',
 	},
 	{
-		name: "documentation",
-		title: "Documentation",
+		name: 'documentation',
+		title: 'Documentation',
 	},
 	{
-		name: "account",
-		title: "Account",
+		name: 'account',
+		title: 'Account',
 	},
 ];
 

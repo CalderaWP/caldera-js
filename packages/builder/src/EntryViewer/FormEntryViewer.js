@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDataGrid from "react-data-grid";
+import React from 'react';
+import ReactDataGrid from 'react-data-grid';
 //import "./styles.css";
 
 export class FormEntryViewer extends React.Component {
@@ -73,7 +73,7 @@ export class FormEntryViewer extends React.Component {
 				/>
 			);
 		} else {
-			return <div className={"has-error"}>{noItemsMessage}</div>;
+			return <div className={'has-error'}>{noItemsMessage}</div>;
 		}
 	}
 }

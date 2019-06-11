@@ -1,7 +1,7 @@
-import { Form } from "react-bootstrap";
-import React from "react";
-import classNames from "classnames";
-import { fieldClassNames } from "./util";
+import { Form } from 'react-bootstrap';
+import React from 'react';
+import classNames from 'classnames';
+import { fieldClassNames } from './util';
 export const RadioOrCheckboxControl = props => {
 	const {
 		label,

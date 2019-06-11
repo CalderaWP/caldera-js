@@ -1,41 +1,41 @@
-import * as React from "react";
-import { render, fireEvent, cleanup } from "react-testing-library";
+import * as React from 'react';
+import { render, fireEvent, cleanup } from 'react-testing-library';
 
-import { FormFieldsAutoComplete } from "./FormFieldsAutoComplete";
-import { textField, checkboxField } from "../../../factory";
+import { FormFieldsAutoComplete } from './FormFieldsAutoComplete';
+import { textField, checkboxField } from '../../../factory';
 const form = {
-	id: "test",
+	id: 'test',
 	fields: [checkboxField, textField],
 };
 
-describe("FormFieldsAutoComplete  component", () => {
+describe('FormFieldsAutoComplete  component', () => {
 	let onChange;
 	beforeEach(() => {
 		onChange = jest.fn();
 	});
 	afterEach(cleanup);
-	it("Matches snapshot with form", () => {
+	it('Matches snapshot with form', () => {
 		expect(
 			render(
 				<FormFieldsAutoComplete
-					label={"Select A Field"}
+					label={'Select A Field'}
 					onChange={onChange}
-					fieldId={"selection-field"}
+					fieldId={'selection-field'}
 					form={form}
 				/>
 			)
 		).toMatchSnapshot();
 	});
 
-	it("Matches snapshot when form has no fields", () => {
+	it('Matches snapshot when form has no fields', () => {
 		expect(
 			render(
 				<FormFieldsAutoComplete
-					label={"Select A Field"}
+					label={'Select A Field'}
 					onChange={onChange}
-					fieldId={"selection-field"}
+					fieldId={'selection-field'}
 					form={{
-						id: "1",
+						id: '1',
 						fields: [],
 					}}
 				/>
@@ -43,16 +43,16 @@ describe("FormFieldsAutoComplete  component", () => {
 		).toMatchSnapshot();
 	});
 
-	test("calls onChange prop when clicked", () => {
+	test('calls onChange prop when clicked', () => {
 		const { container } = render(
 			<FormFieldsAutoComplete
-				label={"Select A Field"}
+				label={'Select A Field'}
 				onChange={onChange}
-				fieldId={"selection-field"}
+				fieldId={'selection-field'}
 				form={form}
 			/>
 		);
-		fireEvent.change(container.querySelector("input"), {
+		fireEvent.change(container.querySelector('input'), {
 			target: { value: textField.fieldId },
 		});
 		expect(onChange).toHaveBeenCalledTimes(1);

@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import React from "react";
-import classNames from "classnames";
-import { Form } from "react-bootstrap";
+import PropTypes from 'prop-types';
+import React from 'react';
+import classNames from 'classnames';
+import { Form } from 'react-bootstrap';
 
 export const FieldWrapperOuter = ({ fieldId, wrapperClassNames, children }) => (
 	<Form.Group controlId={fieldId} className={classNames(wrapperClassNames)}>

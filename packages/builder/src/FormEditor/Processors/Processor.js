@@ -1,30 +1,30 @@
-import React, { Fragment, Component } from "react";
-import { TabPanel } from "@wordpress/components";
+import React, { Fragment, Component } from 'react';
+import { TabPanel } from '@wordpress/components';
 import {
 	Row,
 	Column,
 	SelectFieldl,
 	InputField,
 	FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
-} from "@calderajs/components";
-import { HorizontalForm } from "@calderajs/forms";
-import PropTypes from "prop-types";
-import { AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER } from "@calderajs/components";
+} from '@calderajs/components';
+import { HorizontalForm } from '@calderajs/forms';
+import PropTypes from 'prop-types';
+import { AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER } from '@calderajs/components';
 
 const ProcessorLabel = ({ label }) => <div>{label}</div>;
 
 const ProcessorLabelEdit = ({ label, onChange, id }) => (
 	<InputField
-		label={"Processor Label"}
+		label={'Processor Label'}
 		value={label}
 		onChange={onChange}
-		html5type={"text"}
+		html5type={'text'}
 		fieldId={`processor-label-${id}`}
 	/>
 );
 export class Processor extends Component {
 	state = {
-		activeTab: "settings",
+		activeTab: 'settings',
 	};
 
 	onSetTab = activeTab => {
@@ -33,14 +33,14 @@ export class Processor extends Component {
 
 	tabs = [
 		{
-			name: "settings",
-			title: "Settings",
-			className: "caldera-processor-settings-tab-btn",
+			name: 'settings',
+			title: 'Settings',
+			className: 'caldera-processor-settings-tab-btn',
 		},
 		{
-			name: "conditionals",
-			title: "Conditionals",
-			className: "caldera-processor-conditionals-tab-btn",
+			name: 'conditionals',
+			title: 'Conditionals',
+			className: 'caldera-processor-conditionals-tab-btn',
 		},
 	];
 
@@ -77,7 +77,7 @@ export class Processor extends Component {
 						className="caldera-processor"
 						activeClass="active-tab"
 						onSelect={this.onSetTab}
-						initialTabName={"settings"}
+						initialTabName={'settings'}
 						tabs={this.tabs}
 					>
 						{() => {
@@ -86,7 +86,7 @@ export class Processor extends Component {
 								t => t.name === activeTab
 							);
 							const { name } = tab;
-							if ("settings" === name) {
+							if ('settings' === name) {
 								return (
 									<div>
 										<ProcessorLabel
@@ -100,7 +100,7 @@ export class Processor extends Component {
 										<HorizontalForm
 											{...this.formProps()}
 											className={
-												"caldera-processor-settings"
+												'caldera-processor-settings'
 											}
 										/>
 									</div>
@@ -108,7 +108,7 @@ export class Processor extends Component {
 							}
 							return (
 								<div
-									className={"caldera-processor-conditionals"}
+									className={'caldera-processor-conditionals'}
 								>
 									Conditionals
 								</div>
@@ -117,17 +117,17 @@ export class Processor extends Component {
 					</TabPanel>
 				</Row>
 				<Row>
-					<Column width={"1/2"}>
+					<Column width={'1/2'}>
 						<button
-							className={"caldera-processor-close"}
+							className={'caldera-processor-close'}
 							onClick={onClose}
 						>
 							Close
 						</button>
 					</Column>
-					<Column width={"1/2"}>
+					<Column width={'1/2'}>
 						<button
-							className={"caldera-processor-remove"}
+							className={'caldera-processor-remove'}
 							onClick={onRemove}
 						>
 							Remove
@@ -154,5 +154,5 @@ Processor.propTypes = {
 
 Processor.defaultProps = {
 	...HorizontalForm.defaultProps,
-	initialActiveTab: "settings",
+	initialActiveTab: 'settings',
 };

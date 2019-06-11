@@ -1,33 +1,33 @@
-import { CalderaForm } from "./CalderaForm";
-import React, { Fragment } from "react";
-import renderer from "react-test-renderer";
-import { mount } from "enzyme";
-import { createFieldRule } from "./state/createFieldRule";
-import { formRows, formRowOne, checkboxField } from "./columns.fixtures";
-import { getValuesFromFormLayout } from "./util/getValuesFromFormLayout";
-import { emailField, textField } from "./fields.fixtures";
-import { render } from "react-testing-library";
+import { CalderaForm } from './CalderaForm';
+import React, { Fragment } from 'react';
+import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
+import { createFieldRule } from './state/createFieldRule';
+import { formRows, formRowOne, checkboxField } from './columns.fixtures';
+import { getValuesFromFormLayout } from './util/getValuesFromFormLayout';
+import { emailField, textField } from './fields.fixtures';
+import { render } from 'react-testing-library';
 import {
 	Column,
 	fieldAreaFactory,
 	collectFieldValues,
-} from "@calderajs/components";
+} from '@calderajs/components';
 
-describe("Factory import", () => {
-	it("imports factory", () => {
-		expect(typeof fieldAreaFactory).toBe("function");
+describe('Factory import', () => {
+	it('imports factory', () => {
+		expect(typeof fieldAreaFactory).toBe('function');
 	});
 
-	it("imports component", () => {
-		expect(typeof Column).toBe("function");
+	it('imports component', () => {
+		expect(typeof Column).toBe('function');
 	});
 
-	it("imports util function", () => {
-		expect(typeof collectFieldValues).toBe("function");
+	it('imports util function', () => {
+		expect(typeof collectFieldValues).toBe('function');
 	});
 });
 
-describe("Caldera Forms", () => {
+describe('Caldera Forms', () => {
 	let onChange = jest.fn();
 	let onBlur = jest.fn();
 	beforeEach(() => {
@@ -37,17 +37,17 @@ describe("Caldera Forms", () => {
 	const form = {
 		rows: [
 			{
-				rowId: "r1",
+				rowId: 'r1',
 				columns: [
 					{
 						fields: [emailField.fieldId],
-						width: "1/2",
-						columnId: "1aaaaa",
+						width: '1/2',
+						columnId: '1aaaaa',
 					},
 					{
 						fields: [textField.fieldId],
-						width: "1/4",
-						columnId: "1b",
+						width: '1/4',
+						columnId: '1b',
 					},
 				],
 			},
@@ -55,32 +55,32 @@ describe("Caldera Forms", () => {
 		fields: [emailField, textField],
 	};
 
-	it("Forms", () => {
+	it('Forms', () => {
 		const component = render(
 			<CalderaForm form={form} onBlur={onBlur} onChange={onChange} />
 		);
 		expect(component).toMatchSnapshot();
 	});
 
-	it("Forms with rows assembled by id", () => {
+	it('Forms with rows assembled by id', () => {
 		const component = mount(
 			<CalderaForm form={form} onBlur={onBlur} onChange={onChange} />
 		);
-		expect(component.find("#" + textField.fieldId).children().length).toBe(
+		expect(component.find('#' + textField.fieldId).children().length).toBe(
 			1
 		);
-		expect(component.find("#" + emailField.fieldId).children().length).toBe(
+		expect(component.find('#' + emailField.fieldId).children().length).toBe(
 			1
 		);
 	});
 
-	it("A row can have a render prop", () => {
-		const _Row = props => <div id={"test2243"} />;
+	it('A row can have a render prop', () => {
+		const _Row = props => <div id={'test2243'} />;
 		const form = {
 			fields: [],
 			rows: [
 				{
-					rowId: "r45",
+					rowId: 'r45',
 					render: _Row,
 				},
 			],
@@ -88,11 +88,11 @@ describe("Caldera Forms", () => {
 		const component = mount(
 			<CalderaForm form={form} onBlur={onBlur} onChange={onChange} />
 		);
-		expect(component.find("#test2243").length).toBe(1);
+		expect(component.find('#test2243').length).toBe(1);
 	});
-	it("A column can have a render prop", () => {
+	it('A column can have a render prop', () => {
 		const _Field = props => (
-			<input id={"test243"} type={"number"} key={808} />
+			<input id={'test243'} type={'number'} key={808} />
 		);
 
 		const component = mount(
@@ -101,17 +101,17 @@ describe("Caldera Forms", () => {
 					fields: [],
 					rows: [
 						{
-							rowId: "r1",
+							rowId: 'r1',
 							columns: [
 								{
 									render: _Field,
-									width: "1/2",
-									columnId: "1aaaaa",
+									width: '1/2',
+									columnId: '1aaaaa',
 								},
 								{
 									fields: [textField],
-									width: "1/4",
-									columnId: "1b",
+									width: '1/4',
+									columnId: '1b',
 								},
 							],
 						},
@@ -121,11 +121,11 @@ describe("Caldera Forms", () => {
 				onChange={onChange}
 			/>
 		);
-		expect(component.find("#test243").length).toBe(1);
+		expect(component.find('#test243').length).toBe(1);
 	});
 
-	it("A field can have a render prop", () => {
-		const _Field = props => <input id={"test808"} type={"number"} />;
+	it('A field can have a render prop', () => {
+		const _Field = props => <input id={'test808'} type={'number'} />;
 
 		const field = {
 			...checkboxField,
@@ -137,17 +137,17 @@ describe("Caldera Forms", () => {
 			fields: [checkboxField, textField],
 			rows: [
 				{
-					rowId: "r1",
+					rowId: 'r1',
 					columns: [
 						{
 							fields: [field, checkboxField],
-							width: "1/2",
-							columnId: "1aaaaa",
+							width: '1/2',
+							columnId: '1aaaaa',
 						},
 						{
 							fields: [textField],
-							width: "1/4",
-							columnId: "1b",
+							width: '1/4',
+							columnId: '1b',
 						},
 					],
 				},
@@ -156,12 +156,12 @@ describe("Caldera Forms", () => {
 		const component = mount(
 			<CalderaForm form={form} onBlur={onBlur} onChange={onChange} />
 		);
-		expect(component.find("#test808").length).toBe(1);
-		expect(component.find("#test808").prop("type")).toBe("number");
+		expect(component.find('#test808').length).toBe(1);
+		expect(component.find('#test808').prop('type')).toBe('number');
 	});
 });
 
-describe("Updates ", () => {
+describe('Updates ', () => {
 	let onSubmit = jest.fn();
 	beforeEach(() => {
 		onSubmit = jest.fn();
@@ -170,17 +170,17 @@ describe("Updates ", () => {
 	const form = {
 		rows: [
 			{
-				rowId: "r1",
+				rowId: 'r1',
 				columns: [
 					{
 						fields: [emailField.fieldId],
-						width: "1/2",
-						columnId: "1aaaaa",
+						width: '1/2',
+						columnId: '1aaaaa',
 					},
 					{
 						fields: [textField.fieldId],
-						width: "1/4",
-						columnId: "1b",
+						width: '1/4',
+						columnId: '1b',
 					},
 				],
 			},
@@ -188,13 +188,13 @@ describe("Updates ", () => {
 		fields: [emailField, textField],
 	};
 
-	it.skip("hides a field when it should ", () => {
+	it.skip('hides a field when it should ', () => {
 		const _form = {
 			...form,
 			conditionals: [
 				{
-					type: "hide",
-					rule: createFieldRule("is", emailField.fieldId, "hide"),
+					type: 'hide',
+					rule: createFieldRule('is', emailField.fieldId, 'hide'),
 					fields: [textField.fieldId],
 				},
 			],
@@ -203,12 +203,12 @@ describe("Updates ", () => {
 		const component = mount(
 			<CalderaForm form={form} onSubmit={onSubmit} />
 		);
-		const value = "hide";
+		const value = 'hide';
 		const event = { target: { value } };
 		component
-			.find("#emailFieldId")
-			.find("input")
-			.simulate("change", event);
-		expect(component.find("#firstName").find("input").length).toEqual(0);
+			.find('#emailFieldId')
+			.find('input')
+			.simulate('change', event);
+		expect(component.find('#firstName').find('input').length).toEqual(0);
 	});
 });

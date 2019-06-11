@@ -1,9 +1,9 @@
 import {
 	decorateObjectLiteral,
 	decorateObjectLiteralWithMethods,
-} from "./decoratorFactory";
+} from './decoratorFactory';
 
-describe("decorateObjectLiteral", () => {
+describe('decorateObjectLiteral', () => {
 	const values = {
 		hats: 10,
 		pants: 1,
@@ -12,30 +12,30 @@ describe("decorateObjectLiteral", () => {
 	const object = {
 		...values,
 		hiRoy: () => {
-			return "Hi Roy";
+			return 'Hi Roy';
 		},
 	};
-	it("object method without decoration", () => {
-		expect(object.hiRoy()).toEqual("Hi Roy");
+	it('object method without decoration', () => {
+		expect(object.hiRoy()).toEqual('Hi Roy');
 	});
 
-	it("object method with decoration", () => {
+	it('object method with decoration', () => {
 		const proxy = decorateObjectLiteral(object);
-		expect(proxy.hiRoy()).toEqual("Hi Roy");
+		expect(proxy.hiRoy()).toEqual('Hi Roy');
 	});
-	it("Get valid props", () => {
+	it('Get valid props', () => {
 		const proxy = decorateObjectLiteral(object);
 		expect(proxy.hats).toEqual(values.hats);
 		expect(proxy.pants).toEqual(values.pants);
 	});
 
-	it("Returns null for invalid props", () => {
+	it('Returns null for invalid props', () => {
 		const proxy = decorateObjectLiteral(object);
 		expect(proxy.cats).toEqual(null);
 		expect(proxy.dogs).toEqual(null);
 	});
 
-	it("Sets valid props", () => {
+	it('Sets valid props', () => {
 		const proxy = decorateObjectLiteral({
 			x: 12,
 		});
@@ -44,19 +44,19 @@ describe("decorateObjectLiteral", () => {
 		expect(proxy.x).toEqual(222);
 	});
 
-	it("Does not set invalid props", () => {
+	it('Does not set invalid props', () => {
 		const proxy = decorateObjectLiteral({
 			x: 12,
 		});
 		expect(proxy.x).toEqual(12);
 		expect(() => {
-			proxy.y = "Fake stuff";
+			proxy.y = 'Fake stuff';
 		}).toThrow();
 	});
 });
 
-describe("decorateObjectLiteralWithMethods", () => {
-	it("accesses props and methods", () => {
+describe('decorateObjectLiteralWithMethods', () => {
+	it('accesses props and methods', () => {
 		const proxyMethod = jest.fn();
 		const proxy = decorateObjectLiteralWithMethods(
 			{

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { storiesOf } from "@storybook/react";
+import React, { useEffect, useState } from 'react';
+import { storiesOf } from '@storybook/react';
 import {
 	MailChimpForm,
 	MailChimpSurveyForm,
 	CalderaMailChimpSurveyForm,
-} from "./index";
-import { mailChimpTestForm } from "./mailChimpTestForm.fixture";
+} from './index';
+import { mailChimpTestForm } from './mailChimpTestForm.fixture';
 import {
 	surveyQuestion1,
 	surveryQuestion2,
@@ -13,18 +13,18 @@ import {
 	surveyQuestion1Id,
 	surveyQuestionFields,
 	surveyQuestionId2,
-} from "./surveyFields.fixture";
+} from './surveyFields.fixture';
 
-storiesOf("MailChimp Form Components", module)
-	.add("Mailchimp Signup form", () => (
+storiesOf('MailChimp Form Components', module)
+	.add('Mailchimp Signup form', () => (
 		<MailChimpForm
 			form={mailChimpTestForm}
 			onSubmit={values => alert(JSON.stringify(values))}
 		/>
 	))
-	.add("Mailchimp Survey Form", () => (
+	.add('Mailchimp Survey Form', () => (
 		<MailChimpSurveyForm
-			listId={"a111"}
+			listId={'a111'}
 			onChange={() => {}}
 			onBlur={() => {}}
 			questions={surveyQuestionFields}
@@ -35,16 +35,16 @@ storiesOf("MailChimp Form Components", module)
 
 [
 	{
-		story: "Caldera Survey",
-		listId: "f402a6993d",
+		story: 'Caldera Survey',
+		listId: 'f402a6993d',
 		apiRoot:
-			"https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1",
+			'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1',
 	},
 	{
-		story: "JavaScript Survey",
-		listId: "45907f0c59",
+		story: 'JavaScript Survey',
+		listId: '45907f0c59',
 		apiRoot:
-			"https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1",
+			'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1',
 	},
 ].map(survey => {
 	console.log(apiRoot);
@@ -54,7 +54,7 @@ storiesOf("MailChimp Form Components", module)
 		/**
 		 * Track token
 		 */
-		const [token, setToken] = useState("");
+		const [token, setToken] = useState('');
 
 		/**
 		 * Get token via remote API
@@ -62,7 +62,7 @@ storiesOf("MailChimp Form Components", module)
 		useEffect(() => {
 			if (!token) {
 				fetch(`${apiRoot}/token`, {
-					method: "POST",
+					method: 'POST',
 				})
 					.then(r => r.json())
 					.then(r => {
@@ -83,7 +83,7 @@ storiesOf("MailChimp Form Components", module)
 		}
 		return <div>Loading token</div>;
 	};
-	storiesOf("MailChimp Survey Forms", module).add(story, () => (
+	storiesOf('MailChimp Survey Forms', module).add(story, () => (
 		<TheForm listId={listId} apiRoot={apiRoot} />
 	));
 });

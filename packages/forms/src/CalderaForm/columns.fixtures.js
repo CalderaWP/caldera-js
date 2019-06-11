@@ -6,36 +6,36 @@ import {
 	textField,
 	emailField,
 	radioField,
-} from "./fields.fixtures";
-import React from "react";
+} from './fields.fixtures';
+import React from 'react';
 
 export const formRowOne = {
-	rowId: "r1",
+	rowId: 'r1',
 	columns: [
 		{
 			fields: [emailField],
-			width: "1/2",
-			columnId: "1a",
+			width: '1/2',
+			columnId: '1a',
 		},
 		{
 			fields: [textField],
-			width: "1/4",
-			columnId: "1b",
+			width: '1/4',
+			columnId: '1b',
 		},
 	],
 };
 
 export const formRowTwo = {
-	rowId: "r2",
+	rowId: 'r2',
 	columns: [
 		{
 			fields: [checkboxField, selectField],
-			width: "1/2",
+			width: '1/2',
 			columnId: 1,
 		},
 		{
 			fields: [radioField],
-			width: "1/4",
+			width: '1/4',
 			columnId: 2,
 		},
 	],
@@ -44,21 +44,21 @@ export const formRowTwo = {
 export const formRows = [formRowOne, formRowTwo];
 
 export const notFormRow = {
-	rowId: "notForm",
+	rowId: 'notForm',
 	columns: [
 		{
 			children: <div>Half Column</div>,
-			width: "1/2",
+			width: '1/2',
 			columnId: 1,
 		},
 		{
 			children: <div>Quarter Column</div>,
-			width: "1/4",
+			width: '1/4',
 			columnId: 2,
 		},
 		{
 			children: <div>Quarter Column 2</div>,
-			width: "1/4",
+			width: '1/4',
 			columnId: 3,
 		},
 	],

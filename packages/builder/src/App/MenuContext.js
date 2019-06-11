@@ -1,5 +1,5 @@
-import React, { createContext, useState } from "react";
-import PropTypes from "prop-types";
+import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 export const MenuContext = createContext({});
 
 export const MenuProvider = ({ children, menuItems, initialActiveItem }) => {
@@ -30,7 +30,7 @@ export const MenuProvider = ({ children, menuItems, initialActiveItem }) => {
 
 MenuProvider.defaultProps = {
 	items: [],
-	initialActiveItem: "forms",
+	initialActiveItem: 'forms',
 };
 MenuProvider.propTypes = {
 	items: PropTypes.array,

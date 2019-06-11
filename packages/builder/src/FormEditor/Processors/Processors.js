@@ -1,16 +1,16 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import { Processor } from "./Processor";
-import { Row, fieldAreaFactory } from "@calderajs/components";
-import { processorTypesPropType } from "./processorTypesPropType";
-import processorFactory from "./processorTypes/processorFactory";
-import { AddProcessor } from "./AddProcessor";
-import { defaultProcessorTypes } from "./processorTypes/defaultProcessorTypes";
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Processor } from './Processor';
+import { Row, fieldAreaFactory } from '@calderajs/components';
+import { processorTypesPropType } from './processorTypesPropType';
+import processorFactory from './processorTypes/processorFactory';
+import { AddProcessor } from './AddProcessor';
+import { defaultProcessorTypes } from './processorTypes/defaultProcessorTypes';
 
 export class Processors extends Component {
 	state = {
-		activeProcessorId: "",
-		newProcessorType: "",
+		activeProcessorId: '',
+		newProcessorType: '',
 	};
 
 	/**
@@ -82,7 +82,7 @@ export class Processors extends Component {
 		);
 		const { id } = newProcessor;
 		updateProcessors([...processors, newProcessor]);
-		this.setState({ activeProcessorId: id, newProcessorType: "" });
+		this.setState({ activeProcessorId: id, newProcessorType: '' });
 	};
 
 	/**
@@ -131,7 +131,7 @@ export class Processors extends Component {
 										onRemove={() =>
 											this.handleRemoveProcessor(id)
 										}
-										onClose={() => this.setActive("")}
+										onClose={() => this.setActive('')}
 									/>
 								</Fragment>
 							);
@@ -155,7 +155,7 @@ export class Processors extends Component {
 						value={newProcessorType}
 						onCreate={this.handleCreateProcessor}
 					>
-						Add {!newProcessorType ? "" : newProcessorType}{" "}
+						Add {!newProcessorType ? '' : newProcessorType}{' '}
 						Processor
 					</AddProcessor>
 				</div>

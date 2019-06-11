@@ -1,6 +1,6 @@
-import FormClient from "./FormClient";
+import FormClient from './FormClient';
 export { FormClient };
-export { formClientFactory } from "./clientFactory";
+export { formClientFactory } from './clientFactory';
 export {
 	decorateObjectLiteralWithMethods,
-} from "./decoratorFactory/decoratorFactory";
+} from './decoratorFactory/decoratorFactory';

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { storiesOf } from "@storybook/react";
-import { Processor } from "./Processors/Processor";
-import { Processors } from "./Processors/Processors";
-import { processorsCollection } from "./Processors/processors.fixtures";
+import React, { Component } from 'react';
+import { storiesOf } from '@storybook/react';
+import { Processor } from './Processors/Processor';
+import { Processors } from './Processors/Processors';
+import { processorsCollection } from './Processors/processors.fixtures';
 
-import { FormEditor } from "./FormEditor";
+import { FormEditor } from './FormEditor';
 
 const form = {
 	fields: [],
@@ -18,8 +18,8 @@ import {
 	textField,
 	emailField,
 	radioField,
-} from "@calderajs/components";
-storiesOf("FormEditor", module).add("The processor", () => (
+} from '@calderajs/components';
+storiesOf('FormEditor', module).add('The processor', () => (
 	<Processor
 		fields={[
 			checkboxFieldset,
@@ -31,8 +31,8 @@ storiesOf("FormEditor", module).add("The processor", () => (
 			radioField,
 		]}
 		form={form}
-		type={"mailchimp"}
-		label={"Main Segment"}
+		type={'mailchimp'}
+		label={'Main Segment'}
 		onChange={values => console.log(values)}
 		onClose={values => console.log(values)}
 		onRemove={values => console.log(values)}
@@ -41,10 +41,10 @@ storiesOf("FormEditor", module).add("The processor", () => (
 
 const processorTypes = [
 	{
-		type: "apiRequest",
+		type: 'apiRequest',
 	},
 	{
-		type: "redirect",
+		type: 'redirect',
 	},
 ];
 
@@ -52,8 +52,8 @@ class MockProcessorsUI extends Component {
 	state = {
 		processors: [...processorsCollection],
 		form: {
-			ID: "a-form",
-			name: "Form Name",
+			ID: 'a-form',
+			name: 'Form Name',
 			fields: [checkboxField, radioField, textField],
 		},
 	};
@@ -80,8 +80,8 @@ class MockProcessorsUI extends Component {
 	}
 }
 
-storiesOf("FormEditor", module).add(
-	"The processors list - non-functional",
+storiesOf('FormEditor', module).add(
+	'The processors list - non-functional',
 	() => (
 		<Processors
 			processorTypes={processorTypes}
@@ -96,15 +96,15 @@ storiesOf("FormEditor", module).add(
 	)
 );
 
-storiesOf("FormEditor", module).add("The processors list - functional", () => (
+storiesOf('FormEditor', module).add('The processors list - functional', () => (
 	<MockProcessorsUI />
 ));
 
 class MockFormApp extends Component {
 	state = {
 		form: {
-			ID: "a-form",
-			name: "Form Name",
+			ID: 'a-form',
+			name: 'Form Name',
 			processors: [],
 			fields: [checkboxField, radioField, textField],
 		},
@@ -124,4 +124,4 @@ class MockFormApp extends Component {
 	}
 }
 
-storiesOf("FormEditor", module).add("The form editor", () => <MockFormApp />);
+storiesOf('FormEditor', module).add('The form editor', () => <MockFormApp />);

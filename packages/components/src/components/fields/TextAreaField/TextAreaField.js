@@ -1,18 +1,18 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { FieldWrapper } from "..";
-import { Form } from "react-bootstrap";
-import classNames from "classnames";
-import { fieldClassNames } from "../util";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FieldWrapper } from '..';
+import { Form } from 'react-bootstrap';
+import classNames from 'classnames';
+import { fieldClassNames } from '../util';
 
 export const TextAreaField = props => {
 	const { fieldId, onChange, onBlur } = props;
-	const fieldType = "textarea";
+	const fieldType = 'textarea';
 	let { attributes } = props;
-	if ("object" !== typeof attributes) {
+	if ('object' !== typeof attributes) {
 		attributes = {};
 	}
-	if (!attributes.hasOwnProperty("rows")) {
+	if (!attributes.hasOwnProperty('rows')) {
 		attributes.rows = 5;
 	}
 

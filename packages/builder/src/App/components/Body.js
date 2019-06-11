@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
-import { FormEditor, FormsList } from "../..";
-import { MenuContext } from "../MenuContext";
-import { FormContext } from "../FormContext";
-import { FormEntryViewer } from "../../";
+import React, { useContext, useState, useEffect } from 'react';
+import { FormEditor, FormsList } from '../..';
+import { MenuContext } from '../MenuContext';
+import { FormContext } from '../FormContext';
+import { FormEntryViewer } from '../../';
 export const Body = ({
 	tab,
 	forms,
@@ -17,40 +17,40 @@ export const Body = ({
 	const [entryViewerOpen, setEntryViewerOpen] = useState(false);
 
 	useEffect(() => {
-		if ("forms" !== name) {
+		if ('forms' !== name) {
 			setEntryViewerOpen(false);
 			setShowSingleForm(false);
 		}
 	}, [name, setEntryViewerOpen, setShowSingleForm]);
 	const onFormAction = (formId, action) => {
 		switch (action) {
-			case "view-entries":
+			case 'view-entries':
 				setActiveFormId(formId);
-				setActiveItem("forms");
+				setActiveItem('forms');
 				setEntryViewerOpen(true);
 				break;
-			case "edit":
+			case 'edit':
 				setActiveFormId(formId);
-				setActiveItem("forms");
+				setActiveItem('forms');
 				setShowSingleForm(true);
 				setEntryViewerOpen(false);
 				break;
 			default:
 				setActiveFormId(formId);
-				setActiveItem("forms");
+				setActiveItem('forms');
 				break;
 		}
 	};
 	let props = {};
 	switch (name) {
-		case "forms":
+		case 'forms':
 			props = {
 				updateForm,
 				forms,
-				panelTitle: "Forms",
-				classname: "",
+				panelTitle: 'Forms',
+				classname: '',
 				onFormAction,
-				hideTabs: ["editor", "layout"],
+				hideTabs: ['editor', 'layout'],
 				entryViewerOpen,
 				setEntryViewerOpen,
 			};
@@ -58,7 +58,7 @@ export const Body = ({
 				return <FormEditor form={activeForm} {...props} />;
 			}
 			return <FormsList {...props} />;
-		case "settings":
+		case 'settings':
 			return <div>Settings</div>;
 		default:
 			return <div>{name}</div>;
@@ -76,7 +76,7 @@ export const BodyWithContext = ({ children }) => {
 	} = useContext(FormContext);
 
 	forms.forEach(form => {
-		["fields", "conditionals", "processors"].forEach(key => {
+		['fields', 'conditionals', 'processors'].forEach(key => {
 			if (!form.hasOwnProperty(key)) {
 				form[key] = [];
 			}

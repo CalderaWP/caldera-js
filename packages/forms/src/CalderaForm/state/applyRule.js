@@ -1,4 +1,4 @@
-import { ConditionalState } from "./ConditionalState";
+import { ConditionalState } from './ConditionalState';
 
 export const applyRule = (rule, fieldValues) => {
 	return rule.rule(fieldValues);
@@ -18,7 +18,7 @@ export const applyRuleToState = (rule, conditionalState) => {
 	const { type, fields } = rule;
 	const passed = applyRule(rule, conditionalState.getCurrentState());
 	switch (type) {
-		case "hide":
+		case 'hide':
 			fields.forEach(field => {
 				if (passed) {
 					conditionalState.hideField(field);
@@ -27,7 +27,7 @@ export const applyRuleToState = (rule, conditionalState) => {
 				}
 			});
 			break;
-		case "show":
+		case 'show':
 			fields.forEach(field => {
 				if (!passed) {
 					conditionalState.hideField(field);
@@ -36,7 +36,7 @@ export const applyRuleToState = (rule, conditionalState) => {
 				}
 			});
 			break;
-		case "enable":
+		case 'enable':
 			fields.forEach(field => {
 				if (passed) {
 					conditionalState.enableField(field);
@@ -45,7 +45,7 @@ export const applyRuleToState = (rule, conditionalState) => {
 				}
 			});
 			break;
-		case "disable":
+		case 'disable':
 			fields.forEach(field => {
 				if (!passed) {
 					conditionalState.enableField(field);

@@ -1,21 +1,21 @@
 /**
  * React components!
  */
-export { FieldArea } from "./components/FieldArea";
-export { Row } from "./components/Grid/Row";
-export { Rows } from "./components/Grid/Rows";
-export { Column } from "./components/Grid/Column";
+export { FieldArea } from './components/FieldArea';
+export { Row } from './components/Grid/Row';
+export { Rows } from './components/Grid/Rows';
+export { Column } from './components/Grid/Column';
 
 /**
  * Utility functions!
  */
-export { collectFieldValues } from "./components/collectFieldValues";
+export { collectFieldValues } from './components/collectFieldValues';
 
 /**
  * Factories!
  */
-export { fieldFactory } from "./factories/fieldFactory";
-export { fieldAreaFactory } from "./factories/fieldAreaFactory";
+export { fieldFactory } from './factories/fieldFactory';
+export { fieldAreaFactory } from './factories/fieldAreaFactory';
 
 /**
  * Test fixtures!
@@ -31,7 +31,7 @@ export {
 	textField,
 	emailField,
 	radioField,
-} from "./fields.fixtures.js";
+} from './fields.fixtures.js';
 
 export {
 	formRowOne,
@@ -39,4 +39,4 @@ export {
 	formRows,
 	notFormRow,
 	notFormRows,
-} from "./columns.fixtures.js";
+} from './columns.fixtures.js';

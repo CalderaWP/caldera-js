@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { render, fireEvent, getByTestId } from "react-testing-library";
+import { render, fireEvent, getByTestId } from 'react-testing-library';
 
-import { MailChimpSurveyForm } from "./index";
+import { MailChimpSurveyForm } from './index';
 import {
 	surveyQuestion1,
 	surveryQuestion2,
@@ -10,13 +10,13 @@ import {
 	surveyQuestion1Id,
 	surveyQuestionFields,
 	surveyQuestionId2,
-} from "./surveyFields.fixture";
+} from './surveyFields.fixture';
 
-it("Forms", () => {
+it('Forms', () => {
 	expect(
 		render(
 			<MailChimpSurveyForm
-				listId={"a111"}
+				listId={'a111'}
 				onChange={() => {}}
 				onBlur={() => {}}
 				questions={surveyQuestionFields}

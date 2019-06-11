@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import MailChimpSurveyForm from "./MailChimpSurveyForm";
-import { getForm } from "../http/publicClient";
-import useCalderaMailChimpFormConfig from "../hooks/useCalderaMailChimpFormConfig";
-import { PacmanLoader } from "react-spinners";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import MailChimpSurveyForm from './MailChimpSurveyForm';
+import { getForm } from '../http/publicClient';
+import useCalderaMailChimpFormConfig from '../hooks/useCalderaMailChimpFormConfig';
+import { PacmanLoader } from 'react-spinners';
 
 /**
  * Load remote MailChimp sign up mailChimpTestForm via the WordPress REST API
@@ -41,7 +41,7 @@ function CalderaMailChimpSurveyForm({
 	 */
 	function findProcessor(form) {
 		return form.processors.find(
-			processor => "mc-subscribe" === processor.type
+			processor => 'mc-subscribe' === processor.type
 		);
 	}
 
@@ -109,6 +109,6 @@ CalderaMailChimpSurveyForm.defaultProps = {
 	getForm,
 	hideOnSubmit: true,
 	apiRoot:
-		"https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1",
+		'https://calderawp.lndo.site/wp-json/caldera-api/v1/messages/mailchimp/v1',
 };
 export default CalderaMailChimpSurveyForm;

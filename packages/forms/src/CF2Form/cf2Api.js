@@ -1,5 +1,5 @@
-import getCf2Token from "../Http/handlers/getCf2Token";
-import handleFormSubmitCf2 from "../Http/handlers/handleFormSubmitCf2";
+import getCf2Token from '../Http/handlers/getCf2Token';
+import handleFormSubmitCf2 from '../Http/handlers/handleFormSubmitCf2';
 
 async function cf2Api(apiRootUri, formId, axios) {
 	return {

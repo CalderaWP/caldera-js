@@ -1,23 +1,23 @@
-import { ConditionalState } from "./state/ConditionalState";
-import PropTypes from "prop-types";
+import { ConditionalState } from './state/ConditionalState';
+import PropTypes from 'prop-types';
 import React, {
 	isValidElement,
 	createElement,
 	Fragment,
 	Component,
-} from "react";
-import { Formik, Field, ErrorMessage } from "formik";
-import { updateRows } from "./util/updateRows";
+} from 'react';
+import { Formik, Field, ErrorMessage } from 'formik';
+import { updateRows } from './util/updateRows';
 import {
 	collectFieldValues,
 	classNameService,
 	Row,
 	Column,
 	FieldArea,
-} from "@calderajs/components";
-import { applyRuleToState } from "./state/applyRule";
+} from '@calderajs/components';
+import { applyRuleToState } from './state/applyRule';
 
-import classNames from "classnames";
+import classNames from 'classnames';
 
 export class CalderaForm extends Component {
 	constructor(props) {
@@ -96,7 +96,7 @@ export class CalderaForm extends Component {
 
 						return (
 							<Row
-								className={classNames("caldera-form-row")}
+								className={classNames('caldera-form-row')}
 								key={rowId}
 								id={rowId}
 							>
@@ -184,7 +184,7 @@ export class CalderaForm extends Component {
 		return (
 			<div className={classNameService.getFormWrapperClassNames(form.ID)}>
 				<Formik
-					className={"caldera-form"}
+					className={'caldera-form'}
 					initialValues={initialValues}
 					onSubmit={onSubmit}
 					render={props => (

@@ -1,18 +1,18 @@
-import FormClient from "./FormClient";
-const value = "First field value";
+import FormClient from './FormClient';
+const value = 'First field value';
 const fieldValues = {
-	fld0: "dsa",
+	fld0: 'dsa',
 	fld1: value,
-	fld2: "4",
+	fld2: '4',
 };
-const formId = "cf1";
+const formId = 'cf1';
 const form = {
 	id: formId,
 	fieldValues,
 };
 
-describe("Form client - updates state", () => {
-	it("sets state", () => {
+describe('Form client - updates state', () => {
+	it('sets state', () => {
 		const client = new FormClient(form, {
 			form,
 		});
@@ -20,27 +20,27 @@ describe("Form client - updates state", () => {
 		expect(client.fld1).toBe(33);
 	});
 
-	it("Sets field values", () => {
+	it('Sets field values', () => {
 		const client = new FormClient(form, {
 			form,
 		});
 		const newValues = {
-			fld0: "111",
+			fld0: '111',
 			fld1: 333,
-			fld2: "41",
+			fld2: '41',
 		};
 		client.setFieldValues(newValues);
 		expect(client.getFieldValues()).toEqual(newValues);
 	});
 });
-describe("Form client - calls handlers", () => {
+describe('Form client - calls handlers', () => {
 	let submitForm = jest.fn();
-	const apiRootUri = "https://site.com/wp-json/caldera/";
+	const apiRootUri = 'https://site.com/wp-json/caldera/';
 	beforeEach(() => {
 		submitForm = jest.fn();
 	});
 
-	it("Calls submit handler function", function() {
+	it('Calls submit handler function', function() {
 		const client = new FormClient(form, {
 			submitForm,
 		});
@@ -48,7 +48,7 @@ describe("Form client - calls handlers", () => {
 		expect(submitForm.mock.calls.length).toBe(1);
 	});
 
-	it("Calls submit handler function with the right arguments", function() {
+	it('Calls submit handler function with the right arguments', function() {
 		const _fetch = jest.fn();
 		const client = new FormClient(form, {
 			submitForm,
@@ -57,13 +57,13 @@ describe("Form client - calls handlers", () => {
 		});
 		client.submitForm();
 		expect(submitForm.mock.calls[0][0]).toBe(fieldValues);
-		expect(typeof submitForm.mock.calls[0][1]).toBe("object");
+		expect(typeof submitForm.mock.calls[0][1]).toBe('object');
 		expect(submitForm.mock.calls[0][1].apiRootUri).toBe(apiRootUri);
 		expect(submitForm.mock.calls[0][1].formId).toBe(formId);
 		expect(submitForm.mock.calls[0][2]).toBe(_fetch);
 	});
 
-	test("Does not make an error if no submit handler", () => {
+	test('Does not make an error if no submit handler', () => {
 		const _fetch = jest.fn();
 		const client = new FormClient(form, {
 			apiRootUri,
@@ -73,7 +73,7 @@ describe("Form client - calls handlers", () => {
 		expect(fetch.mock.calls.length).toBe(0);
 	});
 
-	test("Javascript", () => {
+	test('Javascript', () => {
 		function sum(arg1, arg2) {
 			return arg1 + arg2;
 		}
