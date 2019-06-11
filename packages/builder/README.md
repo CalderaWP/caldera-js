@@ -11,6 +11,7 @@ Form admininstration and builder for Caldera (Forms).
     - `yarn storybook`
 
 ## Other Commands
+
 * Lint code
     - `yarn lint`
 * Build Package
@@ -21,21 +22,17 @@ Form admininstration and builder for Caldera (Forms).
 ## Usage
 
 ### Import With webpack
-   `import {ComponentName}` from '@calderawp/packageName';`
-   
-   ### Example One
-   ```jsx
-   <ComponentName 
-   
-   />
-   
-   ```
-   
-   ### Example Two
-   ```jsx
-   <ComponentName 
-   
-   />
-   
-   ```
 
+`import {ComponentName}` from '@calderawp/builder';`
+
+### Components
+
+* `<FormsList>`
+  * [Docs](./src/FormsList/README.md)
+  * Searchable list of forms
+  * `<FormListItem>`
+    * Item in form list
+* `<FormEditor>`
+  * Form Editor. WIP
+* `<EntryViewer />`
+  * Form data viwer WIP
