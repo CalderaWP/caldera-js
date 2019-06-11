@@ -1,6 +1,6 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import {MagicField} from './MagicField';
+import { MagicField } from './MagicField';
 const magics = {
 	field: {
 		tags: {
@@ -65,13 +65,43 @@ const magics = {
 	},
 };
 
-const Component = props => {
-    const [value,onChange]= useState('');
-    return  (<MagicField 
-        magics={magics} 
-        fieldId={'this-field-id'}
-        value={value}
-        onChange={onChange}
-    />);
+const Component = ({
+    includeTypes,
+    excludeTypes
+}) => {
+	const [value, onChange] = useState('');
+	return (
+		<MagicField
+			magics={magics}
+			fieldId={'this-field-id'}
+			value={value}
+            onChange={onChange}
+            excludeTypes={excludeTypes}
+            includeTypes={includeTypes}
+		/>
+	);
 };
-storiesOf('MagicFields', module).add('Magic field', ()=> <Component />  );
+
+
+storiesOf('MagicFields', module).add('Include All', () => <Component />);
+
+storiesOf('MagicFields ', module).add('No system option',
+ () => <Component excludeTypes={['system']} />
+);
+
+
+storiesOf('MagicFields', module).add('Excluding text and toggle_switch',
+ () => <Component excludeTypes={['text', 'toggle_switch']} />
+);
+
+storiesOf('MagicFields', module).add(
+    'Include email and toggle_switch only',
+ () => <Component includeTypes={['email', 'toggle_switch']} />
+);
+
+storiesOf('MagicFields', module).add(
+    'Include type overrides excludes',
+ () => <Component includeTypes={['email', 'toggle_switch']} excludeTypes={['email']} />
+);
+
+
