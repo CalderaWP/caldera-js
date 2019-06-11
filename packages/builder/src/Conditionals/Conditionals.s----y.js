@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Conditionals } from './Conditionals';
 
-const conditions = {
-	con_9457156563497745: {
+const conditions = [
+	{
 		id: 'con_9457156563497745',
 		name: 'Two People',
 		type: 'show',
@@ -30,7 +30,7 @@ const conditions = {
 			},
 		},
 	},
-	con_4812944559945067: {
+	{
 		id: 'con_4812944559945067',
 		name: 'Three People',
 		type: 'show',
@@ -48,7 +48,7 @@ const conditions = {
 			},
 		},
 	},
-};
+];
 
 const fields = [
 	{

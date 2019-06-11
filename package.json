@@ -33,7 +33,14 @@
     "release": "yarn build && yarn lerna publish",
     "nuke": "rm -rf node_modules && rm yarn.lock",
     "lint": "prettier --write packages/*/src/**/*.js",
+    "lint:watch": "npx onchange 'packages/*/src/**/*.js' -- npx prettier --write {{changed}}",
     "add:builder": "yarn workspace @calderajs/builder add"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint"
+    }
   },
   "devDependencies": {
     "graceful-fs": "https://github.com/mekwall/node-graceful-fs.git#patch-1",
