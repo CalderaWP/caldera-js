@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import {ConditionalEditor} from './ConditionalEditor';
-
+import { ConditionalEditor } from './ConditionalEditor';
 
 const magics = {
 	field: {
@@ -115,7 +114,6 @@ const conditions = [
 ];
 
 const fields = [
-
 	{
 		ID: 'numberPeopleChoice',
 		type: 'radio',
@@ -292,12 +290,15 @@ const fields = [
 	},
 ];
 
-const Component = (props) => {
-    const [condition,setCondition] = useState(conditions[0]);
-     props = { ...props, onChange: setCondition,condition };
-    return <ConditionalEditor {...props } />
-}
+const Component = props => {
+	const [condition, setCondition] = useState(conditions[0]);
+	props = { ...props, onChange: (update) => {
+        console.log(update);
+        setCondition(update);   
+    }, condition };
+	return <ConditionalEditor {...props} />;
+};
 
 storiesOf('ConditionalEditor ', module).add('Edit condition', () => (
-	<Component fields={fields}  magics={magics} />
+	<Component fields={fields} magics={magics} />
 ));

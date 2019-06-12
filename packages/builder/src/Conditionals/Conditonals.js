@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import { TextInput, SelectField } from '@calderajs/components';
 
-
 const NewConditionalGroup = ({ placeholder, name, onChange }) => {
 	return (
 		<TextInput
@@ -44,11 +43,13 @@ const ConditionalsList = ({ conditions }) => {
 	);
 };
 
-
-
-
-
-export const Conditionals = ({ _open_condition, conditions,onChange,magics,fields}) => {
+export const Conditionals = ({
+	_open_condition,
+	conditions,
+	onChange,
+	magics,
+	fields,
+}) => {
 	const marginBottom32 = { marginBottom: '32px' };
 	return (
 		<div id="caldera-forms-conditions-panel">
@@ -58,8 +59,12 @@ export const Conditionals = ({ _open_condition, conditions,onChange,magics,field
 				value={_open_condition}
 			/>
 			<ConditionalsList conditions={conditions} />
-            <ConditionalEditors conditions={conditions} onChange={onChange} magics={magics} fields={fields} />
-
+			<ConditionalEditors
+				conditions={conditions}
+				onChange={onChange}
+				magics={magics}
+				fields={fields}
+			/>
 		</div>
 	);
 };

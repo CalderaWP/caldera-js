@@ -168,7 +168,9 @@ export class FormEditor extends Component {
 						if ('entries' === name) {
 							let entryViewerProps = {
 								form,
-								noItemsMessage: `No Entries Found For ${form.id}`,
+								noItemsMessage: `No Entries Found For ${
+									form.id
+								}`,
 								entries: false, //@todo change to props.entries
 							};
 
