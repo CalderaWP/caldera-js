@@ -292,10 +292,14 @@ const fields = [
 
 const Component = props => {
 	const [condition, setCondition] = useState(conditions[0]);
-	props = { ...props, onChange: (update) => {
-        console.log(update);
-        setCondition(update);   
-    }, condition };
+	props = {
+		...props,
+		onChange: update => {
+			console.log(update);
+			setCondition(update);
+		},
+		condition,
+	};
 	return <ConditionalEditor {...props} />;
 };
 

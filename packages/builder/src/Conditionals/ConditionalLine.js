@@ -5,7 +5,7 @@ import { SelectField, ButtonField } from '@calderajs/components';
 const SelectFormField = ({ fields, value, onChange, label }) => {
 	const options = fields.map(field => {
 		return { value: field.id, label: field.label };
-    });
+	});
 	return (
 		<SelectField
 			options={options}
@@ -17,16 +17,22 @@ const SelectFormField = ({ fields, value, onChange, label }) => {
 	);
 };
 const comparisonOptions = [
-    {value:  'is', label:'Is'},
-    {value:  'isnot', label:'Is Not'},
-    {value:  'greater', label:'More Than'},
-    {value:  'smaller', label:'Smaller Than'},
-    {value:  'startswith', label:'Begins With'},
-    {value:  'endswith', label:'Ends With'},
-    {value:  'contains', label:'Contains'}
+	{ value: 'is', label: 'Is' },
+	{ value: 'isnot', label: 'Is Not' },
+	{ value: 'greater', label: 'More Than' },
+	{ value: 'smaller', label: 'Smaller Than' },
+	{ value: 'startswith', label: 'Begins With' },
+	{ value: 'endswith', label: 'Ends With' },
+	{ value: 'contains', label: 'Contains' },
 ];
 
-export const ConditionalLine = ({isFirst,line,onChange,fields,magics}) => {
+export const ConditionalLine = ({
+	isFirst,
+	line,
+	onChange,
+	fields,
+	magics,
+}) => {
 	const displayInline = { display: 'inline' };
 	const { compare, value, parent, field, id } = line;
 	const setCompareType = compare => onChange({ ...line, compare });
