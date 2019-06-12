@@ -52,7 +52,7 @@ export const MagicField = ({
 			label: 'System',
 		});
 	}
-    console.log(magicTypes);
+	console.log(magicTypes);
 	useEffect(() => {
 		setOptions(
 			compileTags({
@@ -65,6 +65,7 @@ export const MagicField = ({
 
 	return (
 		<div>
+            
 			<SelectField
 				label={'Magic Type'}
 				onChange={setCurrentMagic}

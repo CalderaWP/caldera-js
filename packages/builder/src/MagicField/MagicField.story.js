@@ -65,43 +65,38 @@ const magics = {
 	},
 };
 
-const Component = ({
-    includeTypes,
-    excludeTypes
-}) => {
+const Component = ({ includeTypes, excludeTypes }) => {
 	const [value, onChange] = useState('');
 	return (
 		<MagicField
 			magics={magics}
 			fieldId={'this-field-id'}
 			value={value}
-            onChange={onChange}
-            excludeTypes={excludeTypes}
-            includeTypes={includeTypes}
+			onChange={onChange}
+			excludeTypes={excludeTypes}
+			includeTypes={includeTypes}
 		/>
 	);
 };
 
-
 storiesOf('MagicFields', module).add('Include All', () => <Component />);
 
-storiesOf('MagicFields ', module).add('No system option',
- () => <Component excludeTypes={['system']} />
-);
+storiesOf('MagicFields ', module).add('No system option', () => (
+	<Component excludeTypes={['system']} />
+));
 
-
-storiesOf('MagicFields', module).add('Excluding text and toggle_switch',
- () => <Component excludeTypes={['text', 'toggle_switch']} />
-);
-
-storiesOf('MagicFields', module).add(
-    'Include email and toggle_switch only',
- () => <Component includeTypes={['email', 'toggle_switch']} />
-);
+storiesOf('MagicFields', module).add('Excluding text and toggle_switch', () => (
+	<Component excludeTypes={['text', 'toggle_switch']} />
+));
 
 storiesOf('MagicFields', module).add(
-    'Include type overrides excludes',
- () => <Component includeTypes={['email', 'toggle_switch']} excludeTypes={['email']} />
+	'Include email and toggle_switch only',
+	() => <Component includeTypes={['email', 'toggle_switch']} />
 );
 
-
+storiesOf('MagicFields', module).add('Include type overrides excludes', () => (
+	<Component
+		includeTypes={['email', 'toggle_switch']}
+		excludeTypes={['email']}
+	/>
+));
