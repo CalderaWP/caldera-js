@@ -12,7 +12,7 @@ export const ConditionalRule = ({
 	isLast,
 }) => {
 	return (
-		<div>
+		<div className={`caldera-condition-group caldera-condition-lines`}>
 			{Object.keys(group).map(lineId => {
 				const changeHandler = update => {
 					onChange({
@@ -25,6 +25,7 @@ export const ConditionalRule = ({
 						<ConditionalLine
 							line={group[lineId]}
 							key={lineId}
+							id={lineId}
 							onChange={changeHandler}
 							fields={fields}
 							magics={magics}

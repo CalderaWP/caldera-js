@@ -4,7 +4,7 @@ import { MagicField } from '../MagicField/MagicField';
 import { SelectField, ButtonField } from '@calderajs/components';
 const SelectFormField = ({ fields, value, onChange, label }) => {
 	const options = fields.map(field => {
-		return { value: field.id, label: field.label };
+		return { value: field.ID, label: field.label };
 	});
 	return (
 		<SelectField
@@ -26,16 +26,35 @@ const comparisonOptions = [
 	{ value: 'contains', label: 'Contains' },
 ];
 
+const OptionSelector = ({value,field,label,onChange,style,fieldId}) => {
+	const fieldOptions = field.config.option;
+	const options = Object.keys(fieldOptions).map(optId => { return { value: optId, label: fieldOptions[optId].label }} );
+	return <SelectField
+		onChange={onChange}
+		style={style}
+		options={ options }
+		value={value}
+		label={label}
+		fieldId={fieldId}
+	/>
+}
+
 export const ConditionalLine = ({
 	isFirst,
 	line,
 	onChange,
 	fields,
 	magics,
+	id
 }) => {
 	const displayInline = { display: 'inline' };
-	const { compare, value, parent, field, id } = line;
+	const { compare, value, parent, field } = line;
+	const getCurrentField = () => fields.find( f => f.ID === field );
+	const currentFieldType = 'object' === typeof  getCurrentField() ?  getCurrentField().type : null;
 	const setCompareType = compare => onChange({ ...line, compare });
+	const comparisonValueLabel = 'Comparison Value';
+	const comparisonValueId = `compare-value-${id}`;
+	const onChangeValue = value => onChange({ ...line, value });
 	return (
 		<div className={`caldera-condition-line condition-line-${id}`}>
 			<span style={{ display: 'inline-block' }}>
@@ -58,14 +77,28 @@ export const ConditionalLine = ({
 					label={'Comparison Type'}
 					fieldId={`compare-type-${id}`}
 				/>
-				<MagicField
-					style={displayInline}
-					magics={magics}
-					value={value}
-					onChange={value => onChange({ ...line, value })}
-					label={'Comparison Value'}
-					fieldId={`compare-value-${id}`}
-				/>
+				{currentFieldType && ['radio', 'select', 'checkbox'].includes(currentFieldType) ? (
+						<OptionSelector {...{
+							fieldId:comparisonValueId,
+							value,
+							field:getCurrentField(),
+							label:comparisonValueLabel,
+							onChange:onChangeValue,
+							style:displayInline
+						}
+					} />
+				) : (
+					<MagicField
+						style={displayInline}
+						magics={magics}
+						value={value}
+						onChange={onChangeValue}
+						label={comparisonValueLabel}
+						fieldId={comparisonValueId}
+					/>
+				)}
+				
+				
 			</div>
 		</div>
 	);

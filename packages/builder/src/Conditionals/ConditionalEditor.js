@@ -75,28 +75,29 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 
 	return (
 		<div className="caldera-editor-condition-config caldera-forms-condition-edit">
-			<ConditionalGroupTop {...topProps} />
-			{groupRulesIds.map(groupId => {
-				const isLast =
-					groupRulesIds.indexOf(groupId) === groupRulesIds.length - 1
-						? true
-						: false;
-				const ruleProps = {
-					onChange: group => {
-						onChange(setGroup(groupId, group));
-					},
-					fields,
-					magics,
-					isLast,
-				};
-				return (
-					<ConditionalRule
-						key={groupId}
-						group={group[groupId]}
-						{...ruleProps}
-					/>
-				);
-			})}
+            <div className={`condition-point-${id}`}>
+                <ConditionalGroupTop {...topProps} />
+                {groupRulesIds.map(groupId => {
+                    const isLast = groupRulesIds.indexOf(groupId) === groupRulesIds.length - 1
+                            ? true
+                            : false;
+                    const ruleProps = {
+                        onChange: group => {
+                            onChange(setGroup(groupId, group));
+                        },
+                        fields,
+                        magics,
+                        isLast,
+                    };
+                    return (
+                        <ConditionalRule
+                            key={groupId}
+                            group={group[groupId]}
+                            {...ruleProps}
+                        />
+                    );
+                })}
+            </div>
 		</div>
 	);
 };

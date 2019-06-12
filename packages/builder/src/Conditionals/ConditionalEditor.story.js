@@ -295,7 +295,7 @@ const Component = props => {
 	props = {
 		...props,
 		onChange: update => {
-			console.log(update);
+			//console.log(update);
 			setCondition(update);
 		},
 		condition,
