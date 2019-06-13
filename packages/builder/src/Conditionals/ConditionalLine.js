@@ -45,12 +45,14 @@ const OptionSelector = ({ value, field, label, onChange, fieldId }) => {
 
 export const ConditionalLine = ({
 	isFirst,
+	isLast,
 	line,
 	onChange,
 	fields,
 	magics,
 	id,
 	removeLine,
+	removeGroup
 }) => {
 	const { compare, value, parent, field } = line;
 	const getCurrentField = () => fields.find(f => f.ID === field);
@@ -61,9 +63,7 @@ export const ConditionalLine = ({
 	const comparisonValueId = `compare-value-${id}`;
 	const onChangeValue = value => onChange({ ...line, value });
 	return (
-		<div
-			className={`caldera-condition-line condition-line-${id}`}
-		>
+		<div className={`caldera-condition-line condition-line-${id}`}>
 			<Row>
 				<Column width={1} columnId={`condition-point-${id}-prefix`}>
 					{isFirst ? 'if' : 'and'}
@@ -114,14 +114,22 @@ export const ConditionalLine = ({
 						/>
 					)}
 				</Column>
-				{!isFirst && (
-					<Column
-						width={0.1}
-						columnId={`compare-line-remove-${id}-col`}
-					>
-						<ButtonField onClick={removeLine}>-</ButtonField>
-					</Column>
-				)}
+				
+				<Column
+					width={0.1}
+					columnId={`compare-line-remove-${id}-col`}
+				>
+					<ButtonField onClick={() => {
+						if( isFirst ){
+							removeGroup();
+						}else{
+							removeLine();
+						}
+					}}>
+						-
+					</ButtonField>
+				</Column>
+				
 			</Row>
 		</div>
 	);

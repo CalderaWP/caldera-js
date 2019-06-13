@@ -95,6 +95,12 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 	};
 	const onAddGroup = () => onChange(addRuleGroup());
 
+	const onRemoveGroup = (groupId) => {
+		const update = condition;
+		delete update.group[groupId];
+		onChange( {...update} );
+	}
+
 	const topProps = {
 		onChangeName,
 		onChangeType,
@@ -127,19 +133,28 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 							? true
 							: false;
 					const ruleProps = {
+						removeGroup: () => {
+							onRemoveGroup(groupId);
+						},
 						onChange: group => {
 							const update = setGroup(groupId, group);
 
-							const fields = {}
+							const fields = {};
 							Object.keys(update.group).forEach(groupId => {
-								Object.keys(update.group[groupId]).forEach(lineId => {
-									fields[lineId] = update.group[groupId][lineId].field;
-								});
+								Object.keys(update.group[groupId]).forEach(
+									lineId => {
+										fields[lineId] =
+											update.group[groupId][lineId].field;
+									}
+								);
 							});
 							onChange({
 								...update,
-								fields
+								fields,
 							});
+						},
+						addLine(){
+							onAddLine(groupId)
 						},
 						fields,
 						magics,
