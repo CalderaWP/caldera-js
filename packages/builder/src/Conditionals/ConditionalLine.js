@@ -9,7 +9,6 @@ const SelectFormField = ({ fields, value, onChange, label }) => {
 	return (
 		<SelectField
 			options={options}
-			hideLabel
 			label={label}
 			value={value}
 			onChange={onChange}
@@ -33,7 +32,6 @@ const OptionSelector = ({ value, field, label, onChange, fieldId }) => {
 	});
 	return (
 		<SelectField
-			hideLabel
 			onChange={onChange}
 			options={options}
 			value={value}
@@ -52,7 +50,7 @@ export const ConditionalLine = ({
 	magics,
 	id,
 	removeLine,
-	removeGroup
+	removeGroup,
 }) => {
 	const { compare, value, parent, field } = line;
 	const getCurrentField = () => fields.find(f => f.ID === field);
@@ -65,12 +63,12 @@ export const ConditionalLine = ({
 	return (
 		<div className={`caldera-condition-line condition-line-${id}`}>
 			<Row>
-				<Column width={1} columnId={`condition-point-${id}-prefix`}>
+				<Column width={'100%'} columnId={`condition-point-${id}-prefix`}>
 					{isFirst ? 'if' : 'and'}
 				</Column>
 			</Row>
 			<Row>
-				<Column width={0.35} columnId={`compare-field-${id}-cl`}>
+				<Column width={.5} columnId={`compare-field-${id}-cl`}>
 					<SelectFormField
 						onChange={field => onChange({ ...line, field })}
 						fields={fields}
@@ -79,9 +77,8 @@ export const ConditionalLine = ({
 						fieldId={`compare-field-${id}`}
 					/>
 				</Column>
-				<Column width={0.2} columnId={`compare-type-${id}-col`}>
+				<Column width={.5} columnId={`compare-type-${id}-col`}>
 					<SelectField
-						hideLabel
 						onChange={compare => onChange({ ...line, compare })}
 						options={comparisonOptions}
 						value={compare}
@@ -89,7 +86,9 @@ export const ConditionalLine = ({
 						fieldId={`compare-type-${id}`}
 					/>
 				</Column>
-				<Column width={0.4} columnId={`condition-point-${id}-top`}>
+			</Row>
+			<Row>
+				<Column width={.8} columnId={`condition-point-${id}-top`}>
 					{currentFieldType &&
 					['radio', 'select', 'checkbox'].includes(
 						currentFieldType
@@ -114,22 +113,20 @@ export const ConditionalLine = ({
 						/>
 					)}
 				</Column>
-				
-				<Column
-					width={0.1}
-					columnId={`compare-line-remove-${id}-col`}
-				>
-					<ButtonField onClick={() => {
-						if( isFirst ){
-							removeGroup();
-						}else{
-							removeLine();
-						}
-					}}>
+
+				<Column width={0.2} columnId={`compare-line-remove-${id}-col`}>
+					<ButtonField
+						onClick={() => {
+							if (isFirst) {
+								removeGroup();
+							} else {
+								removeLine();
+							}
+						}}
+					>
 						-
 					</ButtonField>
 				</Column>
-				
 			</Row>
 		</div>
 	);

@@ -29,9 +29,7 @@ export const ConditionalRule = ({
 
 				const onRemoveLine = () => removeLine(groupId, lineId);
 				return (
-					
 					<Fragment key={lineId}>
-						
 						<ConditionalLine
 							addLine={addLine}
 							removeLine={onRemoveLine}

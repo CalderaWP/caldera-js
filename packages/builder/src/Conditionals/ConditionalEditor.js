@@ -98,6 +98,7 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 	const onRemoveGroup = (groupId) => {
 		const update = condition;
 		delete update.group[groupId];
+		console.log(update);
 		onChange( {...update} );
 	}
 
