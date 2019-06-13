@@ -35,6 +35,8 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 
 	function addLine(lines, parent = null) {
 		const lineId = randomString('cl');
+
+		
 		return {
 			...lines,
 			[lineId]: {
@@ -61,7 +63,26 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 		};
 	}
 
-	const onAddLine = () => console.log(addLine(condition.group));
+	const onAddLine = (groupId) => {
+		const lineId = randomString('cl');
+		let group = condition.group[groupId];
+		group[lineId] = {
+			parent:groupId,
+			field: '',
+			compare: 'is',
+			value: '',
+		};
+		const update = {
+			...condition,
+			group: {
+				...condition.group,
+				[groupId]: group
+			}
+		};
+		onChange(update);
+	};
+
+	const onRemoveLine = () => console.log('remove!')
 	const onAddGroup = () => onChange(addRuleGroup(condition));
 
 	const topProps = {
@@ -94,6 +115,8 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 					};
 					return (
 						<ConditionalRule
+							addLine={()=> onAddLine(groupId)}
+							removeLine={onRemoveLine}
 							key={groupId}
 							group={group[groupId]}
 							{...ruleProps}
