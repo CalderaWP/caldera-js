@@ -51,7 +51,7 @@ export const ConditionalLine = ({
 	magics,
 	id,
 	addLine,
-	removeLine
+	removeLine,
 }) => {
 	const { compare, value, parent, field } = line;
 	const getCurrentField = () => fields.find(f => f.ID === field);
@@ -113,21 +113,16 @@ export const ConditionalLine = ({
 						/>
 					)}
 				</Column>
-				<Column width={.1} columnId={`compare-line-remove-${id}-col`}>
-					<ButtonField
-						onClick={removeLine}
-					>
-						-
-					</ButtonField>
-				</Column>
+				{ ! isFirst &&
+					<Column width={0.1} columnId={`compare-line-remove-${id}-col`}>
+						<ButtonField onClick={removeLine}>-</ButtonField>
+					</Column>
+				}
+				
 			</Row>
 			<Row>
 				<Column width={1} columnId={`condition-point-${id}-add-line`}>
-					<ButtonField
-						onClick={addLine}
-					>
-						+
-					</ButtonField>
+					<ButtonField onClick={addLine}>+</ButtonField>
 				</Column>
 			</Row>
 		</div>

@@ -11,8 +11,10 @@ export const ConditionalRule = ({
 	magics,
 	isLast,
 	addLine,
-	removeLine
+	removeLine,
+	groupId
 }) => {
+	
 	return (
 		<div className={`caldera-condition-group caldera-condition-lines`}>
 			{Object.keys(group).map(lineId => {
@@ -22,11 +24,13 @@ export const ConditionalRule = ({
 						[lineId]: update,
 					});
 				};
+
+				const onRemoveLine = () => removeLine(groupId,lineId);
 				return (
 					<Fragment key={lineId}>
 						<ConditionalLine
 							addLine={addLine}
-							removeLine={removeLine}
+							removeLine={onRemoveLine}
 							line={group[lineId]}
 							id={lineId}
 							onChange={changeHandler}
