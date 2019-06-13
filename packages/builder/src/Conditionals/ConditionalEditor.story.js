@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { ConditionalEditor } from './ConditionalEditor';
-
+import { WithStandardCss } from '../WithStandardCss';
 const magics = {
 	field: {
 		tags: {
@@ -305,4 +305,10 @@ const Component = props => {
 
 storiesOf('ConditionalEditor ', module).add('Edit condition', () => (
 	<Component fields={fields} magics={magics} />
+));
+
+storiesOf('ConditionalEditor ', module).add('Edit condition with css', () => (
+	<WithStandardCss>
+		<Component fields={fields} magics={magics} />
+	</WithStandardCss>
 ));

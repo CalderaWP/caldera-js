@@ -1,5 +1,10 @@
-import { AutoCompleteField, SelectField } from '@calderajs/components';
-import React, { useState, useEffect } from 'react';
+import {
+	AutoCompleteField,
+	SelectField,
+	Row,
+	Column,
+} from '@calderajs/components';
+import React, { useState, useEffect, Fragment } from 'react';
 
 function compileTags({ magic, includeTypes, excludeTypes }) {
 	const { wrap, tags } = magic;
@@ -35,6 +40,9 @@ export const MagicField = ({
 	includeTypes,
 	excludeTypes,
 	fieldId,
+	toggleBelow,
+	toggleInline,
+	label,
 }) => {
 	const [currentMagicType, setCurrentMagic] = useState('field');
 	const [options, setOptions] = useState([]);
@@ -62,24 +70,57 @@ export const MagicField = ({
 		);
 	}, [currentMagicType, includeTypes, excludeTypes, magics]);
 
+	const Toggle = () => (
+		<SelectField
+			label={'Magic Type'}
+			onChange={setCurrentMagic}
+			options={magicTypes}
+			value={currentMagicType}
+			fieldId={`magic-type-${fieldId}`}
+		/>
+	);
+	const Field = () => (
+		<AutoCompleteField
+			label={label}
+			onChange={onChange}
+			options={options}
+			value={value}
+			fieldId={fieldId}
+		/>
+	);
+
+	if (toggleInline) {
+		return (
+			<Row>
+				<Column width={0.5}>
+					<Field />
+				</Column>
+
+				<Column width={0.5}>
+					<Toggle />
+				</Column>
+			</Row>
+		);
+	}
+	if (toggleBelow) {
+		return (
+			<Fragment>
+				<Field />
+				<Toggle />
+			</Fragment>
+		);
+	}
+
 	return (
-		<div>
-			<SelectField
-				label={'Magic Type'}
-				onChange={setCurrentMagic}
-				options={magicTypes}
-				value={currentMagicType}
-				fieldId={`magic-type-${fieldId}`}
-			/>
-			<AutoCompleteField
-				label={currentMagicType.type}
-				onChange={onChange}
-				options={options}
-				value={value}
-				fieldId={fieldId}
-			/>
-		</div>
+		<Fragment>
+			<Field />
+			<Toggle />
+		</Fragment>
 	);
 };
 
-MagicField.defaultProps = { includeTypes: [], excludeTypes: [] };
+MagicField.defaultProps = {
+	includeTypes: [],
+	excludeTypes: [],
+	toggleBelow: false,
+};

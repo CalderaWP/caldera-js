@@ -2,11 +2,22 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { FieldWrapper } from '../FieldWrapper/FieldWrapper';
 import Autocomplete from 'react-autocomplete';
-import { Control } from '../Control';
+import { fieldClassNames } from '../util'
+import { Form } from 'react-bootstrap';
 
 export const AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER = 'auto-complete';
 
-const RenderInput = props => <Control {...props} />;
+const RenderInput = props =>{ 
+	
+	return (
+		<Form.Control
+			as={'input'}
+			{...props }
+			className={fieldClassNames('text')}
+		/>
+		 
+	)
+};
 const RenderMenu = (items, value, style) => (
 	<ul style={{ ...style }} children={items} />
 );
@@ -37,7 +48,9 @@ export const AutoCompleteField = props => {
 		...props,
 		required,
 		onBlur,
-		fieldType: AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
+		fieldType: 'text',
+		as: 'input',
+		
 	};
 
 	const wrapperProps = {
@@ -65,9 +78,7 @@ export const AutoCompleteField = props => {
 				getItemValue={item => item.value}
 				renderItem={RenderItem}
 				renderMenu={RenderMenu}
-				RenderInput={props => (
-					<RenderInput {...{ ...props, ...fieldProps }} />
-				)}
+				renderInput={RenderInput}
 				value={value}
 				onChange={e => handleChange(e)}
 				onSelect={value => handleChange(value)}

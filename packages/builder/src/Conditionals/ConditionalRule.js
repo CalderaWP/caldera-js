@@ -21,10 +21,9 @@ export const ConditionalRule = ({
 					});
 				};
 				return (
-					<Fragment>
+					<Fragment key={lineId}>
 						<ConditionalLine
 							line={group[lineId]}
-							key={lineId}
 							id={lineId}
 							onChange={changeHandler}
 							fields={fields}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import useHover from 'react-use';
 import { MagicField } from '../MagicField/MagicField';
-import { SelectField, ButtonField } from '@calderajs/components';
+import { SelectField, ButtonField, Row, Column } from '@calderajs/components';
 import { ConditionalRule } from './ConditionalRule';
 import { ConditionalGroupTop } from './ConditionalGroupTop';
 
@@ -75,29 +75,32 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 
 	return (
 		<div className="caldera-editor-condition-config caldera-forms-condition-edit">
-            <div className={`condition-point-${id}`}>
-                <ConditionalGroupTop {...topProps} />
-                {groupRulesIds.map(groupId => {
-                    const isLast = groupRulesIds.indexOf(groupId) === groupRulesIds.length - 1
-                            ? true
-                            : false;
-                    const ruleProps = {
-                        onChange: group => {
-                            onChange(setGroup(groupId, group));
-                        },
-                        fields,
-                        magics,
-                        isLast,
-                    };
-                    return (
-                        <ConditionalRule
-                            key={groupId}
-                            group={group[groupId]}
-                            {...ruleProps}
-                        />
-                    );
-                })}
-            </div>
+			<div className={`condition-point-${id}`}>
+				<ConditionalGroupTop {...topProps} />
+
+				{groupRulesIds.map(groupId => {
+					const isLast =
+						groupRulesIds.indexOf(groupId) ===
+						groupRulesIds.length - 1
+							? true
+							: false;
+					const ruleProps = {
+						onChange: group => {
+							onChange(setGroup(groupId, group));
+						},
+						fields,
+						magics,
+						isLast,
+					};
+					return (
+						<ConditionalRule
+							key={groupId}
+							group={group[groupId]}
+							{...ruleProps}
+						/>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
