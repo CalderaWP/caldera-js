@@ -81,17 +81,17 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 		onChange(update);
 	};
 
-	const onRemoveLine = (groupId,lineId) => {
+	const onRemoveLine = (groupId, lineId) => {
 		let group = condition.group[groupId];
 		delete group[lineId];
 		onChange({
 			...condition,
 			group: {
 				...condition.group,
-				[groupId]: {...group},
-			},	
-		})
-	}
+				[groupId]: { ...group },
+			},
+		});
+	};
 	const onAddGroup = () => onChange(addRuleGroup(condition));
 
 	const topProps = {

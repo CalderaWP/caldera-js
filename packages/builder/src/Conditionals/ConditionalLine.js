@@ -50,7 +50,6 @@ export const ConditionalLine = ({
 	fields,
 	magics,
 	id,
-	addLine,
 	removeLine,
 }) => {
 	const { compare, value, parent, field } = line;
@@ -113,18 +112,16 @@ export const ConditionalLine = ({
 						/>
 					)}
 				</Column>
-				{ ! isFirst &&
-					<Column width={0.1} columnId={`compare-line-remove-${id}-col`}>
+				{!isFirst && (
+					<Column
+						width={0.1}
+						columnId={`compare-line-remove-${id}-col`}
+					>
 						<ButtonField onClick={removeLine}>-</ButtonField>
 					</Column>
-				}
-				
+				)}
 			</Row>
-			<Row>
-				<Column width={1} columnId={`condition-point-${id}-add-line`}>
-					<ButtonField onClick={addLine}>+</ButtonField>
-				</Column>
-			</Row>
+			
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import useHover from 'react-use';
 import { MagicField } from '../MagicField/MagicField';
-import { SelectField, ButtonField } from '@calderajs/components';
+import { SelectField, ButtonField, Row,Column } from '@calderajs/components';
 import { ConditionalLine } from './ConditionalLine';
 
 export const ConditionalRule = ({
@@ -12,9 +12,8 @@ export const ConditionalRule = ({
 	isLast,
 	addLine,
 	removeLine,
-	groupId
+	groupId,
 }) => {
-	
 	return (
 		<div className={`caldera-condition-group caldera-condition-lines`}>
 			{Object.keys(group).map(lineId => {
@@ -25,7 +24,7 @@ export const ConditionalRule = ({
 					});
 				};
 
-				const onRemoveLine = () => removeLine(groupId,lineId);
+				const onRemoveLine = () => removeLine(groupId, lineId);
 				return (
 					<Fragment key={lineId}>
 						<ConditionalLine
@@ -38,7 +37,12 @@ export const ConditionalRule = ({
 							magics={magics}
 							isFirst={Object.keys(group).indexOf(lineId) === 0}
 						/>
-						{!isLast && <span>or</span>}
+						{!isLast && <div>or</div>}
+						{isLast && <Row>
+							<Column width={1} columnId={`condition-point-${lineId}-add-line`}>
+								<ButtonField onClick={addLine}>+</ButtonField>
+							</Column>
+					</Row>}
 					</Fragment>
 				);
 			})}
