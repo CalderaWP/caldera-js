@@ -121,7 +121,6 @@ export const ConditionalLine = ({
 					</Column>
 				)}
 			</Row>
-			
 		</div>
 	);
 };

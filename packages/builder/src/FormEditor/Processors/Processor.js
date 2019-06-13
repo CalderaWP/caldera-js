@@ -22,6 +22,28 @@ const ProcessorLabelEdit = ({ label, onChange, id }) => (
 		fieldId={`processor-label-${id}`}
 	/>
 );
+
+const SettingsPanel = ({ onClose, onRemove, label, id, type,conditionalPanel,formProps,onEditLabel }) => { 
+	
+	return (
+	<div>
+		<ProcessorLabel
+			label={label ? label : type}
+		/>
+		<ProcessorLabelEdit
+			label={label}
+			onChange={onEditLabel}
+			id={id}
+		/>
+		<HorizontalForm
+			{...formProps}
+			className={
+				'caldera-processor-settings'
+			}
+		/>
+	</div>
+)};
+
 export class Processor extends Component {
 	state = {
 		activeTab: 'settings',
@@ -41,6 +63,7 @@ export class Processor extends Component {
 			name: 'conditionals',
 			title: 'Conditionals',
 			className: 'caldera-processor-conditionals-tab-btn',
+			disabled: true,
 		},
 	];
 
@@ -69,7 +92,8 @@ export class Processor extends Component {
 	};
 
 	render() {
-		const { onClose, onRemove, label, id, type } = this.props;
+		const { onClose, onRemove, label, id, type,conditionalPanel } = this.props;
+		console.log(this.props.conditonalPanel,1);
 		return (
 			<Fragment>
 				<Row>
@@ -78,7 +102,7 @@ export class Processor extends Component {
 						activeClass="active-tab"
 						onSelect={this.onSetTab}
 						initialTabName={'settings'}
-						tabs={this.tabs}
+						tabs={ this.props.conditonalPanel ? this.tabs : [this.tabs[0]]}
 					>
 						{() => {
 							const { activeTab } = this.state;
@@ -87,30 +111,17 @@ export class Processor extends Component {
 							);
 							const { name } = tab;
 							if ('settings' === name) {
-								return (
-									<div>
-										<ProcessorLabel
-											label={label ? label : type}
-										/>
-										<ProcessorLabelEdit
-											label={label}
-											onChange={this.onEditLabel}
-											id={id}
-										/>
-										<HorizontalForm
-											{...this.formProps()}
-											className={
-												'caldera-processor-settings'
-											}
-										/>
-									</div>
-								);
+								return <SettingsPanel {...this.props } 
+								formProps={this.formProps() }
+								onEditLabel={this.onEditLabel}
+								
+							/>
 							}
 							return (
 								<div
 									className={'caldera-processor-conditionals'}
 								>
-									Conditionals
+									{conditionalPanel}
 								</div>
 							);
 						}}
@@ -155,4 +166,5 @@ Processor.propTypes = {
 Processor.defaultProps = {
 	...HorizontalForm.defaultProps,
 	initialActiveTab: 'settings',
+	conditionalPanel: null
 };

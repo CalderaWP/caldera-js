@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import useHover from 'react-use';
 import { MagicField } from '../MagicField/MagicField';
-import { SelectField, ButtonField, Row,Column } from '@calderajs/components';
+import { SelectField, ButtonField, Row, Column } from '@calderajs/components';
 import { ConditionalLine } from './ConditionalLine';
 
 export const ConditionalRule = ({
@@ -38,11 +38,18 @@ export const ConditionalRule = ({
 							isFirst={Object.keys(group).indexOf(lineId) === 0}
 						/>
 						{!isLast && <div>or</div>}
-						{isLast && <Row>
-							<Column width={1} columnId={`condition-point-${lineId}-add-line`}>
-								<ButtonField onClick={addLine}>+</ButtonField>
-							</Column>
-					</Row>}
+						{isLast && (
+							<Row>
+								<Column
+									width={1}
+									columnId={`condition-point-${lineId}-add-line`}
+								>
+									<ButtonField onClick={addLine}>
+										+
+									</ButtonField>
+								</Column>
+							</Row>
+						)}
 					</Fragment>
 				);
 			})}
