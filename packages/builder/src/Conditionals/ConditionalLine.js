@@ -61,7 +61,9 @@ export const ConditionalLine = ({
 	const comparisonValueId = `compare-value-${id}`;
 	const onChangeValue = value => onChange({ ...line, value });
 	return (
-		<div className={`caldera-condition-line condition-line-${id}`}>
+		<div
+			className={`caldera-condition-line condition-line-${id}`}
+		>
 			<Row>
 				<Column width={1} columnId={`condition-point-${id}-prefix`}>
 					{isFirst ? 'if' : 'and'}

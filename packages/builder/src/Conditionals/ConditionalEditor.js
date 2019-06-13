@@ -4,6 +4,7 @@ import { MagicField } from '../MagicField/MagicField';
 import { SelectField, ButtonField, Row, Column } from '@calderajs/components';
 import { ConditionalRule } from './ConditionalRule';
 import { ConditionalGroupTop } from './ConditionalGroupTop';
+import { Panel, PanelBody, PanelRow } from '@wordpress/components';
 
 export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 	const { name, group, id, type } = condition;
@@ -47,7 +48,7 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 		};
 	}
 
-	function addRuleGroup(condition) {
+	function addRuleGroup() {
 		const groupId = randomString('rw');
 		return setGroup(groupId, addLine({}, groupId));
 	}
@@ -92,7 +93,7 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 			},
 		});
 	};
-	const onAddGroup = () => onChange(addRuleGroup(condition));
+	const onAddGroup = () => onChange(addRuleGroup());
 
 	const topProps = {
 		onChangeName,
@@ -104,9 +105,20 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 	};
 
 	return (
-		<div className="caldera-editor-condition-config caldera-forms-condition-edit">
+		<Panel
+			header="Condition"
+			className="caldera-editor-condition-config caldera-forms-condition-edit"
+		>
 			<div className={`condition-point-${id}`}>
-				<ConditionalGroupTop {...topProps} />
+				<PanelBody
+					title={`Group Settings`}
+					icon="plugins"
+					initialOpen={true}
+				>
+					<PanelRow>
+						<ConditionalGroupTop {...topProps} />
+					</PanelRow>
+				</PanelBody>
 
 				{groupRulesIds.map(groupId => {
 					const isLast =
@@ -116,24 +128,44 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 							: false;
 					const ruleProps = {
 						onChange: group => {
-							onChange(setGroup(groupId, group));
+							const update = setGroup(groupId, group);
+
+							const fields = {}
+							Object.keys(update.group).forEach(groupId => {
+								Object.keys(update.group[groupId]).forEach(lineId => {
+									fields[lineId] = update.group[groupId][lineId].field;
+								});
+							});
+							onChange({
+								...update,
+								fields
+							});
 						},
 						fields,
 						magics,
 						isLast,
 					};
+
 					return (
-						<ConditionalRule
-							addLine={() => onAddLine(groupId)}
-							removeLine={onRemoveLine}
-							key={groupId}
-							group={group[groupId]}
-							groupId={groupId}
-							{...ruleProps}
-						/>
+						<PanelBody
+							title={`Rule`}
+							icon="plugins-checked"
+							initialOpen={true}
+						>
+							<PanelRow>
+								<ConditionalRule
+									addLine={() => onAddLine(groupId)}
+									removeLine={onRemoveLine}
+									key={groupId}
+									group={group[groupId]}
+									groupId={groupId}
+									{...ruleProps}
+								/>
+							</PanelRow>
+						</PanelBody>
 					);
 				})}
 			</div>
-		</div>
+		</Panel>
 	);
 };

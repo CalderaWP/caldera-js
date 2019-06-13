@@ -14,16 +14,18 @@ export const ConditionalRule = ({
 	removeLine,
 	groupId,
 }) => {
+	
+	let isFirst = true;
 	return (
 		<div className={`caldera-condition-group caldera-condition-lines`}>
-			{Object.keys(group).map(lineId => {
+			{Object.keys(group).map((lineId,lineIndex) => {
 				const changeHandler = update => {
 					onChange({
 						...group,
 						[lineId]: update,
 					});
 				};
-
+				
 				const onRemoveLine = () => removeLine(groupId, lineId);
 				return (
 					<Fragment key={lineId}>
@@ -35,10 +37,10 @@ export const ConditionalRule = ({
 							onChange={changeHandler}
 							fields={fields}
 							magics={magics}
-							isFirst={Object.keys(group).indexOf(lineId) === 0}
+							isFirst={isFirst}
 						/>
-						{!isLast && <div>or</div>}
-						{isLast && (
+
+						{lineIndex === Object.keys(group).length - 1 && (
 							<Row>
 								<Column
 									width={1}
@@ -52,6 +54,7 @@ export const ConditionalRule = ({
 						)}
 					</Fragment>
 				);
+				isFirst = false;
 			})}
 		</div>
 	);
