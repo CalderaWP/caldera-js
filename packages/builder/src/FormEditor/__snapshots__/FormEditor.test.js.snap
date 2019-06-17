@@ -152,9 +152,6 @@ Object {
                       <option>
                         --
                       </option>
-                      <option>
-                        --
-                      </option>
                       <option
                         value="apiRequest"
                       >
@@ -168,12 +165,12 @@ Object {
                       <option
                         value="autoResponder"
                       >
-                        autoResponder
+                        Auto Responder
                       </option>
                       <option
                         value="apiRequest"
                       >
-                        apiRequest
+                        API Request
                       </option>
                     </select>
                     
@@ -181,9 +178,7 @@ Object {
                   <button
                     disabled=""
                   >
-                    Add 
-                    
-                     Processor
+                    Choose Processor Type
                   </button>
                 </div>
               </div>
@@ -325,9 +320,6 @@ Object {
                     <option>
                       --
                     </option>
-                    <option>
-                      --
-                    </option>
                     <option
                       value="apiRequest"
                     >
@@ -341,12 +333,12 @@ Object {
                     <option
                       value="autoResponder"
                     >
-                      autoResponder
+                      Auto Responder
                     </option>
                     <option
                       value="apiRequest"
                     >
-                      apiRequest
+                      API Request
                     </option>
                   </select>
                   
@@ -354,9 +346,7 @@ Object {
                 <button
                   disabled=""
                 >
-                  Add 
-                  
-                   Processor
+                  Choose Processor Type
                 </button>
               </div>
             </div>

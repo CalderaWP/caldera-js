@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { CalderaFormsProcessor } from './CalderaFormsProcessor';
-import {processorsCollection} from '../FormEditor/Processors/processors.fixtures';
+import { processorsCollection } from '../FormEditor/Processors/processors.fixtures';
 import { WithStandardCss } from '../WithStandardCss';
 const magics = {
 	field: {
@@ -292,28 +292,31 @@ const fields = [
 ];
 
 const Component = props => {
-	const [processor,updateProcessor] = useState({
+	const [processor, updateProcessor] = useState({
 		...processorsCollection[0],
 		form: {
 			fields: processorsCollection[0].fields,
-			ID: `${processorsCollection[0].id}-editor`
+			ID: `${processorsCollection[0].id}-editor`,
 		},
 	});
 	props = {
 		processor,
 		magics,
 		formFields: fields,
-		onChange:(processor => updateProcessor(processor) )
+		onChange: processor => updateProcessor(processor),
 	};
 	return <CalderaFormsProcessor {...props} />;
 };
 
-storiesOf('CalderaFormsProcessor ', module).add('Single processor', () => 
-	<Component  />
-);
-
-storiesOf('CalderaFormsProcessor ', module).add('Single processor with css', () => (
-	<WithStandardCss>
-		<Component />
-	</WithStandardCss>
+storiesOf('CalderaFormsProcessor ', module).add('Single processor', () => (
+	<Component />
 ));
+
+storiesOf('CalderaFormsProcessor ', module).add(
+	'Single processor with css',
+	() => (
+		<WithStandardCss>
+			<Component />
+		</WithStandardCss>
+	)
+);

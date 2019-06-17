@@ -26,9 +26,6 @@ Object {
           <option>
             --
           </option>
-          <option>
-            --
-          </option>
           <option
             value="apiRequest"
           >
@@ -44,7 +41,9 @@ Object {
       </div>
       <button
         disabled=""
-      />
+      >
+        Choose Processor Type
+      </button>
     </div>
   </body>,
   "container": <div>
@@ -69,9 +68,6 @@ Object {
         <option>
           --
         </option>
-        <option>
-          --
-        </option>
         <option
           value="apiRequest"
         >
@@ -87,7 +83,9 @@ Object {
     </div>
     <button
       disabled=""
-    />
+    >
+      Choose Processor Type
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

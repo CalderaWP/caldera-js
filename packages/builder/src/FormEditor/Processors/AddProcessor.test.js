@@ -54,7 +54,7 @@ describe('AddProcessor', () => {
 			/>
 		);
 		expect(component.find('select').find('option').length).toBe(
-			processorTypes.length + 1
+			processorTypes.length 
 		);
 	});
 });

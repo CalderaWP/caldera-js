@@ -22,13 +22,7 @@ const ProcessorLabelEdit = ({ label, onChange, id }) => (
 	/>
 );
 
-const SettingsPanel = ({
-	label,
-	id,
-	type,
-	formProps,
-	onEditLabel,
-}) => {
+const SettingsPanel = ({ label, id, type, formProps, onEditLabel }) => {
 	return (
 		<div>
 			<ProcessorLabel label={label ? label : type} />
@@ -87,15 +81,9 @@ export class Processor extends Component {
 		this.props.onChange({ label });
 	};
 
-
-
 	render() {
 		console.log(this.props.conditonalPanel);
-		const {
-			onClose,
-			onRemove,
-			conditionalPanel,
-		} = this.props;
+		const { onClose, onRemove, conditionalPanel } = this.props;
 		return (
 			<Fragment>
 				<Row>

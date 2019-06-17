@@ -25,8 +25,7 @@ it('Shows list', () => {
 
 it('Changes list', () => {
 	const onChange = jest.fn();
-	
-	
+
 	const { findByLabelText } = render(
 		<SelectList
 			listFieldConfig={field[0]}
@@ -37,10 +36,9 @@ it('Changes list', () => {
 		/>
 	);
 
-fireEvent.change(findByLabelText( field[0].label), {
-	target: { value: "New Value" }
-  });
-  expect(onChange).toHaveBeenCalledTimes(1);
-  expect(onChange).toHaveBeenCalledWith("New Value");
-
+	fireEvent.change(findByLabelText(field[0].label), {
+		target: { value: 'New Value' },
+	});
+	expect(onChange).toHaveBeenCalledTimes(1);
+	expect(onChange).toHaveBeenCalledWith('New Value');
 });
