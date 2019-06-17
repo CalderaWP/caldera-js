@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Processors } from './Processors';
 import { mount } from 'enzyme';
 import { processorsCollection } from './processors.fixtures';
-import { render,fireEvent,cleanup } from 'react-testing-library';
+import { render, fireEvent, cleanup } from 'react-testing-library';
 
 describe('Processors', () => {
 	afterEach(cleanup);
@@ -137,7 +137,7 @@ describe('Processors collection in processors UI', () => {
 
 	it.skip('Calls the processor update callback when a processor changes values', () => {
 		const updateProcessors = jest.fn();
-		const {container} = render(
+		const { container } = render(
 			<Processors
 				processors={processorsCollection}
 				form={form}
@@ -148,14 +148,17 @@ describe('Processors collection in processors UI', () => {
 
 		const event = { target: { value: 'six' } };
 
-		fireEvent.click(container.querySelector('.caldera-forms-choose-processor-p2') );
+		fireEvent.click(
+			container.querySelector('.caldera-forms-choose-processor-p2')
+		);
 
-		  fireEvent.change(
-			  container.querySelector('.caldera-forms-active-processor-p2 input[type="text"]'),
+		fireEvent.change(
+			container.querySelector(
+				'.caldera-forms-active-processor-p2 input[type="text"]'
+			),
 			event
-			);
-		  expect(updateProcessors).toHaveBeenCalledTimes(1);
-
+		);
+		expect(updateProcessors).toHaveBeenCalledTimes(1);
 	});
 
 	it.skip('Calls the processor update callback when a processor is removed', () => {
