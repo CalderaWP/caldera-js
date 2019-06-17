@@ -63,12 +63,15 @@ export const ConditionalLine = ({
 	return (
 		<div className={`caldera-condition-line condition-line-${id}`}>
 			<Row>
-				<Column width={'100%'} columnId={`condition-point-${id}-prefix`}>
+				<Column
+					width={'100%'}
+					columnId={`condition-point-${id}-prefix`}
+				>
 					{isFirst ? 'if' : 'and'}
 				</Column>
 			</Row>
 			<Row>
-				<Column width={.5} columnId={`compare-field-${id}-cl`}>
+				<Column width={0.5} columnId={`compare-field-${id}-cl`}>
 					<SelectFormField
 						onChange={field => onChange({ ...line, field })}
 						fields={fields}
@@ -77,7 +80,7 @@ export const ConditionalLine = ({
 						fieldId={`compare-field-${id}`}
 					/>
 				</Column>
-				<Column width={.5} columnId={`compare-type-${id}-col`}>
+				<Column width={0.5} columnId={`compare-type-${id}-col`}>
 					<SelectField
 						onChange={compare => onChange({ ...line, compare })}
 						options={comparisonOptions}
@@ -88,7 +91,7 @@ export const ConditionalLine = ({
 				</Column>
 			</Row>
 			<Row>
-				<Column width={.8} columnId={`condition-point-${id}-top`}>
+				<Column width={0.8} columnId={`condition-point-${id}-top`}>
 					{currentFieldType &&
 					['radio', 'select', 'checkbox'].includes(
 						currentFieldType

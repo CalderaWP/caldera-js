@@ -95,12 +95,11 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 	};
 	const onAddGroup = () => onChange(addRuleGroup());
 
-	const onRemoveGroup = (groupId) => {
+	const onRemoveGroup = groupId => {
 		const update = condition;
 		delete update.group[groupId];
-		console.log(update);
-		onChange( {...update} );
-	}
+		onChange({ ...update });
+	};
 
 	const topProps = {
 		onChangeName,
@@ -154,8 +153,8 @@ export const ConditionalEditor = ({ condition, onChange, fields, magics }) => {
 								fields,
 							});
 						},
-						addLine(){
-							onAddLine(groupId)
+						addLine() {
+							onAddLine(groupId);
 						},
 						fields,
 						magics,

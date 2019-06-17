@@ -23,7 +23,6 @@ import {
 	//hooks + HOC
 	useCalderaMailChimpFormConfig,
 	WithStylesheet,
-	WithStylesheet,
 	WithBootstrapStyle,
 	WithStylesheets,
 } from '@calderajs/forms';

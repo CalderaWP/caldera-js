@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Field } from '@calderajs/components';
+import { InputField } from '@calderajs/components';
 
 /**
  * Add Mailchimp API Key
@@ -27,12 +27,11 @@ export const AddApiKey = ({
 	};
 	return (
 		<Fragment>
-			<Field
-				field={field}
+			<InputField
+				{...field}
 				onChange={newValue => {
 					onChange(newValue);
 				}}
-				value={apiKey}
 				instanceId={`caldera-mc-select-${instanceId}`}
 			/>
 			<button

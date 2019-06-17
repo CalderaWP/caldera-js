@@ -3,7 +3,6 @@ import { TabPanel } from '@wordpress/components';
 import {
 	Row,
 	Column,
-	SelectFieldl,
 	InputField,
 	FORM_FIELDS_AUTO_COMPLETE_FIELD_TYPE_IDENTIFIER,
 } from '@calderajs/components';
@@ -24,12 +23,9 @@ const ProcessorLabelEdit = ({ label, onChange, id }) => (
 );
 
 const SettingsPanel = ({
-	onClose,
-	onRemove,
 	label,
 	id,
 	type,
-	conditionalPanel,
 	formProps,
 	onEditLabel,
 }) => {
@@ -64,7 +60,6 @@ export class Processor extends Component {
 			name: 'conditionals',
 			title: 'Conditionals',
 			className: 'caldera-processor-conditionals-tab-btn',
-			disabled: true,
 		},
 	];
 
@@ -92,16 +87,15 @@ export class Processor extends Component {
 		this.props.onChange({ label });
 	};
 
+
+
 	render() {
+		console.log(this.props.conditonalPanel);
 		const {
 			onClose,
 			onRemove,
-			label,
-			id,
-			type,
 			conditionalPanel,
 		} = this.props;
-		console.log(this.props.conditonalPanel, 1);
 		return (
 			<Fragment>
 				<Row>
@@ -164,9 +158,9 @@ export class Processor extends Component {
 	}
 }
 
-//should have label!
 Processor.propTypes = {
 	...HorizontalForm.propTypes,
+	label: PropTypes.string,
 	initialActiveTab: PropTypes.string,
 	onRemove: PropTypes.func,
 	type: PropTypes.string,

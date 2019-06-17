@@ -24,18 +24,18 @@ describe('AddApiKey Mailchimp', () => {
 		).toMatchSnapshot();
 	});
 
-	it.skip('Changes list', () => {
+	it('Changes list', () => {
 		const onChange = jest.fn();
 		const label = 'The Label';
 		const { container, getByLabelText } = render(
 			<AddApiKey onChange={onChange} instanceId={'test'} label={label} />
 		);
 
-		const input = container.querySelector('#caldera-mc-api-key');
+		const select = container.querySelector('#caldera-mc-api-key');
 		const event = { target: { value: '45907f0c59' } };
-		fireEvent.change(input, event);
-		expect(select.value).toBe('45907f0c59');
+		fireEvent.change(select, event);
+		expect(onChange).toHaveBeenCalledTimes(1);
 
-		expect(onChange.mock.calls.length).toBe(1);
+		expect(onChange).toHaveBeenCalledWith('45907f0c59');
 	});
 });
