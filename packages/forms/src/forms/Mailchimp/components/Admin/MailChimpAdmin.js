@@ -47,7 +47,7 @@ export const MailChimpAdmin = ({ accounts, apiRoot, apiToken }) => {
 	return (
 		<div>
 			<Row>
-				<Column width={0.66}>Preview Form</Column>
+				<Column width={0.66}>Preview</Column>
 				<Column width={0.33}>
 					<Inside />
 				</Column>
