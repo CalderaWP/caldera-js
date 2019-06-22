@@ -1,5 +1,7 @@
 # Conditional Logic  UI
 
+The editor for conditionals and all conditionals of a form.
+
 ## Components
 
 * `<ConditionalEditor />` edits 1 conditional group.

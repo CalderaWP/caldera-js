@@ -54,7 +54,7 @@
     "react-test-renderer": "16.4.2",
     "react-testing-library": "^6.1.2"
   },
-  "gitHead": "b8950de2cea0da4ed5efad792633fd0f383bb77e",
+  "gitHead": "b4736aef851415a133451016fdc583fba373c13d",
   "publishConfig": {
     "access": "public"
   }
