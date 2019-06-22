@@ -13,13 +13,11 @@ export const SubmitButton = props => {
 		<FieldWrapper {...wrapperProps}>
 			<Control
 				as={'input'}
-				type={'submit'}
+				fieldType={'submit'}
 				value={label ? label : value}
 				onChange={onChange}
 				onClick={
-					attributes && attributes.hasOwnProperty('onClick')
-						? attributes.onClick
-						: onChange
+					props.hasOwnProperty('onClick') ? props.onClick : onChange
 				}
 				onBlur={onBlur}
 				{...attributes}

@@ -11,6 +11,7 @@ export const Control = ({
 	value,
 	onChange,
 	onBlur,
+	onClick,
 	required,
 	attributes,
 	as,
@@ -24,6 +25,7 @@ export const Control = ({
 			value={value}
 			onChange={event => onChange(event.target.value)}
 			onBlur={onBlur}
+			onClick={onClick}
 			required={required}
 			{...attributes}
 			className={classNames(fieldClassNames(fieldType))}
@@ -34,6 +36,7 @@ const noop = () => {};
 Control.defaultProps = {
 	onChange: noop,
 	onBlur: noop,
+	onClick: noop,
 	required: false,
 	attributes: {},
 };
@@ -47,6 +50,7 @@ Control.propTypes = {
 		PropTypes.number,
 		PropTypes.array,
 	]),
+	onClick: PropTypes.func,
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func,
 	required: PropTypes.bool,

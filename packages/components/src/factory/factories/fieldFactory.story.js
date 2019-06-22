@@ -110,7 +110,7 @@ storiesOf('FieldFactory', module).add('Button', () => (
 	</Fragment>
 ));
 
-storiesOf('FieldFactory', module).add('Has Label', () => (
+storiesOf('FieldFactory', module).add('Button has Label', () => (
 	<Fragment>
 		{fieldFactory(
 			{
@@ -119,6 +119,22 @@ storiesOf('FieldFactory', module).add('Has Label', () => (
 				label: 'The Label',
 			},
 			() => {}
+		)}
+	</Fragment>
+));
+
+storiesOf('FieldFactory', module).add('Submit button calls onClick', () => (
+	<Fragment>
+		{fieldFactory(
+			{
+				fieldType: 'submit',
+				value: 'The Value Prop Sets The Button Text',
+				label: 'Submit',
+				onClick: e => alert('Clicked!'),
+			},
+			() => {
+				alert('Clicked!');
+			}
 		)}
 	</Fragment>
 ));

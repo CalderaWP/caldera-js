@@ -1,127 +1,127 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 
-import {fieldFactory, Field, FieldWrapper, FieldSet, InputField} from '@calderajs/components';
+import {
+	fieldFactory,
+	Field,
+	FieldWrapper,
+	FieldSet,
+	InputField,
+} from '@calderajs/components';
 
+export const FieldOptions = ({
+	accountId,
+	listId,
+	instanceId,
+	setFieldsToHide,
+	fieldsToHide,
+	getList,
+}) => {
+	const getMergeFields = list => {
+		return list.hasOwnProperty('mergeFields')
+			? Object.values(list.mergeFields.mergeVars)
+			: [];
+	};
 
-export const FieldOptions = ({accountId, listId, instanceId, setFieldsToHide, fieldsToHide,getList}) => {
+	const getGroupFields = list => {
+		return list.hasOwnProperty('groupFields')
+			? Object.values(list.groupFields.groups)
+			: [];
+	};
 
-    const getMergeFields = (list) => {
-        return list.hasOwnProperty('mergeFields') ? Object.values(list.mergeFields.mergeVars) : [];
-    };
+	const list = getList(listId);
 
-    const getGroupFields = (list) => {
-        return list.hasOwnProperty('groupFields') ? Object.values(list.groupFields.groups) : [];
-    };
+	const mergeHiderFieldId = 'mc-hide-merge-fields-' + instanceId;
+	const groupHiderFieldId = 'mc-hide-group-fields-' + instanceId;
+	const mergeOptions = [];
+	const groupOptions = [];
+	const values = {};
+	if (list) {
+		const mergeFields = getMergeFields(list);
+		const groupFields = getGroupFields(list);
 
-    const list = getList(listId);
+		mergeFields.forEach(field => {
+			const label = `${field.name}`;
+			const value = field.tag;
+			values[value] = fieldsToHide.hasOwnProperty(value)
+				? fieldsToHide[value]
+				: false;
+			mergeOptions.push({
+				label,
+				value,
+				id: `${listId}-${field.mergeId}`,
+			});
+		});
 
-    const mergeHiderFieldId = 'mc-hide-merge-fields-' + instanceId;
-    const groupHiderFieldId = 'mc-hide-group-fields-' + instanceId;
-    const mergeOptions = [];
-    const groupOptions = [];
-    const values = {};
-    if (list) {
+		groupFields.forEach(group => {
+			const label = `${group.title}`;
+			const value = group.groupId;
+			values[value] = fieldsToHide.hasOwnProperty(value)
+				? fieldsToHide[value]
+				: false;
+			groupOptions.push({
+				id: `${listId}-${group.groupId}`,
+				label,
+				value,
+			});
+		});
+	} else {
+		return <Fragment />;
+	}
 
-        const mergeFields = getMergeFields(list);
-        const groupFields = getGroupFields(list);
-
-
-        mergeFields.forEach(field => {
-            const label = `${field.name}`;
-            const value = field.tag;
-            values[value] = fieldsToHide.hasOwnProperty(value) ? fieldsToHide[value] : false;
-            mergeOptions.push({
-                label,
-                value,
-                id: `${listId}-${field.mergeId}`,
-
-            })
-
-        });
-
-
-        groupFields.forEach(group => {
-            const label = `${group.title}`;
-            const value = group.groupId;
-            values[value] = fieldsToHide.hasOwnProperty(value) ? fieldsToHide[value] : false;
-            groupOptions.push({
-                id: `${listId}-${group.groupId}`,
-                label,
-                value,
-            })
-        });
-
-
-    } else {
-        return <Fragment/>;
-    }
-
-
-    if (accountId && listId) {
-        return (
-            <div>
-                <FieldWrapper
-                    id={mergeHiderFieldId}
-                    fieldType={'checkboxes'}
-                >
-                    <FieldSet
-                        legend={`Hide Merge Fields`}
-
-                        fieldType={'checkboxes'}
-                    >
-                        {mergeOptions.map(mergeOption => {
-                            const {id, label, value} = mergeOption;
-                            const checked = values[value];
-                            return (
-                                <InputField
-                                    fieldId={id}
-                                    label={label}
-                                    html5type={'checkbox'}
-                                    value={checked}
-                                    onChange={(newValue) => {
-                                        setFieldsToHide({
-                                            ...values,
-                                            [value]: newValue,
-                                        });
-                                    }}
-                                />
-                            )
-                        })}
-
-                    </FieldSet>
-                </FieldWrapper>
-                <FieldWrapper
-                    id={groupHiderFieldId}
-
-                    fieldType={'checkboxes'}
-                >
-                    <FieldSet
-                        fieldType={'checkboxes'}
-                        legend={`Hide Group Fields`}>
-                        {groupOptions.map(mergeOption => {
-                            const {id, label, value} = mergeOption;
-                            const checked = values[value];
-                            return (
-                                <InputField
-                                    fieldId={id}
-                                    label={label}
-                                    html5type={'checkbox'}
-                                    value={checked}
-                                    onChange={(newValue) => {
-                                        setFieldsToHide({
-                                            ...values,
-                                            [value]: newValue,
-                                        });
-                                    }}
-                                />
-                            )
-                        })}
-
-                    </FieldSet>
-                </FieldWrapper>
-            </div>
-        )
-    }
-
-
+	if (accountId && listId) {
+		return (
+			<div>
+				<FieldWrapper id={mergeHiderFieldId} fieldType={'checkboxes'}>
+					<FieldSet
+						legend={`Hide Merge Fields`}
+						fieldType={'checkboxes'}
+					>
+						{mergeOptions.map(mergeOption => {
+							const { id, label, value } = mergeOption;
+							const checked = values[value];
+							return (
+								<InputField
+									fieldId={id}
+									label={label}
+									html5type={'checkbox'}
+									value={checked}
+									onChange={newValue => {
+										setFieldsToHide({
+											...values,
+											[value]: newValue,
+										});
+									}}
+								/>
+							);
+						})}
+					</FieldSet>
+				</FieldWrapper>
+				<FieldWrapper id={groupHiderFieldId} fieldType={'checkboxes'}>
+					<FieldSet
+						fieldType={'checkboxes'}
+						legend={`Hide Group Fields`}
+					>
+						{groupOptions.map(mergeOption => {
+							const { id, label, value } = mergeOption;
+							const checked = values[value];
+							return (
+								<InputField
+									fieldId={id}
+									label={label}
+									html5type={'checkbox'}
+									value={checked}
+									onChange={newValue => {
+										setFieldsToHide({
+											...values,
+											[value]: newValue,
+										});
+									}}
+								/>
+							);
+						})}
+					</FieldSet>
+				</FieldWrapper>
+			</div>
+		);
+	}
 };
