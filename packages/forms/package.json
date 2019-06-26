@@ -22,14 +22,15 @@
     "@calderajs/components": "^0.9.12-alpha.3",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
+    "es6-promise": "^4.2.8",
     "generact": "^0.4.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react-helmet": "^5.2.0",
     "react-oembed-container": "^0.3.0",
     "react-spinners": "^0.5.4",
-    "webpack-bundle-size-analyzer": "^3.0.0",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-bundle-size-analyzer": "^3.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
