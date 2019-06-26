@@ -4,7 +4,6 @@ import {
 	formClientFactory,
 	HorizontalForm,
 	getCf2Token,
-	submitFormCf2,
 	useCf2FormTokens,
 	handleFormSubmitCf2,
 	CF2Form,
@@ -46,9 +45,7 @@ describe('Exports', () => {
 	it('exports getCf2Token', () => {
 		expect(typeof getCf2Token).toBe('function');
 	});
-	it('exports submitFormCf2', () => {
-		expect(typeof submitFormCf2).toBe('function');
-	});
+
 	it('exports useCf2FormTokens', () => {
 		expect(typeof useCf2FormTokens).toBe('function');
 	});

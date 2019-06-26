@@ -73,8 +73,9 @@ Object {
                      
                   </label>
                   <input
-                    class="caldera-field caldera-field-undefined form-control"
+                    class="caldera-field caldera-field-submit form-control"
                     id="submitQuestion"
+                    type="submit"
                     value="Subscribe"
                   />
                 </div>
@@ -154,8 +155,9 @@ Object {
                    
                 </label>
                 <input
-                  class="caldera-field caldera-field-undefined form-control"
+                  class="caldera-field caldera-field-submit form-control"
                   id="submitQuestion"
+                  type="submit"
                   value="Subscribe"
                 />
               </div>

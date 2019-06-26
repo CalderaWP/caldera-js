@@ -17,7 +17,6 @@ export { useCf2FormTokens } from './hooks/useCf2FormTokens';
  * Form HTTP helpers
  */
 export getCf2Token from './Http/handlers/getCf2Token';
-export submitFormCf2 from './Http/handlers/submitFormCf2';
 export handleFormSubmitCf2 from './Http/handlers/handleFormSubmitCf2';
 export submitFormCaldera from './Http/handlers/submitFormCaldera';
 export { formClientFactory } from './Http/clientFactory';

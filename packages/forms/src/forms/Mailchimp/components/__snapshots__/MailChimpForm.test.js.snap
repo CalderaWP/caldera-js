@@ -232,9 +232,9 @@ Object {
                      
                   </label>
                   <input
-                    class="caldera-field caldera-field-undefined form-control"
+                    class="caldera-field caldera-field-submit form-control"
                     id="mc-submit"
-                    value=""
+                    type="submit"
                   />
                 </div>
               </div>
@@ -446,9 +446,9 @@ Object {
                    
                 </label>
                 <input
-                  class="caldera-field caldera-field-undefined form-control"
+                  class="caldera-field caldera-field-submit form-control"
                   id="mc-submit"
-                  value=""
+                  type="submit"
                 />
               </div>
             </div>
