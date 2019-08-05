@@ -6,7 +6,7 @@
   ],
   "license": "GPL-2.0",
   "scripts": {
-    "start": "yarn start:demo",
+    "start": "yarn storybook:builder",
     "start:server": "yarn --cwd packages/server start",
     "start:demo": "yarn workspace @calderajs/demo start",
     "start:builder": "yarn workspace @calderajs/builder start",
