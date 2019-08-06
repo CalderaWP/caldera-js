@@ -15,7 +15,7 @@ export function addStyleSheetToDom({ href, media = 'all', id }) {
 			link.media = media;
 			link.onload = resolve;
 			link.onerror = reject;
-			document.body.appendChild(link);
+			document.getElementsByTagName('head')[0].appendChild(link);
 		} else {
 			resolve();
 		}
