@@ -52,11 +52,6 @@ export class CalderaForm extends Component {
 			}
 
 			if ('function' === typeof conditionals) {
-				const _conditionalState = conditionals(conditionalState, form);
-				this.setState({
-					formRows: updateRows(_conditionalState, rows, fields),
-					conditionalState: _conditionalState,
-				});
 			}
 		}
 	};
