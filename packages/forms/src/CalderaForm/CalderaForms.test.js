@@ -188,6 +188,36 @@ describe('Updates ', () => {
 		fields: [emailField, textField],
 	};
 
+	test('Conditionals can be function', () => {
+		const valueToHideEmail = 'hider';
+		const _form = {
+			...form,
+			conditionals: (conditionalState, form) => {
+				if (
+					valueToHideEmail ===
+					conditionalState.getValue(textField.fieldId)
+				) {
+					conditionalState.hideField(emailField.fieldId);
+				} else {
+					conditionalState.showField(emailField.fieldId);
+				}
+				return conditionalState;
+			},
+		};
+		expect(component.find('#' + text.fieldId).find('input').length).toBe(1);
+		expect(
+			component.find('#' + emailField.fieldId).find('input').length
+		).toBe(1);
+		component
+			.find('#' + text.fieldId)
+			.find('input')
+			.simulate('change', { target: { value: valueToHideEmail } });
+		expect(
+			component.find('#' + emailField.fieldId).find('input').length
+		).toBe(0);
+		expect(component.find('#' + text.fieldId).find('input').length).toBe(1);
+	});
+
 	it.skip('hides a field when it should ', () => {
 		const _form = {
 			...form,

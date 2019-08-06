@@ -42,7 +42,7 @@ export class CalderaForm extends Component {
 			conditionals.forEach(rule => {
 				applyRuleToState(rule, conditionalState);
 			});
-			
+
 			this.setState({
 				formRows: updateRows(conditionalState, rows, fields),
 				conditionalState,
