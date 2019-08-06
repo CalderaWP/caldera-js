@@ -10,6 +10,7 @@
     "start:server": "yarn --cwd packages/server start",
     "start:demo": "yarn workspace @calderajs/demo start",
     "start:builder": "yarn workspace @calderajs/builder start",
+    "start:mock-server": "npx http-server mock-data",
     "build": "yarn build:pre && yarn build:components && yarn build:forms && yarn build:builder",
     "build:pre": "lerna bootstrap",
     "build:components": "yarn --cwd packages/components build",

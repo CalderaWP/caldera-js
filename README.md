@@ -18,6 +18,7 @@ This is not a WordPress plugin.
     - Proxies
     - Services
     
+
 ## Development
 Install for development
 * git clone
@@ -25,6 +26,15 @@ Install for development
 * Install - no not use npm, use Yarn!
     - `yarn install`
     - Demo app assumes [Caldera Forms Local Development Server](https://github.com/CalderaWP/Caldera-Forms/blob/master/contributing/local-dev.md) is running.    
+
+### Mock Server
+* To start the mock data server:
+  * `yarn start:mock-server`
+
+* Endpoints:
+  * `http://localhost:8080/stripe/plans.json` List plans
+  * `http://localhost:8080/stripe/account.json` Account details
+  * `http://localhost:8080/stripe/create-plan.json` create subscription plans
 
     
 ### Testing

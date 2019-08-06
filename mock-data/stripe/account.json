@@ -1,0 +1,55 @@
+{
+    "id": "acct_15QVO7FZVGObkXQS",
+    "object": "account",
+    "business_profile": {
+        "mcc": "12345",
+        "name": "CALDERAWP LLC",
+        "product_description": "WordPress Plugins n at",
+        "support_address": null,
+        "support_email": "contact@calderawp.com",
+        "support_phone": "",
+        "support_url": "https://CalderaForms.com/support",
+        "url": "https://calderaforms.com"
+    },
+    "business_type": "company",
+    "charges_enabled": true,
+    "country": "US",
+    "default_currency": "usd",
+    "details_submitted": true,
+    "email": "josh@calderawp.com",
+    "metadata": {},
+    "payouts_enabled": true,
+    "settings": {
+        "branding": {
+            "icon": "https://s3.amazonaws.com/stripe-uploads/acct_15QVO7FZVGObkXQSmerchant-icon-1481136526291-caldera-logo-globe.png",
+            "logo": null,
+            "primary_color": "#3a3a3a"
+        },
+        "card_payments": {
+            "decline_on": {
+                "avs_failure": false,
+                "cvc_failure": true
+            },
+            "statement_descriptor_prefix": null
+        },
+        "dashboard": {
+            "display_name": "Calderawp",
+            "timezone": "America/New_York"
+        },
+        "payments": {
+            "statement_descriptor": "CALDERAWP LLC",
+            "statement_descriptor_kana": null,
+            "statement_descriptor_kanji": null
+        },
+        "payouts": {
+            "debit_negative_balances": true,
+            "schedule": {
+                "delay_days": 2,
+                "interval": "weekly",
+                "weekly_anchor": "monday"
+            },
+            "statement_descriptor": null
+        }
+    },
+    "type": "standard"
+}

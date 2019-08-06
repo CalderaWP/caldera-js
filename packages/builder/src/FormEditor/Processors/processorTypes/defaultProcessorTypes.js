@@ -1,6 +1,9 @@
 import { autoResponder } from './autoResponder';
+import { stripeSingle, stripeSubscription } from './stripe';
 export const defaultProcessorTypes = [
 	autoResponder,
+	stripeSingle,
+	stripeSubscription,
 	{
 		type: 'apiRequest',
 		typeLabel: 'API Request',
