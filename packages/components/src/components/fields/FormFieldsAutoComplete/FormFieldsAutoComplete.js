@@ -26,19 +26,32 @@ export const FormFieldsAutoComplete = props => {
 		label,
 		description,
 		fieldId,
+		allowedTypes,
 	} = props;
+
+	const isAllowedField = fieldType => {
+		if (!allowedTypes || !allowedTypes.length) {
+			return true;
+		}
+		return allowedTypes.includes(fieldType);
+	};
 
 	const options = useMemo(
 		() =>
-			form.fields.map(field => {
-				const tag = `%${field.fieldId}%`;
-				return {
-					label: `${tag}`,
-					value: `${tag}`,
-					type: 'field',
-					description: `Use the value of the field ${field.label}`,
-				};
-			}),
+			form.fields
+				.map(field => {
+					if (!isAllowedField(field.fieldType)) {
+						return;
+					}
+					const tag = `%${field.fieldId}%`;
+					return {
+						label: `${tag}`,
+						value: `${tag}`,
+						type: 'field',
+						description: `Use the value of the field ${field.label}`,
+					};
+				})
+				.filter(i => undefined !== i),
 		[form]
 	);
 	return (
@@ -68,6 +81,7 @@ FormFieldsAutoComplete.propTypes = {
 			})
 		),
 	}),
+	allowedTypes: PropTypes.array,
 };
 
 FormFieldsAutoComplete.defaultProps = {
