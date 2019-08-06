@@ -63,7 +63,7 @@ HorizontalForm.propTypes = {
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func,
 	onClose: PropTypes.func,
-	conditionals: PropTypes.array,
+	conditionals: PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
 };
 
 HorizontalForm.defaultProps = {

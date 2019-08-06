@@ -82,7 +82,6 @@ export class Processor extends Component {
 	};
 
 	render() {
-		console.log(this.props.conditonalPanel);
 		const { onClose, onRemove, conditionalPanel } = this.props;
 		return (
 			<Fragment>
