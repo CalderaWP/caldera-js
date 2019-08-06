@@ -204,18 +204,25 @@ describe('Updates ', () => {
 				return conditionalState;
 			},
 		};
-		expect(component.find('#' + text.fieldId).find('input').length).toBe(1);
+		const component = mount(
+			<CalderaForm form={_form} onSubmit={onSubmit} />
+		);
+		expect(
+			component.find('#' + textField.fieldId).find('input').length
+		).toBe(1);
 		expect(
 			component.find('#' + emailField.fieldId).find('input').length
 		).toBe(1);
 		component
-			.find('#' + text.fieldId)
+			.find('#' + textField.fieldId)
 			.find('input')
 			.simulate('change', { target: { value: valueToHideEmail } });
 		expect(
 			component.find('#' + emailField.fieldId).find('input').length
 		).toBe(0);
-		expect(component.find('#' + text.fieldId).find('input').length).toBe(1);
+		expect(
+			component.find('#' + textField.fieldId).find('input').length
+		).toBe(1);
 	});
 
 	it.skip('hides a field when it should ', () => {
@@ -231,7 +238,7 @@ describe('Updates ', () => {
 		};
 
 		const component = mount(
-			<CalderaForm form={form} onSubmit={onSubmit} />
+			<CalderaForm form={_form} onSubmit={onSubmit} />
 		);
 		const value = 'hide';
 		const event = { target: { value } };

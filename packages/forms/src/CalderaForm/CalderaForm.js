@@ -34,19 +34,30 @@ export class CalderaForm extends Component {
 	 * Run conditional logic and update state
 	 */
 	applyConditionalRules = () => {
-		const { fields, rows, conditionals } = this.props.form;
-		if (conditionals && conditionals.length) {
+		const { form } = this.props;
+		const { fields, rows, conditionals } = form;
+		if (conditionals) {
 			const conditionalState = this.state.conditionalState
 				? this.state.conditionalState
 				: new ConditionalState(collectFieldValues(fields));
-			conditionals.forEach(rule => {
-				applyRuleToState(rule, conditionalState);
-			});
 
-			this.setState({
-				formRows: updateRows(conditionalState, rows, fields),
-				conditionalState,
-			});
+			if (Array.isArray(conditionals)) {
+				conditionals.forEach(rule => {
+					applyRuleToState(rule, conditionalState);
+				});
+				this.setState({
+					formRows: updateRows(conditionalState, rows, fields),
+					conditionalState,
+				});
+			}
+
+			if ('function' === typeof conditionals) {
+				const _conditionalState = conditionals(conditionalState, form);
+				this.setState({
+					formRows: updateRows(_conditionalState, rows, fields),
+					conditionalState: _conditionalState,
+				});
+			}
 		}
 	};
 
@@ -204,6 +215,7 @@ CalderaForm.propTypes = {
 	onSubmit: PropTypes.func,
 	onChange: PropTypes.func,
 	onBlur: PropTypes.func,
+	conditionals: PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
 };
 
 const noop = () => {};
