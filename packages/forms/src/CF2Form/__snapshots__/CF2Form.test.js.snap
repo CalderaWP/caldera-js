@@ -125,6 +125,7 @@ Object {
                 <input
                   class="form-control form-control"
                   id="fld_7908577"
+                  type="submit"
                   value="Click Me"
                 />
               </div>
@@ -161,6 +162,7 @@ Object {
               <input
                 class="form-control form-control"
                 id="fld_7908577"
+                type="submit"
                 value="Click Me"
               />
             </div>

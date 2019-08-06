@@ -23,7 +23,7 @@ it('Shows list', () => {
 	).toMatchSnapshot();
 });
 
-it('Changes list', () => {
+test.skip('Changes list', () => {
 	const onChange = jest.fn();
 
 	const { findByLabelText } = render(
