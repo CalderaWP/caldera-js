@@ -1841,13 +1841,13 @@ cssesc@^0.1.0:
     postcss-minify-selectors "^2.0.4"
     postcss-normalize-charset "^1.1.0"
     postcss-normalize-url "^3.0.7"
+    postcss-optionValue-parser "^3.2.3"
     postcss-ordered-values "^2.1.0"
     postcss-reduce-idents "^2.2.2"
     postcss-reduce-initial "^1.0.0"
     postcss-reduce-transforms "^1.0.3"
     postcss-svgo "^2.1.1"
     postcss-unique-selectors "^2.0.2"
-    postcss-optionValue-parser "^3.2.3"
     postcss-zindex "^2.0.1"
 
 csso@~2.3.1:
@@ -2931,6 +2931,10 @@ get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
 
+get-optionValue@^2.0.3, get-optionValue@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/get-optionValue/-/get-optionValue-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
+
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
@@ -2938,10 +2942,6 @@ get-stdin@^4.0.1:
 get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
-
-get-optionValue@^2.0.3, get-optionValue@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/get-optionValue/-/get-optionValue-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -3113,14 +3113,6 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
 
-has-symbols@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
-
-has-unicode@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
-
 has-optionValue@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/has-optionValue/-/has-optionValue-0.3.1.tgz#7b1f58bada62ca827ec0a2078025654845995e1f"
@@ -3136,6 +3128,14 @@ has-optionValue@^1.0.0:
     get-optionValue "^2.0.6"
     has-values "^1.0.0"
     isobject "^3.0.0"
+
+has-symbols@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
+
+has-unicode@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
 
 has-values@^0.1.4:
   version "0.1.4"
@@ -5332,6 +5332,10 @@ postcss-normalize-url@^3.0.7:
     postcss "^5.0.14"
     postcss-optionValue-parser "^3.2.3"
 
+postcss-optionValue-parser@^3.0.1, postcss-optionValue-parser@^3.0.2, postcss-optionValue-parser@^3.1.1, postcss-optionValue-parser@^3.1.2, postcss-optionValue-parser@^3.2.3, postcss-optionValue-parser@^3.3.0:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/postcss-optionValue-parser/-/postcss-optionValue-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
+
 postcss-ordered-values@^2.1.0:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/postcss-ordered-values/-/postcss-ordered-values-2.2.3.tgz#eec6c2a67b6c412a8db2042e77fe8da43f95c11d"
@@ -5384,10 +5388,6 @@ postcss-unique-selectors@^2.0.2:
     alphanum-sort "^1.0.1"
     postcss "^5.0.4"
     uniqs "^2.0.0"
-
-postcss-optionValue-parser@^3.0.1, postcss-optionValue-parser@^3.0.2, postcss-optionValue-parser@^3.1.1, postcss-optionValue-parser@^3.1.2, postcss-optionValue-parser@^3.2.3, postcss-optionValue-parser@^3.3.0:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-optionValue-parser/-/postcss-optionValue-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
 
 postcss-zindex@^2.0.1:
   version "2.2.0"
@@ -6878,8 +6878,8 @@ uri-js@^4.2.2:
     punycode "^2.1.0"
 
 urijs@^1.16.1:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.1.tgz#5b0ff530c0cbde8386f6342235ba5ca6e995d25a"
+  version "1.19.10"
+  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.10.tgz#8e2fe70a8192845c180f75074884278f1eea26cb"
 
 urix@^0.1.0:
   version "0.1.0"
